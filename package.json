@@ -1,0 +1,16 @@
+{
+  "name": "leaf-project-template",
+  "description": "A minimal template for use in building out new leaf projects.",
+  "repository": "https://github.com/leafagency/leaf-project-template",
+  "lisence": "MIT",
+  "readmeFilename": "README.md",
+  "dependencies": {
+    "jade": "^1.9.2",
+    "sass": "^0.5.0"
+  },
+  "devDependencies": {
+    "gulp": "^3.8.11",
+    "gulp-jade": "^1.0.0",
+    "gulp-watch": "^4.2.0"
+  }
+}
