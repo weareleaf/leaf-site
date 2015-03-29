@@ -1,4 +1,4 @@
-# Leaf Project Template • 0.0.1
+# Leaf Website • 0.0.1
 
 ## Introduction
 
