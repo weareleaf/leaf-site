@@ -32,7 +32,6 @@ function logError (error) {
 // ---------------------------------
 // --------- BUILD TASKS -----------
 // ---------------------------------
-
 gulp.task('clean', function(callback) {
   del(BUILT_FILES, callback);
 });
@@ -56,14 +55,14 @@ gulp.task('styles', function() {
 });
 
 gulp.task('images', function() {
-    gulp.src(IMAGE_FILES)
-      .pipe(imageOptimization({
-        optimizationLevel: 5,
-        progressive: true,
-        interlaced: true
-      }))
-      .on('error', logError)
-      .pipe(gulp.dest(BUILD_DEST));
+  gulp.src(IMAGE_FILES)
+    .pipe(imageOptimization({
+      optimizationLevel: 5,
+      progressive: true,
+      interlaced: true
+    }))
+    .on('error', logError)
+    .pipe(gulp.dest(BUILD_DEST));
 });
 
 gulp.task('app_scripts', function() {
