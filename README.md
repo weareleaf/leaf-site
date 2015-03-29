@@ -4,25 +4,6 @@
 
 The aim of this project is to provide a good starting point for the front end of all Leaf sites, whether they be basic HTML/CSS or a single page JavaScript app.
 
-### Technologies
-
- - [Jade](http://jade-lang.com/) - For markup
- - [Sass](http://sass-lang.com/) - For styles
- - [Browserify](http://browserify.org/) - For bundling JavaScript
- - [npm](https://www.npmjs.com/) - For managing dependencies & running scripts
- - [Gulp](http://gulpjs.com/) - For automating the development workflow
-
-### Features
-
- - Automatic compilation of Jade, Sass and JavaScript.
- - Automatic page refreshing.
- - Automatic optimisation of images.
- - Ability to build out either a regular HTML/CSS/JS site, or a single page app from the same template.
- - WIP: 1 command to generate screenshots of all pages.
- - WIP: 1 command deployment.
- - WIP: 1 command to run automated tests for pages in supported browsers.
- - WIP: 1 command google page speed insights
-
 ## Installation
 
  1. Install [node.js](https://nodejs.org/). You can get this from the official site, **or** via [homebrew](http://brew.sh/) using nvm - node version manager (recommended).
@@ -33,7 +14,7 @@ The aim of this project is to provide a good starting point for the front end of
  
 ## Working with the project
 
-The following commands all need to be run from the directory of your project, use `cd` to get there:
+The following commands all need to be run from the root directory of your project, use `cd` to get there in your terminal of choice.
  
 ### Starting the project server
 
@@ -55,3 +36,30 @@ npm run test
 npm run build
 ```
 
+## Under the hood
+
+This project makes use of the following technologies:
+
+ - [Jade](http://jade-lang.com/) - For markup
+ - [Sass](http://sass-lang.com/) - For styles
+ - [Browserify](http://browserify.org/) - For bundling JavaScript
+ - [npm](https://www.npmjs.com/) - For managing dependencies & running scripts
+ - [Gulp](http://gulpjs.com/) - For automating the development workflow
+
+### Automated building
+
+Source code written in the `./code/` directory is converted and moved over to `./dist/` as part this template's build process. The following conversions are automated:
+
+ - **Automatic compilation of Jade:** Any `.jade` files in `./code/` and its subdirectories will be converted.
+ - **Automatic compilation of Sass:** Any `.scss` files in `./code/` and its subdirectories will be converted.
+ - **Automatic compilation of JavaScript:** Any `.js` files in `./code/scripts/app/` and its subdirectories will be browserified into a single bundle at `./dist/code/scripts/app/main.js`. Any `.js` files in `./code/scripts/lib` and its subdirectories will be minified but maintain their current directory structure.
+ - **Automatic optimisation of images:** Any `.png`,`.jpg`,`.gif` or `.jpeg`files in `./code/` and its subdirectories will be optimised.
+
+### Other features:
+
+ - Automatic page refreshing.
+ - Ability to build out either a regular HTML/CSS/JS site, or a single page app from the same template.
+ - WIP: 1 command to generate screenshots of all pages.
+ - WIP: 1 command deployment.
+ - WIP: 1 command to run automated tests for pages in supported browsers.
+ - WIP: 1 command google page speed insights

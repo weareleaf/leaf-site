@@ -7,6 +7,8 @@ var browserify = require('gulp-browserify');
 var uglify = require('gulp-uglify');
 var open = require('gulp-open');
 var imageOptimization = require('gulp-image-optimization');
+var del = require('del');
+var notify = require('gulp-notify');
 
 var JADE_FILES = './code/**/*.jade';
 var SASS_FILES = './code/**/*.scss';
@@ -15,15 +17,26 @@ var APP_JS_FILES = './code/scripts/app/**/*.js';
 var LIB_JS_FILES = './code/scripts/lib/**/*.js';
 var BROWSERIFY_ROOT = './code/scripts/app/main.js';
 var BUILD_DEST = './dist/';
+var BUILT_FILES = BUILD_DEST + '**/*';
 
 function logError (error) {
-  console.log(error.toString());
+  var errorString = error.toString()
+  notify.onError({
+    title: 'Build Error',
+    message: errorString
+  })(error);
+  console.log(errorString);
   this.emit('end');
 }
 
 // ---------------------------------
-// --------- WATCH TASKS -----------
+// --------- BUILD TASKS -----------
 // ---------------------------------
+
+gulp.task('clean', function(callback) {
+  del(BUILT_FILES, callback);
+});
+
 gulp.task('templates', function() {
   gulp.src(JADE_FILES)
     .pipe(jade({
@@ -70,25 +83,28 @@ gulp.task('lib_scripts', function() {
     .pipe(gulp.dest(BUILD_DEST+'scripts/lib/'));
 });
 
+// ---------------------------------
+// --------- WATCH TASKS -----------
+// ---------------------------------
 gulp.task('watch', function () {
-  gulp.watch(JADE_FILES, function() {
-    gulp.run('templates');
+  watch(JADE_FILES, function() {
+    gulp.start('templates');
   });
 
-  gulp.watch(SASS_FILES, function() {
-    gulp.run('styles');
+  watch(SASS_FILES, function() {
+    gulp.start('styles');
   });
 
-  gulp.watch(IMAGE_FILES, function() {
-    gulp.run('images');
+  watch(IMAGE_FILES, function() {
+    gulp.start('images');
   });
 
-  gulp.watch(APP_JS_FILES, function() {
-    gulp.run('app_scripts');
+  watch(APP_JS_FILES, function() {
+    gulp.start('app_scripts');
   });
 
-  gulp.watch(LIB_JS_FILES, function() {
-    gulp.run('lib_scripts');
+  watch(LIB_JS_FILES, function() {
+    gulp.start('lib_scripts');
   });
 });
 
@@ -112,5 +128,9 @@ gulp.task('open', function(){
 // ----------------------------------
 // --------- COMPOSITE TASKS --------
 // ----------------------------------
-gulp.task('build', ['templates', 'styles', 'images', 'app_scripts', 'lib_scripts']);
-gulp.task('start', ['build', 'connect', 'watch', 'open']);
+gulp.task('build', ['clean'], function() {
+  gulp.start('templates', 'styles', 'images', 'app_scripts', 'lib_scripts');
+});
+gulp.task('start', ['build'], function() {
+  gulp.start('connect', 'watch', 'open');
+});
