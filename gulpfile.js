@@ -9,6 +9,7 @@ var open = require('gulp-open');
 var imageOptimization = require('gulp-image-optimization');
 var del = require('del');
 var notify = require('gulp-notify');
+var ghPages = require('gulp-gh-pages');
 
 var JADE_FILES = './code/**/*.jade';
 var SASS_FILES = './code/**/*.scss';
@@ -122,6 +123,14 @@ gulp.task('open', function(){
   .pipe(open('', {
     url: 'http://localhost:8080',
   }));
+});
+
+// ----------------------------------
+// --------- SERVER TASKS -----------
+// ----------------------------------
+gulp.task('deploy', function() {
+  gulp.src(BUILT_FILES)
+    .pipe(ghPages());
 });
 
 // ----------------------------------

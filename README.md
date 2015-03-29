@@ -36,6 +36,14 @@ npm run test
 npm run build
 ```
 
+### Publishing the project to github pages
+
+This assumes the project has a github origin. For more information on how these are deployed, see the [Github Pages](https://pages.github.com/) docs:
+
+```
+npm run deploy
+```
+
 ## Under the hood
 
 This project makes use of the following technologies:
@@ -59,7 +67,7 @@ Source code written in the `./code/` directory is converted and moved over to `.
 
  - Automatic page refreshing.
  - Ability to build out either a regular HTML/CSS/JS site, or a single page app from the same template.
+ - 1 command to deploy project to github pages
  - WIP: 1 command to generate screenshots of all pages.
- - WIP: 1 command deployment.
  - WIP: 1 command to run automated tests for pages in supported browsers.
  - WIP: 1 command google page speed insights
