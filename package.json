@@ -8,6 +8,10 @@
     "jade": "^1.9.2",
     "sass": "^0.5.0"
   },
+  "scripts": {
+    "start": "gulp start",
+    "build": "gulp build"
+  },
   "devDependencies": {
     "gulp": "^3.8.11",
     "gulp-browserify": "^0.5.1",

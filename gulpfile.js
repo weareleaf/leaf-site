@@ -97,4 +97,4 @@ gulp.task('open', function(){
 // --------- COMPOSITE TASKS -----------
 // ----------------------------------
 gulp.task('build', ['templates', 'styles', 'app_scripts', 'lib_scripts']);
-gulp.task('run', ['build', 'connect', 'watch', 'open']);
+gulp.task('start', ['build', 'connect', 'watch', 'open']);
