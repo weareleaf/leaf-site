@@ -16,8 +16,8 @@ The aim of this project is to provide a good starting point for the front end of
 
  - Automatic compilation of Jade, Sass and JavaScript.
  - Automatic page refreshing.
+ - Automatic optimisation of images.
  - Ability to build out either a regular HTML/CSS/JS site, or a single page app from the same template.
- - WIP: Automatic optimisation of images.
  - WIP: 1 command to generate screenshots of all pages.
  - WIP: 1 command deployment.
  - WIP: 1 command to run automated tests for pages in supported browsers.
