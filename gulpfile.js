@@ -126,7 +126,7 @@ gulp.task('open', function(){
 });
 
 // ----------------------------------
-// --------- SERVER TASKS -----------
+// --------- DEPLOY TASKS -----------
 // ----------------------------------
 gulp.task('deploy', function() {
   gulp.src(BUILT_FILES)
