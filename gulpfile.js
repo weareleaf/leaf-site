@@ -130,7 +130,10 @@ gulp.task('open', function(){
 // ----------------------------------
 gulp.task('deploy', function() {
   gulp.src(BUILT_FILES)
-    .pipe(ghPages());
+    .pipe(ghPages({
+      branch: "master"
+    }))
+    .on('error', logError);
 });
 
 // ----------------------------------
