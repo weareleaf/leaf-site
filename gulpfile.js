@@ -131,7 +131,8 @@ gulp.task('open', function(){
 gulp.task('deploy', function() {
   gulp.src(BUILT_FILES)
     .pipe(ghPages({
-      branch: "master"
+      remoteUrl: 'git@github.com:leafagency/leafagency.github.io.git',
+      branch: 'master'
     }))
     .on('error', logError);
 });
