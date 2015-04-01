@@ -1,14 +1,6 @@
 doctype html
 html(lang='en')
-  head
-    meta(charset='utf-8')
-    title Leaf &bull; Web masters
-    link(rel='stylesheet', href='styles/main.css')
-
-    //- Uncomment one of the lines below to pull in either your app JS, or some library JS.
-    //- script(src='scripts/app/main.js')
-    //- script(src='scripts/lib/demoLib.js')
-
+  include ./pages/includes/head.jade
   body
     h1 Leaf
 
@@ -17,12 +9,12 @@ html(lang='en')
     p We're a <b>designer &amp; developer duo</b> based in Canterbury with over 15 years industry experience across a wide range of web technologies, and we want to raise the bar of web applications.
 
     div.tile
-      h3 Your brand
-      p We can help your business <b>stand head and shoulders above the rest</b>, creating compelling brands and highly informative sites <a href='#'>More...</a>
+      h3 Branding
+      p We can help your business <b>stand head and shoulders above the rest</b>, creating compelling brands and highly informative sites <a href='/pages/branding.html'>More...</a>
 
     div.tile
-      h3 Full web applications
-      p We make full single page web applications with <b>lightning fast performance</b> using the <b>latest technologies</b>. <a href='#'>More...</a>
+      h3 Full Web Applications
+      p We make full single page web applications with <b>lightning fast performance</b> using the <b>latest technologies</b>. <a href='/pages/full-web-applications.html'>More...</a>
 
     div.tile
       h3 Mobile apps
