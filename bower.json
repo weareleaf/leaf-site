@@ -1,0 +1,9 @@
+{
+  "name": "Leaf Website",
+  "version": "0.0.1",
+  "main": "/style/main.css",
+  "dependencies": {
+    "bourbon": "4.2.2",
+    "susy": "2.2.1"
+  }
+}
