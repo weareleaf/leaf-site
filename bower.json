@@ -1,9 +1,10 @@
 {
-  "name": "Leaf Website",
+  "name": "leaf-website",
   "version": "0.0.1",
   "main": "/style/main.css",
   "dependencies": {
     "bourbon": "4.2.2",
+    "normalize-scss": "3.0.2",
     "susy": "2.2.1"
   }
 }

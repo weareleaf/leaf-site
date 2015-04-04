@@ -1,8 +1,6 @@
 // Base Variables
+@import './bower_components/normalize-scss/normalize.scss';
 @import 'base/variables';
-
-// Vendor
-
 
 // Base
 @import 'base/mixins';
@@ -18,3 +16,4 @@
 
 // Modules
 @import 'modules/benefits';
+@import 'modules/jumbotron';
