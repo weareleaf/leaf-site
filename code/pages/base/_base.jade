@@ -36,6 +36,9 @@ html(class='no-js', lang='en')
       | to improve your experience.
     <![endif]-->
 
+    if bodyClass == 'home-page'
+      include ../layout/jumbotron
+
     .container
 
       if bodyClass !== 'home-page'

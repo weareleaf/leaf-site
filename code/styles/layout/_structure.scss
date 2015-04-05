@@ -1,3 +1,25 @@
+@import '../lib/susy/sass/susy';
+
+$susy: (
+  columns: 12,
+  global-box-sizing: border-box,
+  gutters: 0
+);
+
+$bp-small: 768px;
+$bp-medium: 992px;
+$bp-large: 1200px;
+$bp-huge: 1400px;
+$breakpoint-no-query-fallbacks: true;
+
+@include border-box-sizing;
+
+@import '../lib/bourbon/app/assets/stylesheets/bourbon';
+
+.container {
+  @include container;
+}
+
 %vertical-center {
   display: table-cell;
   text-align: center;

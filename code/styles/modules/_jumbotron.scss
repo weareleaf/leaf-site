@@ -3,28 +3,73 @@
   background-size: cover;
   color: white;
   display: table;
-  height: calc(100vh - 20px);
-  margin: 10px;
-  width: calc(100% - 20px);
+  height: calc(100vh - 40px);
+  margin: 20px;
+  width: calc(100% - 40px);
+
+  .jumbotron_logo {
+    @include retina-image('/images/leaf-logo', 97px 33px);
+    display: block;
+    height: 33px;
+    left: 50%;
+    margin-left: -48px;
+    position: absolute;
+    top: 50px;
+    width: 97px;
+
+    @include susy-breakpoint($bp-small, $susy) {
+      left: 50px;
+      margin-left: auto;
+      top: 50px;
+    }
+  }
+
+  .jumbotron_logomark {
+    @include retina-image('/images/leaf', 40px 76px);
+    display: none;
+    height: 76px;
+    margin-bottom: 20px;
+    width: 40px;
+
+    @include susy-breakpoint($bp-small, $susy) {
+      display: inline-block;
+    }
+  }
 
   .jumbotron_content {
     padding: 20px;
+    position: relative;
+    padding-bottom: 120px;
+    top: 80px;
     @extend %vertical-center;
+
+    @include susy-breakpoint($bp-medium, $susy) {
+      padding-bottom: 0;
+      top: 0;
+    }
   }
 
   h1 {
     font-family: $font-family-serif;
-    font-size: 64px;
+    font-size: rem(48);
     font-weight: 300;
     margin: 0 auto 30px;
+
+    @include susy-breakpoint($bp-medium, $susy) {
+      font-size: rem(64);
+    }
   }
 
   p {
     font-family: $font-family-sans-serif;
-    font-size: 26px;
+    font-size: rem(22);
     line-height: 1.8;
     margin: 0 auto;
     max-width: 730px;
+
+    @include susy-breakpoint($bp-medium, $susy) {
+      font-size: rem(26);
+    }
   }
 
   //-@at-root #{&}_title {
