@@ -46,6 +46,8 @@ This assumes the project has a github origin. For more information on how these 
 npm run deploy
 ```
 
+### Installing new dependencies
+
 You can install new dependencies with `npm install package-name` and `bower install package-name`. `npm` installed dependencies will be installed to `node_modules` and bower installed dependencies to `code/lib`. This is because `npm` installed dependencies are not intended to be used directly in your project, and so stay out of the code directory.
 
 ## Under the hood
