@@ -1,12 +1,14 @@
 // Base Variables
-@import './code/lib/normalize-scss/normalize.scss';
+@import './code/lib/normalize-scss/normalize';
+@import './code/lib/susy/sass/susy';
+@import './code/lib/bourbon/app/assets/stylesheets/bourbon';
 @import 'base/variables';
 
 // Base
 @import 'base/mixins';
 @import 'base/buttons';
-@import 'base/fonts';
-@import 'base/form';
+@import 'base/forms';
+@import 'base/grid-settings';
 @import 'base/typography';
 
 // Layout

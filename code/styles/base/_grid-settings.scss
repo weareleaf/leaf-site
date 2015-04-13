@@ -1,0 +1,11 @@
+$susy: (
+  container: 1280px,
+  columns: 12,
+  global-box-sizing: border-box,
+  gutters: 0
+);
+
+$bp-small: 768px;
+$bp-medium: 992px;
+$bp-large: 1200px;
+$breakpoint-no-query-fallbacks: true;
