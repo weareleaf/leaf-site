@@ -1,11 +1,15 @@
+.jumbotron_title {
+  color: white;
+}
+
 .jumbotron {
-  background: $leaf-green url('/images/jumbotron-background.jpg') no-repeat 0 0 fixed;
+  background-color: rgba(#27a18e, 1);
   background-size: cover;
   color: white;
   display: table;
-  height: calc(100vh - 40px);
-  margin: 20px;
-  width: calc(100% - 40px);
+  height: calc(100vh - 20px);
+  margin: 10px;
+  width: calc(100% - 20px);
 
   .jumbotron_logo {
     @include retina-image('/images/leaf-logo', 97px 33px);
@@ -17,7 +21,7 @@
     top: 50px;
     width: 97px;
 
-    @include susy-breakpoint($bp-small, $susy) {
+    @include susy-breakpoint($small-screen) {
       left: 50px;
       margin-left: auto;
       top: 50px;
@@ -31,7 +35,7 @@
     margin-bottom: 20px;
     width: 40px;
 
-    @include susy-breakpoint($bp-small, $susy) {
+    @include susy-breakpoint($small-screen) {
       display: inline-block;
     }
   }
@@ -43,7 +47,7 @@
     top: 80px;
     @extend %vertical-center;
 
-    @include susy-breakpoint($bp-medium, $susy) {
+    @include susy-breakpoint($medium-screen) {
       padding-bottom: 0;
       top: 0;
     }
@@ -55,7 +59,7 @@
     font-weight: 300;
     margin: 0 auto 30px;
 
-    @include susy-breakpoint($bp-medium, $susy) {
+    @include susy-breakpoint($medium-screen) {
       font-size: rem(64);
     }
   }
@@ -67,17 +71,9 @@
     margin: 0 auto;
     max-width: 730px;
 
-    @include susy-breakpoint($bp-medium, $susy) {
+    @include susy-breakpoint($medium-screen) {
       font-size: rem(26);
     }
   }
-
-  //-@at-root #{&}_title {
-    //-margin: 0;
-  //-}
-
-  //-@at-root #{&}_intro {
-
-  //-}
 
 }

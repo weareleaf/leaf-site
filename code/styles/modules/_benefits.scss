@@ -1,78 +1,26 @@
-$border: #e4eae8;
-
-section {
-  @include clearfix;
-  background-color: #f4f7f6;
-  margin: 20px;
-  padding: 20px;
-
-  @include susy-breakpoint($bp-medium, $susy) {
-    padding: 40px;
-  }
-}
-
-.benefits {
-  @include clearfix;
-  border-bottom: 3px solid #e7f0ee;
-  border-top: 1px solid $border;
-  border-right: 1px solid $border;
+.benefits__heading {
+  @extend %section-header;
 }
 
 .benefit {
-  background: #fcfffe;
-  border: 1px solid $border;
-  border-top: none;
-  border-right: none;
-  padding: 40px;
-  position: relative;
 
-  @include susy-breakpoint($bp-small, $susy) {
-    @include gallery(6 of 12);
-  }
+  @include susy-breakpoint($small-screen) {
+    @include span(6);
 
-  @include susy-breakpoint($bp-medium, $susy) {
-    @include gallery(4 of 12);
-  }
-
-  @include susy-breakpoint($bp-large, $susy) {
-    @include gallery(3 of 12);
-  }
-
-  h3 {
-    color: $leaf-green;
-    font-size: rem(24);
-    font-weight: 600;
-    margin-top: 0;
-  }
-
-  p {
-    color: #303735;
-    font-size: rem(18);
-    line-height: 1.5;
-    padding: 0;
-
-    @include susy-breakpoint($bp-small, $susy) {
-      min-height: 150px;
-    }
-
-    @include susy-breakpoint($bp-medium, $susy) {
-      min-height: 200px;
-    }
-
-    @include susy-breakpoint($bp-large, $susy) {
-      min-height: 170px;
+    &:nth-of-type(2n) {
+      @include last;
     }
   }
 
-  a {
-    @include clearfix;
-    @include link-colours($leaf-green);
-    display: block;
-    font-family: $font-family-sans-serif;
-    font-size: rem(18);
-    font-weight: 600;
-    margin-top: 20px;
-    position: relative;
-    text-decoration: none;
+  @include susy-breakpoint($medium-screen) {
+    @include span(4);
+
+    &:nth-of-type(2n) {
+      @include span(4);
+    }
+
+    &:nth-of-type(3n) {
+      @include last;
+    }
   }
 }

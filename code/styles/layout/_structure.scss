@@ -1,3 +1,13 @@
+html {
+  box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
 .container {
   @include container;
 }
@@ -8,6 +18,7 @@
   vertical-align: middle;
 }
 
-.inner-page {
-  margin: 10px;
+section {
+  @include clearfix;
+  padding: rem(60) 0;
 }

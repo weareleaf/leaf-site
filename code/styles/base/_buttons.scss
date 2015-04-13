@@ -1,7 +1,7 @@
 #{$all-button-inputs},
 button {
   @include appearance(none);
-  background-color: $action-color;
+  background-color: $light-gray;
   border: none;
   border-radius: $base-border-radius;
   color: #fff;
@@ -20,7 +20,7 @@ button {
 
   &:hover,
   &:focus {
-    background-color: darken($action-color, 15%);
+    background-color: darken($light-gray, 15%);
     color: #fff;
   }
 

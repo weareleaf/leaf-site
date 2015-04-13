@@ -2,10 +2,12 @@ $susy: (
   container: 1280px,
   columns: 12,
   global-box-sizing: border-box,
-  gutters: 0
+  gutters: 0.5
 );
 
-$bp-small: 768px;
-$bp-medium: 992px;
-$bp-large: 1200px;
+@include global-box-sizing(border-box);
+
+$small-screen: 768px;
+$medium-screen: 992px;
+$large-screen: 1200px;
 $breakpoint-no-query-fallbacks: true;
