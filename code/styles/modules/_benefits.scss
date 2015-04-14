@@ -1,11 +1,31 @@
-.benefits__heading {
-  @extend %section-header;
+.benefits {
+  &__content {
+    transform: skewY($base-scew-angle);
+  }
+
+  &__heading {
+    @extend %section-header;
+  }
 }
 
 .benefit {
+  margin-top: rem(40);
+
+  &__link::after {
+    content: '\2192';
+    margin-left: rem(10);
+    transition: margin-left 200ms ease;
+  }
+
+  &:hover {
+    .benefit__link:after {
+      margin-left: rem(18);
+    }
+  }
 
   @include susy-breakpoint($small-screen) {
     @include span(6);
+    margin-top: rem(80);
 
     &:nth-of-type(2n) {
       @include last;
@@ -21,6 +41,10 @@
 
     &:nth-of-type(3n) {
       @include last;
+    }
+
+    &__description {
+      min-height: rem(108);
     }
   }
 }

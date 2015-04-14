@@ -10,6 +10,7 @@ html {
 
 .container {
   @include container;
+  padding: rem(20);
 }
 
 %vertical-center {
@@ -20,5 +21,6 @@ html {
 
 section {
   @include clearfix;
-  padding: rem(60) 0;
+  padding: rem(100) 0;
+  transform: skewY(-$base-scew-angle);
 }

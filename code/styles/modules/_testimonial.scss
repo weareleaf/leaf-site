@@ -1,5 +1,9 @@
 .testimonials {
   text-align: center;
+
+  &__content {
+    transform: skewY($base-scew-angle);
+  }
 }
 
 .testimonial__quote {
