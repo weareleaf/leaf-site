@@ -6,12 +6,16 @@
   }
 }
 
-.testimonial__quote {
-  @extend %section-header;
-  font-size: rem(28);
-}
-
 .testimonial {
   @include push(2);
   @include span(8);
+
+  &__company {
+    margin-bottom: 0;
+  }
+
+  &__quote {
+    @extend %section-header;
+    font-size: rem(28);
+  }
 }

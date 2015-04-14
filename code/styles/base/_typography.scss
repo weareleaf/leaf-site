@@ -35,7 +35,12 @@ h4 {
   color: $dark-gray;
   font-size: $base-h4-size;
   font-weight: 700;
+  margin-bottom: 1.111em;
   text-transform: uppercase;
+}
+
+h3 + h4 {
+  margin-top: -0.778em;
 }
 
 p {
