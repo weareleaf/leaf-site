@@ -9,8 +9,8 @@ html {
 }
 
 .content-wrapper {
-  background-color: $base-background-color;
   @extend %z-index-up;
+  margin-top: rem(-91);
 }
 
 .container {
@@ -31,6 +31,8 @@ html {
 
 section {
   @include clearfix;
+  background-color: $base-background-color;
+  margin-top: rem(-1);
   padding: rem(100) 0;
   transform: skewY(-$base-scew-angle);
 }
