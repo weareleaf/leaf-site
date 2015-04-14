@@ -1,5 +1,5 @@
 #{$all-button-inputs},
-button {
+button, .button {
   @include appearance(none);
   background-color: $base-button-background-colour;
   border: none;
