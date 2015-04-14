@@ -6,7 +6,12 @@
   }
 
   &__heading {
-    @extend %section-header;
+    @extend %section-heading;
+
+    &::after {
+      @extend %heading-tail;
+      background-color: $leaf-green;
+    }
   }
 }
 

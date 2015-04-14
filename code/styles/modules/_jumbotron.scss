@@ -1,8 +1,20 @@
 .jumbotron_title {
   color: white;
 }
-
+/*
+.jumbotron::after {
+  background-color: white;
+  content: '';
+  height: 100px;
+  width: calc(100% + 10px);
+  transform: skewY(-$base-scew-angle);
+  position: absolute;
+  bottom: 89px;
+  left: -10px;
+}
+*/
 .jumbotron {
+
   @extend %z-index-up;
   background-color: rgba(#27a18e, 0.9);
   background-size: cover;
@@ -15,26 +27,26 @@
   .jumbotron_logo {
     @include retina-image('/images/leaf-logo', 97px 33px);
     display: block;
-    height: 33px;
+    height: rem(33);
     left: 50%;
-    margin-left: -48px;
+    margin-left: rem(-48);
     position: absolute;
-    top: 50px;
-    width: 97px;
+    top: rem(50);
+    width: rem(97);
 
     @include susy-breakpoint($small-screen) {
-      left: 50px;
+      left: rem(50);
       margin-left: auto;
-      top: 50px;
+      top: rem(50);
     }
   }
 
   .jumbotron_logomark {
     @include retina-image('/images/leaf', 40px 76px);
     display: none;
-    height: 76px;
-    margin-bottom: 20px;
-    width: 40px;
+    height: rem(76);
+    margin-bottom: rem(20);
+    width: rem(40);
 
     @include susy-breakpoint($small-screen) {
       display: inline-block;
@@ -42,10 +54,10 @@
   }
 
   .jumbotron_content {
-    padding: 20px;
+    padding: rem(20);
     position: relative;
-    padding-bottom: 120px;
-    top: 80px;
+    padding-bottom: rem(120);
+    top: rem(80);
     @extend %vertical-center;
 
     @include susy-breakpoint($medium-screen) {
@@ -54,11 +66,12 @@
     }
   }
 
+
   h1 {
     font-family: $font-family-serif;
     font-size: rem(48);
     font-weight: 300;
-    margin: 0 auto 30px;
+    margin: 0 auto rem(30);
 
     @include susy-breakpoint($medium-screen) {
       font-size: rem(64);
@@ -70,7 +83,7 @@
     font-size: rem(22);
     line-height: 1.8;
     margin: 0 auto;
-    max-width: 730px;
+    max-width: rem(730);
 
     @include susy-breakpoint($medium-screen) {
       font-size: rem(26);

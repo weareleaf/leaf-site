@@ -1,5 +1,5 @@
 fieldset {
-  background-color: $secondary-background-color;
+  background-color: $secondary-background-colour;
   border: $base-border;
   margin: 0 0 $small-spacing;
   padding: $base-spacing;
@@ -29,7 +29,7 @@ label {
 #{$all-text-inputs},
 select[multiple=multiple],
 textarea {
-  background-color: $base-background-color;
+  background-color: $base-background-colour;
   border: $base-border;
   border-radius: $base-border-radius;
   box-shadow: $form-box-shadow;
@@ -42,7 +42,7 @@ textarea {
   width: 100%;
 
   &:hover {
-    border-color: darken($base-border-color, 10%);
+    border-color: darken($base-border-colour, 10%);
   }
 
   &:focus {
@@ -52,7 +52,7 @@ textarea {
   }
 
   &:disabled {
-    background-color: darken($base-background-color, 6%);
+    background-color: darken($base-background-colour, 6%);
     cursor: not-allowed;
 
     &:hover {

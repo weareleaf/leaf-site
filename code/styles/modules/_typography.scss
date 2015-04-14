@@ -1,6 +1,14 @@
-%section-header {
+%section-heading {
   color: $dark-green;
   font-family: $font-family-serif;
   font-weight: normal;
   text-align: center;
+}
+
+%heading-tail {
+  content: '';
+  display: block;
+  height: rem(4);
+  margin: rem(20) auto 0;
+  width: rem(64);
 }

@@ -10,7 +10,7 @@ html {
 
 .content-wrapper {
   @extend %z-index-up;
-  margin-top: rem(-91);
+  margin-top: rem(-100);
 }
 
 .container {
@@ -31,7 +31,7 @@ html {
 
 section {
   @include clearfix;
-  background-color: $base-background-color;
+  background-color: $base-background-colour;
   margin-top: rem(-1);
   padding: rem(100) 0;
   transform: skewY(-$base-scew-angle);

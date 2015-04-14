@@ -2,7 +2,7 @@
 
 body {
   @include font-feature-settings("kern", "liga", "pnum");
-  color: $base-font-color;
+  color: $base-font-colour;
   font-family: $base-font-family;
   font-size: $base-font-size;
   -webkit-font-smoothing: antialiased;
@@ -15,7 +15,7 @@ h3,
 h4,
 h5,
 h6 {
-  color: $base-heading-color;
+  color: $base-heading-colour;
   font-family: $heading-font-family;
   font-size: $base-font-size;
   line-height: $heading-line-height;
