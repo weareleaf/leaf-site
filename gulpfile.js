@@ -12,7 +12,7 @@ var notify = require('gulp-notify');
 var ghPages = require('gulp-gh-pages');
 var changed = require('gulp-changed');
 
-var MISC_FILES = ['./code/CNAME', './code/**/*.mp4', './code/**/*.ogv', './code/**/*.webm'];
+var MISC_FILES = ['./code/CNAME', './code/**/*.mp4', './code/**/*.ogv', './code/**/*.webm', './code/**/*.eot', './code/**/*.svg', './code/**/*.ttf', './code/**/*.woff'];
 var JADE_FILES = ['./code/**/*.jade', '!./code/lib/**'];
 var SASS_FILES = ['./code/**/*.scss', , '!./code/lib/**'];
 var IMAGE_FILES = ['./code/**/*.png','./code/**/*.jpg','./code/**/*.gif','./code/**/*.jpeg', '!./code/lib/**'];

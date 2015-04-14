@@ -5,6 +5,21 @@ $medium-gray: #999;
 $leaf-green: #29b197;
 $light-gray: #f5f8f7;
 
+// Border
+$base-border-colour: #e4ebeb;
+$base-border: 1px solid $base-border-colour;
+
+// Background Colours
+$base-background-colour: #fff;
+$secondary-background-colour: lighten($base-border-colour, 10%);
+
+// Buttons
+$base-button-background-colour: #2bc284;
+
+// Font Colours
+$base-font-colour: #303735;
+$base-heading-colour: $leaf-green;
+
 // Font Sizes
 $base-font-size: 1.125em;
 $base-h2-size: 2em;
@@ -15,32 +30,20 @@ $base-h4-size: 1em;
 $font-family-sans-serif: 'Dosis', Helvetica, Arial, sans-serif;
 $font-family-serif: 'Bitter', Georgia, Times, 'Times New Roman', serif;
 
+// Forms
+$form-box-shadow: inset 0 1px 3px rgba(#000, 0.06);
+$form-box-shadow-focus: $form-box-shadow, 0 0 5px adjust-color($light-gray, $lightness: -5%, $alpha: -0.3);
+
 // Line Height
 $base-line-height: 1.5;
 $heading-line-height: 1.2;
 
 // Other Sizes
-$base-border-radius: 3px;
+$base-border-radius: 5px;
 $base-scew-angle: 6deg;
 $base-spacing: $base-line-height * 1em;
 $small-spacing: $base-spacing / 2;
 $base-z-index: 0;
-
-// Font Colors
-$base-font-colour: #303735;
-$base-heading-colour: $leaf-green;
-
-// Border
-$base-border-colour: #e4ebeb;
-$base-border: 1px solid $base-border-colour;
-
-// Background Colors
-$base-background-colour: #fff;
-$secondary-background-colour: lighten($base-border-colour, 10%);
-
-// Forms
-$form-box-shadow: inset 0 1px 3px rgba(#000, 0.06);
-$form-box-shadow-focus: $form-box-shadow, 0 0 5px adjust-color($light-gray, $lightness: -5%, $alpha: -0.3);
 
 // Typography
 $base-font-family: $font-family-serif;

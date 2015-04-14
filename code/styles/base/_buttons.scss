@@ -1,18 +1,18 @@
 #{$all-button-inputs},
 button {
   @include appearance(none);
-  background-color: $light-gray;
+  background-color: $base-button-background-colour;
   border: none;
   border-radius: $base-border-radius;
   color: #fff;
   cursor: pointer;
   display: inline-block;
-  font-family: $base-font-family;
-  font-size: $base-font-size;
+  font-family: $font-family-sans-serif;
+  font-size: 1.111em;
   -webkit-font-smoothing: antialiased;
-  font-weight: 600;
+  font-weight: 700;
   line-height: 1;
-  padding: 0.75em 1em;
+  padding: 1em 2em;
   text-decoration: none;
   user-select: none;
   vertical-align: middle;
@@ -20,7 +20,7 @@ button {
 
   &:hover,
   &:focus {
-    background-color: darken($light-gray, 15%);
+    background-color: lighten($base-button-background-colour, 2%);
     color: #fff;
   }
 

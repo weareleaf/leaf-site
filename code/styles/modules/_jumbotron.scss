@@ -13,8 +13,8 @@
   left: -10px;
 }
 */
-.jumbotron {
 
+.jumbotron {
   @extend %z-index-up;
   background-color: rgba(#27a18e, 0.9);
   background-size: cover;
@@ -54,9 +54,8 @@
   }
 
   .jumbotron_content {
-    padding: rem(20);
+    padding: rem(20) rem(20) rem(120);
     position: relative;
-    padding-bottom: rem(120);
     top: rem(80);
     @extend %vertical-center;
 
@@ -89,5 +88,4 @@
       font-size: rem(26);
     }
   }
-
 }
