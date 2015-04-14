@@ -1,47 +1,45 @@
-.jumbotron_title {
-  color: white;
-}
-/*
-.jumbotron::after {
-  background-color: white;
-  content: '';
-  height: 100px;
-  width: calc(100% + 10px);
-  transform: skewY(-$base-scew-angle);
-  position: absolute;
-  bottom: 89px;
-  left: -10px;
-}
-*/
-
 .jumbotron {
   @extend %z-index-up;
   background-color: rgba(#27a18e, 0.9);
-  background-size: cover;
-  border: solid 10px white;
   color: white;
-  display: table;
-  height: calc(100vh);
-  width: calc(100%);
+  margin-top: rem(-200);
+  padding-top: rem(20);
+  text-align: center;
+  transform: skewY(-$base-scew-angle);
+  width: 100%;
 
-  .jumbotron_logo {
+  @include susy-breakpoint($small-screen) {
+    padding-top: rem(60);
+  }
+
+  &__content {
+    padding-top: rem(200);
+    transform: skewY($base-scew-angle);
+  }
+
+  &__logo {
     @include retina-image('/images/leaf-logo', 97px 33px);
     display: block;
+    float: left;
     height: rem(33);
-    left: 50%;
-    margin-left: rem(-48);
-    position: absolute;
-    top: rem(50);
+    position: relative;
+    top: rem(15);
     width: rem(97);
+  }
+
+  &__button {
+    float: right;
+  }
+
+  &__message {
+    padding: rem(160) rem(20) rem(200);
 
     @include susy-breakpoint($small-screen) {
-      left: rem(50);
-      margin-left: auto;
-      top: rem(50);
+      padding: rem(200) rem(20) rem(360);
     }
   }
 
-  .jumbotron_logomark {
+  &__logomark {
     @include retina-image('/images/leaf', 40px 76px);
     display: none;
     height: rem(76);
@@ -53,20 +51,8 @@
     }
   }
 
-  .jumbotron_content {
-    padding: rem(20) rem(20) rem(120);
-    position: relative;
-    top: rem(80);
-    @extend %vertical-center;
-
-    @include susy-breakpoint($medium-screen) {
-      padding-bottom: 0;
-      top: 0;
-    }
-  }
-
-
-  h1 {
+  &__title {
+    color: white;
     font-family: $font-family-serif;
     font-size: rem(48);
     font-weight: 300;
@@ -77,7 +63,7 @@
     }
   }
 
-  p {
+  &__intro {
     font-family: $font-family-sans-serif;
     font-size: rem(22);
     line-height: 1.8;
