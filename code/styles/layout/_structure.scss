@@ -8,9 +8,19 @@ html {
   box-sizing: inherit;
 }
 
+.content-wrapper {
+  background-color: $base-background-color;
+  @extend %z-index-up;
+}
+
 .container {
   @include container;
   padding: rem(20);
+}
+
+%z-index-up {
+  position: relative;
+  z-index: 2;
 }
 
 %vertical-center {

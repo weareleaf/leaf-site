@@ -3,13 +3,14 @@
 }
 
 .jumbotron {
-  background-color: rgba(#27a18e, 1);
+  @extend %z-index-up;
+  background-color: rgba(#27a18e, 0.9);
   background-size: cover;
+  border: solid 10px white;
   color: white;
   display: table;
-  height: calc(100vh - 20px);
-  margin: 10px;
-  width: calc(100% - 20px);
+  height: calc(100vh);
+  width: calc(100%);
 
   .jumbotron_logo {
     @include retina-image('/images/leaf-logo', 97px 33px);

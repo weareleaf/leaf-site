@@ -38,10 +38,7 @@ html(class='no-js', lang='en')
 
     if bodyClass == 'home-page'
       include ../layout/jumbotron
-
-
-
-    if bodyClass !== 'home-page'
+    else
       include ../layout/header
 
     .content-wrapper
@@ -49,6 +46,9 @@ html(class='no-js', lang='en')
       block content
 
       include ../layout/footer
+
+    if bodyClass == 'home-page'
+      include ../modules/video
 
     script(src='//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js')
     script window.jQuery || document.write('<script src="assets/js/vendor/jquery-1.11.1.js"><\/script>')
