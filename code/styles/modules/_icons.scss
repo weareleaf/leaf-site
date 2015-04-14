@@ -1,0 +1,16 @@
+.icon__wrapper {
+  border: solid 2px $base-border-colour;
+  border-radius: rem(80);
+  display: table;
+  height: rem(80);
+  width: rem(80);
+}
+
+.icon--brand,
+.icon--web,
+.icon--mobile,
+.icon--managers,
+.icon--experience,
+.icon--learning {
+  @extend %vertical-center;
+}
