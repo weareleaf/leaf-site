@@ -11,6 +11,7 @@ var del = require('del');
 var notify = require('gulp-notify');
 var ghPages = require('gulp-gh-pages');
 var changed = require('gulp-changed');
+var runSequence = require('run-sequence');
 
 var MISC_FILES = ['./code/CNAME', './code/**/*.mp4', './code/**/*.ogv', './code/**/*.webm', './code/**/*.eot', './code/**/*.svg', './code/**/*.ttf', './code/**/*.woff'];
 var JADE_FILES = ['./code/**/*.jade', '!./code/lib/**'];
@@ -36,11 +37,11 @@ function logError (error) {
 // --------- BUILD TASKS -----------
 // ---------------------------------
 gulp.task('clean', function(callback) {
-  del(BUILT_FILES, callback);
+  return del(BUILT_FILES, callback);
 });
 
 gulp.task('misc', function() {
-  gulp.src(MISC_FILES)
+  return gulp.src(MISC_FILES)
     .pipe(changed(BUILD_DEST))
     .pipe(gulp.dest(BUILD_DEST))
     .on('error', logError)
@@ -48,25 +49,25 @@ gulp.task('misc', function() {
 });
 
 gulp.task('templates', function() {
-  gulp.src(JADE_FILES)
+  return gulp.src(JADE_FILES)
     .pipe(jade({
       pretty: true
     }))
     .on('error', logError)
     .pipe(gulp.dest(BUILD_DEST))
-    .pipe(connect.reload());
+    .pipe(connect.reload())
 });
 
 gulp.task('styles', function() {
-  gulp.src(SASS_FILES)
+  return gulp.src(SASS_FILES)
     .pipe(sass())
     .on('error', logError)
     .pipe(gulp.dest(BUILD_DEST))
-    .pipe(connect.reload());
+    .pipe(connect.reload())
 });
 
 gulp.task('images', function() {
-  gulp.src(IMAGE_FILES)
+  return gulp.src(IMAGE_FILES)
     .pipe(changed(BUILD_DEST))
     .pipe(imageOptimization({
       optimizationLevel: 5,
@@ -74,25 +75,28 @@ gulp.task('images', function() {
       interlaced: true
     }))
     .on('error', logError)
-    .pipe(gulp.dest(BUILD_DEST));
+    .pipe(gulp.dest(BUILD_DEST))
+    .pipe(connect.reload())
 });
 
 gulp.task('app_scripts', function() {
-  gulp.src(BROWSERIFY_ROOT)
+  return gulp.src(BROWSERIFY_ROOT)
     .pipe(browserify({
       glboal: true,
       debug : true
     }))
     .on('error', logError)
-    .pipe(gulp.dest(BUILD_DEST+'scripts/app/'));
+    .pipe(gulp.dest(BUILD_DEST+'scripts/app/'))
+    .pipe(connect.reload())
 });
 
 gulp.task('lib_scripts', function() {
-  gulp.src(LIB_JS_FILES)
+  return gulp.src(LIB_JS_FILES)
     .pipe(changed(BUILD_DEST))
     .pipe(uglify())
     .on('error', logError)
-    .pipe(gulp.dest(BUILD_DEST+'scripts/lib/'));
+    .pipe(gulp.dest(BUILD_DEST+'scripts/lib/'))
+    .pipe(connect.reload())
 });
 
 // ---------------------------------
@@ -128,16 +132,17 @@ gulp.task('watch', function () {
 // --------- SERVER TASKS -----------
 // ----------------------------------
 gulp.task('connect', function() {
-  connect.server({
+  return connect.server({
     root: 'dist',
     livereload: true
   });
 });
 
 gulp.task('open', function(){
-  gulp.src('./dist/index.html')
+  return gulp.src('./dist/index.html')
   .pipe(open('', {
     url: 'http://localhost:8080',
+    app: 'google chrome'
   }));
 });
 
@@ -145,7 +150,7 @@ gulp.task('open', function(){
 // --------- DEPLOY TASKS -----------
 // ----------------------------------
 gulp.task('deploy', function() {
-  gulp.src(BUILT_FILES)
+  return gulp.src(BUILT_FILES)
     .pipe(ghPages({
       remoteUrl: 'git@github.com:leafagency/leafagency.github.io.git',
       force: true,
@@ -157,9 +162,9 @@ gulp.task('deploy', function() {
 // ----------------------------------
 // --------- COMPOSITE TASKS --------
 // ----------------------------------
-gulp.task('build', ['clean'], function() {
-  gulp.start('misc', 'templates', 'styles', 'images', 'app_scripts', 'lib_scripts');
+gulp.task('build', function(cb) {
+  return runSequence('clean', ['misc', 'templates', 'styles', 'images', 'app_scripts', 'lib_scripts'], cb)
 });
-gulp.task('start', ['build'], function() {
-  gulp.start('connect', 'watch', 'open');
+gulp.task('start', function(cb) {
+  return runSequence('build', 'connect', ['watch', 'open'], cb);
 });
