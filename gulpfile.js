@@ -19,7 +19,7 @@ var SASS_FILES = ['./code/**/*.scss', , '!./code/lib/**'];
 var IMAGE_FILES = ['./code/**/*.png','./code/**/*.jpg','./code/**/*.gif','./code/**/*.jpeg', '!./code/lib/**'];
 var APP_JS_FILES = ['./code/scripts/app/**/*.js', '!./code/lib/**'];
 var LIB_JS_FILES = ['./code/scripts/lib/**/*.js', '!./code/lib/**'];
-var BROWSERIFY_ROOT = './code/scripts/app/main.js';
+var BROWSERIFYABLE_FILES = './code/scripts/app/**/*.app.js';
 var BUILD_DEST = './dist/';
 var BUILT_FILES = BUILD_DEST + '**/*';
 
@@ -80,7 +80,7 @@ gulp.task('images', function() {
 });
 
 gulp.task('app_scripts', function() {
-  return gulp.src(BROWSERIFY_ROOT)
+  return gulp.src(BROWSERIFYABLE_FILES)
     .pipe(browserify({
       glboal: true,
       debug : true
