@@ -1,7 +1,7 @@
 .footer {
   background-color: rgba(#27a18e, 0.9);
   color: white;
-  margin: rem(-1) 0 rem(-260);
+  margin: rem(-1) 0 rem(-200);
   padding: rem(100) 0;
   transform: skewY(-$base-scew-angle);
 
@@ -11,10 +11,22 @@
   }
 
   &__block {
-    @include span(3);
+    @include span(12);
 
-    &:nth-of-type(4) {
-      @include last;
+    @include susy-breakpoint($small-screen) {
+      @include span(6);
+
+      &:nth-of-type(2n) {
+        @include last;
+      }
+    }
+
+    @include susy-breakpoint($medium-screen) {
+      @include span(3);
+
+      &:nth-of-type(4) {
+        @include last;
+      }
     }
   }
 

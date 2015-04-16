@@ -32,10 +32,10 @@
   }
 
   &__message {
-    padding: rem(160) rem(20) rem(200);
+    padding: rem(160) rem(20);
 
     @include susy-breakpoint($small-screen) {
-      padding: rem(180) rem(20) rem(280);
+      padding: rem(180) rem(20) rem(220);
     }
   }
 

@@ -30,7 +30,7 @@
   }
 
   &:hover {
-    .benefit__link:after {
+    .benefit__link::after {
       margin-left: rem(18);
     }
   }
