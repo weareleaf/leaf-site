@@ -28,6 +28,7 @@
   }
 
   &__button {
+    @extend .button;
     float: right;
   }
 

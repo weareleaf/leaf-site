@@ -1,28 +1,32 @@
-extends base/_base
+extends ../pages/base/_base
 
 block prepend vars
   -var bodyClass = 'inner-page'
 
 block content
 
-  h1 Work With Us
+  section.article
+    .container
+      .article__content
 
-  p Leave us a message and we'll get right back to you on the email address you provide. Don't let the budget options put you off, we like to work on a range of sizes.
+        h1.article__heading Work With Us
 
-  form(id='contact-form')
-    input(type='text', placeholder='Name', name='name')
-    input(type='email', placeholder="Email address", name='email')
-    select(name='budget')
-      option(value='<=1000') £1000 or less
-      option(value='<=2500') Less than £2500
-      option(value='<=5000') Less than £5000
-      option(value='<=10000') Less than £10,000
-      option(value='<=5000') £10,000 or more
-    textarea(name='body', placeholder="Your message, it can be as short or long as you like!")
-    input(type="submit" value="Send Message")
+        p Leave us a message and we'll get right back to you on the email address you provide. Don't let the budget options put you off, we like to work on a range of sizes.
 
-  h2 Where's your phone number?
+        form(id='contact-form')
+          input(type='text', placeholder='Name', name='name')
+          input(type='email', placeholder="Email address", name='email')
+          select(name='budget')
+            option(value='<=1000') £1000 or less
+            option(value='<=2500') Less than £2500
+            option(value='<=5000') Less than £5000
+            option(value='<=10000') Less than £10,000
+            option(value='<=5000') £10,000 or more
+          textarea(name='body', placeholder="Your message, it can be as short or long as you like!")
+          input(type="submit" value="Send Message")
 
-  p We don't have one! Well, at least not publicly. We like to work in a <b>distraction free environment</b> so we can work as efficiently as possible, and part of doing that means limiting the amount we're able to be distracted from our work. Drop us a message on the form above and we'll get back to you, or email us at <a href="mailto:hello@weareleaf.com">hello@weareleaf.com</a>.
+        h2 Where's your phone number?
 
-  script(src='/scripts/app/contactFormHandler.app.js')
+        p We don't have one! Well, at least not publicly. We like to work in a <b>distraction free environment</b> so we can work as efficiently as possible, and part of doing that means limiting the amount we're able to be distracted from our work. Drop us a message on the form above and we'll get back to you, or email us at <a href="mailto:hello@weareleaf.com">hello@weareleaf.com</a>.
+
+        script(src='/scripts/app/contactFormHandler.app.js')

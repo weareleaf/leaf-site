@@ -9,7 +9,9 @@
   font-style: normal;
 }
 
-[class^="icon--"], [class*=" icon--"] {
+%icon,
+[class^="icon--"],
+[class*=" icon--"] {
   color: #c0cccc;
   font-family: 'leaf';
   font-size: rem(36);
@@ -21,6 +23,14 @@
   line-height: 1;
   speak: none;
   text-transform: none;
+}
+
+.icon--logo:before {
+  content: "\e606";
+}
+
+.icon--leaf:before {
+  content: "\e607";
 }
 
 .icon--brand:before {

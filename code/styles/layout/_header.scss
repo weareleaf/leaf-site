@@ -1,0 +1,18 @@
+.header {
+  border-bottom: solid 1px $base-border-colour;
+  position: relative;
+  z-index: 3;
+
+  &__logo {
+    @extend %icon;
+    @extend .icon--logo;
+    float: left;
+    font-size: rem(28);
+    margin-top: rem(16);
+  }
+
+  &__button {
+    @extend .button;
+    float: right;
+  }
+}

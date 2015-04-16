@@ -15,6 +15,10 @@ html {
   z-index: 1;
 }
 
+.inner-page .page-wrapper {
+  border-top: none;
+}
+
 .content-wrapper {
   @extend %z-index-up;
 }

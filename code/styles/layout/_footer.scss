@@ -1,5 +1,5 @@
 .footer {
-  background-color: rgba(#27a18e, 0.9);
+  background-color: $leaf-green;
   color: white;
   margin: rem(-1) 0 rem(-200);
   padding: rem(100) 0;
@@ -39,4 +39,8 @@
   &__link {
     @include link-colours(white);
   }
+}
+
+.home-page .footer {
+  background-color: rgba(#27a18e, 0.9);
 }

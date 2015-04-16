@@ -1,0 +1,21 @@
+.article {
+
+  &__content {
+    transform: skewY($base-scew-angle);
+    @include span(12);
+
+    @include susy-breakpoint($small-screen) {
+      @include push(2);
+      @include span(8);
+    }
+  }
+
+  &__heading {
+    @extend %section-heading;
+
+    &::after {
+      @extend %heading-tail;
+      background-color: $leaf-green;
+    }
+  }
+}
