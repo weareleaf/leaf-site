@@ -1,5 +1,30 @@
 .footer {
   background-color: rgba(#27a18e, 0.9);
-  height: rem(240);
-  margin-top: rem(-100);
+  color: white;
+  margin: rem(-1) 0 rem(-260);
+  padding: rem(100) 0;
+  transform: skewY(-$base-scew-angle);
+
+  &__content {
+    padding-bottom: rem(200);
+    transform: skewY($base-scew-angle);
+  }
+
+  &__block {
+    @include span(3);
+
+    &:nth-of-type(4) {
+      @include last;
+    }
+  }
+
+  &__logomark {
+    @include retina-image('/images/leaf-small', 20px 38px);
+    height: rem(38);
+    width: rem(20);
+  }
+
+  &__link {
+    @include link-colours(white);
+  }
 }
