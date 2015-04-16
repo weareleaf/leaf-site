@@ -59,12 +59,6 @@ a {
   transition: color 0.1s linear;
 
   &:active,
-  &:focus,
-  &:hover {
-    color: darken($leaf-green, 15%);
-  }
-
-  &:active,
   &:focus {
     outline: none;
   }

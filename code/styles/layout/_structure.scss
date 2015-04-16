@@ -8,6 +8,13 @@ html {
   box-sizing: inherit;
 }
 
+.page-wrapper {
+  border: solid 10px white;
+  overflow: hidden;
+  position: relative;
+  z-index: 1;
+}
+
 .content-wrapper {
   @extend %z-index-up;
 }

@@ -1,5 +1,10 @@
 .team {
   background-color: $light-gray;
+  text-align: center;
+
+  @include susy-breakpoint($medium-screen) {
+    text-align: left;
+  }
 
   &__content {
     transform: skewY($base-scew-angle);

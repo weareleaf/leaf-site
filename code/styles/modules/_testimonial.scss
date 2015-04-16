@@ -7,8 +7,12 @@
 }
 
 .testimonial {
-  @include push(2);
-  @include span(8);
+  @include span(12);
+
+  @include susy-breakpoint($small-screen) {
+    @include push(2);
+    @include span(8);
+  }
 
   &__company {
     margin-bottom: 0;
