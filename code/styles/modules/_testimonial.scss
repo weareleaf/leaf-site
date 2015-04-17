@@ -14,12 +14,17 @@
     @include span(8);
   }
 
-  &__company {
-    margin-bottom: 0;
-  }
-
   &__quote {
     @extend %section-header;
     font-size: rem(28);
+    margin-bottom: rem(36);
+  }
+
+  &__person {
+    margin-bottom: rem(6);
+  }
+
+  &__company {
+    margin-bottom: 0;
   }
 }

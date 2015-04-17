@@ -17,6 +17,10 @@
   display: table;
   margin-top: rem(40);
 
+  &__heading {
+    margin-bottom: rem(20);
+  }
+
   &__content {
     display: table-cell;
     padding: 10px 0 0 20px;
