@@ -68,7 +68,13 @@
     }
 
     &__description {
-      min-height: rem(164);
+      min-height: rem(200);
+    }
+  }
+
+  @include susy-breakpoint($large-screen) {
+    &__description {
+      min-height: 0;
     }
   }
 }
