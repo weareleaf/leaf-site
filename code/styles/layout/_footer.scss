@@ -30,6 +30,10 @@
     }
   }
 
+  &__heading {
+    margin-bottom: rem(12);
+  }
+
   &__logomark {
     @include retina-image('/images/leaf-small', 20px 38px);
     height: rem(38);
