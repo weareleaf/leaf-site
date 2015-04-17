@@ -37,14 +37,14 @@ $form-box-shadow: inset 0 1px 3px rgba(#000, 0.06);
 $form-box-shadow-focus: $form-box-shadow, 0 0 5px adjust-color($light-gray, $lightness: -5%, $alpha: -0.3);
 
 // Line Height
-$base-line-height: 1.6;
-$heading-line-height: 1.2;
+$base-line-height: 1.8;
+$heading-line-height: 1;
 
 // Other Sizes
 $base-border-radius: 5px;
 $base-scew-angle: 6deg;
 $base-spacing: $base-line-height * 1em;
-$small-spacing: $base-spacing / 0.75;
+$small-spacing: $base-spacing / 0.8;
 $base-z-index: 0;
 
 // Typography
