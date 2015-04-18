@@ -1,3 +1,7 @@
+form {
+  margin-bottom: $small-spacing;
+}
+
 fieldset {
   background-color: $secondary-background-colour;
   border: $base-border;
@@ -10,7 +14,6 @@ label,
 select {
   display: block;
   font-family: $base-font-family;
-  font-size: $base-font-size;
 }
 
 label {
@@ -29,25 +32,19 @@ label {
 #{$all-text-inputs},
 select[multiple=multiple],
 textarea {
-  background-color: $base-background-colour;
-  border: $base-border;
+  background-color: $input-background-colour;
+  border: solid $input-border-width $input-border-colour;
   border-radius: $base-border-radius;
   box-shadow: $form-box-shadow;
   box-sizing: border-box;
   font-family: $base-font-family;
-  font-size: $base-font-size;
   margin-bottom: $base-spacing / 2;
-  padding: $base-spacing / 3;
+  padding: $base-spacing / 2.5;
   transition: border-color;
   width: 100%;
 
-  &:hover {
-    border-color: darken($base-border-colour, 10%);
-  }
-
   &:focus {
-    border-color: $light-gray;
-    box-shadow: $form-box-shadow-focus;
+    background-color: white;
     outline: none;
   }
 
@@ -62,6 +59,7 @@ textarea {
 }
 
 textarea {
+  min-height: 12em;
   resize: vertical;
 }
 
@@ -81,9 +79,9 @@ input[type="file"] {
 }
 
 select {
-  margin-bottom: $base-spacing;
+  margin-bottom: $base-spacing / 2;
   max-width: 100%;
-  width: auto;
+  width: 100%;
 }
 
 span.error {
