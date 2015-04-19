@@ -47,3 +47,14 @@ section {
   transform: skewY(-$base-scew-angle);
   -webkit-transform: skewY(-$base-scew-angle);
 }
+
+/*
+  Fixes a weird issue where Chrome and Safari skew differently.
+  Thanks for the webkit fork guys...
+*/
+.container {
+    -webkit-transform: skewY($base-scew-angle); 
+    -webkit-transform-style: flat;
+    transform: skewY(0); 
+    transform-style: flat;
+}
