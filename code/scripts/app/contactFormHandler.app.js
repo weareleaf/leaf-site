@@ -105,6 +105,7 @@ var attachHandler = function(options) {
     clearErrors();
     clearFields();
 
+    postSendHook();
   };
 
   var onFormSubmit = function(submitEvent) {
