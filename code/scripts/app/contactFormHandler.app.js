@@ -1,4 +1,5 @@
 var request = require('superagent');
+require('./contactFormHandler/lib/xhr-xdr-adapter'); // Allows superagent to work on IE9
 
 var CONTACT_FORM_ID = "contact-form";
 
