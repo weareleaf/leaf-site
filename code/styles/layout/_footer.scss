@@ -49,3 +49,7 @@
 .home-page .footer {
   background-color: rgba(#27a18e, 0.9);
 }
+
+.footer > * {
+  @include safari-skew-fix();
+}

@@ -11,3 +11,10 @@
     color: lighten($colour, 5%);
   }
 }
+
+@mixin safari-skew-fix {
+  -webkit-transform: skewY($base-scew-angle); 
+  -webkit-transform-style: flat;
+  transform: skewY(0); 
+  transform-style: flat;
+}
