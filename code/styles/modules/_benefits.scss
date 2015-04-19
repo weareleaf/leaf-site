@@ -80,7 +80,7 @@
 
   @include susy-breakpoint($huge-screen) {
     &__description {
-      min-height: rem(0);
+      min-height: rem(1);
     }
   }
 }

@@ -56,28 +56,29 @@ html(class='no-js', lang='en')
 
   body(dir='ltr', class='#{bodyClass}')
 
-    .page-wrapper
+    .page__wrapper
+      .page__wrapper__inner
 
-      <!--[if lt IE 9]>
-      p.browsehappy
-        | You are using an <strong>outdated</strong> browser.
-        | Please <a href='http://browsehappy.com/'>upgrade your browser</a>
-        | to improve your experience.
-      <![endif]-->
+        <!--[if lt IE 9]>
+        p.browsehappy
+          | You are using an <strong>outdated</strong> browser.
+          | Please <a href='http://browsehappy.com/'>upgrade your browser</a>
+          | to improve your experience.
+        <![endif]-->
 
-      if bodyClass == 'home-page'
-        include ../modules/jumbotron
-      else
-        include ../layout/header
+        if bodyClass == 'home-page'
+          include ../modules/jumbotron
+        else
+          include ../layout/header
 
-      .content-wrapper
+        .content-wrapper
 
-        block content
+          block content
 
-        include ../layout/footer
+          include ../layout/footer
 
-      if bodyClass == 'home-page'
-        include ../modules/video
+        if bodyClass == 'home-page'
+          include ../modules/video
 
     script(src='//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js')
     script window.jQuery || document.write('<script src="assets/js/vendor/jquery-1.11.1.js"><\/script>')
