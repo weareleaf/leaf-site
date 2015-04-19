@@ -135,7 +135,7 @@ attachHandler({
       if (!input.value) return "Must be provided."
     },
     email: function(input) {
-      if (!input.value) return "Must be a valid email.";
+      if (!/^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$/.test(input.value)) return "Must be a valid email.";
     },
     body: function(input) {
       if (!input.value) return "Must be provided.";
