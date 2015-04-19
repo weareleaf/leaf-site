@@ -19,6 +19,7 @@ var utils = {
 var attachHandler = function(options) {
   var validations = options.validations || {};
   var preSendHook = options.preSendHook || (function() {});
+  var postSendHook = options.postSendHook || (function() {});
 
   var requestData = {
     email: null,
@@ -104,7 +105,6 @@ var attachHandler = function(options) {
     clearErrors();
     clearFields();
 
-    alert("Success!");
   };
 
   var onFormSubmit = function(submitEvent) {
@@ -144,5 +144,8 @@ attachHandler({
     if (requestData.body) {
       requestData.body += ("\n\n Budget: " + otherData.budget);
     }
+  },
+  postSendHook: function() {
+    alert("Thanks, we've received your message and will get back to you shortly.");
   }
 });
