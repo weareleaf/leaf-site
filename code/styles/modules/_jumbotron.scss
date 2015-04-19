@@ -6,6 +6,7 @@
   padding-top: rem(20);
   text-align: center;
   transform: skewY(-$base-scew-angle);
+  -webkit-transform: skewY(-$base-scew-angle);
   width: 100%;
 
   @include susy-breakpoint($small-screen) {

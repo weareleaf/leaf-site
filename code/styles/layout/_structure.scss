@@ -45,4 +45,5 @@ section {
   margin-top: rem(-1);
   padding: rem(100) 0;
   transform: skewY(-$base-scew-angle);
+  -webkit-transform: skewY(-$base-scew-angle);
 }

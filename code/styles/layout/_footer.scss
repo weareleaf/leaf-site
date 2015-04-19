@@ -4,6 +4,7 @@
   margin: rem(-1) 0 rem(-200);
   padding: rem(100) 0;
   transform: skewY(-$base-scew-angle);
+  -webkit-transform: skewY(-$base-scew-angle);
 
   &__content {
     padding-bottom: rem(200);

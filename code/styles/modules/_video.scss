@@ -6,6 +6,7 @@
   position: fixed;
   top: 50%;
   transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
   width: auto;
   z-index: 1;
 }
