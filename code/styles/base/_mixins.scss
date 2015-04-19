@@ -12,7 +12,9 @@
   }
 }
 
-@mixin safari-skew-fix {
+@mixin content-skew-fix {
+  -ms-transform: skewY($base-scew-angle); 
+  -ms-transform-style: flat;
   -webkit-transform: skewY($base-scew-angle); 
   -webkit-transform-style: flat;
   transform: skewY(0); 

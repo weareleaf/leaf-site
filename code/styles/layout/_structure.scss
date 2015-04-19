@@ -46,8 +46,9 @@ section {
   padding: rem(100) 0;
   transform: skewY(-$base-scew-angle);
   -webkit-transform: skewY(-$base-scew-angle);
+  -ms-transform: skewY(-$base-scew-angle); 
 }
 
 section > * {
-  @include safari-skew-fix();
+  @include content-skew-fix();
 }

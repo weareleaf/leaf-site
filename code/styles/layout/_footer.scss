@@ -5,6 +5,7 @@
   padding: rem(100) 0 rem(240) 0;
   transform: skewY(-$base-scew-angle);
   -webkit-transform: skewY(-$base-scew-angle);
+  -ms-transform: skewY(-$base-scew-angle); 
 
   &__content {
     transform: skewY($base-scew-angle);
@@ -48,5 +49,5 @@
 }
 
 .footer > * {
-  @include safari-skew-fix();
+  @include content-skew-fix();
 }

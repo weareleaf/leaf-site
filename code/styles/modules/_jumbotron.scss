@@ -7,6 +7,7 @@
   text-align: center;
   transform: skewY(-$base-scew-angle);
   -webkit-transform: skewY(-$base-scew-angle);
+  -ms-transform: skewY(-$base-scew-angle); 
   width: 100%;
 
   @include susy-breakpoint($small-screen) {
@@ -79,5 +80,5 @@
 }
 
 .jumbotron > * {
-  @include safari-skew-fix();
+  @include content-skew-fix();
 }
