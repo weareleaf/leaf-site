@@ -16,7 +16,9 @@ var runSequence = require('run-sequence');
 var MISC_FILES = ['./code/CNAME', './code/**/*.mp4', './code/**/*.ogv', './code/**/*.webm', './code/**/*.eot', './code/**/*.svg', './code/**/*.ttf', './code/**/*.woff'];
 var JADE_FILES = ['./code/**/*.jade', '!./code/lib/**'];
 var SASS_FILES = ['./code/**/*.scss', , '!./code/lib/**'];
-var IMAGE_FILES = ['./code/**/*.png','./code/**/*.jpg','./code/**/*.gif','./code/**/*.jpeg', '!./code/lib/**'];
+var FAVICON_BASE = ['./code/images/favicons'];
+var FAVICON_FILES = [(FAVICON_BASE + '/**/*')];
+var IMAGE_FILES = ['./code/**/*.png','./code/**/*.jpg','./code/**/*.gif','./code/**/*.jpeg', '!./code/lib/**', '!./code/images/favicons/**/*'];
 var APP_JS_FILES = ['./code/scripts/app/**/*.js', '!./code/lib/**'];
 var LIB_JS_FILES = ['./code/scripts/lib/**/*.js', '!./code/lib/**'];
 var BROWSERIFYABLE_FILES = './code/scripts/app/**/*.app.js';
@@ -40,12 +42,19 @@ gulp.task('clean', function(callback) {
   return del(BUILT_FILES, callback);
 });
 
+gulp.task('favicons', function() {
+  return gulp.src(FAVICON_FILES, {cwd: FAVICON_BASE})
+    .pipe(gulp.dest(BUILD_DEST))
+    .on('error', logError)
+    .pipe(connect.reload());
+});
+
 gulp.task('misc', function() {
   return gulp.src(MISC_FILES)
     .pipe(changed(BUILD_DEST))
     .pipe(gulp.dest(BUILD_DEST))
     .on('error', logError)
-    .pipe(connect.reload())
+    .pipe(connect.reload());
 });
 
 gulp.task('templates', function() {
@@ -55,7 +64,7 @@ gulp.task('templates', function() {
     }))
     .on('error', logError)
     .pipe(gulp.dest(BUILD_DEST))
-    .pipe(connect.reload())
+    .pipe(connect.reload());
 });
 
 gulp.task('styles', function() {
@@ -63,7 +72,7 @@ gulp.task('styles', function() {
     .pipe(sass())
     .on('error', logError)
     .pipe(gulp.dest(BUILD_DEST))
-    .pipe(connect.reload())
+    .pipe(connect.reload());
 });
 
 gulp.task('images', function() {
@@ -76,7 +85,7 @@ gulp.task('images', function() {
     }))
     .on('error', logError)
     .pipe(gulp.dest(BUILD_DEST))
-    .pipe(connect.reload())
+    .pipe(connect.reload());
 });
 
 gulp.task('app_scripts', function() {
@@ -87,7 +96,7 @@ gulp.task('app_scripts', function() {
     }))
     .on('error', logError)
     .pipe(gulp.dest(BUILD_DEST+'scripts/app/'))
-    .pipe(connect.reload())
+    .pipe(connect.reload());
 });
 
 gulp.task('lib_scripts', function() {
@@ -96,13 +105,18 @@ gulp.task('lib_scripts', function() {
     .pipe(uglify())
     .on('error', logError)
     .pipe(gulp.dest(BUILD_DEST+'scripts/lib/'))
-    .pipe(connect.reload())
+    .pipe(connect.reload());
 });
 
 // ---------------------------------
 // --------- WATCH TASKS -----------
 // ---------------------------------
 gulp.task('watch', function () {
+
+  watch(FAVICON_FILES, function() {
+    gulp.start('favicons');
+  });
+
   watch(MISC_FILES, function() {
     gulp.start('misc');
   })
@@ -163,7 +177,7 @@ gulp.task('deploy', function() {
 // --------- COMPOSITE TASKS --------
 // ----------------------------------
 gulp.task('build', function(cb) {
-  return runSequence('clean', ['misc', 'templates', 'styles', 'images', 'app_scripts', 'lib_scripts'], cb)
+  return runSequence('clean', ['misc', 'favicons', 'templates', 'styles', 'images', 'app_scripts', 'lib_scripts'], cb)
 });
 gulp.task('start', function(cb) {
   return runSequence('build', 'connect', ['watch', 'open'], cb);
