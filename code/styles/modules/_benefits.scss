@@ -74,7 +74,13 @@
 
   @include susy-breakpoint($large-screen) {
     &__description {
-      min-height: 0;
+      min-height: rem(160);
+    }
+  }
+
+  @include susy-breakpoint($huge-screen) {
+    &__description {
+      min-height: rem(1);
     }
   }
 }
