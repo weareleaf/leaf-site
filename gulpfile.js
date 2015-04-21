@@ -79,7 +79,7 @@ gulp.task('images', function() {
   return gulp.src(IMAGE_FILES)
     .pipe(changed(BUILD_DEST))
     .pipe(imageOptimization({
-      optimizationLevel: 5,
+      optimizationLevel: 8,
       progressive: true,
       interlaced: true
     }))
