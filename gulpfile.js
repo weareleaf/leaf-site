@@ -3,6 +3,7 @@ var jade = require('gulp-jade');
 var watch = require('gulp-watch');
 var sass = require('gulp-sass');
 var connect = require('gulp-connect');
+var connectRewrite = require('http-rewrite-middleware');
 var browserify = require('gulp-browserify');
 var uglify = require('gulp-uglify');
 var open = require('gulp-open');
@@ -146,9 +147,17 @@ gulp.task('watch', function () {
 // --------- SERVER TASKS -----------
 // ----------------------------------
 gulp.task('connect', function() {
+
+  var middleware = connectRewrite.getMiddleware([
+    {from: '^([^.]+[^/])$', to: '$1.html'}
+  ]);
+
   return connect.server({
     root: 'dist',
-    livereload: true
+    livereload: true,
+    middleware: function(connect, options) {
+      return [middleware];
+    }
   });
 });
 
