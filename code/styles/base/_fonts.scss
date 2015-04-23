@@ -13,13 +13,15 @@
 [class^="icon--"],
 [class*=" icon--"] {
   color: #c0cccc;
-  font-family: 'leaf';
-  font-size: rem(36);
+  font: {
+    family: 'leaf';
+    size: rem(36);
+    style: normal;
+    weight: normal;
+    variant: normal;
+  }
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  font-style: normal;
-  font-weight: normal;
-  font-variant: normal;
   line-height: 1;
   speak: none;
   text-transform: none;
