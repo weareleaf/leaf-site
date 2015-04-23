@@ -30,7 +30,7 @@ label {
 }
 
 #{$all-text-inputs},
-select[multiple=multiple],
+select,
 textarea {
   background-color: $input-background-colour;
   border: solid $input-border-width $input-border-colour;
@@ -80,6 +80,7 @@ input[type="file"] {
 
 select {
   margin-bottom: $base-spacing / 2;
+  padding: $base-spacing / 4.05 $base-spacing / 2.5;
   max-width: 100%;
   width: 100%;
 }

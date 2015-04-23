@@ -1,8 +1,20 @@
 #{$all-text-inputs},
-select[multiple=multiple],
+select,
 textarea {
 
   @include placeholder {
     color: $dark-gray;
+  }
+}
+
+.select {
+  -webkit-appearance: none; // Remove me when we have autoprefixer running
+  -moz-appearance: none; // Remove me when we have autoprefixer running
+  appearance: none;
+  background: {
+    image: url('/images/arrows.png');
+    position: right rem(15) center;
+    repeat: no-repeat;
+    size: rem(7) rem(21);
   }
 }
