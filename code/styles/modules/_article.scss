@@ -21,6 +21,28 @@
     margin-bottom: rem(60);
   }
 
+  &__logos {
+
+    @include susy-breakpoint($small-screen) {
+      background: {
+        image: url('/images/tech-logos-rows-2.png');
+        position: center top;
+        repeat: no-repeat;
+        size: auto;
+      }
+      height: rem(222);
+      margin-bottom: rem(60);
+    }
+
+    @include susy-breakpoint($large-screen) {
+      background: {
+        image: url('/images/tech-logos-rows-1.png');
+        size: 100% auto;
+      }
+      height: rem(110);
+    }
+  }
+
   &__heading {
     @extend %section-heading;
 
