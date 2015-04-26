@@ -1,0 +1,16 @@
+extends ../pages/base/_base
+
+block prepend vars
+  -var bodyClass = 'error-page'
+  -var title = 'Leaf | 404'
+
+block content
+
+  section.article
+    .container
+      .article__content
+
+        .article__content__text
+          h1.article__heading That Page Doesn't Seem to Exist
+
+          p Dang. We've had a look, but we can't find that page. Head <a href='/'>back to our home page</a>.

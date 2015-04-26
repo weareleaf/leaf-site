@@ -1,7 +1,7 @@
 .article {
 
   &__content {
-    transform: skewY($base-scew-angle);
+    //transform: skewY($base-scew-angle);
 
     &__text {
       @include span(12);

@@ -1,8 +1,9 @@
 .icon__wrapper {
   border: solid 2px $base-border-colour;
   border-radius: rem(80);
-  display: table;
+  display: inline-table;
   height: rem(80);
+  margin-bottom: rem(20);
   width: rem(80);
 }
 
