@@ -3,17 +3,16 @@
   color: white;
   margin: rem(-1) 0 rem(-200);
   padding: rem(100) 0 rem(240) 0;
-
   transform: skewY(-$base-scew-angle);
   -webkit-transform: skewY(-$base-scew-angle);
-  -ms-transform: skewY(-$base-scew-angle); 
+  -ms-transform: skewY(-$base-scew-angle);
+
+  .container {
+    @include content-skew-fix();
+  }
 
   &__content {
     transform: skewY($base-scew-angle);
-  }
-
-  > * {
-    @include content-skew-fix();
   }
 
   &__block {
@@ -47,19 +46,17 @@
   &__link {
     @include link-colours(white);
   }
-}
 
-body.home-page .footer {
-  background-color: rgba(#27a18e, 0.9);
-}
+  .home-page & {
+    background-color: rgba(#27a18e, 0.9);
+  }
 
-body.inner-page .footer {
-  /* Stick to the bottom */
-  position:absolute;
-  margin-bottom:rem(-190);
-  padding:rem(100) rem(10) rem(240) rem(10);
-  left:0;
-  bottom:0;
-  width:100%;
-  z-index:1;
+  .inner-page & {
+    bottom: 0;
+    left: 0;
+    margin-bottom: rem(-190);
+    padding: rem(100) rem(10) rem(240);
+    position: absolute;
+    width: 100%;
+  }
 }

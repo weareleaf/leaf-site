@@ -1,12 +1,10 @@
 html {
   box-sizing: border-box;
   position: relative;
-  height: 100%;
 }
 
 body {
-  background:trasparent;
-  margin:0 0 0 0;
+  margin: 0;
 }
 
 html,
@@ -28,14 +26,14 @@ body {
 }
 
 %page-border-horizontal {
-  height: 10px;
+  height: rem(10);
   width: 100%;
 }
 
 %page-border-vertical {
   height: 100%;
   top: 0;
-  width: 10px;
+  width: rem(10);
 }
 
 %vertical-center {
@@ -51,12 +49,11 @@ body {
 
 .container {
   @include container;
-  padding: rem(20);
+  padding: rem(30);
 }
 
 .page-wrapper {
   min-height: 100%;
-  padding: 10px;
   overflow: hidden;
   position: relative;
   z-index: 1;
@@ -92,12 +89,21 @@ body {
   }
 }
 
+.home-page {
+  background: url('/images/video-fallback.jpg') no-repeat center top fixed;
+  background-size: cover;
+}
+
 .inner-page .page-wrapper {
   border-top: none;
 }
 
 .content-wrapper {
   @extend %z-index-up;
+
+  .inner-page & {
+    padding-bottom: rem(240);
+  }
 }
 
 section {
