@@ -117,4 +117,8 @@ section {
   transform: skewY(-$base-scew-angle);
   -webkit-transform: skewY(-$base-scew-angle);
   -ms-transform: skewY(-$base-scew-angle);
+
+  & > * {
+    @include content-skew-fix();
+  }
 }
