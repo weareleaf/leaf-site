@@ -44,8 +44,19 @@
   }
 }
 
-.home-page .footer {
+body.home-page .footer {
   background-color: rgba(#27a18e, 0.9);
+}
+
+body:not(.home-page) .footer {
+  /* Stick to the bottom */
+  margin:0 0 0 0;
+  padding: rem(100) 0 rem(100) 0;
+  position:absolute;
+  left:0;
+  bottom:0;
+  width:100%;
+  z-index:50;
 }
 
 .footer > * {

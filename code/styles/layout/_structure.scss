@@ -1,5 +1,16 @@
 html {
   box-sizing: border-box;
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+  background:trasparent;
+  margin: 0 0 rem(290) 0;
+
+  &.home-page {
+    margin:0 0 0 0;
+  }
 }
 
 *,

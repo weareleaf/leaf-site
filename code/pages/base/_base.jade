@@ -75,9 +75,13 @@ html(class='no-js', lang='en')
 
           block content
 
-          include ../layout/footer
+          if bodyClass == 'home-page'
+            include ../layout/footer
 
         if bodyClass == 'home-page'
           include ../modules/video
+
+  if bodyClass != 'home-page'
+    include ../layout/footer
 
     block footerScripts
