@@ -56,8 +56,8 @@ body.home-page .footer {
 body.inner-page .footer {
   /* Stick to the bottom */
   position:absolute;
-  border-left:rem(10) solid #fff;
-  border-right:rem(10) solid #fff;
+  margin-bottom:rem(-190);
+  padding:rem(100) rem(10) rem(240) rem(10);
   left:0;
   bottom:0;
   width:100%;
