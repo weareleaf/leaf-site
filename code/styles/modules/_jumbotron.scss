@@ -7,7 +7,7 @@
   text-align: center;
   transform: skewY(-$base-scew-angle);
   -webkit-transform: skewY(-$base-scew-angle);
-  -ms-transform: skewY(-$base-scew-angle); 
+  -ms-transform: skewY(-$base-scew-angle);
   width: 100%;
 
   @include susy-breakpoint($small-screen) {
@@ -20,13 +20,12 @@
   }
 
   &__logo {
-    @include retina-image('/images/leaf-logo', 97px 33px);
-    display: block;
+    @extend %icon;
+    @extend .icon--logo;
+    color: white;
     float: left;
-    height: rem(33);
-    position: relative;
-    top: rem(15);
-    width: rem(97);
+    font-size: rem(36);
+    margin-top: rem(16);
   }
 
   &__button {
@@ -56,9 +55,11 @@
 
   &__title {
     color: white;
-    font-family: $font-family-serif;
-    font-size: rem(48);
-    font-weight: 300;
+    font: {
+      family: $font-family-serif;
+      size: rem(48);
+      weight: 300;
+    }
     margin: 0 auto rem(30);
 
     @include susy-breakpoint($medium-screen) {
@@ -67,8 +68,10 @@
   }
 
   &__intro {
-    font-family: $font-family-sans-serif;
-    font-size: rem(22);
+    font: {
+      family: $font-family-sans-serif;
+      size: rem(22);
+    }
     line-height: 1.8;
     margin: 0 auto;
     max-width: rem(730);

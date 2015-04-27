@@ -10,11 +10,13 @@ button, .button {
   cursor: pointer;
   display: inline-block;
   font-family: $font-family-sans-serif;
-  font-size: 1.111em;
+  font: {
+    size: 1em;
+    weight: 700;
+  }
   -webkit-font-smoothing: antialiased;
-  font-weight: 700;
   line-height: 1;
-  padding: 1em 2em;
+  padding: 1.1em;
   text-decoration: none;
   transition: background-color 150ms;
   user-select: none;

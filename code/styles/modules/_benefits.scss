@@ -1,4 +1,6 @@
 .benefits {
+  text-align: center;
+
   &__content {
     transform: skewY($base-scew-angle);
   }
@@ -11,10 +13,14 @@
       background-color: $base-border-colour;
     }
   }
+
+  @include susy-breakpoint($small-screen) {
+    text-align: left;
+  }
 }
 
 .benefit {
-  display: table;
+  display: block;
   margin-top: rem(40);
 
   &__heading {
@@ -23,8 +29,11 @@
 
   &__content {
     display: table-cell;
-    padding: 10px 0 0 20px;
     vertical-align: top;
+
+    @include susy-breakpoint($small-screen) {
+      padding: 10px 0 0 20px;
+    }
   }
 
   &__link::after {
@@ -41,6 +50,7 @@
 
   @include susy-breakpoint($small-screen) {
     @include span(6);
+    display: table;
     margin-top: rem(80);
 
     &:nth-of-type(-n+2) {

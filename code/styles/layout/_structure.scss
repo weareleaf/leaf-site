@@ -13,21 +13,15 @@ body {
   }
 }
 
+/*html,
+body {
+  height: 100%;
+}*/
+
 *,
 *:before,
 *:after {
   box-sizing: inherit;
-}
-
-%z-index-up {
-  position: relative;
-  z-index: 2;
-}
-
-%vertical-center {
-  display: table-cell;
-  text-align: center;
-  vertical-align: middle;
 }
 
 %page-border {
@@ -37,10 +31,26 @@ body {
   z-index: 9;
 }
 
+%page-border-horizontal {
+  height: 10px;
+  width: 100%;
+}
+
 %page-border-vertical {
   height: 100%;
   top: 0;
   width: 10px;
+}
+
+%vertical-center {
+  display: table-cell;
+  text-align: center;
+  vertical-align: middle;
+}
+
+%z-index-up {
+  position: relative;
+  z-index: 2;
 }
 
 .container {
@@ -49,6 +59,7 @@ body {
 }
 
 .page-wrapper {
+  min-height: 100%;
   padding: 10px;
   overflow: hidden;
   position: relative;
@@ -57,6 +68,7 @@ body {
   &::before {
     @extend %page-border;
     @extend %page-border-horizontal;
+    left: 0;
     top: 0;
   }
 
@@ -64,6 +76,7 @@ body {
     @extend %page-border;
     @extend %page-border-horizontal;
     bottom: 0;
+    left: 0;
   }
 
   &__inner {
@@ -91,21 +104,17 @@ body {
   @extend %z-index-up;
 }
 
-%page-border-horizontal {
-  height: 10px;
-  width: 100%;
-}
-
 section {
   @include clearfix;
-  background-color: $base-background-colour;
-  margin-top: rem(-1);
   padding: rem(100) 0;
-  transform: skewY(-$base-scew-angle);
-  -webkit-transform: skewY(-$base-scew-angle);
-  -ms-transform: skewY(-$base-scew-angle); 
 }
 
-section > * {
-  @include content-skew-fix();
+.benefits,
+.team,
+.testimonials {
+  background-color: $base-background-colour;
+  margin-top: rem(-1);
+  transform: skewY(-$base-scew-angle);
+  -webkit-transform: skewY(-$base-scew-angle);
+  -ms-transform: skewY(-$base-scew-angle);
 }
