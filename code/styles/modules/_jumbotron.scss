@@ -15,8 +15,12 @@
   }
 
   &__content {
-    padding-top: rem(200);
+    padding-top: rem(180);
     transform: skewY($base-scew-angle);
+
+    @include susy-breakpoint($medium-screen) {
+      padding-top: rem(180);
+    }
   }
 
   &__logo {
@@ -34,7 +38,7 @@
   }
 
   &__message {
-    padding: rem(160) rem(20);
+    padding: rem(120) rem(20) rem(60);
 
     @include susy-breakpoint($small-screen) {
       padding: rem(180) rem(20) rem(220);

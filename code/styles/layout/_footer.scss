@@ -17,9 +17,11 @@
 
   &__block {
     @include span(12);
+    margin-bottom: rem(30);
 
     @include susy-breakpoint($small-screen) {
       @include span(3);
+      margin-bottom: 0;
 
       &:nth-of-type(2n) {
         @include last;
@@ -40,7 +42,12 @@
   &__logomark {
     @include retina-image('/images/leaf-small', 20px 38px);
     height: rem(38);
+    margin-bottom: rem(20);
     width: rem(20);
+
+    @include susy-breakpoint($small-screen) {
+      margin-bottom: 0;
+    }
   }
 
   &__link {

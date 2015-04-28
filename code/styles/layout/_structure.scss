@@ -107,7 +107,11 @@ body {
 
 section {
   @include clearfix;
-  padding: rem(100) 0;
+  padding: rem(50) 0;
+
+  @include susy-breakpoint($small-screen) {
+    padding: rem(100) 0;
+  }
 }
 
 .benefits,

@@ -27,6 +27,14 @@
     margin-bottom: rem(20);
   }
 
+  &__description {
+    margin-bottom: rem(10);
+
+    @include susy-breakpoint($small-screen) {
+      margin-bottom: rem(24);
+    }
+  }
+
   &__content {
     display: table-cell;
     vertical-align: top;
@@ -78,7 +86,7 @@
     }
 
     &__description {
-      min-height: rem(200);
+      min-height: rem(210);
     }
   }
 
