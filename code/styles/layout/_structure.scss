@@ -102,7 +102,11 @@ body {
   @extend %z-index-up;
 
   .inner-page & {
-    padding-bottom: rem(240);
+    padding-bottom: rem(360);
+
+    @include susy-breakpoint($small-screen) {
+      padding-bottom: rem(240);
+    }
   }
 }
 
