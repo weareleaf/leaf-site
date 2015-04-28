@@ -1,6 +1,7 @@
 #{$all-text-inputs},
 select,
 textarea {
+  -webkit-appearance: none;
 
   @include placeholder {
     color: $dark-gray;
