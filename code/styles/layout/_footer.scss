@@ -2,10 +2,14 @@
   background-color: $leaf-green;
   color: white;
   margin: rem(-1) 0 rem(-200);
-  padding: rem(100) 0 rem(240) 0;
+  padding: rem(50) rem(10) rem(190);
   transform: skewY(-$base-scew-angle);
   -webkit-transform: skewY(-$base-scew-angle);
   -ms-transform: skewY(-$base-scew-angle);
+
+  @include susy-breakpoint($small-screen) {
+    padding: rem(100) rem(10) rem(240);
+  }
 
   .container {
     @include content-skew-fix();
@@ -15,21 +19,26 @@
     transform: skewY($base-scew-angle);
   }
 
+  &__section:nth-of-type(1) {
+    @include span(2);
+  }
+
+  &__section:nth-of-type(2) {
+    @include span(10);
+    @include last;
+  }
+
   &__block {
     @include span(12);
     margin-bottom: rem(30);
 
     @include susy-breakpoint($small-screen) {
-      @include span(3);
+      @include span(4);
       margin-bottom: 0;
-
-      &:nth-of-type(2n) {
-        @include last;
-      }
     }
 
-    @include susy-breakpoint($medium-screen) {
-      &:nth-of-type(4) {
+    @include susy-breakpoint($small-screen) {
+      &:nth-of-type(3) {
         @include last;
       }
     }
@@ -62,7 +71,6 @@
     bottom: 0;
     left: 0;
     margin-bottom: rem(-190);
-    padding: rem(100) rem(10) rem(240);
     position: absolute;
     width: 100%;
   }

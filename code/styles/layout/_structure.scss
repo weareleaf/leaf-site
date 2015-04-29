@@ -97,17 +97,17 @@ body {
   @extend %z-index-up;
 
   .inner-page & {
-    padding-bottom: rem(360);
+     margin-bottom: rem(350);
 
     @include susy-breakpoint($small-screen) {
-      padding-bottom: rem(240);
+       margin-bottom: rem(240);
     }
   }
 }
 
 section {
   @include clearfix;
-  padding: rem(50) 0;
+  padding: rem(30) 0;
 
   @include susy-breakpoint($small-screen) {
     padding: rem(100) 0;
