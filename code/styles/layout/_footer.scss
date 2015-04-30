@@ -4,8 +4,6 @@
   margin: rem(-1) 0 rem(-200);
   padding: rem(50) rem(10) rem(190);
   transform: skewY(-$base-scew-angle);
-  -webkit-transform: skewY(-$base-scew-angle);
-  -ms-transform: skewY(-$base-scew-angle);
 
   @include susy-breakpoint($small-screen) {
     padding: rem(100) rem(10) rem(240);
