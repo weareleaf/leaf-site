@@ -46,7 +46,6 @@
   }
 
   &__logomark {
-    @include retina-image('/images/leaf', 40px 76px);
     display: none;
     height: rem(76);
     margin-bottom: rem(20);
