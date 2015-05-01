@@ -143,7 +143,7 @@ attachHandler({
   },
   preSendHook: function(requestData, otherData) {
     requestData.subject = "New contact from " + otherData.name;
-    if (requestData.body) {
+    if (requestData.body && otherData.budget) {
       requestData.body += ("\n\n Budget: " + otherData.budget);
     }
   },
