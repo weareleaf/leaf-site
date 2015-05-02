@@ -13,6 +13,8 @@ var notify = require('gulp-notify');
 var ghPages = require('gulp-gh-pages');
 var changed = require('gulp-changed');
 var runSequence = require('run-sequence');
+var autoprefixer = require('gulp-autoprefixer');
+var cssmin = require('gulp-cssmin')
 
 var MISC_FILES = ['./code/CNAME', './code/**/*.mp4', './code/**/*.ogv', './code/**/*.webm', './code/**/*.eot', './code/**/*.svg', './code/**/*.ttf', './code/**/*.woff'];
 var JADE_FILES = ['./code/**/*.jade', '!./code/lib/**'];
@@ -72,6 +74,12 @@ gulp.task('styles', function() {
   return gulp.src(SASS_FILES)
     .pipe(sass())
     .on('error', logError)
+    .pipe(autoprefixer({
+      browsers: ['> 1%', 'last 2 versions', 'IE 9']
+    }))
+    .on('error', logError)
+    .pipe(cssmin())
+    .on('error', logError)
     .pipe(gulp.dest(BUILD_DEST))
     .pipe(connect.reload());
 });
@@ -95,6 +103,8 @@ gulp.task('app_scripts', function() {
       glboal: true,
       debug : true
     }))
+    .on('error', logError)
+    .pipe(uglify())
     .on('error', logError)
     .pipe(gulp.dest(BUILD_DEST+'scripts/app/'))
     .pipe(connect.reload());

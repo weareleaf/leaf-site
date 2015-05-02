@@ -5,6 +5,19 @@ html {
 
 body {
   margin: 0;
+
+  &.home-page {
+    @include susy-breakpoint($small-screen) {
+      background: url('/images/video-fallback.jpg') repeat-y center top fixed;
+      background-size: cover;
+      background-attachment: scroll;
+    }
+
+    @include susy-breakpoint($large-screen) {
+      background-repeat:no-repeat;
+      background-attachment: fixed;
+    }
+  }
 }
 
 html,
