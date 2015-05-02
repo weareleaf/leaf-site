@@ -47,7 +47,8 @@
   }
 
   &__logomark {
-    @include retina-image('/images/leaf-small', 20px 38px);
+    background-image:url('/images/leaf.svg');
+    background-size:20px 38px;
     height: rem(38);
     margin-bottom: rem(20);
     width: rem(20);
