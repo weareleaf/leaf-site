@@ -8,7 +8,6 @@ var connect = require('gulp-connect');
 var connectRewrite = require('http-rewrite-middleware');
 var uglify = require('gulp-uglify');
 var open = require('gulp-open');
-var imageOptimization = require('gulp-image-optimization');
 var del = require('del');
 var notify = require('gulp-notify');
 var ghPages = require('gulp-gh-pages');
@@ -17,10 +16,18 @@ var runSequence = require('run-sequence');
 var autoprefixer = require('gulp-autoprefixer');
 var cssmin = require('gulp-cssmin');
 var webpack = require('webpack');
+var imagemin = require('gulp-imagemin');
+var imageminJpegRecompress = require('imagemin-jpeg-recompress');
 
 var MISC_FILES = ['./code/CNAME', './code/**/*.mp4', './code/**/*.ogv', './code/**/*.webm', './code/**/*.eot', './code/**/*.svg', './code/**/*.ttf', './code/**/*.woff', './code/**/*.woff2'];
 var JADE_FILES = ['./code/**/*.jade', '!./code/lib/**'];
 var SASS_FILES = ['./code/**/*.scss', , '!./code/lib/**'];
+var SASS_INCLUDE_PATHS = [
+  'node_modules/normalize-scss/sass',
+  'node_modules/bourbon/app/assets/stylesheets',
+  'node_modules/bourbon-neat/app/assets/stylesheets',
+  'node_modules/susy/sass'
+];
 var FAVICON_BASE = ['./code/favicons'];
 var FAVICON_FILES = [(FAVICON_BASE + '/**/*')];
 var IMAGE_FILES = ['./code/**/*.png','./code/**/*.jpg','./code/**/*.gif','./code/**/*.jpeg', '!./code/lib/**', '!./code/images/favicons/**/*'];
@@ -102,7 +109,7 @@ gulp.task('templates', function() {
 
 gulp.task('styles', function() {
   return gulp.src(SASS_FILES)
-    .pipe(sass())
+    .pipe(sass({ includePaths: SASS_INCLUDE_PATHS }))
     .on('error', logError)
     .pipe(autoprefixer({
       browsers: ['> 1%', 'last 2 versions', 'IE 9']
@@ -117,12 +124,10 @@ gulp.task('styles', function() {
 gulp.task('images', function() {
   return gulp.src(IMAGE_FILES)
     .pipe(changed(BUILD_DEST))
-    // .pipe(imageOptimization({
-    //   optimizationLevel: 8,
-    //   progressive: true,
-    //   interlaced: true
-    // }))
-    // .on('error', logError)
+    .pipe(imagemin([
+      imageminJpegRecompress({target: 0.5})
+    ]))
+    .on('error', logError)
     .pipe(gulp.dest(BUILD_DEST))
     .pipe(connect.reload());
 });
@@ -217,10 +222,13 @@ gulp.task('open', function(){
 // ----------------------------------
 gulp.task('deploy', function() {
   return gulp.src(BUILT_FILES)
-    .pipe(ghPages())
+    .pipe(ghPages({
+      remoteUrl: 'git@github.com:leafagency/leafagency.github.io.git',
+      force: true,
+      branch: 'master'
+    }))
     .on('error', logError);
 });
-
 // ----------------------------------
 // --------- COMPOSITE TASKS --------
 // ----------------------------------
