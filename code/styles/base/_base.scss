@@ -1,0 +1,21 @@
+html {
+  box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+body {
+  font-size: 0.75em;
+
+  @media (min-width: 22.950em) {
+    font-size: 0.9em;
+  }
+
+  @media (min-width: 49.6em) {
+    font-size: 1em;
+  }
+}

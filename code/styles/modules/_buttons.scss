@@ -1,7 +1,0 @@
-#{$all-button-inputs},
-button, .button {
-  @include susy-breakpoint($small-screen) {
-    font-size: 1.111em;
-    padding: 1em 2em;
-  }
-}

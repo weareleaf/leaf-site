@@ -1,30 +1,26 @@
-// Base Variables
-@import './code/lib/normalize-scss/normalize';
-@import './code/lib/susy/sass/susy';
-@import './code/lib/bourbon/app/assets/stylesheets/bourbon';
-@import 'base/variables';
+//@import 'normalize';
+@import './node_modules/susy/sass/susy';
+@import 'utils/utils';
 
 // Base
-@import 'base/mixins';
+@import 'base/variables';
+@import 'base/base';
 @import 'base/buttons';
-@import 'base/fonts';
+@import 'base/colors';
 @import 'base/forms';
-@import 'base/grid-settings';
+@import 'base/lists';
+@import 'base/tables';
 @import 'base/typography';
+
+// Components
+@import 'components/blockquote';
+@import 'components/icons';
+@import 'components/off-canvas-menu';
+@import 'components/page-header';
+@import 'components/testimonial';
 
 // Layout
 @import 'layout/footer';
-@import 'layout/header';
+@import 'layout/navbar';
+@import 'layout/section';
 @import 'layout/structure';
-
-// Modules
-@import 'modules/404';
-@import 'modules/article';
-@import 'modules/buttons';
-@import 'modules/forms';
-@import 'modules/icons';
-@import 'modules/jumbotron';
-@import 'modules/team';
-@import 'modules/testimonial';
-@import 'modules/typography';
-@import 'modules/video';

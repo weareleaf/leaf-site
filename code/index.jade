@@ -1,4 +1,4 @@
-extends pages/base/_base
+extends templates/base/_base
 
 block prepend vars
   -var bodyClass = 'home-page'
@@ -6,29 +6,72 @@ block prepend vars
 
 block content
 
-  section.team
-    .container
-      .team__content
-        h2.team__heading Who Are We?
+    header.hero-banner
 
-        article.team-profile
-          img.team__photo(src='/images/mike-carter.jpg', alt='Mike Carter')
-          h3.team__member Mike Carter
-          h4.team__role Software Engineer
-          p.team__biography Mike is an accomplished full-stack software engineer who specialises in using modern front end JavaScript frameworks backed by cutting edge cloud services to create web applications offering desktop-like user experiences. You can read more about Mike on his <a href='http://www.mcarter.me/' target='_blank'>personal site</a>, or follow him on <a href='http://www.twitter.com/mcarterj/' target='_blank'>Twitter</a>.
+      .navbar
+        .navbar__logo
+          include templates/modules/leaf.svg
+        a.navbar__link(href='#') Get in touch
 
-         article.team-profile
-          img.team__photo(src='/images/chris-annetts.jpg', alt='Chris Annetts')
-          h3.team__member Chris Annetts
-          h4.team__role Designer
-          p.team__biography Chris is a seasoned interaction designer, having worked with some of the UK's biggest names. He specialises in turning complex ideas into accessible, simple, painless interfaces. You can find out more about Chris on his <a href='http://www.chrisannetts.com/' target='_blank'>personal site</a>, on <a href='http://www.twitter.com/cm_annetts/' target='_blank'>Twitter</a>, or through <a href='http://www.dribbble.com/chrisannetts/' target='_blank'>Dribbble</a>, where a selection of his work is available.
+      h1.hero-banner__title We help brands improve their digital output
+      p.hero-banner__intro Leaf are a Kent-based web design and development studio, specialising in building digital products that make peoples lives easier.
 
-  section.testimonials
-    .container
-      .testimonials__content
-        .testimonial
-          p.testimonial__quote “Chris is an exceptional web designer, and from start to finish, was a total pleasure to work with. He has a great talent to take a client's vision and turn it into a reality”.
-          h3.testimonial__person Graham Durbow
-          h4.testimonial__company Music Maestro
+    main
 
-  script(src='/scripts/app/logoAnimator.app.js')
+      section.section.bg--alt
+        h2.section__title How we work
+        p.section__intro We're no pixel-pushing, conveyer-belt outfit. We build products that get under the skin of the problem they’re solving.
+
+        h3 Design
+        p Design goes far deeper than the visual. Every decision is made with real data, business constaints and user experience at its heart.
+
+        h3 Development
+        p Technical constraints are the light that guides every decision. We create component-driven, scalable eco-systems, with an agile mindset.
+
+      section.section
+        h2.section__title Our toolkit
+        p.section__intro We'll always use the most appropriate technology or service for the task at hand, but have a few that we use more often than most.
+
+        h3 Ruby on rails
+        p Pellentesque finibus gravida enim a ultricies. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia sit amet.
+
+        h3 Backbone
+        p Nunc ut tortor nec libero lobortis consequat et vel neque. Donec volutpat ipsum neque, vel gravida nisl fringilla eget.
+
+        h3 ReactNode.JS
+        p Nam varius maximus risus id aliquam. Donec sem risus, mollis id tempus in, tempor non metus. Ut quis sodales felis.
+
+        h3 Webpack
+        p Proin vitae quam ultrices, venenatis nisi sit amet, consectetur ante. Etiam pharetra, felis at congue feugiat.
+
+      section.section.bg--alt
+        h2.section__title Collective Experience
+        p.section__intro With more than 10 years of industry work between us, we've worked with a fantastic bunch of clients; big and small. A small sample include:
+
+        ul.list--3-col
+          li Admiral
+          li BoxedUp
+          li CakeBoxx Technolgies
+          li Confused.com
+          li Cushelle
+          li Cushman &amp; Wakefield
+          li Expedia
+          li Holiday Extras
+          li Greene King IPA
+          li Irn Bru
+          li Orangina
+          li Santander
+          li Sprintly
+          li Velvet
+          li Zendesk
+
+    footer.footer
+      include templates/modules/leaf.svg
+
+      span.footer__intro We're available for work
+      span.footer__callout Lets chat
+
+      .footer__small
+        span.footer__small__copyright &copy; Leaf Software 2016
+        a.footer_small__link(href='#') Get in touch
+

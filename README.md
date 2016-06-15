@@ -1,4 +1,4 @@
-# Leaf Website • 0.0.1
+# Leaf Project Template • 0.0.1
 
 ## Introduction
 
@@ -36,8 +36,6 @@ npm run test
 npm run build
 ```
 
-**Remember:** If your code isn't rebuilding properly, check all the dependencies are up to date with `npm install`.
-
 ### Publishing the project to github pages
 
 This assumes the project has a github origin. For more information on how these are deployed, see the [Github Pages](https://pages.github.com/) docs:
@@ -45,10 +43,6 @@ This assumes the project has a github origin. For more information on how these 
 ```
 npm run deploy
 ```
-
-### Installing new dependencies
-
-You can install new dependencies with `npm install package-name` and `bower install package-name`. `npm` installed dependencies will be installed to `node_modules` and bower installed dependencies to `code/lib`. This is because `npm` installed dependencies are not intended to be used directly in your project, and so stay out of the code directory.
 
 ## Under the hood
 

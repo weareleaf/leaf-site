@@ -1,55 +1,91 @@
-// Colours
-$dark-gray: #a6b7b7;
-$dark-green: #52635d;
-$medium-gray: #999;
-$leaf-green: #29b197;
-$light-gray: #f5f8f7;
+// Colors
+$bright-green: #65cebe;
+$dark-blue: #1d2541;
+$deep-blue: #0a132a;
+$mid-blue: #3a506b;
+$light-gray: #d0d4d2;
+$light-green: #cbece7;
+$mid-gray: #bdc7c3;
+$mid-green: #65bcba;
+$pale-green: #f6f8f7;
+
+
+$coal: #323834;
+$snow: #f9fbfa;
+$white: #fff;
+
+$leaf: #a1c59d;
+$leaf-dark: #74936f;
+$leaf-light: #c5edc1;
+
+// Animations
+$base-duration: 150ms;
+$base-timing: ease;
+
+// Background colors
+$base-background-color: $pale-green;
 
 // Border
-$base-border-colour: #e4ebeb;
-$base-border: 1px solid $base-border-colour;
+$base-border-color: $pale-green;
+$base-border-style: solid;
+$base-border-width: 0.15em;
+$base-border: $base-border-style $base-border-width $base-border-color;
 
-// Background Colours
-$base-background-colour: #fff;
-$secondary-background-colour: lighten($base-border-colour, 10%);
+// Brand
+$brand-primary: $bright-green;
+$brand-secondary: $dark-blue;
 
-// Buttons
-$base-button-background-colour: #2bc284;
+// Font colors
+$base-font-color: $coal;
+$heading-font-color: $coal;
+$action-color: $bright-green;
 
-// Font Colours
-$base-font-colour: #303735;
-$base-heading-colour: $leaf-green;
-
-// Font Sizes
-$base-font-size: 1.125em;
-$base-h1-size: 2em;
-$base-h2-size: 1.445em;
-$base-h3-size: 1.445em;
-$base-h4-size: 1em;
-$base-h5-size: 0.889em;
-
-// Font Stacks
-$font-family-sans-serif: 'Dosis', Helvetica, Arial, sans-serif;
-$font-family-serif: 'Bitter', Georgia, Times, 'Times New Roman', serif;
+// Font sizes
+$base-font-size: 1.25em;
+$em-base: 20px;
 
 // Forms
-$input-background-colour: #fafcfc;
-$input-border-colour: #dee5e5;
-$input-border-width: 2px;
-$form-box-shadow: 0;
-$form-box-shadow-focus: $form-box-shadow, 0 0 5px adjust-color($light-gray, $lightness: -5%, $alpha: -0.3);
 
-// Line Height
+
+// Line height
 $base-line-height: 1.7;
 $heading-line-height: 1.2;
 
-// Other Sizes
-$base-border-radius: 5px;
-$base-scew-angle: 6deg;
+// Other sizes
+$base-border-radius: 0.15em;
 $base-spacing: $base-line-height * 1em;
-$small-spacing: $base-spacing / 0.8;
+$small-spacing: $base-spacing / 2;
 $base-z-index: 0;
+$max-width: 59em;
+
+// Padding (horizontal)
+$padding-horizontal: 1.5em;
+$padding-horizontal-fluid: 10%;
+$padding-horizontal-xl: $padding-horizontal * 6;
+$padding-horizontal-lg: $padding-horizontal * 2;
+$padding-horizontal-sm: $padding-horizontal / 2;
+
+// Spacing (vertical)
+$padding-vertical: 0.75em;
+$padding-vertical-xl: $padding-vertical * 6;
+$padding-vertical-lg: $padding-vertical * 2;
+$padding-vertical-sm: $padding-vertical / 2;
+$padding-vertical-fluid: 5%;
+
+// Spacing (horizontal)
+$spacing-horizontal: 1.5em;
+$spacing-horizontal-fluid: 10%;
+$spacing-horizontal-xl: $spacing-horizontal * 6;
+$spacing-horizontal-lg: $spacing-horizontal * 2;
+$spacing-horizontal-sm: $spacing-horizontal / 2;
+
+// Spacing (vertical)
+$spacing-vertical: 0.75em;
+$spacing-vertical-xl: $spacing-vertical * 6;
+$spacing-vertical-lg: $spacing-vertical * 2;
+$spacing-vertical-sm: $spacing-vertical / 2;
+$spacing-vertical-fluid: 5%;
 
 // Typography
-$base-font-family: $font-family-serif;
-$heading-font-family: $font-family-sans-serif;
+$base-font-family: 'karmina', serif;
+$heading-font-family: 'soleil', sans-serif;

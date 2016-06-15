@@ -1,0 +1,18 @@
+@mixin circular($size) {
+  border-radius: $size / 2;
+  height: $size;
+  line-height: $size;
+  overflow: hidden;
+  width: $size;
+}
+
+@mixin reset-list-style {
+  list-style: none;
+
+  li {
+    &:before {
+      content: "";
+      display: none;
+    }
+  }
+}
