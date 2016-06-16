@@ -1,5 +1,6 @@
 .footer {
   background-color: $leaf-light;
+  font-family: $font-sans-serif;
   padding: $spacing-vertical-root 0;
 
   &__inner {
@@ -12,5 +13,27 @@
 
   &__body {
     @include span(8);
+  }
+
+  &__intro {
+    color: $leaf-dark;
+    font-size: 1.1em;
+  }
+
+  &__callout {
+    @extend %h1;
+    display: block;
+  }
+
+  &__small {
+    font-size: 0.75em;
+
+    &__copyright {
+      margin-right: $spacing-horizontal;
+    }
+
+    &__link {
+      color: $leaf-dark;
+    }
   }
 }
