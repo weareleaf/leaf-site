@@ -1,11 +1,20 @@
 .section {
-  margin: $spacing-vertical-xl 0;
-  padding: $padding-vertical-lg $padding-horizontal;
+  @include clearfix;
+  padding: $spacing-vertical-root 0;
+  //margin: $spacing-vertical-xl 0;
+  //padding: $padding-vertical-lg $padding-horizontal;
 
   @media (min-width: 49.6em) {
-    margin: 0 auto;
-    //max-width: 60%;
-    padding: $padding-vertical-xl $padding-horizontal;
+    //padding: $padding-vertical-xl $padding-horizontal;
+  }
+
+  &__header,
+  &__body {
+    @include container();
+  }
+
+  &__header {
+    margin-bottom: $spacing-vertical-lg;
   }
 
   & p:last-child {

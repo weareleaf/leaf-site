@@ -35,6 +35,13 @@ $base-border: $base-border-style $base-border-width $base-border-color;
 $brand-primary: $bright-green;
 $brand-secondary: $dark-blue;
 
+// Breakpoints
+$bp-xs : 24em;
+$bp-sm : 36em;
+$bp-md : 50em;
+$bp-lg : 64em;
+$bp-xl : 72em;
+
 // Font colors
 $base-font-color: $coal;
 $heading-font-color: $coal;
@@ -60,32 +67,67 @@ $max-width: 59em;
 
 // Padding (horizontal)
 $padding-horizontal: 1.5em;
-$padding-horizontal-fluid: 10%;
-$padding-horizontal-xl: $padding-horizontal * 6;
 $padding-horizontal-lg: $padding-horizontal * 2;
 $padding-horizontal-sm: $padding-horizontal / 2;
+$padding-horizontal-xl: $padding-horizontal * 4;
+$padding-horizontal-xs: $padding-horizontal / 4;
 
-// Spacing (vertical)
-$padding-vertical: 0.75em;
-$padding-vertical-xl: $padding-vertical * 6;
+// Padding (vertical)
+$padding-vertical: 1.5em;
 $padding-vertical-lg: $padding-vertical * 2;
 $padding-vertical-sm: $padding-vertical / 2;
-$padding-vertical-fluid: 5%;
+$padding-vertical-xl: $padding-vertical * 4;
+$padding-vertical-xs: $padding-vertical / 4;
+
+// Padding (horizontal - fluid)
+$padding-horizontal-fluid: 10%;
+$padding-horizontal-fluid-lg: $padding-horizontal-fluid * 1.5;
+$padding-horizontal-fluid-sm: $padding-horizontal-fluid / 1.5;
+
+// Padding (vertical - fluid)
+$padding-vertical-fluid: 10%;
+$padding-vertical-fluid-lg: $padding-vertical-fluid * 1.5;
+$padding-vertical-fluid-sm: $padding-vertical-fluid / 1.5;
+
+// Padding (root)
+$padding-horizontal-root: 5vw;
+$padding-vertical-root: 5vw;
+
+// Padding (block)
+$padding-block-horizontal: $padding-horizontal * 1.5;
+$padding-block-vertical: $padding-vertical * 6;
+$padding-block: $padding-block-vertical $padding-block-horizontal;
 
 // Spacing (horizontal)
 $spacing-horizontal: 1.5em;
-$spacing-horizontal-fluid: 10%;
-$spacing-horizontal-xl: $spacing-horizontal * 6;
 $spacing-horizontal-lg: $spacing-horizontal * 2;
 $spacing-horizontal-sm: $spacing-horizontal / 2;
+$spacing-horizontal-xl: $spacing-horizontal * 4;
+$spacing-horizontal-xs: $spacing-horizontal / 4;
 
 // Spacing (vertical)
-$spacing-vertical: 0.75em;
-$spacing-vertical-xl: $spacing-vertical * 6;
+$spacing-vertical: 1.5em;
 $spacing-vertical-lg: $spacing-vertical * 2;
 $spacing-vertical-sm: $spacing-vertical / 2;
-$spacing-vertical-fluid: 5%;
+$spacing-vertical-xl: $spacing-vertical * 4;
+$spacing-vertical-xs: $spacing-vertical / 4;
+
+// Spacing (horizontal - fluid)
+$spacing-horizontal-fluid: 10%;
+$spacing-horizontal-fluid-lg: $spacing-horizontal-fluid * 1.5;
+$spacing-horizontal-fluid-sm: $spacing-horizontal-fluid / 1.5;
+
+// Spacing (vertical - fluid)
+$spacing-vertical-fluid: 10%;
+$spacing-vertical-fluid-lg: $spacing-vertical-fluid * 1.5;
+$spacing-vertical-fluid-sm: $spacing-vertical-fluid / 1.5;
+
+// Spacing (root)
+$spacing-horizontal-root: 5vw;
+$spacing-vertical-root: 5vw;
 
 // Typography
-$base-font-family: 'karmina', serif;
-$heading-font-family: 'soleil', sans-serif;
+$font-serif: 'karmina', serif;
+$font-sans-serif: 'soleil', sans-serif;
+$base-font-family: $font-serif;
+$heading-font-family: $font-sans-serif;

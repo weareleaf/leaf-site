@@ -10,9 +10,17 @@
   list-style: none;
 
   li {
-    &:before {
-      content: "";
+    &::before {
+      content: '';
       display: none;
     }
+  }
+}
+
+@mixin clearfix {
+  &::after {
+    content: "";
+    display: table;
+    clear: both;
   }
 }

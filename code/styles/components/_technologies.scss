@@ -1,0 +1,17 @@
+.technologies {
+
+  @include susy-breakpoint($bp-lg) {
+
+    &__block {
+      @include span(3 of 12);
+
+      &:last-of-type {
+        @include omega;
+      }
+    }
+  }
+
+  .section__body {
+    @include container(64em);
+  }
+}

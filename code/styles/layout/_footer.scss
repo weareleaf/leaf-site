@@ -1,3 +1,16 @@
 .footer {
   background-color: $leaf-light;
+  padding: $spacing-vertical-root 0;
+
+  &__inner {
+    @include container(64em);
+  }
+
+  &__logo {
+    @include span(2);
+  }
+
+  &__body {
+    @include span(8);
+  }
 }

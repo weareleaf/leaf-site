@@ -1,0 +1,15 @@
+.hero-banner {
+  background-color: $leaf-light;
+
+  &__inner {
+    @include container;
+    padding-bottom: $spacing-vertical-root;
+  }
+
+  &__intro {
+    @include span(7);
+    color: $leaf-dark;
+    font-family: $font-sans-serif;
+    font-size: 1.1em;
+  }
+}

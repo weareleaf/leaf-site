@@ -1,4 +1,8 @@
 body {
+  margin: $spacing-vertical-sm $spacing-horizontal-sm;
+}
+
+.site-wrapper {
   background-color: $pale-green;
 }
 

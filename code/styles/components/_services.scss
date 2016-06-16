@@ -1,0 +1,13 @@
+.services {
+
+  @include susy-breakpoint($bp-lg) {
+
+    &__block {
+      @include span(6);
+
+      &:last-of-type {
+        @include omega;
+      }
+    }
+  }
+}

@@ -24,8 +24,8 @@ var JADE_FILES = ['./code/**/*.jade', '!./code/lib/**'];
 var SASS_FILES = ['./code/**/*.scss', , '!./code/lib/**'];
 var SASS_INCLUDE_PATHS = [
   'node_modules/normalize-scss/sass',
-  'node_modules/bourbon/app/assets/stylesheets',
-  'node_modules/bourbon-neat/app/assets/stylesheets',
+  //'node_modules/bourbon/app/assets/stylesheets',
+  //'node_modules/bourbon-neat/app/assets/stylesheets',
   'node_modules/susy/sass'
 ];
 var FAVICON_BASE = ['./code/favicons'];

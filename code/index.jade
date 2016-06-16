@@ -13,65 +13,84 @@ block content
           include templates/modules/leaf.svg
         a.navbar__link(href='#') Get in touch
 
-      h1.hero-banner__title We help brands improve their digital output
-      p.hero-banner__intro Leaf are a Kent-based web design and development studio, specialising in building digital products that make peoples lives easier.
+      .hero-banner__inner
+        h1.hero-banner__title We help brands improve their digital output
+        p.hero-banner__intro Leaf are a Kent-based web design and development studio, specialising in building digital products that make peoples lives easier.
 
     main
 
+      section.section.services.bg--alt
+        .section__inner.services__inner
+          .section__header
+            h2.section__title How we work
+            p.section__intro We're no pixel-pushing, conveyer-belt outfit. We build products that get under the skin of the problem they’re solving.
+
+          .section__body
+            .services__block
+              h3 Design
+              p Design goes far deeper than the visual. Every decision is made with real data, business constaints and user experience at its heart.
+
+            .services__block
+              h3 Development
+              p Technical constraints are the light that guides every decision. We create component-driven, scalable eco-systems, with an agile mindset.
+
+      section.section.technologies
+        .section__inner.technologies__inner
+          .section__header
+            h2.section__title Our toolkit
+            p.section__intro We'll always use the most appropriate technology or service for the task at hand, but have a few that we use more often than most.
+
+          .section__body
+            .technologies__block
+              h3 Ruby on rails
+              p Pellentesque finibus gravida enim a ultricies. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia sit amet.
+
+            .technologies__block
+              h3 Backbone
+              p Nunc ut tortor nec libero lobortis consequat et vel neque. Donec volutpat ipsum neque, vel gravida nisl fringilla eget.
+
+            .technologies__block
+              h3 ReactNode.JS
+              p Nam varius maximus risus id aliquam. Donec sem risus, mollis id tempus in, tempor non metus. Ut quis sodales felis.
+
+            .technologies__block
+              h3 Webpack
+              p Proin vitae quam ultrices, venenatis nisi sit amet, consectetur ante. Etiam pharetra, felis at congue feugiat.
+
       section.section.bg--alt
-        h2.section__title How we work
-        p.section__intro We're no pixel-pushing, conveyer-belt outfit. We build products that get under the skin of the problem they’re solving.
+        .section__inner
+          .section__header
+            h2.section__title Collective Experience
+            p.section__intro With more than 10 years of industry work between us, we've worked with a fantastic bunch of clients; big and small. A small sample include:
 
-        h3 Design
-        p Design goes far deeper than the visual. Every decision is made with real data, business constaints and user experience at its heart.
-
-        h3 Development
-        p Technical constraints are the light that guides every decision. We create component-driven, scalable eco-systems, with an agile mindset.
-
-      section.section
-        h2.section__title Our toolkit
-        p.section__intro We'll always use the most appropriate technology or service for the task at hand, but have a few that we use more often than most.
-
-        h3 Ruby on rails
-        p Pellentesque finibus gravida enim a ultricies. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia sit amet.
-
-        h3 Backbone
-        p Nunc ut tortor nec libero lobortis consequat et vel neque. Donec volutpat ipsum neque, vel gravida nisl fringilla eget.
-
-        h3 ReactNode.JS
-        p Nam varius maximus risus id aliquam. Donec sem risus, mollis id tempus in, tempor non metus. Ut quis sodales felis.
-
-        h3 Webpack
-        p Proin vitae quam ultrices, venenatis nisi sit amet, consectetur ante. Etiam pharetra, felis at congue feugiat.
-
-      section.section.bg--alt
-        h2.section__title Collective Experience
-        p.section__intro With more than 10 years of industry work between us, we've worked with a fantastic bunch of clients; big and small. A small sample include:
-
-        ul.list--3-col
-          li Admiral
-          li BoxedUp
-          li CakeBoxx Technolgies
-          li Confused.com
-          li Cushelle
-          li Cushman &amp; Wakefield
-          li Expedia
-          li Holiday Extras
-          li Greene King IPA
-          li Irn Bru
-          li Orangina
-          li Santander
-          li Sprintly
-          li Velvet
-          li Zendesk
+          .section__body
+            ul.list--3-col
+              li Admiral
+              li BoxedUp
+              li CakeBoxx Technolgies
+              li Confused.com
+              li Cushelle
+              li Cushman &amp; Wakefield
+              li Expedia
+              li Holiday Extras
+              li Greene King IPA
+              li Irn Bru
+              li Orangina
+              li Santander
+              li Sprintly
+              li Velvet
+              li Zendesk
 
     footer.footer
-      include templates/modules/leaf.svg
+      .footer__inner
+        .footer__logo
+          include templates/modules/leaf.svg
 
-      span.footer__intro We're available for work
-      span.footer__callout Lets chat
+        .footer__body
+          span.footer__intro We're available for work
+          span.footer__callout Lets chat
 
-      .footer__small
-        span.footer__small__copyright &copy; Leaf Software 2016
-        a.footer_small__link(href='#') Get in touch
+          .footer__small
+            span.footer__small__copyright &copy; Leaf Software 2016
+            a.footer_small__link(href='#') Get in touch
 
