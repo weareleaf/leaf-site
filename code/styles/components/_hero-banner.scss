@@ -3,7 +3,7 @@
 
   &__inner {
     @include container;
-    padding-bottom: $spacing-vertical-root;
+    padding: $spacing-vertical-root 0;
   }
 
   &__intro {

@@ -16,5 +16,12 @@ main ul li::before {
 }
 
 .list--3-col {
-  column-count: 3;
+
+  @include susy-breakpoint($bp-sm) {
+    column-count: 2;
+  }
+
+  @include susy-breakpoint($bp-lg) {
+    column-count: 3;
+  }
 }
