@@ -144,7 +144,7 @@ gulp.task('svgs', function() {
           maxHeight: 128
         },
         spacing: { // Add padding
-          padding: 10
+          padding: 1
         },
       },
       mode: { // This config is brittle as fuck.

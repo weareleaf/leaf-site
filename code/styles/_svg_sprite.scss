@@ -4,7 +4,7 @@
 
 .svg-design {
 	@extend %svg-common;
-	background-position: 37.39837398373984% 76.19047619047619%;
+	background-position: 74.79674796747967% 76.19047619047619%;
 }
 
 .svg-design-dims {
@@ -14,7 +14,7 @@
 
 .svg-development {
 	@extend %svg-common;
-	background-position: 61.47540983606557% 74.17218543046357%;
+	background-position: 99.18032786885246% 74.17218543046357%;
 }
 
 .svg-development-dims {
@@ -30,6 +30,16 @@
 .svg-nodejs-dims {
 	width: 103px;
 	height: 111px;
+}
+
+.svg-react {
+	@extend %svg-common;
+	background-position: 43.39622641509434% 85.49618320610686%;
+}
+
+.svg-react-dims {
+	width: 92px;
+	height: 84px;
 }
 
 .svg-redux {
