@@ -39,36 +39,22 @@ html(class='no-js', lang='en')
       ga('send', 'pageview');
 
   body(dir='ltr', class='#{bodyClass}')
+
     .site-wrapper
 
-      //#overlay.overlay
-        nav.overlay-menu
-          ul
-            li
-              a(href='#') Home
-            li
-              a(href='#') About
-            li
-              a(href='#') Work
-            li
-              a(href='#') Contact
+      <!--[if lt IE 9]>
+      p.browsehappy
+        | You are using an <strong>outdated</strong> browser.
+        | Please <a href='http://browsehappy.com/'>upgrade your browser</a>
+        | to improve your experience.
+      <![endif]-->
 
+      main.content-wrapper
 
-      .page-wrapper
+        //include ../layout/header
 
-        <!--[if lt IE 9]>
-        p.browsehappy
-          | You are using an <strong>outdated</strong> browser.
-          | Please <a href='http://browsehappy.com/'>upgrade your browser</a>
-          | to improve your experience.
-        <![endif]-->
+        block content
 
-        main.content-wrapper
-
-          //include ../layout/header
-
-          block content
-
-          include ../layout/footer
+        include ../layout/footer
 
     block footerScripts

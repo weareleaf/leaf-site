@@ -1,11 +1,10 @@
 body {
   margin: 0; // Remove this when Normalize is working
-
-  @include susy-breakpoint($bp-lg) {
-    margin: $spacing-vertical-sm $spacing-horizontal-sm;
-  }
 }
 
 .site-wrapper {
   background-color: $pale-green;
+  @include susy-breakpoint($bp-lg) {
+    padding: $padding-vertical-sm $padding-horizontal-sm;
+  }
 }

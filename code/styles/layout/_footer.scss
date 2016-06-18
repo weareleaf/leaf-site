@@ -1,5 +1,6 @@
 .footer {
   background-color: $leaf-light;
+  border-top: solid $spacing-vertical-sm $base-background-color; // Fake padding
   font-family: $font-sans-serif;
   padding: $spacing-vertical-root $padding-horizontal-root;
 

@@ -8,6 +8,10 @@
       &:last-of-type {
         @include omega;
       }
+
+      &__icon {
+        margin-bottom: $spacing-vertical-sm;
+      }
     }
   }
 }
