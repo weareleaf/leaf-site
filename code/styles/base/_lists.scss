@@ -10,7 +10,7 @@ ul {
 }
 
 main ul li::before {
-  content: "\2014";
+  content: '\2014';
   margin-right: 0.75em;
   position: relative;
 }

@@ -1,18 +1,26 @@
 .footer {
   background-color: $leaf-light;
   font-family: $font-sans-serif;
-  padding: $spacing-vertical-root 0;
+  padding: $spacing-vertical-root $padding-horizontal-root;
 
   &__inner {
     @include container(64em);
   }
 
   &__logo {
-    @include span(2);
+    display: none;
+
+    @include susy-breakpoint($bp-md) {
+      @include span(2);
+      display: block;
+    }
   }
 
   &__body {
-    @include span(8);
+
+    @include susy-breakpoint($bp-md) {
+      @include span(8);
+    }
   }
 
   &__intro {

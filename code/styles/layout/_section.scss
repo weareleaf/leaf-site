@@ -1,12 +1,7 @@
 .section {
   @include clearfix;
-  padding: $spacing-vertical-root 0;
-  //margin: $spacing-vertical-xl 0;
-  //padding: $padding-vertical-lg $padding-horizontal;
-
-  @media (min-width: 49.6em) {
-    //padding: $padding-vertical-xl $padding-horizontal;
-  }
+  margin-bottom: -$spacing-vertical;
+  padding: $padding-vertical-root $padding-horizontal-root;
 
   &__header,
   &__body {
@@ -18,7 +13,7 @@
   }
 
   & p:last-child {
-    margin-bottom: 0;
+    //margin-bottom: 0;
   }
 
   &__intro {

@@ -1,47 +1,11 @@
 body {
-  margin: $spacing-vertical-sm $spacing-horizontal-sm;
+  margin: 0; // Remove this when Normalize is working
+
+  @include susy-breakpoint($bp-lg) {
+    margin: $spacing-vertical-sm $spacing-horizontal-sm;
+  }
 }
 
 .site-wrapper {
   background-color: $pale-green;
-}
-
-main {
-  background-color: white;
-  margin: 0 auto;
-  max-width: em(1180);
-}
-
-.content-block.text {
-  padding: $padding-vertical-xl $padding-horizontal;
-
-  p {
-    margin-bottom: 0;
-  }
-
-  img {
-    display: block;
-  }
-}
-
-  @media (min-width: 49.6em) {
-
-  .content-blocks {
-    align-items: stretch;
-    display: flex;
-  }
-
-  .content-block {
-    display: inherit;
-    align-items: flex-start;
-    flex-direction: column;
-    flex-basis: 50%;
-    justify-content: center;
-
-
-
-    &.text {
-      padding: 0 em(80);
-    }
-  }
 }

@@ -1,5 +1,6 @@
 .hero-banner {
   background-color: $leaf-light;
+  padding: 0 $padding-horizontal-root;
 
   &__inner {
     @include container;
@@ -7,9 +8,12 @@
   }
 
   &__intro {
-    @include span(7);
     color: $leaf-dark;
     font-family: $font-sans-serif;
     font-size: 1.1em;
+
+    @include susy-breakpoint($bp-md) {
+      @include span(7);
+    }
   }
 }

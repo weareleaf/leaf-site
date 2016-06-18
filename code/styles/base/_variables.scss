@@ -90,8 +90,8 @@ $padding-vertical-fluid-lg: $padding-vertical-fluid * 1.5;
 $padding-vertical-fluid-sm: $padding-vertical-fluid / 1.5;
 
 // Padding (root)
-$padding-horizontal-root: 5vw;
-$padding-vertical-root: 5vw;
+$padding-horizontal-root: calc(5vw + #{$padding-vertical});
+$padding-vertical-root: calc(5vw + #{$padding-vertical});
 
 // Padding (block)
 $padding-block-horizontal: $padding-horizontal * 1.5;
@@ -123,8 +123,8 @@ $spacing-vertical-fluid-lg: $spacing-vertical-fluid * 1.5;
 $spacing-vertical-fluid-sm: $spacing-vertical-fluid / 1.5;
 
 // Spacing (root)
-$spacing-horizontal-root: 5vw;
-$spacing-vertical-root: 5vw;
+$spacing-horizontal-root: calc(5vw + #{$spacing-vertical});
+$spacing-vertical-root: calc(5vw + #{$spacing-vertical});
 
 // Typography
 $font-serif: 'karmina', serif;

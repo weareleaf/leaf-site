@@ -19,12 +19,16 @@ h6, %h6, {
   color: $heading-font-color;
   font-family: $heading-font-family;
   line-height: $heading-line-height;
-  margin: 0 0 $spacing-vertical;
+  margin: 0 0 $spacing-vertical-sm;
 }
 
 h1, %h1 {
-  font-size: 3.6em;
+  font-size: 2.6em;
   font-weight: 300;
+
+  @include susy-breakpoint($bp-md) {
+    font-size: 3.6em;
+  }
 }
 
 h2, %h2 {
@@ -38,7 +42,7 @@ h3, %h3 {
 }
 
 p {
-  margin: 0 0 $spacing-vertical-lg;
+  margin: 0 0 $spacing-vertical;
 }
 
 a {

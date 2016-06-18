@@ -1,13 +1,6 @@
 .navbar {
   @include container(64em);
-  padding: $padding-vertical-lg 0;
-  //margin-bottom: $spacing-vertical-fluid;
-  //padding: $padding-vertical-lg $padding-horizontal $padding-vertical-xl;
-
-  @media (min-width: 49.6em) {
-    //margin: 0 auto $spacing-vertical-fluid;
-    //max-width: 75%;
-  }
+  padding-top: calc(#{$padding-vertical} + 2%);
 
   &__inner {
     display: table;

@@ -8,6 +8,17 @@
       &:last-of-type {
         @include omega;
       }
+
+      &__logo {
+        display: flex;
+        height: 5em;
+        margin-bottom: $spacing-vertical;
+
+        img {
+          height: 100%;
+          width: auto;
+        }
+      }
     }
   }
 

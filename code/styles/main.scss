@@ -1,6 +1,4 @@
 // Vendor
-//@import 'bourbon';
-//@import 'neat';
 @import 'normalize';
 @import 'susy';
 @import 'utils/utils';
@@ -20,10 +18,10 @@
 @import 'components/blockquote';
 @import 'components/hero-banner';
 @import 'components/icons';
-@import 'components/off-canvas-menu';
-@import 'components/technologies';
-@import 'components/testimonial';
-@import 'components/services';
+
+// Modules
+@import 'modules/services';
+@import 'modules/technologies';
 
 // Layout
 @import 'layout/footer';
