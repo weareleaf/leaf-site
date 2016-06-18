@@ -1,0 +1,64 @@
+%svg-common {
+	background: url("../images/svg_sprite.svg") no-repeat;
+}
+
+.svg-design {
+	@extend %svg-common;
+	background-position: 37.39837398373984% 76.19047619047619%;
+}
+
+.svg-design-dims {
+	width: 58px;
+	height: 68px;
+}
+
+.svg-development {
+	@extend %svg-common;
+	background-position: 61.47540983606557% 74.17218543046357%;
+}
+
+.svg-development-dims {
+	width: 60px;
+	height: 64px;
+}
+
+.svg-nodejs {
+	@extend %svg-common;
+	background-position: 45.77114427860697% 0;
+}
+
+.svg-nodejs-dims {
+	width: 103px;
+	height: 111px;
+}
+
+.svg-redux {
+	@extend %svg-common;
+	background-position: 100% 0;
+}
+
+.svg-redux-dims {
+	width: 109px;
+	height: 104px;
+}
+
+.svg-ruby-on-rails {
+	@extend %svg-common;
+	background-position: 0 0;
+}
+
+.svg-ruby-on-rails-dims {
+	width: 92px;
+	height: 112px;
+}
+
+.svg-webpack {
+	@extend %svg-common;
+	background-position: 0 100%;
+}
+
+.svg-webpack-dims {
+	width: 92px;
+	height: 103px;
+}
+

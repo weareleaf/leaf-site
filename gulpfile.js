@@ -18,8 +18,9 @@ var cssmin = require('gulp-cssmin');
 var webpack = require('webpack');
 var imagemin = require('gulp-imagemin');
 var imageminJpegRecompress = require('imagemin-jpeg-recompress');
+var svgSprite = require('gulp-svg-sprite');
 
-var MISC_FILES = ['./code/CNAME', './code/**/*.mp4', './code/**/*.ogv', './code/**/*.webm', './code/**/*.eot', './code/**/*.svg', './code/**/*.ttf', './code/**/*.woff', './code/**/*.woff2'];
+var MISC_FILES = ['./code/CNAME', './code/**/*.mp4', './code/**/*.ogv', './code/**/*.webm', './code/**/*.eot', './code/**/*.ttf', './code/**/*.woff', './code/**/*.woff2'];
 var JADE_FILES = ['./code/**/*.jade', '!./code/lib/**'];
 var SASS_FILES = ['./code/**/*.scss', , '!./code/lib/**'];
 var SASS_INCLUDE_PATHS = [
@@ -30,10 +31,12 @@ var SASS_INCLUDE_PATHS = [
 ];
 var FAVICON_BASE = ['./code/favicons'];
 var FAVICON_FILES = [(FAVICON_BASE + '/**/*')];
-var IMAGE_FILES = ['./code/**/*.png','./code/**/*.jpg','./code/**/*.gif','./code/**/*.jpeg', '!./code/lib/**', '!./code/images/favicons/**/*'];
+var IMAGE_FILES = ['./code/**/*.png','./code/**/*.jpg','./code/**/*.gif','./code/**/*.jpeg', './code/**/svg_sprite.svg', '!./code/lib/**', '!./code/images/favicons/**/*'];
+var SVG_FILES = ['./code/images/**/*.svg', '!./code/images/svg_sprite.svg'];
 var APP_JS_FILES = ['./code/scripts/app/**/*.js', '!./code/lib/**'];
 var LIB_JS_FILES = ['./code/scripts/lib/**/*.js', '!./code/lib/**'];
 var WEBPACKABLE_FILES = './code/scripts/app/index.js';
+var BUILD_SRC = './code/';
 var BUILD_DEST = './dist/';
 var BUILT_FILES = BUILD_DEST + '**/*';
 
@@ -132,6 +135,34 @@ gulp.task('images', function() {
     .pipe(connect.reload());
 });
 
+gulp.task('svgs', function() {
+  return gulp.src(SVG_FILES)
+    .pipe(svgSprite({
+      shape: {
+        dimension: { // Set maximum dimensions
+          maxWidth: 128,
+          maxHeight: 128
+        },
+        spacing: { // Add padding
+          padding: 10
+        },
+      },
+      mode: { // This config is brittle as fuck.
+        view: {
+          bust: false,
+          dest: 'styles',
+          sprite: '../images/svg_sprite.svg',
+          render: {
+            scss: {
+              dest: '../styles/_svg_sprite.scss'
+            }
+          }
+        }
+      }
+    }))
+    .pipe(gulp.dest(BUILD_SRC))
+});
+
 gulp.task("app_scripts", function() {
   return gulp.src(WEBPACKABLE_FILES)
     .pipe(webpackStream(webpackConfig))
@@ -165,6 +196,10 @@ gulp.task('start_success', function() {
 // --------- WATCH TASKS -----------
 // ---------------------------------
 gulp.task('watch', function () {
+
+  watch(SVG_FILES, function() {
+    gulp.start('svgs');
+  });
 
   watch(FAVICON_FILES, function() {
     gulp.start('favicons');
