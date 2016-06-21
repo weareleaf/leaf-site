@@ -4,6 +4,7 @@ body {
 
 .site-wrapper {
   background-color: $pale-green;
+
   @include susy-breakpoint($bp-lg) {
     padding: $padding-vertical-sm $padding-horizontal-sm;
   }
