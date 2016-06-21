@@ -51,7 +51,8 @@ html(class='no-js', lang='en')
 
       main.content-wrapper
 
-        //include ../layout/header
+        if bodyClass !== 'home-page'
+          include ../layout/header
 
         block content
 

@@ -1,0 +1,29 @@
+extends ../templates/base/_base
+
+block prepend vars
+  -var bodyClass = 'inner-page'
+  -var title = 'Contact - Leaf'
+
+block content
+
+  section.article
+    .container
+      .article__content
+
+        .article__content__text
+          h1.article__heading Get in touch
+
+          p Leave us a message and we'll get right back to you on the email address you provide.
+
+          form(class='howdy-form',novalidate)
+            input(type='text', placeholder='Your name', name='name')
+            input(type='email', placeholder="Email address", name='email')
+            textarea(name='body', placeholder='Tell us about the project...')
+
+            input(type='submit' value='Send Message')
+
+          h2 Where's your phone number?
+
+          p We don't have one! Well, at least not publicly. We like to work in a <strong>distraction free environment</strong> so we can work as efficiently as possible, and part of doing that means limiting the amount we're able to be distracted from our work. Drop us a message on the form above and we'll get back to you, or email us at <a href='mailto:hello@weareleaf.com'>hello@weareleaf.com</a>.
+
+          script(type="text/javascript" src="https://app.howdyform.com/static/howdyClient.js?email=aGVsbG9Ad2VhcmVsZWFmLmNvbQ==")

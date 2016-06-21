@@ -1,16 +1,5 @@
-// Header
-//header.header
-  .navbar
-    .navbar-logo Leaf
-    ul.navbar-nav
-      li.navbar-nav-item.active
-        a.navbar-nav-link(href='#') Projects
-      li.navbar-nav-item
-        a.navbar-nav-link(href='#') About
-      li.navbar-nav-item
-        a.navbar-nav-link(href='#') Contact
-
-    .navbar-toggle
-      span.navbar-toggle-bar
-      span.navbar-toggle-bar
-      span.navbar-toggle-bar
+.navbar
+  .navbar__inner
+    a(href='/').navbar__logo
+      include ../../images/leaf.svg
+    a.navbar__link(href='/templates/contact') Get in touch
