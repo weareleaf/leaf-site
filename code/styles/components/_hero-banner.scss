@@ -1,6 +1,23 @@
 .hero-banner {
+  background:
+    url('/images/leaves-1.jpg') no-repeat left bottom,
+    url('/images/leaves-2.jpg') no-repeat right bottom;
   background-color: $leaf-light;
-  padding: 0 $padding-horizontal-root;
+  background-size: 10em;
+  padding: 0 $padding-horizontal-root $padding-vertical-lg;
+
+  @include susy-breakpoint($bp-sm) {
+    background-size: 25%;
+  }
+
+  @include susy-breakpoint($bp-sm) {
+    background-size: 25%, 40%;
+  }
+
+  @include susy-breakpoint($bp-lg) {
+    background-position: left -2em bottom -2em, right bottom;
+    background-size: 30%;
+  }
 
   &__inner {
     @include container;
