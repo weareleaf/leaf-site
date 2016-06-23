@@ -1,0 +1,35 @@
+extends ../templates/base/_base
+
+block prepend vars
+  -var bodyClass = 'inner-page'
+  -var title = 'Development - Leaf'
+
+block content
+
+  .page-header
+    .page-header__inner
+      h1.page-header__title Development
+      p.page-header__intro Software is taking over the world. We exist to help you be a part of this revolution by building expertly crafted, thoroughly thought out web and mobile applications.
+
+  main
+
+    section.section.buckets
+      .section__inner.buckets__inner
+
+        .buckets__block
+          h3 New products
+          p Having worked on several new products with startups and as part of larger organisations, we're very well versed on how to do product development right.
+
+          p We'll guide you getting to your Minimum Viable Product, working in an Agile manner and iterating towards a good product/market fit without burning cash on unproven demand.
+
+        .buckets__block
+          h3 Existing products
+          p We're talented developers, who can get up and going with your existing web applications regardless of their technology, technical debt or bugs. We're even happy to work alongside your existing development team.
+
+          p If you're strapped for resource and need a helping hand from true professionals with great technical and communication skills, a cutting edge knowledge of best practices and a bucket load of bright ideas, look no further.
+
+        .buckets__block
+          h3 Technical consultancy
+          p We understand that software development isn’t always easy. Hard decisions have to be made without the benefit of hindsight and things can easily go wrong. We've been there and back again many times.
+
+          p Use our technical consultancy as a way to clear the fog and truly understand where your developmental problems lie. We can review your code to identify areas of technical debt, advise on automation strategies to get machines doing your hard work for you, or build you a technical roadmap to get your team's focus back on track.

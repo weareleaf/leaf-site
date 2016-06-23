@@ -1,11 +1,6 @@
 // Colors
-$bright-green: #65cebe;
-$dark-blue: #1d2541;
-$deep-blue: #0a132a;
-$mid-blue: #3a506b;
-$light-gray: #d0d4d2;
+$bright-green: #65cebe;;
 $light-green: #cbece7;
-$mid-gray: #bdc7c3;
 $mid-green: #65bcba;
 $pale-green: #f9fbfa;
 
@@ -26,14 +21,13 @@ $base-timing: ease;
 $base-background-color: $white;
 
 // Border
-$base-border-color: $pale-green;
+$base-border-color: $coal;
 $base-border-style: solid;
-$base-border-width: 0.15em;
+$base-border-width: 0.1em;
 $base-border: $base-border-style $base-border-width $base-border-color;
 
 // Brand
 $brand-primary: $bright-green;
-$brand-secondary: $dark-blue;
 
 // Breakpoints
 $bp-xs : 24em;
@@ -59,7 +53,7 @@ $base-line-height: 1.7;
 $heading-line-height: 1.2;
 
 // Other sizes
-$base-border-radius: 0.15em;
+$base-border-radius: 0;
 $base-spacing: $base-line-height * 1em;
 $small-spacing: $base-spacing / 2;
 $base-z-index: 0;

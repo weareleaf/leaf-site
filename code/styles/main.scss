@@ -14,20 +14,20 @@
 @import 'base/tables';
 @import 'base/typography';
 
-// Components
-@import 'components/blockquote';
-@import 'components/hero-banner';
-@import 'components/icons';
-
-// Modules
-@import 'modules/services';
-@import 'modules/technologies';
-
 // Layout
 @import 'layout/footer';
 @import 'layout/navbar';
 @import 'layout/section';
 @import 'layout/structure';
 
-// Images
-@import 'svg_sprite';
+// Components
+@import 'components/blockquote';
+@import 'components/buckets';
+@import 'components/hero-banner';
+@import 'components/icons';
+@import 'components/page-header';
+
+// Modules
+@import 'modules/services';
+@import 'modules/technologies';
+

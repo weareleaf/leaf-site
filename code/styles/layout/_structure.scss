@@ -3,7 +3,7 @@ body {
 }
 
 .site-wrapper {
-  background-color: $pale-green;
+  background-color: $base-background-color;
 
   @include susy-breakpoint($bp-lg) {
     padding: $padding-vertical-sm $padding-horizontal-sm;

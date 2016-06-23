@@ -24,7 +24,7 @@ select {
   border-radius: $base-border-radius;
   display: block;
   font-family: $base-font-family;
-  font-size: $base-font-size;
+  font-size: 1em;
   margin-bottom: $spacing-vertical;
   padding: $padding-vertical-sm $padding-horizontal-sm;
   transition: border-color $base-duration $base-timing;

@@ -1,0 +1,18 @@
+.page-header {
+  padding: 0 $padding-horizontal-root $padding-vertical-lg;
+
+  &__inner {
+    @include container;
+    padding: $spacing-vertical-root 0 0;
+  }
+
+  &__intro {
+    color: $leaf-dark;
+    font-family: $font-sans-serif;
+    font-size: 1.1em;
+
+    @include susy-breakpoint($bp-md) {
+      @include span(7);
+    }
+  }
+}
