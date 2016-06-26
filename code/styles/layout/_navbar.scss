@@ -1,6 +1,7 @@
 .navbar {
   @include container(64em);
   padding-top: calc(#{$padding-vertical} + 2%);
+  position: relative;
 
   &__inner {
     display: table;

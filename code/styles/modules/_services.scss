@@ -12,6 +12,36 @@
       &__icon {
         margin-bottom: $spacing-vertical-sm;
       }
+
+      &__link {
+        border: 2px solid transparent;
+        font-family: $font-sans-serif;
+        font-size: 0.6em;
+        font-weight: 900;
+        position: relative;
+        text-transform: uppercase;
+
+        &::after {
+          background-color: currentColor;
+          bottom: -10px;
+          content: '';
+          height: 2px;
+          left: 50%;
+          position: absolute;
+          transition:
+            left 0.2s cubic-bezier(0.215, 0.61, 0.355, 1),
+            width 0.2s cubic-bezier(0.215, 0.61, 0.355, 1);
+          width: 0%;
+        }
+
+        &:hover {
+
+          &::after {
+            left: 0;
+            width: 100%;
+          }
+        }
+      }
     }
   }
 }

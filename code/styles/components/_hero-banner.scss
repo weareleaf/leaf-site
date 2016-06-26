@@ -1,19 +1,45 @@
 .hero-banner {
-  background-color: $leaf-light;
+  background: $leaf-light url('/images/home-bg.jpg') no-repeat center center;
+  background-size: cover;
   padding: 0 $padding-horizontal-root $padding-vertical-lg;
+  position: relative;
+
+  &::before {
+    @include absolute-fill;
+    background-color: red;
+    content: '';
+    background-image: linear-gradient(-135deg, #0F43A3 0%, #55AB70 100%);
+    opacity: 0.8;
+  }
 
   &__inner {
     @include container;
     padding: $spacing-vertical-root 0;
+    position: relative;
+  }
+
+  &__title,
+  &__intro {
+    color: $white;
   }
 
   &__intro {
-    color: $leaf-dark;
     font-family: $font-sans-serif;
-    font-size: 1.1em;
+    font-size: 1.25em;
 
     @include susy-breakpoint($bp-md) {
-      @include span(7);
+      @include span(9);
+    }
+  }
+
+  .navbar {
+
+    svg path {
+      fill: $white;
+    }
+
+    &__link {
+      color: $white;
     }
   }
 }

@@ -24,3 +24,11 @@
     clear: both;
   }
 }
+
+@mixin absolute-fill($top: 0, $right: 0, $bottom: 0, $left: 0) {
+  bottom: $bottom;
+  left: $left;
+  position: absolute;
+  right: $right;
+  top: $top;
+}

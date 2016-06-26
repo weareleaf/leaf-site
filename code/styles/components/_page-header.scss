@@ -10,9 +10,5 @@
     color: $leaf-dark;
     font-family: $font-sans-serif;
     font-size: 1.1em;
-
-    @include susy-breakpoint($bp-md) {
-      @include span(7);
-    }
   }
 }

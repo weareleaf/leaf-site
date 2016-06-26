@@ -24,7 +24,7 @@ h6, %h6, {
 
 h1, %h1 {
   font-size: 2.6em;
-  font-weight: 300;
+  font-weight: 400;
 
   @include susy-breakpoint($bp-md) {
     font-size: 3.6em;
