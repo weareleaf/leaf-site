@@ -6,6 +6,10 @@ body {
   background-color: $base-background-color;
 
   @include susy-breakpoint($bp-lg) {
-    padding: $padding-vertical-sm $padding-horizontal-sm;
+    margin: $spacing-vertical-sm $spacing-horizontal-sm;
   }
+}
+
+.contact-page .site-wrapper {
+  background-color: #132f45;
 }

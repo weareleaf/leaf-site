@@ -49,13 +49,12 @@ html(class='no-js', lang='en')
         | to improve your experience.
       <![endif]-->
 
-      main.content-wrapper
+      if bodyClass !== 'home-page'
+        include ../layout/header
 
-        if bodyClass !== 'home-page'
-          include ../layout/header
+      block content
 
-        block content
-
+      if bodyClass !== 'contact-page'
         include ../layout/footer
 
     block footerScripts
