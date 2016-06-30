@@ -56,3 +56,12 @@ a {
     color: shade($action-color, 25%);
   }
 }
+
+.snippet {
+  color: #a2a5a7;
+  font-family: $font-serif;
+  font-size: 1.35em;
+  font-style: italic;
+  margin-top: $spacing-vertical-lg;
+  text-align: center;
+}

@@ -6,12 +6,12 @@
 
     &:nth-child(odd) img {
       float: right;
-      margin-right: $spacing-horizontal-xl;
+      margin-right: $spacing-horizontal-lg;
     }
 
     &:nth-child(even) img {
       float: left;
-      margin-left: $spacing-horizontal-xl;
+      margin-left: $spacing-horizontal-lg;
     }
   }
 
