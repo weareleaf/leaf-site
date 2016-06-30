@@ -1,0 +1,45 @@
+.work {
+
+  @include susy-breakpoint($bp-lg) {
+    display: flex;
+    align-items: center;
+
+    &:nth-child(odd) img {
+      float: right;
+      margin-right: $spacing-horizontal-xl;
+    }
+
+    &:nth-child(even) img {
+      float: left;
+      margin-left: $spacing-horizontal-xl;
+    }
+  }
+
+  &__content {
+
+  }
+
+  &__image img {
+    max-width: 100%;
+  }
+
+  @include susy-breakpoint($bp-lg) {
+
+    &__image  {
+
+      img {
+        max-width: none;
+      }
+    }
+
+    &__image,
+    &__content {
+      @include span(6 of 12);
+      margin-bottom: $spacing-vertical-lg;
+
+      &:nth-of-type(even) {
+        @include omega;
+      }
+    }
+  }
+}

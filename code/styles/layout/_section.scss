@@ -8,6 +8,10 @@
     @include container();
   }
 
+  &__body--wide {
+    @include container(64em);
+  }
+
   &__header {
     margin-bottom: $spacing-vertical-lg;
   }
