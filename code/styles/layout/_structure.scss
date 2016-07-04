@@ -11,5 +11,18 @@ body {
 }
 
 .contact-page .site-wrapper {
-  background-color: #132f45;
+  background-color: #212c42;
+  color: #a9b3c7;
+
+  .page-header__title {
+    color: $white;
+  }
+
+  .page-header__intro {
+    color: #a9b3c7;
+  }
+
+  h2 {
+    color: $white;
+  }
 }

@@ -18,19 +18,23 @@ label {
 }
 
 input,
-select {
-  background-color: $base-background-color;
-  border: $base-border;
+select,
+textarea {
+  background-color: $input-background-color;
+  border: none;
   border-radius: $base-border-radius;
   display: block;
-  font-family: $base-font-family;
-  font-size: 1em;
+  font-family: $font-sans-serif;
+  font-size: 0.9em;
   margin-bottom: $spacing-vertical;
   padding: $padding-vertical-sm $padding-horizontal-sm;
-  transition: border-color $base-duration $base-timing;
+  transition:
+    background-color $base-duration $base-timing,
+    border-color $base-duration $base-timing;
   width: 100%;
 
   &:hover {
+    background-color: lighten($input-background-color, 2%);
     border-color: shade($base-border-color, 20%);
   }
 
@@ -48,9 +52,14 @@ select {
       border: $base-border;
     }
   }
+
+  &::placeholder {
+    color: $input-placeholder-color;
+  }
 }
 
 textarea {
+  min-height: 12em;
   resize: vertical;
 }
 

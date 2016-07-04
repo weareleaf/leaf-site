@@ -1,5 +1,7 @@
 .navbar {
   @include container(64em);
+  padding-left: $padding-horizontal-root;
+  padding-right: $padding-horizontal-root;
   padding-top: calc(#{$padding-vertical} + 2%);
   position: relative;
 

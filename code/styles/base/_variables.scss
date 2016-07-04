@@ -46,14 +46,15 @@ $base-font-size: 1.25em;
 $em-base: 20px;
 
 // Forms
-
+$input-background-color: #3a465d;
+$input-placeholder-color: #a9b3c7;
 
 // Line height
 $base-line-height: 1.7;
 $heading-line-height: 1.2;
 
 // Other sizes
-$base-border-radius: 0;
+$base-border-radius: 0.1em;
 $base-spacing: $base-line-height * 1em;
 $small-spacing: $base-spacing / 2;
 $base-z-index: 0;

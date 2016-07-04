@@ -1,6 +1,8 @@
-$hero-banner-bg: #132f45;
+$hero-banner-bg: #212c42;
 $hero-banner-title-color: $white;
 $hero-banner-intro-color: #95afc9;
+
+$bp-1: 124em;
 
 .hero-banner {
   background:
@@ -17,6 +19,24 @@ $hero-banner-intro-color: #95afc9;
     background:
       url('/images/hero-leaf-1.svg') left bottom 6em,
       url('/images/hero-leaf-2.svg') left 3em bottom,
+      url('/images/hero-leaf-4.svg') right bottom,
+      url('/images/hero-leaf-5.svg') right bottom 9em,
+      url('/images/hero-leaf-6.svg') center top;
+    background-color: $hero-banner-bg;
+    background-repeat: no-repeat;
+    background-size:
+      8em auto,
+      24em auto,
+      24em auto,
+      auto 20em,
+      16em auto,
+      24em auto;
+  }
+
+  @include susy-breakpoint($bp-1) {
+    background:
+      url('/images/hero-leaf-1.svg') left bottom 6em,
+      url('/images/hero-leaf-2.svg') left 3em bottom,
       url('/images/hero-leaf-3.svg') right 18em bottom 6em,
       url('/images/hero-leaf-4.svg') right bottom,
       url('/images/hero-leaf-5.svg') right bottom 9em,
@@ -27,7 +47,7 @@ $hero-banner-intro-color: #95afc9;
       8em auto,
       24em auto,
       24em auto,
-      24em auto,
+      auto 8em,
       16em auto,
       24em auto;
   }
