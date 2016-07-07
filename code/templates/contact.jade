@@ -17,9 +17,13 @@ block content
       .section__body
 
         form(class='howdy-form',novalidate)
-          input(type='text', placeholder='Your name', name='name')
-          input(type='email', placeholder="Email address", name='email')
-          textarea(name='body', placeholder='Tell us about the project...')
+          .input-row
+            .form-group
+              input(type='text', placeholder='Your name', name='name')
+            .form-group
+              input(type='email', placeholder="Email address", name='email')
+          .form-group
+            textarea(name='body', placeholder='Tell us about the project...')
 
           input.btn(type='submit' value='Send Message')
 

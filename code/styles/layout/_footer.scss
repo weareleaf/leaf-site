@@ -5,8 +5,8 @@ $footer-intro-color: #95afc9;
 .footer {
   @include clearfix;
   background:
-    url('/images/hero-leaf-2.svg') left -4em bottom,
-    url('/images/hero-leaf-3.svg') left 7.5em top -12em,
+    //url('/images/hero-leaf-2.svg') left -4em bottom,
+    //url('/images/hero-leaf-3.svg') left 7.5em top -12em,
     url('/images/hero-leaf-5.svg') right -6em top 6em;
   background-color: $footer-bg;
   background-repeat: no-repeat;
@@ -19,14 +19,14 @@ $footer-intro-color: #95afc9;
     background-color: lighten($footer-bg, 3%);
   }
 
-  @include susy-breakpoint($bp-lg) {
+  @include susy-breakpoint($bp-sm) {
     background:
       url('/images/hero-leaf-1.svg') left bottom 6em,
-      url('/images/hero-leaf-2.svg') left 3em bottom,
-      url('/images/hero-leaf-3.svg') right 18em bottom 6em,
+      //url('/images/hero-leaf-2.svg') left 3em bottom,
+      //url('/images/hero-leaf-3.svg') right 18em bottom 6em,
       url('/images/hero-leaf-4.svg') right bottom,
-      url('/images/hero-leaf-5.svg') right bottom 9em,
-      url('/images/hero-leaf-6.svg') center top;
+      url('/images/hero-leaf-5.svg') right bottom 9em;
+      //url('/images/hero-leaf-6.svg') center top;
     background-color: $footer-bg;
     background-repeat: no-repeat;
     background-size:

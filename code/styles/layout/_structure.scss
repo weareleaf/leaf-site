@@ -22,7 +22,11 @@ body {
     color: #a9b3c7;
   }
 
-  h2 {
+  main h2 {
     color: $white;
+  }
+
+  form {
+    margin-bottom: $spacing-vertical-root;
   }
 }

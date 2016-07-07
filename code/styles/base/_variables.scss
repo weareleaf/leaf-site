@@ -75,12 +75,12 @@ $padding-vertical-xl: $padding-vertical * 4;
 $padding-vertical-xs: $padding-vertical / 4;
 
 // Padding (horizontal - fluid)
-$padding-horizontal-fluid: 10%;
+$padding-horizontal-fluid: 5%;
 $padding-horizontal-fluid-lg: $padding-horizontal-fluid * 1.5;
 $padding-horizontal-fluid-sm: $padding-horizontal-fluid / 1.5;
 
 // Padding (vertical - fluid)
-$padding-vertical-fluid: 10%;
+$padding-vertical-fluid: 5%;
 $padding-vertical-fluid-lg: $padding-vertical-fluid * 1.5;
 $padding-vertical-fluid-sm: $padding-vertical-fluid / 1.5;
 
@@ -108,18 +108,18 @@ $spacing-vertical-xl: $spacing-vertical * 4;
 $spacing-vertical-xs: $spacing-vertical / 4;
 
 // Spacing (horizontal - fluid)
-$spacing-horizontal-fluid: 10%;
+$spacing-horizontal-fluid: 5%;
 $spacing-horizontal-fluid-lg: $spacing-horizontal-fluid * 1.5;
 $spacing-horizontal-fluid-sm: $spacing-horizontal-fluid / 1.5;
 
 // Spacing (vertical - fluid)
-$spacing-vertical-fluid: 10%;
+$spacing-vertical-fluid: 5%;
 $spacing-vertical-fluid-lg: $spacing-vertical-fluid * 1.5;
 $spacing-vertical-fluid-sm: $spacing-vertical-fluid / 1.5;
 
 // Spacing (root)
-$spacing-horizontal-root: calc(5vw + #{$spacing-vertical});
-$spacing-vertical-root: calc(5vw + #{$spacing-vertical});
+$spacing-horizontal-root: calc(3vw + #{$spacing-vertical});
+$spacing-vertical-root: calc(3vw + #{$spacing-vertical});
 
 // Typography
 $font-serif: 'karmina', serif;

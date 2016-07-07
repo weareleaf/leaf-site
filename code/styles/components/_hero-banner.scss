@@ -74,18 +74,6 @@ $bp-1: 124em;
 
   .navbar {
 
-    svg path {
-      transition: fill $base-duration $base-timing;
-    }
-
-    svg path {
-      fill: #95afc9;
-    }
-
-    svg:hover path {
-      fill: $white;
-    }
-
     &__link {
       color: #95afc9;
 

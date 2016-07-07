@@ -16,11 +16,7 @@
     margin-bottom: $spacing-vertical-lg;
   }
 
-  & p:last-child {
-    //margin-bottom: 0;
-  }
-
-  &__intro {
+&__intro {
     font-size: 1.2em;
   }
 }

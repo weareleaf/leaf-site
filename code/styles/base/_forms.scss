@@ -58,6 +58,39 @@ textarea {
   }
 }
 
+@include susy-breakpoint($bp-sm) {
+  .form-group {
+    margin-bottom: $spacing-vertical;
+
+    .error {
+      font-family: $font-sans-serif;
+      font-size: 0.7em;
+      font-weight: 600;
+    }
+  }
+
+  .howdy-form textarea {
+    margin-bottom: 0;
+  }
+
+  .input-row {
+    margin-left: -$spacing-vertical-sm;
+    margin-right: -$spacing-vertical-sm;
+
+    .form-group {
+      float: left;
+      margin-left: $spacing-vertical-sm;
+      margin-right: $spacing-vertical-sm;
+      width: calc(50% - #{$spacing-vertical-sm * 2});
+
+      input,
+      textarea {
+        margin-bottom: 0;
+      }
+    }
+  }
+}
+
 textarea {
   min-height: 12em;
   resize: vertical;

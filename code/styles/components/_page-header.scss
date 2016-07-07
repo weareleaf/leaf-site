@@ -1,9 +1,9 @@
 .page-header {
-  padding: 0 $padding-horizontal-root $padding-vertical-lg;
+  padding: 0 $padding-horizontal-root;
 
   &__inner {
     @include container;
-    padding: $spacing-vertical-root 0 0;
+    padding: $padding-vertical-fluid-sm 0 0;
   }
 
   &__intro {
@@ -11,5 +11,6 @@
     font-family: $font-serif;
     font-size: 1.35em;
     font-style: italic;
+    margin-bottom: 0;
   }
 }

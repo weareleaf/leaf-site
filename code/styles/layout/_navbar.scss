@@ -27,4 +27,23 @@
       color: darken($leaf-dark, 15%);
     }
   }
+
+  svg path {
+    transition: fill $base-duration $base-timing;
+  }
+
+  svg path {
+    fill: $bright-green;
+  }
+
+  svg:hover path {
+    fill: lighten($bright-green, 10%);
+  }
+}
+
+.contact-page .navbar {
+
+  &__link {
+    display: none;
+  }
 }
