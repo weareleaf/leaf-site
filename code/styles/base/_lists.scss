@@ -1,27 +1,29 @@
 ul,
-ol {
-  list-style-position: inside;
+ol,
+dd {
   margin: 0;
   padding: 0;
+}
+
+ul,
+ol {
+  list-style-position: inside;
 }
 
 ul {
   list-style-type: none;
 }
 
-main ul li::before {
-  content: '\2014';
-  margin-right: 0.75em;
-  position: relative;
+dl {
+  column-count: 2;
+  margin-bottom: $spacing-vertical-lg;
+  max-width: 33.529em;
 }
 
-.list--3-col {
-
-  @include susy-breakpoint($bp-sm) {
-    column-count: 2;
-  }
-
-  @include susy-breakpoint($bp-lg) {
-    column-count: 3;
-  }
+dt {
+  color: $white;
+  font-size: 0.765em;
+  font-weight: 900;
+  letter-spacing: .025em;
+  text-transform: uppercase;
 }

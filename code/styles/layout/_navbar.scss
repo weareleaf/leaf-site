@@ -1,49 +1,18 @@
 .navbar {
-  @include container(64em);
-  padding-left: $padding-horizontal-root;
-  padding-right: $padding-horizontal-root;
-  padding-top: calc(#{$padding-vertical} + 2%);
-  position: relative;
+  padding: $padding-vertical-xl 0;
 
-  &__inner {
-    display: table;
-    width: 100%;
-  }
+  &__logo {
 
-  &__logo,
-  &__link {
-    display: table-cell;
-    vertical-align: middle;
-  }
-
-  &__link {
-    color: $leaf-dark;
-    font-family: $font-sans-serif;
-    font-size: 0.8em;
-    text-align: right;
-
-    &:hover,
-    &:focus {
-      color: darken($leaf-dark, 15%);
+    svg path {
+      transition: fill $base-duration $base-timing;
     }
-  }
 
-  svg path {
-    transition: fill $base-duration $base-timing;
-  }
+    svg path {
+      fill: $bright-green;
+    }
 
-  svg path {
-    fill: $bright-green;
-  }
-
-  svg:hover path {
-    fill: lighten($bright-green, 10%);
-  }
-}
-
-.contact-page .navbar {
-
-  &__link {
-    display: none;
+    svg:hover path {
+      fill: lighten($bright-green, 15%);
+    }
   }
 }

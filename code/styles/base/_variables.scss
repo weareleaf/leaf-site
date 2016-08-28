@@ -1,16 +1,16 @@
 // Colors
-$bright-green: #65c39c;
+$bright-green: #28bb70;
 $light-green: #cbece7;
 $mid-green: #65bcba;
 $pale-green: #f9fbfa;
 
-
 $coal: #323638;
+$dark-smoke: #95afc9;
 $snow: #f7f8f9;
 $white: #fff;
 
 $leaf: #a1c59d;
-$leaf-dark: #5f715c;
+$leaf-dark: #272e43;
 $leaf-light: #c5edc1;
 
 // Animations
@@ -18,7 +18,7 @@ $base-duration: 150ms;
 $base-timing: ease;
 
 // Background colors
-$base-background-color: $white;
+$base-background-color: $leaf-dark;
 
 // Border
 $base-border-color: $coal;
@@ -37,13 +37,12 @@ $bp-lg : 64em;
 $bp-xl : 72em;
 
 // Font colors
-$base-font-color: $coal;
-$heading-font-color: $coal;
+$base-font-color: $dark-smoke;
+$heading-font-color: $white;
 $action-color: $bright-green;
 
 // Font sizes
-$base-font-size: 1.25em;
-$em-base: 20px;
+$base-font-size: 1.063em;
 
 // Forms
 $input-background-color: #3a465d;
@@ -61,7 +60,7 @@ $base-z-index: 0;
 $max-width: 59em;
 
 // Padding (horizontal)
-$padding-horizontal: 1.5em;
+$padding-horizontal: 1.25em;
 $padding-horizontal-lg: $padding-horizontal * 2;
 $padding-horizontal-sm: $padding-horizontal / 2;
 $padding-horizontal-xl: $padding-horizontal * 4;
@@ -122,7 +121,6 @@ $spacing-horizontal-root: calc(3vw + #{$spacing-vertical});
 $spacing-vertical-root: calc(3vw + #{$spacing-vertical});
 
 // Typography
-$font-serif: 'karmina', serif;
 $font-sans-serif: 'soleil', sans-serif;
-$base-font-family: $font-serif;
+$base-font-family: $font-sans-serif;
 $heading-font-family: $font-sans-serif;

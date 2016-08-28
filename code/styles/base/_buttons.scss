@@ -1,5 +1,11 @@
 .btn {
   background-color: $bright-green;
+  border-radius: 100px;
+  color: $white;
+  display: inline-block;
+  font-size: 1.059em;
+  font-weight: 600;
+  padding: $padding-vertical $padding-horizontal-lg;
   transition: background-color $base-duration $base-timing;
 
   &:hover {

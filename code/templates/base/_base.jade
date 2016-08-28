@@ -42,19 +42,8 @@ html(class='no-js', lang='en')
 
     .site-wrapper
 
-      <!--[if lt IE 9]>
-      p.browsehappy
-        | You are using an <strong>outdated</strong> browser.
-        | Please <a href='http://browsehappy.com/'>upgrade your browser</a>
-        | to improve your experience.
-      <![endif]-->
-
-      if bodyClass !== 'home-page'
-        include ../layout/header
+      include ../layout/header
 
       block content
-
-      if bodyClass !== 'contact-page'
-        include ../layout/footer
 
     block footerScripts

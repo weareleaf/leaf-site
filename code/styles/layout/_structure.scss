@@ -1,32 +1,30 @@
+html,
 body {
+  height: 100%;
+}
+
+html {
+  transition: opacity 800ms ease;
+}
+
+body {
+  background: $base-background-color url('/images/mockups.png') no-repeat right bottom;
+  background-size: 100%;
   margin: 0; // Remove this when Normalize is working
 }
 
 .site-wrapper {
-  background-color: $base-background-color;
-
-  @include susy-breakpoint($bp-lg) {
-    margin: $spacing-vertical-sm $spacing-horizontal-sm;
-  }
+  @include container;
 }
 
-.contact-page .site-wrapper {
-  background-color: #212c42;
-  color: #a9b3c7;
+.wf-loading {
+  opacity: 0;
+}
 
-  .page-header__title {
-    color: $white;
-  }
+.wf-active {
+  // styles to use when web fonts are active
+}
 
-  .page-header__intro {
-    color: #a9b3c7;
-  }
-
-  main h2 {
-    color: $white;
-  }
-
-  form {
-    margin-bottom: $spacing-vertical-root;
-  }
+.wf-inactive {
+  // styles to use when web fonts are inactive
 }

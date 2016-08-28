@@ -1,16 +1,8 @@
 .page-header {
-  padding: 0 $padding-horizontal-root;
-
-  &__inner {
-    @include container;
-    padding: $padding-vertical-fluid-sm 0 0;
-  }
+  //padding: 0 $padding-horizontal-root;
 
   &__intro {
-    color: #a2a5a7;
-    font-family: $font-serif;
-    font-size: 1.35em;
-    font-style: italic;
-    margin-bottom: 0;
+    font-size: 1.412em;
+    max-width: 33.529rem;
   }
 }

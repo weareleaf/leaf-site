@@ -6,88 +6,15 @@ block prepend vars
 
 block content
 
-    header.hero-banner
-
-      include templates/layout/header
-
-      .hero-banner__inner
-        h1.hero-banner__title Agile web products, made with joined up thinking
-        p.hero-banner__intro Leaf are a UK-based web design and development studio, specialising in lean digital products that make peoples lives easier.
+    .page-header
+      h1.page-header__title Agile web products, made with joined up thinking
+      p.page-header__intro Leaf are a UK-based web design and development studio, specialising in lean digital products that make peoples lives easier.
 
     main
+      dl
+        dt Currently working with
+        dd Holiday Extras, Keen, Zendesk
+        dt Availability
+        dd Available from September
 
-      section.section.bg--alt
-        .section__inner
-          .section__header
-            h2.section__title How we work
-            p.section__intro We're no pixel-pushing, conveyer-belt outfit. We build products that get under the skin of the problem they’re solving.
-
-          .section__body
-            .services__block
-              .services__block__icon
-                include images/design.svg
-              h3 Design
-              p Design goes far deeper than the visual. Every decision is made with real data, business constaints and user experience at its heart.
-              a.services__block__link(href='templates/design') Read more
-
-            .services__block
-              .services__block__icon
-                include images/development.svg
-              h3 Development
-              p Technical constraints are the light that guides every decision. We create component-driven, scalable eco-systems, with an agile mindset.
-              a.services__block__link(href='templates/development') Read more
-
-      section.section.technologies.bg--white
-        .section__inner.technologies__inner
-          .section__header
-            h2.section__title Our toolkit
-            p.section__intro We'll always use the most appropriate technology or service for the task at hand, but have a few that we use more often than most.
-
-          .section__body
-            .technologies__block
-              .technologies__block__logo
-                include images/nodejs.svg
-              h3 Node.js
-              p We use Node.js to build super fast, highly scaleable web application back-ends and APIs.
-
-            .technologies__block
-              .technologies__block__logo
-                include images/ruby-on-rails.svg
-              h3 Ruby on rails
-              p We're brilliant Rails developers. It's a perfect choice for your full-stack web application.
-
-            .technologies__block
-              .technologies__block__logo
-                include images/react.svg
-              h3 React
-              p We love using React to give single page web applications a fast, native feel while keeping code clean.
-
-            .technologies__block
-              .technologies__block__logo
-                include images/redux.svg
-              h3 Redux
-              p We use Redux alongside React to build maintainable, large scale single page web applications.
-
-      section.section.bg--alt
-        .section__inner
-          .section__header
-            h2.section__title Collective Experience
-            p.section__intro With more than 10 years of industry work between us, we've worked with a fantastic bunch of clients; big and small. A small sample include:
-
-          .section__body
-            ul.list--3-col
-              li Admiral
-              li BoxedUp
-              li CakeBoxx Technolgies
-              li Confused.com
-              li Cushelle
-              li Cushman &amp; Wakefield
-              li Expedia
-              li Holiday Extras
-              li Greene King IPA
-              li Irn Bru
-              li Orangina
-              li Santander
-              li Sprintly
-              li Velvet
-              li Zendesk
+      a(href='#').btn Tell us how we can help
