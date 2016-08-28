@@ -1,5 +1,5 @@
 .navbar {
-  padding: $padding-vertical-xl 0;
+  padding: $spacing-vertical-root 0;
 
   &__logo {
 
@@ -12,7 +12,7 @@
     }
 
     svg:hover path {
-      fill: lighten($bright-green, 15%);
+      fill: lighten($bright-green, 5%);
     }
   }
 }

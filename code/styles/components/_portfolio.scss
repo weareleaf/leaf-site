@@ -1,10 +1,18 @@
 .portfolio {
   top: 4%;
-  max-width: 1480px;
+  width: 1480px;
   position: absolute;
   right: -10%;
-  transform: rotateX(50deg) rotateZ(50deg);
+  transform: rotateX(50deg) rotateZ(50deg) scale(0.6);
   transform-style: preserve-3d;
+
+  @include susy-breakpoint($bp-sm) {
+    transform: rotateX(50deg) rotateZ(50deg) scale(0.7);
+  }
+
+  @include susy-breakpoint($bp-lg) {
+    transform: rotateX(50deg) rotateZ(50deg) scale(1);
+  }
 
   &__item {
     transition: 0.2s ease;
@@ -17,7 +25,7 @@
     position: relative;
 
     &:nth-child(even) {
-      top: 400px;
+      top: -420px;
     }
 
     &::before {
@@ -46,6 +54,11 @@
     &--3 {
       background: url('/images/portfolio-item-1.jpg');
       height: 1220px;
+    }
+
+    &--4 {
+      background: url('/images/portfolio-item-3.jpg');
+      height: 968px;
     }
   }
 }
