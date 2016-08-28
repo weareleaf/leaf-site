@@ -15,6 +15,7 @@ body {
 
 .site-wrapper {
   @include container;
+  padding: 0 $padding-horizontal;
 }
 
 .wf-loading {
