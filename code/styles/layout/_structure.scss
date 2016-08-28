@@ -8,9 +8,9 @@ html {
 }
 
 body {
-  background: $base-background-color url('/images/mockups.png') no-repeat right bottom;
-  background-size: 100%;
+  background-color: $base-background-color;
   margin: 0; // Remove this when Normalize is working
+  overflow: hidden;
 }
 
 .site-wrapper {
