@@ -8,7 +8,7 @@ body {
 
   @include susy-breakpoint($bp-sm) {
 
-    .home-page & {
+    &.home-page {
       overflow: hidden;
     }
   }
@@ -27,7 +27,7 @@ body {
     display: flex;
     flex-direction: column;
     height: 100vh;
-    padding-bottom: $padding-horizontal;
+    padding-bottom: 0;
   }
 }
 

@@ -17,16 +17,16 @@ block content
       .input-row
         .form-group
           label Name
-          input(type='text', placeholder='Your name', name='name')
+          input(type='text', placeholder='Your name', name='name', data-howdy-validate='required')
         .form-group
           label Email
-          input(type='email', placeholder="Your email address", name='email')
+          input(type='email', placeholder="Your email address", name='email', data-howdy-validate='required')
         .form-group
           label Organisation
-          input(type='text', placeholder='Organisation name', name='organisation')
+          input(type='text', placeholder='Organisation name', name='organisation', data-howdy-validate='required')
         .form-group
           label Project budget
-          .select
+          .select(data-howdy-validate='required')
             select
               option Under £10,000
               option £10,000 - £20,000
@@ -37,7 +37,7 @@ block content
 
       .form-group
         label How can we help?
-        textarea(name='body', placeholder='This is to help us get an initial feel for what\'s needed...')
+        textarea(name='body', placeholder='This is to help us get an initial feel for what\'s needed...', data-howdy-validate='required')
 
       input.btn(type='submit' value='Send Message')
 
