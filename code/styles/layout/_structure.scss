@@ -5,27 +5,26 @@ html {
 body {
   background-color: $base-background-color;
   margin: 0; // Remove this when Normalize is working
+}
+
+.home-page {
+  overflow-y: scroll;
+  overflow-x: hidden;
+
+  @media only screen and (min-width: $bp-sm) and (min-height: 56em) {
+    //overflow: hidden;
+  }
 
   @include susy-breakpoint($bp-sm) {
-
-    &.home-page {
-      overflow: hidden;
-    }
+    overflow: hidden;
   }
 }
 
 .site-wrapper {
   @include container;
-  overflow-y: scroll;
   padding: 0 $padding-horizontal $spacing-vertical-root;
 
-  @include susy-breakpoint($bp-sm) {
-    overflow-y: visible;
-  }
-
   .home-page & {
-    display: flex;
-    flex-direction: column;
     height: 100vh;
     padding-bottom: 0;
   }
