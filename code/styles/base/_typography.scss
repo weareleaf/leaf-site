@@ -43,6 +43,11 @@ h3, %h3 {
 
 p {
   margin: 0 0 $spacing-vertical;
+
+  strong {
+    color: lighten($base-font-color, 15%);
+    font-weight: 600;
+  }
 }
 
 a {
@@ -55,4 +60,12 @@ a {
   &:hover {
     color: shade($action-color, 25%);
   }
+}
+
+%label {
+  color: $white;
+  font-size: 0.765em;
+  font-weight: 900;
+  letter-spacing: .025em;
+  text-transform: uppercase;
 }

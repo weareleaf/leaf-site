@@ -1,7 +1,9 @@
 .page-header {
+  margin-bottom: $spacing-vertical-lg;
 
   &__intro {
     font-size: 1.412em;
+    margin-bottom: 0;
     max-width: 33.529rem;
   }
 }

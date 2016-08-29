@@ -16,6 +16,7 @@ ul {
 
 dl {
   margin-bottom: $spacing-vertical-lg;
+  margin-top: 0;
   max-width: 33.529em;
 
   @include susy-breakpoint($bp-sm) {
@@ -24,11 +25,7 @@ dl {
 }
 
 dt {
-  color: $white;
-  font-size: 0.765em;
-  font-weight: 900;
-  letter-spacing: .025em;
-  text-transform: uppercase;
+  @extend %label;
 }
 
 dd:not(:last-child) {

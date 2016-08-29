@@ -7,20 +7,27 @@ body {
   margin: 0; // Remove this when Normalize is working
 
   @include susy-breakpoint($bp-sm) {
-    overflow: hidden;
+
+    .home-page & {
+      overflow: hidden;
+    }
   }
 }
 
 .site-wrapper {
   @include container;
-  display: flex;
-  flex-direction: column;
-  height: 100vh;
   overflow-y: scroll;
-  padding: 0 $padding-horizontal;
+  padding: 0 $padding-horizontal $spacing-vertical-root;
 
   @include susy-breakpoint($bp-sm) {
     overflow-y: visible;
+  }
+
+  .home-page & {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    padding-bottom: $padding-horizontal;
   }
 }
 

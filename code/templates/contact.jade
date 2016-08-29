@@ -8,27 +8,47 @@ block content
 
   .page-header
     .page-header__inner
-      h1.page-header__title Get in touch
-      p.page-header__intro Leave us a message and we'll get right back to you on the email address you provide.
+      h1.page-header__title Let's get started
+      p.page-header__intro Give us a brief overview of how you think we can help, and get right back to you on the email address you provide.
 
   main
 
-    section.section
-      .section__body
+    form(class='howdy-form',novalidate)
+      .input-row
+        .form-group
+          label Name
+          input(type='text', placeholder='Your name', name='name')
+        .form-group
+          label Email
+          input(type='email', placeholder="Your email address", name='email')
+        .form-group
+          label Organisation
+          input(type='text', placeholder='Organisation name', name='organisation')
+        .form-group
+          label Project budget
+          .select
+            select
+              option Under £10,000
+              option £10,000 - £20,000
+              option £20,000 - £30,000
+              option £30,000 - £50,000
+              option £50,000 - £100,000
+              option £100,000+
 
-        form(class='howdy-form',novalidate)
-          .input-row
-            .form-group
-              input(type='text', placeholder='Your name', name='name')
-            .form-group
-              input(type='email', placeholder="Email address", name='email')
-          .form-group
-            textarea(name='body', placeholder='Tell us about the project...')
+      .form-group
+        label How can we help?
+        textarea(name='body', placeholder='This is to help us get an initial feel for what\'s needed...')
 
-          input.btn(type='submit' value='Send Message')
+      input.btn(type='submit' value='Send Message')
 
-        h2 Where's your phone number?
 
-        p We don't have one! Well, at least not publicly. We like to work in a <strong>distraction free environment</strong> so we can work as efficiently as possible, and part of doing that means limiting the amount we're able to be distracted from our work. Drop us a message on the form above and we'll get back to you, or email us at <a href='mailto:hello@weareleaf.com'>hello@weareleaf.com</a>.
 
-        script(type="text/javascript" src="https://app.howdyform.com/static/howdyClient.js?email=aGVsbG9Ad2VhcmVsZWFmLmNvbQ==")
+    .form-info
+      h2 I don't know my budget
+      p While we don't need an exact budget this point, we do need at least an initial indication of what's likely. Our proposal will be underpinned by how much time is available, so the earlier we know, the better.
+
+    .form-info
+      h2 Where's your phone number?
+      p We like to work in a <strong>distraction free environment</strong> so we can work as efficiently as possible. Drop us a message on the form above and we'll get back to you, or email us at <a href='mailto:hello@weareleaf.com'>hello@weareleaf.com</a>.
+
+    script(type="text/javascript" src="https://app.howdyform.com/static/howdyClient.js?email=aGVsbG9Ad2VhcmVsZWFmLmNvbQ==")
