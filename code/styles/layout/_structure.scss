@@ -1,8 +1,3 @@
-html,
-body {
-  height: 100%;
-}
-
 html {
   transition: opacity 800ms ease;
 }
@@ -10,14 +5,29 @@ html {
 body {
   background-color: $base-background-color;
   margin: 0; // Remove this when Normalize is working
-  overflow: hidden;
+
+  @include susy-breakpoint($bp-sm) {
+    overflow: hidden;
+  }
 }
 
 .site-wrapper {
   @include container;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  overflow-y: scroll;
   padding: 0 $padding-horizontal;
+
+  @include susy-breakpoint($bp-sm) {
+    overflow-y: visible;
+  }
 }
 
 .wf-loading {
   opacity: 0;
+}
+
+main {
+  padding-bottom: $padding-vertical;
 }

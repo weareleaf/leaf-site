@@ -1,64 +1,58 @@
 .portfolio {
-  top: 4%;
-  width: 1480px;
-  position: absolute;
-  right: -10%;
-  transform: rotateX(50deg) rotateZ(50deg) scale(0.6);
-  transform-style: preserve-3d;
+  margin: 0 -#{$padding-horizontal-lg};
+  min-height: 30em;
+  overflow: hidden;
 
-  @include susy-breakpoint($bp-sm) {
-    transform: rotateX(50deg) rotateZ(50deg) scale(0.7);
-  }
+  &__list {
+    width: 87.059rem;
+    transform: rotateX(50deg) rotateZ(50deg) scale(0.6);
+    transform-style: preserve-3d;
+    top: 17.647em;
+    position: relative;
+    right: 75%;
 
-  @include susy-breakpoint($bp-lg) {
-    transform: rotateX(50deg) rotateZ(50deg) scale(1);
+    @include susy-breakpoint($bp-sm) {
+      top: 6%;
+      transform: rotateX(50deg) rotateZ(50deg) scale(0.7);
+      position: absolute;
+      right: -15%;
+    }
+
+    @include susy-breakpoint($bp-md) {
+      right: -15%;
+      top: 10%;
+    }
+
+    @include susy-breakpoint($bp-lg) {
+      transform: rotateX(50deg) rotateZ(50deg) scale(1);
+      right: -2%;
+    }
   }
 
   &__item {
-    transition: 0.2s ease;
-    width: 640px;
-    float: left;
-    margin: 18px;
-    list-style-type: none;
     background-size: 0, cover;
-    transform-style: preserve-3d;
+    float: left;
+    list-style-type: none;
+    margin: 1em;
     position: relative;
+    transform-style: preserve-3d;
+    transition: 0.2s ease;
 
     &:nth-child(even) {
-      top: -420px;
+      top: -24em;
     }
 
     &::before {
+      background: rgba(#000, 0.5);
+      bottom: 2.5em;
+      box-shadow: 0 0 40px 30px rgba(#000, 0.5);
       content: '';
       display: block;
+      left: 2.5em;
       position: absolute;
-      top: 30px;
-      left: 30px;
-      right: 30px;
-      bottom: 30px;
-      background: rgba(0, 0, 0, 0.5);
-      box-shadow: 0 0 40px 30px rgba(0, 0, 0, 0.5);
+      right: 2.5em;
+      top: 2.5em;
       transform: translateZ(-50px);
-    }
-
-    &--1 {
-      background: url('/images/portfolio-item-2.jpg');
-      height: 968px;
-    }
-
-    &--2 {
-      background: url('/images/portfolio-item-3.jpg');
-      height: 968px;
-    }
-
-    &--3 {
-      background: url('/images/portfolio-item-1.jpg');
-      height: 1220px;
-    }
-
-    &--4 {
-      background: url('/images/portfolio-item-3.jpg');
-      height: 968px;
     }
   }
 }
@@ -104,14 +98,14 @@
   }
 }
 
-.fadeInDown {
+.fade-in-down {
   animation-name: fadeInDown;
 }
 
-.fadeInLeft {
+.fade-in-left {
   animation-name: fadeInLeft;
 }
 
-.fadeInUp {
+.fade-in-up {
   animation-name: fadeInUp;
 }

@@ -1,15 +1,12 @@
 // Colors
 $bright-green: #28bb70;
-$light-green: #cbece7;
-$mid-green: #65bcba;
-$pale-green: #f9fbfa;
 
 $coal: #323638;
 $dark-smoke: #95afc9;
 $snow: #f7f8f9;
 $white: #fff;
 
-$leaf: #a1c59d;
+$leaf: $bright-green;
 $leaf-dark: #272e43;
 $leaf-light: #c5edc1;
 
@@ -33,8 +30,8 @@ $brand-primary: $bright-green;
 $bp-xs : 24em;
 $bp-sm : 36em;
 $bp-md : 50em;
-$bp-lg : 64em;
-$bp-xl : 72em;
+$bp-lg : 72em;
+$bp-xl : 80em;
 
 // Font colors
 $base-font-color: $dark-smoke;
@@ -117,8 +114,8 @@ $spacing-vertical-fluid-lg: $spacing-vertical-fluid * 1.5;
 $spacing-vertical-fluid-sm: $spacing-vertical-fluid / 1.5;
 
 // Spacing (root)
-$spacing-horizontal-root: calc(3vw + #{$spacing-vertical});
-$spacing-vertical-root: calc(3vw + #{$spacing-vertical});
+$spacing-horizontal-root: calc(3vw + #{$spacing-vertical-lg});
+$spacing-vertical-root: calc(3vw + #{$spacing-vertical-lg});
 
 // Typography
 $font-sans-serif: 'soleil', sans-serif;
