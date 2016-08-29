@@ -72,7 +72,12 @@ textarea {
   }
 }
 
+textarea {
+  line-height: $base-line-height;
+}
+
 .form-group {
+  @include clearfix;
   margin-bottom: $spacing-vertical-sm;
 
   .error {
