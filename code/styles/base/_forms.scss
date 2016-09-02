@@ -77,6 +77,11 @@ textarea {
   }
 }
 
+
+::-webkit-input-placeholder {
+  line-height: normal;
+}
+
 textarea {
   line-height: $base-line-height;
 }
