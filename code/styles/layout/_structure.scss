@@ -10,13 +10,14 @@ body {
 .home-page {
   overflow-y: scroll;
   overflow-x: hidden;
+  position: relative;
 
   @media only screen and (min-width: $bp-sm) and (min-height: 56em) {
     //overflow: hidden;
   }
 
   @include susy-breakpoint($bp-sm) {
-    overflow: hidden;
+    //overflow: hidden;
   }
 }
 
@@ -35,5 +36,5 @@ body {
 }
 
 main {
-  padding-bottom: $padding-vertical;
+  padding-bottom: $padding-vertical-xl;
 }

@@ -1,8 +1,11 @@
 .portfolio {
-  //@include clearfix;
   margin: 0 -#{$padding-horizontal-lg};
   height: 34em;
   overflow: hidden;
+
+  @include susy-breakpoint($bp-sm) {
+    height: auto;
+  }
 
   &__list {
     width: 87.059rem;
@@ -15,7 +18,7 @@
     @include susy-breakpoint($bp-sm) {
       top: 8%;
       transform: rotateX(50deg) rotateZ(50deg) scale(0.7);
-      position: absolute;
+      position: fixed;
       right: -15%;
     }
 
