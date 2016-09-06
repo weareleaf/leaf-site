@@ -23,7 +23,7 @@ body {
 
 .site-wrapper {
   @include container;
-  padding: 0 $padding-horizontal-root $spacing-vertical-root;
+  padding: 0 $padding-horizontal-fluid $spacing-vertical-root;
 
   .home-page & {
     height: 100vh;
