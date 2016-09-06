@@ -16,10 +16,10 @@
     right: 75%;
 
     @include susy-breakpoint($bp-sm) {
-      top: 8%;
-      transform: rotateX(50deg) rotateZ(50deg) scale(0.7);
       position: fixed;
-      right: -15%;
+      right: -20%;
+      top: 12%;
+      transform: rotateX(50deg) rotateZ(50deg) scale(0.7);
     }
 
     @include susy-breakpoint($bp-md) {

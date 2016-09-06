@@ -29,7 +29,7 @@ textarea {
   padding: $padding-vertical $padding-horizontal;
 }
 
-input,
+input:not([type='submit']),
 .select,
 textarea {
   background-color: $input-background-color;
