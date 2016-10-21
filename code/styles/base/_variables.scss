@@ -20,7 +20,7 @@ $base-background-color: $leaf-dark;
 // Border
 $base-border-color: $coal;
 $base-border-style: solid;
-$base-border-width: 0.1em;
+$base-border-width: .1em;
 $base-border: $base-border-style $base-border-width $base-border-color;
 
 // Brand
@@ -113,8 +113,8 @@ $spacing-vertical-fluid: 5%;
 $spacing-vertical-fluid-lg: $spacing-vertical-fluid * 1.5;
 $spacing-vertical-fluid-sm: $spacing-vertical-fluid / 1.5;
 
-// Spacing (root)
-$spacing-horizontal-root: calc(6vw + #{$spacing-vertical});
+// Spacing (roo6
+$spacing-horizontal-root: calc(6vw + #{$spacing-horizontal});
 $spacing-vertical-root: calc(6vh + #{$spacing-vertical});
 
 // Typography
