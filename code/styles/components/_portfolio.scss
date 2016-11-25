@@ -63,6 +63,7 @@
 }
 
 .animated {
+  animation-delay: 0.5s; // Allow the main page animation time to finish first
   animation-duration: 1s;
   animation-fill-mode: both;
 }

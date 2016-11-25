@@ -23,10 +23,22 @@ html(class='no-js', lang='en')
     meta(http-equiv='cleartype', content='on')
     meta(http-equiv='X-UA-Compatible', content='IE=edge,chrome=1')
     meta(name='description', content='#{title}')
-
+    
+    link(rel='stylesheet', href='/styles/main.css')
     script(src='https://use.typekit.net/huw3wqz.js')
     script.
       try{Typekit.load({ async: true });}catch(e){}
+    script.
+      //- Ensure the content fades in properly even if a content blocker is blocking typekit:
+      document.addEventListener("DOMContentLoaded", function(event) { 
+        setTimeout(function() {
+          var htmlClasses = document.documentElement.classList;
+          console.log(htmlClasses)
+          if (!htmlClasses.contains('wf-active') && !htmlClasses.contains('wf-loading')) { 
+            document.documentElement.classList.add('wf-active-override');
+          }
+        }, 250);
+      })
 
     link(rel='apple-touch-icon', sizes='180x180', href='/apple-touch-icon.png')
     link(rel='icon', type='image/png', href='/favicon-32x32.png', sizes='32x32')
@@ -34,8 +46,6 @@ html(class='no-js', lang='en')
     link(rel='manifest', href='/manifest.json')
     link(rel='mask-icon', href='/safari-pinned-tab.svg', color='#5bbad5')
     meta(name='theme-color', content='#272e42')
-
-    link(rel='stylesheet', href='/styles/main.css')
 
     //- Open Graph
     meta(property='og:type', content='business.business')

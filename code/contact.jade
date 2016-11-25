@@ -20,14 +20,14 @@ block content
           input(type='text', placeholder='Your name', name='name', data-howdy-validate='required')
         .form-group
           label Email
-          input(type='email', placeholder="Your email address", name='email', data-howdy-validate='required')
+          input(placeholder="Your email address", name='email')
         .form-group
           label Organisation
           input(type='text', placeholder='Organisation name', name='organisation', data-howdy-validate='required')
         .form-group
           label Project budget
           .select
-            select
+            select(name='budget')
               option Under £10,000
               option £10,000 - £20,000
               option £20,000 - £30,000
