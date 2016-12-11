@@ -1,4 +1,4 @@
-extends ../templates/base/_base
+extends ./templates/base/_base
 
 block prepend vars
   -var bodyClass = 'contact-page'
@@ -20,14 +20,14 @@ block content
           input(type='text', placeholder='Your name', name='name', data-howdy-validate='required')
         .form-group
           label Email
-          input(type='email', placeholder="Your email address", name='email', data-howdy-validate='required')
+          input(placeholder="Your email address", name='email')
         .form-group
           label Organisation
           input(type='text', placeholder='Organisation name', name='organisation', data-howdy-validate='required')
         .form-group
           label Project budget
           .select
-            select
+            select(name='budget')
               option Under £10,000
               option £10,000 - £20,000
               option £20,000 - £30,000
@@ -51,4 +51,4 @@ block content
       h2 Where's your phone number?
       p We like to work in a <strong>distraction free environment</strong> so we can work as efficiently as possible. Drop us a message on the form above and we'll get back to you, or email us at <a href='mailto:hello@weareleaf.com'>hello@weareleaf.com</a>.
 
-    script(type="text/javascript" src="https://app.howdyform.com/static/howdyClient.js?email=aGVsbG9Ad2VhcmVsZWFmLmNvbQ==")
+    script(type="text/javascript" src="https://app.howdyform.com/static/howdyClient.js?email=aGVsbG9Ad2VhcmVsZWFmLmNvbQ==" data-howdy-recipient="enquiries@weareleaf.com")
