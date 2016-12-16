@@ -33,7 +33,6 @@ html(class='no-js', lang='en')
       document.addEventListener("DOMContentLoaded", function(event) { 
         setTimeout(function() {
           var htmlClasses = document.documentElement.classList;
-          console.log(htmlClasses)
           if (!htmlClasses.contains('wf-active') && !htmlClasses.contains('wf-loading')) { 
             document.documentElement.classList.add('wf-active-override');
           }
