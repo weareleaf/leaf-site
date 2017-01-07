@@ -1,45 +1,74 @@
-var gulp = require('gulp');
-var gutil = require('gulp-util');
-var webpackStream = require('webpack-stream');
-var jade = require('gulp-jade');
-var watch = require('gulp-watch');
-var sass = require('gulp-sass');
-var connect = require('gulp-connect');
-var connectRewrite = require('http-rewrite-middleware');
-var uglify = require('gulp-uglify');
-var open = require('gulp-open');
-var del = require('del');
-var notify = require('gulp-notify');
-var ghPages = require('gulp-gh-pages');
-var changed = require('gulp-changed');
-var runSequence = require('run-sequence');
-var autoprefixer = require('gulp-autoprefixer');
-var cssmin = require('gulp-cssmin');
-var webpack = require('webpack');
-var imagemin = require('gulp-imagemin');
-var imageminJpegRecompress = require('imagemin-jpeg-recompress');
+const gulp = require('gulp');
+const gutil = require('gulp-util');
+const webpackStream = require('webpack-stream');
+const pug = require('gulp-pug');
+const watch = require('gulp-watch');
+const sass = require('gulp-sass');
+const connect = require('gulp-connect');
+const connectRewrite = require('http-rewrite-middleware');
+const uglify = require('gulp-uglify');
+const open = require('gulp-open');
+const del = require('del');
+const notify = require('gulp-notify');
+const ghPages = require('gulp-gh-pages');
+const changed = require('gulp-changed');
+const runSequence = require('run-sequence');
+const autoprefixer = require('gulp-autoprefixer');
+const cssmin = require('gulp-cssmin');
+const webpack = require('webpack');
+const imagemin = require('gulp-imagemin');
+const imageminJpegRecompress = require('imagemin-jpeg-recompress');
 
-var MISC_FILES = ['./code/CNAME', './code/**/*.mp4', './code/**/*.ogv', './code/**/*.webm', './code/**/*.eot', './code/**/*.ttf', './code/**/*.woff', './code/**/*.woff2'];
-var JADE_FILES = ['./code/**/*.jade', '!./code/lib/**'];
-var SASS_FILES = ['./code/**/*.scss', , '!./code/lib/**'];
-var SASS_INCLUDE_PATHS = [
+const MISC_FILES = ['./code/CNAME', './code/**/*.mp4', './code/**/*.ogv', './code/**/*.webm', './code/**/*.eot', './code/**/*.ttf', './code/**/*.woff', './code/**/*.woff2'];
+const PUG_FILES = ['./code/**/*.pug', './code/**/*.jade', '!./code/lib/**'];
+const SASS_FILES = ['./code/**/*.scss', , '!./code/lib/**'];
+const SASS_INCLUDE_PATHS = [
   'node_modules/normalize-scss/sass',
   'node_modules/susy/sass'
 ];
-var FAVICON_BASE = ['./code/favicons'];
-var FAVICON_FILES = [(FAVICON_BASE + '/**/*')];
-var IMAGE_FILES = ['./code/**/*.png','./code/**/*.jpg','./code/**/*.gif','./code/**/*.jpeg', './code/**/*.svg', '!./code/lib/**', '!./code/images/favicons/**/*'];
-var APP_JS_FILES = ['./code/scripts/app/**/*.js', '!./code/lib/**'];
-var LIB_JS_FILES = ['./code/scripts/lib/**/*.js', '!./code/lib/**'];
-var WEBPACKABLE_FILES = './code/scripts/app/index.js';
-var BUILD_SRC = './code/';
-var BUILD_DEST = './dist/';
-var BUILT_FILES = BUILD_DEST + '**/*';
+const FAVICON_BASE = ['./code/favicons'];
+const FAVICON_FILES = [(FAVICON_BASE + '/**/*')];
+const IMAGE_FILES = ['./code/**/*.png','./code/**/*.jpg','./code/**/*.gif','./code/**/*.jpeg', './code/**/*.svg', '!./code/lib/**', '!./code/images/favicons/**/*'];
+const WEBPACKABLE_FILES = './code/scripts/index.js';
+const BUILD_SRC = './code/';
+const BUILD_DEST = './dist/';
+const BUILT_FILES = BUILD_DEST + '**/*';
 
-var webpackConfig = {
+const webpackConfig = {
   output: {
-    filename: 'index.js'
+    filename: 'index.js',
+    devtoolModuleFilenameTemplate: '[resource-path]'
   },
+  module: {
+    loaders: [
+      {
+        test: /\.js$/,
+        exclude: /node_modules/,
+        loader: 'babel-loader',
+        query: {
+          presets: ['es2015']
+        }
+      }
+    ]
+  },
+  devtool: 'source-map',
+  devServer: {
+    stats: {
+      colors: true,
+      chunks: false
+    }
+  },
+  plugins: [
+    new webpack.DefinePlugin({
+      "process.env": { "NODE_ENV": JSON.stringify("production") }
+    }),
+    new webpack.optimize.DedupePlugin(),
+    new webpack.optimize.UglifyJsPlugin({
+      compress: {
+        warnings: false
+      }
+    })
+  ],
   stats: {
     hash: false,
     version: false,
@@ -53,60 +82,52 @@ var webpackConfig = {
     reasons: false,
     source: false,
     chunkOrigins: false
-  },
-  devtool: 'source-map',
-  plugins: [
-    new webpack.DefinePlugin({
-      "process.env": { "NODE_ENV": JSON.stringify("production") }
-    }),
-    new webpack.optimize.DedupePlugin(),
-    new webpack.optimize.UglifyJsPlugin()
-  ]
+  }
 };
 
-function logError (error) {
+const logError = (error) => {
   var errorString = error.toString()
   notify.onError({
     title: 'Build Error',
     message: errorString
   })(error);
-  console.log(errorString);
-  this.emit('end');
+  console.log(errorString)
+  this.emit('end')
 }
 
 // ---------------------------------
 // --------- BUILD TASKS -----------
 // ---------------------------------
-gulp.task('clean', function(callback) {
-  return del(BUILT_FILES, callback);
-});
+gulp.task('clean', (callback) => {
+  return del(BUILT_FILES, callback)
+})
 
-gulp.task('favicons', function() {
+gulp.task('favicons', () => {
   return gulp.src(FAVICON_FILES, {cwd: FAVICON_BASE})
     .pipe(gulp.dest(BUILD_DEST))
     .on('error', logError)
-    .pipe(connect.reload());
+    .pipe(connect.reload())
 });
 
-gulp.task('misc', function() {
+gulp.task('misc', () => {
   return gulp.src(MISC_FILES)
     .pipe(changed(BUILD_DEST))
     .pipe(gulp.dest(BUILD_DEST))
     .on('error', logError)
-    .pipe(connect.reload());
+    .pipe(connect.reload())
 });
 
-gulp.task('templates', function() {
-  return gulp.src(JADE_FILES)
-    .pipe(jade({
+gulp.task('templates', () => {
+  return gulp.src(PUG_FILES)
+    .pipe(pug({
       pretty: true
     }))
     .on('error', logError)
     .pipe(gulp.dest(BUILD_DEST))
-    .pipe(connect.reload());
+    .pipe(connect.reload())
 });
 
-gulp.task('styles', function() {
+gulp.task('styles', () => {
   return gulp.src(SASS_FILES)
     .pipe(sass({ includePaths: SASS_INCLUDE_PATHS }))
     .on('error', logError)
@@ -117,10 +138,10 @@ gulp.task('styles', function() {
     .pipe(cssmin())
     .on('error', logError)
     .pipe(gulp.dest(BUILD_DEST))
-    .pipe(connect.reload());
+    .pipe(connect.reload())
 });
 
-gulp.task('images', function() {
+gulp.task('images', () => {
   return gulp.src(IMAGE_FILES)
     .pipe(changed(BUILD_DEST))
     .pipe(imagemin([
@@ -128,112 +149,98 @@ gulp.task('images', function() {
     ]))
     .on('error', logError)
     .pipe(gulp.dest(BUILD_DEST))
-    .pipe(connect.reload());
+    .pipe(connect.reload())
 });
 
-gulp.task("app_scripts", function() {
+gulp.task("app_scripts", () => {
   return gulp.src(WEBPACKABLE_FILES)
     .pipe(webpackStream(webpackConfig))
     .on('error', logError)
-    .pipe(gulp.dest(BUILD_DEST+'scripts/app/'));
+    .pipe(gulp.dest(BUILD_DEST+'scripts/'))
 });
 
-gulp.task("app_scripts:watched", function() {
+gulp.task("app_scripts:watched", () => {
   webpackConfig.watch = true;
   return gulp.src(WEBPACKABLE_FILES)
     .pipe(webpackStream(webpackConfig))
     .on('error', logError)
-    .pipe(gulp.dest(BUILD_DEST+'scripts/app/'))
-    .pipe(connect.reload());
+    .pipe(gulp.dest(BUILD_DEST+'scripts/'))
+    .pipe(connect.reload())
 })
 
-gulp.task('lib_scripts', function() {
-  return gulp.src(LIB_JS_FILES)
-    .pipe(changed(BUILD_DEST))
-    .pipe(uglify())
-    .on('error', logError)
-    .pipe(gulp.dest(BUILD_DEST+'scripts/lib/'))
-    .pipe(connect.reload());
-});
-
-gulp.task('start_success', function() {
-  return gutil.log('ALL DONE!');
+gulp.task('start_success', () => {
+  return gutil.log('ALL DONE!')
 });
 
 // ---------------------------------
 // --------- WATCH TASKS -----------
 // ---------------------------------
-gulp.task('watch', function () {
+gulp.task('watch', () => {
 
-  watch(FAVICON_FILES, function() {
-    gulp.start('favicons');
-  });
-
-  watch(MISC_FILES, function() {
-    gulp.start('misc');
+  watch(FAVICON_FILES, () => {
+    gulp.start('favicons')
   })
 
-  watch(JADE_FILES, function() {
-    gulp.start('templates');
-  });
+  watch(MISC_FILES, () => {
+    gulp.start('misc')
+  })
 
-  watch(SASS_FILES, function() {
-    gulp.start('styles');
-  });
+  watch(PUG_FILES, () => {
+    gulp.start('templates')
+  })
 
-  watch(IMAGE_FILES, function() {
-    gulp.start('images');
-  });
+  watch(SASS_FILES, () => {
+    gulp.start('styles')
+  })
 
-  watch(LIB_JS_FILES, function() {
-    gulp.start('lib_scripts');
+  watch(IMAGE_FILES, () => {
+    gulp.start('images')
   });
 });
 
 // ----------------------------------
 // --------- SERVER TASKS -----------
 // ----------------------------------
-gulp.task('connect', function() {
-
-  var middleware = connectRewrite.getMiddleware([
+gulp.task('connect', () => {
+  const middleware = connectRewrite.getMiddleware([
     {from: '^([^.]+[^/])$', to: '$1.html'}
-  ]);
+  ])
 
   return connect.server({
     root: 'dist',
     livereload: true,
-    middleware: function(connect, options) {
-      return [middleware];
+    middleware: (connect, options) => {
+      return [middleware]
     }
   });
 });
 
-gulp.task('open', function(){
+gulp.task('open', () => {
   return gulp.src('./dist/index.html')
   .pipe(open('', {
     url: 'http://localhost:8080',
     app: 'google chrome'
-  }));
-});
+  }))
+})
 
 // ----------------------------------
 // --------- DEPLOY TASKS -----------
 // ----------------------------------
-gulp.task('deploy', function() {
+gulp.task('deploy', () => {
   return gulp.src(BUILT_FILES)
     .pipe(ghPages({
       remoteUrl: 'git@github.com:leafagency/leafagency.github.io.git',
       force: true,
       branch: 'master'
     }))
-    .on('error', logError);
+    .on('error', logError)
 });
 // ----------------------------------
 // --------- COMPOSITE TASKS --------
 // ----------------------------------
-gulp.task('build', function(cb) {
-  return runSequence('clean', ['misc', 'favicons', 'templates', 'styles', 'images', 'app_scripts', 'lib_scripts'], cb)
-});
-gulp.task('start', function(cb) {
-  return runSequence('clean', ['misc', 'favicons', 'templates', 'styles', 'images', 'lib_scripts'], 'connect', ['app_scripts:watched', 'watch', 'open', 'start_success'], cb);
-});
+gulp.task('build', (cb) => {
+  return runSequence('clean', ['misc', 'favicons', 'templates', 'styles', 'images', 'app_scripts'], cb)
+})
+gulp.task('start', (cb) => {
+  return runSequence('clean', ['misc', 'favicons', 'templates', 'styles', 'images'], 'connect', ['app_scripts:watched', 'watch', 'open', 'start_success'], cb);
+})
