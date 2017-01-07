@@ -16,6 +16,9 @@ npm run build    // Force a rebuild of all code
 npm run deploy   // Deploy the site to Github pages
 ```
 
+### Troubleshooting
+If for whatever reason things won't work on your machine, it's most likely an issue with your node version or missing dependencies. Check your node version matches the version specified in `.nvmrc` using `node -v` and then reinstall your packages with `rm -rf node_modules && npm cache clear && npm i`.
+
 ### Automated building
 Source code written in the `./code/` directory is converted and moved over to `./dist/` as part this template's build process. The following conversions are automated:
 
