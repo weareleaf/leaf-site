@@ -38,6 +38,23 @@
   margin: 4em auto;
   text-align: center;
 
+  li {
+    float: left;
+    width: 50%;
+
+    &:nth-of-type(odd) {
+      border-right: solid 1px red;
+    }
+
+    &:nth-of-type(-n+2) {
+      border-bottom: solid 1px red;
+    }
+
+    a {
+      padding: $padding-vertical;
+    }
+  }
+
   &.hidden {
     display: none;
   }
@@ -85,14 +102,15 @@
   width: 40px;
   height: 24px;
   display: inline-block;
-  position: relative; }
+  position: relative;
+  }
 
 .hamburger-inner {
-  display: block;
+  display: inline-block;
+  width: 30px;
   top: 50%;
   margin-top: -2px; }
   .hamburger-inner, .hamburger-inner::before, .hamburger-inner::after {
-    width: 40px;
     height: 2px;
     background-color: $white;
     position: absolute;
@@ -101,7 +119,9 @@
     transition-timing-function: ease; }
   .hamburger-inner::before, .hamburger-inner::after {
     content: "";
-    display: block; }
+    display: block;
+    width: 40px;
+  }
   .hamburger-inner::before {
     top: -10px; }
   .hamburger-inner::after {
