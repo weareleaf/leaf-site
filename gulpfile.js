@@ -85,7 +85,7 @@ const webpackConfig = {
   }
 };
 
-const logError = (error) => {
+const logError = function(error) {
   var errorString = error.toString()
   notify.onError({
     title: 'Build Error',
