@@ -1,6 +1,6 @@
 .btn {
   appearance: none;
-  background-color: $bright-green;
+  background-color: $leaf-green;
   border: none;
   border-radius: 100px;
   color: $white;
@@ -12,7 +12,7 @@
   transition: background-color $base-duration $base-timing;
 
   &:hover {
-    background-color: lighten($bright-green, 5%);
+    background-color: lighten($leaf-green, 5%);
     cursor: pointer;
   }
 

@@ -13,9 +13,9 @@ body {
 }
 
 .home-page {
-  overflow-y: scroll;
-  overflow-x: hidden;
-  position: relative;
+  //overflow-y: scroll;
+  //overflow-x: hidden;
+  //position: relative;
 
   @media only screen and (min-width: $bp-sm) and (min-height: 56em) {
     //overflow: hidden;
@@ -27,8 +27,8 @@ body {
 }
 
 .site-wrapper {
-  @include container;
-  padding: 0 $padding-horizontal-fluid $spacing-vertical-root;
+  //@include container;
+  //padding: 0 $padding-horizontal-fluid $spacing-vertical-root;
 
   .home-page & {
     height: 100vh;
@@ -37,5 +37,7 @@ body {
 }
 
 main {
+  @include container;
+  padding: 0 $padding-horizontal-fluid-sm $spacing-vertical-root;
   padding-bottom: $padding-vertical-xl;
 }

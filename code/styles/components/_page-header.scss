@@ -1,9 +1,22 @@
 .page-header {
-  margin-bottom: $spacing-vertical-lg;
+  @include clearfix;
+
+  &__title {
+
+    .hero-banner & {
+      color: #c9ffe5;
+    }
+  }
 
   &__intro {
-    font-size: 1.412em;
+    @include clearfix;
+    color: $white;
+    font-size: 2.5em;
+    line-height: $heading-line-height;
     margin-bottom: 0;
-    max-width: 33.529rem;
+
+    @include susy-breakpoint($bp-md) {
+      @include span(10 of 12);
+    }
   }
 }

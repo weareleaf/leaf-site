@@ -1,0 +1,8 @@
+.hero-banner {
+  background-color: $leaf-green;
+
+  &__inner {
+    @include container;
+    padding: 0 $padding-horizontal-fluid-sm $spacing-vertical-xl;
+  }
+}

@@ -1,0 +1,10 @@
+.buckets {
+  @include clearfix;
+
+  &__item {
+
+    @include susy-breakpoint($bp-sm) {
+      @include gallery(4 of 12);
+    }
+  }
+}

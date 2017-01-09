@@ -3,10 +3,6 @@
 
   &__logo {
 
-    svg path {
-      transition: fill $base-duration $base-timing;
-    }
-
     svg:hover path {
       opacity: .9;
     }

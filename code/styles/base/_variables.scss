@@ -1,21 +1,19 @@
 // Colors
-$bright-green: #28bb70;
-
-$coal: #323638;
+$coal: #1a2129;
 $dark-smoke: #95afc9;
 $snow: #f7f8f9;
 $white: #fff;
 
-$leaf: $bright-green;
-$leaf-dark: #272e43;
-$leaf-light: #c5edc1;
+$leaf-green: #28a76a;
+$leaf-green-dark: #272e43;
+$leaf-green-light: #c5edc1;
 
 // Animations
 $base-duration: 150ms;
 $base-timing: ease;
 
 // Background colors
-$base-background-color: $leaf-dark;
+$base-background-color: $coal;
 
 // Border
 $base-border-color: $coal;
@@ -24,7 +22,7 @@ $base-border-width: .1em;
 $base-border: $base-border-style $base-border-width $base-border-color;
 
 // Brand
-$brand-primary: $bright-green;
+$brand-primary: $leaf-green;
 
 // Breakpoints
 $bp-xs : 24em;
@@ -36,18 +34,22 @@ $bp-xl : 80em;
 // Font colors
 $base-font-color: $dark-smoke;
 $heading-font-color: $white;
-$action-color: $bright-green;
+$action-color: $leaf-green;
 
 // Font sizes
-$base-font-size: 1.063em;
+$base-font-size: 1.25em;
+$h1-font-size: .65em;
+$h2-font-size: 1.35em;
+$h3-font-size: 1.35em;
+$h4-font-size: .9em;
 
 // Forms
 $input-background-color: #3a465d;
 $input-placeholder-color: #a9b3c7;
 
 // Line height
-$base-line-height: 1.7;
-$heading-line-height: 1.2;
+$base-line-height: 1.6;
+$heading-line-height: 1.4;
 
 // Other sizes
 $base-border-radius: 0.1em;
@@ -57,18 +59,18 @@ $base-z-index: 0;
 $max-width: 59em;
 
 // Padding (horizontal)
-$padding-horizontal: 1.25em;
+$padding-horizontal: 2em;
 $padding-horizontal-lg: $padding-horizontal * 2;
 $padding-horizontal-sm: $padding-horizontal / 2;
-$padding-horizontal-xl: $padding-horizontal * 4;
-$padding-horizontal-xs: $padding-horizontal / 4;
+$padding-horizontal-xl: $padding-horizontal * 2;
+$padding-horizontal-xs: $padding-horizontal / 2;
 
 // Padding (vertical)
-$padding-vertical: 1.5em;
+$padding-vertical: 2em;
 $padding-vertical-lg: $padding-vertical * 2;
 $padding-vertical-sm: $padding-vertical / 2;
-$padding-vertical-xl: $padding-vertical * 4;
-$padding-vertical-xs: $padding-vertical / 4;
+$padding-vertical-xl: $padding-vertical * 2;
+$padding-vertical-xs: $padding-vertical / 2;
 
 // Padding (horizontal - fluid)
 $padding-horizontal-fluid: 5%;
@@ -119,5 +121,6 @@ $spacing-vertical-root: calc(6vh + #{$spacing-vertical});
 
 // Typography
 $font-sans-serif: 'soleil', sans-serif;
-$base-font-family: $font-sans-serif;
+$font-serif: 'karmina', serif;
+$base-font-family: $font-serif;
 $heading-font-family: $font-sans-serif;
