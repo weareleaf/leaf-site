@@ -1,3 +1,21 @@
-.navbar
-  a.navbar__logo(href='/')
+.masthead
+  a.masthead__logo(href='/')
     include ../../images/leaf.svg
+
+  nav.navigation
+
+    .navigation__inner
+
+      button.hamburger.hamburger--3dx(type='button')
+        span.hamburger-box
+          span.hamburger-inner
+
+    ul.navigation__list.hidden(role='navigation')
+      li
+        a(href='#') work
+      li
+        a(href='#') about
+      li
+        a(href='#') resume
+      li
+        a(href='#') contact

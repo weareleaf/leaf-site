@@ -38,6 +38,8 @@ html(class='no-js', lang='en')
           }
         }, 250);
       })
+    script(src='https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js')
+
 
     link(rel='apple-touch-icon', sizes='180x180', href='/apple-touch-icon.png')
     link(rel='icon', type='image/png', href='/favicon-32x32.png', sizes='32x32')
@@ -109,3 +111,22 @@ html(class='no-js', lang='en')
       include ../layout/footer
 
     block footerScripts
+
+      script.
+        //
+          $(".navigation__toggle").on('click', function() {
+            $(this).toggleClass("on");
+            $('.navigation').toggleClass("on");
+            $(".navigation__list").toggleClass('hidden');
+          });
+
+        // Look for .hamburger
+        var hamburger = document.querySelector(".hamburger");
+        var navigation = document.querySelector(".navigation");
+        var navigationList = document.querySelector(".navigation__list");
+        // On click
+        hamburger.addEventListener("click", function() {
+          hamburger.classList.toggle("is-active");
+          navigation.classList.toggle("on");
+          navigationList.classList.toggle("hidden");
+        });
