@@ -13,12 +13,15 @@
 @import 'base/typography';
 
 // Layout
+@import 'layout/footer';
 @import 'layout/navbar';
 @import 'layout/structure';
 
 // Components
 @import 'components/banner';
+@import 'components/biography';
 @import 'components/buckets';
+@import 'components/gallery';
 @import 'components/hero-banner';
 @import 'components/page-header';
 @import 'components/portfolio';

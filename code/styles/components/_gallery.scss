@@ -1,0 +1,23 @@
+.gallery {
+
+  &__pair {
+    display: flex;
+  }
+
+  &__item {
+    margin-bottom: $spacing-vertical-sm;
+
+    &:first-child {
+      margin-right: $spacing-horizontal-sm;
+    }
+
+    &--wide {
+      flex: 1 auto 0;
+    }
+
+    &__image {
+      display: block;
+      width: 100%;
+    }
+  }
+}

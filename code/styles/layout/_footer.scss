@@ -1,0 +1,42 @@
+.footer {
+  background-color: $leaf-green;
+  color: $white;
+  font-family: $font-sans-serif;
+
+  &__inner {
+    @include container;
+    display: flex;
+    align-items: stretch;
+    padding: $spacing-vertical $padding-horizontal-fluid-sm 0;
+
+  }
+
+  &__block {
+    padding-bottom: $padding-vertical-sm;
+    padding-top: $padding-vertical-sm;
+    width: 10em;
+
+    &:first-child {
+      flex: 2 0 0;
+    }
+
+    &--callout {
+      background-color: darken($leaf-green, 5%);
+      padding-left: $padding-horizontal-sm;
+      padding-right: $padding-horizontal-sm;
+    }
+  }
+
+  &__text,
+  &__link {
+    font-size: .8em;
+  }
+
+  &__link {
+    color: $white;
+  }
+
+  &__text {
+    line-height: 2;
+  }
+}

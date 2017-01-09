@@ -49,6 +49,25 @@ block content
           h3 Intentionally lean
           p We hate the faceless conveyor belt model of larger agencies. We pour our energy in to every project we take, and keeping our overheads low and our core team small means you'll always be a priority.
 
+      .gallery
+
+        .gallery__pair
+
+          .gallery__item
+            img.gallery__item__image(src='/images/company-grid-1.jpg')
+
+          .gallery__item.gallery__item--wide
+            img.gallery__item__image(src='/images/company-grid-2.jpg')
+
+        .gallery__pair
+
+          .gallery__item.gallery__item--wide
+            img.gallery__item__image(src='/images/company-grid-3.jpg')
+
+          .gallery__item
+            img.gallery__item__image(src='/images/company-grid-4.jpg')
+
+
     section
 
       h2 Our clients
@@ -57,23 +76,29 @@ block content
     section
 
       .biography
-        p.heading-intro Director, Developer
-        h3 Mike Carter
-        p Mike is an accomplished full-stack software engineer who specialises in using modern frontend JavaScript frameworks backed by cutting edge cloud services to create web applications offering desktop-like user experiences.
-        p When he's not working, Mike's usually deep in the latest Netflix boxset. He's a casual vegan, and spends much of his spare time walking his dog, Bramley.
-        ul
-          li: a(href='#') Website
-          li: a(href='#') Github
-          li: a(href='#') Twitter
-          li: a(href='#') Medium
+        .biography__image
+          img.gallery__item__image(src='/images/team/mike-carter.jpg')
+        .biography__content
+          p.heading-intro Director, Developer
+          h3 Mike Carter
+          p Mike is an accomplished full-stack software engineer who specialises in using modern frontend JavaScript frameworks backed by cutting edge cloud services to create web applications offering desktop-like user experiences.
+          p When he's not working, Mike's usually deep in the latest Netflix boxset. He's a casual vegan, and spends much of his spare time walking his dog, Bramley.
+          ul
+            li: a(href='#') Website
+            li: a(href='#') Github
+            li: a(href='#') Twitter
+            li: a(href='#') Medium
 
       .biography
-        p.heading-intro Director, Designer
-        h3 Chris Annetts
-        p Chris is a seasoned product designer, having worked with the likes of Admiral, Expedia &amp; Santander. As comfortable in the Terminal as he is in Sketch, Chris specialises in turning complex ideas into accessible, simple interfaces.
-        p When he's not working, Chris likes classic football games, dark ales, and family time. He's still the only active Pokémon Go player he knows.
-        ul
-          li: a(href='#') Website
-          li: a(href='#') Dribbble
-          li: a(href='#') Twitter
-          li: a(href='#') Medium
+        .biography__image
+          img.gallery__item__image(src='/images/team/chris-annetts.jpg')
+        .biography__content
+          p.heading-intro Director, Designer
+          h3 Chris Annetts
+          p Chris is a seasoned product designer, having worked with the likes of Admiral, Expedia &amp; Santander. As comfortable in the Terminal as he is in Sketch, Chris specialises in turning complex ideas into accessible, simple interfaces.
+          p When he's not working, Chris likes classic football games, dark ales, and family time. He's still the only active Pokémon Go player he knows.
+          ul
+            li: a(href='#') Website
+            li: a(href='#') Dribbble
+            li: a(href='#') Twitter
+            li: a(href='#') Medium

@@ -19,7 +19,7 @@ h6, %h6, {
   color: $heading-font-color;
   font-family: $heading-font-family;
   line-height: $heading-line-height;
-  margin: 0 0 $spacing-vertical;
+  margin: 0 0 $spacing-vertical-sm;
 }
 
 h1, %h1 {
@@ -45,9 +45,11 @@ h3, %h3 {
 
 h4, %h4 {
   font-size: $h4-font-size;
+  font-weight: 600;
 }
 
 p {
+  font-size: $p-font-size;
   margin: 0 0 $spacing-vertical;
 
   strong {
@@ -73,5 +75,14 @@ a {
   font-size: 0.765em;
   font-weight: 800;
   letter-spacing: .025em;
+  text-transform: uppercase;
+}
+
+.heading-intro {
+  color: $leaf-green;
+  font-family: $heading-font-family;
+  font-size: $h1-font-size;
+  font-weight: 900;
+  letter-spacing: .3em;
   text-transform: uppercase;
 }

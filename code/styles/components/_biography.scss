@@ -1,0 +1,27 @@
+.biography {
+  @include clearfix;
+
+  @include susy-breakpoint($bp-sm) {
+    @include push(1);
+    display: flex;
+    align-items: center;
+
+    &:nth-of-type(even) {
+      flex-direction: row-reverse;
+    }
+  }
+
+  &__image {
+
+    @include susy-breakpoint($bp-sm) {
+      @include span(5 of 12);
+    }
+  }
+
+  &__content {
+
+    @include susy-breakpoint($bp-sm) {
+      @include span(5 of 12);
+    }
+  }
+}
