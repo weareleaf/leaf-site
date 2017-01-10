@@ -38,7 +38,7 @@ body {
 
 main {
   @include container;
-  padding: 0 $padding-horizontal-fluid-sm $padding-vertical-xl;
+  padding: 0 $padding-horizontal-fluid-sm;
 }
 
 section {
