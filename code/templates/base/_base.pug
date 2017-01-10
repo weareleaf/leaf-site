@@ -111,11 +111,13 @@ html(class='no-js', lang='en')
     block footerScripts
 
       script.
+        var body =  document.querySelector("body");
         var hamburger = document.querySelector(".hamburger");
         var navigation = document.querySelector(".navigation");
         var navigationList = document.querySelector(".navigation__list");
 
         hamburger.addEventListener("click", function() {
+          body.classList.toggle("no-scroll");
           hamburger.classList.toggle("is-active");
           navigation.classList.toggle("on");
           navigationList.classList.toggle("hidden");

@@ -44,3 +44,7 @@ main {
 section {
   padding: $padding-vertical-xl 0;
 }
+
+.no-scroll {
+  overflow: hidden;
+}
