@@ -26,7 +26,7 @@
 
   &__inner {
     @include container;
-    padding: $spacing-vertical-root $padding-horizontal-fluid-sm;
+    padding: $spacing-vertical-lg $padding-horizontal-fluid-sm;
   }
 }
 
@@ -46,15 +46,18 @@
   }
 
   li {
-    float: left;
-    width: 50%;
 
-    &:nth-of-type(odd) {
-      border-right: solid 1px rgba($white, .05);
-    }
+    @include susy-breakpoint($bp-md) {
+      float: left;
+      width: 50%;
 
-    &:nth-of-type(-n+2) {
-      border-bottom: solid 1px rgba($white, .05);
+      &:nth-of-type(odd) {
+        border-right: solid 1px rgba($white, .05);
+      }
+
+      &:nth-of-type(-n+2) {
+        border-bottom: solid 1px rgba($white, .05);
+      }
     }
 
     a {
@@ -62,7 +65,11 @@
       font-size: 2.5em;
       line-height: $heading-line-height;
       margin-bottom: 0;
-      padding: $padding-vertical;
+      padding: $padding-vertical-sm;
+
+      @include susy-breakpoint($bp-md) {
+        padding: $padding-vertical;
+      }
     }
   }
 

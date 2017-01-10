@@ -1,30 +1,48 @@
 .block {
-  /*
-  position: relative;
-
-  &::before {
-    background-color: red;
-    bottom: 0;
-    content: '';
-    display: block;
-    top: 0;
-    width: 1px;
-    left: 50%;
-    position: absolute;
-    height: 100%;
-  }
-  */
 
   &__item {
-    @include pad(1);
-    @include span(6 of 12);
     padding-bottom: $padding-vertical-xl;
     padding-top: $padding-vertical-xl;
-    text-align: center;
 
-    &:last-child {
-      @include last;
-      border-left: solid 1px #d5d7db;
+    @include susy-breakpoint($bp-md) {
+      @include pad(1);
+      @include span(6 of 12);
+      text-align: center;
+
+      &:last-child {
+        @include last;
+        border-left: solid 1px #d5d7db;
+      }
     }
+
+    &:hover {
+
+      .block__title::after {
+        padding-left: 1.25em;
+        transition: all ease .2s;
+        opacity: 1;
+      }
+
+    }
+  }
+
+  &__intro {
+    @extend %heading-intro;
+    color: $leaf-green;
+  }
+
+  &__title {
+
+    &::after {
+      content: "→";
+      transition: all ease .2s;
+      position: relative;
+      opacity: 0;
+      margin-left: -1em;
+    }
+  }
+
+  &__text {
+    color: #81868D;
   }
 }

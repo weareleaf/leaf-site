@@ -5,9 +5,14 @@ html {
 body {
   color: $base-font-color;
   font-family: $base-font-family;
+  font-size: .75em;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   line-height: $base-line-height;
+
+  @include susy-breakpoint($bp-sm) {
+    font-size: 1em;
+  }
 }
 
 h1, %h1,
@@ -78,7 +83,8 @@ a {
   text-transform: uppercase;
 }
 
-.heading-intro {
+.heading-intro,
+%heading-intro {
   color: $leaf-green;
   font-family: $heading-font-family;
   font-size: $h1-font-size;

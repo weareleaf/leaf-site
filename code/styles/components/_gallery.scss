@@ -1,15 +1,21 @@
 .gallery {
 
   &__pair {
-    display: flex;
+
+    @include susy-breakpoint($bp-sm) {
+      display: flex;
+    }
   }
 
   &__item {
-    flex-grow: 1;
     margin-bottom: $spacing-vertical-sm;
 
-    &:first-child {
-      margin-right: $spacing-horizontal-sm;
+    @include susy-breakpoint($bp-sm) {
+      flex-grow: 1;
+
+      &:first-child {
+        margin-right: $spacing-horizontal-sm;
+      }
     }
 
     &__image {
@@ -17,90 +23,90 @@
       height: 100%;
       width: 100%;
     }
-  }
-}
 
-// variables
-$anim-speed: 0.3s;
+    &--link {
+      display: block;
+    	overflow: hidden;
+    	position: relative;
 
-.gallery__item--link {
-  display: block;
-	opacity: .99;
-	overflow: hidden;
-	position: relative;
+    	&::before {
+        @include absolute-fill;
+    		background-color: rgba($leaf-green, .95);
+      	content: '';
+    		opacity: 0;
+        transition: opacity $base-duration $base-timing;
+        z-index: 1;
+    	}
 
-	&::before {
-		content: '';
-		background-color: rgba($leaf-green, .95);
-		width: 100%;
-		height: 100%;
-		opacity: 0;
-		position: absolute;
-		top: 0;
-		left: 0;
-		z-index: 2;
-		transition-property: opacity;
-		transition-duration: $anim-speed;
-	}
+    	img {
+    		backface-visibility: hidden;
+    		display: block;
+    		max-width: 100%;
+    	}
 
-	img {
-		display: block;
-		max-width: 100%;
-		backface-visibility: hidden;
-	}
+      .gallery__item {
 
-  .gallery__item {
+      	&__info {
+          padding: $padding-vertical $padding-horizontal;
+      		position: absolute;
+      		top: 0;
+      		left: 0;
+      		z-index: 3;
 
-  	&__info {
-      padding: $padding-vertical $padding-horizontal;
-  		position: absolute;
-  		top: 0;
-  		left: 0;
-  		z-index: 3;
+      		span {
+      			display: block;
+      			opacity: 0;
+      			position: relative;
+      			transition-property: top, opacity;
+      			transition-duration: 0.3s;
+      			transition-delay: 0s;
+            top: -.25em;
+      		}
 
-  		span {
-  			display: block;
-  			opacity: 0;
-  			position: relative;
-  			transition-property: top, opacity;
-  			transition-duration: $anim-speed;
-  			transition-delay: 0s;
-  		}
-  	}
+          .gallery__item__title {
+      			//top: -.25em;
+      		}
 
-    &__intro {
-      color: $leaf-green-light;
-      font-family: $heading-font-family;
-      font-size: $h1-font-size;
-      font-weight: 900;
-      letter-spacing: .3em;
-      text-transform: uppercase;
+      		.gallery__item__info {
+      			//top: -.5em;
+      		}
+      	}
+
+        &__intro {
+          color: $leaf-green-light;
+          font-family: $heading-font-family;
+          font-size: $h1-font-size;
+          font-weight: 900;
+          letter-spacing: .3em;
+          text-transform: uppercase;
+        }
+
+        &__title {
+          color: $white;
+          font-size: 2.5em;
+        }
+      }
+
+    	&:focus,
+    	&:hover {
+
+    		&::before,
+    		span {
+    			opacity: 1;
+    		}
+
+    		span {
+    			top: 0;
+    		}
+
+    		.gallery__item__title {
+    			transition-delay: 50ms;
+    		}
+
+    		.gallery__item__info {
+    			transition-delay: 150ms;
+    		}
+    	}
     }
-
-    &__title {
-      color: $white;
-      font-size: 2.5em;
-    }
   }
-
-	&:focus,
-	&:hover {
-
-		&:before,
-		span {
-			opacity: 1;
-		}
-
-		span {
-			top: 0;
-		}
-
-		.title {
-			transition-delay: 0.15s;
-		}
-
-		.info {
-			transition-delay: 0.25s;
-		}
-	}
 }
