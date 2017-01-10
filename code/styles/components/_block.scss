@@ -1,0 +1,30 @@
+.block {
+  /*
+  position: relative;
+
+  &::before {
+    background-color: red;
+    bottom: 0;
+    content: '';
+    display: block;
+    top: 0;
+    width: 1px;
+    left: 50%;
+    position: absolute;
+    height: 100%;
+  }
+  */
+
+  &__item {
+    @include pad(1);
+    @include span(6 of 12);
+    padding-bottom: $padding-vertical-xl;
+    padding-top: $padding-vertical-xl;
+    text-align: center;
+
+    &:last-child {
+      @include last;
+      border-left: solid 1px #d5d7db;
+    }
+  }
+}

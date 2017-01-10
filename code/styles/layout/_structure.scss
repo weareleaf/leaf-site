@@ -37,14 +37,31 @@ body {
 }
 
 main {
-  @include container;
-  padding: 0 $padding-horizontal-fluid-sm;
+
 }
 
-section {
+.section {
   padding: $padding-vertical-xl 0;
+
+  &__inner {
+    @include container;
+    padding: 0 $padding-horizontal-fluid-sm;
+  }
 }
 
 .no-scroll {
   overflow: hidden;
+}
+
+.bg--white {
+  background-color: $white;
+
+  h2 {
+    color: #34393F;
+    font-weight: 600;
+  }
+}
+
+.no-padding {
+  padding: 0;
 }
