@@ -19,7 +19,7 @@
   height: 100%;
   display: block;
   background-color: $coal;
-  position: absolute;
+  position: fixed;
   left: 0;
   top: 0;
   }
@@ -61,19 +61,19 @@
     }
 
     &:nth-of-type(1) .navigation__list__link {
-      animation-delay: 150ms;
+      animation-delay: 100ms;
     }
 
     &:nth-of-type(2) .navigation__list__link {
-      animation-delay: 300ms;
+      animation-delay: 200ms;
     }
 
     &:nth-of-type(3) .navigation__list__link {
-      animation-delay: 450ms;
+      animation-delay: 300ms;
     }
 
     &:nth-of-type(4) .navigation__list__link {
-      animation-delay: 600ms;
+      animation-delay: 400ms;
     }
   }
 
