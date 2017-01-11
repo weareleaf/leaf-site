@@ -1,12 +1,19 @@
 .buckets {
   @include clearfix;
   margin-bottom: $spacing-vertical;
-  
+
   &__item {
     margin-bottom: $spacing-vertical;
 
     @include susy-breakpoint($bp-sm) {
       @include gallery(4 of 12);
+    }
+
+    .buckets--wide & {
+
+      @include susy-breakpoint($bp-sm) {
+        @include gallery(6 of 12);
+      }
     }
   }
 }

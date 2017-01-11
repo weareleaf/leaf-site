@@ -24,25 +24,39 @@ block content
       .section__inner
 
         //- Buckets
-        +buckets([{
-          heading: 'We prefer the long game',
-          text: 'The longer we work together, the better we understand your product, your users, and your goals. In our experience, the best results come from collaborative relationships built on trust.'
-        },{
-          heading: 'Agile web products',
-          text: 'No big reveals or presentations; ever. An agile approach involves working in shorter, more focused cycles of work; continuously testing, iterating, and ultimately reducing risk.'
-        },{
-          heading: 'We listen, and we learn',
-          text: 'We know our craft, but we\'re new to the intricacies and paint points of your company. Your team, audiences and data are invaluable in helping uncover the real, often hidden problems at hand.'
-        },{
-          heading: 'Your users are everything',
-          text: 'Your users are the heart of everything we do; without them, neither of us would be in a job. Being able to pin everything back to a single point of focus keeps everyone on the right track.'
-        },{
-          heading: 'Unashamedly digital',
-          text: 'We have no interest in being all things to all men. That means we don\'t offer branding, print, or advertising campaigns. We\'re a team of designers and developers only, and we\'re proud of that.'
-        },{
-          heading: 'Intentionally lean',
-          text: 'We hate the faceless conveyor belt model of larger agencies. We pour our energy in to every project we take, and keeping our overheads low and our core team small means you\'ll always be a priority.'
-        }])
+        +buckets({
+          items: [{
+            heading: 'We prefer the long game',
+            text: [
+              'The longer we work together, the better we understand your product, your users, and your goals. In our experience, the best results come from collaborative relationships built on trust.'
+            ]
+          },{
+            heading: 'Agile web products',
+            text: [
+              'No big reveals or presentations; ever. An agile approach involves working in shorter, more focused cycles of work; continuously testing, iterating, and ultimately reducing risk.'
+            ]
+          },{
+            heading: 'We listen, and we learn',
+            text: [
+              'We know our craft, but we\'re new to the intricacies and paint points of your company. Your team, audiences and data are invaluable in helping uncover the real, often hidden problems at hand.'
+            ]
+          },{
+            heading: 'Your users are everything',
+            text: [
+              'Your users are the heart of everything we do; without them, neither of us would be in a job. Being able to pin everything back to a single point of focus keeps everyone on the right track.'
+            ]
+          },{
+            heading: 'Unashamedly digital',
+            text: [
+              'We have no interest in being all things to all men. That means we don\'t offer branding, print, or advertising campaigns. We\'re a team of designers and developers only, and we\'re proud of that.'
+            ]
+          },{
+            heading: 'Intentionally lean',
+            text: [
+              'We hate the faceless conveyor belt model of larger agencies. We pour our energy in to every project we take, and keeping our overheads low and our core team small means you\'ll always be a priority.'
+            ]
+          }]
+        })
 
         //- Gallery
         +gallery([{
