@@ -1,0 +1,28 @@
+//- Biography
+//-
+//- A component for introducing members of the Leaf team
+
+
+//- Options
+//- -- image
+//- -- intro
+//- -- link (optional)
+//- -- name
+//- -- text
+
+
+mixin biography(args)
+  .biography
+    .biography__image
+      img.gallery__item__image(src='/images/team/' + args.image, alt=args.name)
+    .biography__content
+      p.heading-intro #{args.title}
+      h3 #{args.name}
+      each item in args.text
+        p #{item}
+
+      +biography-item(args.links)
+      if args.links
+        ul.biography__list
+          each item in args.links
+            +biography-item(item)

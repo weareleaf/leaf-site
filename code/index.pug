@@ -6,47 +6,40 @@ block prepend vars
 
 block content
 
-  .hero-banner
-    .hero-banner__inner
-
-      include ./templates/layout/header
-
-      .page-header
-        .page-header__inner
-          h1.page-header__title We are Leaf
-          p.page-header__intro A creative partner for young and established brands; Leaf are a web design and development studio, specialising in digital products that make peoples lives easier.
+  //- Hero banner
+  +hero-banner({
+    intro: 'A creative partner for young and established brands; Leaf are a web design and development studio, specialising in digital products that make peoples lives easier.',
+    title: 'We are Leaf'
+  })
 
   main
 
     section.section
       .section__inner
 
-        .gallery
-
-          .gallery__pair
-
-            a.gallery__item.gallery__item--link(href='company')
-              img.gallery__item__image(src='/images/work/keen.jpg')
-              .gallery__item__info
-                span.gallery__item__intro Case study
-                span.gallery__item__title Keen
-
-            a.gallery__item.gallery__item--link(href='company')
-              img.gallery__item__image(src='/images/work/cakeboxx.jpg')
-              .gallery__item__info
-                span.gallery__item__intro Case study
-                span.gallery__item__title CakeBoxx Technology
+        //- Gallery
+        +gallery([{
+          href: 'company',
+          intro: 'Case study',
+          src: 'work/keen.jpg',
+          title: 'Keen'
+        },{
+          href: 'company',
+          intro: 'Case study',
+          src: 'work/cakeboxx.jpg',
+          title: 'CakeBoxx Technology'
+        }])
 
     section.section.bg--white.no-padding
       .section__inner
 
-        .block
-          a.block__item(href='company')
-            p.block__intro Creative
-            h2.block__title Interface design
-            p.block__text Interface design is the marriage of user and business goals, using structure, iteration and style to create a window into your product.
-
-          a.block__item(href='company')
-            p.block__intro Engineering
-            h2.block__title Development
-            p.block__text Expertly crafted, thoroughly thought out web and mobile applications; we take software engineering incredibly seriously.
+        //- Block
+        +block([{
+          intro: 'Creative',
+          text: 'Interface design is the marriage of user and business goals, using structure, iteration and style to create a window into your product.',
+          title: 'Interface design'
+        },{
+          intro: 'Engineering',
+          text: 'Expertly crafted, thoroughly thought out web and mobile applications; we take software engineering incredibly seriously.',
+          title: 'Development'
+        }])

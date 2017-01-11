@@ -11,7 +11,7 @@
     margin-bottom: $spacing-vertical-sm;
 
     @include susy-breakpoint($bp-sm) {
-      flex-grow: 1;
+      //flex-grow: 1;
 
       &:first-child {
         margin-right: $spacing-horizontal-sm;

@@ -1,0 +1,13 @@
+//- Banner
+//-
+//- A full width banner image, to be displayed below the hero banner component
+
+
+//- Options
+//- -- alt
+//- -- src
+
+
+mixin banner(args)
+  .banner
+    img.banner__image(src='/images/banners/' + args.src, alt=args.alt)

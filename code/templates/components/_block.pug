@@ -1,0 +1,13 @@
+//- Block
+//-
+//- A block component, simply looping through each included block item
+
+
+//- Options
+//- -- item
+
+
+mixin block(args)
+  .block
+    each item in args
+      +block-item(item)
