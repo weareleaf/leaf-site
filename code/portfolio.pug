@@ -1,0 +1,37 @@
+extends ./templates/base/_base
+
+block prepend vars
+  -var bodyClass = 'portfolio-page'
+  -var title = 'Portfolio - Leaf'
+
+block content
+
+  //- Hero banner
+  +hero-banner({
+    intro: 'Expertly crafted, thoroughly thought out web and mobile applications; we take software engineering incredibly seriously. Our products are as robust as they are usable.',
+    title: 'Portfolio'
+  })
+
+  //- Banner
+  +banner({
+    alt: 'Chris Annetts at Leaf',
+    src: 'banners/company.jpg'
+  })
+
+  main
+
+    section.section
+      .section__inner
+
+        //- Gallery
+        +gallery([{
+          href: 'cakeboxx',
+          intro: 'Case study',
+          src: 'work/keen.jpg',
+          title: 'Keen'
+        },{
+          href: 'cakeboxx',
+          intro: 'Case study',
+          src: 'work/cakeboxx.jpg',
+          title: 'CakeBoxx Technology'
+        }])

@@ -15,23 +15,28 @@ ul {
 }
 
 dl {
-  margin-bottom: $spacing-vertical-lg;
-  margin-top: 0;
-  max-width: 33.529em;
+  //margin-bottom: $spacing-vertical-lg;
+  //margin-top: 0;
+  //max-width: 33.529em;
 
   @include susy-breakpoint($bp-sm) {
-    column-count: 2;
+    //column-count: 2;
   }
 }
 
 dt {
-  @extend %label;
+  color: $white;
+  font-weight: 600;
 }
 
-dd:not(:last-child) {
+dd {
   margin-bottom: $spacing-vertical;
+}
 
-  @include susy-breakpoint($bp-sm) {
-    margin-bottom: 0;
-  }
+li,
+dd,
+dt {
+  display: block;
+  font-family: $font-sans-serif;
+  font-size: .8rem;
 }

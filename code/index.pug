@@ -1,4 +1,4 @@
-extends templates/base/_base
+extends ./templates/base/_base
 
 block prepend vars
   -var bodyClass = 'home-page'
@@ -19,12 +19,12 @@ block content
 
         //- Gallery
         +gallery([{
-          href: 'company',
+          href: 'cakeboxx',
           intro: 'Case study',
           src: 'work/keen.jpg',
           title: 'Keen'
         },{
-          href: 'company',
+          href: 'cakeboxx',
           intro: 'Case study',
           src: 'work/cakeboxx.jpg',
           title: 'CakeBoxx Technology'

@@ -6,49 +6,53 @@ block prepend vars
 
 block content
 
-  .page-header
-    .page-header__inner
-      h1.page-header__title Let's get started
-      p.page-header__intro Give us a brief overview of how you think we can help, and get right back to you on the email address you provide.
+  //- Hero banner
+  +hero-banner({
+    intro: 'Give us a brief overview of how you think we can help, and get right back to you on the email address you provide.',
+    title: 'Let\'s get started'
+  })
 
   main
 
-    form(class='howdy-form',novalidate)
-      .input-row
-        .form-group
-          label Name
-          input(type='text', placeholder='Your name', name='name', data-howdy-validate='required')
-        .form-group
-          label Email
-          input(placeholder="Your email address", name='email')
-        .form-group
-          label Organisation
-          input(type='text', placeholder='Organisation name', name='organisation', data-howdy-validate='required')
-        .form-group
-          label Project budget
-          .select
-            select(name='budget')
-              option Under £10,000
-              option £10,000 - £20,000
-              option £20,000 - £30,000
-              option £30,000 - £50,000
-              option £50,000 - £100,000
-              option £100,000+
+    section.section
+      .section__inner
 
-      .form-group
-        label How can we help?
-        textarea(name='body', placeholder='This is to help us get an initial feel for what\'s needed...', data-howdy-validate='required')
+        form(class='howdy-form',novalidate)
+          .input-row
+            .form-group
+              label Name
+              input(type='text', placeholder='Your name', name='name', data-howdy-validate='required')
+            .form-group
+              label Email
+              input(placeholder="Your email address", name='email')
+            .form-group
+              label Organisation
+              input(type='text', placeholder='Organisation name', name='organisation', data-howdy-validate='required')
+            .form-group
+              label Project budget
+              .select
+                select(name='budget')
+                  option Under £10,000
+                  option £10,000 - £20,000
+                  option £20,000 - £30,000
+                  option £30,000 - £50,000
+                  option £50,000 - £100,000
+                  option £100,000+
 
-      input.btn.btn--block(type='submit' value='Send Message')
+          .form-group
+            label How can we help?
+            textarea(name='body', placeholder='This is to help us get an initial feel for what\'s needed...', data-howdy-validate='required')
+
+          input.btn.btn--block(type='submit' value='Send Message')
 
 
 
-    .form-info
-      h2 I don't know my budget
-      p While we don't need an exact budget this point, we do need at least an initial indication of what's likely. Our proposal will be underpinned by how much time is available, so the earlier we know, the better.
+        .form-info
+          h2 I don't know my budget
+          p While we don't need an exact budget this point, we do need at least an initial indication of what's likely. Our proposal will be underpinned by how much time is available, so the earlier we know, the better.
 
-    .form-info
-      h2 Where's your phone number?
-      p We like to work in a <strong>distraction free environment</strong> so we can be as efficient as possible. Drop us a message on the form above and we'll get back to you, or email us at <a href='mailto:enquiries@weareleaf.com'>enquiries@weareleaf.com</a>.
+        .form-info
+          h2 Where's your phone number?
+          p We like to work in a <strong>distraction free environment</strong> so we can be as efficient as possible. Drop us a message on the form above and we'll get back to you, or email us at <a href='mailto:enquiries@weareleaf.com'>enquiries@weareleaf.com</a>.
 
-    script(type="text/javascript" src="https://static.howdyform.com/howdyClient.js?email=aGVsbG9Ad2VhcmVsZWFmLmNvbQ==" data-howdy-recipient="enquiries@weareleaf.com")
+        script(type="text/javascript" src="https://static.howdyform.com/howdyClient.js?email=aGVsbG9Ad2VhcmVsZWFmLmNvbQ==" data-howdy-recipient="enquiries@weareleaf.com")

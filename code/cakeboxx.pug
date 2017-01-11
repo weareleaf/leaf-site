@@ -1,106 +1,57 @@
 extends ./templates/base/_base
 
 block prepend vars
-  -var bodyClass = 'cakeboxx-page'
-  -var title = 'CakeBoxx Technologies - Leaf'
+  -var bodyClass = 'case-study-page'
+  -var title = 'CakeBoxx Technologies Case Study - Leaf'
 
 block content
 
-  .hero-banner
-    .hero-banner__inner
+  //- Hero banner
+  +hero-banner({
+    intro: 'CakeBoxx Technologies',
+    title: 'Case study'
+  })
 
-      include ./templates/layout/masthead
-
-      .page-header
-        .page-header__inner
-          h1.page-header__title Case study
-          p.page-header__intro CakeBoxx Technologies
-
-  .banner
-    img.page-banner__image(src='/images/banners/company.jpg', alt='Chris Annetts at Leaf')
+  //- Banner
+  +banner({
+    alt: 'Chris Annetts at Leaf',
+    src: 'portfolio/cakeboxx/banner.jpg'
+  })
 
   main
 
     section.section
       .section__inner
 
-        .buckets
+        .section__content
+          h3 The brief
+          p CakeBoxx Technologies offer a range of revolutionary shipping containers, and wanted to modernise their digital presence. On-site analytics had shown a sharp increase in handheld devices being used to view the site, and CakeBoxx were keen to capitalise on this by optimising the site for smaller screens. In November 2015, they approached Leaf looking to refresh their existing site.
 
-          .buckets__item
-            h3 We prefer the long game
-            p The longer we work together, the better we understand your product, your users, and your goals. In our experience, the best results come from collaborative relationships built on trust.
+          img.banner__image(src='/images/portfolio/cakeboxx/work-1.jpg')
 
-          .buckets__item
-            h3 Agile web products
-            p No big reveals or presentations; ever. An agile approach involves working in shorter, more focused cycles of work; continuously testing, iterating, and ultimately reducing risk.
+          h3 The challenge
+          p It quickly became clear that the biggest challenge would be condensing and re-focussing content. The site was full of well written copy, but there was far too much of it. The sheer volume pointed to a lack of prioritisation, which in turn diluted the messages being conveyed.
 
-          .buckets__item
-            h3 We listen, and we learn
-            p We know our craft, but we're new to the intricacies and paint points of your company. Your team, audiences and data are invaluable in helping uncover the real, often hidden problems at hand.
+          img.banner__image(src='/images/portfolio/cakeboxx/work-2.jpg')
 
-          .buckets__item
-            h3 Your users are everything
-            p Your users are the heart of everything we do; without them, neither of us would be in a job. Being able to pin everything back to a single point of focus keeps everyone on the right track.
+          h3 Our approach
+          p We started by creating a set of guidelines to facilitate the creation of any new content. While the pages were content-heavy, the site structure too was unnecessarily complicated, and simplifying the underlying information architecture provided a solid, focussed base to build on.
+          p With a short turnaround time in mind, the decision was made to customise an existing theme. We made the decision to use WordPress as the content management system of choice, opening the door to a huge selection of professional themes available.
 
-          .buckets__item
-            h3 Unashamedly digital
-            p We have no interest in being all things to all men. That means we don't offer branding, print, or advertising campaigns. We're a team of designers and developers only, and we're proud of that.
+        aside.section__aside
+          dl
+            dt Client
+            dd CakeBoxx Technologies
 
-          .buckets__item
-            h3 Intentionally lean
-            p We hate the faceless conveyor belt model of larger agencies. We pour our energy in to every project we take, and keeping our overheads low and our core team small means you'll always be a priority.
+            dt Services
+            dd
+              ul
+                li Content strategy
+                li Technical consultancy
+                li Theme customisation
 
-        .gallery
+            dt Technology
+            dd WordPress
 
-          .gallery__pair
-
-            .gallery__item
-              img.gallery__item__image(src='/images/company-grid-1.jpg')
-
-            .gallery__item.gallery__item--wide
-              img.gallery__item__image(src='/images/company-grid-2.jpg')
-
-          .gallery__pair
-
-            .gallery__item.gallery__item--wide
-              img.gallery__item__image(src='/images/company-grid-3.jpg')
-
-            .gallery__item
-              img.gallery__item__image(src='/images/company-grid-4.jpg')
-
-
-    section
-
-      h2 Our clients
-      p.section-intro We work with companies, from established brands to fresh-faced startups, to improve their digital output.
-
-    section.section
-      .section__inner
-
-        .biography
-          .biography__image
-            img.gallery__item__image(src='/images/team/mike-carter.jpg')
-          .biography__content
-            p.heading-intro Director, Developer
-            h3 Mike Carter
-            p Mike is an accomplished full-stack software engineer who specialises in using modern frontend JavaScript frameworks backed by cutting edge cloud services to create web applications offering desktop-like user experiences.
-            p When he's not working, Mike's usually deep in the latest Netflix boxset. He's a casual vegan, and spends much of his spare time walking his dog, Bramley.
-            ul.biography__list
-              li.biography__list__item: a.biography__list__link(href='#') Website
-              li.biography__list__item: a.biography__list__link(href='#') Github
-              li.biography__list__item: a.biography__list__link(href='#') Twitter
-              li.biography__list__item: a.biography__list__link(href='#') Medium
-
-        .biography
-          .biography__image
-            img.gallery__item__image(src='/images/team/chris-annetts.jpg')
-          .biography__content
-            p.heading-intro Director, Designer
-            h3 Chris Annetts
-            p Chris is a seasoned product designer, having worked with the likes of Admiral, Expedia &amp; Santander. As comfortable in the Terminal as he is in Sketch, Chris specialises in turning complex ideas into accessible, simple interfaces.
-            p When he's not working, Chris likes classic football games, dark ales, and family time. He's still the only active Pokémon Go player he knows.
-            ul.biography__list
-              li.biography__list__item: a.biography__list__link(href='#') Website
-              li.biography__list__item: a.biography__list__link(href='#') Dribbble
-              li.biography__list__item: a.biography__list__link(href='#') Twitter
-              li.biography__list__item: a.biography__list__link(href='#') Medium
+            dt View it online
+            dd Visit the live site

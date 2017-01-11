@@ -1,0 +1,40 @@
+extends ./templates/base/_base
+
+block prepend vars
+  -var bodyClass = 'careers-page'
+  -var title = 'Careers - Leaf'
+
+block content
+
+  //- Hero banner
+  +hero-banner({
+    intro: 'We\'re interested in where you\'re going, not where you\'ve come from. Come take your next step with a empathetic team of bleeding edge web creatives.',
+    title: 'Careers'
+  })
+
+  //- Banner
+  +banner({
+    alt: 'Chris Annetts at Leaf',
+    src: 'banners/company.jpg'
+  })
+
+  main
+
+    section.section
+      .section__inner
+
+        //- Buckets
+        +buckets({
+          items: [{
+            heading: 'New product development',
+            text: [
+              'We want our employees to love working at Leaf, so we\'ll ask you to work your contracted hours and no more, and leave it up to you how to manage your work/life balance with flexi-time and remote working available at your disposal. Rest assured, we\'ll go out of our way to make Leaf a Sunday-evening-blues-free workplace in whatever way works best for you.'
+            ]
+          },{
+            heading: 'Work with experts',
+            text: [
+              'We’re true experts in our field. Honing our skills through years of working with big and small organisations alike. We take the required time to keep up to date with the cutting edge tech out there on the web and will make sure that up-skilling is available for you too through peer work, personal development time and conference tickets.'
+            ]
+          }],
+          wide: true
+        })

@@ -47,6 +47,22 @@ main {
     @include container;
     padding: 0 $padding-horizontal-fluid-sm;
   }
+
+  &__content {
+
+    @include susy-breakpoint($bp-md) {
+      @include span(9 of 12);
+    }
+  }
+
+  &__aside {
+
+    @include susy-breakpoint($bp-md) {
+      @include span(2 of 12);
+      @include pre(1);
+      @include last;
+    }
+  }
 }
 
 .no-scroll {
