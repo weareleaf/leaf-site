@@ -11,7 +11,7 @@
     margin-bottom: $spacing-vertical-sm;
 
     @include susy-breakpoint($bp-sm) {
-      //flex-grow: 1;
+      flex-grow: 1;
 
       &:first-child {
         margin-right: $spacing-horizontal-sm;
@@ -31,7 +31,7 @@
 
     	&::before {
         @include absolute-fill;
-    		background-color: rgba($leaf-green, .95);
+    		background-color: $leaf-green;
       	content: '';
     		opacity: 0;
         transition: opacity $base-duration $base-timing;

@@ -9,6 +9,11 @@
     flex-wrap: wrap;
     padding: $spacing-vertical $padding-horizontal-fluid;
 
+    @include susy-breakpoint($bp-lg) {
+      padding-bottom: $padding-vertical-lg;
+      padding-top: $padding-vertical-lg;
+    }
+
     @include susy-breakpoint($bp-xl) {
       align-items: stretch;
     }

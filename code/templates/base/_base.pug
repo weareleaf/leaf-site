@@ -116,9 +116,20 @@ html(class='no-js', lang='en')
         var navigation = document.querySelector(".navigation");
         var navigationList = document.querySelector(".navigation__list");
 
+        // Toggle the burger menu, and navigation state
         hamburger.addEventListener("click", function() {
           body.classList.toggle("no-scroll");
           hamburger.classList.toggle("is-active");
           navigation.classList.toggle("on");
           navigationList.classList.toggle("hidden");
+        });
+
+        // Close the navigation via the Esc key
+        document.addEventListener('keyup', function(e) {
+          if (e.keyCode == 27) {
+            body.classList.remove("no-scroll");
+            hamburger.classList.remove("is-active");
+            navigation.classList.remove("on");
+            navigationList.classList.add("hidden");
+          }
         });
