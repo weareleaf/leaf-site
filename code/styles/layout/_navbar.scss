@@ -26,7 +26,12 @@
 
   &__inner {
     @include container;
-    padding: $spacing-vertical-lg $padding-horizontal-fluid-sm;
+    padding: $spacing-vertical $padding-horizontal-fluid-sm;
+
+    @include susy-breakpoint($bp-sm) {
+      padding-bottom: $spacing-vertical-lg;
+      padding-top: $spacing-vertical-lg;
+    }
   }
 }
 

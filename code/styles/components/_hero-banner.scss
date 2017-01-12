@@ -3,6 +3,10 @@
 
   &__inner {
     @include container;
-    padding: 0 $padding-horizontal-fluid-sm $spacing-vertical-xl;
+    padding: 0 $padding-horizontal-fluid-sm $spacing-vertical-lg;
+
+    @include susy-breakpoint($bp-sm) {
+      padding-bottom: $spacing-vertical-xl;
+    }
   }
 }

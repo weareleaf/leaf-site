@@ -1,7 +1,8 @@
 html {
   opacity: 0;
 
-  &.wf-active-override, &.wf-active {
+  &.wf-active-override,
+  &.wf-active {
     opacity: 1;
     transition: opacity 800ms ease-in;
   }
@@ -12,36 +13,13 @@ body {
   margin: 0; // Remove this when Normalize is working
 }
 
-.home-page {
-  //overflow-y: scroll;
-  //overflow-x: hidden;
-  //position: relative;
-
-  @media only screen and (min-width: $bp-sm) and (min-height: 56em) {
-    //overflow: hidden;
-  }
+.section {
+  padding: $padding-vertical-lg 0;
 
   @include susy-breakpoint($bp-sm) {
-    //overflow: hidden;
+    padding-bottom: $spacing-vertical-xl;
+    padding-top: $spacing-vertical-xl;
   }
-}
-
-.site-wrapper {
-  //@include container;
-  //padding: 0 $padding-horizontal-fluid $spacing-vertical-root;
-
-  .home-page & {
-    height: 100vh;
-    padding-bottom: 0;
-  }
-}
-
-main {
-
-}
-
-.section {
-  padding: $padding-vertical-xl 0;
 
   &--center {
     text-align: center;
@@ -49,7 +27,7 @@ main {
 
   &__inner {
     @include container;
-    padding: 0 $padding-horizontal-fluid-sm;
+    padding: 0 $padding-horizontal-fluid;
   }
 
   &__content {

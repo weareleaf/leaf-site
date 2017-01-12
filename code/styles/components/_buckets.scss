@@ -5,13 +5,13 @@
   &__item {
     margin-bottom: $spacing-vertical;
 
-    @include susy-breakpoint($bp-sm) {
+    @include susy-breakpoint($bp-lg) {
       @include gallery(4 of 12);
     }
 
     .buckets--wide & {
 
-      @include susy-breakpoint($bp-sm) {
+      @include susy-breakpoint($bp-lg) {
         @include gallery(6 of 12);
       }
     }

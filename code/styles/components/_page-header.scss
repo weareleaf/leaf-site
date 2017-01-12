@@ -16,12 +16,12 @@
     margin-bottom: 0;
 
     @include susy-breakpoint($bp-sm) {
-      @include span(10 of 12);
-      font-size: 2.5em;
+      font-size: 2em;
     }
 
-    @include susy-breakpoint($bp-md) {
+    @include susy-breakpoint($bp-lg) {
       @include span(10 of 12);
+      font-size: 2.5em;
     }
   }
 }

@@ -2,6 +2,15 @@
   @include clearfix;
 
   @include susy-breakpoint($bp-sm) {
+    @include span(6 of 12);
+
+    &:nth-of-type(even) {
+      @include last;
+    }
+  }
+
+  @include susy-breakpoint($bp-lg) {
+    @include span(12 of 12);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -12,15 +21,17 @@
   }
 
   &__image {
+    margin-bottom: $spacing-vertical-sm;
 
-    @include susy-breakpoint($bp-sm) {
+    @include susy-breakpoint($bp-lg) {
       @include span(5 of 12);
+      margin-bottom: 0;
     }
   }
 
   &__content {
 
-    @include susy-breakpoint($bp-sm) {
+    @include susy-breakpoint($bp-lg) {
       @include span(5 of 12);
     }
   }

@@ -5,7 +5,7 @@ html {
 body {
   color: $base-font-color;
   font-family: $base-font-family;
-  font-size: .75em;
+  font-size: .8em;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   line-height: $base-line-height;
@@ -91,6 +91,7 @@ a {
   font-size: $h1-font-size;
   font-weight: 900;
   letter-spacing: .3em;
+  margin-bottom: $spacing-vertical-sm;
   text-transform: uppercase;
 }
 

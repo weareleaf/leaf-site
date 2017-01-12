@@ -21,7 +21,6 @@ mixin biography(args)
       each item in args.text
         p #{item}
 
-      +biography-item(args.links)
       if args.links
         ul.biography__list
           each item in args.links
