@@ -5,9 +5,29 @@
   &__logo {
     flex: 1 0 auto;
 
+    svg {
+      max-height: 2em;
+    }
+
     svg:hover path {
      opacity: .9;
    }
+  }
+}
+
+.logo {
+  display: inline-block;
+	position: relative;
+	width: 100%;
+	padding-bottom: 60.6%;
+	vertical-align: middle;
+	overflow: hidden;
+
+  &__content {
+    display: inline-block;
+  	position: absolute;
+  	top: 0;
+  	left: 0;
   }
 }
 
@@ -108,96 +128,84 @@
     }
 }
 
+
+
+
+
+
+
+
+
+
 .hamburger {
-  float: right;
-  padding: 15px 15px;
-  display: inline-block;
-  cursor: pointer;
-  transition-property: opacity, filter;
-  transition-duration: 0.15s;
-  transition-timing-function: linear;
-  font: inherit;
-  color: inherit;
-  text-transform: none;
   background-color: transparent;
   border: 0;
-  margin: 0;
-  overflow: visible;
+  cursor: pointer;
+  float: right;
+  font: inherit;
+  margin: -.25em;
+  padding: .25em;
+  transition: opacity $base-duration $base-timing;
+
+  &:hover {
+    opacity: 0.7;
+  }
 
   &:focus {
     outline: 0;
   }
-}
 
+  &.is-active .hamburger__content {
+    transform: translate3d(0, .5em, 0) rotate(45deg);
 
-  .hamburger:hover {
-    opacity: 0.7; }
+    &::before {
+      transform: rotate(-45deg) translate3d(.3em, -.3em, 0);
+      opacity: 0;
+    }
 
-.hamburger-box {
-  width: 2em;
-  height: 1.2em;
-  display: inline-block;
-  position: relative;
+    &::after {
+      transform: translate3d(0, -1em, 0) rotate(-90deg);
+    }
   }
 
-.hamburger-inner {
-  display: inline-block;
-  width: 2em;
-  top: 50%;
-  margin-top: -2px;
-}
-  .hamburger-inner, .hamburger-inner::before, .hamburger-inner::after {
-    height: 2px;
-    background-color: $white;
-    position: absolute;
-    transition-property: transform;
-    transition-duration: 0.15s;
-    transition-timing-function: ease; }
-  .hamburger-inner::before, .hamburger-inner::after {
-    content: "";
+  &__inner {
     display: block;
+    height: 1.2em;
+    position: relative;
     width: 2em;
   }
-  .hamburger-inner::before {
-    width: 1.5em;
+
+  &__content {
+    display: inline-block;
     right: 0;
-    top: -10px; }
-  .hamburger-inner::after {
-    bottom: -10px; }
+    top: 0;
+    width: 2em;
 
-/*
-   * 3DX
-   */
-.hamburger--3dx .hamburger-box {
-  perspective: 80px; }
+    &::before,
+    &::after {
+      content: '';
+      display: block;
+      width: 100%;
+    }
 
-.hamburger--3dx .hamburger-inner {
-  transition: transform 0.2s cubic-bezier(0.645, 0.045, 0.355, 1), background-color 0s 0.1s cubic-bezier(0.645, 0.045, 0.355, 1); }
-  .hamburger--3dx .hamburger-inner::before, .hamburger--3dx .hamburger-inner::after {
-    transition: transform 0s 0.1s cubic-bezier(0.645, 0.045, 0.355, 1); }
+    &::before {
+      right: 0;
+      top: .5em;
+      transition: opacity $base-duration $base-timing;
+      width: 75%;
+    }
 
-.hamburger--3dx.is-active .hamburger-inner {
-  background-color: transparent;
-  transform: rotateY(180deg); }
-  .hamburger--3dx.is-active .hamburger-inner::before {
-    transform: translate3d(0, 10px, 0) rotate(45deg); }
-  .hamburger--3dx.is-active .hamburger-inner::after {
-    transform: translate3d(0, -10px, 0) rotate(-45deg); }
+    &::after {
+      top: 1em;
+    }
+  }
 
-    .hamburger--slider .hamburger-inner {
-      top: 2px; }
-      .hamburger--slider .hamburger-inner::before {
-        top: 10px;
-        transition-property: transform, opacity;
-        transition-timing-function: ease;
-        transition-duration: 0.2s; }
-      .hamburger--slider .hamburger-inner::after {
-        top: 20px; }
-
-    .hamburger--slider.is-active .hamburger-inner {
-      transform: translate3d(0, 10px, 0) rotate(45deg); }
-      .hamburger--slider.is-active .hamburger-inner::before {
-        transform: rotate(-45deg) translate3d(-5.71429px, -6px, 0);
-        opacity: 0; }
-      .hamburger--slider.is-active .hamburger-inner::after {
-        transform: translate3d(0, -20px, 0) rotate(-90deg); }
+  &__content,
+  &__content::before,
+  &__content::after {
+    height: .1rem;
+    background-color: $white;
+    position: absolute;
+    transition: transform $base-duration $base-timing;
+  }
+}
