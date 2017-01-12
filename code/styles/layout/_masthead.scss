@@ -1,0 +1,17 @@
+.masthead {
+  display: flex;
+  align-items: center;
+
+  &__logo {
+    flex: 1 0 auto;
+
+    &__link {
+      display: block;
+      max-width: 3.25em;
+    }
+
+    svg:hover path {
+     opacity: .9;
+   }
+  }
+}

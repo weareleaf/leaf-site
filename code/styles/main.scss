@@ -14,7 +14,7 @@
 
 // Layout
 @import 'layout/footer';
-@import 'layout/navbar';
+@import 'layout/masthead';
 @import 'layout/structure';
 
 // Components
@@ -23,6 +23,8 @@
 @import 'components/block';
 @import 'components/buckets';
 @import 'components/gallery';
+@import 'components/hamburger';
 @import 'components/hero-banner';
+@import 'components/navigation';
 @import 'components/page-header';
 @import 'components/portfolio';

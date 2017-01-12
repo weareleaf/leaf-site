@@ -6,18 +6,34 @@
   &__inner {
     @include container;
     display: flex;
-    align-items: stretch;
-    padding: $spacing-vertical $padding-horizontal-fluid-sm 0;
+    flex-wrap: wrap;
+    padding: $spacing-vertical $padding-horizontal-fluid;
 
+    @include susy-breakpoint($bp-xl) {
+      align-items: stretch;
+    }
   }
 
   &__block {
     padding-bottom: $padding-vertical-sm;
     padding-top: $padding-vertical-sm;
-    width: 10em;
+    width: 50%;
 
-    &:first-child {
-      flex: 2 0 0;
+    @include susy-breakpoint($bp-sm) {
+      width: 25%;
+    }
+
+    @include susy-breakpoint($bp-xl) {
+      width: 10em;
+    }
+
+    &--wide {
+      width: 100%;
+
+      @include susy-breakpoint($bp-xl) {
+        flex: 2 0 0;
+        width: auto;
+      }
     }
 
     &--callout {

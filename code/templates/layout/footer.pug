@@ -1,7 +1,7 @@
 footer.footer
   .footer__inner
 
-    .footer__block
+    .footer__block.footer__block--wide
       h4.footer__heading Leaf headquarters
       ul.footer__list
         li.footer__text 25 Castle Street 
@@ -11,25 +11,39 @@ footer.footer
     .footer__block
       h4.footer__heading About
       ul.footer__list
-        li: a.footer__link(href='company') Company 
-        li: a.footer__link(href='design') Design 
-        li: a.footer__link(href='development') Development
+        li.footer__text
+          a.footer__link(href='company') Company 
+        li.footer__text
+          a.footer__link(href='design') Design 
+        li.footer__text
+          a.footer__link(href='development') Development
 
     .footer__block
       h4.footer__heading General
       ul.footer__list
-        li: a.footer__link(href='portfolio') Portfolio 
-        li: a.footer__link(href='careers') Careers 
-        li: a.footer__link(href='contact') Contact
+        li.footer__text
+          a.footer__link(href='portfolio') Portfolio 
+        li.footer__text
+          a.footer__link(href='careers') Careers 
+        li.footer__text
+          a.footer__link(href='#') Terms
 
     .footer__block
       h4.footer__heading Social
       ul.footer__list
-        li: a.footer__link(href='https://twitter.com/we_are_leaf', target='_blank') Twitter 
-        li: a.footer__link(href='https://dribbble.com/leaf', target='_blank') Dribbble 
-        li: a.footer__link(href='https://medium.com/leaf-software', target='_blank') Medium
+        li.footer__text
+          a.footer__link(href='https://twitter.com/we_are_leaf', target='_blank') Twitter 
+        li.footer__text
+          a.footer__link(href='https://dribbble.com/leaf', target='_blank') Dribbble 
+        li.footer__text
+          a.footer__link(href='https://medium.com/leaf-software', target='_blank') Medium
 
-    .footer__block.footer__block--callout
-      h4.footer__heading Collaborate
-      p.footer__text If you've got a project in mind, and think we can help, lets us know.
-      a.button(href='#') Leaf project planner
+    .footer__block
+      h4.footer__heading Contact
+      ul.footer__list
+        li.footer__text
+          a.footer__link(href='mailto:enquiries@weareleaf.com') Enquiries
+        li.footer__text
+          a.footer__link(href='mailto:support@weareleaf.com') Support 
+        li.footer__text
+          a.footer__link(href='mailto:hello@weareleaf.com') General

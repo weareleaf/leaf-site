@@ -1,0 +1,91 @@
+.navigation {
+
+  &.on {
+  z-index: 10;
+  width: 100%;
+  height: 100%;
+  display: block;
+  background-color: $coal;
+  position: fixed;
+  left: 0;
+  top: 0;
+  }
+
+  &__inner {
+    @include container;
+    padding: $spacing-vertical-lg $padding-horizontal-fluid;
+  }
+}
+
+.navigation__list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  margin: 4em auto;
+  text-align: center;
+
+  &:hover a {
+    color: rgba($white, .15);
+  }
+
+  &:hover a:hover {
+    color: $white;
+  }
+
+  &__item {
+
+    @include susy-breakpoint($bp-md) {
+      float: left;
+      width: 50%;
+
+      &:nth-of-type(odd) {
+        border-right: solid 1px rgba($white, .05);
+      }
+
+      &:nth-of-type(-n+2) {
+        border-bottom: solid 1px rgba($white, .05);
+      }
+    }
+
+    &:nth-of-type(1) .navigation__list__link {
+      animation-delay: 100ms;
+    }
+
+    &:nth-of-type(2) .navigation__list__link {
+      animation-delay: 200ms;
+    }
+
+    &:nth-of-type(3) .navigation__list__link {
+      animation-delay: 300ms;
+    }
+
+    &:nth-of-type(4) .navigation__list__link {
+      animation-delay: 400ms;
+    }
+  }
+
+  &__link {
+    font-family: $font-serif;
+    font-size: 2.5em;
+    line-height: $heading-line-height;
+    margin-bottom: 0;
+    padding: $padding-vertical-sm;
+
+    @include susy-breakpoint($bp-md) {
+      padding: $padding-vertical;
+    }
+  }
+
+  &.hidden {
+    display: none;
+  }
+
+    a {
+      text-decoration: none;
+      color: white;
+      font-size: 3em;
+      line-height: 1.5;
+      width: 100%;
+      display: block;
+    }
+}

@@ -1,5 +1,10 @@
 .biography {
   @include clearfix;
+  margin-bottom: $spacing-vertical-lg;
+
+  &:last-of-type {
+    margin-bottom: 0;
+  }
 
   @include susy-breakpoint($bp-sm) {
     @include span(6 of 12);

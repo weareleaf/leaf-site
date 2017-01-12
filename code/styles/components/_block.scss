@@ -1,15 +1,20 @@
 .block {
 
   &__item {
-    padding-bottom: $padding-vertical-xl;
+    display: block;
     padding-top: $padding-vertical-xl;
 
-    @include susy-breakpoint($bp-md) {
+    @include susy-breakpoint($bp-lg) {
       @include pad(1);
       @include span(6 of 12);
+      padding-bottom: $padding-vertical-xl;
       text-align: center;
+    }
 
-      &:last-child {
+    &:last-child {
+      padding-bottom: $padding-vertical-xl;
+
+      @include susy-breakpoint($bp-lg) {
         @include last;
         border-left: solid 1px #d5d7db;
       }
@@ -44,5 +49,6 @@
 
   &__text {
     color: #81868D;
+    margin-bottom: 0;
   }
 }

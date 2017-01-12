@@ -1,7 +1,9 @@
 .page-header {
   @include clearfix;
+  padding-top: $padding-vertical-xs;
 
   &__title {
+    margin-bottom: $spacing-vertical;
 
     .hero-banner & {
       color: $leaf-green-light;
