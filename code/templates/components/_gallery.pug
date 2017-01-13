@@ -9,10 +9,10 @@
 
 mixin gallery(args)
   .gallery
-    | <div class='gallery__pair'>
+    | <div class="gallery__pair">
     each item, index in args
       if index % 2 === 0 && index !== 0
         | </div>
-        | <div class='gallery__pair'>
+        | <div class="gallery__pair">
       +gallery-item(item)
     | </div>

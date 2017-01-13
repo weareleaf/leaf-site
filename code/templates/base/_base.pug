@@ -4,28 +4,28 @@ block vars
 
 doctype html
 //if lt IE 7
-    <html class='no-js lt-ie9 lt-ie8 lt-ie7'>
+    <html class="no-js lt-ie9 lt-ie8 lt-ie7">
 //if IE 7
-    <html class='no-js lt-ie9 lt-ie8'>
+    <html class="no-js lt-ie9 lt-ie8">
 //if IE 8
-    <html class='no-js lt-ie9'>
+    <html class="no-js lt-ie9">
 // [if gt IE 8] <!
-html(class='no-js', lang='en')
+html(class="no-js", lang="en")
   // <![endif]
   head
-    meta(charset='utf-8')
+    meta(charset="utf-8")
     title #{title}
 
-    meta(name='HandheldFriendly', content='True')
-    meta(name='MobileOptimized', content='320')
-    meta(name='viewport', content='width=device-width, target-densitydpi=160dpi, initial-scale=1.0')
+    meta(name="HandheldFriendly", content="True")
+    meta(name="MobileOptimized", content="320")
+    meta(name="viewport", content="width=device-width, target-densitydpi=160dpi, initial-scale=1.0")
 
-    meta(http-equiv='cleartype', content='on')
-    meta(http-equiv='X-UA-Compatible', content='IE=edge,chrome=1')
-    meta(name='description', content='#{title}')
+    meta(http-equiv="cleartype", content="on")
+    meta(http-equiv="X-UA-Compatible", content="IE=edge,chrome=1")
+    meta(name="description", content="#{title}")
 
-    link(rel='stylesheet', href='/styles/main.css')
-    script(src='https://use.typekit.net/huw3wqz.js')
+    link(rel="stylesheet", href="/styles/main.css")
+    script(src="https://use.typekit.net/huw3wqz.js")
     script.
       try{Typekit.load({ async: true });}catch(e){}
     script.
@@ -33,39 +33,39 @@ html(class='no-js', lang='en')
       document.addEventListener("DOMContentLoaded", function(event) {
         setTimeout(function() {
           var htmlClasses = document.documentElement.classList;
-          if (!htmlClasses.contains('wf-active') && !htmlClasses.contains('wf-loading')) {
-            document.documentElement.classList.add('wf-active-override');
+          if (!htmlClasses.contains("wf-active") && !htmlClasses.contains("wf-loading")) {
+            document.documentElement.classList.add("wf-active-override");
           }
         }, 250);
       })
 
-    link(rel='apple-touch-icon', sizes='180x180', href='/apple-touch-icon.png')
-    link(rel='icon', type='image/png', href='/favicon-32x32.png', sizes='32x32')
-    link(rel='icon', type='image/png', href='/favicon-16x16.png', sizes='16x16')
-    link(rel='manifest', href='/manifest.json')
-    link(rel='mask-icon', href='/safari-pinned-tab.svg', color='#5bbad5')
-    meta(name='theme-color', content='#272e42')
+    link(rel="apple-touch-icon", sizes="180x180", href="/apple-touch-icon.png")
+    link(rel="icon", type="image/png", href="/favicon-32x32.png", sizes="32x32")
+    link(rel="icon", type="image/png", href="/favicon-16x16.png", sizes="16x16")
+    link(rel="manifest", href="/manifest.json")
+    link(rel="mask-icon", href="/safari-pinned-tab.svg", color="#5bbad5")
+    meta(name="theme-color", content="#272e42")
 
     //- Open Graph
-    meta(property='og:type', content='business.business')
-    meta(property='og:title', content='Leaf Software Ltd')
-    meta(property='og:url', content='http://www.weareleaf.com')
-    meta(property='og:image', content='http://www.weareleaf.com/images/leaf-logo-1200.png')
-    meta(property='og:description', content='Leaf are a web design and development studio, specialising in lean digital products that make peoples lives easier.')
-    meta(property='business:contact_data:street_address', content='25 Castle Street')
-    meta(property='business:contact_data:locality', content='Canterbury')
-    meta(property='business:contact_data:region', content='Kent')
-    meta(property='business:contact_data:postal_code', content='CT1 2PX')
-    meta(property='business:contact_data:country_name', content='United Kingdom')
+    meta(property="og:type", content="business.business")
+    meta(property="og:title", content="Leaf Software Ltd")
+    meta(property="og:url", content="http://www.weareleaf.com")
+    meta(property="og:image", content="http://www.weareleaf.com/images/leaf-logo-1200.png")
+    meta(property="og:description", content="Leaf are a web design and development studio, specialising in lean digital products that make peoples lives easier.")
+    meta(property="business:contact_data:street_address", content="25 Castle Street")
+    meta(property="business:contact_data:locality", content="Canterbury")
+    meta(property="business:contact_data:region", content="Kent")
+    meta(property="business:contact_data:postal_code", content="CT1 2PX")
+    meta(property="business:contact_data:country_name", content="United Kingdom")
 
     //- Twitter card
-    meta(name='twitter:card', content='summary')
-    meta(name='twitter:site', content='@we_are_leaf')
-    meta(name='twitter:title', content='Leaf')
-    meta(name='twitter:description', content='Leaf are a web design and development studio, specialising in lean digital products that make peoples lives easier.')
+    meta(name="twitter:card", content="summary")
+    meta(name="twitter:site", content="@we_are_leaf")
+    meta(name="twitter:title", content="Leaf")
+    meta(name="twitter:description", content="Leaf are a web design and development studio, specialising in lean digital products that make peoples lives easier.")
 
     //- JSON Linked Data
-    script(type='application/ld+json').
+    script(type="application/ld+json").
       {
         "@context": "http://www.schema.org",
         "@type": "LocalBusiness",
@@ -93,14 +93,14 @@ html(class='no-js', lang='en')
       }
 
     script.
-      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (function(i,s,o,g,r,a,m){i["GoogleAnalyticsObject"]=r;i[r]=i[r]||function(){
       (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
       m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-      ga('create', 'UA-62036216-1', 'auto');
-      ga('send', 'pageview');
+      })(window,document,"script","//www.google-analytics.com/analytics.js","ga");
+      ga("create", "UA-62036216-1", "auto");
+      ga("send", "pageview");
 
-  body(dir='ltr', class='#{bodyClass}')
+  body(dir="ltr", class="#{bodyClass}")
 
     .site-wrapper
 
@@ -125,7 +125,7 @@ html(class='no-js', lang='en')
         });
 
         // Close the navigation via the Esc key
-        document.addEventListener('keyup', function(e) {
+        document.addEventListener("keyup", function(e) {
           if (e.keyCode == 27) {
             body.classList.remove("no-scroll");
             hamburger.classList.remove("is-active");

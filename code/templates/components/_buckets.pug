@@ -8,6 +8,6 @@
 
 
 mixin buckets(args)
-  .buckets(class=args.wide ? 'buckets--wide' : null)
+  .buckets(class=args.wide ? "buckets--wide" : null)
     each item in args.items
       +buckets-item(item)
