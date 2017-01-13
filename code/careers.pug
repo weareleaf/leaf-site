@@ -24,9 +24,12 @@ block content
       .section__inner
 
         .section__intro
-          h2.section__heading Open positions (2)
+          h2.section__heading Open positions #[span (2)]
           p.section__text That's right, kids; we're hiring. We've got two positions open, and we have a sneaky feeling one of them as your name on it.
 
+        ul.positions
+          li.positions__item: a.positions__link(href="careers/designer") Designer
+          li.positions__item: a.positions__link(href="careers/developer") Software Engineer
 
         //- Buckets
         +buckets({

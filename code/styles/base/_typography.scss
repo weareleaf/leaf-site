@@ -33,10 +33,6 @@ h1, %h1 {
   font-weight: 900;
   letter-spacing: .3em;
   text-transform: uppercase;
-
-  @include susy-breakpoint($bp-md) {
-    //font-size: 3.6em;
-  }
 }
 
 h2, %h2 {

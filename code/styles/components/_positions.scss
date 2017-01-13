@@ -1,0 +1,60 @@
+.positions {
+  @include clearfix;
+  margin-bottom: $spacing-vertical-lg;
+
+  @include susy-breakpoint($bp-lg) {
+    margin-bottom: $spacing-vertical-xl;
+    text-align: center;
+  }
+
+  &:hover .positions__link {
+    color: rgba($white, .15);
+  }
+
+  &:hover .positions__link:hover {
+    color: $white;
+  }
+
+  &__item {
+    color: $white;
+    display: block;
+    font-family: $base-font-family;
+    font-size: 2em;
+    line-height: $heading-line-height;
+    margin-bottom: 0;
+
+    @include susy-breakpoint($bp-sm) {
+      font-size: 3em;
+    }
+
+    @include susy-breakpoint($bp-lg) {
+      border-bottom: solid 1px rgba($white, .05);
+      float: left;
+      width: 50%;
+
+      &:first-child {
+        border-right: solid 1px rgba($white, .05);
+      }
+    }
+
+    @include susy-breakpoint($bp-lg) {
+      font-size: 2.5em;
+    }
+
+    @include susy-breakpoint($bp-xl) {
+      font-size: 3em;
+    }
+  }
+
+  &__link {
+    text-decoration: none;
+    color: white;
+    line-height: 1.5;
+    width: 100%;
+    display: block;
+
+    @include susy-breakpoint($bp-lg) {
+      @include padding-vertical($padding-vertical);
+    }
+  }
+}
