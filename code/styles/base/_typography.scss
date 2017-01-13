@@ -62,6 +62,12 @@ p {
     color: lighten($base-font-color, 15%);
     font-weight: 600;
   }
+
+  @include susy-breakpoint($bp-sm) {
+    + h3 {
+      margin-top: $spacing-vertical-lg;
+    }
+  }
 }
 
 a {
@@ -93,6 +99,17 @@ a {
   letter-spacing: .3em;
   margin-bottom: $spacing-vertical-sm;
   text-transform: uppercase;
+}
+
+small {
+  display: block;
+  font-family: $font-sans-serif;
+  font-size: .75rem;
+  margin-top: $spacing-vertical-lg;
+
+  @include susy-breakpoint($bp-sm) {
+    margin-top: $spacing-vertical-xl;
+  }
 }
 
 img {

@@ -13,6 +13,6 @@ mixin block-item(args)
   - var href = (typeof args.href === "undefined") ? "#" : args.href
 
   a.block__item(href=href)
-    p.block__intro #{args.intro}
+    span.block__intro #{args.intro}
     h3.block__title #{args.title}
     p.block__text #{args.text}

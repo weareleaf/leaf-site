@@ -16,7 +16,7 @@ mixin biography(args)
     .biography__image
       img.gallery__item__image(src="/images/team/" + args.image, alt=args.name)
     .biography__content
-      p.heading-intro #{args.title}
+      span.heading-intro #{args.title}
       h3 #{args.name}
       each item in args.text
         p #{item}

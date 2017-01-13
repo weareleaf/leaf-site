@@ -34,6 +34,7 @@
   &__intro {
     @extend %heading-intro;
     color: $leaf-green;
+    display: block;
   }
 
   &__title {
