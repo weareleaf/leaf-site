@@ -50,7 +50,7 @@
 
 @mixin margin-horizontal($size) {
   margin-left: $size;
-  margin-right: $size;
+  margin-right: $size ;
 }
 
 @mixin margin-vertical($size) {

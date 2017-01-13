@@ -1,21 +1,21 @@
 extends ./templates/base/_base
 
 block prepend vars
-  -var bodyClass = 'design-page'
-  -var title = 'Interface Design - Leaf'
+  -var bodyClass = "design-page"
+  -var title = "Interface Design - Leaf"
 
 block content
 
   //- Hero banner
   +hero-banner({
-    intro: 'Interface design is the marriage of user and business goals, using structure, iteration and style to create a window into your product.',
-    title: 'Interface design'
+    intro: "Interface design is the marriage of user and business goals, using structure, iteration and style to create a window into your product.",
+    title: "Interface design"
   })
 
   //- Banner
   +banner({
-    alt: 'Chris Annetts at Leaf',
-    src: 'banners/company.jpg'
+    alt: "Chris Annetts at Leaf",
+    src: "banners/company.jpg"
   })
 
   main
@@ -26,45 +26,45 @@ block content
         //- Buckets
         +buckets({
           items: [{
-            heading: 'Information architecture',
+            heading: "Information architecture",
             text: [
-              'Information architecture (IA) focuses on the organisation of your content. A well thought out IA will map to the expectations of the user, providing context and setting expectations.'
+              "Information architecture (IA) focuses on the organisation of your content. A well thought out IA will map to the expectations of the user, providing context and setting expectations."
             ]
           },{
-            heading: 'Content strategy',
+            heading: "Content strategy",
             text: [
-              'An interface in simply a window in to the conversation between you and your users. We’ll work with you to ensure you messaging meets the needs of the user, as well as your business.'
+              "An interface in simply a window in to the conversation between you and your users. We’ll work with you to ensure you messaging meets the needs of the user, as well as your business."
             ]
           },{
-            heading: 'Sketching & wireframing',
+            heading: "Sketching & wireframing",
             text: [
-              'Alongside low fidelity wireframes, the humble pen and paper place a focus on solving the true design problems at hand, rather than sweating over whether to use a 3px or 5px border radius.'
+              "Alongside low fidelity wireframes, the humble pen and paper place a focus on solving the true design problems at hand, rather than sweating over whether to use a 3px or 5px border radius."
             ]
           },{
-            heading: 'Prototyping',
+            heading: "Prototyping",
             text: [
-              'Whether you’re experimenting with the technical limitations of an API, or simplifying a user flow, prototyping provides a resource-friendly method of solving a specific problem in isolation.'
+              "Whether you’re experimenting with the technical limitations of an API, or simplifying a user flow, prototyping provides a resource-friendly method of solving a specific problem in isolation."
             ]
           },{
-            heading: 'Visual design',
+            heading: "Visual design",
             text: [
-              'The layer of polish that sits between the user and the content itself, a well executed design will help increase trust. Visual design is the art of manipulating how a website looks and feels.'
+              "The layer of polish that sits between the user and the content itself, a well executed design will help increase trust. Visual design is the art of manipulating how a website looks and feels."
             ]
           },{
-            heading: 'Styleguides',
+            heading: "Styleguides",
             text: [
-              'A styleguide is a library of interface components, design patterns and brand assets, used to create a cohesive, consistent design language, that informs and underpins every design decision. '
+              "A styleguide is a library of interface components, design patterns and brand assets, used to create a cohesive, consistent design language, that informs and underpins every design decision."
             ]
           }]
         })
 
         //- Gallery
         +gallery([{
-          src: 'design-grid-1.jpg'
+          src: "design-grid-1.jpg"
         },{
-          src: 'design-grid-2.jpg'
+          src: "design-grid-2.jpg"
         },{
-          src: 'design-grid-3.jpg'
+          src: "design-grid-3.jpg"
         },{
-          src: 'design-grid-4.jpg'
+          src: "design-grid-4.jpg"
         }])

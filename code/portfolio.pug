@@ -1,21 +1,21 @@
 extends ./templates/base/_base
 
 block prepend vars
-  -var bodyClass = 'portfolio-page'
-  -var title = 'Portfolio - Leaf'
+  -var bodyClass = "portfolio-page"
+  -var title = "Portfolio - Leaf"
 
 block content
 
   //- Hero banner
   +hero-banner({
-    intro: 'Expertly crafted, thoroughly thought out web and mobile applications; we take software engineering incredibly seriously. Our products are as robust as they are usable.',
-    title: 'Portfolio'
+    intro: "Expertly crafted, thoroughly thought out web and mobile applications; we take software engineering incredibly seriously. Our products are as robust as they are usable.",
+    title: "Portfolio"
   })
 
   //- Banner
   +banner({
-    alt: 'Chris Annetts at Leaf',
-    src: 'banners/company.jpg'
+    alt: "Chris Annetts at Leaf",
+    src: "banners/company.jpg"
   })
 
   main
@@ -25,23 +25,23 @@ block content
 
         //- Gallery
         +gallery([{
-          href: 'cakeboxx',
-          intro: 'Case study',
-          src: 'work/keen.jpg',
-          title: 'Keen'
+          href: "cakeboxx",
+          intro: "Case study",
+          src: "work/keen.jpg",
+          title: "Keen"
         },{
-          href: 'cakeboxx',
-          intro: 'Case study',
-          src: 'work/cakeboxx.jpg',
-          title: 'CakeBoxx Technology'
+          href: "cakeboxx",
+          intro: "Case study",
+          src: "work/cakeboxx.jpg",
+          title: "CakeBoxx Technology"
         },{
-          href: 'cakeboxx',
-          intro: 'Case study',
-          src: 'work/boxedup.jpg',
-          title: 'BoxedUp'
+          href: "cakeboxx",
+          intro: "Case study",
+          src: "work/boxedup.jpg",
+          title:"BoxedUp"
         },{
-          href: 'cakeboxx',
-          intro: 'Case study',
-          src: 'work/zendesk.jpg',
-          title: 'Zendesk'
+          href: "cakeboxx",
+          intro: "Case study",
+          src: "work/zendesk.jpg",
+          title: "Zendesk"
         }])

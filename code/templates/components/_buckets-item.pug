@@ -12,4 +12,4 @@ mixin buckets-item(args)
   .buckets__item
     h3.buckets__item__heading #{args.heading}
     each item in args.text
-      p.buckets__item__text #{item}
+      p.buckets__item__text!= item

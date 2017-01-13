@@ -1,21 +1,21 @@
 extends ./templates/base/_base
 
 block prepend vars
-  -var bodyClass = 'company-page'
-  -var title = 'Company - Leaf'
+  -var bodyClass = "company-page"
+  -var title = "Company - Leaf"
 
 block content
 
   //- Hero banner
   +hero-banner({
-    intro: 'We\'re a web design and development studio, specialising in lean digital products. Formed in 2015, we\'re based in South-East England, in the historic city of Canterbury.',
-    title: 'Company'
+    intro: "We're a web design and development studio, specialising in lean digital products. Formed in 2015, we're based in South-East England, in the historic city of Canterbury.",
+    title: "Company"
   })
 
   //- Banner
   +banner({
-    alt: 'Chris Annetts at Leaf',
-    src: 'banners/company.jpg'
+    alt: "Chris Annetts at Leaf",
+    src: "banners/company.jpg"
   })
 
   main
@@ -26,47 +26,47 @@ block content
         //- Buckets
         +buckets({
           items: [{
-            heading: 'We prefer the long game',
+            heading: "We prefer the long game",
             text: [
-              'The longer we work together, the better we understand your product, your users, and your goals. In our experience, the best results come from collaborative relationships built on trust.'
+              "The longer we work together, the better we understand your product, your users, and your goals. In our experience, the best results come from collaborative relationships built on trust."
             ]
           },{
-            heading: 'Agile web products',
+            heading: "Agile web products",
             text: [
-              'No big reveals or presentations; ever. An agile approach involves working in shorter, more focused cycles of work; continuously testing, iterating, and ultimately reducing risk.'
+              "No big reveals or presentations; ever. An agile approach involves working in shorter, more focused cycles of work; continuously testing, iterating, and ultimately reducing risk."
             ]
           },{
-            heading: 'We listen, and we learn',
+            heading: "We listen, and we learn",
             text: [
-              'We know our craft, but we\'re new to the intricacies and paint points of your company. Your team, audiences and data are invaluable in helping uncover the real, often hidden problems at hand.'
+              "We know our craft, but we're new to the intricacies and paint points of your company. Your team, audiences and data are invaluable in helping uncover the real, often hidden problems at hand."
             ]
           },{
-            heading: 'Your users are everything',
+            heading: "Your users are everything",
             text: [
-              'Your users are the heart of everything we do; without them, neither of us would be in a job. Being able to pin everything back to a single point of focus keeps everyone on the right track.'
+              "Your users are the heart of everything we do; without them, neither of us would be in a job. Being able to pin everything back to a single point of focus keeps everyone on the right track."
             ]
           },{
-            heading: 'Unashamedly digital',
+            heading: "Unashamedly digital",
             text: [
-              'We have no interest in being all things to all men. That means we don\'t offer branding, print, or advertising campaigns. We\'re a team of designers and developers only, and we\'re proud of that.'
+              "We have no interest in being all things to all men. That means we don't offer branding, print, or advertising campaigns. We're a team of designers and developers only, and we're proud of that."
             ]
           },{
-            heading: 'Intentionally lean',
+            heading: "Intentionally lean",
             text: [
-              'We hate the faceless conveyor belt model of larger agencies. We pour our energy in to every project we take, and keeping our overheads low and our core team small means you\'ll always be a priority.'
+              "We hate the faceless conveyor belt model of larger agencies. We pour our energy in to every project we take, and keeping our overheads low and our core team small means you'll always be a priority."
             ]
           }]
         })
 
         //- Gallery
         +gallery([{
-          src: 'company-grid-1.jpg'
+          src: "company-grid-1.jpg"
         },{
-          src: 'company-grid-2.jpg'
+          src: "company-grid-2.jpg"
         },{
-          src: 'company-grid-3.jpg'
+          src: "company-grid-3.jpg"
         },{
-          src: 'company-grid-4.jpg'
+          src: "company-grid-4.jpg"
         }])
 
     section.section.section--center.bg--white
@@ -76,55 +76,55 @@ block content
           h2.section__heading Our clients
           p.section__text We work with companies, from established brands to fresh-faced startups, to improve their digital output.
 
-        img(src='/images/client-logos.png')
+        img(src="/images/client-logos.png")
 
     section.section
       .section__inner
 
         //- Biography
         +biography({
-          image: 'mike-carter.jpg',
+          image: "mike-carter.jpg",
           links: [{
-            href: 'http://mcarter.me',
-            site: 'Website'
+            href: "http://mcarter.me",
+            site: "Website"
           },{
-            href: 'https://github.com/michaelcarter',
-            site: 'GitHub'
+            href: "https://github.com/michaelcarter",
+            site: "GitHub"
           },{
-            href: 'https://twitter.com/mcarterj',
-            site: 'Twitter'
+            href: "https://twitter.com/mcarterj",
+            site: "Twitter"
           },{
-            href: 'https://medium.com/@mcarterj',
-            site: 'Medium'
+            href: "https://medium.com/@mcarterj",
+            site: "Medium"
           }],
-          name: 'Mike Carter',
+          name: "Mike Carter",
           text: [
-              'Mike is an accomplished full-stack software engineer who specialises in using modern frontend JavaScript frameworks backed by cutting edge cloud services to create web applications offering desktop-like user experiences.',
-              'When he\'s not working, Mike\'s usually deep in the latest Netflix boxset. He\'s a casual vegan, and spends much of his spare time walking his dog, Bramley.'
+              "Mike is an accomplished full-stack software engineer who specialises in using modern frontend JavaScript frameworks backed by cutting edge cloud services to create web applications offering desktop-like user experiences.",
+              "When he's not working, Mike's usually deep in the latest Netflix boxset. He's a casual vegan, and spends much of his spare time walking his dog, Bramley."
           ],
-          title: 'Director, Developer'
+          title: "Director, Developer"
         })
 
         //- Biography
         +biography({
-          image: 'chris-annetts.jpg',
+          image: "chris-annetts.jpg",
           links: [{
-            href: 'http://chrisannetts.com',
-            site: 'Website'
+            href: "http://chrisannetts.com",
+            site: "Website"
           },{
-            href: 'https://dribbble.com/chrisannetts',
-            site: 'Dribbble'
+            href: "https://dribbble.com/chrisannetts",
+            site: "Dribbble"
           },{
-            href: 'https://twitter.com/cm_annetts',
-            site: 'Twitter'
+            href: "https://twitter.com/cm_annetts",
+            site: "Twitter"
           },{
-            href: 'https://medium.com/@chris_annetts',
-            site: 'Medium'
+            href: "https://medium.com/@chris_annetts",
+            site: "Medium"
           }],
-          name: 'Chris Annetts',
+          name: "Chris Annetts",
           text: [
-              'Chris is a seasoned product designer, having worked with the likes of Admiral, Expedia &amp; Santander. As comfortable in the Terminal as he is in Sketch, Chris specialises in turning complex ideas into accessible, simple interfaces.',
-              'When he\'s not working, Chris likes classic football games, dark ales, and family time. He\'s still the only active Pokémon Go player he knows.'
+              "Chris is a seasoned product designer, having worked with the likes of Admiral, Expedia and Santander. As comfortable in the Terminal as he is in Sketch, Chris specialises in turning complex ideas into accessible, simple interfaces.",
+              "When he's not working, Chris likes classic football games, dark ales, and family time. He's still the only active Pokémon Go player he knows."
           ],
-          title: 'Director, Designer'
+          title: "Director, Designer"
         })

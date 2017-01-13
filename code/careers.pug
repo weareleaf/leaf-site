@@ -1,21 +1,21 @@
 extends ./templates/base/_base
 
 block prepend vars
-  -var bodyClass = 'careers-page'
-  -var title = 'Careers - Leaf'
+  -var bodyClass = "careers-page"
+  -var title = "Careers - Leaf"
 
 block content
 
   //- Hero banner
   +hero-banner({
-    intro: 'We\'re interested in where you\'re going, not where you\'ve come from. Come take your next step with a empathetic team of bleeding edge web creatives.',
-    title: 'Careers'
+    intro: "We're interested in where you're going, not where you've come from. If you're driven, passionate about your craft, and like to learn, we want to hear from you.",
+    title: "Careers"
   })
 
   //- Banner
   +banner({
-    alt: 'Chris Annetts at Leaf',
-    src: 'banners/company.jpg'
+    alt: "Mike Carter at Leaf",
+    src: "banners/careers.jpg"
   })
 
   main
@@ -26,15 +26,19 @@ block content
         //- Buckets
         +buckets({
           items: [{
-            heading: 'New product development',
+            heading: "Love working here",
             text: [
-              'We want our employees to love working at Leaf, so we\'ll ask you to work your contracted hours and no more, and leave it up to you how to manage your work/life balance with flexi-time and remote working available at your disposal. Rest assured, we\'ll go out of our way to make Leaf a Sunday-evening-blues-free workplace in whatever way works best for you.'
+              "We'll only ever ask you to work your contracted hours, and leave you to manage your work/life balance. With flexi-time and remote working available as you need it, we'll ensure you have the environment you need to do your best work."
             ]
           },{
-            heading: 'Work with experts',
+            heading: "A better you",
             text: [
-              'We’re true experts in our field. Honing our skills through years of working with big and small organisations alike. We take the required time to keep up to date with the cutting edge tech out there on the web and will make sure that up-skilling is available for you too through peer work, personal development time and conference tickets.'
+              "We've pride ourselves on continual self-improvement, and we'll make sure you get the every oppertunity to do so yourself. That means making up-skilling available, through through peer work, personal development time and conference tickets."
             ]
-          }],
-          wide: true
+          },{
+            heading: "Can't see your role?",
+            text: [
+              "We advertise for specific skillsets, but we never know what our next rising star is going to look like. If you think Leaf would be a great opportunity, <a href='#'>introduce yourself</a> and let us know why you'd be a good fit."
+            ]
+          }]
         })
