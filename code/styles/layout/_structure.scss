@@ -28,6 +28,10 @@ body {
   &__inner {
     @include container;
     padding: 0 $padding-horizontal-fluid;
+
+    > :last-child {
+      margin-bottom: 0;
+    }
   }
 
   &__content {

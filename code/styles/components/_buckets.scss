@@ -3,7 +3,11 @@
   margin-bottom: $spacing-vertical;
 
   &__item {
-    margin-bottom: $spacing-vertical;
+    margin-bottom: $spacing-vertical-lg;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
 
     @include susy-breakpoint($bp-lg) {
       @include gallery(6 of 12);
@@ -18,6 +22,10 @@
       @include susy-breakpoint($bp-lg) {
         @include gallery(6 of 12);
       }
+    }
+
+    &__text {
+      margin-bottom: 0;
     }
   }
 }
