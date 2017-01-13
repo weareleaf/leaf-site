@@ -47,3 +47,23 @@
     width: 100%;
   }
 }
+
+@mixin margin-horizontal($size) {
+  margin-left: $size;
+  margin-right: $size;
+}
+
+@mixin margin-vertical($size) {
+  margin-bottom: $size;
+  margin-top: $size;
+}
+
+@mixin padding-horizontal($size) {
+  padding-left: $size;
+  padding-right: $size;
+}
+
+@mixin padding-vertical($size) {
+  padding-bottom: $size;
+  padding-top: $size;
+}

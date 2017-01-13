@@ -5,13 +5,16 @@
 
   &__inner {
     @include container;
+    @include padding-horizontal($padding-horizontal-fluid);
+  }
+
+  &__primary {
+    @include padding-vertical($padding-vertical);
     display: flex;
     flex-wrap: wrap;
-    padding: $spacing-vertical $padding-horizontal-fluid;
 
     @include susy-breakpoint($bp-lg) {
-      padding-bottom: $padding-vertical-lg;
-      padding-top: $padding-vertical-lg;
+      @include padding-vertical($padding-vertical-lg);
     }
 
     @include susy-breakpoint($bp-xl) {
@@ -19,9 +22,17 @@
     }
   }
 
-  &__block {
+  &__secondary {
     padding-bottom: $padding-vertical-sm;
-    padding-top: $padding-vertical-sm;
+
+    &__item {
+      font-size: .7em;
+      margin-right: $spacing-horizontal;
+    }
+  }
+
+  &__block {
+    @include padding-vertical($padding-vertical-sm);
     width: 50%;
 
     @include susy-breakpoint($bp-sm) {
@@ -40,16 +51,6 @@
         width: auto;
       }
     }
-
-    &--callout {
-      background-color: darken($leaf-green, 5%);
-      padding-left: $padding-horizontal-sm;
-      padding-right: $padding-horizontal-sm;
-    }
-  }
-
-  &__text {
-    font-size: .8em;
   }
 
   &__link {
@@ -57,6 +58,7 @@
   }
 
   &__text {
+    font-size: .8em;
     line-height: 2;
   }
 }
