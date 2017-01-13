@@ -1,5 +1,9 @@
 .block {
 
+  @include susy-breakpoint($bp-lg) {
+    display: flex;
+  }
+
   &__item {
     display: block;
     padding-top: $padding-vertical-xl;
