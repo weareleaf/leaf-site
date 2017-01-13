@@ -13,11 +13,12 @@
     display: flex;
     flex-wrap: wrap;
 
-    @include susy-breakpoint($bp-lg) {
-      @include padding-vertical($padding-vertical-lg);
+    @include susy-breakpoint($bp-sm) {
+      padding-bottom: 0;
     }
 
     @include susy-breakpoint($bp-xl) {
+      @include padding-vertical($padding-vertical);
       align-items: stretch;
     }
   }
@@ -46,9 +47,48 @@
     &--wide {
       width: 100%;
 
+      @include susy-breakpoint($bp-sm) {
+        padding-bottom: 0;
+
+        .footer__heading {
+          display: none;
+        }
+      }
+
       @include susy-breakpoint($bp-xl) {
         flex: 2 0 0;
+        order: -1;
+        padding-bottom: $padding-vertical;
         width: auto;
+
+        .footer__heading {
+          display: block;
+        }
+      }
+    }
+  }
+
+  &__list--inline {
+
+    @include susy-breakpoint($bp-sm) {
+
+      .footer__text {
+        display: inline-block;
+
+        &:not(:last-child)::after {
+          content: ', ';
+        }
+      }
+    }
+
+    @include susy-breakpoint($bp-xl) {
+
+      .footer__text {
+        display: block;
+
+        &:not(:last-child)::after {
+          content: '';
+        }
       }
     }
   }
