@@ -37,7 +37,7 @@ body {
   &__content {
 
     @include susy-breakpoint($bp-xl) {
-      @include span(9 of 12);
+      @include span(8 of 12);
     }
 
     &:not(:first-of-type) {
@@ -49,7 +49,7 @@ body {
 
     @include susy-breakpoint($bp-xl) {
       @include span(2 of 12);
-      @include pre(1);
+      @include pre(2);
       @include last;
     }
   }

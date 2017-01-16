@@ -1,16 +1,31 @@
 extends ./templates/base/_base
 
 block prepend vars
-  -var bodyClass = "error-page"
+  -var bodyClass = "unknown-page"
   -var title = "404 - Leaf"
 
 block content
 
-  section.article
-    .container
-      .article__content
+  //- Hero banner
+  +hero-banner({
+    intro: "Toto, I've a feeling we're not in Kansas any more... We've looked everywhere, but that page doesn't seem to exist.",
+    title: "404"
+  })
 
-        .article__content__text
-          h1.article__heading That Page Doesn't Seem to Exist
+  //- Banner
+  +banner({
+    src: "banners/404.jpg"
+  })
 
-          p Dang. We've had a look, but we can't find that page. Head <a href='/'>back to our home page</a>.
+  main
+
+    section.section
+      .section__inner
+
+        .section__intro
+          h2.section__heading Lets get you back on track
+          p.section__text Of course, we don't know exactly what you're looking for, but here are a few useful pages to help get you going again.
+
+        ul.duo-nav
+          li.duo-nav__item: a.duo-nav__link(href="/") Start over #[span.duo-nav__link__text Home page]
+          li.duo-nav__item: a.duo-nav__link(href="company") Learn about Leaf #[span.duo-nav__link__text Company page]

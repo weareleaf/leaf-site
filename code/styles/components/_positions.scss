@@ -1,4 +1,4 @@
-.positions {
+.duo-nav {
   @include clearfix;
   margin-bottom: $spacing-vertical-lg;
 
@@ -7,11 +7,11 @@
     text-align: center;
   }
 
-  &:hover .positions__link {
+  &:hover .duo-nav__link {
     color: rgba($white, .15);
   }
 
-  &:hover .positions__link:hover {
+  &:hover .duo-nav__link:hover {
     color: $white;
   }
 
@@ -61,7 +61,7 @@
       @include padding-vertical($padding-vertical);
     }
 
-    &__salary {
+    &__text {
       display: block;
       font-size: .8rem;
       font-style: italic;
