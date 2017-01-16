@@ -36,14 +36,18 @@ body {
 
   &__content {
 
-    @include susy-breakpoint($bp-md) {
+    @include susy-breakpoint($bp-xl) {
       @include span(9 of 12);
+    }
+
+    &:not(:first-of-type) {
+      margin-top: $spacing-vertical;
     }
   }
 
   &__aside {
 
-    @include susy-breakpoint($bp-md) {
+    @include susy-breakpoint($bp-xl) {
       @include span(2 of 12);
       @include pre(1);
       @include last;

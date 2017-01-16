@@ -48,9 +48,11 @@ h3, %h3 {
 h4, %h4 {
   font-size: $h4-font-size;
   font-weight: 600;
+  margin-bottom: $spacing-vertical;
 }
 
 p {
+  display: inline-block;
   font-size: $p-font-size;
   margin: 0 0 $spacing-vertical;
 
@@ -58,10 +60,13 @@ p {
     color: lighten($base-font-color, 15%);
     font-weight: 600;
   }
+}
+
+p, ul {
 
   @include susy-breakpoint($bp-sm) {
     + h3 {
-      margin-top: $spacing-vertical-lg;
+      margin-top: $spacing-vertical-sm;
     }
   }
 }

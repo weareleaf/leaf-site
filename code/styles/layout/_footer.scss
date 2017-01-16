@@ -97,6 +97,10 @@
     }
   }
 
+  &__heading {
+    margin-bottom: $spacing-vertical-sm;
+  }
+
   &__link {
     color: $white;
   }
