@@ -68,26 +68,30 @@
     }
   }
 
-  &__list--inline {
+  &__list {
+    margin-bottom: 0;
 
-    @include susy-breakpoint($bp-sm) {
+    &--inline {
 
-      .footer__text {
-        display: inline-block;
+      @include susy-breakpoint($bp-sm) {
 
-        &:not(:last-child)::after {
-          content: ', ';
+        .footer__text {
+          display: inline-block;
+
+          &:not(:last-child)::after {
+            content: ', ';
+          }
         }
       }
-    }
 
-    @include susy-breakpoint($bp-xl) {
+      @include susy-breakpoint($bp-xl) {
 
-      .footer__text {
-        display: block;
+        .footer__text {
+          display: block;
 
-        &:not(:last-child)::after {
-          content: '';
+          &:not(:last-child)::after {
+            content: '';
+          }
         }
       }
     }
