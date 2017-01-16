@@ -10,6 +10,10 @@
 
   &:hover {
     opacity: 0.7;
+
+    .hamburger__content::before {
+      transform: translateX(-.5em);
+    }
   }
 
   &:focus {
@@ -52,8 +56,12 @@
     &::before {
       right: 0;
       top: .5em;
-      transition: opacity $base-duration $base-timing;
-      width: 75%;
+      transition: transform $base-duration $base-timing;
+      width: 1.5em;
+
+      &:hover {
+        margin-right: 10px;
+      }
     }
 
     &::after {
