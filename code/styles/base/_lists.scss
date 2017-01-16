@@ -12,6 +12,7 @@ ol {
 
 ul {
   list-style-type: none;
+  margin-bottom: $spacing-vertical-lg;
 }
 
 dl {
@@ -33,10 +34,18 @@ dd {
   margin-bottom: $spacing-vertical;
 }
 
-li,
 dd,
 dt {
   display: block;
   font-family: $font-sans-serif;
-  //font-size: .8rem;
+}
+
+.section__content li {
+  font-size: $p-font-size;
+
+  &::before {
+    content: '—';
+    margin-left: $spacing-horizontal-sm;
+    padding-right: $padding-horizontal-xs;
+  }
 }
