@@ -1,0 +1,79 @@
+extends ../templates/base/_base
+
+block prepend vars
+  -var bodyClass = "case-study-page"
+  -var title = "Keen Case Study - Leaf"
+
+block content
+
+  //- Hero banner
+  +hero-banner({
+    intro: "Keen",
+    title: "Case study"
+  })
+
+  //- Banner
+  +banner({
+    alt: "Chris Annetts at Leaf",
+    src: "portfolio/cakeboxx/banner.jpg"
+  })
+
+  main
+
+    section.section
+      .section__inner
+
+        .section__content
+          h3 The brief
+
+          p Keen is an onboarding platform, allowing organisations to improve their "customer success" by helping new users familiarise themselves with the product they've recently signed-up for. Keen also allows organisations to invite and monitor their users through the onboarding process, identifying successful onboardings and stragglers that need attention.
+
+          p We were asked by Keen to build the Minimal Viable Product (MVP) version of their application.
+
+          h3 The challenge
+
+          p Building an MVP meant making tough technical and design choices in order to deliver a useful product on budget. We were aware that all the while we were making these choices, the requirements of the product were likely to change as new ideas emerged and discoveries were made by the client.
+
+          p With a product that was inherently complex, and with limited time, the biggest challenge would be reducing the vision down to it's very core, and building a truly Minimum Viable Product.
+
+          p Keen would also need a complex tutorial creation system that would allow organisations to white-label their onboarding sites with a custom domain. For us, this would mean that we would need to not only support custom domains but also securely separate end-users signing up to individual sites from one another.
+
+          h3 Technology
+
+          p We settled on a pure Ruby on Rails stack for Keen's MVP application. The Rails framework allowed us to quickly build out a wide variety of features required by modern web applications, including authentication, mail sending, and solid test coverage.
+
+          p We used JavaScript to add a layer of flair to the application's front-end, introducing drag-and-drop image uploads and various off-canvas menus.
+
+          h3 Our approach
+
+          p We initially built out a set of interactive prototypes which not only helped solidify a shared understanding of the product, but allowed us to identify aspects of the product that we either felt wouldn't work well, or would be too time consuming to build as part of the MVP.
+
+          p With the MVP scope more refined, we begun to build out a pattern library of user interface components while simultaneously mapping out the fundamental database design and user authentication functionality. This meant we could get the client satisfied with the aesthetics of their product before actually needing to do any significant coding work.
+
+          p We opted to do the database design and authentication at the same time here as this was a fairly stable known quantity for the project, and allowed us to double down on building a solid foundation for the project while we worked out some of the finer implementation details.
+
+          p With the groundwork in place, we began layering up functionality within the platform. By continually publishing changes to a development version, the Keen team had direct visibility of the progress of their application build, and helped to further tighten the feedback loop between us both.
+
+          p Separated user registrations proved difficult without duplicating data, but with careful database design and thorough automated testing we were able to run multiple onboarding websites from Keen with completely separated authentication.
+
+          h3 The outcome
+
+          p Keen launched at the beginning of 2017, and has already made its first successful sales.
+
+        aside.section__aside
+          dl
+            dt Client
+            dd Keen
+
+            dt Services
+            dd
+              ul
+                li Product development
+                li Pattern library
+                li Interface design
+                
+            dt Technology
+            dd
+              ul
+                li Ruby on Rails
+                li JavaScript
