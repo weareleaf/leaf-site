@@ -26,24 +26,44 @@ block content
         //- Buckets
         +buckets({
           items: [{
+            heading: "New product development",
+            text: [
+              "Every great product starts somewhere. We've worked on several new products with startups, and as part of larger organisations, and love being involved at such an important part of the journey.",
+              "We'll guide you getting to your Minimum Viable Product (MVP), working in an agile manner and iterating towards a good product/market fit without burning cash on unproven demand."
+            ]
+          },{
+            heading: "Existing products",
+            text: [
+              "If you're strapped for development resource, or need a helping hand from a technical partner, we're well versed in moving quickly within an existing product, site, or application.",
+              "We can work with your existing web applications regardless of their technology, technical debt or bugs. We're even happy to work alongside your existing development team."
+            ]
+          }],
+          wide: true
+        })
+
+    section.section.section--center.bg--white
+      .section__inner
+
+        .section__intro
+          h2.section__heading Technology
+          p.section__text We'll always use the most appropriate technology for any project, but have a few favourites in our toolkit.
+
+        img(src="/images/tech-logos.png")
+
+    section.section
+      .section__inner
+
+        //- Buckets
+        +buckets({
+          items: [{
             heading: "CMS Development",
             text: [
-              "We'll help you to choose the best CMS platform for your needs, use our expertise to handle the development and then provide any assistance necessary to get your team to confident and competent on your new system."
+              "We'll not only help you to choose the best CMS platform for your needs, but will provide any assistance necessary to get your team to confident and competent on your new system."
             ]
           },{
             heading: "Ongoing support",
             text: [
               "We understand that from time to time projects need a small bit of maintenance, bugs fixed or an upcoming crisis averted. You can rely on us to give you complete peace of mind."
-            ]
-          },{
-            heading: "New product development",
-            text: [
-              "We'll guide you getting to your Minimum Viable Product (MVP), working in an agile manner and iterating towards a good product/market fit without burning cash on unproven demand."
-            ]
-          },{
-            heading: "Existing product iteration",
-            text: [
-              "We can work with your existing web applications regardless of their technology, technical debt or bugs. We're even happy to work alongside your existing development team.",
             ]
           },{
             heading: "Technical consultancy",
