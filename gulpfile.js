@@ -1,38 +1,39 @@
-const gulp = require('gulp');
-const gutil = require('gulp-util');
-const webpackStream = require('webpack-stream');
-const pug = require('gulp-pug');
-const watch = require('gulp-watch');
-const sass = require('gulp-sass');
-const connect = require('gulp-connect');
-const connectRewrite = require('http-rewrite-middleware');
-const uglify = require('gulp-uglify');
-const open = require('gulp-open');
-const del = require('del');
-const notify = require('gulp-notify');
-const ghPages = require('gulp-gh-pages');
-const changed = require('gulp-changed');
-const runSequence = require('run-sequence');
-const autoprefixer = require('gulp-autoprefixer');
-const cssmin = require('gulp-cssmin');
-const webpack = require('webpack');
-const imagemin = require('gulp-imagemin');
-const imageminJpegRecompress = require('imagemin-jpeg-recompress');
+const gulp = require('gulp')
+const gutil = require('gulp-util')
+const webpackStream = require('webpack-stream')
+const pug = require('gulp-pug')
+const watch = require('gulp-watch')
+const sass = require('gulp-sass')
+const connect = require('gulp-connect')
+const connectRewrite = require('http-rewrite-middleware')
+const uglify = require('gulp-uglify')
+const open = require('gulp-open')
+const del = require('del')
+const notify = require('gulp-notify')
+const ghPages = require('gulp-gh-pages')
+const changed = require('gulp-changed')
+const runSequence = require('run-sequence')
+const autoprefixer = require('gulp-autoprefixer')
+const cssmin = require('gulp-cssmin')
+const webpack = require('webpack')
+const imagemin = require('gulp-imagemin')
+const imageminJpegRecompress = require('imagemin-jpeg-recompress')
+const emoji = require('node-emoji')
 
-const MISC_FILES = ['./code/CNAME', './code/**/*.mp4', './code/**/*.ogv', './code/**/*.webm', './code/**/*.eot', './code/**/*.ttf', './code/**/*.woff', './code/**/*.woff2'];
-const PUG_FILES = ['./code/**/*.pug', './code/**/*.jade', '!./code/lib/**'];
-const SASS_FILES = ['./code/**/*.scss', , '!./code/lib/**'];
+const MISC_FILES = ['./code/CNAME', './code/**/*.mp4', './code/**/*.ogv', './code/**/*.webm', './code/**/*.eot', './code/**/*.ttf', './code/**/*.woff', './code/**/*.woff2']
+const PUG_FILES = ['./code/**/*.pug', './code/**/*.jade']
+const SASS_FILES = ['./code/**/*.scss']
 const SASS_INCLUDE_PATHS = [
   'node_modules/normalize-scss/sass',
   'node_modules/susy/sass'
-];
-const FAVICON_BASE = ['./code/favicons'];
-const FAVICON_FILES = [(FAVICON_BASE + '/**/*')];
-const IMAGE_FILES = ['./code/**/*.png','./code/**/*.jpg','./code/**/*.gif','./code/**/*.jpeg', './code/**/*.svg', '!./code/lib/**', '!./code/images/favicons/**/*'];
-const WEBPACKABLE_FILES = './code/scripts/index.js';
-const BUILD_SRC = './code/';
-const BUILD_DEST = './dist/';
-const BUILT_FILES = BUILD_DEST + '**/*';
+]
+const FAVICON_BASE = ['./code/favicons']
+const FAVICON_FILES = [(FAVICON_BASE + '/**/*')]
+const IMAGE_FILES = ['./code/**/*.png','./code/**/*.jpg','./code/**/*.gif','./code/**/*.jpeg', './code/**/*.svg', '!./code/images/favicons/**/*']
+const WEBPACKABLE_FILES = './code/scripts/index.js'
+const BUILD_SRC = './code/'
+const BUILD_DEST = './dist/'
+const BUILT_FILES = BUILD_DEST + '**/*'
 
 const webpackConfig = {
   output: {
@@ -83,14 +84,14 @@ const webpackConfig = {
     source: false,
     chunkOrigins: false
   }
-};
+}
 
 const logError = function(error) {
   var errorString = error.toString()
   notify.onError({
     title: 'Build Error',
     message: errorString
-  })(error);
+  })(error)
   console.log(errorString)
   this.emit('end')
 }
@@ -107,7 +108,7 @@ gulp.task('favicons', () => {
     .pipe(gulp.dest(BUILD_DEST))
     .on('error', logError)
     .pipe(connect.reload())
-});
+})
 
 gulp.task('misc', () => {
   return gulp.src(MISC_FILES)
@@ -115,7 +116,7 @@ gulp.task('misc', () => {
     .pipe(gulp.dest(BUILD_DEST))
     .on('error', logError)
     .pipe(connect.reload())
-});
+})
 
 gulp.task('templates', () => {
   return gulp.src(PUG_FILES)
@@ -124,8 +125,7 @@ gulp.task('templates', () => {
     }))
     .on('error', logError)
     .pipe(gulp.dest(BUILD_DEST))
-    .pipe(connect.reload())
-});
+})
 
 gulp.task('styles', () => {
   return gulp.src(SASS_FILES)
@@ -139,7 +139,7 @@ gulp.task('styles', () => {
     .on('error', logError)
     .pipe(gulp.dest(BUILD_DEST))
     .pipe(connect.reload())
-});
+})
 
 gulp.task('images', () => {
   return gulp.src(IMAGE_FILES)
@@ -150,17 +150,17 @@ gulp.task('images', () => {
     .on('error', logError)
     .pipe(gulp.dest(BUILD_DEST))
     .pipe(connect.reload())
-});
+})
 
 gulp.task("app_scripts", () => {
   return gulp.src(WEBPACKABLE_FILES)
     .pipe(webpackStream(webpackConfig))
     .on('error', logError)
     .pipe(gulp.dest(BUILD_DEST+'scripts/'))
-});
+})
 
 gulp.task("app_scripts:watched", () => {
-  webpackConfig.watch = true;
+  webpackConfig.watch = true
   return gulp.src(WEBPACKABLE_FILES)
     .pipe(webpackStream(webpackConfig))
     .on('error', logError)
@@ -169,34 +169,30 @@ gulp.task("app_scripts:watched", () => {
 })
 
 gulp.task('start_success', () => {
-  return gutil.log('ALL DONE!')
-});
+  const tada = emoji.get('tada')
+  return gutil.log(`Success!${tada}`)
+})
 
 // ---------------------------------
 // --------- WATCH TASKS -----------
 // ---------------------------------
-gulp.task('watch', () => {
+gulp.task('watch', function() {
+  watch(FAVICON_FILES, () => gulp.start('favicons'))
+  watch(MISC_FILES, () => gulp.start('misc'))
+  watch(SASS_FILES, () => gulp.start('styles'))
+  watch(IMAGE_FILES, () => gulp.start('images'))
 
-  watch(FAVICON_FILES, () => {
-    gulp.start('favicons')
-  })
-
-  watch(MISC_FILES, () => {
-    gulp.start('misc')
-  })
-
-  watch(PUG_FILES, () => {
-    gulp.start('templates')
-  })
-
-  watch(SASS_FILES, () => {
-    gulp.start('styles')
-  })
-
-  watch(IMAGE_FILES, () => {
-    gulp.start('images')
-  });
-});
+  // TODO: For whatever reason doing this the same way as the other watched tasks
+  // meant that the page was reloaded twice or three times with every template
+  // change, this format somehow gets around this:
+  watch(PUG_FILES)
+    .pipe(pug({
+      pretty: true
+    }))
+    .on('error', logError)
+    .pipe(gulp.dest(BUILD_DEST))
+    .pipe(connect.reload())
+})
 
 // ----------------------------------
 // --------- SERVER TASKS -----------
@@ -212,8 +208,8 @@ gulp.task('connect', () => {
     middleware: (connect, options) => {
       return [middleware]
     }
-  });
-});
+  })
+})
 
 gulp.task('open', () => {
   return gulp.src('./dist/index.html')
@@ -234,7 +230,7 @@ gulp.task('deploy', () => {
       branch: 'master'
     }))
     .on('error', logError)
-});
+})
 // ----------------------------------
 // --------- COMPOSITE TASKS --------
 // ----------------------------------
@@ -242,5 +238,5 @@ gulp.task('build', (cb) => {
   return runSequence('clean', ['misc', 'favicons', 'templates', 'styles', 'images', 'app_scripts'], cb)
 })
 gulp.task('start', (cb) => {
-  return runSequence('clean', ['misc', 'favicons', 'templates', 'styles', 'images'], 'connect', ['app_scripts:watched', 'watch', 'open', 'start_success'], cb);
+  return runSequence('clean', ['misc', 'favicons', 'templates', 'styles', 'images'], 'connect', ['app_scripts:watched', 'watch', 'open', 'start_success'], cb)
 })
