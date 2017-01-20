@@ -19,7 +19,6 @@ const cssmin = require('gulp-cssmin')
 const webpack = require('webpack')
 const imagemin = require('gulp-imagemin')
 const imageminJpegRecompress = require('imagemin-jpeg-recompress')
-const emoji = require('node-emoji')
 
 const MISC_FILES = ['./code/CNAME', './code/**/*.mp4', './code/**/*.ogv', './code/**/*.webm', './code/**/*.eot', './code/**/*.ttf', './code/**/*.woff', './code/**/*.woff2']
 const PUG_FILES = ['./code/**/*.pug', './code/**/*.jade']
