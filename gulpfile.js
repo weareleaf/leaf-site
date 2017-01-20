@@ -4,8 +4,9 @@ const webpackStream = require('webpack-stream')
 const pug = require('gulp-pug')
 const watch = require('gulp-watch')
 const sass = require('gulp-sass')
-const connect = require('gulp-connect')
+const connect = require('gulp-connect');
 const connectRewrite = require('http-rewrite-middleware')
+const debounce = require('gulp-debounce');
 const uglify = require('gulp-uglify')
 const open = require('gulp-open')
 const del = require('del')
@@ -107,7 +108,6 @@ gulp.task('favicons', () => {
   return gulp.src(FAVICON_FILES, {cwd: FAVICON_BASE})
     .pipe(gulp.dest(BUILD_DEST))
     .on('error', logError)
-    .pipe(connect.reload())
 })
 
 gulp.task('misc', () => {
@@ -115,7 +115,6 @@ gulp.task('misc', () => {
     .pipe(changed(BUILD_DEST))
     .pipe(gulp.dest(BUILD_DEST))
     .on('error', logError)
-    .pipe(connect.reload())
 })
 
 gulp.task('templates', () => {
@@ -125,7 +124,6 @@ gulp.task('templates', () => {
     }))
     .on('error', logError)
     .pipe(gulp.dest(BUILD_DEST))
-    .pipe(connect.reload())
 })
 
 gulp.task('styles', () => {
@@ -139,7 +137,6 @@ gulp.task('styles', () => {
     .pipe(cssmin())
     .on('error', logError)
     .pipe(gulp.dest(BUILD_DEST))
-    .pipe(connect.reload())
 })
 
 gulp.task('images', () => {
@@ -150,7 +147,6 @@ gulp.task('images', () => {
     ]))
     .on('error', logError)
     .pipe(gulp.dest(BUILD_DEST))
-    .pipe(connect.reload())
 })
 
 gulp.task("app_scripts", () => {
@@ -160,54 +156,52 @@ gulp.task("app_scripts", () => {
     .pipe(gulp.dest(BUILD_DEST+'scripts/'))
 })
 
-gulp.task("app_scripts:watched", () => {
-  webpackConfig.watch = true
-  return gulp.src(WEBPACKABLE_FILES)
-    .pipe(webpackStream(webpackConfig))
-    .on('error', logError)
-    .pipe(gulp.dest(BUILD_DEST+'scripts/'))
+gulp.task('reload', () => {
+  return gulp.src(BUILT_FILES)
+    .pipe(debounce({ wait: 750 })) // Avoids double/triple page reloads
     .pipe(connect.reload())
-})
-
-gulp.task('start_success', () => {
-  const tada = emoji.get('tada')
-  return gutil.log(`Success!${tada}`)
 })
 
 // ---------------------------------
 // --------- WATCH TASKS -----------
 // ---------------------------------
-gulp.task('watch', function() {
+gulp.task('watch', () => {
   watch(FAVICON_FILES, () => gulp.start('favicons'))
   watch(MISC_FILES, () => gulp.start('misc'))
   watch(SASS_FILES, () => gulp.start('styles'))
   watch(IMAGE_FILES, () => gulp.start('images'))
   watch(PUG_FILES, () => gulp.start('templates'))
+
+  webpackConfig.watch = true
+  gulp.src(WEBPACKABLE_FILES)
+    .pipe(webpackStream(webpackConfig))
+    .on('error', logError)
+    .pipe(gulp.dest(BUILD_DEST+'scripts/'))
+
+  watch(BUILT_FILES, () => gulp.start('reload'))
 })
 
 // ----------------------------------
 // --------- SERVER TASKS -----------
 // ----------------------------------
-gulp.task('connect', () => {
+gulp.task('server', () => {
   const middleware = connectRewrite.getMiddleware([
     {from: '^([^.]+[^/])$', to: '$1.html'}
   ])
 
-  return connect.server({
+  connect.server({
     root: 'dist',
     livereload: true,
     middleware: (connect, options) => {
       return [middleware]
     }
   })
-})
 
-gulp.task('open', () => {
   return gulp.src('./dist/index.html')
-  .pipe(open('', {
-    url: 'http://localhost:8080',
-    app: 'google chrome'
-  }))
+    .pipe(open('', {
+      url: 'http://localhost:8080',
+      app: 'google chrome'
+    }))
 })
 
 // ----------------------------------
@@ -229,5 +223,5 @@ gulp.task('build', (cb) => {
   return runSequence('clean', ['misc', 'favicons', 'templates', 'styles', 'images', 'app_scripts'], cb)
 })
 gulp.task('start', (cb) => {
-  return runSequence('clean', ['misc', 'favicons', 'templates', 'styles', 'images'], 'connect', ['app_scripts:watched', 'watch', 'open', 'start_success'], cb)
+  return runSequence('clean', ['misc', 'favicons', 'templates', 'styles', 'images'], 'watch', 'server', cb)
 })
