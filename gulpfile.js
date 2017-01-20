@@ -157,7 +157,7 @@ gulp.task("app_scripts", () => {
 
 gulp.task('reload', () => {
   return gulp.src(BUILT_FILES)
-    .pipe(debounce({ wait: 750 })) // Avoids double/triple page reloads
+    .pipe(debounce({ wait: 1000 })) // Avoids double/triple page reloads
     .pipe(connect.reload())
 })
 

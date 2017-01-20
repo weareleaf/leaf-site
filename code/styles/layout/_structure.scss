@@ -46,11 +46,19 @@ body {
   }
 
   &__aside {
+    background-color: lighten($coal, 3%);
+    margin-bottom: $spacing-vertical-lg;
+    padding: $padding-vertical $padding-horizontal $padding-vertical-sm;
 
     @include susy-breakpoint($bp-xl) {
-      @include span(2 of 12);
-      @include pre(2);
+      @include span(3 of 12);
+      @include pre(1);
       @include last;
+    }
+
+    ul {
+      column-count: 3;
+      column-width: 18em;
     }
   }
 

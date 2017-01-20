@@ -12,7 +12,6 @@ ol {
 
 ul {
   list-style-type: none;
-  margin-bottom: $spacing-vertical;
 }
 
 dt {
@@ -35,6 +34,10 @@ dd {
     display: table;
     padding-bottom: $padding-vertical-xs;
 
+    &:last-child {
+      //padding-bottom: 0;
+    }
+
     &::before {
       content: '—';
       display: table-cell;
@@ -53,9 +56,9 @@ dd {
 
 @include susy-breakpoint($bp-xl) {
   .section__aside h3 {
-    font-size: $h4-font-size;
-    font-weight: 600;
-    margin-bottom: $spacing-vertical;
+    //font-size: $h4-font-size;
+    //font-weight: 600;
+    //margin-bottom: $spacing-vertical;
   }
 
   .section__aside li,
