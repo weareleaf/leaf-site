@@ -48,17 +48,12 @@ body {
   &__aside {
     background-color: lighten($coal, 3%);
     margin-bottom: $spacing-vertical-lg;
-    padding: $padding-vertical $padding-horizontal $padding-vertical-sm;
+    padding: $padding-vertical $padding-horizontal;
 
     @include susy-breakpoint($bp-xl) {
       @include span(3 of 12);
       @include pre(1);
       @include last;
-    }
-
-    ul {
-      column-count: 3;
-      column-width: 18em;
     }
   }
 
@@ -126,4 +121,43 @@ body {
   height: 1px;
   width: 1px;
   overflow: hidden;
+}
+
+.section__aside:not(.section__aside--inline) {
+
+  ul {
+    column-count: 3;
+    column-width: 12em;
+  }
+}
+
+.section__aside--inline {
+  @include clearfix;
+
+  @media (min-width: $bp-lg) and (max-width: $bp-xl) {
+
+    dl {
+      float: left;
+      margin-bottom: 0;
+      width: 50%;
+
+      &:first-child {
+        display: none;
+      }
+    }
+
+    li {
+      display: inline-block;
+
+      &::before {
+        content: '';
+        margin-left: 0;
+        padding-right: 0;
+      }
+
+      &:not(:last-of-type)::after {
+        content: ', ';
+      }
+    }
+  }
 }

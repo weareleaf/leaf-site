@@ -61,14 +61,14 @@ $base-z-index: 0;
 $max-width: 59em;
 
 // Padding (horizontal)
-$padding-horizontal: 2em;
+$padding-horizontal: 1.5em;
 $padding-horizontal-lg: $padding-horizontal * 2;
 $padding-horizontal-sm: $padding-horizontal / 2;
 $padding-horizontal-xl: $padding-horizontal * 2;
 $padding-horizontal-xs: $padding-horizontal / 2;
 
 // Padding (vertical)
-$padding-vertical: 2em;
+$padding-vertical: 1.5em;
 $padding-vertical-lg: $padding-vertical * 2;
 $padding-vertical-sm: $padding-vertical / 2;
 $padding-vertical-xl: $padding-vertical * 2;
@@ -94,14 +94,14 @@ $padding-block-vertical: $padding-vertical * 6;
 $padding-block: $padding-block-vertical $padding-block-horizontal;
 
 // Spacing (horizontal)
-$spacing-horizontal: 2em;
+$spacing-horizontal: 1.5em;
 $spacing-horizontal-lg: $spacing-horizontal * 2;
 $spacing-horizontal-sm: $spacing-horizontal / 2;
 $spacing-horizontal-xl: $spacing-horizontal * 4;
 $spacing-horizontal-xs: $spacing-horizontal / 4;
 
 // Spacing (vertical)
-$spacing-vertical: 2em;
+$spacing-vertical: 1.5em;
 $spacing-vertical-lg: $spacing-vertical * 2;
 $spacing-vertical-sm: $spacing-vertical / 2;
 $spacing-vertical-xl: $spacing-vertical * 4;

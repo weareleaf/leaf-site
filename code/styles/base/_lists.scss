@@ -1,5 +1,6 @@
 ul,
 ol,
+dl,
 dd {
   margin: 0;
   padding: 0;
@@ -8,6 +9,10 @@ dd {
 ul,
 ol {
   list-style-position: inside;
+}
+
+dl:not(:last-of-type) {
+  margin-bottom: $spacing-vertical;
 }
 
 ul {
@@ -22,9 +27,25 @@ dt {
 dd {
   margin-bottom: $spacing-vertical;
 
-  ul {
+  &:last-child {
     margin-bottom: 0;
   }
+
+  ul {
+    margin-bottom: 0;
+    margin-top: $spacing-vertical-xs;
+  }
+
+  li:last-of-type {
+    padding-bottom: 0;
+  }
+}
+
+.section__aside li,
+dd,
+dt {
+  font-family: $font-sans-serif;
+  font-size: .75rem;
 }
 
 .section__content,
@@ -45,26 +66,5 @@ dd {
       padding-right: $padding-horizontal-xs;
       text-align: right;
     }
-  }
-}
-
-.section__content li,
-.section__aside li {
-  font-size: $p-font-size;
-  padding-bottom: $padding-vertical-sm;
-}
-
-@include susy-breakpoint($bp-xl) {
-  .section__aside h3 {
-    //font-size: $h4-font-size;
-    //font-weight: 600;
-    //margin-bottom: $spacing-vertical;
-  }
-
-  .section__aside li,
-  dd,
-  dt {
-    font-family: $font-sans-serif;
-    font-size: .8rem;
   }
 }
