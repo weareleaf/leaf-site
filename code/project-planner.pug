@@ -1,0 +1,37 @@
+extends ./templates/base/_base
+
+block prepend vars
+  -var bodyClass = "project-planner-page"
+  -var title = "Leaf"
+
+block content
+
+  //- Hero banner
+  +hero-banner({
+    intro: "Our project planner usually takes around 4-5 minutes to complete, but allows us to understand your motivations, needs, and ultimately your goals.",
+    title: "Project planner"
+  })
+
+  main
+
+    section.section
+      .section__inner
+
+        .section__content
+
+          .section__intro
+            h2.section__heading Your details
+
+          form.form(action="submit", autocomplete="off")
+
+            .form__group
+              input(type="text", name="name", required)
+              label(for="name") Your name
+
+            .form__group
+              input(type="text", name="organisation", required)
+              label(for="organisation") Company / Organisation
+
+            .form__group
+              input(type="email", name="email", required)
+              label(for="email") Email address

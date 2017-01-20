@@ -1,0 +1,65 @@
+extends ../templates/base/_base
+
+block prepend vars
+  -var bodyClass = "case-study-page"
+  -var title = "Zendesk Case Study - Leaf"
+
+block content
+
+  //- Hero banner
+  +hero-banner({
+    intro: "Zendesk",
+    title: "Case study"
+  })
+
+  //- Banner
+  +banner({
+    alt: "Chris Annetts at Leaf",
+    src: "portfolio/cakeboxx/banner.jpg"
+  })
+
+  main
+
+    section.section
+      .section__inner
+
+        .section__content
+          h3 The brief
+
+          p Zendesk's quest for improving customer relations knows no bounds, and we worked with them to create a landing page for their up-and-coming event. The event itself focused on the tranquil simplicity of afternoon tea, with registered users receiving not only an invite for a cuppa, but a tea-themed box of goodies.
+
+          h3 The challenge
+
+          p The event was released internationally, with the landing page being presented in French, German, and Russian, as well as English. In order to ease this registration process, an API was required to handle Zendesk's user registrations and integrate with a proprietary sales system.
+
+          h3 Our approach
+
+          p Using the Scuba Diver and the Astronaut from Zendesk's much-loved Relationships Are Complicated campaign, allowed us to create a set of pages that were a continuation of recent Zendesk events.
+
+          p We built the landing page using placeholders for content rather than hard-coding in text. This allowed us to automate the process of translating these landing pages into any language by simply creating a new translations file for the language, rather than manually copying and pasting pages.
+
+          p To handle user registrations, we built a small Ruby API that integrated with the sales system supporting the campaign. In order to avoid disruptive page refreshes to registering users, we also created a small JavaScript registrations handler, providing input validation and data submissions.
+
+          h3 The outcome
+
+          p Zendesk were able to run a successful marketing campaign across multiple languages using our work, and were happy enough with the success of their first campaign that in the winter of 2016, we worked together on a second, follow-up campaign.
+
+        aside.section__aside
+          dl
+            dt Client
+            dd Zendesk
+
+            dt Services
+            dd
+              ul
+                li Landing page design
+                li API
+                li Internationalisation
+
+            dt Technology
+            dd
+              ul
+                li HTML
+                li CSS
+                li JavaScript
+                li Ruby
