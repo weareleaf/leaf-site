@@ -1,6 +1,7 @@
 // Colors
 $coal: #1a2129;
-$dark-smoke: #a1aab5;
+$dark-smoke: #5c646d;
+$smoke: #a1aab5;
 $snow: #f7f8f9;
 $white: #fff;
 
@@ -16,9 +17,9 @@ $base-timing: ease;
 $base-background-color: $coal;
 
 // Border
-$base-border-color: $coal;
+$base-border-color: $dark-smoke;
 $base-border-style: solid;
-$base-border-width: .1em;
+$base-border-width: .05em;
 $base-border: $base-border-style $base-border-width $base-border-color;
 
 // Brand
@@ -32,7 +33,7 @@ $bp-lg : 64em;
 $bp-xl : 80em;
 
 // Font colors
-$base-font-color: $dark-smoke;
+$base-font-color: $smoke;
 $heading-font-color: $white;
 $action-color: $white;
 

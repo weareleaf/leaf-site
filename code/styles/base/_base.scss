@@ -11,11 +11,11 @@ html {
 body {
   font-size: 0.75em;
 
-  @media (min-width: 22.950em) {
+  @include susy-breakpoint($bp-xs) {
     font-size: 0.9em;
   }
 
-  @media (min-width: 49.6em) {
+  @include susy-breakpoint($bp-md) {
     font-size: 1em;
   }
 }

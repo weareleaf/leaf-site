@@ -1,296 +1,125 @@
-form {
-  margin-bottom: $spacing-vertical-lg;
-}
 
-fieldset {
-  background-color: transparent;
-  border: 0;
-  margin: 0;
-  padding: 0;
-}
-
-legend {
-  font-weight: 600;
-  margin-bottom: $spacing-vertical-sm;
-  padding: 0;
-}
-
-label {
-  @extend %label;
-  display: block;
-  margin-bottom: $spacing-vertical-sm;
-}
-
-input,
-select,
-textarea {
-  font-size: 0.9rem;
-  line-height: 1.2;
-  padding: $padding-vertical $padding-horizontal;
-}
-
-input:not([type='submit']),
-.select,
-textarea {
-  background-color: $input-background-color;
-  border: none;
-  border-radius: $base-border-radius;
-  color: $white;
-  display: block;
-  font-family: $font-sans-serif;
-  margin-bottom: $spacing-vertical;
-  transition:
-    background-color $base-duration $base-timing,
-    border-color $base-duration $base-timing;
-  width: 100%;
-
-  &:hover {
-    background-color: lighten($input-background-color, 2%);
-    border-color: shade($base-border-color, 20%);
-  }
-
-  &:focus {
-    border-color: $action-color;
-    box-shadow: none;
-    outline: none;
-  }
-
-  &:disabled {
-    background-color: shade($base-background-color, 5%);
-    cursor: not-allowed;
-
-    &:hover {
-      border: $base-border;
-    }
-  }
-
-  &::placeholder {
-    color: $input-placeholder-color;
-  }
-
-  &.erroneous {
-    background-color: #ff7d6f;
-
-    &::placeholder {
-      color: #b34540;
-    }
-  }
-}
+$fontSizeForm: 2em;
+$fontSizeLabel: .65em;
 
 
-::-webkit-input-placeholder {
-  line-height: normal;
-}
+.form {
 
-textarea {
-  line-height: $base-line-height;
-}
-
-.form-group {
-  @include clearfix;
-  margin-bottom: $spacing-vertical-sm;
-
-  .error {
-    color: #ff7d6f;
-    display: block;
-    font-family: $font-sans-serif;
-    font-size: 0.7em;
-    font-weight: 600;
+  &__group {
+    border-bottom: $base-border;
+    min-height: 4em;
     margin-bottom: $spacing-vertical;
-    margin-top: -$spacing-vertical;
-  }
-}
-
-.input-row {
-
-  @include susy-breakpoint($bp-sm) {
-    @include clearfix;
-
-    .form-group {
-      @include span(6 of 12);
-
-      &:nth-child(even) {
-        @include omega;
-      }
-    }
+    position: relative;
   }
 
-  @include susy-breakpoint($bp-lg) {
-    .form-group {
-      @include span(3 of 12);
+  $inputTop: .5em;
 
-      &:nth-child(2) {
-        float: left;
-        margin-right: gutter(12);
-      }
+  textarea {
 
-      &:nth-child(:last-child) {
-        @include omega;
-      }
-    }
-  }
-}
-
-.form-info {
-  @include susy-breakpoint($bp-md) {
-    @include span(6 of 12);
-
-    &:nth-child(even) {
-      @include omega;
-    }
-  }
-}
-
-textarea {
-  min-height: 12em;
-  resize: vertical;
-}
-
-[type="search"] {
-  appearance: none;
-}
-
-[type="checkbox"],
-[type="radio"] {
-  display: inline;
-  margin-right: $spacing-horizontal-sm;
-}
-
-[type="file"] {
-  margin-bottom: $spacing-vertical-sm;
-  width: 100%;
-}
-
-select {
-  margin-bottom: $spacing-vertical-sm;
-  max-width: 100%;
-  width: auto;
-}
-
-.select {
-  color: #fff;
-  position: relative;
-  display: inline-block;
-  padding: 0;
-}
-
-.select select {
-  display: inline-block;
-  width: 100%;
-  margin: 0;
-  font-family: inherit;
-  color: #fff;
-  background-color: inherit;
-  border: 0;
-  cursor: pointer;
-  outline: 0;
-  appearance: none;
-  border-radius: $base-border-radius;
-  padding-bottom: 1.35em;
-  padding-top: 1.35em;
-}
-
-// Firefox dropdown fix
-@-moz-document url-prefix() {
-  .select select {
-    padding-bottom: 1.25em;
-    padding-top: 1.25em;
-  }
-}
-
-// Safari dropdown fix
-@supports (overflow:-webkit-marquee) and (justify-content:inherit) {
-  .select select {
-    padding-bottom: 1.7em;
-    padding-top: 1.6em;
-  }
-}
-
-/* Undo the Firefox inner focus ring */
-.select select:focus:-moz-focusring {
-  color: transparent;
-  text-shadow: 0 0 0 #000;
-}
-/* Dropdown arrow */
-.select:after {
-  position: absolute;
-  top: 50%;
-  right: 1.25rem;
-  display: inline-block;
-  content: "";
-  width: 0;
-  height: 0;
-  margin-top: -.15rem;
-  pointer-events: none;
-  border-top: .35rem solid;
-  border-right: .35rem solid transparent;
-  border-bottom: .35rem solid transparent;
-  border-left: .35rem solid transparent;
-}
-
-/* Hover state */
-/* Uncomment if you need it, but be aware of the sticky iOS states.
-.select select:hover {
-  background-color: #ddd;
-}
-*/
-
-/* Focus */
-.select select:focus {
-  //box-shadow: 0 0 0 .075rem #fff, 0 0 0 .2rem #0074d9;
-}
-
-/* Active/open */
-.select select:active {
-  color: #fff;
-  //background-color: #0074d9;
-}
-
-/* Hide the arrow in IE10 and up */
-.select select::-ms-expand {
-  display: none;
-}
-
-/* Media query to target Firefox only */
-@-moz-document url-prefix() {
-  /* Firefox hack to hide the arrow */
-  .select select {
-    text-indent: 0.01px;
-    text-overflow: '';
-    padding-right: 1rem;
   }
 
-  /* <option> elements inherit styles from <select>, so reset them. */
-  .select option {
-    //background-color: #fff;
-  }
-}
-
-/* IE9 hack to hide the arrow */
-@media screen and (min-width:0\0) {
-  .select select {
+  input,
+  textarea {
+    background: none;
+    border: 0;
+    color: $base-font-color;
+    font-family: $base-font-family;
+    //position: absolute;
+    position: relative;
+    top: $inputTop;
+    width: 100%;
     z-index: 1;
-    padding: .5rem 1.5rem .5rem 1rem;
+    font-size: $fontSizeForm;
   }
-  .select:after {
-    z-index: 5;
-  }
-  .select:before {
-    position: absolute;
-    top: 0;
-    right: 1rem;
-    bottom: 0;
-    z-index: 2;
-    content: "";
+
+  $animations: labelIn, labelOut;
+  $animationTime: .35s;
+  $ease: cubic-bezier(0.770, 0.000, 0.175, 1.000); /* easeInOutQuart */
+
+  label {
     display: block;
-    width: 1.5rem;
-    //background-color: #eee;
+    position: absolute;
+    color: rgba($base-font-color, .5);
+    animation-name: nth($animations, 1);
+    animation-duration: $animationTime;
+    animation-direction: reverse;
+    animation-fill-mode: forwards;
+    animation-timing-function: $ease;
   }
-  .select select:hover,
-  .select select:focus,
-  .select select:active {
-    color: #fff;
-    //background-color: #eee;
+
+  // Change label position on focus & valid
+  input:focus + label,
+  input:valid + label {
+    animation-name: nth($animations, 2);
+    animation-duration: $animationTime;
+    animation-direction: normal;
+    animation-fill-mode: forwards;
+    animation-timing-function: $ease;
+  }
+
+  // Create separate animation keyframes for in and out animations to avoid conflicts
+  @each $animationName in $animations {
+    @keyframes #{$animationName} {
+      0% {
+        left: 0;
+        opacity: 1;
+        top: $inputTop;
+        font-size: $fontSizeForm;
+        font-weight: 300;
+      }
+      50% {
+        font-size: $fontSizeForm;
+        left: .25em;
+        opacity: 0;
+        top: $inputTop;
+        font-weight: 300;
+      }
+      50.01% {
+        //font-size: $fontSizeLabel;
+        left: .25em;
+        opacity: 0;
+        top: .25em;
+
+        color: $white;
+        font-size: 0.65em;
+        font-weight: 800;
+
+      }
+      100% {
+        //font-size: $fontSizeLabel;
+        opacity: 1;
+        left: 0;
+        top: .25em;
+        color: $white;
+        font-weight: 400;
+
+        color: $white;
+        font-size: 0.65em;
+        font-weight: 800;
+
+        letter-spacing: .25em;
+        font-family: $font-sans-serif;
+        text-transform: uppercase;
+
+      }
+    }
+  }
+
+  // disable focus outline
+  *:focus {
+    outline: 0;
+  }
+
+  // Fade in to hide the inital animation of the labels
+  opacity: 0;
+  animation: fadeIn .5s cubic-bezier(0.165, 0.840, 0.440, 1.000) $animationTime/2 1 normal forwards;
+
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
   }
 }
-
