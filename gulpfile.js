@@ -125,6 +125,7 @@ gulp.task('templates', () => {
     }))
     .on('error', logError)
     .pipe(gulp.dest(BUILD_DEST))
+    .pipe(connect.reload())
 })
 
 gulp.task('styles', () => {
@@ -181,17 +182,7 @@ gulp.task('watch', function() {
   watch(MISC_FILES, () => gulp.start('misc'))
   watch(SASS_FILES, () => gulp.start('styles'))
   watch(IMAGE_FILES, () => gulp.start('images'))
-
-  // TODO: For whatever reason doing this the same way as the other watched tasks
-  // meant that the page was reloaded twice or three times with every template
-  // change, this format somehow gets around this:
-  watch(PUG_FILES)
-    .pipe(pug({
-      pretty: true
-    }))
-    .on('error', logError)
-    .pipe(gulp.dest(BUILD_DEST))
-    .pipe(connect.reload())
+  watch(PUG_FILES, () => gulp.start('templates'))
 })
 
 // ----------------------------------
