@@ -88,9 +88,18 @@ body {
   }
 }
 
+.no-margin {
+  margin: 0;
+}
+
+.no-margin-top {
+  margin-top: 0;
+}
+
 .no-padding {
   padding: 0;
 }
+
 .animated {
   animation-duration: 750ms;
   animation-fill-mode: both;

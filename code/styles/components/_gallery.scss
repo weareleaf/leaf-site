@@ -1,3 +1,11 @@
+.buckets + .gallery {
+  margin-top: $spacing-vertical-lg;
+
+  @include susy-breakpoint($bp-sm) {
+    margin-top: $spacing-vertical-xl;
+  }
+}
+
 .gallery {
 
   &__pair {
@@ -11,7 +19,6 @@
     margin-bottom: $spacing-vertical-sm;
 
     @include susy-breakpoint($bp-sm) {
-      flex-grow: 1;
 
       &:first-child {
         margin-right: $spacing-horizontal-sm;
@@ -19,8 +26,9 @@
     }
 
     &__image {
-      display: inline-block;
+      display: flex;
       height: 100%;
+      object-fit: cover;
       width: 100%;
     }
 
@@ -38,11 +46,6 @@
         z-index: 1;
     	}
 
-    	img {
-    		backface-visibility: hidden;
-    		display: block;
-    		max-width: 100%;
-    	}
 
       .gallery__item {
 
