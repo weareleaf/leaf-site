@@ -16,7 +16,7 @@ body {
 .section {
   padding: $padding-vertical-lg 0;
 
-  @include susy-breakpoint($bp-sm) {
+  @include susy-breakpoint($bp-lg) {
     padding-bottom: $spacing-vertical-xl;
     padding-top: $spacing-vertical-xl;
   }
