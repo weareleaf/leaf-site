@@ -9,6 +9,7 @@
     @include container;
     margin: 0 auto;
     overflow-y: scroll;
+    -webkit-overflow-scrolling: touch;
     padding: $spacing-vertical-lg $padding-horizontal-fluid;
 
     .navigation.on & {
@@ -32,12 +33,14 @@
   margin: 4em auto;
   text-align: center;
 
-  &:hover a {
-    color: rgba($white, .15);
-  }
+  @include susy-breakpoint($bp-lg) {
+    &:hover a {
+      color: rgba($white, .15);
+    }
 
-  &:hover a:hover {
-    color: $white;
+    &:hover a:hover {
+      color: $white;
+    }
   }
 
   &__item {
