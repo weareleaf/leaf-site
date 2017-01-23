@@ -64,15 +64,15 @@ $max-width: 59em;
 $padding-horizontal: 1.5em;
 $padding-horizontal-lg: $padding-horizontal * 2;
 $padding-horizontal-sm: $padding-horizontal / 2;
-$padding-horizontal-xl: $padding-horizontal * 2;
-$padding-horizontal-xs: $padding-horizontal / 2;
+$padding-horizontal-xl: $padding-horizontal * 4;
+$padding-horizontal-xs: $padding-horizontal / 4;
 
 // Padding (vertical)
 $padding-vertical: 1.5em;
 $padding-vertical-lg: $padding-vertical * 2;
 $padding-vertical-sm: $padding-vertical / 2;
-$padding-vertical-xl: $padding-vertical * 2;
-$padding-vertical-xs: $padding-vertical / 2;
+$padding-vertical-xl: $padding-vertical * 4;
+$padding-vertical-xs: $padding-vertical / 4;
 
 // Padding (horizontal - fluid)
 $padding-horizontal-fluid: 5%;
