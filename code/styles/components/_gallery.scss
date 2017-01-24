@@ -10,7 +10,7 @@
 
   &__pair {
     position: relative;
-    // test
+    zoom: 1;
 
     @include susy-breakpoint($bp-sm) {
       display: flex;
