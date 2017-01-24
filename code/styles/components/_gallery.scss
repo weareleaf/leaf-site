@@ -18,6 +18,7 @@
 
   &__item {
     display: block;
+    flex: 1;
     margin-bottom: $spacing-vertical;
 
     @include susy-breakpoint($bp-sm) {
@@ -26,6 +27,10 @@
       &:first-child {
         margin-right: $spacing-horizontal-sm;
       }
+    }
+
+    &--wide {
+      flex: 1.425;
     }
 
     &__image {

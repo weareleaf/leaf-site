@@ -12,11 +12,11 @@
 
 mixin gallery-item(args)
   if args.href
-    a.gallery__item.gallery__item--link(href=args.href)
+    a.gallery__item.gallery__item--link(href=args.href, class=args.wide ? "gallery__item--wide" : null)
       img.gallery__item__image(src="/images/" + args.src)
       .gallery__item__info
         span.gallery__item__intro #{args.intro}
         span.gallery__item__title #{args.title}
   else
-    .gallery__item
+    .gallery__item(class=args.wide ? "gallery__item--wide" : null)
       img.gallery__item__image(src="/images/" + args.src)
