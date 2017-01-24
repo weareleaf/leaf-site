@@ -1,17 +1,21 @@
 .masthead {
-  display: flex;
-  align-items: center;
+  display: table;
+  width: 100%;
 
   &__logo {
-    flex: 1 0 auto;
+    display: table-cell;
+    vertical-align: middle;
 
     &__link {
-      display: block;
-      max-width: 3.25em;
-    }
 
-    svg:hover path {
-     opacity: .9;
-   }
+      svg {
+        display: block;
+        width: 3.25em;
+
+        &:hover path {
+          opacity: .9;
+        }
+      }
+    }
   }
 }

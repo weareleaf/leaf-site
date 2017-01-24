@@ -1,23 +1,26 @@
 .navigation {
+  text-align: right;
+  vertical-align: middle;
 
   &.on {
     @include absolute-fill;
     background-color: $coal;
+
   }
 
   &__inner {
     @include container;
-    margin: 0 auto;
-    overflow-y: scroll;
-    -webkit-overflow-scrolling: touch;
-    padding: $spacing-vertical-lg $padding-horizontal-fluid;
+    padding: $spacing-vertical-lg 0;
 
     .navigation.on & {
+      @include padding-horizontal($padding-horizontal-fluid);
       background-color: $coal;
       height: 100%;
       position: fixed;
       left: 0;
       margin: 0 auto;
+      -webkit-overflow-scrolling: touch;
+      overflow-y: scroll;
       right: 0;
       top: 0;
       width: 100%;
