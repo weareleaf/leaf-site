@@ -1,5 +1,6 @@
 html {
   opacity: 0;
+  -ms-overflow-style: -ms-autohiding-scrollbar;
 
   &.wf-active-override,
   &.wf-active {
