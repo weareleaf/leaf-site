@@ -5,6 +5,8 @@
   font: inherit;
   margin: -.25em;
   padding: .25em;
+  position: relative;
+  top: .3em;
   transition: opacity $base-duration $base-timing;
 
   &:hover {
