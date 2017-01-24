@@ -9,6 +9,7 @@
 .gallery {
 
   &__pair {
+    position: relative;
 
     @include susy-breakpoint($bp-sm) {
       display: flex;
