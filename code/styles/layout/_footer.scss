@@ -56,7 +56,7 @@
       }
 
       @include susy-breakpoint($bp-xl) {
-        flex-grow: 1;
+        flex: 1 0 auto;
         order: -1;
         padding-bottom: $padding-vertical;
         width: auto;
