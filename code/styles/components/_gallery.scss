@@ -20,6 +20,7 @@
     display: block;
     flex: 1;
     margin-bottom: $spacing-vertical;
+    position: relative; // Fixes clicking bug in Android 5 & 6
 
     @include susy-breakpoint($bp-sm) {
       margin-bottom: $spacing-vertical-sm;
