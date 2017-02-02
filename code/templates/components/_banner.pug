@@ -10,4 +10,10 @@
 
 mixin banner(args)
   .banner
-    img.banner__image(src="/images/" + args.src, alt=args.alt)
+    if args.desktop_srcset && args.mobile_srcset
+      picture.banner__image
+        source(media="(min-width: 36em)" srcset=args.desktop_srcset)
+        source(srcset=args.mobile_srcset)
+        img.banner__image(src=args.src, alt=args.alt)
+    else
+      img.banner__image(src=args.src, alt=args.alt)
