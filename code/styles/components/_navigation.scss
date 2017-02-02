@@ -10,7 +10,7 @@
 
   &__inner {
     @include container;
-    padding: $spacing-vertical-lg 0;
+    @include padding-vertical($spacing-vertical-lg);
 
     .navigation.on & {
       @include padding-horizontal($padding-horizontal-fluid);
@@ -34,12 +34,12 @@
   margin: 0;
   padding: 0;
   list-style: none;
-  margin: 1.5em auto;
+  margin: 0 auto 2em;
   text-align: center;
 
   @include susy-breakpoint($bp-lg) {
     @include margin-vertical(4em);
-    }
+  }
 
   @include susy-breakpoint($bp-md) {
 
@@ -54,7 +54,7 @@
 
   &__item {
 
-    @include susy-breakpoint($bp-md) {
+    @include susy-breakpoint($bp-sm) {
       float: left;
       width: 50%;
 
@@ -94,6 +94,10 @@
     padding: .75rem;
     text-decoration: none;
     width: 100%;
+
+    @include susy-breakpoint($bp-sm) {
+      padding: $padding-vertical-sm;
+    }
 
     @include susy-breakpoint($bp-md) {
       padding: $padding-vertical;
