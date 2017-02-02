@@ -34,10 +34,15 @@
   margin: 0;
   padding: 0;
   list-style: none;
-  margin: 4em auto;
+  margin: 1.5em auto;
   text-align: center;
 
   @include susy-breakpoint($bp-lg) {
+    @include margin-vertical(4em);
+    }
+
+  @include susy-breakpoint($bp-md) {
+
     &:hover a {
       color: rgba($white, .15);
     }
@@ -49,7 +54,7 @@
 
   &__item {
 
-    @include susy-breakpoint($bp-lg) {
+    @include susy-breakpoint($bp-md) {
       float: left;
       width: 50%;
 
@@ -80,27 +85,26 @@
   }
 
   &__link {
+    color: white;
+    display: block;
     font-family: $font-serif;
-    font-size: 2.5em;
+    font-size: 1.75rem;
     line-height: $heading-line-height;
     margin-bottom: 0;
-    padding: $padding-vertical-sm;
+    padding: .75rem;
+    text-decoration: none;
+    width: 100%;
 
     @include susy-breakpoint($bp-md) {
       padding: $padding-vertical;
+    }
+
+    @include susy-breakpoint($bp-lg) {
+      font-size: 2.5rem;
     }
   }
 
   &.hidden {
     display: none;
-  }
-
-  a {
-    text-decoration: none;
-    color: white;
-    font-size: 3em;
-    line-height: 1.5;
-    width: 100%;
-    display: block;
   }
 }
