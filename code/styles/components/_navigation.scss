@@ -96,7 +96,7 @@
     width: 100%;
 
     @include susy-breakpoint($bp-sm) {
-      padding: $padding-vertical-sm;
+      padding: 1em;
     }
 
     @include susy-breakpoint($bp-md) {
