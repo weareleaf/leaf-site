@@ -79,6 +79,10 @@ body {
   overflow: hidden;
 }
 
+.bg--coal-light {
+  background-color: lighten($coal, 3%);
+}
+
 .bg--white {
   background-color: $white;
 

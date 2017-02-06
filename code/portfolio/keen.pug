@@ -81,3 +81,25 @@ block content
           h3 The outcome
 
           p Keen launched at the beginning of 2017, and has already made its first successful sales.
+
+    section.section.section--center.bg--coal-light
+      .section__inner
+
+        .section__intro
+          h2.section__heading Related projects
+          p.section__text This isn't our first rodeo. Here's some similar projects that we've recently been working on.
+
+        //- Related content
+        +related-content([{
+          href: "cakeboxx",
+          intro: "Case study",
+          src: "/images/responsive/work/cakeboxx-855.jpg",
+          srcset: "/images/responsive/work/cakeboxx-200.jpg 200w, /images/responsive/work/cakeboxx-400.jpg 400w, /images/responsive/work/cakeboxx-600.jpg 600w, /images/responsive/work/cakeboxx-800.jpg 800w, /images/responsive/work/cakeboxx-855.jpg 855w",
+          title: "CakeBoxx Technology"
+        },{
+          href: "zendesk",
+          intro: "Case study",
+          src: "/images/responsive/work/zendesk-600.jpg",
+          srcset: "/images/responsive/work/zendesk-200.jpg 200w, /images/responsive/work/zendesk-400.jpg 400w, /images/responsive/work/zendesk-600.jpg 600w",
+          title: "Zendesk"
+        }])
