@@ -55,7 +55,7 @@
 
     	&::before {
         @include absolute-fill;
-    		background-color: $leaf-green;
+    		background-color: $leaf-green-dark;
       	content: '';
     		opacity: 0;
         transition: opacity $base-duration $base-timing;
