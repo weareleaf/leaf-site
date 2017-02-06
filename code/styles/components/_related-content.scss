@@ -137,7 +137,7 @@
     }
 
     @include susy-breakpoint($bp-md) {
-      margin-bottom: $spacing-vertical-sm;
+      margin-bottom: 0;
       margin-right: $spacing-horizontal-sm;
 
       &:last-child {
