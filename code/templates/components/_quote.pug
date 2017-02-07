@@ -1,0 +1,14 @@
+//- Quote
+//-
+//- A component for displaying a nice, promotional quote about ourselves
+
+
+//- Options
+//- -- author
+//- -- quote
+
+
+mixin quote(args)
+  blockquote.quote
+    .quote__text!= args.quote
+    cite.quote__author!= args.author
