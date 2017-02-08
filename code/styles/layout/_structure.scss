@@ -12,6 +12,7 @@ html {
 body {
   background-color: $base-background-color;
   margin: 0; // Remove this when Normalize is working
+  min-height: 100%;
 }
 
 .section {
