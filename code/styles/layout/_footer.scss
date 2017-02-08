@@ -68,6 +68,7 @@
     }
   }
 
+
   &__list {
     margin-bottom: 0;
 
@@ -79,7 +80,7 @@
           display: inline-block;
 
           &:not(:last-child)::after {
-            content: ', ';
+            content: '\002C ';
           }
         }
       }

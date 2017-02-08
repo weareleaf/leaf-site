@@ -119,7 +119,7 @@ gulp.task('misc', () => {
 gulp.task('templates', () => {
   return gulp.src(PUG_FILES)
     .pipe(pug({
-      pretty: true
+      pretty: false
     }))
     .on('error', logError)
     .pipe(gulp.dest(BUILD_DEST))
