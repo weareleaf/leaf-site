@@ -11,7 +11,7 @@ html {
 
 body {
   background-color: $base-background-color;
-  margin: 0; // Remove this when Normalize is working
+  margin: 0;
   min-height: 100%;
 }
 
@@ -30,16 +30,12 @@ body {
   &__inner {
     @include container;
     padding: 0 $padding-horizontal-fluid;
-
-    > :last-child {
-      //margin-bottom: 0;
-    }
   }
 
   &__content {
 
     @include susy-breakpoint($bp-xl) {
-      @include span(8 of 12);
+      @include span(8);
     }
 
     &:not(:first-of-type) {
@@ -53,8 +49,7 @@ body {
     padding: $padding-vertical $padding-horizontal;
 
     @include susy-breakpoint($bp-xl) {
-      @include span(3 of 12);
-      @include pre(1);
+      @include span(3);
       @include last;
     }
   }
