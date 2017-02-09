@@ -2,35 +2,15 @@
   position: relative;
   text-align: left;
 
-  @include susy-breakpoint($bp-md) {
-    width: 100%;
-  }
-
-  @include susy-breakpoint($bp-lg) {
-    @include pre(1);
-    @include span(10);
-  }
-
-  @include susy-breakpoint($bp-xl) {
-    @include pre(2);
-    @include span(8);
-  }
-
-
   &__inner {
 
     @include susy-breakpoint($bp-md) {
       display: flex;
+      justify-content: center;
     }
   }
 
   &__item {
-
-    @include susy-breakpoint($bp-md) {
-      display: flex;
-      overflow: hidden;
-      position: relative;
-    }
 
     &::before {
       @include absolute-fill;
@@ -54,9 +34,9 @@
       }
 
       span {
+        @include padding-vertical(.25rem);
         display: block;
         line-height: 1;
-        @include padding-vertical(.25rem);
 
         @include susy-breakpoint($bp-lg) {
           opacity: 0;
@@ -108,11 +88,17 @@
 
   &__item {
     display: block;
-    flex: 1;
     margin-bottom: $spacing-vertical;
     position: relative; // Fixes clicking bug in Android 5 & 6
 
+    @include susy-breakpoint($bp-md) {
+      display: inline-block;
+      width: 50%;
+    }
+
     @include susy-breakpoint($bp-lg) {
+
+
       &:focus,
       &:hover {
 
@@ -135,6 +121,10 @@
       }
     }
 
+    @include susy-breakpoint($bp-xl) {
+      max-width: 24em;
+    }
+
     @include susy-breakpoint($bp-md) {
       margin-bottom: 0;
       margin-right: $spacing-horizontal-sm;
@@ -148,14 +138,12 @@
       display: block;
 
       @include susy-breakpoint($bp-md) {
-        display: flex;
-        height: 20em;
+        height: 16em;
         object-fit: cover;
-        width: 100%;
       }
 
       @include susy-breakpoint($bp-lg) {
-        height: 100%;
+        height: 24em;
       }
     }
   }
