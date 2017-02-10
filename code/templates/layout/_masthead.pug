@@ -1,0 +1,14 @@
+//- Masthead
+//-
+//- A component for displaying a nice, promotional quote about ourselves
+
+
+//- Options
+
+
+mixin masthead(logoArgs, navigationArgs)
+  .masthead
+    .masthead__logo
+      a.masthead__logo__link(href="/")
+        +logo(logoArgs)
+    +navigation(navigationArgs)

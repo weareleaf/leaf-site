@@ -4,13 +4,10 @@
 
 
 //- Options
-//- -- intro (page header)
-//- -- title (page header)
 
 
-mixin hero-banner(args)
+mixin hero-banner(heroBannerArgs, logoArgs, hamburgerArgs, pageHeaderArgs)
   .hero-banner
     .hero-banner__inner
-      include ../layout/masthead
-      if args
-        +page-header(args)
+      +masthead(logoArgs, hamburgerArgs)
+      +page-header(pageHeaderArgs)

@@ -1,8 +1,8 @@
 .hero-banner {
   background-color: $leaf-green-dark;
 
-  .page--inverse & {
-    background-color: $white;
+  .logo__path {
+    fill: $white;
   }
 
   &__inner {
