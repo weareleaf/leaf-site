@@ -6,7 +6,7 @@
 //- Options
 //- -- image
 //- -- intro
-//- -- link (optional)
+//- -- links (optional)
 //- -- name
 //- -- text
 
@@ -24,4 +24,7 @@ mixin biography(args)
       if args.links
         ul.biography__list
           each item in args.links
-            +biography-item(item)
+            - var href = (typeof item.href === "undefined") ? "#" : item.href
+
+            li.biography__list__item
+              a.biography__list__link(href=href) #{item.site}

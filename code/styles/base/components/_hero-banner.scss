@@ -1,8 +1,7 @@
 .hero-banner {
-  background-color: $leaf-green-dark;
 
-  .logo__path {
-    fill: $white;
+  &--green {
+    background-color: $leaf-green-dark;
   }
 
   &__inner {

@@ -1,0 +1,18 @@
+//- Banner
+//-
+//- A full width banner image, to be displayed below the hero banner component
+
+
+//- Options
+//- -- alt
+//- -- src
+
+
+mixin banner(args)
+  if args.desktop_srcset && args.mobile_srcset
+    picture.banner
+      source(media="(min-width: 36em)" srcset=args.desktop_srcset)
+      source(srcset=args.mobile_srcset)
+      img.banner(src=args.src, alt=args.alt)
+  else
+    img.banner(src=args.src, alt=args.alt)

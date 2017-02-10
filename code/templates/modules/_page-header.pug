@@ -9,7 +9,9 @@
 
 
 mixin page-header(args)
-  .page-header
+  - var pageHeaderClass = args.inverse ? "page-header--inverse" : null
+
+  .page-header(class=pageHeaderClass)
     .page-header__inner
       h1.page-header__title #{args.title}
       p.page-header__intro #{args.intro}

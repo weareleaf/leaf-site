@@ -1,0 +1,12 @@
+//- Hamburger
+//-
+//- A simple menu button
+
+
+mixin hamburger(args)
+  if args
+    - var hamburgerClass = args.white ? "hamburger--white" : null
+
+  button.hamburger(class=hamburgerClass, type="button")
+    span.hamburger__inner
+      span.hamburger__content
