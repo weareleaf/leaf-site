@@ -1,8 +1,10 @@
 // Colors
 $black: #1a2129;
-$coal: #2e3134;
+$coal: #2f3134;
 $dark-smoke: #5c646d;
 $smoke: #a1aab5;
+$stone: #c4c8ce;
+$light-stone: #e1e3e6;
 $snow: #f7f8f9;
 $white: #fff;
 
@@ -20,8 +22,9 @@ $base-background-color: $black;
 // Border
 $base-border-color: $dark-smoke;
 $base-border-style: solid;
-$base-border-width: .05em;
+$base-border-width: .05rem;
 $base-border: $base-border-style $base-border-width $base-border-color;
+$base-width-lg: .1rem;
 
 // Brand
 $brand-primary: $leaf-green;
@@ -47,8 +50,11 @@ $h4-font-size: .9rem;
 $p-font-size: 1.1rem;
 
 // Forms
-$input-background-color: #3a465d;
-$input-placeholder-color: #a9b3c7;
+$input-background-color: transparent;
+$input-border-color: $light-stone;
+$input-color: $leaf-green-dark;
+$input-placeholder-color: $stone;
+$label-color: $coal;
 
 // Line height
 $base-line-height: 1.6;

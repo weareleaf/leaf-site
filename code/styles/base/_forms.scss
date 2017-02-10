@@ -1,0 +1,139 @@
+form {
+  margin-bottom: $spacing-vertical-lg;
+  text-align: center;
+}
+
+fieldset {
+  background-color: transparent;
+  border: 0;
+  margin: 0;
+  padding: 0;
+}
+
+legend {
+  box-sizing: border-box;
+  color: inherit;
+  display: table;
+  margin-bottom: $spacing-vertical-sm;
+  max-width: 100%;
+  padding: 0;
+  white-space: normal;
+}
+
+label {
+  color: $label-color;
+  display: block;
+  font-family: $font-sans-serif;
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-bottom: $spacing-vertical-xs;
+}
+
+input,
+select,
+textarea {
+  line-height: 1.2;
+  padding: 0 $padding-horizontal-sm $padding-vertical-sm;
+}
+
+input,
+textarea {
+  background-color: $input-background-color;
+  border: none;
+  border-bottom: $base-border-style $base-width-lg $input-border-color;
+  border-radius: $base-border-radius;
+  color: $input-color;
+  display: block;
+  font-family: $font-sans-serif;
+  font-size: 1.35em;
+  font-weight: 600;
+  outline: 0;
+  text-align: center;
+  transition:
+    background-color $base-duration $base-timing,
+    border-color $base-duration $base-timing;
+  width: 100%;
+
+  &:hover {
+    border-color: $leaf-green-dark;
+  }
+
+  &:focus {
+    border-color: $action-color;
+    box-shadow: none;
+    outline: none;
+  }
+
+  &:disabled {
+    background-color: shade($base-background-color, 5%);
+    cursor: not-allowed;
+
+    &:hover {
+      border: $base-border;
+    }
+  }
+
+  &::placeholder {
+    color: $input-placeholder-color;
+  }
+}
+
+::-webkit-input-placeholder {
+  line-height: normal;
+}
+
+textarea {
+  line-height: $base-line-height;
+  max-height: 18em;
+  min-height: 10em;
+  overflow: auto;
+  resize: vertical;
+}
+
+progress {
+ display: inline-block;
+ vertical-align: baseline;
+}
+
+[type='checkbox'],
+[type='radio'] {
+  box-sizing: border-box;
+  padding: 0;
+}
+
+[type='number']::-webkit-inner-spin-button,
+[type='number']::-webkit-outer-spin-button {
+ height: auto;
+}
+
+[type='search'] {
+  -webkit-appearance: textfield;
+}
+
+[type='search']::-webkit-search-cancel-button,
+[type='search']::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+
+.form-group {
+  margin-bottom: $spacing-vertical;
+
+  .error {
+    color: red;
+    padding: $padding-vertical-xs 0;
+    font-size: .9em;
+  }
+}
+
+.input-group {
+  display: flex;
+
+  &__input {
+
+  }
+
+  &__button {
+    flex: 1 0 auto;
+    margin-left: $spacing-horizontal-xs;
+  }
+}
