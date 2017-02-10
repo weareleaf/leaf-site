@@ -1,24 +1,3 @@
-html {
-  opacity: 0;
-  -ms-overflow-style: -ms-autohiding-scrollbar;
-
-  &.wf-active-override,
-  &.wf-active {
-    opacity: 1;
-    transition: opacity 800ms ease-in;
-  }
-}
-
-body {
-  background-color: $base-background-color;
-  margin: 0;
-  min-height: 100%;
-}
-
-.project-planner-page  {
-  
-}
-
 .section {
   padding: $padding-vertical-lg 0;
 
@@ -39,7 +18,7 @@ body {
   &__content {
 
     @include susy-breakpoint($bp-xl) {
-      @include span(8);
+      //@include span(8);
     }
 
     &:not(:first-of-type) {
@@ -73,73 +52,6 @@ body {
   &__text {
     font-size: 1.35em;
   }
-}
-
-.no-scroll {
-  bottom: 0;
-  left: 0;
-  overflow: hidden;
-  position: fixed;
-  right: 0;
-  top: 0;
-}
-
-.bg--coal-light {
-  background-color: lighten($black, 3%);
-}
-
-.bg--white {
-  background-color: $white;
-
-  h2,
-  h3 {
-    color: #34393F;
-    font-weight: 600;
-  }
-}
-
-.no-margin {
-  margin: 0;
-}
-
-.no-margin-top {
-  margin-top: 0;
-}
-
-.no-padding {
-  padding: 0;
-}
-
-.animated {
-  animation-duration: 750ms;
-  animation-fill-mode: both;
-}
-
-@keyframes fade {
-  from {
-    opacity: 0;
-    transform: translate3d(0, 5%, 0);
-  }
-
-  to {
-    opacity: 1;
-    transform: none;
-  }
-}
-
-.fadeInUp {
-  animation-name: fade;
-}
-
-.sr-only,
-%sr-only {
-  clip: rect(1px, 1px, 1px, 1px);
-  clip-path: polygon(0px 0px, 0px 0px,0px 0px, 0px 0px);
-  position: absolute !important;
-  white-space: nowrap;
-  height: 1px;
-  width: 1px;
-  overflow: hidden;
 }
 
 .section__aside:not(.section__aside--inline) {
@@ -179,9 +91,4 @@ body {
       }
     }
   }
-}
-
-.logo-bar {
-  display: block;
-  margin: 0 auto;
 }

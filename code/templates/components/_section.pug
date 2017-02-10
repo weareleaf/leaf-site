@@ -9,12 +9,15 @@
 
 
 mixin section(args)
-  section.section(class=attributes.class ? attributes.class : null)
+  if attributes.class
+    - var sectionClass = attributes.class ? attributes.class : null
+
+  section.section(class=sectionClass)
     .section__inner
-      if args.title
+      if args.heading
         .section__intro
           h2.section__heading!= args.heading
-          if args.description
+          if args.text
             p.section__text!= args.text
       .section__content(class=args.narrow ? "section__content--narrow" : null)
         block

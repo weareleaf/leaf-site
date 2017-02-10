@@ -1,6 +1,6 @@
 {
   "name": "leaf-website",
-  "description": "First version of the Leaf website",
+  "description": "The Leaf website",
   "repository": "https://github.com/leafagency/leaf-site",
   "lisence": "MIT",
   "readmeFilename": "README.md",
@@ -17,7 +17,6 @@
     "babel-loader": "^6.2.10",
     "babel-preset-es2015": "^6.18.0",
     "bourbon": "^4.2.7",
-    "bourbon-neat": "^1.7.4",
     "del": "^1.1.1",
     "gulp": "^3.8.11",
     "gulp-autoprefixer": "^2.2.0",
@@ -37,7 +36,6 @@
     "http-rewrite-middleware": "^0.1.6",
     "imagemin-jpeg-recompress": "^5.0.0",
     "lodash.assign": "^4.0.6",
-    "normalize-scss": "^4.0.3",
     "run-sequence": "^1.0.2",
     "sass": "^0.5.0",
     "superagent": "^1.8.3",

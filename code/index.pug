@@ -24,43 +24,40 @@ block content
     }
   })
 
-  main
+  //- Section
+  +section({
+    heading: "Portfolio",
+    text: "Our work is the ultimate reflection of ourselves. We've worked on some pretty exciting projects recently; here are some of our favourites."
+  })
 
-    section.section
-      .section__inner
+    //- Gallery
+    +gallery([{
+      href: "portfolio/keen",
+      intro: "Case study",
+      src: "/images/responsive/work/keen-600.jpg",
+      srcset: "/images/responsive/work/keen-200.jpg 200w, /images/responsive/work/keen-400.jpg 400w, /images/responsive/work/keen-600.jpg 600w",
+      title: "Keen"
+    },{
+      href: "portfolio/cakeboxx",
+      intro: "Case study",
+      src: "/images/responsive/work/cakeboxx-855.jpg",
+      srcset: "/images/responsive/work/cakeboxx-200.jpg 200w, /images/responsive/work/cakeboxx-400.jpg 400w, /images/responsive/work/cakeboxx-600.jpg 600w, /images/responsive/work/cakeboxx-800.jpg 800w, /images/responsive/work/cakeboxx-855.jpg 855w",
+      title: "CakeBoxx Technology",
+      wide: true
+    }])
 
-        .section__intro
-          h2.section__heading Portfolio
-          p.section__text Our work is the ultimate reflection of ourselves. We've worked on some pretty exciting projects recently; here are some of our favourites.
+  //- Section
+  +section({}).bg--white.no-padding
 
-        //- Gallery
-        +gallery([{
-          href: "portfolio/keen",
-          intro: "Case study",
-          src: "/images/responsive/work/keen-600.jpg",
-          srcset: "/images/responsive/work/keen-200.jpg 200w, /images/responsive/work/keen-400.jpg 400w, /images/responsive/work/keen-600.jpg 600w",
-          title: "Keen"
-        },{
-          href: "portfolio/cakeboxx",
-          intro: "Case study",
-          src: "/images/responsive/work/cakeboxx-855.jpg",
-          srcset: "/images/responsive/work/cakeboxx-200.jpg 200w, /images/responsive/work/cakeboxx-400.jpg 400w, /images/responsive/work/cakeboxx-600.jpg 600w, /images/responsive/work/cakeboxx-800.jpg 800w, /images/responsive/work/cakeboxx-855.jpg 855w",
-          title: "CakeBoxx Technology",
-          wide: true
-        }])
-
-    section.section.bg--white.no-padding
-      .section__inner
-
-        //- Block
-        +block([{
-          href: "design",
-          intro: "Creative",
-          text: "Interface design is the marriage of user and business goals, using structure, iteration and style to create a window into your product.",
-          title: "Interface design"
-        },{
-          href: "development",
-          intro: "Engineering",
-          text: "Expertly crafted, thoroughly thought out web and mobile applications; we take software engineering incredibly seriously.",
-          title: "Development"
-        }])
+    //- Block
+    +block([{
+      href: "design",
+      intro: "Creative",
+      text: "Interface design is the marriage of user and business goals, using structure, iteration and style to create a window into your product.",
+      title: "Interface design"
+    },{
+      href: "development",
+      intro: "Engineering",
+      text: "Expertly crafted, thoroughly thought out web and mobile applications; we take software engineering incredibly seriously.",
+      title: "Development"
+    }])

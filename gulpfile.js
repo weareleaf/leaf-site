@@ -23,10 +23,7 @@ const imageminJpegRecompress = require('imagemin-jpeg-recompress')
 const MISC_FILES = ['./code/CNAME', './code/**/*.mp4', './code/**/*.ogv', './code/**/*.webm', './code/**/*.eot', './code/**/*.ttf', './code/**/*.woff', './code/**/*.woff2']
 const PUG_FILES = ['./code/**/*.pug', './code/**/*.jade']
 const SASS_FILES = ['./code/**/*.scss']
-const SASS_INCLUDE_PATHS = [
-  'node_modules/normalize-scss/sass',
-  'node_modules/susy/sass'
-]
+const SASS_INCLUDE_PATHS = ['node_modules/susy/sass']
 const FAVICON_BASE = ['./code/favicons']
 const FAVICON_FILES = [(FAVICON_BASE + '/**/*')]
 const IMAGE_FILES = ['./code/**/*.png','./code/**/*.jpg','./code/**/*.gif','./code/**/*.jpeg', './code/**/*.svg', '!./code/images/favicons/**/*']

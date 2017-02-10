@@ -1,5 +1,4 @@
 // Vendor
-@import 'normalize';
 @import 'susy';
 @import 'utils/utils';
 
@@ -12,24 +11,28 @@
 @import 'base/lists';
 @import 'base/typography';
 
-// Layout
-@import 'layout/footer';
-@import 'layout/masthead';
-@import 'layout/page';
-@import 'layout/structure';
+// Elements
+@import 'elements/animate';
+@import 'elements/banner';
+@import 'elements/hamburger';
+@import 'elements/logo';
 
 // Components
-@import 'components/banner';
-@import 'components/biography';
-@import 'components/block';
-@import 'components/buckets';
-@import 'components/gallery';
-@import 'components/hamburger';
-@import 'components/hero-banner';
-@import 'components/logo';
-@import 'components/navigation';
-@import 'components/page-header';
-@import 'components/positions';
 @import 'components/quote';
-@import 'components/related-content';
-@import 'components/snapshot';
+@import 'components/section';
+@import 'components/structure';
+@import 'components/page';
+
+// Modules
+@import 'modules/biography';
+@import 'modules/block';
+@import 'modules/buckets';
+@import 'modules/footer';
+@import 'modules/gallery';
+@import 'modules/hero-banner';
+@import 'modules/masthead';
+@import 'modules/navigation';
+@import 'modules/page-header';
+@import 'modules/positions';
+@import 'modules/related-content';
+@import 'modules/snapshot';
