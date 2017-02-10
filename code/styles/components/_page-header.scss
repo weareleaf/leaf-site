@@ -2,6 +2,10 @@
   @include clearfix;
   padding-top: $padding-vertical-xs;
 
+  .page--inverse & {
+    text-align: center;
+  }
+
   &__title {
     margin-bottom: $spacing-vertical;
 
@@ -17,13 +21,18 @@
     line-height: $heading-line-height;
     margin-bottom: 0;
 
+    .page--inverse & {
+      color: $coal
+    }
+
     @include susy-breakpoint($bp-sm) {
       font-size: 2rem;
     }
 
     @include susy-breakpoint($bp-lg) {
-      @include span(10 of 12);
+      //@include span(10 of 12);
       font-size: 2.5rem;
+      width: span(10);
     }
   }
 }

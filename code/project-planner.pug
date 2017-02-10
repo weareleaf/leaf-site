@@ -1,14 +1,14 @@
 extends ./templates/base/_base
 
 block prepend vars
-  -var bodyClass = "project-planner-page"
+  -var bodyClass = "project-planner-page page--inverse"
   -var title = "Leaf"
 
 block content
 
   //- Hero banner
   +hero-banner({
-    intro: "Our project planner usually takes around 4-5 minutes to complete, but allows us to understand your motivations, needs, and ultimately your goals.",
+    intro: "This only takes a few minutes to complete, but allows us to understand your motivations and your goals.",
     title: "Project planner"
   })
 
@@ -19,19 +19,62 @@ block content
 
         .section__content
 
-          .section__intro
-            h2.section__heading Your details
-
           form.form(action="submit", autocomplete="off")
 
-            .form__group
-              input(type="text", name="name", required)
-              label(for="name") Your name
+            h2.form__heading About you
 
             .form__group
-              input(type="text", name="organisation", required)
-              label(for="organisation") Company / Organisation
+              label(for="name") What's your <span>name</span>?
+              input(type="text", name="name", placeholder="Samwise Gamgee", required)
 
             .form__group
-              input(type="email", name="email", required)
-              label(for="email") Email address
+              label(for="email") What's your <span>email address</span>?
+              input(type="email", name="email", placeholder="samwise@gmail.com", required)
+
+            .form__group
+              label(for="organisation") What's your <span>company or organsation</span>?
+              input(type="text", name="organisation", placeholder="Fellowship of the Ring", required)
+
+            hr
+
+            h2.form__heading The project
+
+            .form__group
+              label Is it a <span>brand new product</span> or a <span>re-design</span> of existing product?
+              .multiple-choice
+                .multiple-choice__item
+                  input(id="newProduct", name="productStatus", type="radio", checked)
+                  label.radio-buttons__label(for="newProduct") New product
+                .multiple-choice__item
+                  input(id="redesign", name="productStatus", type="radio")
+                  label.multiple-choice__label(for="redesign") Re-design
+
+            .form__group
+              label What <span>type of products</span> are you looking for?
+              .multiple-choice
+                .multiple-choice__item
+                  input(id="website", name="productType", type="checkbox")
+                  label.radio-buttons__label(for="website") Website
+                .multiple-choice__item
+                  input(id="webApp", name="productType", type="checkbox")
+                  label.multiple-choice__label(for="webApp") Web app
+                .multiple-choice__item
+                  input(id="website", name="productType", type="checkbox")
+                  label.radio-buttons__label(for="website") Mobile app
+                .multiple-choice__item
+                  input(id="other", name="productType", type="checkbox")
+                  label.multiple-choice__label(for="other") Other
+
+            .form__group
+              label(for="name") <span>How much</span> are you looking to invest?
+              input(type="text", name="name", placeholder="£15,000", required)
+
+            .form__group
+              label(for="email") Do you have any <span>timescales</span> in mind? <span>(optional)</span>
+              input(type="email", name="email", placeholder="samwise@gmail.com", required)
+
+            .form__group
+              label(for="organisation") Tell us about the project, and what you're <span> looking to achieve</span>?
+              input(type="text", name="organisation", placeholder="Fellowship of the Ring", required)
+
+            input.button(type="submit", value="Send away")

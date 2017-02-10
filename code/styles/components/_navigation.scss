@@ -4,7 +4,7 @@
 
   &.on {
     @include absolute-fill;
-    background-color: $coal;
+    background-color: $black;
     height: 100%;
     width: 100%;
   }
@@ -15,7 +15,7 @@
 
     .navigation.on & {
       @include padding-horizontal($padding-horizontal-fluid);
-      background-color: $coal;
+      background-color: $black;
       height: 100%;
       position: fixed;
       left: 0;

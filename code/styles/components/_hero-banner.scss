@@ -1,6 +1,10 @@
 .hero-banner {
   background-color: $leaf-green-dark;
 
+  .page--inverse & {
+    background-color: $white;
+  }
+
   &__inner {
     @include container;
     padding: 0 $padding-horizontal-fluid $spacing-vertical-lg;
