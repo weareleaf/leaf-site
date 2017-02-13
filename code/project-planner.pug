@@ -75,15 +75,19 @@ block content
               span.control__label Other
 
         .form-group
-          label.form-group__label(for="name") <mark class="form-group__label__highlight">How much</mark> are you looking to invest?
-          input.form-group__input(type="text", name="name", placeholder="£15,000", required)
+          label.form-group__label(for="url") What's the <mark class="form-group__label__highlight">URL</mark> of the website?
+          input.form-group__input(type="url", name="url", placeholder="lordoftherings.com", required)
 
         .form-group
-          label.form-group__label(for="email") Do you have any <mark class="form-group__label__highlight">timescales</mark> in mind? <span class="form-group__label__optional">(optional)</span>
-          input.form-group__input(type="email", name="email", placeholder="samwise@gmail.com", required)
+          label.form-group__label(for="budget") <mark class="form-group__label__highlight">How much</mark> are you looking to invest?
+          input.form-group__input(type="text", name="budget", placeholder="£15,000", required)
 
         .form-group
-          label.form-group__label(for="organisation") Tell us about the project, and what you're <mark class="form-group__label__highlight">looking to achieve</mark>?
-          input.form-group__input(type="text", name="organisation", placeholder="Fellowship of the Ring", required)
+          label.form-group__label(for="timescales") Do you have any <mark class="form-group__label__highlight">timescales</mark> in mind? <span class="form-group__label__optional">(optional)</span>
+          input.form-group__input(type="text", name="timescales", placeholder="We need it live by May")
+
+        .form-group
+          label.form-group__label(for="description") Tell us about the project, and <mark class="form-group__label__highlight">what you're looking to achieve</mark>?
+          textarea.form-group__input(name="description", placeholder="The more you can share, the better", required)
 
       input.button(type="submit", value="Send away")
