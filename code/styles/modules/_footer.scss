@@ -2,6 +2,7 @@
   background-color: $leaf-green-dark;
   color: $white;
   font-family: $font-sans-serif;
+  text-align: left;
 
   &__inner {
     @include container;

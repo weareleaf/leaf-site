@@ -1,23 +1,24 @@
-.btn {
+.button {
   appearance: none;
-  background-color: $leaf-green;
+  background-color: $leaf-green-dark;
   border: none;
-  border-radius: 100px;
+  border-radius: $border-radius-rounded;
   color: $white;
-  display: inline-block;
-  font-family: inherit;
-  font-size: 1em;
+  display: block;
+  font-family: $font-sans-serif;
+  font-size: .8em;
   font-weight: 600;
   padding: $padding-vertical $padding-horizontal-lg;
   transition: background-color $base-duration $base-timing;
+  width: 100%;
 
-  &:hover {
-    background-color: lighten($leaf-green, 5%);
-    cursor: pointer;
+  @include susy-breakpoint($bp-md) {
+    display: inline-block;
+    width: auto;
   }
 
-  &--block {
-    display: block;
-    width: 100%;
+  &:hover {
+    background-color: lighten($leaf-green-dark, 5%);
+    cursor: pointer;
   }
 }

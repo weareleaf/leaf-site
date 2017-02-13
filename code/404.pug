@@ -24,15 +24,12 @@ block content
     }
   })
 
-  main
+  //- Section
+  +section({
+    heading: "Lets get you back on track",
+    text: "Of course, we don't know exactly what you're looking for, but here are a few useful pages to help get you going again."
+  })
 
-    section.section
-      .section__inner
-
-        .section__intro
-          h2.section__heading Lets get you back on track
-          p.section__text Of course, we don't know exactly what you're looking for, but here are a few useful pages to help get you going again.
-
-        ul.duo-nav
-          li.duo-nav__item: a.duo-nav__link(href="/") Start over #[span.duo-nav__link__text Home page]
-          li.duo-nav__item: a.duo-nav__link(href="company") Learn about Leaf #[span.duo-nav__link__text Company page]
+    ul.duo-nav
+      li.duo-nav__item: a.duo-nav__link(href="/") Start over #[span.duo-nav__link__text Home page]
+      li.duo-nav__item: a.duo-nav__link(href="company") Learn about Leaf #[span.duo-nav__link__text Company page]

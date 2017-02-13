@@ -9,10 +9,11 @@
 
 
 mixin section(args)
-  if attributes.class
-    - var sectionClass = attributes.class ? attributes.class : null
+  - var attributesClass = attributes.class ? attributes.class : null
+  - var backgroundClass = args.background ? "section--" + args.background : null
+  - var centerClass = args.center ? "section--center" : null
 
-  section.section(class=sectionClass)
+  section.section(class=attributesClass class=backgroundClass class=centerClass)
     .section__inner
       if args.heading
         .section__intro

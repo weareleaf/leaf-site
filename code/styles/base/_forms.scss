@@ -24,24 +24,22 @@ label {
   color: $label-color;
   display: block;
   font-family: $font-sans-serif;
-  font-size: 1.1rem;
+  font-size: 1.1em;
   font-weight: 600;
-  margin-bottom: $spacing-vertical-xs;
 }
 
-input,
+input:not([type='submit']),
 select,
 textarea {
   line-height: 1.2;
-  padding: 0 $padding-horizontal-sm $padding-vertical-sm;
+  padding: $padding-vertical-xs $padding-horizontal-sm $padding-vertical-sm;
 }
 
-input,
+input:not([type='submit']),
 textarea {
   background-color: $input-background-color;
   border: none;
   border-bottom: $base-border-style $base-width-lg $input-border-color;
-  border-radius: $base-border-radius;
   color: $input-color;
   display: block;
   font-family: $font-sans-serif;
@@ -55,11 +53,11 @@ textarea {
   width: 100%;
 
   &:hover {
-    border-color: $leaf-green-dark;
+    border-color: darken($input-border-color, 5%);
   }
 
   &:focus {
-    border-color: $action-color;
+    border-color: $leaf-green-dark;
     box-shadow: none;
     outline: none;
   }
@@ -116,24 +114,50 @@ progress {
 }
 
 .form-group {
-  margin-bottom: $spacing-vertical;
+  display: block;
+  margin-bottom: $spacing-vertical-lg;
 
-  .error {
-    color: red;
-    padding: $padding-vertical-xs 0;
-    font-size: .9em;
+  &--error {
+
+    #{b()}__label {
+      color: $error-color;
+
+      &__highlight {
+        background-color: rgba($error-color, .15);
+      }
+    }
+
+    #{b()}__input {
+      border-bottom-color: $error-color;
+    }
+  }
+
+  &__label__optional {
+    color: $smoke;
+  }
+
+  &__controls {
+    padding-bottom: $padding-vertical-sm;
+    margin-top: $spacing-vertical-sm;
+
+    @include susy-media($bp-sm $bp-lg) {
+      column-count: 2;
+    }
   }
 }
 
-.input-group {
-  display: flex;
+.form__section {
+  margin-bottom: $spacing-vertical-lg;
 
-  &__input {
-
+  @include susy-breakpoint($bp-md) {
+    margin-bottom: $spacing-vertical-xl;
   }
+}
 
-  &__button {
-    flex: 1 0 auto;
-    margin-left: $spacing-horizontal-xs;
-  }
+.form__heading {
+  color: rgba($stone, .25) !important;
+  font-size: calc(2em + 4vw);
+  font-weight: 900;
+  margin-bottom: 0;
+  text-transform: uppercase;
 }

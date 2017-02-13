@@ -34,6 +34,15 @@
     }
   }
 
+  &--white {
+
+    #{b()}__content,
+    #{b()}__content::before,
+    #{b()}__content::after {
+      background-color: $white;
+    }
+  }
+
   &__inner {
     display: block;
     height: 1.2em;
@@ -74,12 +83,8 @@
   &__content::before,
   &__content::after {
     height: .1rem;
-    background-color: $white;
+    background-color: $stone;
     position: absolute;
     transition: transform $base-duration $base-timing;
-
-    .page--inverse & {
-      background-color: #bdc2c8;
-    }
   }
 }

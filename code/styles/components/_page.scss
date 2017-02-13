@@ -2,17 +2,22 @@
 
   &--inverse {
     background-color: $white;
+    color: $font-color-inverse;
 
-    .masthead path {
-      fill: $leaf-green;
-    }
+    .section {
+      
+      h2,
+      h3 {
+        color: $heading-font-color-inverse;
+      }
 
-    .page-header {
-      text-align: center;
-
-      &__title {
-        color: #c4c8ce !important;
+      a {
+        color: $action-color-inverse;
       }
     }
+  }
+
+  &--center {
+    text-align: center;
   }
 }

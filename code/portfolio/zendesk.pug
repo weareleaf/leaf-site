@@ -32,65 +32,63 @@ block content
     desktop_srcset: "/images/responsive/portfolio/zendesk/banner-1000.jpg 1000w, /images/responsive/portfolio/zendesk/banner-1400.jpg 1400w, /images/responsive/portfolio/zendesk/banner-1800.jpg 1800w"
   })
 
-  main
+  +section({})
 
-    section.section
-      .section__inner
+    aside.section__content__aside.section__content__aside--inline
+      dl
+        dt Client
+        dd Zendesk
 
-        aside.section__aside.section__aside--inline
-          dl
-            dt Client
-            dd Zendesk
+      dl
+        dt Services
+        dd
+          ul
+            li Landing page design
+            li API
+            li Internationalisation
 
-          dl
-            dt Services
-            dd
-              ul
-                li Landing page design
-                li API
-                li Internationalisation
+      dl
+        dt Technology
+        dd
+          ul
+            li HTML
+            li CSS
+            li JavaScript
+            li Ruby
 
-          dl
-            dt Technology
-            dd
-              ul
-                li HTML
-                li CSS
-                li JavaScript
-                li Ruby
+    .section__content__main
+      h3 The brief
 
-        .section__content
-          h3 The brief
+      p Zendesk's quest for improving customer relations knows no bounds, and we worked with them to create a landing page for their up-and-coming event. The event itself focused on the tranquil simplicity of afternoon tea, with registered users receiving not only an invite for a cuppa, but a tea-themed box of goodies.
 
-          p Zendesk's quest for improving customer relations knows no bounds, and we worked with them to create a landing page for their up-and-coming event. The event itself focused on the tranquil simplicity of afternoon tea, with registered users receiving not only an invite for a cuppa, but a tea-themed box of goodies.
+      h3 The challenge
 
-          h3 The challenge
+      p The event was released internationally, with the landing page being presented in French, German, and Russian, as well as English. In order to ease this registration process, an API was required to handle Zendesk's user registrations and integrate with a proprietary sales system.
 
-          p The event was released internationally, with the landing page being presented in French, German, and Russian, as well as English. In order to ease this registration process, an API was required to handle Zendesk's user registrations and integrate with a proprietary sales system.
+      img.snapshot(src="/images/responsive/portfolio/zendesk/snapshot-1.jpg", alt="Zendesk")
 
-          img.snapshot(src="/images/responsive/portfolio/zendesk/snapshot-1.jpg", alt="Zendesk")
+      h3 Our approach
 
-          h3 Our approach
+      p Using the Scuba Diver and the Astronaut from Zendesk's much-loved Relationships Are Complicated campaign, allowed us to create a set of pages that were a continuation of recent Zendesk events.
 
-          p Using the Scuba Diver and the Astronaut from Zendesk's much-loved Relationships Are Complicated campaign, allowed us to create a set of pages that were a continuation of recent Zendesk events.
+      p We built the landing page using placeholders for content rather than hard-coding in text. This allowed us to automate the process of translating these landing pages into any language by simply creating a new translations file for the language, rather than manually copying and pasting pages.
 
-          p We built the landing page using placeholders for content rather than hard-coding in text. This allowed us to automate the process of translating these landing pages into any language by simply creating a new translations file for the language, rather than manually copying and pasting pages.
+      p To handle user registrations, we built a small Ruby API that integrated with the sales system supporting the campaign. In order to avoid disruptive page refreshes to registering users, we also created a small JavaScript registrations handler, providing input validation and data submissions.
 
-          p To handle user registrations, we built a small Ruby API that integrated with the sales system supporting the campaign. In order to avoid disruptive page refreshes to registering users, we also created a small JavaScript registrations handler, providing input validation and data submissions.
+      img.snapshot(src="/images/responsive/portfolio/zendesk/snapshot-2.jpg", alt="Zendesk")
 
-          img.snapshot(src="/images/responsive/portfolio/zendesk/snapshot-2.jpg", alt="Zendesk")
+      h3 The outcome
 
-          h3 The outcome
-
-          p Zendesk were able to run a successful marketing campaign across multiple languages using our work, and were happy enough with the success of their first campaign that in the winter of 2016, we worked together on a second, follow-up campaign.
+      p Zendesk were able to run a successful marketing campaign across multiple languages using our work, and were happy enough with the success of their first campaign that in the winter of 2016, we worked together on a second, follow-up campaign.
 
 
-    section.section.section--center.bg--coal-light
-      .section__inner
-
-        .section__intro
-          h2.section__heading Related projects
-          p.section__text This isn't our first rodeo. Here's some similar projects that we've recently been working on.
+      //- Section
+      +section({
+        background: "onyx",
+        center: true,
+        heading: "Related projects",
+        text: "This isn't our first rodeo. Here's some similar projects that we've recently been working on."
+      })
 
         //- Related content
         +related-content([{

@@ -1,5 +1,6 @@
 .section {
   padding: $padding-vertical-lg 0;
+  text-align: left;
 
   @include susy-breakpoint($bp-lg) {
     padding-bottom: $spacing-vertical-xl;
@@ -10,6 +11,18 @@
     text-align: center;
   }
 
+  &--onyx {
+    background-color: $onyx;
+  }
+
+  &--white {
+    background-color: $white;
+
+    #{b()}__heading {
+      color: $coal;
+    }
+  }
+
   &__inner {
     @include container;
     padding: 0 $padding-horizontal-fluid;
@@ -17,23 +30,27 @@
 
   &__content {
 
-    @include susy-breakpoint($bp-xl) {
-      //@include span(8);
+    &--narrow {
+      @include margin-horizontal(auto);
+      max-width: 48em;
     }
 
-    &:not(:first-of-type) {
-      margin-top: $spacing-vertical;
+    &__main {
+
+      @include susy-breakpoint($bp-xl) {
+        @include span(8);
+      }
     }
-  }
 
-  &__aside {
-    background-color: lighten($black, 3%);
-    margin-bottom: $spacing-vertical-lg;
-    padding: $padding-vertical $padding-horizontal;
+    &__aside {
+      background-color: $onyx;
+      margin-bottom: $spacing-vertical-lg;
+      padding: $padding-vertical $padding-horizontal;
 
-    @include susy-breakpoint($bp-xl) {
-      @include span(3);
-      @include last;
+      @include susy-breakpoint($bp-xl) {
+        @include span(3);
+        @include last;
+      }
     }
   }
 
@@ -62,7 +79,7 @@
   }
 }
 
-.section__aside--inline {
+.section__content__aside--inline {
   @include clearfix;
 
   @media (min-width: $bp-lg) and (max-width: $bp-xl) {

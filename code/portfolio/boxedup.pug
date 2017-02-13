@@ -31,100 +31,101 @@ block content
     mobile_srcset: "/images/responsive/portfolio/boxedup/banner-cropped-640.jpg 640w, /images/responsive/portfolio/boxedup/banner-cropped-750.jpg 750w, /images/responsive/portfolio/boxedup/banner-cropped-1080.jpg 1080w",
     desktop_srcset: "/images/responsive/portfolio/boxedup/banner-1000.jpg 1000w, /images/responsive/portfolio/boxedup/banner-1400.jpg 1400w, /images/responsive/portfolio/boxedup/banner-1800.jpg 1800w"
   })
-  main
-
-    section.section
-      .section__inner
-
-        aside.section__aside.section__aside--inline
-          dl
-            dt Client
-            dd BoxedUp
-
-          dl
-            dt Services
-            dd
-              ul
-                li Product strategy
-                li Product development
-                li Branding
-                li Interface design
-
-          dl
-            dt Technology
-            dd
-              ul
-                li Ruby on Rails
-                li JavaScript
-
-        .section__content
-          h3 The brief
-
-          p BoxedUp is a marketing platform that allows organisations to dispatch physical graze box-esque welcome packages to prospective customers that invite them back to a custom BoxedUp marketing website. From here, organisations can monitor engagement, and follow up with their most promising leads to close a sale.
-
-          p We were approached by BoxedUp to act as the technical arm of their business during the early stages of their organisation, and guide them through building out the first iteration of their web application.
-
-          img.snapshot(src="/images/responsive/portfolio/boxedup/snapshot-1.jpg", alt="BoxedUp")
-
-          h3 The challenge
-
-          p More than just writing software, it was essential we got to know the business at a deeper level, keeping up to date with sales conversations BoxedUp were having with their customers.
-
-          p All of this information then needed to be distilled into a set of sprints that would guide us towards achieving a product market fit, leaving enough wiggle room for us to pivot where necessary as requirements changed.
-
-          p The biggest problem we would face with BoxedUp's development was technical decision making in a rapidly changing landscape. The product was subject to a pivot at any point in time, so we had to be careful not to code ourselves into a corner by introducing too much technical debt. On the other hand, we also needed to balance the need for rapid iteration on product features in time for sales demos and for winning over crucial early customers.
-
-          img.snapshot(src="/images/responsive/portfolio/boxedup/snapshot-2.jpg", alt="BoxedUp")
-
-          h3 Technology
-
-          h4 Ruby on Rails
-
-          p Rails gave us the flexibility we needed to test and build out new product features quickly, which is essential when building a new product without an established product/market fit.
-
-          h4 Client-side JavaScript
-
-          p JavaScript was used extensively to allow us to build some of BoxedUp's more complex user interface elements. This included reordering of page content, drag-and-drop file uploads, click-to-edit page functionality, and even live page previews.
-
-          img.snapshot(src="/images/responsive/portfolio/boxedup/snapshot-3.jpg", alt="BoxedUp")
-
-          h3 Our approach
-
-          p We started by building a simple content management feature that allowed organisations to edit a web page in-browser. To begin with, this was limited to simple text edits, but as other site features were developed this evolved into a page builder that gave BoxedUp's customers the ability to drag-and-drop different widgets onto their web pages and add content in a structured way. Importantly, this gave people the freedom to build out pages themselves, but not so much freedom that they could compromise either usability or accessibility.
-
-          p Login functionality for end-users was added so organisations could ensure users visiting their pages were authenticated. This was important as it allowed organisations to establish who their potential sales leads were, and gave the application the concept of a user to track further activity against.
-
-          p Next, we introduced invitations and management features, allowing, organisations to not only create landing pages, but to invite users to view their content. Tracking was also added, allowing organisations to check the status of ordered, dispatched and received boxes.
-
-          img.snapshot(src="/images/responsive/portfolio/boxedup/snapshot-4.jpg", alt="BoxedUp")
-
-          p Lastly, we introduced user analytics, allowing organisations to not only track the success of each campaign, but to improve sales by targeting their most engaged users.
-
-          p In conclusion, we made good use of constant, careful communication with the team at BoxedUp to deliver a cohesive product. This communication surfaced opportunities for quick wins in for trialing new features and also allowed us to stay ahead of the curve on technical debt and upcoming product pivots.
-
-          h3 The outcome
-
-          p BoxedUp was launched at the end of 2015, and has successfully run campaigns for several big names, including Zendesk, Freshservice, SysAid, Zoho, and TOPdesk.
 
 
-    section.section.section--center.bg--coal-light
-      .section__inner
+  +section({})
 
-        .section__intro
-          h2.section__heading Related projects
-          p.section__text This isn't our first rodeo. Here's some similar projects that we've recently been working on.
+    aside.section__content__aside.section__content__aside--inline
+      dl
+        dt Client
+        dd BoxedUp
 
-        //- Related content
-        +related-content([{
-          href: "keen",
-          intro: "Case study",
-          src: "/images/responsive/work/keen-600.jpg",
-          srcset: "/images/responsive/work/keen-200.jpg 200w, /images/responsive/work/keen-400.jpg 400w, /images/responsive/work/keen-600.jpg 600w",
-          title: "Keen"
-        },{
-          href: "zendesk",
-          intro: "Case study",
-          src: "/images/responsive/work/zendesk-600.jpg",
-          srcset: "/images/responsive/work/zendesk-200.jpg 200w, /images/responsive/work/zendesk-400.jpg 400w, /images/responsive/work/zendesk-600.jpg 600w",
-          title: "Zendesk"
-        }])
+      dl
+        dt Services
+        dd
+          ul
+            li Product strategy
+            li Product development
+            li Branding
+            li Interface design
+
+      dl
+        dt Technology
+        dd
+          ul
+            li Ruby on Rails
+            li JavaScript
+
+
+    .section__content__main
+      h3 The brief
+
+      p BoxedUp is a marketing platform that allows organisations to dispatch physical graze box-esque welcome packages to prospective customers that invite them back to a custom BoxedUp marketing website. From here, organisations can monitor engagement, and follow up with their most promising leads to close a sale.
+
+      p We were approached by BoxedUp to act as the technical arm of their business during the early stages of their organisation, and guide them through building out the first iteration of their web application.
+
+      img.snapshot(src="/images/responsive/portfolio/boxedup/snapshot-1.jpg", alt="BoxedUp")
+
+      h3 The challenge
+
+      p More than just writing software, it was essential we got to know the business at a deeper level, keeping up to date with sales conversations BoxedUp were having with their customers.
+
+      p All of this information then needed to be distilled into a set of sprints that would guide us towards achieving a product market fit, leaving enough wiggle room for us to pivot where necessary as requirements changed.
+
+      p The biggest problem we would face with BoxedUp's development was technical decision making in a rapidly changing landscape. The product was subject to a pivot at any point in time, so we had to be careful not to code ourselves into a corner by introducing too much technical debt. On the other hand, we also needed to balance the need for rapid iteration on product features in time for sales demos and for winning over crucial early customers.
+
+      img.snapshot(src="/images/responsive/portfolio/boxedup/snapshot-2.jpg", alt="BoxedUp")
+
+      h3 Technology
+
+      h4 Ruby on Rails
+
+      p Rails gave us the flexibility we needed to test and build out new product features quickly, which is essential when building a new product without an established product/market fit.
+
+      h4 Client-side JavaScript
+
+      p JavaScript was used extensively to allow us to build some of BoxedUp's more complex user interface elements. This included reordering of page content, drag-and-drop file uploads, click-to-edit page functionality, and even live page previews.
+
+      img.snapshot(src="/images/responsive/portfolio/boxedup/snapshot-3.jpg", alt="BoxedUp")
+
+      h3 Our approach
+
+      p We started by building a simple content management feature that allowed organisations to edit a web page in-browser. To begin with, this was limited to simple text edits, but as other site features were developed this evolved into a page builder that gave BoxedUp's customers the ability to drag-and-drop different widgets onto their web pages and add content in a structured way. Importantly, this gave people the freedom to build out pages themselves, but not so much freedom that they could compromise either usability or accessibility.
+
+      p Login functionality for end-users was added so organisations could ensure users visiting their pages were authenticated. This was important as it allowed organisations to establish who their potential sales leads were, and gave the application the concept of a user to track further activity against.
+
+      p Next, we introduced invitations and management features, allowing, organisations to not only create landing pages, but to invite users to view their content. Tracking was also added, allowing organisations to check the status of ordered, dispatched and received boxes.
+
+      img.snapshot(src="/images/responsive/portfolio/boxedup/snapshot-4.jpg", alt="BoxedUp")
+
+      p Lastly, we introduced user analytics, allowing organisations to not only track the success of each campaign, but to improve sales by targeting their most engaged users.
+
+      p In conclusion, we made good use of constant, careful communication with the team at BoxedUp to deliver a cohesive product. This communication surfaced opportunities for quick wins in for trialing new features and also allowed us to stay ahead of the curve on technical debt and upcoming product pivots.
+
+      h3 The outcome
+
+      p BoxedUp was launched at the end of 2015, and has successfully run campaigns for several big names, including Zendesk, Freshservice, SysAid, Zoho, and TOPdesk.
+
+
+  //- Section
+  +section({
+    background: "onyx",
+    center: true,
+    heading: "Related projects",
+    text: "This isn't our first rodeo. Here's some similar projects that we've recently been working on."
+  })
+
+    //- Related content
+    +related-content([{
+      href: "keen",
+      intro: "Case study",
+      src: "/images/responsive/work/keen-600.jpg",
+      srcset: "/images/responsive/work/keen-200.jpg 200w, /images/responsive/work/keen-400.jpg 400w, /images/responsive/work/keen-600.jpg 600w",
+      title: "Keen"
+    },{
+      href: "zendesk",
+      intro: "Case study",
+      src: "/images/responsive/work/zendesk-600.jpg",
+      srcset: "/images/responsive/work/zendesk-200.jpg 200w, /images/responsive/work/zendesk-400.jpg 400w, /images/responsive/work/zendesk-600.jpg 600w",
+      title: "Zendesk"
+    }])

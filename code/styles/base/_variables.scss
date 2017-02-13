@@ -1,5 +1,6 @@
 // Colors
 $black: #1a2129;
+$onyx: lighten($black, 3%);
 $coal: #2f3134;
 $dark-smoke: #5c646d;
 $smoke: #a1aab5;
@@ -11,6 +12,8 @@ $white: #fff;
 $leaf-green: #7ac4a0;
 $leaf-green-dark: #40b77d;
 $leaf-green-light: #bfffe1;
+
+$red: #fd7472;
 
 // Animations
 $base-duration: 200ms;
@@ -26,6 +29,10 @@ $base-border-width: .05rem;
 $base-border: $base-border-style $base-border-width $base-border-color;
 $base-width-lg: .1rem;
 
+// Border radius
+$base-border-radius: .1em;
+$border-radius-rounded: 100px;
+
 // Brand
 $brand-primary: $leaf-green;
 
@@ -40,14 +47,17 @@ $bp-xl : 80em;
 $base-font-color: $smoke;
 $heading-font-color: $white;
 $action-color: $white;
+$font-color-inverse: $dark-smoke;
+$heading-font-color-inverse: $coal;
+$action-color-inverse: $leaf-green-dark;
 
 // Font sizes
 $base-font-size: 1.25em;
-$h1-font-size: .65rem;
-$h2-font-size: 1.6rem;
-$h3-font-size: 1.35rem;
-$h4-font-size: .9rem;
-$p-font-size: 1.1rem;
+$h1-font-size: .65em;
+$h2-font-size: 1.6em;
+$h3-font-size: 1.35em;
+$h4-font-size: .9em;
+$p-font-size: 1.1em;
 
 // Forms
 $input-background-color: transparent;
@@ -55,17 +65,11 @@ $input-border-color: $light-stone;
 $input-color: $leaf-green-dark;
 $input-placeholder-color: $stone;
 $label-color: $coal;
+$error-color: $red;
 
 // Line height
 $base-line-height: 1.6;
 $heading-line-height: 1.4;
-
-// Other sizes
-$base-border-radius: 0.1em;
-$base-spacing: $base-line-height * 1em;
-$small-spacing: $base-spacing / 2;
-$base-z-index: 0;
-$max-width: 59em;
 
 // Padding (horizontal)
 $padding-horizontal: 1.5em;

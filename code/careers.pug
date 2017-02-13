@@ -32,35 +32,32 @@ block content
     desktop_srcset: "/images/responsive/banners/careers-800.jpg 800w, /images/responsive/banners/careers-1000.jpg 1000w, /images/responsive/banners/careers-1200.jpg 1200w, /images/responsive/banners/careers-1400.jpg 1400w, /images/responsive/banners/careers-1600.jpg 1600w, /images/responsive/banners/careers-1800.jpg 1800w"
   })
 
-  main
+  //- Section
+  +section({
+    heading: "Open positions <span>(2)</span>",
+    text: "That's right, kids; we're hiring. We've got two positions open, and we have a sneaky feeling one of them as your name on it."
+  })
 
-    section.section
-      .section__inner
+    ul.duo-nav
+      li.duo-nav__item: a.duo-nav__link(href="careers/designer") Designer #[span.duo-nav__link__text £20,000 - £30,0000 #[abbr(title="Depending On Experience") DOE]]
+      li.duo-nav__item: a.duo-nav__link(href="careers/software-engineer") Software Engineer #[span.duo-nav__link__text £20,000 - £30,0000 #[abbr(title="Depending On Experience") DOE]]
 
-        .section__intro
-          h2.section__heading Open positions #[span (2)]
-          p.section__text That's right, kids; we're hiring. We've got two positions open, and we have a sneaky feeling one of them as your name on it.
-
-        ul.duo-nav
-          li.duo-nav__item: a.duo-nav__link(href="careers/designer") Designer #[span.duo-nav__link__text £20,000 - £30,0000 #[abbr(title="Depending On Experience") DOE]]
-          li.duo-nav__item: a.duo-nav__link(href="careers/software-engineer") Software Engineer #[span.duo-nav__link__text £20,000 - £30,0000 #[abbr(title="Depending On Experience") DOE]]
-
-        //- Buckets
-        +buckets({
-          items: [{
-            heading: "Love working here",
-            text: [
-              "We'll only ever ask you to work your contracted hours, and leave you to manage your work/life balance. With flexi-time and remote working available as you need it, we'll ensure you have the environment you need to do your best work."
-            ]
-          },{
-            heading: "A better you",
-            text: [
-              "We pride ourselves on continual self-improvement, and we'll make sure you get the every oppertunity to do so yourself. That means making up-skilling available through through peer work, personal development time, and conference tickets."
-            ]
-          },{
-            heading: "Can't see your role?",
-            text: [
-              "We advertise for specific positions and skillsets, but we never know what our next protégé is going to look like. If you think working with us at Leaf would be a great opportunity, <a href='mailto:careers@weareleaf.com'>introduce yourself</a> and let us know why you'd be a good fit."
-            ]
-          }]
-        })
+    //- Buckets
+    +buckets({
+      items: [{
+        heading: "Love working here",
+        text: [
+          "We'll only ever ask you to work your contracted hours, and leave you to manage your work/life balance. With flexi-time and remote working available as you need it, we'll ensure you have the environment you need to do your best work."
+        ]
+      },{
+        heading: "A better you",
+        text: [
+          "We pride ourselves on continual self-improvement, and we'll make sure you get the every oppertunity to do so yourself. That means making up-skilling available through through peer work, personal development time, and conference tickets."
+        ]
+      },{
+        heading: "Can't see your role?",
+        text: [
+          "We advertise for specific positions and skillsets, but we never know what our next protégé is going to look like. If you think working with us at Leaf would be a great opportunity, <a href='mailto:careers@weareleaf.com'>introduce yourself</a> and let us know why you'd be a good fit."
+        ]
+      }]
+    })
