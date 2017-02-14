@@ -72,17 +72,21 @@ block content
 
     //- Gallery
     +gallery([{
+      alt: "Leaf working area",
       src: "/images/responsive/company/grid-1-600.jpg",
       srcset: "/images/responsive/company/grid-1-200.jpg 200w, /images/responsive/company/grid-1-400.jpg 400w, /images/responsive/company/grid-1-600.jpg 600w",
     },{
+      alt: "Chris Annetts and Mike Carter",
       src: "/images/responsive/company/grid-2-855.jpg",
       srcset: "/images/responsive/company/grid-2-200.jpg 200w, /images/responsive/company/grid-2-400.jpg 400w, /images/responsive/company/grid-2-600.jpg 600w, /images/responsive/company/grid-2-800.jpg 800w, /images/responsive/company/grid-2-855.jpg 855w",
       wide: true
     },{
+      alt: "We build Lego. Lots of it",
       src: "/images/responsive/company/grid-3-855.jpg",
       srcset: "/images/responsive/company/grid-3-200.jpg 200w, /images/responsive/company/grid-3-400.jpg 400w, /images/responsive/company/grid-3-600.jpg 600w, /images/responsive/company/grid-3-800.jpg 800w, /images/responsive/company/grid-3-855.jpg 855w",
       wide: true
     },{
+      alt: "Mike Carter",
       src: "/images/responsive/company/grid-4-600.jpg",
       srcset: "/images/responsive/company/grid-4-200.jpg 200w, /images/responsive/company/grid-4-400.jpg 400w, /images/responsive/company/grid-4-600.jpg 600w",
     }])
@@ -95,18 +99,21 @@ block content
     text: "We work with companies, from established brands to fresh-faced startups, to improve their digital output."
   })
 
-    //-img.logo-bar(src="/images/client-logos.png")
-    .logo-stack
-      .logo-stack__group
-        .logo-stack__item
-          include images/logos/clients/zendesk.svg
-        .logo-stack__item
-          include images/logos/clients/boxedup.svg
-      .logo-stack__group
-        .logo-stack__item
-          include images/logos/clients/keen.svg
-        .logo-stack__item
-          include images/logos/clients/cakeboxx.svg
+
+    //- Logo stack
+    +logo-stack([{
+      alt: "Zendesk",
+      src: "clients/zendesk.svg"
+    },{
+      alt: "BoxedUp",
+      src: "clients/boxedup.svg"
+    },{
+      alt: "Keen",
+      src: "clients/keen.svg"
+    },{
+      alt: "CakeBoxx Technology",
+      src: "clients/cakeboxx.svg"
+    }])
 
 
   //- Section

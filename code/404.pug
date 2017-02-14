@@ -30,6 +30,13 @@ block content
     text: "Of course, we don't know exactly what you're looking for, but here are a few useful pages to help get you going again."
   })
 
-    ul.duo-nav
-      li.duo-nav__item: a.duo-nav__link(href="/") Start over #[span.duo-nav__link__text Home page]
-      li.duo-nav__item: a.duo-nav__link(href="company") Learn about Leaf #[span.duo-nav__link__text Company page]
+    //- Duo nav
+    +duo-nav([{
+      heading: "Home",
+      href: "/",
+      text: "Start over"
+    },{
+      heading: "Company",
+      href: "company",
+      text: "Learn about Leaf"
+    }])

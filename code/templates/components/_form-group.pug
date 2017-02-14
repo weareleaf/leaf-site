@@ -1,0 +1,18 @@
+//- Duo nav
+//-
+//- A group of two call-out navigation items
+
+
+//- Options
+//- -- heading
+//- -- href
+//- -- text
+
+
+mixin duo-nav(args)
+  ul.duo-nav
+    each item in args
+      - var href = (typeof item.href === "undefined") ? "#" : item.href
+
+      li.duo-nav__item
+        a.duo-nav__link(href=href) #{item.heading} <span class="duo-nav__link__text">!{item.text}</span>
