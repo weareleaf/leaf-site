@@ -136,7 +136,16 @@ progress {
     color: $smoke;
   }
 
+  &__error-message {
+    color: $error-color;
+    display: block;
+    font-family: $font-sans-serif;
+    font-size: .75em;
+    margin-top: $spacing-vertical-xs;
+  }
+
   &__controls {
+    display: inline-block;
     padding-bottom: $padding-vertical-sm;
     margin-top: $spacing-vertical-sm;
 

@@ -95,7 +95,19 @@ block content
     text: "We work with companies, from established brands to fresh-faced startups, to improve their digital output."
   })
 
-    img.logo-bar(src="/images/client-logos.png")
+    //-img.logo-bar(src="/images/client-logos.png")
+    .logo-stack
+      .logo-stack__group
+        .logo-stack__item
+          include images/logos/clients/zendesk.svg
+        .logo-stack__item
+          include images/logos/clients/boxedup.svg
+      .logo-stack__group
+        .logo-stack__item
+          include images/logos/clients/keen.svg
+        .logo-stack__item
+          include images/logos/clients/cakeboxx.svg
+
 
   //- Section
   +section({})

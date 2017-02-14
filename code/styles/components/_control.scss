@@ -78,6 +78,10 @@ $control-size: 1em;
     top: .6em;
     user-select: none;
     width:  $control-size;
+
+    .form-group--error & {
+      background-color: rgba($error-color, .25);
+    }
   }
 
   &__label {

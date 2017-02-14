@@ -29,9 +29,10 @@ block content
           label.form-group__label(for="name") What's your <mark class="form-group__label__highlight">name</mark>?
           input.form-group__input(type="text", name="name", placeholder="Samwise Gamgee", required)
 
-        .form-group
+        .form-group.form-group--error
           label.form-group__label(for="email") What's your <mark class="form-group__label__highlight">email address</mark>?
           input.form-group__input(type="email", name="email", placeholder="samwise@gmail.com", required)
+          span.form-group__error-message This doesn't look like a real email address
 
         .form-group
           label.form-group__label(for="organisation") What's your <mark class="form-group__label__highlight">company or organsation</mark>?
@@ -42,7 +43,7 @@ block content
       .form__section
         h2.form__heading The project
 
-        .form-group
+        .form-group.form-group--error
           label.form-group__label Is it a <mark class="form-group__label__highlight">brand new product</mark> or a <mark class="form-group__label__highlight">re-design</mark> of existing product?
           .form-group__controls
             label.control.control--radio
@@ -53,8 +54,9 @@ block content
               input.control__input(name="productStatus", type="radio")
               span.control__indicator
               span.control__label Re-design
+          span.form-group__error-message It's always useful to know what our standing point would be
 
-        .form-group
+        .form-group.form-group--error
           label.form-group__label What <mark class="form-group__label__highlight">type of products</mark> are you looking for?
           .form-group__controls
             label.control.control--checkbox
@@ -73,6 +75,7 @@ block content
               input.control__input(name="productType", type="checkbox")
               span.control__indicator
               span.control__label Other
+          span.form-group__error-message What is it you think you need? Don't worry if you're not 100% sure yet
 
         .form-group
           label.form-group__label(for="url") What's the <mark class="form-group__label__highlight">URL</mark> of the website?

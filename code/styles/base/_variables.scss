@@ -96,8 +96,8 @@ $padding-vertical-fluid-lg: $padding-vertical-fluid * 1.5;
 $padding-vertical-fluid-sm: $padding-vertical-fluid / 1.5;
 
 // Padding (root)
-$padding-horizontal-root: calc(3vw + #{$padding-vertical-sm});
-$padding-vertical-root: calc(3vh + #{$padding-vertical-sm});
+$padding-horizontal-root: calc(2vw + #{$padding-vertical-sm});
+$padding-vertical-root: calc(2vh + #{$padding-vertical-sm});
 
 // Padding (block)
 $padding-block-horizontal: $padding-horizontal * 1.5;
@@ -128,7 +128,7 @@ $spacing-vertical-fluid: 5%;
 $spacing-vertical-fluid-lg: $spacing-vertical-fluid * 1.5;
 $spacing-vertical-fluid-sm: $spacing-vertical-fluid / 1.5;
 
-// Spacing (roo6
+// Spacing (root)
 $spacing-horizontal-root: calc(6vw + #{$spacing-horizontal});
 $spacing-vertical-root: calc(6vh + #{$spacing-vertical});
 
