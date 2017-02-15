@@ -1,0 +1,29 @@
+//- Textarea
+//-
+//- A humble textarea
+
+
+//- Options
+//- -- attributesClass
+//- -- elementClass
+//- -- name
+//- -- optional
+//- -- placeholder
+//- -- text
+
+
+mixin textarea(args)
+  - var attributesClass = attributes.class ? attributes.class : null
+  - var elementClass = args.class ? args.class : null
+  - var name = args.name ? args.name : null
+  - var placeholder = args.placeholder ? args.placeholder : null
+  - var required = args.optional ? null : "required"
+  - var text = args.text ? args.text : null
+
+  textarea(
+    class=attributesClass
+    class=elementClass
+    name=name
+    required=required
+    placeholder=placeholder
+  )!= args.text
