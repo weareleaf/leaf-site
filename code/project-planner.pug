@@ -186,6 +186,9 @@ block content
         input.addEventListener('change', adjustURLFieldVisibility)
       }
 
-      document.querySelectorAll('input[name="productStatus"]').forEach(addChangeListener)
-      document.querySelectorAll('input[name="websiteRequired"]').forEach(addChangeListener)
+      var productStatusElements = document.querySelectorAll('input[name="productStatus"]')
+      for (var i = 0; i < productStatusElements.length; i++) {
+        addChangeListener(productStatusElements[i])
+      }
+      addChangeListener(document.querySelector('input[name="websiteRequired"]'))
       urlField.style.display = 'none'
