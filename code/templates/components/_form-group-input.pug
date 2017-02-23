@@ -11,11 +11,11 @@
 mixin form-group-input(args)
   if args.formGroupArgs
     - var errorMessage = args.formGroupArgs.error ? args.formGroupArgs.error : null
-    - var errorState = args.formGroupArgs.error ? "form-group--error" : null
+    - var errorState = args.formGroupArgs.error ? "form-group--error " : ' '
     - args.labelArgs.for = args.formGroupArgs.name
     - args.inputArgs.name = args.formGroupArgs.name
 
-  .form-group(class=errorState)
+  .form-group(class=errorState + args.formGroupArgs.name)
     +label(args.labelArgs).form-group__label
     +input(args.inputArgs).form-group__input
     if errorMessage

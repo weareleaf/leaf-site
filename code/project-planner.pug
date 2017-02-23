@@ -6,6 +6,8 @@ block prepend vars
 
 block content
 
+  script(src="https://static.howdyform.com/howdyClient.js?token=aGVsbG9Ad2VhcmVsZWFmLmNvbQ==", data-howdy-recipient="hello@weareleaf.com")
+
   //- Hero banner
   +hero-banner({
     pageHeaderArgs: {
@@ -99,13 +101,17 @@ block content
             text: "What <mark class='form-group__label__highlight'>type of products</mark> are you looking for?"
           },
           controlArgs: [{
-            label: "Website"
+            label: "Website",
+            name: "websiteRequired"
           },{
-            label: "Web app"
+            label: "Web app",
+            name: "webAppRequired"
           },{
-            label: "Mobile app"
+            label: "Mobile app",
+            name: "mobileAppRequired"
           },{
-            label: "Other"
+            label: "Other",
+            name: "otherRequired"
           }]
         })
 
@@ -164,3 +170,20 @@ block content
         })
 
       input.button(type="submit", value="Send away")
+
+    script.
+      var urlField = document.querySelector('.form-group.url')
+
+      var adjustURLFieldVisibility = function(e) {
+        var redesignChecked = document.querySelector('input[name="productStatus"]:checked').value === 'Re-design'
+        var websiteChecked = !!document.querySelector('input[name="websiteRequired"]:checked')
+        return urlField.style.display = (redesignChecked && websiteChecked) ? 'block' : 'none'
+      }
+
+      var addChangeListener = function(input) {
+        input.addEventListener('change', adjustURLFieldVisibility)
+      }
+
+      document.querySelectorAll('input[name="productStatus"]').forEach(addChangeListener)
+      document.querySelectorAll('input[name="websiteRequired"]').forEach(addChangeListener)
+      urlField.style.display = 'none'

@@ -20,6 +20,6 @@ mixin control(args)
     - var checked = item.checked ? "checked" : null
 
     label.control(class=attributesClass, class=typeClass)
-      input.control__input(name=name, type=type, checked=checked)
+      input.control__input(name=(item.name || name), type=type, checked=checked, value=item.label)
       span.control__indicator
       span.control__label= item.label
