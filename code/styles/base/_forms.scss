@@ -127,16 +127,20 @@ progress {
       }
     }
 
-    #{b()}__input {
+    .erroneous, #{b()}__input {
       border-bottom-color: $error-color;
     }
+  }
+
+  .erroneous {
+    border-bottom-color: $error-color;
   }
 
   &__label__optional {
     color: $smoke;
   }
 
-  &__error-message {
+  span.error, &__error-message {
     color: $error-color;
     display: block;
     font-family: $font-sans-serif;

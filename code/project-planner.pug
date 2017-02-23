@@ -43,7 +43,6 @@ block content
         //- Email address
         +form-group-input({
           formGroupArgs: {
-            error: "This doesn't look like a real email address",
             name: "email"
           },
           labelArgs: {
@@ -64,7 +63,8 @@ block content
             text: "What's your <mark class='form-group__label__highlight'>company or organsation</mark>?"
           },
           inputArgs: {
-            placeholder: "Fellowship of the Ring"
+            placeholder: "Fellowship of the Ring",
+            dataHowdyValidate: "required"
           }
         })
 
@@ -93,7 +93,6 @@ block content
         //- What type of product?
         +form-group-controls({
           formGroupArgs: {
-            error: "What is it you think you need? Don't worry if you're not 100% sure yet",
             name: "productType",
             type: "checkbox"
           },
@@ -138,7 +137,8 @@ block content
             text: "<mark class='form-group__label__highlight'>How much</mark> are you looking to invest?"
           },
           inputArgs: {
-            placeholder: "£15,000"
+            placeholder: "£15,000",
+            dataHowdyValidate: "required"
           }
         })
 
@@ -152,7 +152,8 @@ block content
           },
           inputArgs: {
             optional: true,
-            placeholder: "We need it live by May"
+            placeholder: "We need it live by May",
+            dataHowdyValidate: "required"
           }
         })
 
@@ -165,7 +166,8 @@ block content
             text: "Tell us about the project, and <mark class='form-group__label__highlight'>what you're looking to achieve</mark>?"
           },
           textareaArgs: {
-            placeholder: "The more you can share, the better"
+            placeholder: "The more you can share, the better",
+            dataHowdyValidate: "required"
           }
         })
 

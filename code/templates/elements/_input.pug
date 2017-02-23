@@ -11,6 +11,7 @@
 //- -- placeholder
 //- -- type
 //- -- value
+//- -- dataHowdyValidate
 
 
 mixin input(args)
@@ -21,6 +22,7 @@ mixin input(args)
   - var required = args.optional ? null : "required"
   - var type = args.type ? args.type : "text"
   - var value = args.value ? args.value : null
+  - var dataHowdyValidate = args.dataHowdyValidate || null
 
   input(
     class=attributesClass
@@ -30,4 +32,5 @@ mixin input(args)
     placeholder=placeholder
     type=type
     value=value
+    data-howdy-validate=dataHowdyValidate
   )

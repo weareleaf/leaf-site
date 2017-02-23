@@ -10,6 +10,7 @@
 //- -- optional
 //- -- placeholder
 //- -- text
+//- -- dataHowdyValidate
 
 
 mixin textarea(args)
@@ -19,6 +20,7 @@ mixin textarea(args)
   - var placeholder = args.placeholder ? args.placeholder : null
   - var required = args.optional ? null : "required"
   - var text = args.text ? args.text : null
+  - var dataHowdyValidate = args.dataHowdyValidate || null
 
   textarea(
     class=attributesClass
@@ -26,4 +28,5 @@ mixin textarea(args)
     name=name
     required=required
     placeholder=placeholder
+    data-howdy-validate=dataHowdyValidate
   )!= args.text
