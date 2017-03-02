@@ -1,0 +1,20 @@
+//- Hero banner
+//-
+//- A styled wrapper element encapsulating the masthead and page-header
+
+
+//- Options
+//- -- hamburgerArgs
+//- -- heroBannerArgs
+//- -- logoArgs
+//- -- pageHeaderArgs
+
+
+mixin hero-banner(args)
+  if args.heroBannerArgs
+    - var heroBannerClass = args.heroBannerArgs.green ? "hero-banner--green" : null
+
+  .hero-banner(class=heroBannerClass)
+    .hero-banner__inner
+      +masthead(args.logoArgs, args.hamburgerArgs)
+      +page-header(args.pageHeaderArgs)

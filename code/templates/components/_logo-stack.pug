@@ -1,0 +1,20 @@
+//- Logo stack
+//-
+//- A group of logos, showcasing either clients or technology from our toolkit
+
+
+//- Options
+//- -- alt
+//- -- src
+
+
+mixin logo-stack(args)
+  .logo-stack
+    | <div class="logo-stack__group">
+    each item, index in args
+      if index % 2 === 0 && index !== 0
+        | </div>
+        | <div class="logo-stack__group">
+      .logo-stack__item
+        img(src="images/logos/" + item.src, alt=item.alt)
+    | </div>

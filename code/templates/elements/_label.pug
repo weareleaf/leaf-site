@@ -1,0 +1,16 @@
+//- Label
+//-
+//- A humble label
+
+
+//- Options
+//- -- class
+//- -- for
+//- -- text
+
+
+mixin label(args)
+  - var attributesClass = attributes.class ? attributes.class : null
+  - var labelClass = args.class ? args.class : null
+
+  label(class=labelClass class=attributesClass, for=args.for)!= args.text

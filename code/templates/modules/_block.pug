@@ -1,0 +1,21 @@
+//- Block
+//-
+//- A group of blocked link items, highlighting primary content to explore.
+
+
+//- Options
+//- -- item
+//- -- -- intro
+//- -- -- text
+//- -- -- title
+
+
+mixin block(args)
+  .block
+    each item in args
+      - var href = (typeof item.href === "undefined") ? "#" : item.href
+
+      a.block__item(href=href)
+        span.block__intro #{item.intro}
+        h3.block__title #{item.title}
+        p.block__text #{item.text}

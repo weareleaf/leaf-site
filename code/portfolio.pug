@@ -8,40 +8,54 @@ block content
 
   //- Hero banner
   +hero-banner({
-    intro: "The sum of everything we do is reflected in the work we produce. We're privileged to have worked on some great brands, and proud of show off our hard work.",
-    title: "Portfolio"
+    heroBannerArgs: {
+      green: true
+    },
+    logoArgs: {
+      white: true
+    },
+    hamburgerArgs: {
+      white: true
+    },
+    pageHeaderArgs: {
+      intro: "The sum of everything we do is reflected in the work we produce. We're privileged to have worked on some great brands, and proud of show off our hard work.",
+      inverse: true,
+      title: "Portfolio"
+    }
   })
 
-  main
+  //- Section
+  +section({})
 
-    section.section
-      .section__inner
-
-        //- Gallery
-        +gallery([{
-          href: "portfolio/keen",
-          intro: "Case study",
-          src: "/images/responsive/work/keen-600.jpg",
-          srcset: "/images/responsive/work/keen-200.jpg 200w, /images/responsive/work/keen-400.jpg 400w, /images/responsive/work/keen-600.jpg 600w",
-          title: "Keen"
-        },{
-          href: "portfolio/cakeboxx",
-          intro: "Case study",
-          src: "/images/responsive/work/cakeboxx-855.jpg",
-          srcset: "/images/responsive/work/cakeboxx-200.jpg 200w, /images/responsive/work/cakeboxx-400.jpg 400w, /images/responsive/work/cakeboxx-600.jpg 600w, /images/responsive/work/cakeboxx-800.jpg 800w, /images/responsive/work/cakeboxx-855.jpg 855w",
-          title: "CakeBoxx Technology",
-          wide: true
-        },{
-          href: "portfolio/boxedup",
-          intro: "Case study",
-          src: "/images/responsive/work/boxedup-855.jpg",
-          srcset: "/images/responsive/work/boxedup-200.jpg 200w, /images/responsive/work/boxedup-400.jpg 400w, /images/responsive/work/boxedup-600.jpg 600w, /images/responsive/work/boxedup-800.jpg 800w, /images/responsive/work/boxedup-855.jpg 855w",
-          title: "BoxedUp",
-          wide: true
-        },{
-          href: "portfolio/zendesk",
-          intro: "Case study",
-          src: "/images/responsive/work/zendesk-600.jpg",
-          srcset: "/images/responsive/work/zendesk-200.jpg 200w, /images/responsive/work/zendesk-400.jpg 400w, /images/responsive/work/zendesk-600.jpg 600w",
-          title: "Zendesk"
-        }])
+    //- Gallery
+    +gallery([{
+      alt: "Keen case study",
+      href: "portfolio/keen",
+      intro: "Case study",
+      src: "/images/responsive/work/keen-600.jpg",
+      srcset: "/images/responsive/work/keen-200.jpg 200w, /images/responsive/work/keen-400.jpg 400w, /images/responsive/work/keen-600.jpg 600w",
+      title: "Keen"
+    },{
+      alt: "CakeBoxx Technology case study",
+      href: "portfolio/cakeboxx",
+      intro: "Case study",
+      src: "/images/responsive/work/cakeboxx-855.jpg",
+      srcset: "/images/responsive/work/cakeboxx-200.jpg 200w, /images/responsive/work/cakeboxx-400.jpg 400w, /images/responsive/work/cakeboxx-600.jpg 600w, /images/responsive/work/cakeboxx-800.jpg 800w, /images/responsive/work/cakeboxx-855.jpg 855w",
+      title: "CakeBoxx Technology",
+      wide: true
+    },{
+      alt: "BoxedUp case study",
+      href: "portfolio/boxedup",
+      intro: "Case study",
+      src: "/images/responsive/work/boxedup-855.jpg",
+      srcset: "/images/responsive/work/boxedup-200.jpg 200w, /images/responsive/work/boxedup-400.jpg 400w, /images/responsive/work/boxedup-600.jpg 600w, /images/responsive/work/boxedup-800.jpg 800w, /images/responsive/work/boxedup-855.jpg 855w",
+      title: "BoxedUp",
+      wide: true
+    },{
+      alt: "Zendesk case study",
+      href: "portfolio/zendesk",
+      intro: "Case study",
+      src: "/images/responsive/work/zendesk-600.jpg",
+      srcset: "/images/responsive/work/zendesk-200.jpg 200w, /images/responsive/work/zendesk-400.jpg 400w, /images/responsive/work/zendesk-600.jpg 600w",
+      title: "Zendesk"
+    }])

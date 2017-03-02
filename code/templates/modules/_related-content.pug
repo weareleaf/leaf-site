@@ -1,0 +1,21 @@
+//- Related content
+//-
+//- A collection of related items, encouraging the user to continue their journey, Loops through each included item
+
+
+//- Options
+//- -- item
+//- -- -- intro
+//- -- -- text
+//- -- -- title
+
+
+mixin related-content(args)
+  .related-content
+    .related-content__inner
+      each item in args
+        a.related-content__item(href=item.href)
+          img.related-content__item__image(src=item.src, srcset=item.srcset, sizes="(max-width: 36em) 90vw, calc(0.58763 * (90vw - 15px))")
+          .related-content__item__info
+            span.related-content__item__intro #{item.intro}
+            span.related-content__item__title #{item.title}

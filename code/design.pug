@@ -8,8 +8,20 @@ block content
 
   //- Hero banner
   +hero-banner({
-    intro: "Interface design is the marriage of user and business goals, using structure, iteration and style to create a window into your product.",
-    title: "Interface design"
+    heroBannerArgs: {
+      green: true
+    },
+    logoArgs: {
+      white: true
+    },
+    hamburgerArgs: {
+      white: true
+    },
+    pageHeaderArgs: {
+      intro: "Interface design is the marriage of user and business goals, using structure, iteration and style to create a window into your product.",
+      inverse: true,
+      title: "Interface design"
+    }
   })
 
   //- Banner
@@ -20,59 +32,57 @@ block content
     desktop_srcset: "/images/responsive/banners/design-800.jpg 800w, /images/responsive/banners/design-1000.jpg 1000w, /images/responsive/banners/design-1200.jpg 1200w, /images/responsive/banners/design-1400.jpg 1400w, /images/responsive/banners/design-1600.jpg 1600w, /images/responsive/banners/design-1800.jpg 1800w"
   })
 
-  main
+  //- Section
+  +section({})
 
-    section.section
-      .section__inner
+    //- Buckets
+    +buckets({
+      items: [{
+        heading: "Information architecture",
+        text: [
+          "Information architecture (IA) focuses on the organisation of your content. A well thought out IA will map to the expectations of the user, providing context and setting expectations."
+        ]
+      },{
+        heading: "Content strategy",
+        text: [
+          "An interface is simply a window into the conversation between you and your users. We’ll work with you to ensure you messaging meets the needs of both the user and your business."
+        ]
+      },{
+        heading: "Sketching & wireframing",
+        text: [
+          "Alongside low-fidelity wireframes, the humble pen and paper place a focus on solving the true design problems at hand, rather than sweating over a shade of green, or whether to use a 3px or 5px border radius."
+        ]
+      },{
+        heading: "Prototyping",
+        text: [
+          "Whether you’re experimenting with the technical limitations of an API, or simplifying a user flow, prototyping provides a resource-friendly method of solving a specific problem in isolation."
+        ]
+      },{
+        heading: "Visual design",
+        text: [
+          "The layer of polish that sits between the user and the content itself, a well executed design will help increase trust. Visual design is the art of manipulating how a website looks and feels."
+        ]
+      },{
+        heading: "Styleguides",
+        text: [
+          "A styleguide is a library of interface components, design patterns and brand assets, used to create a cohesive, consistent design language that informs and underpins every design decision."
+        ]
+      }]
+    })
 
-        //- Buckets
-        +buckets({
-          items: [{
-            heading: "Information architecture",
-            text: [
-              "Information architecture (IA) focuses on the organisation of your content. A well thought out IA will map to the expectations of the user, providing context and setting expectations."
-            ]
-          },{
-            heading: "Content strategy",
-            text: [
-              "An interface is simply a window into the conversation between you and your users. We’ll work with you to ensure you messaging meets the needs of both the user and your business."
-            ]
-          },{
-            heading: "Sketching & wireframing",
-            text: [
-              "Alongside low-fidelity wireframes, the humble pen and paper place a focus on solving the true design problems at hand, rather than sweating over a shade of green, or whether to use a 3px or 5px border radius."
-            ]
-          },{
-            heading: "Prototyping",
-            text: [
-              "Whether you’re experimenting with the technical limitations of an API, or simplifying a user flow, prototyping provides a resource-friendly method of solving a specific problem in isolation."
-            ]
-          },{
-            heading: "Visual design",
-            text: [
-              "The layer of polish that sits between the user and the content itself, a well executed design will help increase trust. Visual design is the art of manipulating how a website looks and feels."
-            ]
-          },{
-            heading: "Styleguides",
-            text: [
-              "A styleguide is a library of interface components, design patterns and brand assets, used to create a cohesive, consistent design language that informs and underpins every design decision."
-            ]
-          }]
-        })
-
-        //- Gallery
-        +gallery([{
-          src: "/images/responsive/design/grid-1-600.jpg",
-          srcset: "/images/responsive/design/grid-1-200.jpg 200w, /images/responsive/design/grid-1-400.jpg 400w, /images/responsive/design/grid-1-600.jpg 600w",
-        },{
-        src: "/images/responsive/design/grid-2-855.jpg",
-        srcset: "/images/responsive/design/grid-2-200.jpg 200w, /images/responsive/design/grid-2-400.jpg 400w, /images/responsive/design/grid-2-600.jpg 600w, /images/responsive/design/grid-2-800.jpg 800w, /images/responsive/design/grid-2-855.jpg 855w",
-          wide: true
-        },{
-        src: "/images/responsive/design/grid-3-855.jpg",
-        srcset: "/images/responsive/design/grid-3-200.jpg 200w, /images/responsive/design/grid-3-400.jpg 400w, /images/responsive/design/grid-3-600.jpg 600w, /images/responsive/design/grid-3-800.jpg 800w, /images/responsive/design/grid-3-855.jpg 855w",
-          wide: true
-        },{
-        src: "/images/responsive/design/grid-4-600.jpg",
-        srcset: "/images/responsive/design/grid-4-200.jpg 200w, /images/responsive/design/grid-4-400.jpg 400w, /images/responsive/design/grid-4-600.jpg 600w",
-        }])
+    //- Gallery
+    +gallery([{
+      src: "/images/responsive/design/grid-1-600.jpg",
+      srcset: "/images/responsive/design/grid-1-200.jpg 200w, /images/responsive/design/grid-1-400.jpg 400w, /images/responsive/design/grid-1-600.jpg 600w",
+    },{
+      src: "/images/responsive/design/grid-2-855.jpg",
+      srcset: "/images/responsive/design/grid-2-200.jpg 200w, /images/responsive/design/grid-2-400.jpg 400w, /images/responsive/design/grid-2-600.jpg 600w, /images/responsive/design/grid-2-800.jpg 800w, /images/responsive/design/grid-2-855.jpg 855w",
+      wide: true
+    },{
+      src: "/images/responsive/design/grid-3-855.jpg",
+      srcset: "/images/responsive/design/grid-3-200.jpg 200w, /images/responsive/design/grid-3-400.jpg 400w, /images/responsive/design/grid-3-600.jpg 600w, /images/responsive/design/grid-3-800.jpg 800w, /images/responsive/design/grid-3-855.jpg 855w",
+      wide: true
+    },{
+      src: "/images/responsive/design/grid-4-600.jpg",
+      srcset: "/images/responsive/design/grid-4-200.jpg 200w, /images/responsive/design/grid-4-400.jpg 400w, /images/responsive/design/grid-4-600.jpg 600w",
+    }])

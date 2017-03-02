@@ -8,8 +8,20 @@ block content
 
   //- Hero banner
   +hero-banner({
-    intro: "Expertly crafted, thoroughly thought-out web and mobile applications; we take software engineering incredibly seriously. Our products are as robust as they are usable.",
-    title: "Development"
+    heroBannerArgs: {
+      green: true
+    },
+    logoArgs: {
+      white: true
+    },
+    hamburgerArgs: {
+      white: true
+    },
+    pageHeaderArgs: {
+      intro: "Expertly crafted, thoroughly thought-out web and mobile applications; we take software engineering incredibly seriously. Our products are as robust as they are usable.",
+      inverse: true,
+      title: "Development"
+    }
   })
 
   //- Banner
@@ -20,57 +32,77 @@ block content
     desktop_srcset: "/images/responsive/banners/development-800.jpg 800w, /images/responsive/banners/development-1000.jpg 1000w, /images/responsive/banners/development-1200.jpg 1200w, /images/responsive/banners/development-1400.jpg 1400w, /images/responsive/banners/development-1600.jpg 1600w, /images/responsive/banners/development-1800.jpg 1800w"
   })
 
-  main
+  //- Section
+  +section({})
 
-    section.section
-      .section__inner
+    //- Buckets
+    +buckets({
+      items: [{
+        heading: "New product development",
+        text: [
+          "Every great product starts somewhere. We've worked on several new products with startups, and as part of larger organisations, and love being involved at such an important part of the journey.",
+          "We'll guide you towards getting to your Minimum Viable Product (MVP), working in an agile manner and iterating towards a good product/market fit without burning cash on unproven demand."
+        ]
+      },{
+        heading: "Existing products",
+        text: [
+          "If you're strapped for development resource, or need a helping hand from a technical partner, we're well versed in moving quickly within an existing product, site, or application.",
+          "We can work with your existing systems regardless of their technology, technical debt, or bugs. We're even happy to work alongside your existing development team."
+        ]
+      }],
+      wide: true
+    })
 
-        //- Buckets
-        +buckets({
-          items: [{
-            heading: "New product development",
-            text: [
-              "Every great product starts somewhere. We've worked on several new products with startups, and as part of larger organisations, and love being involved at such an important part of the journey.",
-              "We'll guide you towards getting to your Minimum Viable Product (MVP), working in an agile manner and iterating towards a good product/market fit without burning cash on unproven demand."
-            ]
-          },{
-            heading: "Existing products",
-            text: [
-              "If you're strapped for development resource, or need a helping hand from a technical partner, we're well versed in moving quickly within an existing product, site, or application.",
-              "We can work with your existing systems regardless of their technology, technical debt, or bugs. We're even happy to work alongside your existing development team."
-            ]
-          }],
-          wide: true
-        })
 
-    section.section.section--center.bg--white
-      .section__inner
+  //- Section
+  +section({
+    background: "white",
+    center: true,
+    heading: "Technology",
+    text: "We'll always use the most appropriate technology for any project, but have a few favourites in our toolkit."
+  })
 
-        .section__intro
-          h2.section__heading Technology
-          p.section__text We'll always use the most appropriate technology for any project, but have a few favourites in our toolkit.
+    //- Logo stack
+    +logo-stack([{
+      alt: "Ruby",
+      src: "tech/ruby.svg"
+    },{
+      alt: "Redux",
+      src: "tech/redux.svg"
+    },{
+      alt: "AngularJS",
+      src: "tech/angular.svg"
+    },{
+      alt: "React",
+      src: "tech/react.svg"
+    },{
+      alt: "JavaScript",
+      src: "tech/javascript.svg"
+    },{
+      alt: "Node.js",
+      src: "tech/node.svg"
+    }])
 
-        img.logo-bar(src="/images/tech-logos.png")
 
-    section.section
-      .section__inner
+  //- Section
+  +section({})
 
-        //- Buckets
-        +buckets({
-          items: [{
-            heading: "CMS Development",
-            text: [
-              "We'll not only help you to choose the best CMS platform for your needs, but will provide any assistance necessary to get your team to confident and competent on your new system."
-            ]
-          },{
-            heading: "Ongoing support",
-            text: [
-              "We understand that from time to time projects need a degree of of maintenance, bugs fixed, or an upcoming crisis averted. You can rely on us to give you complete peace of mind."
-            ]
-          },{
-            heading: "Technical consultancy",
-            text: [
-              "We'll help uncover problems by reviewing your code to identify technical debt, advising on automation strategies, or building a technical roadmap to help focus your efforts."
-            ]
-          }]
-        })
+      //- Buckets
+      +buckets({
+        items: [{
+          heading: "CMS Development",
+          text: [
+            "We'll not only help you to choose the best CMS platform for your needs, but will provide any assistance necessary to get your team to confident and competent on your new system."
+          ]
+        },{
+          heading: "Ongoing support",
+          text: [
+            "We understand that from time to time projects need a degree of of maintenance, bugs fixed, or an upcoming crisis averted. You can rely on us to give you complete peace of mind."
+          ]
+        },{
+          heading: "Technical consultancy",
+          text: [
+            "We'll help uncover problems by reviewing your code to identify technical debt, advising on automation strategies, or building a technical roadmap to help focus your efforts."
+          ]
+        }]
+      })

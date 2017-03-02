@@ -1,0 +1,16 @@
+//- Masthead
+//-
+//- A conventional header, grouping both the brand logo and the primary navigation
+
+
+//- Options
+//- -- logoArgs
+//- -- navigationArgs
+
+
+mixin masthead(logoArgs, navigationArgs)
+  .masthead
+    .masthead__logo
+      a.masthead__logo__link(href="/")
+        +logo(logoArgs)
+    +navigation(navigationArgs)

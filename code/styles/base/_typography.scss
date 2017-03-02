@@ -18,9 +18,7 @@ body {
 h1, %h1,
 h2, %h2,
 h3, %h3,
-h4, %h4,
-h5, %h5,
-h6, %h6, {
+h4, %h4 {
   color: $heading-font-color;
   font-family: $heading-font-family;
   line-height: $heading-line-height;
@@ -83,15 +81,6 @@ a {
   }
 }
 
-%label {
-  color: $white;
-  font-family: $font-sans-serif;
-  font-size: 0.765rem;
-  font-weight: 800;
-  letter-spacing: .025rem;
-  text-transform: uppercase;
-}
-
 .heading-intro,
 %heading-intro {
   color: $leaf-green;
@@ -112,6 +101,13 @@ small {
   @include susy-breakpoint($bp-sm) {
     margin-top: $spacing-vertical-xl;
   }
+}
+
+mark {
+  @include margin-horizontal(-.175em);
+  @include padding-horizontal(.175em);
+  background-color: rgba($leaf-green, .2);
+  color: inherit;
 }
 
 img {

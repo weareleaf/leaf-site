@@ -1,0 +1,15 @@
+.hero-banner {
+
+  &--green {
+    background-color: $leaf-green-dark;
+  }
+
+  &__inner {
+    @include container;
+    padding: 0 $padding-horizontal-fluid $spacing-vertical-lg;
+
+    @include susy-breakpoint($bp-sm) {
+      padding-bottom: $spacing-vertical-xl;
+    }
+  }
+}

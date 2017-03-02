@@ -1,0 +1,36 @@
+//- Input
+//-
+//- A humble input
+
+
+//- Options
+//- -- attributesClass
+//- -- elementClass
+//- -- name
+//- -- optional
+//- -- placeholder
+//- -- type
+//- -- value
+//- -- dataHowdyValidate
+
+
+mixin input(args)
+  - var attributesClass = attributes.class ? attributes.class : null
+  - var elementClass = args.class ? args.class : null
+  - var name = args.name ? args.name : null
+  - var placeholder = args.placeholder ? args.placeholder : null
+  - var required = args.optional ? null : "required"
+  - var type = args.type ? args.type : "text"
+  - var value = args.value ? args.value : null
+  - var dataHowdyValidate = args.dataHowdyValidate || null
+
+  input(
+    class=attributesClass
+    class=elementClass
+    name=name
+    required=required
+    placeholder=placeholder
+    type=type
+    value=value
+    data-howdy-validate=dataHowdyValidate
+  )

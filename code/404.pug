@@ -8,20 +8,35 @@ block content
 
   //- Hero banner
   +hero-banner({
-    intro: "Toto, I've a feeling we're not in Kansas any more... We've looked everywhere, but that page doesn't seem to exist.",
-    title: "404"
+    heroBannerArgs: {
+      green: true
+    },
+    logoArgs: {
+      white: true
+    },
+    hamburgerArgs: {
+      white: true
+    },
+    pageHeaderArgs: {
+      intro: "Toto, I've a feeling we're not in Kansas any more... We've looked everywhere, but that page doesn't seem to exist.",
+      inverse: true,
+      title: "404"
+    }
   })
-  
 
-  main
+  //- Section
+  +section({
+    heading: "Lets get you back on track",
+    text: "Of course, we don't know exactly what you're looking for, but here are a few useful pages to help get you going again."
+  })
 
-    section.section
-      .section__inner
-
-        .section__intro
-          h2.section__heading Lets get you back on track
-          p.section__text Of course, we don't know exactly what you're looking for, but here are a few useful pages to help get you going again.
-
-        ul.duo-nav
-          li.duo-nav__item: a.duo-nav__link(href="/") Start over #[span.duo-nav__link__text Home page]
-          li.duo-nav__item: a.duo-nav__link(href="company") Learn about Leaf #[span.duo-nav__link__text Company page]
+    //- Duo nav
+    +duo-nav([{
+      heading: "Home",
+      href: "/",
+      text: "Start over"
+    },{
+      heading: "Company",
+      href: "company",
+      text: "Learn about Leaf"
+    }])

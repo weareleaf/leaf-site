@@ -1,0 +1,32 @@
+//- Gallery
+//-
+//- A group of large images, with the potential to be linked through to further content
+
+
+//- Options
+//- -- item
+//- -- -- alt
+//- -- -- href (optional)
+//- -- -- intro (optional)
+//- -- -- title (optional)
+//- -- -- src
+
+
+mixin gallery(args)
+  .gallery
+    | <div class="gallery__pair">
+    each item, index in args
+      if index % 2 === 0 && index !== 0
+        | </div>
+        | <div class="gallery__pair">
+      if item.href
+        a.gallery__item.gallery__item--link(href=item.href, class=item.wide ? "gallery__item--wide" : null)
+          img.gallery__item__image(src=item.src, srcset=item.srcset, sizes="(max-width: 36em) 90vw, calc(0.58763 * (90vw - 15px))", alt=item.alt)
+          .gallery__item__info
+            span.gallery__item__intro #{item.intro}
+            span.gallery__item__title #{item.title}
+      else
+        .gallery__item(class=item.wide ? "gallery__item--wide" : null)
+          img.gallery__item__image(src=item.src, srcset=item.srcset, sizes="(max-width: 36em) 90vw, calc(0.58763 * (90vw - 15px))", alt=item.alt)
+
+    | </div>

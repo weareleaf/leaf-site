@@ -1,0 +1,16 @@
+//- Buckets
+//-
+//- A wrapper buckets component, simply looping through each included bucket item
+
+
+//- Options
+//- -- item
+
+
+mixin buckets(args)
+  .buckets(class=args.wide ? "buckets--wide" : null)
+    each item in args.items
+      .buckets__item
+        h3.buckets__item__heading= item.heading
+        each paragraph in item.text
+          p.buckets__item__text!= paragraph

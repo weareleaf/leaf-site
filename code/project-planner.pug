@@ -1,80 +1,201 @@
 extends ./templates/base/_base
 
 block prepend vars
-  -var bodyClass = "project-planner-page page--inverse"
+  -var bodyClass = "project-planner-page page--center page--inverse"
   -var title = "Leaf"
 
 block content
 
+  script(src="https://static.howdyform.com/howdyClient.js?token=aGVsbG9Ad2VhcmVsZWFmLmNvbQ==", data-howdy-recipient="hello@weareleaf.com")
+
   //- Hero banner
   +hero-banner({
-    intro: "This only takes a few minutes to complete, but allows us to understand your motivations and your goals.",
-    title: "Project planner"
+    pageHeaderArgs: {
+      intro: "This only takes a few minutes to complete, but allows us to understand your motivations and your goals.",
+      title: "Project planner"
+    }
   })
 
-  main
+  //- Section
+  +section({
+    narrow: true
+  }).no-padding-top
 
-    section.section
-      .section__inner
+    form.form(action="submit", autocomplete="off")
 
-        .section__content
+      .form__section
 
-          form.form(action="submit", autocomplete="off")
+        h2.form__heading About you
 
-            h2.form__heading About you
+        //- Name
+        +form-group-input({
+          formGroupArgs: {
+            name: "name"
+          },
+          labelArgs: {
+            text: "What's your <mark class='form-group__label__highlight'>name</mark>?"
+          },
+          inputArgs: {
+            placeholder: "Samwise Gamgee",
+            optional: true
+          }
+        })
 
-            .form-group
-              label(for="name") What's your <span>name</span>?
-              input(type="text", name="name", placeholder="Samwise Gamgee", required)
+        //- Email address
+        +form-group-input({
+          formGroupArgs: {
+            name: "email"
+          },
+          labelArgs: {
+            text: "What's your <mark class='form-group__label__highlight'>email address</mark>?"
+          },
+          inputArgs: {
+            placeholder: "samwise@gmail.com",
+            type: "email",
+            optional: true
+          }
+        })
 
-            .form-group
-              label(for="email") What's your <span>email address</span>?
-              input(type="email", name="email", placeholder="samwise@gmail.com", required)
+        //- Name
+        +form-group-input({
+          formGroupArgs: {
+            name: "organisation"
+          },
+          labelArgs: {
+            text: "What's your <mark class='form-group__label__highlight'>company or organsation</mark>?"
+          },
+          inputArgs: {
+            placeholder: "Fellowship of the Ring",
+            dataHowdyValidate: "required",
+            optional: true
+          }
+        })
 
-            .form-group
-              label(for="organisation") What's your <span>company or organsation</span>?
-              input(type="text", name="organisation", placeholder="Fellowship of the Ring", required)
+      hr
 
-            hr
+      .form__section
+        h2.form__heading The project
 
-            h2.form__heading The project
+        //- Is it a new thing or not?
+        +form-group-controls({
+          formGroupArgs: {
+            name: "productStatus",
+            type: "radio"
+          },
+          labelArgs: {
+            text: "Is it a <mark class='form-group__label__highlight'>brand new product</mark> or a <mark class='form-group__label__highlight'>re-design</mark> of existing product?"
+          },
+          controlArgs: [{
+            checked: true,
+            label: "New product"
+          },{
+            label: "Re-design"
+          }]
+        })
 
-            .form-group
-              label Is it a <span>brand new product</span> or a <span>re-design</span> of existing product?
-              .multiple-choice
-                .multiple-choice__item
-                  input(id="newProduct", name="productStatus", type="radio", checked)
-                  label.radio-buttons__label(for="newProduct") New product
-                .multiple-choice__item
-                  input(id="redesign", name="productStatus", type="radio")
-                  label.multiple-choice__label(for="redesign") Re-design
+        //- What type of product?
+        +form-group-controls({
+          formGroupArgs: {
+            name: "productType",
+            type: "checkbox"
+          },
+          labelArgs: {
+            text: "What <mark class='form-group__label__highlight'>type of products</mark> are you looking for?"
+          },
+          controlArgs: [{
+            label: "Website",
+            name: "websiteRequired"
+          },{
+            label: "Web app",
+            name: "webAppRequired"
+          },{
+            label: "Mobile app",
+            name: "mobileAppRequired"
+          },{
+            label: "Other",
+            name: "otherRequired"
+          }]
+        })
 
-            .form-group
-              label What <span>type of products</span> are you looking for?
-              .multiple-choice
-                .multiple-choice__item
-                  input(id="website", name="productType", type="checkbox")
-                  label.radio-buttons__label(for="website") Website
-                .multiple-choice__item
-                  input(id="webApp", name="productType", type="checkbox")
-                  label.multiple-choice__label(for="webApp") Web app
-                .multiple-choice__item
-                  input(id="website", name="productType", type="checkbox")
-                  label.radio-buttons__label(for="website") Mobile app
-                .multiple-choice__item
-                  input(id="other", name="productType", type="checkbox")
-                  label.multiple-choice__label(for="other") Other
+        //- URL
+        +form-group-input({
+          formGroupArgs: {
+            name: "url"
+          },
+          labelArgs: {
+            text: "What's the <mark class='form-group__label__highlight'>URL</mark> of the website?"
+          },
+          inputArgs: {
+            placeholder: "lordoftherings.com",
+            type: "text",
+            optional: true
+          }
+        })
 
-            .form-group
-              label(for="name") <span>How much</span> are you looking to invest?
-              input(type="text", name="name", placeholder="£15,000", required)
+        //- Budget
+        +form-group-input({
+          formGroupArgs: {
+            name: "budget"
+          },
+          labelArgs: {
+            text: "<mark class='form-group__label__highlight'>How much</mark> are you looking to invest?"
+          },
+          inputArgs: {
+            placeholder: "£15,000",
+            dataHowdyValidate: "required",
+            optional: true
+          }
+        })
 
-            .form-group
-              label(for="email") Do you have any <span>timescales</span> in mind? <span>(optional)</span>
-              input(type="email", name="email", placeholder="samwise@gmail.com", required)
+        //- Timescales
+        +form-group-input({
+          formGroupArgs: {
+            name: "timescales"
+          },
+          labelArgs: {
+            text: "Do you have any <mark class='form-group__label__highlight'>timescales</mark> in mind? <span class='form-group__label__optional'>(optional)</span>"
+          },
+          inputArgs: {
+            optional: true,
+            placeholder: "We need it live by May",
+            dataHowdyValidate: "required",
+            optional: true
+          }
+        })
 
-            .form-group
-              label(for="organisation") Tell us about the project, and what you're <span> looking to achieve</span>?
-              input(type="text", name="organisation", placeholder="Fellowship of the Ring", required)
+        //- Timescales
+        +form-group-textarea({
+          formGroupArgs: {
+            name: "description"
+          },
+          labelArgs: {
+            text: "Tell us about the project, and <mark class='form-group__label__highlight'>what you're looking to achieve</mark>?"
+          },
+          textareaArgs: {
+            placeholder: "The more you can share, the better",
+            dataHowdyValidate: "required",
+            optional: true
+          }
+        })
 
-            input.button(type="submit", value="Send away")
+      input.button(type="submit", value="Send away")
+
+    script.
+      var urlField = document.querySelector('.form-group.url')
+
+      var adjustURLFieldVisibility = function(e) {
+        var redesignChecked = document.querySelector('input[name="productStatus"]:checked').value === 'Re-design'
+        var websiteChecked = !!document.querySelector('input[name="websiteRequired"]:checked')
+        return urlField.style.display = (redesignChecked && websiteChecked) ? 'block' : 'none'
+      }
+
+      var addChangeListener = function(input) {
+        input.addEventListener('change', adjustURLFieldVisibility)
+      }
+
+      var productStatusElements = document.querySelectorAll('input[name="productStatus"]')
+      for (var i = 0; i < productStatusElements.length; i++) {
+        addChangeListener(productStatusElements[i])
+      }
+      addChangeListener(document.querySelector('input[name="websiteRequired"]'))
+      urlField.style.display = 'none'

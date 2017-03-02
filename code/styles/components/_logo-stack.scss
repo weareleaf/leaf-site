@@ -1,0 +1,22 @@
+.logo-stack {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-bottom: -$spacing-vertical;
+
+  &__group {
+    align-items: center;
+    display: flex;
+  }
+
+  &__item {
+    @include padding-horizontal($padding-horizontal-root);
+    margin-bottom: $spacing-vertical;
+    max-width: 15em;
+
+    img,
+    svg {
+      max-width: 100%;
+    }
+  }
+}
