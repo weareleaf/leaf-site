@@ -139,7 +139,11 @@ gulp.task('images', () => {
   return gulp.src(IMAGE_FILES)
     .pipe(changed(BUILD_DEST))
     .pipe(imagemin([
-      imageminJpegRecompress()
+      imageminJpegRecompress({
+        accurate: true,
+        quality: 'veryhigh',
+        target: 0.995
+      })
     ]))
     .on('error', logError)
     .pipe(gulp.dest(BUILD_DEST))
