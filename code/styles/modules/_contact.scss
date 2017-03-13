@@ -1,0 +1,58 @@
+.contact {
+  @include clearfix;
+  @include margin-vertical($spacing-vertical-lg);
+  font-family: $font-sans-serif;
+
+  @include susy-breakpoint($bp-lg) {
+    @include margin-vertical($spacing-vertical-xl);
+  }
+
+  &__content {
+    margin-bottom: $spacing-vertical-lg;
+
+    @include susy-breakpoint($bp-lg) {
+      @include span(5);
+      @include post(1);
+      margin-bottom: 0;
+    }
+  }
+
+  &__details {
+
+    @include susy-breakpoint($bp-lg) {
+      @include span(6);
+    }
+  }
+
+  &__lead {
+    margin-bottom: 0;
+  }
+
+  &__heading {
+    color: $coal;
+    margin-top: 0;
+  }
+
+  &__text {
+    font-size: .9em;
+    line-height: 1.8;
+  }
+
+  &__list {
+
+    &__term {
+      color: $leaf-green-dark;
+      font-weight: 600;
+      text-transform: uppercase;
+    }
+
+    &__description {
+      color: $coal;
+      font-size: 1.1em;
+    }
+
+    &__link {
+      color: inherit;
+    }
+  }
+}

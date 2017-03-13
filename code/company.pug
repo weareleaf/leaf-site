@@ -8,14 +8,16 @@ block content
 
   //- Hero banner
   +hero-banner({
+    mastheadArgs: {
+      logoArgs: {
+        white: true
+      },
+      navigationArgs: {
+        white: true
+      }
+    },
     heroBannerArgs: {
       green: true
-    },
-    logoArgs: {
-      white: true
-    },
-    hamburgerArgs: {
-      white: true
     },
     pageHeaderArgs: {
       intro: "We're a web design and development studio, specialising in lean digital products. Formed in 2015, we're based in South-East England, in the historic city of Canterbury.",
@@ -103,16 +105,16 @@ block content
     //- Logo stack
     +logo-stack([{
       alt: "Zendesk",
-      src: "clients/zendesk.svg"
+      src: "clients/grey/zendesk.svg"
     },{
       alt: "BoxedUp",
-      src: "clients/boxedup.svg"
+      src: "clients/grey/boxedup.svg"
     },{
       alt: "Keen",
-      src: "clients/keen.svg"
+      src: "clients/grey/keen.svg"
     },{
       alt: "CakeBoxx Technology",
-      src: "clients/cakeboxx.svg"
+      src: "clients/grey/cakeboxx.svg"
     }])
 
 

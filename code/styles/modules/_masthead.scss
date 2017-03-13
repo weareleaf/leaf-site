@@ -19,4 +19,15 @@
       }
     }
   }
+
+  &__actions {
+    @include margin-vertical($spacing-vertical-lg);
+    text-align: right;
+
+    &__button {
+      background-color: #20A36F;
+      display: inline-block;
+      width: auto;
+    }
+  }
 }

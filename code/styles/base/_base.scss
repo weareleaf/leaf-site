@@ -10,6 +10,7 @@ html {
 
 body {
   font-size: 0.75em;
+  overflow-x: hidden;
 
   @include susy-breakpoint($bp-xs) {
     font-size: 0.9em;

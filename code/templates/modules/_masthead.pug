@@ -8,9 +8,13 @@
 //- -- navigationArgs
 
 
-mixin masthead(logoArgs, navigationArgs)
+mixin masthead(args)
   .masthead
     .masthead__logo
       a.masthead__logo__link(href="/")
-        +logo(logoArgs)
-    +navigation(navigationArgs)
+        +logo(args.logoArgs || {})
+    - if (args.callToActionArgs)
+      .masthead__actions
+        a.masthead__actions__button.button(href=args.callToActionArgs.link)= args.callToActionArgs.name
+    - else if (args.navigationArgs)
+      +navigation(args.navigationArgs)

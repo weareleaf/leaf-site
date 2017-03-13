@@ -9,6 +9,8 @@
 
 
 mixin quote(args)
-  blockquote.quote
+  - var centerClass = args.center ? "quote--center" : null
+
+  blockquote.quote(class=centerClass)
     .quote__text!= args.quote
     cite.quote__author!= args.author

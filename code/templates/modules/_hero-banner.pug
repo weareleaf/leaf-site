@@ -10,11 +10,13 @@
 //- -- pageHeaderArgs
 
 
+- var defaultArgs = {}
+
 mixin hero-banner(args)
   if args.heroBannerArgs
     - var heroBannerClass = args.heroBannerArgs.green ? "hero-banner--green" : null
 
   .hero-banner(class=heroBannerClass)
     .hero-banner__inner
-      +masthead(args.logoArgs, args.hamburgerArgs)
+      +masthead(args.mastheadArgs || defaultArgs)
       +page-header(args.pageHeaderArgs)

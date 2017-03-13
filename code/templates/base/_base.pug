@@ -99,8 +99,9 @@ html(lang="en")
     .site-wrapper
 
       block content
-
-      +footer
+      
+      if(bodyClass != "landing-page")
+        +footer
 
     block footerScripts
 

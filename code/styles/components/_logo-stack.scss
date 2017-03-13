@@ -4,6 +4,10 @@
   justify-content: center;
   margin-bottom: -$spacing-vertical;
 
+  @include susy-breakpoint($bp-md) {
+    flex-wrap: nowrap;
+  }
+
   &__group {
     align-items: center;
     display: flex;

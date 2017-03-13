@@ -1,15 +1,36 @@
 .hero-banner {
+  //margin-bottom: calc(-10vw + #{$padding-vertical-lg};
+  margin-bottom: calc(-10vw + 3%);
+  position: relative;
+  //z-index: 1;
 
-  &--green {
+  &::before {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transform: skewY(4deg);
+    transform-origin: top right;
+    z-index: -1;
+  }
+
+  &--green::before {
     background-color: $leaf-green-dark;
+    background-image:
+    linear-gradient(
+      -65deg,
+      rgba($white, .05) 50%,
+      transparent 50%
+    );
   }
 
   &__inner {
     @include container;
-    padding: 0 $padding-horizontal-fluid $spacing-vertical-lg;
-
-    @include susy-breakpoint($bp-sm) {
-      padding-bottom: $spacing-vertical-xl;
-    }
+    padding: 0 $padding-horizontal-fluid calc(10vw + #{$padding-vertical-lg};
   }
 }

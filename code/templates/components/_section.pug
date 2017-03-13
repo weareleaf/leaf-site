@@ -10,10 +10,12 @@
 
 mixin section(args)
   - var attributesClass = attributes.class ? attributes.class : null
+  - var attributesID = attributes.id ? attributes.id : null
   - var backgroundClass = args.background ? "section--" + args.background : null
   - var centerClass = args.center ? "section--center" : null
+  - var shadowClass = args.shadow ? "section--shadow" : null
 
-  section.section(class=attributesClass class=backgroundClass class=centerClass)
+  section.section(id=attributesID class=attributesClass class=backgroundClass class=centerClass class=shadowClass)
     .section__inner
       if args.heading
         .section__intro
