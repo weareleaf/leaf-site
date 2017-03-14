@@ -67,12 +67,12 @@ block content
       author: "Stuart Clark, CakeBoxx Technologies",
       quote: "We approached Leaf to redesign our previously dated site. Their team quickly got us up and running with a beautiful new site; optimised for our client-base with a mobile-first approach. Feedback from our customers has been fantastic!"
     })
-    
+
   +section({
     background: "white",
     shadow: true
   })#section--contact.no-padding-bottom
-  
+
     //- Logo stack
     +logo-stack([{
       alt: "Keen",
@@ -87,7 +87,7 @@ block content
       alt: "CakeBoxx Technology",
       src: "clients/colour/cakeboxx.svg"
     }])
-    
+
     .contact
       .contact__content
         p.contact__lead Interested?
@@ -95,22 +95,22 @@ block content
         p.contact__text If you have some interface design work you think we could help with, we’d love to hear from you.
         p.contact__text Alternatively, have a project planner, which will guide you through some early project questions.
         a.contact__button.button(href="project-planner") I'll try the Project Planner
-        
+
       .contact__details
         dl.contact__list
           dt.contact__list__term Email
           dd.contact__list__description: a.contact__list__link(href="mailto:enquiries@weareleaf.com") enquiries@weareleaf.com
           dt.contact__list__term Telephone
-          dd.contact__list__description 01227 647006
+          dd.contact__list__description: a.contact__list__link(href="tel:01227 647006") 01227 647006
           dt.contact__list__term Address
           dd.contact__list__description 25 Castle Street, Canterbury, Kent, CT1 2PX, UK
-        
+
 
     footer.simple-footer
       .simple-footer__inner
         span.simple-footer__item &copy; Leaf Software Ltd
         span.simple-footer__item Company no: 09664307
-        
+
   // Google Code for Landing page Conversion Page
   script(type='text/javascript').
     /* <![CDATA[ */

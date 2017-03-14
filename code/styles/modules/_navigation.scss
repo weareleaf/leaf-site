@@ -6,7 +6,9 @@
     @include absolute-fill;
     background-color: $black;
     height: 100%;
+    position: fixed;
     width: 100%;
+    z-index: 99;
   }
 
   &__inner {
@@ -26,7 +28,6 @@
       right: 0;
       top: 0;
       width: 100%;
-      z-index: 9;
     }
   }
 }
