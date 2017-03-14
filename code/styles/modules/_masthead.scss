@@ -6,17 +6,18 @@
     display: table-cell;
     vertical-align: middle;
 
+    &__inner,
     &__link {
 
       svg {
         display: block;
         height: 1.97em;
         width: 3.25em;
-
-        &:hover path {
-          opacity: .9;
-        }
       }
+    }
+
+    &__link:hover path {
+      opacity: .9;
     }
   }
 
