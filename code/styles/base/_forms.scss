@@ -174,3 +174,14 @@ progress {
   margin-bottom: 0;
   text-transform: uppercase;
 }
+
+.form--small {
+  font-size: .8em;
+  text-align: left;
+
+  input:not([type='submit']),
+  textarea {
+    padding-left: 0;
+    text-align: left;
+  }
+}

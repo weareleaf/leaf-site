@@ -7,19 +7,41 @@
     @include margin-vertical($spacing-vertical-xl);
   }
 
+  &__intro {
+
+    @include susy-breakpoint($bp-lg) {
+      @include clearfix;
+      max-width: span(5);
+    }
+  }
+
+  &__content,
+  &__details {
+    margin-top: $spacing-vertical;
+  }
+
   &__content {
     margin-bottom: $spacing-vertical-lg;
 
     @include susy-breakpoint($bp-lg) {
-      @include span(5);
+      @include span(7);
       @include post(1);
       margin-bottom: 0;
+    }
+
+    @include susy-breakpoint($bp-xl) {
+      @include span(5);
+      @include post(1);
     }
   }
 
   &__details {
 
     @include susy-breakpoint($bp-lg) {
+      @include span(4);
+    }
+
+    @include susy-breakpoint($bp-xl) {
       @include span(6);
     }
   }

@@ -4,7 +4,9 @@ block prepend vars
   -var bodyClass = "landing-page"
   -var title = "User Interface Design in Canterbury, Kent - Leaf"
 
-block content
+  block content
+
+    script(src="https://static.howdyform.com/howdyClient.js?token=aGVsbG9Ad2VhcmVsZWFmLmNvbQ==", data-howdy-recipient="enquires@weareleaf.com")
 
   //- Hero banner
   +hero-banner({
@@ -89,12 +91,60 @@ block content
     }])
 
     .contact
-      .contact__content
+      .contact__intro
         p.contact__lead Interested?
         h3.contact__heading You’re in good company
-        p.contact__text If you have some interface design work you think we could help with, we’d love to hear from you.
-        p.contact__text Alternatively, have a project planner, which will guide you through some early project questions.
-        a.contact__button.button(href="project-planner") I'll try the Project Planner
+        p.contact__text If you have some interface design work you think we could help with, we’d love to hear from you. Leave us a message, and we'll get back to you within 24 hours.
+
+      .contact__content
+
+        form.form.form--small(action="submit", autocomplete="off")
+
+          //- Name
+          +form-group-input({
+            formGroupArgs: {
+              name: "name"
+            },
+            labelArgs: {
+              text: "What's your <mark class='form-group__label__highlight'>name</mark>?"
+            },
+            inputArgs: {
+              placeholder: "Samwise Gamgee",
+              optional: true
+            }
+          })
+
+          //- Email address
+          +form-group-input({
+            formGroupArgs: {
+              name: "email"
+            },
+            labelArgs: {
+              text: "What's your <mark class='form-group__label__highlight'>email address</mark>?"
+            },
+            inputArgs: {
+              placeholder: "samwise@gmail.com",
+              type: "email",
+              optional: true
+            }
+          })
+
+          //- Message
+          +form-group-textarea({
+            formGroupArgs: {
+              name: "description"
+            },
+            labelArgs: {
+              text: "Tell us about the project, and <mark class='form-group__label__highlight'>what you're looking to achieve</mark>?"
+            },
+            textareaArgs: {
+              placeholder: "The more you can share, the better",
+              dataHowdyValidate: "required",
+              optional: true
+            }
+          })
+
+          input.button(type="submit", value="Send away")
 
       .contact__details
         dl.contact__list
