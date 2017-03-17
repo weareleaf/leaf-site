@@ -6,7 +6,7 @@ block prepend vars
 
   block content
 
-    script(src="https://static.howdyform.com/howdyClient.js?token=aGVsbG9Ad2VhcmVsZWFmLmNvbQ==", data-howdy-recipient="enquiries@weareleaf.com")
+  script(src="https://static.howdyform.com/howdyClient.js?token=aGVsbG9Ad2VhcmVsZWFmLmNvbQ==", data-howdy-recipient="enquiries@weareleaf.com")
 
   //- Hero banner
   +hero-banner({
@@ -161,8 +161,8 @@ block prepend vars
         span.simple-footer__item &copy; Leaf Software Ltd
         span.simple-footer__item Company no: 09664307
 
-  // Google Code for Landing page Conversion Page
-  script(type='text/javascript').
+  //- Google Code for Landing page Conversion Page
+  script.
     /* <![CDATA[ */
     var google_conversion_id = 858685293;
     var google_conversion_language = "en";
@@ -171,7 +171,8 @@ block prepend vars
     var google_conversion_label = "O-TyCNDkiW8Q7f65mQM";
     var google_remarketing_only = false;
     /* ]]> */
-    script(type='text/javascript', src='//www.googleadservices.com/pagead/conversion.js')
-    noscript
-      div(style='display:inline;')
-        img(height='1', width='1', style='border-style:none;', alt='', src='//www.googleadservices.com/pagead/conversion/858685293/?label=O-TyCNDkiW8Q7f65mQM&guid=ON&script=0')
+
+  script(type="text/javascript", src="//www.googleadservices.com/pagead/conversion.js")
+  noscript
+    div(style="display:inline;")
+      img(height="1", width="1", style="border-style:none;", alt="", src="//www.googleadservices.com/pagead/conversion/858685293/?label=O-TyCNDkiW8Q7f65mQM&amp;guid=ON&amp;script=0")

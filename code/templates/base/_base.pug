@@ -20,6 +20,7 @@ html(lang="en")
     script(src="https://use.typekit.net/huw3wqz.js")
     script.
       try{Typekit.load({ async: true });}catch(e){}
+
     script.
       //- Ensure the content fades in properly even if a content blocker is blocking typekit:
       document.addEventListener("DOMContentLoaded", function(event) {
@@ -99,32 +100,33 @@ html(lang="en")
     .site-wrapper
 
       block content
-      
+
       if(bodyClass != "landing-page")
         +footer
 
     block footerScripts
 
-      script.
-        var body =  document.querySelector("body");
-        var hamburger = document.querySelector(".hamburger");
-        var navigation = document.querySelector(".navigation");
-        var navigationList = document.querySelector(".navigation__list");
+      if(bodyClass != "landing-page")
+        script.
+          var body =  document.querySelector("body");
+          var hamburger = document.querySelector(".hamburger");
+          var navigation = document.querySelector(".navigation");
+          var navigationList = document.querySelector(".navigation__list");
 
-        // Toggle the burger menu, and navigation state
-        hamburger.addEventListener("click", function() {
-          body.classList.toggle("no-scroll");
-          hamburger.classList.toggle("is-active");
-          navigation.classList.toggle("on");
-          navigationList.classList.toggle("hidden");
-        });
+          // Toggle the burger menu, and navigation state
+          hamburger.addEventListener("click", function() {
+            body.classList.toggle("no-scroll");
+            hamburger.classList.toggle("is-active");
+            navigation.classList.toggle("on");
+            navigationList.classList.toggle("hidden");
+          });
 
-        // Close the navigation via the Esc key
-        document.addEventListener("keyup", function(e) {
-          if (e.keyCode == 27) {
-            body.classList.remove("no-scroll");
-            hamburger.classList.remove("is-active");
-            navigation.classList.remove("on");
-            navigationList.classList.add("hidden");
-          }
-        });
+          // Close the navigation via the Esc key
+          document.addEventListener("keyup", function(e) {
+            if (e.keyCode == 27) {
+              body.classList.remove("no-scroll");
+              hamburger.classList.remove("is-active");
+              navigation.classList.remove("on");
+              navigationList.classList.add("hidden");
+            }
+          });
