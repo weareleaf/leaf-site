@@ -62,11 +62,16 @@ $p-font-size: 1.1em;
 
 // Forms
 $input-background-color: transparent;
-$input-border-color: $light-stone;
-$input-color: $leaf-green-dark;
-$input-placeholder-color: $stone;
-$label-color: $coal;
+$input-border-color: $dark-smoke;
+$input-color: $white;
+$input-placeholder-color: $dark-smoke;
+$label-color: $stone;
 $error-color: $red;
+
+$inverse-input-border-color: $light-stone;
+$inverse-input-color: $leaf-green-dark;
+$inverse-input-placeholder-color: $light-stone;
+$inverse-label-color: $coal;
 
 // Line height
 $base-line-height: 1.6;

@@ -2,9 +2,10 @@ extends ./templates/base/_base
 
 block prepend vars
   -var bodyClass = "contact-page"
-  -var title = "Contact - Leaf"
+  -var title = "Contact us - Leaf"
 
 block content
+  script(src="https://static.howdyform.com/howdyClient.js?token=aGVsbG9Ad2VhcmVsZWFmLmNvbQ==", data-howdy-recipient="info@weareleaf.com")
 
   //- Hero banner
   +hero-banner({
@@ -20,53 +21,73 @@ block content
       green: true
     },
     pageHeaderArgs: {
-      intro: "Give us a brief overview of how you think we can help, and get right back to you on the email address you provide.",
+      intro: "If you think we'd be a good fit to help your team out on a project, have a burning question, or simply want to say hello, we'd love to hear from you.",
       inverse: true,
-      title: "Let's get started"
+      title: "Contact us"
     }
   })
 
-  main
+  +section({
+    heading: "Let's chat",
+    text: "We're usually able to respond to messages within 24 hours. We also <a href='/project-planner'>have a project planner</a>, which will help us better understand your needs."
+  })#section--contact
 
-    section.section
-      .section__inner
+    .contact
+      .contact__content
 
-        form(class="howdy-form",novalidate)
-          .input-row
-            .form-group
-              label Name
-              input(type="text", placeholder="Your name", name="name", data-howdy-validate="required")
-            .form-group
-              label Email
-              input(placeholder="Your email address", name="email")
-            .form-group
-              label Organisation
-              input(type="text", placeholder="Organisation name", name="organisation", data-howdy-validate="required")
-            .form-group
-              label Project budget
-              .select
-                select(name="budget")
-                  option Under £10,000
-                  option £10,000 - £20,000
-                  option £20,000 - £30,000
-                  option £30,000 - £50,000
-                  option £50,000 - £100,000
-                  option £100,000+
+        form.form.form--small(action="submit", autocomplete="off")
 
-          .form-group
-            label How can we help?
-            textarea(name="body", placeholder="This is to help us get an initial feel for what's needed...", data-howdy-validate="required")
+          //- Name
+          +form-group-input({
+            formGroupArgs: {
+              name: "name"
+            },
+            labelArgs: {
+              text: "What's your <mark class='form-group__label__highlight'>name</mark>?"
+            },
+            inputArgs: {
+              placeholder: "Samwise Gamgee",
+              optional: true
+            }
+          })
 
-          input.btn.btn--block(type="submit" value="Send Message")
+          //- Email address
+          +form-group-input({
+            formGroupArgs: {
+              name: "email"
+            },
+            labelArgs: {
+              text: "What's your <mark class='form-group__label__highlight'>email address</mark>?"
+            },
+            inputArgs: {
+              placeholder: "samwise@gmail.com",
+              type: "email",
+              optional: true
+            }
+          })
 
+          //- Message
+          +form-group-textarea({
+            formGroupArgs: {
+              name: "description"
+            },
+            labelArgs: {
+              text: "Tell us what <mark class='form-group__label__highlight'>we can do for you</mark>?"
+            },
+            textareaArgs: {
+              placeholder: "The more you can share, the better",
+              dataHowdyValidate: "required",
+              optional: true
+            }
+          })
 
+          input.button(type="submit", value="Send away")
 
-        .form-info
-          h2 I don't know my budget
-          p While we don't need an exact budget this point, we do need at least an initial indication of what's likely. Our proposal will be underpinned by how much time is available, so the earlier we know, the better.
-
-        .form-info
-          h2 Where's your phone number?
-          p We like to work in a <strong>distraction free environment</strong> so we can be as efficient as possible. Drop us a message on the form above and we'll get back to you, or email us at <a href="mailto:enquiries@weareleaf.com">enquiries@weareleaf.com</a>.
-
-        script(type="text/javascript" src="https://static.howdyform.com/howdyClient.js?email=aGVsbG9Ad2VhcmVsZWFmLmNvbQ==" data-howdy-recipient="enquiries@weareleaf.com")
+      .contact__details
+        dl.contact__list
+          dt.contact__list__term Email
+          dd.contact__list__description: a.contact__list__link(href="mailto:info@weareleaf.com") info@weareleaf.com
+          dt.contact__list__term Telephone
+          dd.contact__list__description: a.contact__list__link(href="tel:01227647006") 01227 647006
+          dt.contact__list__term Address
+          dd.contact__list__description 25 Castle Street, Canterbury, Kent, CT1 2PX, UK

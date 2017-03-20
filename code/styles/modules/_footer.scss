@@ -30,6 +30,10 @@
     &__item {
       font-size: .7em;
       margin-right: $spacing-horizontal;
+
+      a {
+        border-bottom: $base-border-style $base-border-width $white;
+      }
     }
   }
 

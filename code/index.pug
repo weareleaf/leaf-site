@@ -12,6 +12,10 @@ block content
       logoArgs: {
         white: true
       },
+      callToActionArgs: {
+        link: "/contact",
+        name: "Let's chat"
+      },
       navigationArgs: {
         white: true
       }
@@ -20,9 +24,9 @@ block content
       green: true
     },
     pageHeaderArgs: {
-      intro: "The creative partner you've been waiting for; Leaf are a web design and development studio, specialising in digital products that make peoples lives easier.",
+      intro: "We are Leaf; a web design and development agency that specialise in creating usable, accessible, and maintainable digital products your customers love.",
       inverse: true,
-      title: "We are Leaf"
+      title: "Kent based digital studio"
     }
   })
 
@@ -67,3 +71,14 @@ block content
       text: "Expertly crafted, thoroughly thought out web and mobile applications; we take software engineering incredibly seriously.",
       title: "Development"
     }])
+
+  //- Section
+  +section({}).kent
+
+    //- Box
+    +box({
+      button: "Let's chat",
+      link: "/contact",
+      text: "We're located in the heart of the idyllic city of Canterbury, and regulaly work with Kent-based companies. If you're local, or simply in the area, we'd love to grab a coffee and talk shop.",
+      title: "Proudly from Kent"
+    })

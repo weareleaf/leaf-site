@@ -106,8 +106,12 @@ small {
 mark {
   @include margin-horizontal(-.175em);
   @include padding-horizontal(.175em);
-  background-color: rgba($leaf-green, .2);
+  background-color: rgba($white, .04);
   color: inherit;
+
+  .page--inverse {
+    background-color: rgba($leaf-green, .2);
+  }
 }
 
 img {

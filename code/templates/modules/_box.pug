@@ -1,0 +1,16 @@
+//- Box
+//-
+//- A box of content, designed to sit on top of an background image.
+
+
+//- Options
+//- -- intro
+//- -- text
+//- -- title
+
+
+mixin box(args)
+  .box
+    h2.box__title #{args.title}
+    p.box__text #{args.text}
+    a(href=args.link).box__button.button #{args.button}

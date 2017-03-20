@@ -1,6 +1,6 @@
 .navigation {
-  text-align: right;
-  vertical-align: middle;
+  //text-align: right;
+  //vertical-align: middle;
 
   &.on {
     @include absolute-fill;
@@ -14,6 +14,8 @@
   &__inner {
     @include container;
     @include padding-vertical($spacing-vertical-lg);
+    margin-left: $spacing-horizontal;
+    text-align: right;
 
     .navigation.on & {
       @include padding-horizontal($padding-horizontal-fluid);

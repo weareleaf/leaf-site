@@ -1,10 +1,10 @@
 .masthead {
-  display: table;
-  width: 100%;
+  align-items: center;
+  display: flex;
 
   &__logo {
-    display: table-cell;
-    vertical-align: middle;
+    margin-right: auto;
+    @include margin-vertical($spacing-vertical-lg);
 
     &__inner,
     &__link {
@@ -22,7 +22,6 @@
   }
 
   &__actions {
-    @include margin-vertical($spacing-vertical-lg);
     text-align: right;
 
     &__button {

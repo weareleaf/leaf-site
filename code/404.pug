@@ -8,14 +8,20 @@ block content
 
   //- Hero banner
   +hero-banner({
+    mastheadArgs: {
+      logoArgs: {
+        white: true
+      },
+      navigationArgs: {
+        white: true
+      },
+      callToActionArgs: {
+        link: "/contact",
+        name: "Let's chat"
+      }
+    },
     heroBannerArgs: {
       green: true
-    },
-    logoArgs: {
-      white: true
-    },
-    hamburgerArgs: {
-      white: true
     },
     pageHeaderArgs: {
       intro: "Toto, I've a feeling we're not in Kansas any more... We've looked everywhere, but that page doesn't seem to exist.",

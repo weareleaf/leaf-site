@@ -1,10 +1,13 @@
 .contact {
   @include clearfix;
-  @include margin-vertical($spacing-vertical-lg);
   font-family: $font-sans-serif;
 
-  @include susy-breakpoint($bp-lg) {
-    @include margin-vertical($spacing-vertical-xl);
+  .landing-page & {
+    @include margin-vertical($spacing-vertical-lg);
+
+    @include susy-breakpoint($bp-lg) {
+      @include margin-vertical($spacing-vertical-xl);
+    }
   }
 
   &__intro {
@@ -69,12 +72,16 @@
     }
 
     &__description {
-      color: $coal;
+      color: $white;
       font-size: 1.1em;
+
+      .page-inverse & {
+        color: $coal;
+      }
     }
 
     &__link {
-      color: inherit;
+      color: inherit !important;
     }
   }
 }
