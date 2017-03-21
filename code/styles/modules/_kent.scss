@@ -3,30 +3,15 @@
   background-size: cover;
 
   @include susy-breakpoint($bp-md) {
-    padding-top: $padding-vertical-xl * 2;
-  }
-
-  @include susy-media(800px 999px) {
-    background-image: url('/images/responsive/backgrounds/kent-800.jpg');
-  }
-
-  @include susy-media(1000px 1199px) {
-    background-image: url('/images/responsive/backgrounds/kent-1000.jpg');
-  }
-
-  @include susy-media(1200px 1399px) {
     background-image: url('/images/responsive/backgrounds/kent-1200.jpg');
+    padding-top: 30vh;
   }
 
-  @include susy-media(1400px 1599px) {
-    background-image: url('/images/responsive/backgrounds/kent-1400.jpg');
-  }
-
-  @include susy-media(1600px 1799px) {
+  @include susy-breakpoint($bp-lg) {
     background-image: url('/images/responsive/backgrounds/kent-1600.jpg');
   }
 
-  @include susy-media(1800px) {
-    background-image: url('/images/responsive/backgrounds/kent-1800.jpg');
+  @include susy-breakpoint($bp-xl) {
+    background-image: url('/images/responsive/backgrounds/kent-2000.jpg');
   }
 }
