@@ -27,9 +27,15 @@ label {
   font-size: 1.1em;
   font-weight: 600;
 
+  .section--white &,
   .page--inverse & {
     color: $inverse-label-color;
   }
+}
+
+.section--white .control__label,
+.page--inverse .control__label {
+  color: $smoke;
 }
 
 input:not([type='submit']),
@@ -44,6 +50,7 @@ textarea {
   background-color: $input-background-color;
   border: none;
   border-bottom: $base-border-style $base-width-lg $input-border-color;
+  border-radius: 0;
   color: $input-color;
   display: block;
   font-family: $font-sans-serif;
@@ -56,9 +63,14 @@ textarea {
     border-color $base-duration $base-timing;
   width: 100%;
 
+  .section--white &,
   .page--inverse & {
     border-bottom-color: $inverse-input-border-color;
     color: $inverse-input-color;
+
+    &:hover {
+      border-color: darken($inverse-input-border-color, 5%);
+    }
   }
 
   &:hover {
@@ -70,6 +82,7 @@ textarea {
     box-shadow: none;
     outline: none;
 
+    .section--white &,
     .page--inverse & {
       border-color: $leaf-green-dark;
     }
@@ -87,8 +100,9 @@ textarea {
   &::placeholder {
     color: $input-placeholder-color;
 
+    .section--white &,
     .page--inverse & {
-      border-bottom-color: $inverse-input-placeholder-color;
+      color: $inverse-input-placeholder-color;
     }
   }
 }
