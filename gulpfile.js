@@ -28,7 +28,7 @@ const SASS_INCLUDE_PATHS = ['node_modules/susy/sass']
 const FAVICON_BASE = ['./code/favicons']
 const FAVICON_FILES = [(FAVICON_BASE + '/**/*')]
 const IMAGE_FILES = ['./code/**/*.png','./code/**/*.jpg','./code/**/*.gif','./code/**/*.jpeg', './code/**/*.svg', '!./code/images/favicons/**/*']
-const WEBPACKABLE_FILES = './code/scripts/index.js'
+const WEBPACKABLE_FILES = './code/scripts/service-worker.js'
 const BUILD_SRC = './code/'
 const BUILD_DEST = './dist/'
 const BUILT_FILES = BUILD_DEST + '**/*'
@@ -36,7 +36,7 @@ const BUILD_HTML = './dist/**/*.html'
 
 const webpackConfig = {
   output: {
-    filename: 'index.js',
+    filename: 'service-worker.js',
     devtoolModuleFilenameTemplate: '[resource-path]'
   },
   module: {
@@ -162,7 +162,7 @@ gulp.task("app_scripts", () => {
   return gulp.src(WEBPACKABLE_FILES)
     .pipe(webpackStream(webpackConfig))
     .on('error', logError)
-    .pipe(gulp.dest(BUILD_DEST+'scripts/'))
+    .pipe(gulp.dest(BUILD_DEST))
 })
 
 gulp.task('reload', () => {
@@ -185,7 +185,7 @@ gulp.task('watch', () => {
   gulp.src(WEBPACKABLE_FILES)
     .pipe(webpackStream(webpackConfig))
     .on('error', logError)
-    .pipe(gulp.dest(BUILD_DEST+'scripts/'))
+    .pipe(gulp.dest(BUILD_DEST))
 
   watch(BUILT_FILES, () => gulp.start('reload'))
 })

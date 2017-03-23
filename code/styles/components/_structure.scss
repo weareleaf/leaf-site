@@ -2,7 +2,7 @@ html {
   opacity: 0;
   -ms-overflow-style: -ms-autohiding-scrollbar;
 
-  &.wf-active-override,
+  &.wf-inactive,
   &.wf-active {
     opacity: 1;
     transition: opacity 800ms ease-in;
