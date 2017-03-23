@@ -19,6 +19,7 @@ const cssmin = require('gulp-cssmin')
 const webpack = require('webpack')
 const imagemin = require('gulp-imagemin')
 const imageminJpegRecompress = require('imagemin-jpeg-recompress')
+const inlinesource = require('gulp-inline-source')
 
 const MISC_FILES = ['./code/CNAME', './code/**/*.mp4', './code/**/*.ogv', './code/**/*.webm', './code/**/*.eot', './code/**/*.ttf', './code/**/*.woff', './code/**/*.woff2']
 const PUG_FILES = ['./code/**/*.pug', './code/**/*.jade']
@@ -31,6 +32,7 @@ const WEBPACKABLE_FILES = './code/scripts/index.js'
 const BUILD_SRC = './code/'
 const BUILD_DEST = './dist/'
 const BUILT_FILES = BUILD_DEST + '**/*'
+const BUILD_HTML = './dist/**/*.html'
 
 const webpackConfig = {
   output: {
@@ -114,10 +116,17 @@ gulp.task('misc', () => {
 })
 
 gulp.task('templates', () => {
+  const inlineOptions = {
+    compress: false,
+    rootpath: './dist/'
+  };
+
   return gulp.src(PUG_FILES)
     .pipe(pug({
       pretty: false
     }))
+    .on('error', logError)
+    .pipe(inlinesource(inlineOptions))
     .on('error', logError)
     .pipe(gulp.dest(BUILD_DEST))
 })
@@ -220,8 +229,8 @@ gulp.task('deploy', () => {
 // --------- COMPOSITE TASKS --------
 // ----------------------------------
 gulp.task('build', (cb) => {
-  return runSequence('clean', ['misc', 'favicons', 'templates', 'styles', 'images', 'app_scripts'], cb)
+  return runSequence('clean', 'styles', ['misc', 'favicons', 'templates', 'images', 'app_scripts'], cb)
 })
 gulp.task('start', (cb) => {
-  return runSequence('clean', ['misc', 'favicons', 'templates', 'styles', 'images'], 'watch', 'server', cb)
+  return runSequence('clean', 'styles', ['misc', 'favicons', 'templates', 'images'], 'watch', 'server', cb)
 })
