@@ -1,4 +1,4 @@
-var CACHE_NAME = 'leaf-website';
+var CACHE_NAME = 'leaf-website-280417';
 var urlsToCache = [
   '/',
   '/styles/main.css'
@@ -57,7 +57,7 @@ self.addEventListener('fetch', function(event) {
 
 self.addEventListener('activate', function(event) {
 
-  var cacheWhitelist = ['leaf-website'];
+  var cacheWhitelist = [CACHE_NAME];
 
   event.waitUntil(
     caches.keys().then(function(cacheNames) {
