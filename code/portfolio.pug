@@ -31,7 +31,10 @@ block content
   })
 
   //- Section
-  +section({})
+  +section({
+    heading: "Client work",
+    text: "A selection of our recent work, ranging from WordPress marketing sites through to full blown Ruby on Rails web applications."
+  })
 
     //- Gallery
     +gallery([{
@@ -64,4 +67,19 @@ block content
       src: "/images/responsive/work/zendesk-600.jpg",
       srcset: "/images/responsive/work/zendesk-200.jpg 200w, /images/responsive/work/zendesk-400.jpg 400w, /images/responsive/work/zendesk-600.jpg 600w",
       title: "Zendesk"
+    }])
+    
+  //- Section
+  +section({
+    heading: "Our products",
+    text: "As well as helping others achieve their goals, we've also started building our own suite of industry-focused products."
+  }).no-padding-top
+
+    +products([{
+      alt: "Howdy",
+      description: "Howdy turns your static HTML contact forms in to the real thing without writing a line of code.",
+      href: "https://howdyform.com/",
+      src: "/images/responsive/work/keen-600.gif",
+      srcset: "/images/responsive/work/howdy-200.png 200w, /images/responsive/work/howdy-400.png 400w, /images/responsive/work/howdy-600.png 600w",
+      title: "Howdy"
     }])
