@@ -8,6 +8,10 @@
 
 .gallery {
 
+  .no-scroll & {
+    visibility: hidden; // Quick fix for hover state appearing over the nav overlay
+  }
+
   &__pair {
     position: relative;
 
