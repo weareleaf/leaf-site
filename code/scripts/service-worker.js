@@ -1,4 +1,4 @@
-var CACHE_NAME = 'leaf-website-280417';
+var CACHE_NAME = `leaf-website-${process.env.RELEASE_TIMESTAMP}`;
 var urlsToCache = [
   '/',
   '/styles/main.css'

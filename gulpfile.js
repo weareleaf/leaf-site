@@ -60,7 +60,10 @@ const webpackConfig = {
   },
   plugins: [
     new webpack.DefinePlugin({
-      "process.env": { "NODE_ENV": JSON.stringify("production") }
+      "process.env": {
+        NODE_ENV: JSON.stringify("production"),
+        RELEASE_TIMESTAMP: '' + Date.now()
+      }
     }),
     new webpack.optimize.DedupePlugin(),
     new webpack.optimize.UglifyJsPlugin({
