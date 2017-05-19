@@ -1,4 +1,4 @@
-var CACHE_NAME = `leaf-website-${process.env.RELEASE_TIMESTAMP}`
+var CACHE_NAME = 'leaf-website-SERVICE_WORKER_VERSION'
 var urlsToCache = [
   '/',
   '/styles/main.css'

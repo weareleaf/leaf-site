@@ -20,6 +20,7 @@ const webpack = require('webpack')
 const imagemin = require('gulp-imagemin')
 const imageminJpegRecompress = require('imagemin-jpeg-recompress')
 const inlinesource = require('gulp-inline-source')
+const StringReplacePlugin = require("string-replace-webpack-plugin")
 
 const MISC_FILES = ['./code/CNAME', './code/**/*.mp4', './code/**/*.ogv', './code/**/*.webm', './code/**/*.eot', './code/**/*.ttf', './code/**/*.woff', './code/**/*.woff2']
 const PUG_FILES = ['./code/**/*.pug', './code/**/*.jade']
@@ -48,6 +49,20 @@ const webpackConfig = {
         query: {
           presets: ['es2015']
         }
+      },
+      {
+        text: /\.js$/,
+        exclude: /node_modules/,
+        loader: StringReplacePlugin.replace({
+          replacements: [
+            {
+                pattern: /SERVICE_WORKER_VERSION/ig,
+                replacement: function (match, p1, offset, string) {
+                    return '' + Date.now();
+                }
+            }
+          ]
+        })
       }
     ]
   },
@@ -59,10 +74,10 @@ const webpackConfig = {
     }
   },
   plugins: [
+    new StringReplacePlugin(),
     new webpack.DefinePlugin({
       "process.env": {
-        NODE_ENV: JSON.stringify("production"),
-        RELEASE_TIMESTAMP: '' + Date.now()
+        NODE_ENV: JSON.stringify("production")
       }
     }),
     new webpack.optimize.DedupePlugin(),
