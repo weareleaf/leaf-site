@@ -234,7 +234,7 @@ gulp.task('server', () => {
 // ----------------------------------
 // --------- DEPLOY TASKS -----------
 // ----------------------------------
-gulp.task('deploy', () => {
+gulp.task('push', () => {
   return gulp.src(BUILT_FILES)
     .pipe(ghPages({
       remoteUrl: 'git@github.com:leafagency/leafagency.github.io.git',
@@ -251,4 +251,7 @@ gulp.task('build', (cb) => {
 })
 gulp.task('start', (cb) => {
   return runSequence('clean', 'styles', ['misc', 'favicons', 'templates', 'images'], 'watch', 'server', cb)
+})
+gulp.task('deploy', (cb) => {
+  return runSequence('clean', 'styles', ['misc', 'favicons', 'templates', 'images', 'app_scripts'], cb)
 })
