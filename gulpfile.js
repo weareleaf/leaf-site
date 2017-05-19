@@ -253,5 +253,5 @@ gulp.task('start', (cb) => {
   return runSequence('clean', 'styles', ['misc', 'favicons', 'templates', 'images'], 'watch', 'server', cb)
 })
 gulp.task('deploy', (cb) => {
-  return runSequence('clean', 'styles', ['misc', 'favicons', 'templates', 'images', 'app_scripts'], cb)
+  return runSequence('clean', 'styles', ['misc', 'favicons', 'templates', 'images', 'app_scripts'], 'push', cb)
 })
