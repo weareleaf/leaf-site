@@ -1,26 +1,42 @@
 .logo-stack {
   display: flex;
+  align-items: center;
   flex-wrap: wrap;
   justify-content: center;
   margin-bottom: -$spacing-vertical;
 
-  @include susy-breakpoint($bp-md) {
-    flex-wrap: nowrap;
-  }
-
-  &__group {
-    align-items: center;
-    display: flex;
-  }
-
   &__item {
     @include padding-horizontal($padding-horizontal-root);
     margin-bottom: $spacing-vertical;
-    max-width: 15em;
+    text-align: center;
+    flex: 0 0 10em;
+    @include susy-breakpoint($bp-md) {
+      flex: 0 0 15em;
+    }
 
     img,
     svg {
       max-width: 100%;
     }
+  }
+}
+
+.logo-stack--small {
+  margin-top: $spacing-vertical-lg;
+  @include susy-breakpoint($bp-md) {
+    flex-wrap: nowrap;
+  }
+  .logo-stack__item {
+    flex: 0 0 8em;
+    @include susy-breakpoint($bp-md) {
+      flex: 0 1 15em;
+    }
+  }
+}
+
+a.logo-stack__item {
+  &:hover {
+    transform: translateY(-5px);
+    transition: transform $base-duration $base-timing;
   }
 }

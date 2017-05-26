@@ -9,12 +9,11 @@
 
 
 mixin logo-stack(args)
-  .logo-stack
-    | <div class="logo-stack__group">
+  .logo-stack(class=attributes.class)
     each item, index in args
-      if index % 2 === 0 && index !== 0
-        | </div>
-        | <div class="logo-stack__group">
-      .logo-stack__item
-        img(src="images/logos/" + item.src, alt=item.alt)
-    | </div>
+      if item.href
+        a.logo-stack__item(href=item.href, target=item.target)
+          img(src="images/logos/" + item.src, alt=item.alt)
+      else
+        div.logo-stack__item
+          img(src="images/logos/" + item.src, alt=item.alt)
