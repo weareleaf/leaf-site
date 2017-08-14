@@ -2,54 +2,40 @@
   @include clearfix;
   margin-bottom: $spacing-vertical-lg;
 
+  @include susy-breakpoint($bp-md) {
+    display: flex;
+  }
+
+  @include susy-breakpoint($bp-lg) {
+    display: initial;
+  }
+
   &:last-of-type {
     margin-bottom: 0;
   }
 
-  @include susy-breakpoint($bp-sm) {
-    @include span(6 of 12);
-
-    &:nth-of-type(even) {
-      @include last;
-    }
-  }
-
   @include susy-breakpoint($bp-lg) {
-    @include span(12 of 12);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    &:nth-of-type(odd) {
-      flex-direction: row-reverse;
-    }
+    @include gallery(4 of 12);
   }
 
   &__image {
     margin-bottom: $spacing-vertical-sm;
 
-    @include susy-breakpoint($bp-lg) {
-      @include span(5 of 12);
-      margin-bottom: 0;
+    @include susy-breakpoint($bp-md) {
+      flex-basis: 64em;
+      margin-right: $spacing-horizontal;
+    }
+
+    &__item {
+      width: 100%;
     }
   }
 
   &__content {
 
-    @include susy-breakpoint($bp-lg) {
-      @include span(5 of 12);
-    }
   }
 
   &__list {
-
-    @include susy-breakpoint($bp-sm) {
-
-    }
-
-    @include susy-breakpoint($bp-lg) {
-
-    }
 
     &__item {
       display: inline-block;

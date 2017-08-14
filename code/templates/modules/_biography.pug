@@ -14,7 +14,7 @@
 mixin biography(args)
   .biography
     .biography__image
-      img.gallery__item__image(src="/images/team/" + args.image, alt=args.name)
+      img.biography__image__item(src="/images/team/" + args.image, alt=args.name)
     .biography__content
       span.heading-intro #{args.title}
       h3 #{args.name}
@@ -27,4 +27,4 @@ mixin biography(args)
             - var href = (typeof item.href === "undefined") ? "#" : item.href
 
             li.biography__list__item
-              a.biography__list__link(href=href) #{item.site}
+              a.biography__list__link(href=href, target="_blank", rel="noopener") #{item.site}
