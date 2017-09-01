@@ -28,8 +28,13 @@
     padding-bottom: $padding-vertical-sm;
 
     &__item {
+      display: block;
       font-size: .7em;
       margin-right: $spacing-horizontal;
+
+      @include susy-breakpoint($bp-xs) {
+        display: initial;
+      }
 
       a {
         border-bottom: $base-border-style $base-border-width $white;
