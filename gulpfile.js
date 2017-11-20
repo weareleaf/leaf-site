@@ -169,7 +169,7 @@ gulp.task('images', () => {
       imageminJpegRecompress({
         accurate: true,
         quality: 'veryhigh',
-        target: 0.995
+        target: 0.998
       })
     ]))
     .on('error', logError)
