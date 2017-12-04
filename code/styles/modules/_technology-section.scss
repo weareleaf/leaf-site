@@ -1,9 +1,13 @@
 #nodes-animation {
+  background: white;
   display: block;
 }
 
 #technology-section {
-  box-shadow:inset 0 0 50px 25px $black;
+  box-shadow:inset 0 0 50px 25px white;
   position: relative;
+  @include susy-breakpoint($bp-lg) {
+    padding-bottom: $padding-vertical-xxl;
+  }
   z-index: 2;
 }

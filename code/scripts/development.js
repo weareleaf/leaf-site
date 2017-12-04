@@ -3,13 +3,13 @@ var width, height, canvas, foreground, ctx, points, target
 var animateHeader = true
 
 // Main
-setTimeout(function() {
+window.addEventListener('load', function() {
   initialize()
   drawPoints()
   positionForeground()
   initAnimation()
   addListeners()
-}, 1000)
+})
 
 function initialize() {
   canvas = document.getElementById('nodes-animation')
@@ -113,7 +113,7 @@ function drawPoints() {
   // Assign a circle to each point
   var circleSize = 2 + (Math.random() * 2)
   for (var i in points) {
-    var c = new Circle(points[i], circleSize, '#AEAFBO')
+    var c = new Circle(points[i], circleSize, 'rgba(161, 170, 181, 1)')
     points[i].circle = c
   }
 }
@@ -171,7 +171,7 @@ function drawLines(p) {
     ctx.beginPath()
     ctx.moveTo(p.x, p.y)
     ctx.lineTo(p.closest[i].x, p.closest[i].y)
-    ctx.strokeStyle = 'rgba(200,200,200,'+ p.active+')'
+    ctx.strokeStyle = 'rgba(161, 170, 181,'+ p.active+')'
     ctx.stroke()
   }
 }
@@ -191,7 +191,7 @@ function Circle(pos, rad, color) {
 
     ctx.beginPath()
     ctx.arc(_this.pos.x, _this.pos.y, _this.radius, 0, 2 * Math.PI, false)
-    ctx.fillStyle = 'rgba(255,255,255,'+ _this.active+')'
+    ctx.fillStyle = 'rgba(161, 170, 181,'+ _this.active+')'
     ctx.fill()
   }
 }

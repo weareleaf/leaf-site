@@ -6,7 +6,7 @@
 //- Options
 //- -- alt
 //- -- src
-
+//- -- description
 
 mixin logo-stack(args)
   .logo-stack(class=attributes.class)
@@ -17,3 +17,6 @@ mixin logo-stack(args)
       else
         div.logo-stack__item
           img(src="images/logos/" + item.src, alt=item.alt)
+          if item.description
+            div.logo-stack__description
+              p=item.description

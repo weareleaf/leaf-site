@@ -18,7 +18,13 @@
     background-color: $white;
 
     #{b()}__heading {
-      color: $coal;
+      color: $coal !important;
+    }
+  }
+
+  &--transparent {
+    #{b()}__heading {
+      color: $coal !important;
     }
   }
 

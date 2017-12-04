@@ -32,6 +32,7 @@ $base-width-lg: .1rem;
 
 // Border radius
 $base-border-radius: .1em;
+$tooltip-border-radius: .2em;
 $border-radius-rounded: 100px;
 
 // Brand
@@ -89,6 +90,7 @@ $padding-vertical: 1.5em;
 $padding-vertical-lg: $padding-vertical * 2;
 $padding-vertical-sm: $padding-vertical / 2;
 $padding-vertical-xl: $padding-vertical * 4;
+$padding-vertical-xxl: $padding-vertical * 6;
 $padding-vertical-xs: $padding-vertical / 4;
 
 // Padding (horizontal - fluid)
