@@ -61,13 +61,14 @@ block content
 
 
   //- Section
+  canvas#nodes-animation(data-target="technology-section")
   +section({
-    background: "white",
+    background: "transparent",
+    id: "technology-section",
     center: true,
     heading: "Technology",
     text: "We'll always use the most appropriate technology for any project, but have a few favourites in our toolkit."
   })
-
     //- Logo stack
     +logo-stack([{
       alt: "Ruby",
