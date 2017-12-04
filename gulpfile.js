@@ -1,6 +1,7 @@
 const gulp = require('gulp')
 const gutil = require('gulp-util')
 const webpackStream = require('webpack-stream')
+const named = require('vinyl-named')
 const pug = require('gulp-pug')
 const watch = require('gulp-watch')
 const sass = require('gulp-sass')
@@ -29,7 +30,7 @@ const SASS_INCLUDE_PATHS = ['node_modules/susy/sass']
 const FAVICON_BASE = ['./code/favicons']
 const FAVICON_FILES = [(FAVICON_BASE + '/**/*')]
 const IMAGE_FILES = ['./code/**/*.png','./code/**/*.jpg','./code/**/*.gif','./code/**/*.jpeg', './code/**/*.svg', '!./code/images/favicons/**/*']
-const WEBPACKABLE_FILES = './code/scripts/service-worker.js'
+const WEBPACKABLE_FILES = ['./code/scripts/service-worker.js', './code/scripts/development.js']
 const BUILD_SRC = './code/'
 const BUILD_DEST = './dist/'
 const BUILT_FILES = BUILD_DEST + '**/*'
@@ -37,7 +38,7 @@ const BUILD_HTML = './dist/**/*.html'
 
 const webpackConfig = {
   output: {
-    filename: 'service-worker.js',
+    filename: '[name].js',
     devtoolModuleFilenameTemplate: '[resource-path]'
   },
   module: {
@@ -178,6 +179,7 @@ gulp.task('images', () => {
 
 gulp.task("app_scripts", () => {
   return gulp.src(WEBPACKABLE_FILES)
+    .pipe(named())
     .pipe(webpackStream(webpackConfig))
     .on('error', logError)
     .pipe(gulp.dest(BUILD_DEST))
@@ -201,6 +203,7 @@ gulp.task('watch', () => {
 
   webpackConfig.watch = true
   gulp.src(WEBPACKABLE_FILES)
+    .pipe(named())
     .pipe(webpackStream(webpackConfig))
     .on('error', logError)
     .pipe(gulp.dest(BUILD_DEST))

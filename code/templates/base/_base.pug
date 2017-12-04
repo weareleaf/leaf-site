@@ -115,6 +115,9 @@ html(lang="en")
       ga("create", "UA-62036216-1", "auto");
       ga("send", "pageview");
 
+    if (bodyClass == "development-page")
+      script(src="/development.js")
+
   body(dir="ltr", class=bodyClass)
 
     .site-wrapper
