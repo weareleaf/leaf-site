@@ -14,3 +14,6 @@ mixin buckets(args)
         h3.buckets__item__heading= item.heading
         each paragraph in item.text
           p.buckets__item__text!= paragraph
+        if item.image_href && item.image_src
+          a.buckets__item__link(href= item.image_href, target="_blank", rel="noopener")
+            img.buckets__item__image(src= item.image_src, alt= item.heading)

@@ -26,5 +26,20 @@
         margin-bottom: 0;
       }
     }
+
+    &__link {
+      border: 1px solid $stone;
+      display: block;
+      margin: $spacing-vertical-xs auto;
+      width: 65%;
+      &:hover {
+        transform: translateY(-7px);
+        transition: transform $base-duration $base-timing;
+      }
+    }
+
+    &__image {
+      display: block;
+    }
   }
 }
