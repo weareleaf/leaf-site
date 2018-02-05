@@ -1,0 +1,21 @@
+mixin facebook-metadata(options)
+  if options.admin
+    meta(property="fb:admins", content= options.admin)
+  if options.appid
+    meta(property="fb:app_id", content= options.appid)
+  if options.url
+    meta(property="og:url", content= options.url)
+  if options.type
+    meta(property="og:type", content= options.type)
+  if options.title
+    meta(property="og:title", content= options.title)
+  if options.image
+    meta(name="image", property="og:image", content= options.image)
+  if options.description
+    meta(property="og:description", content= options.description)
+  if options.sitename
+    meta(property="og:site_name", content= options.sitename)
+  if options.author
+    meta(property="article:author", content= options.author)
+  if options.publisher
+    meta(property="article:publisher", content= options.publisher)
