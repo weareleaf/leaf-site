@@ -4,6 +4,24 @@ block prepend vars
   -var bodyClass = "terms-page page--center page--inverse"
   -var title = "Terms of Business - Leaf"
 
+block header
+  //- Open Graph
+  +facebook-metadata({
+    title: "Leaf Software Ltd",
+    description: "Leaf are web application development experts, specialising in lean digital products that make peoples lives easier.",
+    image: "http://www.weareleaf.com/images/leaf-logo-1200.png",
+    type: "business.business",
+    url: "http://www.weareleaf.com"
+  })
+
+  //- Twitter card
+  +twitter-metadata({
+    title: "Leaf Software Ltd",
+    description: "Leaf are web application development experts, specialising in lean digital products that make peoples lives easier.",
+    site: "@we_are_leaf",
+    image: "http://www.weareleaf.com/images/leaf-logo-1200.png"
+  })
+
 block content
 
   //- Hero banner
