@@ -4,6 +4,24 @@ block prepend vars
   -var bodyClass = "company-page"
   -var title = "Company - Leaf"
 
+block header
+  //- Open Graph
+  +facebook-metadata({
+    title: "Leaf Software Ltd",
+    description: "Leaf are web application development experts, specialising in lean digital products that make peoples lives easier.",
+    image: "http://www.weareleaf.com/images/leaf-logo-1200.png",
+    type: "business.business",
+    url: "http://www.weareleaf.com"
+  })
+
+  //- Twitter card
+  +twitter-metadata({
+    title: "Leaf Software Ltd",
+    description: "Leaf are web application development experts, specialising in lean digital products that make peoples lives easier.",
+    site: "@we_are_leaf",
+    image: "http://www.weareleaf.com/images/leaf-logo-1200.png"
+  })
+
 block content
 
   //- Hero banner
@@ -24,7 +42,7 @@ block content
       green: true
     },
     pageHeaderArgs: {
-      intro: "We're a web design and development studio, specialising in lean digital products. Formed in 2015, we're based in South-East England, in the historic city of Canterbury.",
+      intro: "We're web application development experts, specialising in lean digital products. Formed in 2015, we're based in South-East England, in the historic city of Canterbury.",
       inverse: true,
       title: "Company"
     }
@@ -120,7 +138,8 @@ block content
       href: "portfolio/cakeboxx"
     },{
       alt: "HEHA",
-      src: "clients/grey/heha.svg"
+      src: "clients/grey/heha.svg",
+      href: "portfolio/heha"
     },{
       alt: "Holiday Extras",
       src: "clients/grey/holidayextras.svg",
@@ -131,6 +150,10 @@ block content
       src: "clients/grey/majestic.svg",
       href: "https://www.youtube.com/user/majesticcasual",
       target: "_blank"
+    },{
+      alt: "RIFT",
+      src: "clients/grey/rift.svg",
+      href: "portfolio/my-rift",
     }])
 
 
@@ -195,7 +218,7 @@ block content
       name: "Oliver Standeven",
       text: [
         "Oliver is a recent arrival at Leaf, having previously graduated from the University of Kent, leaving with a first class honours Computing degree. Having hit the ground running, Oliver has already worked with a variety of clients.",
-        "When he's not working, Oliver (or 'OJ', as he's known around the office) enjoys playing squash and hockey, while he's also an avid concert goer."
+        "When he's not working, Oliver (or 'OJ', as he's known to us) enjoys playing squash and hockey, while he's also an avid concert goer."
       ],
       title: "Software Engineer"
     })

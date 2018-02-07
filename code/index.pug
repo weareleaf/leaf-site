@@ -2,7 +2,25 @@ extends ./templates/base/_base
 
 block prepend vars
   -var bodyClass = "home-page"
-  -var title = "Web design and development studio in Kent - Leaf"
+  -var title = "Kent based web and mobile development"
+
+block header
+  //- Open Graph
+  +facebook-metadata({
+    title: "Leaf Software Ltd",
+    description: "Leaf are web application development experts, specialising in lean digital products that make peoples lives easier.",
+    image: "http://www.weareleaf.com/images/leaf-logo-1200.png",
+    type: "business.business",
+    url: "http://www.weareleaf.com"
+  })
+
+  //- Twitter card
+  +twitter-metadata({
+    title: "Leaf Software Ltd",
+    description: "Leaf are web application development experts, specialising in lean digital products that make peoples lives easier.",
+    site: "@we_are_leaf",
+    image: "http://www.weareleaf.com/images/leaf-logo-1200.png"
+  })
 
 block content
 
@@ -24,9 +42,9 @@ block content
       green: true
     },
     pageHeaderArgs: {
-      intro: "We are Leaf; a web design and development agency that specialise in creating usable, accessible, and maintainable digital products your customers love.",
+      intro: "We're experts in creating fast, easy to use, and beautiful products for web and mobile.",
       inverse: true,
-      title: "Kent based digital studio"
+      title: "Kent based product development"
     }
   })
 
@@ -38,19 +56,19 @@ block content
 
     //- Gallery
     +gallery([{
-      alt: "Keen case study",
-      href: "portfolio/keen",
+      alt: "HEHA case study",
+      href: "portfolio/heha",
       intro: "Case study",
-      src: "/images/responsive/work/keen-600.gif",
-      srcset: "/images/responsive/work/keen-200.gif 200w, /images/responsive/work/keen-400.gif 400w, /images/responsive/work/keen-600.gif 600w",
-      title: "Keen"
+      src: "/images/responsive/work/heha-600.jpg",
+      srcset: "/images/responsive/work/heha-200.jpg 200w, /images/responsive/work/heha-400.jpg 400w, /images/responsive/work/heha-600.jpg 600w",
+      title: "HEHA"
     },{
-      alt: "CakeBoxx Technology case study",
-      href: "portfolio/cakeboxx",
+      alt: "MyRIFT case study",
+      href: "portfolio/my-rift",
       intro: "Case study",
-      src: "/images/responsive/work/cakeboxx-855.jpg",
-      srcset: "/images/responsive/work/cakeboxx-200.jpg 200w, /images/responsive/work/cakeboxx-400.jpg 400w, /images/responsive/work/cakeboxx-600.jpg 600w, /images/responsive/work/cakeboxx-800.jpg 800w, /images/responsive/work/cakeboxx-855.jpg 855w",
-      title: "CakeBoxx Technology",
+      src: "/images/responsive/work/my-rift-600.jpg",
+      srcset: "/images/responsive/work/my-rift-200.jpg 200w, /images/responsive/work/my-rift-400.jpg 400w, /images/responsive/work/my-rift-600.jpg 600w, /images/responsive/work/my-rift-800.jpg 800w, /images/responsive/work/my-rift-855.jpg 855w",
+      title: "MyRIFT",
       wide: true
     }])
 
@@ -64,8 +82,13 @@ block content
       src: "clients/grey/boxedup.svg",
       href: "portfolio/boxedup"
     },{
+      alt: "CakeBoxx Technology",
+      src: "clients/grey/cakeboxx.svg",
+      href: "portfolio/cakeboxx"
+    },{
       alt: "HEHA",
-      src: "clients/grey/heha.svg"
+      src: "clients/grey/heha.svg",
+      href: "portfolio/heha"
     },{
       alt: "Holiday Extras",
       src: "clients/grey/holidayextras.svg",
@@ -76,6 +99,10 @@ block content
       src: "clients/grey/majestic.svg",
       href: "https://www.youtube.com/user/majesticcasual",
       target: "_blank"
+    },{
+      alt: "RIFT",
+      src: "clients/grey/rift.svg",
+      href: "portfolio/my-rift",
     }]).logo-stack--small
 
   //- Section
@@ -93,7 +120,7 @@ block content
       href: "development",
       intro: "Engineering",
       text: "Expertly crafted, thoroughly thought out web and mobile applications; we take software engineering incredibly seriously.",
-      title: "Development"
+      title: "Product development"
     }])
 
   //- Section

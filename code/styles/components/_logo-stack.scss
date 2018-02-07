@@ -35,12 +35,37 @@
     svg {
       max-width: 100%;
     }
+
+
+
+    @include susy-breakpoint($bp-lg) {
+      &:hover {
+        transform: translateY(-7px);
+        transition: transform $base-duration $base-timing;
+        .logo-stack__description {
+          display: block;
+        }
+      }
+    }
   }
-}
 
-a.logo-stack__item {
+  &__description {
+    display: none;
+    color: $dark-smoke;
+    left: 50%;
+    position: absolute;
+    width: 14em;
+    margin-left: -7em;
+    padding-top: $spacing-vertical-sm;
+    z-index: 500000000;
 
-  &:hover {
+    p {
+      font-size: .9em;
+      margin:0;
+    }
+  }
+
+  a.logo-stack__item:hover {
     transform: translateY(-5px);
     transition: transform $base-duration $base-timing;
   }

@@ -17,6 +17,7 @@
 
     @include susy-breakpoint($bp-sm) {
       display: flex;
+      align-items: flex-start;
     }
   }
 
@@ -28,9 +29,14 @@
 
     @include susy-breakpoint($bp-sm) {
       margin-bottom: $spacing-vertical-sm;
+      max-width: 41%;
 
       &:first-child {
         margin-right: $spacing-horizontal-sm;
+      }
+
+      &--wide {
+        max-width: 59%;
       }
     }
 

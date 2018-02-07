@@ -4,6 +4,24 @@ block prepend vars
   -var bodyClass = "portfolio-page"
   -var title = "Portfolio - Leaf"
 
+block header
+  //- Open Graph
+  +facebook-metadata({
+    title: "Leaf Software Ltd",
+    description: "Leaf are web application development experts, specialising in lean digital products that make peoples lives easier.",
+    image: "http://www.weareleaf.com/images/leaf-logo-1200.png",
+    type: "business.business",
+    url: "http://www.weareleaf.com"
+  })
+
+  //- Twitter card
+  +twitter-metadata({
+    title: "Leaf Software Ltd",
+    description: "Leaf are web application development experts, specialising in lean digital products that make peoples lives easier.",
+    site: "@we_are_leaf",
+    image: "http://www.weareleaf.com/images/leaf-logo-1200.png"
+  })
+
 block content
 
   //- Hero banner
@@ -38,21 +56,23 @@ block content
 
     //- Gallery
     +gallery([{
-      alt: "Keen case study",
-      href: "portfolio/keen",
+      alt: "HEHA case study",
+      href: "portfolio/heha",
       intro: "Case study",
-      src: "/images/responsive/work/keen-600.gif",
-      srcset: "/images/responsive/work/keen-200.gif 200w, /images/responsive/work/keen-400.gif 400w, /images/responsive/work/keen-600.gif 600w",
-      title: "Keen"
-    },{
-      alt: "CakeBoxx Technology case study",
-      href: "portfolio/cakeboxx",
+      src: "/images/responsive/work/heha-600.jpg",
+      srcset: "/images/responsive/work/heha-200.jpg 200w, /images/responsive/work/heha-400.jpg 400w, /images/responsive/work/heha-600.jpg 600w",
+      title: "HEHA"
+    },
+    {
+      alt: "MyRIFT case study",
+      href: "portfolio/my-rift",
       intro: "Case study",
-      src: "/images/responsive/work/cakeboxx-855.jpg",
-      srcset: "/images/responsive/work/cakeboxx-200.jpg 200w, /images/responsive/work/cakeboxx-400.jpg 400w, /images/responsive/work/cakeboxx-600.jpg 600w, /images/responsive/work/cakeboxx-800.jpg 800w, /images/responsive/work/cakeboxx-855.jpg 855w",
-      title: "CakeBoxx Technology",
+      src: "/images/responsive/work/my-rift-855.jpg",
+      srcset: "/images/responsive/work/my-rift-200.jpg 200w, /images/responsive/work/my-rift-400.jpg 400w, /images/responsive/work/my-rift-600.jpg 600w, /images/responsive/work/my-rift-855.jpg 855w",
+      title: "MyRIFT",
       wide: true
-    },{
+    },
+    {
       alt: "BoxedUp case study",
       href: "portfolio/boxedup",
       intro: "Case study",
@@ -60,13 +80,31 @@ block content
       srcset: "/images/responsive/work/boxedup-200.jpg 200w, /images/responsive/work/boxedup-400.jpg 400w, /images/responsive/work/boxedup-600.jpg 600w, /images/responsive/work/boxedup-800.jpg 800w, /images/responsive/work/boxedup-855.jpg 855w",
       title: "BoxedUp",
       wide: true
-    },{
+    },
+    {
       alt: "Zendesk case study",
       href: "portfolio/zendesk",
       intro: "Case study",
       src: "/images/responsive/work/zendesk-600.jpg",
       srcset: "/images/responsive/work/zendesk-200.jpg 200w, /images/responsive/work/zendesk-400.jpg 400w, /images/responsive/work/zendesk-600.jpg 600w",
       title: "Zendesk"
+    },
+    {
+      alt: "Keen case study",
+      href: "portfolio/keen",
+      intro: "Case study",
+      src: "/images/responsive/work/keen-600.gif",
+      srcset: "/images/responsive/work/keen-200.gif 200w, /images/responsive/work/keen-400.gif 400w, /images/responsive/work/keen-600.gif 600w",
+      title: "Keen"
+    },
+    {
+      alt: "CakeBoxx Technology case study",
+      href: "portfolio/cakeboxx",
+      intro: "Case study",
+      src: "/images/responsive/work/cakeboxx-855.jpg",
+      srcset: "/images/responsive/work/cakeboxx-200.jpg 200w, /images/responsive/work/cakeboxx-400.jpg 400w, /images/responsive/work/cakeboxx-600.jpg 600w, /images/responsive/work/cakeboxx-800.jpg 800w, /images/responsive/work/cakeboxx-855.jpg 855w",
+      title: "CakeBoxx Technology",
+      wide: true
     }])
     
   //- Section

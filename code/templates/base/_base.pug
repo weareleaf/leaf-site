@@ -61,23 +61,12 @@ html(lang="en")
     meta(name="application-name", content="Leaf")
     meta(name="theme-color", content="#28a76a")
 
-    //- Open Graph
-    meta(property="og:type", content="business.business")
-    meta(property="og:title", content="Leaf Software Ltd")
-    meta(property="og:url", content="http://www.weareleaf.com")
-    meta(property="og:image", content="http://www.weareleaf.com/images/leaf-logo-1200.png")
-    meta(property="og:description", content="Leaf are a web design and development studio, specialising in lean digital products that make peoples lives easier.")
+    block header
     meta(property="business:contact_data:street_address", content="25 Castle Street")
     meta(property="business:contact_data:locality", content="Canterbury")
     meta(property="business:contact_data:region", content="Kent")
     meta(property="business:contact_data:postal_code", content="CT1 2PX")
     meta(property="business:contact_data:country_name", content="United Kingdom")
-
-    //- Twitter card
-    meta(name="twitter:card", content="summary")
-    meta(name="twitter:site", content="@we_are_leaf")
-    meta(name="twitter:title", content="Leaf")
-    meta(name="twitter:description", content="Leaf are a web design and development studio, specialising in lean digital products that make peoples lives easier.")
 
     //- JSON Linked Data
     script(type="application/ld+json").
@@ -114,6 +103,9 @@ html(lang="en")
       })(window,document,"script","//www.google-analytics.com/analytics.js","ga");
       ga("create", "UA-62036216-1", "auto");
       ga("send", "pageview");
+
+    if (bodyClass == "development-page")
+      script(src="/development.js")
 
   body(dir="ltr", class=bodyClass)
 
