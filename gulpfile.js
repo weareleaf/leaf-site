@@ -23,7 +23,7 @@ const imageminJpegRecompress = require('imagemin-jpeg-recompress')
 const inlinesource = require('gulp-inline-source')
 const StringReplacePlugin = require("string-replace-webpack-plugin")
 
-const MISC_FILES = ['./code/CNAME', './code/**/*.mp4', './code/**/*.ogv', './code/**/*.webm', './code/**/*.eot', './code/**/*.ttf', './code/**/*.woff', './code/**/*.woff2']
+const MISC_FILES = ['./code/CNAME', './code/**/*.mp4', './code/**/*.ogv', './code/**/*.webm', './code/**/*.eot', './code/**/*.ttf', './code/**/*.woff', './code/**/*.woff2', './code/**/*.pdf']
 const PUG_FILES = ['./code/**/*.pug', './code/**/*.jade']
 const SASS_FILES = ['./code/**/*.scss']
 const SASS_INCLUDE_PATHS = ['node_modules/susy/sass']

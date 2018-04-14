@@ -1,0 +1,59 @@
+extends ./templates/base/_base
+
+block prepend vars
+  -var bodyClass = "terms-page page--center page--inverse"
+  -var title = "Articles - Leaf"
+
+block header
+  //- Open Graph
+  +facebook-metadata({
+    title: "Leaf Software Ltd",
+    description: "Leaf are web application development experts, specialising in lean digital products that make peoples lives easier.",
+    image: "http://www.weareleaf.com/images/leaf-logo-1200.png",
+    type: "business.business",
+    url: "http://www.weareleaf.com"
+  })
+
+  //- Twitter card
+  +twitter-metadata({
+    title: "Leaf Software Ltd",
+    description: "Leaf are web application development experts, specialising in lean digital products that make peoples lives easier.",
+    site: "@we_are_leaf",
+    image: "http://www.weareleaf.com/images/leaf-logo-1200.png"
+  })
+
+block content
+
+  //- Hero banner
+  +hero-banner({
+    mastheadArgs: {
+      logoArgs: {},
+      navigationArgs: {}
+    },
+    pageHeaderArgs: {
+      intro: "Our knowledge and experience, published for the benefit of all",
+      title: "Articles"
+    }
+  })
+
+  //- Section
+  +section({
+    narrow: true
+  })
+    h2 Better Digital Teams
+
+    p This series is all about creating digital teams that work well together to produce top quality work while promoting effectiveness, efficiency and happiness.
+
+    //- Buckets
+    +buckets({
+      items: [{
+        heading: "Working environment",
+        image_src: "/images/articles/working-environment.jpg",
+        image_href: "/resources/articles/Better Digital Teams - Working environment.pdf",
+        text: [
+          "Create a working environment that gets the best out of your team."
+        ]
+      }]
+    })
+
+    small Last updated: 14th April 2018
