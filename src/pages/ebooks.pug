@@ -3,24 +3,25 @@ extends ../layouts/page.pug
 block prepend vars
   -var activePage = "eBooks"
   -var pageTitle = "eBooks - Leaf"
-  
+
 block pageComponents
   +hero({
     heroHeading: "eBooks",
     heroText: "We’re creating a suite of articles to advance your skills in product design and development.",
     heroImage: {
-      src: "/assets/images/ebooks.png",
+      src: "/assets/images/ebooks.webp",
+      fallbackSrc: "/assets/images/ebooks.png",
       alt: "Alt text for hero image",
     }
   })
-  
+
   section.section
     .container
       +page-header({
         pageHeaderHeading: "Better Digital Teams",
         pageHeaderText: "This series is all about creating digital teams that work well together to produce top quality work while promoting effectiveness, efficiency and happiness."
       })
-      
+
       +resource({
         resourceImage: {
           src: "https://picsum.photos/1200/580/",

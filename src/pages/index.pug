@@ -13,11 +13,12 @@ block pageComponents
       buttonText: "Find out how we do it"
     },
     heroImage: {
-      src: "/assets/images/home.png",
+      src: "/assets/images/home.webp",
+      fallbackSrc: "/assets/images/home.png",
       alt: "Alt text for hero image",
     }
   })
-  
+
   section.section
     .container
       .grid.grid--card
@@ -31,7 +32,7 @@ block pageComponents
             cardHeading: "Helping the UK to claim tax refunds",
             cardText: "We helped RIFT re-imagine their MyRIFT web application, allowing UK-based workers to claim tax refunds on the move."
           })
-          
+
         .grid__item
           +card({
             cardUrl: "/heha.html",

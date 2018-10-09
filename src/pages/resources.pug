@@ -8,18 +8,19 @@ block pageComponents
     heroHeading: "Resources",
     heroText: "A collection of useful quick-start resources to help you and your startup hit the ground running.",
     heroImage: {
-      src: "/assets/images/resources.png",
+      src: "/assets/images/resources.webp",
+      fallbackSrc: "/assets/images/resources.png",
       alt: "Alt text for hero image",
     }
   })
-  
+
   section.section
     .container
       +page-header({
         pageHeaderHeading: "Documents",
         pageHeaderText: "We organise all of our documents via Google Docs. Its browser-based nature keeps our resources accessible from any computer, anywhere in the world."
       })
-      
+
       +resource({
         resourceImage: {
           src: "https://picsum.photos/1200/580/",
@@ -33,7 +34,7 @@ block pageComponents
         },
         resourceMetaText: "Last updated: 29 June 2018"
       })
-      
+
       +resource({
         resourceImage: {
           src: "https://picsum.photos/1200/580/",
@@ -47,7 +48,7 @@ block pageComponents
         },
         resourceMetaText: "Last updated: 29 June 2018"
       })
-      
+
       +resource({
         resourceImage: {
           src: "https://picsum.photos/1200/580/",

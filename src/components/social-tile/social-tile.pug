@@ -1,9 +1,9 @@
 mixin social-tile(c)
   .social-tile
     .social-tile__icon
-      a(href= c.socialTileLink target="_blank")
+      a(href= c.socialTileLink target="_blank" rel="noopener")
         img(src= c.socialTileIcon.src alt= c.socialTileIcon.alt)
     .social-tile__content
       h5.social-tile__heading= c.socialTileHeading
       p.social-tile__text= c.socialTileText
-      a.social-tile__link(href= c.socialTileLink target="_blank")= c.socialTileHandle
+      a.social-tile__link(href= c.socialTileLink target="_blank" rel="noopener")= c.socialTileHandle

@@ -10,11 +10,12 @@ block pageComponents
     heroHeading: "Company",
     heroText: "Four friends with experience in helping organisations fulfil their digital ambitions.",
     heroImage: {
-      src: "/assets/images/company.png",
+      src: "/assets/images/company.webp",
+      fallbackSrc: "/assets/images/company.png",
       alt: "Alt text for hero image",
     }
   })
-  
+
   section.section
     .container
       .grid.grid--statements
@@ -31,14 +32,14 @@ block pageComponents
             statementHeading: "Intentionally lean",
             statementText: "We hate the faceless conveyor belt model of larger agencies. Keeping our overheads low and our core team small means you'll always be a priority."
           })
-          
+
         .grid__item
           +statement({
             statementIcon: "/assets/images/icons/communicate.svg",
             statementHeading: "We talk honestly, and often",
             statementText: "The most honest advice can sometimes be the most difficult to give. We’ll always be completely open and tell you the truth, even when it hurts."
           })
-          
+
         .grid__item
           +statement({
             statementIcon: "/assets/images/icons/lego.svg",
@@ -58,7 +59,7 @@ block pageComponents
             profileHeading: "Chris Annetts",
             profileText: "Design Director"
           })
-          
+
         .grid__item
           +profile({
             profileImage: {
@@ -68,7 +69,7 @@ block pageComponents
             profileHeading: "Mike Carter",
             profileText: "Engineering Director"
           })
-          
+
         .grid__item
           +profile({
             profileImage: {
@@ -78,7 +79,7 @@ block pageComponents
             profileHeading: "Oliver Standeven",
             profileText: "Software Engineer"
           })
-          
+
         .grid__item
           +profile({
             profileImage: {
@@ -88,4 +89,4 @@ block pageComponents
             profileHeading: "Tina van Schelt",
             profileText: "Software Engineer"
           })
-          
+

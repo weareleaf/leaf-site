@@ -9,32 +9,33 @@ block pageComponents
     heroHeading: "Jobs at Leaf",
     heroText: "If you're driven, passionate about your craft, and keen to learn, we want to hear from you.",
     heroImage: {
-      src: "/assets/images/jobs.png",
+      src: "/assets/images/jobs.webp",
+      fallbackSrc: "/assets/images/jobs.png",
       alt: "Alt text for hero image",
     }
   })
-  
+
   section.section
     .container
       +page-header({
         pageHeaderHeading: "Open positions",
         pageHeaderModifier: "sm-spacing"
       })
-      
+
       .grid.grid--tile
         .grid__item
           +tile({
             tileUrl: "#",
             tileTitle: "Product Designer"
           })
-          
+
       p
         strong Can't see your role?
-        |  We advertise for specific positions and skillsets, but we never know what our next protégé is going to look like. If you think we'd be good together, 
+        |  We advertise for specific positions and skillsets, but we never know what our next protégé is going to look like. If you think we'd be good together,
         a(href="#" data-micromodal-trigger="modal-contact") introduce yourself
         |  and tell us why.
       hr
-        
+
   section.section
     .container
       .grid.grid--statements
@@ -44,21 +45,21 @@ block pageComponents
             statementHeading: "We'll help you level-up",
             statementText: "We pride ourselves on continual self-improvement, and we'll make sure you get the every opportunity to do so yourself."
           })
-          
+
         .grid__item
           +statement({
             statementIcon: "/assets/images/icons/robot.svg",
             statementHeading: "We hire humans, not robots",
             statementText: "A happer you is a better you. We'll only ever ask you to work your contracted hours, and will leave you to manage your work/life balance."
           })
-          
+
         .grid__item
           +statement({
             statementIcon: "/assets/images/icons/time.svg",
             statementHeading: "Flexible working hours",
             statementText: "With flexible hours and remote working available, you'll ensure you have the foundation needed to do your best work."
           })
-          
+
         .grid__item
           +statement({
             statementIcon: "/assets/images/icons/gold.svg",

@@ -4,9 +4,12 @@ mixin hero(c)
       .hero__content
         h1.hero__heading= c.heroHeading
         p.hero__text= c.heroText
-        
+
         if c.heroButton
           .hero__button
             +button(c.heroButton)
-          
-      img.hero__image(src= c.heroImage.src alt= c.heroImage.alt)
+
+      if c.heroImage.fallbackSrc
+        img.hero__image(src= c.heroImage.src alt= c.heroImage.alt onerror= "this.onerror=null; this.src='" + c.heroImage.fallbackSrc + "'")
+      else
+        img.hero__image(src= c.heroImage.src alt= c.heroImage.alt)
