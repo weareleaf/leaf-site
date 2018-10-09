@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg viewBox="0 0 60 60" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" preserveAspectRatio="xMinYMin meet">
+  <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linejoin="round">
+    <path d="M58,32 C58,38.075 53.075,43 47,43 C40.925,43 36,38.075 36,32 L58,32 Z" stroke="#66CC88" stroke-width="2" stroke-linecap="round"></path>
+    <path d="M30,4 L30,57" stroke="#66CC88" stroke-width="2" stroke-linecap="round"></path>
+    <path d="M45,4 L15,4" stroke="#66CC88" stroke-width="2"></path>
+    <path d="M42,57 L18,57" stroke="#66CC88" stroke-width="2" stroke-linecap="round"></path>
+    <path d="M13,2 C14.104,2 15,2.896 15,4 C15,5.104 14.104,6 13,6 C11.896,6 11,5.104 11,4 C11,2.896 11.896,2 13,2 Z" stroke="#66CC88" stroke-width="2" stroke-linecap="round"></path>
+    <path d="M47,2 C48.104,2 49,2.896 49,4 C49,5.104 48.104,6 47,6 C45.896,6 45,5.104 45,4 C45,2.896 45.896,2 47,2 Z" stroke="#66CC88" stroke-width="2" stroke-linecap="round"></path>
+    <path d="M36,32 L46,6" stroke="#66CC88" stroke-width="2" stroke-linecap="round"></path>
+    <path d="M58,32 L48,6" stroke="#66CC88" stroke-width="2" stroke-linecap="round"></path>
+    <path d="M24,32 C24,38.075 19.075,43 13,43 C6.925,43 2,38.075 2,32 L24,32 Z" stroke="#66CC88" stroke-width="2" stroke-linecap="round"></path>
+    <path d="M2,32 L12,6" stroke="#66CC88" stroke-width="2" stroke-linecap="round"></path>
+    <path d="M24,32 L14,6" stroke="#66CC88" stroke-width="2" stroke-linecap="round"></path>
+  </g>
+</svg>

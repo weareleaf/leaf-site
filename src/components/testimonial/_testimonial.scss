@@ -1,0 +1,92 @@
+.testimonial {
+
+  &--inline {
+    align-items: center;
+    display: flex;
+  }
+
+  &__text {
+    color: $color-grey-dark;
+    font-size: 1.3em;
+    margin: 0 0 .769em;
+
+    .testimonial--inline & {
+      border: 1px solid $color-grey-light;
+      border-radius: $border-radius;
+      color: $color-grey;
+      font-size: .850em;
+      margin: 0 $spacing-horizontal-lg 0 0;
+      max-width: 20em;
+      padding: 1.765em;
+      position: relative;
+
+      &::after {
+        background-color: $color-white;
+        border: 1px solid $color-grey-light;
+        border-bottom-color: $color-white;
+        border-left-color: $color-white;
+        border-top-right-radius: $border-radius;
+        content: '';
+        display: block;
+        height: 1.176em;
+        position: absolute;
+        right: -.647em;
+        top: 50%;
+        transform: translateY(-50%) rotate(45deg);
+        width: 1.176em;
+      }
+    }
+  }
+
+  &__author {
+    align-items: center;
+    display: flex;
+    padding-right: 2.9em;
+    position: relative;
+
+    &::after {
+      background: url('../images/icons/quotation.svg') no-repeat center center;
+      content: '';
+      display: block;
+      height: 2.4em;
+      position: absolute;
+      right: 0;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 2.9em;
+    }
+
+    .testimonial--inline & {
+      padding-right: 0;
+
+      &::after {
+        display: none;
+      }
+    }
+  }
+
+  &__image-container {
+    margin-right: .75em;
+  }
+
+  &__image {
+    border-radius: 50%;
+    display: inline-block;
+    vertical-align: middle;
+  }
+
+  &__content {
+
+  }
+
+  &__name {
+    font-size: .95em;
+    font-family: $font-family-sans-serif-bold;
+    margin: 0;
+  }
+
+  &__role {
+    font-size: .75em;
+    margin: 0;
+  }
+}

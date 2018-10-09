@@ -1,0 +1,6 @@
+mixin profile(c)
+  .profile
+    img.profile__image(src= c.profileImage.src alt= c.profileImage.alt)
+    .profile__content
+      h3.profile__heading= c.profileHeading
+      p.profile__text= c.profileText

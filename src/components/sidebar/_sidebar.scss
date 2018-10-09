@@ -1,0 +1,9 @@
+.sidebar {
+  background-color: $color-grey-green;
+  color: $color-grey-dark;
+  padding: $spacing-vertical-lg $spacing-horizontal-lg;
+
+  &__component {
+    margin-bottom: $spacing-vertical;
+  }
+}

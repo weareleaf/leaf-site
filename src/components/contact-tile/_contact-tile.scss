@@ -1,0 +1,37 @@
+.contact-tile {
+  &__heading {
+    font-size: 1.5em;
+    margin: 0;
+  }
+
+  &__text {
+    color: $color-grey;
+    margin: 0;
+    max-width: 20em;
+
+    a {
+      color: $brand-secondary;
+    }
+  }
+
+  &__ctas {
+    margin-top: $spacing-vertical * 1.5;
+
+    @media screen and (min-width: map-get($bp, 'md')) {
+      align-items: center;
+      display: flex;
+    }
+  }
+
+  &__button {
+    margin-bottom: $spacing-vertical;
+
+    @media screen and (min-width: map-get($bp, 'md')) {
+      margin: 0 $spacing-horizontal * 1.5 0 0;
+    }
+  }
+
+  &__email {
+    color: $brand-secondary;
+  }
+}

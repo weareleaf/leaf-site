@@ -1,0 +1,80 @@
+mixin footer
+  footer.footer(role="contentinfo")
+    .container
+      .grid.grid--footer
+        .grid__item
+          .footer__cta
+            h4.footer__cta-heading
+              | We work closely with our clients to plan, design and build innovative applications.
+            p.footer__cta-text
+              strong Interested in working together?
+              |  Tell us what you’re looking to achieve, and we’ll start thinking about how we can help. 
+              a.footer__cta-link(href="/project-planner.html") Introduce your project &rarr;
+            .footer__social
+              +social({
+                socialModifier: "inline"
+              })
+        .grid__item
+          .footer__grid
+            .footer__nav.footer__nav--primary
+              +nav({
+                navList: [
+                  {
+                    navItemUrl: "/what-we-do.html",
+                    navItemText: "What we do"
+                  },
+                  {
+                    navItemUrl: "/company.html",
+                    navItemText: "Company"
+                  },
+                  {
+                    navItemUrl: "/our-work.html",
+                    navItemText: "Our work"
+                  },
+                  {
+                    navItemUrl: "/ebooks.html",
+                    navItemText: "eBooks"
+                  },
+                  {
+                    navItemUrl: "#",
+                    navItemText: "Contact us",
+                    navItemTriggerModal: true
+                  },
+                ]
+              })
+            .footer__nav.footer__nav--secondary
+              +nav({
+                navList: [
+                  {
+                    navItemUrl: "/project-planner.html",
+                    navItemText: "Project planner"
+                  },
+                  {
+                    navItemUrl: "#",
+                    navItemText: "Handbook"
+                  },
+                  {
+                    navItemUrl: "/resources.html",
+                    navItemText: "Resources"
+                  },
+                  {
+                    navItemUrl: "/careers.html",
+                    navItemText: "Jobs at Leaf"
+                  },
+                  {
+                    navItemUrl: "/terms.html",
+                    navItemText: "Terms"
+                  },
+                ]
+              })
+              
+            p.footer__copyright
+              | &copy; Leaf Software Ltd
+              br
+              | Company no: 09664307
+              br
+              | VAT no: 265 1253 17
+            .footer__contact
+              a.footer__link(href="tel:01227 647006") 01227 647006
+              br
+              a.footer__link(href="mailto:hello@weareleaf.com") hello@weareleaf.com

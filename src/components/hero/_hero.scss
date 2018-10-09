@@ -1,0 +1,180 @@
+.hero {
+  margin-bottom: $spacing-vertical-xl;
+  padding: 9em 0 0;
+  position: relative;
+
+  @media screen and (min-width: 40.625em) {
+    padding: 9em 0;
+
+    &--home {
+      padding: 9em 0 10%;
+    }
+  }
+
+  @media screen and (min-width: map-get($bp, 'xl')) {
+    margin-bottom: $spacing-vertical * 6;
+    padding: 9em 0 12em;
+
+    &--home {
+      padding: 9em 0;
+    }
+  }
+
+  &::before {
+    background-color: $color-green-light;
+    content: '';
+    display: block;
+    height: 90%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    z-index: 10;
+
+    @media screen and (min-width: 40.625em) {
+      height: 100%;
+    }
+
+    @media screen and (min-width: map-get($bp, 'xl')) {
+      height: 100%;
+      width: 72%;
+    }
+  }
+
+  &__container {
+    @include container;
+
+    position: relative;
+    z-index: 20;
+
+    @media screen and (min-width: 40.625em) {
+      position: static;
+    }
+
+    @media screen and (min-width: map-get($bp, 'xl')) {
+      position: relative;
+    }
+  }
+
+  &__content {
+    margin-bottom: $spacing-vertical;
+    position: relative;
+    z-index: 10;
+
+    @media screen and (min-width: map-get($bp, 'xl')) {
+      margin-bottom: 0;
+    }
+  }
+
+  &__heading {
+    font-size: 2.667em;
+    line-height: 1.125em;
+    margin: 0;
+    max-width: calc(100% - 2em);
+
+    @media screen and (min-width: map-get($bp, 'sm')) {
+      font-size: 3em;
+      line-height: 1.075em;
+      margin-bottom: $spacing-vertical-xs;
+      max-width: 8em;
+    }
+
+    @media screen and (min-width: map-get($bp, 'xl')) {
+      font-size: 4em;
+    }
+  }
+
+  &__text {
+    color: $color-grey-dark-transparent;
+    font-size: 1.133em;
+    line-height: 1.412em;
+    margin: 0;
+    max-width: 14.545em;
+
+    @media screen and (min-width: map-get($bp, 'sm')) {
+      font-size: 1.1em;
+      line-height: 1.545em;
+    }
+  }
+
+  &__button {
+    margin-top: $spacing-vertical-lg;
+  }
+
+  &__image {
+    display: inline-block;
+    height: auto;
+    vertical-align: middle;
+    max-width: 100%;
+
+    @media screen and (min-width: 40.625em) {
+      bottom: -2em;
+      height: 45vw;
+      position: absolute;
+      right: 1.25em;
+      width: auto;
+      z-index: 10;
+    }
+
+    @media screen and (min-width: map-get($bp, 'xl')) {
+      bottom: auto;
+      height: auto;
+      right: 0;
+      top: 50%;
+      transform: translateY(-32%);
+      width: auto;
+    }
+
+    .hero--company & {
+      @media screen and (min-width: 40.625em) {
+        height: 43vw;
+        right: 2.5em;
+      }
+
+      @media screen and (min-width: map-get($bp, 'xl')) {
+        height: auto;
+      }
+    }
+
+    .hero--our-work & {
+      @media screen and (min-width: 40.625em) {
+        height: 40vw;
+        right: 2.5em;
+      }
+
+      @media screen and (min-width: map-get($bp, 'md')) {
+        right: 12vw;
+      }
+
+      @media screen and (min-width: map-get($bp, 'xl')) {
+        height: 45vw;
+        right: 2.5em;
+        transform: translateY(-22%);
+      }
+
+      @media screen and (min-width: 90em) {
+        height: auto;
+        right: 1.25em;
+        transform: translateY(-32%);
+      }
+    }
+
+    .hero--careers & {
+      @media screen and (min-width: 40.625em) {
+        height: 42vw;
+        right: 8%;
+      }
+
+      @media screen and (min-width: map-get($bp, 'xl')) {
+        right: 2.5em;
+        transform: translateY(-22%);
+      }
+
+      @media screen and (min-width: 90em) {
+        height: auto;
+        right: 1.25em;
+        transform: translateY(-32%);
+      }
+    }
+  }
+}

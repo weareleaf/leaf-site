@@ -1,0 +1,36 @@
+mixin header
+  header.header(role="banner")
+    .header__logo
+      +logo
+    .header__nav
+      +nav({
+        navList: [
+          {
+            navItemUrl: "/what-we-do.html",
+            navItemText: "What we do"
+          },
+          {
+            navItemUrl: "/company.html",
+            navItemText: "Company"
+          },
+          {
+            navItemUrl: "/our-work.html",
+            navItemText: "Our work"
+          },
+          {
+            navItemUrl: "/ebooks.html",
+            navItemText: "eBooks"
+          },
+          {
+            navItemUrl: "#",
+            navItemText: "Let's talk",
+            navItemHighlight: true,
+            navItemTriggerModal: true
+          }
+        ],
+        navModifier: "primary"
+      })
+    .header__address
+      +address
+    .header__social
+      +social({})

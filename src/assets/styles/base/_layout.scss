@@ -1,0 +1,29 @@
+html {
+  box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+.container {
+  @include container;
+}
+
+.section {
+  margin-bottom: $spacing-vertical-xl;
+
+  @media screen and (min-width: map-get($bp, 'md')) {
+    margin-bottom: 6em;
+  }
+
+  &--sm-spacing {
+    margin-bottom: $spacing-vertical-lg;
+
+    @media screen and (min-width: map-get($bp, 'lg')) {
+      margin-bottom: $spacing-vertical-xl;
+    }
+  }
+}

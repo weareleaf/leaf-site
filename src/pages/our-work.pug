@@ -1,0 +1,63 @@
+extends ../layouts/page.pug
+
+block prepend vars
+  -var activePage = "Our work"
+  -var pageTitle = "Our Work - Leaf"
+
+block pageComponents
+  +hero({
+    heroModifier: "our-work",
+    heroHeading: "Our work",
+    heroText: "We're privileged to have worked on some amazing clients, and are proud of show off our hard work.",
+    heroImage: {
+      src: "/assets/images/our-work.png",
+      alt: "Alt text for hero image",
+    }
+  })
+  
+  section.section
+    .container
+      .grid.grid--card
+        .grid__item
+          +card({
+            cardUrl: "/keen.html",
+            cardImage: {
+              src: "https://picsum.photos/540/580?random=1",
+              alt: "Alt text for card image",
+            },
+            cardHeading: "Onboarding users the right way",
+            cardText: "No two users are the same, and shouldn’t be treated as such. We partnered with Keen to build an MVP of their customer-success tool."
+          })
+          
+        .grid__item
+          +card({
+            cardUrl: "/heha.html",
+            cardImage: {
+              src: "https://picsum.photos/540/580?random=2",
+              alt: "Alt text for card image",
+            },
+            cardHeading: "Taking the hassle out of travel",
+            cardText: "Planning trips can be a headache. We worked with Holiday Extras to create HEHA!, an iOS and Android app to make the journey easier."
+          })
+          
+        .grid__item
+          +card({
+            cardUrl: "/rift.html",
+            cardImage: {
+              src: "https://picsum.photos/540/580?random=3",
+              alt: "Alt text for card image",
+            },
+            cardHeading: "Helping the UK to claim tax refunds",
+            cardText: "We helped RIFT re-imagine their MyRIFT web application, allowing UK-based workers to claim tax refunds on the move."
+          })
+          
+        .grid__item
+          +card({
+            cardUrl: "/boxedup.html",
+            cardImage: {
+              src: "https://picsum.photos/540/580?random=4",
+              alt: "Alt text for card image",
+            },
+            cardHeading: "Throwing an International tea-party",
+            cardText: "Who doesn’t love tea? We worked with Zendesk to create landing pages, in six languages, inviting users to an up-and-coming event."
+          })

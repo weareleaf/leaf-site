@@ -1,0 +1,48 @@
+.social-tile {
+  @media screen and (min-width: 66.25em) {
+    display: flex;
+  }
+
+  &__icon {
+    height: 1.2em;
+    width: 1.2em;
+    text-align: center;
+
+    @media screen and (min-width: 66.25em) {
+      flex: 0 0 auto;
+      margin-right: $spacing-horizontal / 1.25;
+    }
+
+    img {
+      height: 100%;
+      max-width: 100%;
+      width: auto;
+    }
+  }
+
+  &__content {
+    display: none;
+
+    @media screen and (min-width: 66.25em) {
+      display: block;
+    }
+  }
+
+  &__heading {
+    font-size: .85em;
+    margin: 0 0 .118em;
+  }
+
+  &__text {
+    color: $color-grey-dark;
+    font-size: .8em;
+    margin: 0;
+  }
+
+  &__link {
+    color: $brand-secondary;
+    display: block;
+    font-family: $font-family-sans-serif-medium;
+    font-size: .85em;
+  }
+}

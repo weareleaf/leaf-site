@@ -1,0 +1,93 @@
+extends ../layouts/page.pug
+
+block prepend vars
+  -var pageTitle = "Terms & Conditions - Leaf"
+
+block pageComponents
+  +hero({
+    heroHeading: "Terms of business",
+    heroText: "While we don't like to get serious too often, these terms help to protect both Leaf and our clients.",
+    heroImage: {
+      src: "/assets/images/terms.png",
+      alt: "Alt text for hero image",
+    }
+  })
+  
+  section.section
+    .container
+      +page-header({
+        pageHeaderHeading: "General terms",
+        pageHeaderModifier: "sm-spacing"
+      })
+      
+      .grid.grid--two-thirds
+        .grid__item
+          h4 Proposals
+          p Any proposal provided by Leaf ("us", "we", or "our") should be treated as confidential, and remain our property. Proposals, and the content within them, should not be passed to third parties. Both the information provided, and the costs quoted, are valid for 30 days from the date issued.
+          
+          h4 VAT
+          p Leaf is VAT registered. As such, unless stated, all costs or quotes will be subject to VAT charges. Our VAT number is: 265 1253 17.
+          
+          h4 Supplied Content and Assets
+          p Clients will ensure that all rights and permissions have been obtained on assets supplied for use on the product, application, or website that Leaf has been commissioned to work on - specifically copy, images and photography, company logos, trademarks and any other required materials.
+          
+          h4 Ownership of Work Completed
+          p Leaf retains complete ownership of all designs, code and assets it creates for the Client until the full payment has been received for the commissioned work. Once the outstanding bill has been paid, full ownership and intellectual rights for the work then falls to the Client.
+          
+          h4 Confidentiality
+          p Both Leaf and the Client shall not disclose confidential information to any outside parties throughout the period of engagement and thereafter.
+          
+          h4 Consequential Loss
+          p Under no circumstances will Leaf be responsible or liable for any consequential, indirect or special damages caused by the failure or use or misuse of its work. Leaf shall not in any way be liable to the client for any inaccuracies, errors or omissions, regardless of cause in the work or for any damages (whether direct or indirect) resulting therefrom.
+          
+          h4 Termination Rights
+          p Leaf reserves the right to refuse or terminate a piece of work if it is believed that the Client, the Client's website, or any material is illegal, immoral or otherwise deems to be unacceptable.
+          p The Client may terminate the relationship with Leaf by giving Us one month's notice. On such termination, all outstanding payments should be settled by the Client and Leaf will handover all completed work to that point (upon receipt of these payments).
+          
+          h4 Data Protection
+          p Leaf will fully comply with all the requirements of the latest Data Protection Legislation.
+          
+          h4 Law and Jurisdiction
+          p These terms of use will be governed by and construed in accordance with English law, and any disputes relating to these terms of use will be subject to the non-exclusive jurisdiction of the courts of England and Wales.
+          
+          h4 Our details
+          p The full name of Our company is Leaf Software Ltd. We are registered in England and Wales under registration number 09664307. If You have any questions about these terms, You can contact Us by email at hello@weareleaf.com, or by post at: Leaf, 25 Castle Street, Canterbury, Kent, United Kingdom, CT1 2PX.
+          
+          h3 How we work
+          
+          h4 Project Timelines
+          p Leaf shall set out milestones for the agreed work with appropriate delivery dates for each. Leaf will keep the Client appraised of progress, and if there are any delays due to technical obstacles and/or resourcing issues. Where delays to a project are caused by the Client, Leaf has the right to adjust delivery dates for subsequent milestone deliverables.
+          
+          h4 Testing
+          p Prior to delivery of work, Leaf will test it properly and ensure it meets the criteria set out for the work. In the case of websites, this will include testing both functionality and layout across the supported web browsers agreed prior the project commencing.
+          
+          h4 Web Browser Support
+          p Where agreed work covers the build of actual web pages, these will work in all modern browsers, specifically all browsers with over one percent of the global market share (http://caniuse.com/usage-table). Additional compatibility with older browsers outside of our standard support needs to be agreed as part of the scope of the work agreed.
+          
+          h4 Additional or Unscoped Work
+          p Should the Client require additional work which is outside the remit of any previously agreed work, Leaf will consider and discuss the requirements with the Client before proposing a solution and any cost associated with this. This additional work will not be undertaken without full agreement from the Client.
+          
+          h3 Payments
+          
+          h4 Invoicing
+          p All invoices should be paid within 14 days of the issue date. Before the commencement of any work, Leaf will agree a payment schedule with the Client . Unless otherwise agreed, an initial invoice is always raised against work, and this must be paid before any work commences.
+          
+          h4 Project Milestones and Payments
+          p Leaf shall set out milestones for the agreed work and attach invoicing points to relevant milestones. The Client should check and agree to these before the work commences.
+          p Leaf will ask for agreement that a milestone has been completed; usually by email. This acts as acceptance and sign-off on the work completed to that point.
+          p Any desired amendments to work carried out after an agreed and completed milestone could result in additional costs to the Client. Leaf will always raise and discuss such occurrences and any cost associated will be agreed with the Client before work continues.
+          
+          h4 Refunds
+          p All payments are final and non-refundable, except in Our sole discretion.
+          
+          h4 Late Payment
+          p If payment on an invoice has not been received 7 days after the due date of the invoice, Leaf have the right to suspend work for that client until payment has been received. If the invoice remains unpaid 14 days after the due date, Leaf has the right to remove/take down work completed to that point.
+          h3 Post-project
+          
+          h4 Hosting
+          p Where work requires it, Leaf shall deploy to a hosting area of the Client's choice assuming compatible hosting environment is provided. Leaf offers a shared hosting service, which is available at an addition cost should the Client wish to use this service. Leaf shall not be responsible for issues relating to hosting once the site is launched if the Client has chosen not to host through Leaf.
+          
+          h4 Website Support
+          p In the case of web based work, Leaf will support the completed work for a period of 30 days should the Client not take out an SLA. This means Leaf will fix any errors reported during this 30 day period. All errors should be reported by email to support@weareleaf.com. Clients taking out an SLA will be covered for the agreed period of this SLA.
+          p
+            small Last updated: 4 Jan 2017

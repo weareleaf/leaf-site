@@ -1,0 +1,87 @@
+.banner {
+  background-color: $color-grey-green;
+  height: 0;
+  overflow: hidden;
+  margin-bottom: $spacing-vertical-lg;
+  padding-bottom: 38.41%;
+  position: relative;
+
+  @media screen and (min-width: map-get($bp, 'lg')) {
+    margin-bottom: $spacing-vertical-xl;
+  }
+
+  @media screen and (min-width: map-get($bp, 'xl')) {
+    margin-bottom: $spacing-vertical * 6;
+  }
+
+  &--rift {
+    background-color: $color-rift;
+  }
+
+  &__button {
+    background: rgba(53, 54, 61, .3);
+    border: 0;
+    border-radius: 50%;
+    cursor: pointer;
+    height: 2em;
+    padding: 0;
+    position: absolute;
+    right: 1em;
+    top: 1em;
+    transition: background .2s ease-in-out;
+    width: 2em;
+    -webkit-appearance: none;
+
+    @media screen and (min-width: map-get($bp, 'xl')) {
+      right: 3em;
+      top: 3em;
+    }
+
+    &:hover,
+    &:active {
+      background: rgba(53, 54, 61, .6);
+    }
+
+    span {
+      border: 0;
+      clip: rect(0,0,0,0);
+      height: 1px;
+      overflow: hidden;
+      padding: 0;
+      position: absolute;
+      white-space: nowrap;
+      width: 1px;
+    }
+
+    &::before,
+    &::after {
+      background-color: $color-white;
+      content: '';
+      height: .15em;
+      left: 50%;
+      position: absolute;
+      top: 50%;
+      width: 1em;
+    }
+
+    &::before {
+      transform: translate(-50%, -50%) rotate(45deg);
+    }
+
+    &::after {
+      transform: translate(-50%, -50%) rotate(-45deg);
+    }
+  }
+
+  &__image {
+    bottom: 0;
+    display: inline-block;
+    max-height: 100%;
+    left: 50%;
+    max-width: 100%;
+    padding-top: 5%;
+    position: absolute;
+    transform: translateX(-50%);
+    vertical-align: middle;
+  }
+}

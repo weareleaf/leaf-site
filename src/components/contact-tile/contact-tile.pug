@@ -1,0 +1,8 @@
+mixin contact-tile(c)
+  .contact-tile
+    h4.contact-tile__heading= c.contactTileHeading
+    p.contact-tile__text!= c.contactTileText
+    .contact-tile__ctas
+      .contact-tile__button
+        +button(c.contactTileButton)
+      a.contact-tile__email(href="mailto:" + c.contactTileEmail)= c.contactTileEmail

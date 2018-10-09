@@ -1,0 +1,13 @@
+@mixin clearfix {
+  &::after {
+    clear: both;
+    content: '';
+    display: table;
+  }
+}
+
+@mixin container {
+  max-width: 62em;
+  margin: 0 auto;
+  padding: 0 1.25rem;
+}

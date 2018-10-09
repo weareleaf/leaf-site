@@ -1,0 +1,35 @@
+.intro {
+  margin-bottom: $spacing-vertical-lg;
+
+  @media screen and (min-width: map-get($bp, 'md')) {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  @media screen and (min-width: map-get($bp, 'lg')) {
+    margin-bottom: $spacing-vertical-xl;
+  }
+
+  @media screen and (min-width: map-get($bp, 'xl')) {
+    margin-bottom: $spacing-vertical * 6;
+  }
+
+  &__image {
+    margin-bottom: $spacing-vertical;
+
+    @media screen and (min-width: map-get($bp, 'md')) {
+      margin: 0 $spacing-horizontal-xl 0 0;
+    }
+
+    img {
+      display: inline-block;
+      vertical-align: middle;
+    }
+  }
+
+  &__text {
+    color: $color-grey-dark;
+    font-size: 1.3em;
+    max-width: 27em;
+  }
+}

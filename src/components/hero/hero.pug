@@ -1,0 +1,12 @@
+mixin hero(c)
+  section.hero(class= c.heroModifier ? "hero--" + c.heroModifier : "")
+    .hero__container
+      .hero__content
+        h1.hero__heading= c.heroHeading
+        p.hero__text= c.heroText
+        
+        if c.heroButton
+          .hero__button
+            +button(c.heroButton)
+          
+      img.hero__image(src= c.heroImage.src alt= c.heroImage.alt)

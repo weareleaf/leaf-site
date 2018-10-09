@@ -1,0 +1,18 @@
+.page-header {
+  margin-bottom: $spacing-vertical * 3;
+
+  &--sm-spacing {
+    margin-bottom: $spacing-vertical;
+  }
+
+  &__heading {
+    font-size: 2em;
+    margin: 0;
+  }
+
+  &__text {
+    font-size: 1.1em;
+    margin: 0;
+    max-width: 27em;
+  }
+}

@@ -1,0 +1,87 @@
+mixin contact
+  .contact
+    .contact__content
+      .contact__tile
+        +contact-tile({
+          contactTileHeading: "Work enquiries",
+          contactTileText: "Our project planner helps build better enquries by asking the right questions early. If you <a href=\"#\">prefer email</a>, we’re down with that.",
+          contactTileButton: {
+            buttonModifier: "secondary",
+            buttonUrl: "/project-planner.html",
+            buttonText: "Project planner"
+          },
+          contactTileEmail: "enquiries@weareleaf.com"
+        })
+        
+      .contact__tile
+        +contact-tile({
+          contactTileHeading: "Ask us anything",
+          contactTileText: "If you’ve got a question, from our strategic appraoch to our favourite hex colour, we’ll do our best to get you an answer.",
+          contactTileButton: {
+            buttonModifier: "secondary",
+            buttonUrl: "mailto:hello@weareleaf.com",
+            buttonText: "Email the team"
+          },
+          contactTileEmail: "hello@weareleaf.com"
+        })
+
+    .contact__sidebar
+      .contact__social-tile
+        +social-tile({
+          socialTileIcon: {
+            src: "/assets/images/icons/social/twitter.svg",
+            alt: "Alt text for social tile image"
+          },
+          socialTileHeading: "Twitter",
+          socialTileText: "Our troll face",
+          socialTileHandle: "@we_are_leaf",
+          socialTileLink: "https://www.twitter.com/we_are_leaf"
+        })
+        
+      .contact__social-tile
+        +social-tile({
+          socialTileIcon: {
+            src: "/assets/images/icons/social/facebook.svg",
+            alt: "Alt text for social tile image"
+          },
+          socialTileHeading: "Facebook",
+          socialTileText: "Our procrastination face",
+          socialTileHandle: "/weareleaf",
+          socialTileLink: "https://www.facebook.com/weareleaf"
+        })
+        
+      .contact__social-tile
+        +social-tile({
+          socialTileIcon: {
+            src: "/assets/images/icons/social/linkedin.svg",
+            alt: "Alt text for social tile image"
+          },
+          socialTileHeading: "LinkedIn",
+          socialTileText: "Our professional face",
+          socialTileHandle: "/weareleaf",
+          socialTileLink: "https://www.linkedin.com/company-beta/10969781/"
+        })
+        
+      .contact__social-tile
+        +social-tile({
+          socialTileIcon: {
+            src: "/assets/images/icons/social/medium.svg",
+            alt: "Alt text for social tile image"
+          },
+          socialTileHeading: "Medium",
+          socialTileText: "Our adverb face",
+          socialTileHandle: "@leaf-software",
+          socialTileLink: "https://medium.com/leaf-software"
+        })
+        
+      .contact__social-tile
+        +social-tile({
+          socialTileIcon: {
+            src: "/assets/images/icons/social/dribbble.svg",
+            alt: "Alt text for social tile image"
+          },
+          socialTileHeading: "Dribbble",
+          socialTileText: "Our pixel face",
+          socialTileHandle: "@leaf",
+          socialTileLink: "https://dribbble.com/leaf"
+        })

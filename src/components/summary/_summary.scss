@@ -1,0 +1,14 @@
+.summary {
+  &__heading {
+    color: $color-grey;
+    font-family: $font-family;
+    font-size: .75em;
+    margin: 0;
+  }
+
+  &__text {
+    color: $color-grey-dark;
+    font-size: 1.3em;
+    margin: 0;
+  }
+}

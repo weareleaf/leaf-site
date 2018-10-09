@@ -1,0 +1,11 @@
+<svg viewBox="0 0 12 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+  <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+    <g transform="translate(-1542.000000, -788.000000)" fill="#35363D" fill-rule="nonzero" class="social__fill">
+      <g transform="translate(80.000000, 70.000000)">
+        <g transform="translate(1456.000000, 667.000000)">
+          <path d="M9,59 L6,59 L6,63 L9,63 L9,75 L14,75 L14,63 L17.642,63 L18,59 L14,59 L14,57.333 C14,56.378 14.192,56 15.115,56 L18,56 L18,51 L14.192,51 C10.596,51 9,52.583 9,55.615 L9,59 Z" id="Facebook"></path>
+        </g>
+      </g>
+    </g>
+  </g>
+</svg>

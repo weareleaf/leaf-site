@@ -1,0 +1,62 @@
+.nav {
+  &--primary {
+    text-align: right;
+  }
+
+  &__list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  &__item {
+    margin-bottom: $spacing-vertical-sm;
+  }
+
+  &__link {
+    color: $color-grey-dark;
+    display: block;
+    font-size: .933em;
+    position: relative;
+
+    @media screen and (min-width: map-get($bp, 'lg')) {
+      font-size: .85em;
+    }
+
+    .nav--primary & {
+      padding-right: 2em;
+
+      @media screen and (min-width: map-get($bp, 'xl')) {
+        padding-right: 4.706em; // Magic number to ensure nav aligns with rest of content in header
+      }
+    }
+
+    &:hover {
+      color: lighten($color-grey-dark, 10%);
+      text-decoration: none;
+    }
+
+    &--active {
+
+      .nav--primary & {
+        border-right: 4px solid $brand-primary;
+        padding-right: 1.714em;
+        position: relative;
+        text-decoration: line-through;
+
+        @media screen and (min-width: map-get($bp, 'xl')) {
+          padding-right: 4.471em; // Magic number to take into account the active border
+        }
+      }
+    }
+
+    &--highlight {
+      color: $color-red;
+      font-family: $font-family-sans-serif-medium;
+
+      &:hover {
+        color: lighten($color-red, 5%);
+      }
+    }
+  }
+}

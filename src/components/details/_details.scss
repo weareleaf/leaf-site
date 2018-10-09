@@ -1,0 +1,28 @@
+.details {
+  display: flex;
+  flex-wrap: wrap;
+
+  &__item {
+    margin-bottom: $spacing-vertical;
+    width: 100%;
+
+    @media screen and (min-width: map-get($bp, 'sm')) {
+      width: 50%;
+    }
+
+    @media screen and (min-width: map-get($bp, 'lg')) {
+      margin-bottom: 0;
+      width: 25%;
+    }
+  }
+
+  &__heading {
+    font-size: .85em;
+    margin: 0 0 .118em;
+  }
+
+  &__text {
+    font-size: .8em;
+    margin: 0;
+  }
+}
