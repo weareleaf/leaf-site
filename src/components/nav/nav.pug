@@ -5,7 +5,8 @@ mixin nav(c)
         li.nav__item
           a.nav__link(
             class= activePage ===  navItem.navItemText ? "nav__link--active" : ""
-            class=navItem.navItemHighlight ? "nav__link--highlight" : ""
+            class= navItem.navItemHighlight ? "nav__link--highlight" : ""
             href= navItem.navItemUrl
             data-micromodal-trigger=(navItem.navItemTriggerModal ? "modal-contact" : undefined)
-          )= navItem.navItemText
+          )
+            span.nav__text= navItem.navItemText
