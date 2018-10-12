@@ -1,4 +1,5 @@
 .form {
+
   &__fieldset {
     border: 0;
     border-top: 3px solid $color-grey-lightest;
@@ -158,9 +159,9 @@
     color: $color-grey-dark;
     display: block;
     font-size: .9em;
-    line-height: 1.278;
+    line-height: 1;
     margin: 0;
-    padding: $spacing-vertical $spacing-horizontal;
+    padding: ($spacing-vertical * 1.1) $spacing-horizontal $spacing-vertical;
     transition: border-color .15s ease-in-out;
     width: 100%;
 

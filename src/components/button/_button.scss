@@ -8,7 +8,7 @@
   font-family: $font-family-sans-serif-medium;
   font-size: .938rem;
   margin: 0;
-  padding: $spacing-vertical $spacing-horizontal;
+  padding: ($spacing-vertical * 1.2) $spacing-horizontal $spacing-vertical;
   text-align: center;
   text-decoration: none;
   transition: background-color 250ms ease-in-out, transform 150ms ease;
