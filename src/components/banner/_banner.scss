@@ -1,9 +1,6 @@
 .banner {
   background-color: $color-grey-green;
-  height: 0;
-  overflow: hidden;
   margin-bottom: $spacing-vertical-lg;
-  padding-bottom: 38.41%;
   position: relative;
 
   @media screen and (min-width: map-get($bp, 'lg')) {
@@ -37,7 +34,7 @@
     cursor: pointer;
     height: 2em;
     padding: 0;
-    position: absolute;
+    position: fixed;
     right: 1em;
     top: 1em;
     transition: background .2s ease-in-out;
@@ -86,14 +83,8 @@
   }
 
   &__image {
-    display: inline-block;
-    height: 100%;
+    display: block;
+    margin: 0 auto;
     max-height: 42.5em;
-    left: 50%;
-    margin: auto;
-    max-width: 100%;
-    position: absolute;
-    transform: translateX(-50%);
-    vertical-align: middle;
   }
 }
