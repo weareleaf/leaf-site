@@ -1,13 +1,13 @@
 extends ../layouts/case-study.pug
 
 block prepend vars
-  -var pageTitle = "BoxedUp Case Study - Leaf"
+  -var pageTitle = "Zendesk Case Study - Leaf"
 
 block pageComponents
   +banner({
-    bannerCompany: "boxedup",
+    bannerCompany: "zendesk",
     bannerImage: {
-      src: "https://picsum.photos/960/510/",
+      src: "/assets/images/zendesk/header.png",
       alt: "Alt text for card image",
     },
   })
@@ -16,8 +16,8 @@ block pageComponents
     .container
       +intro({
         introImage: {
-          src: "https://picsum.photos/210/84/",
-          alt: "Alt text for intro image",
+          src: "/assets/images/zendesk/logo.svg",
+          alt: "Zendesk",
         },
         introText: "We acted as BoxedUp's technical arm during the early stages of their organisation, and helped guide them through creating the first iteration of their web application."
       })
