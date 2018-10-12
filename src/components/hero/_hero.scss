@@ -125,7 +125,19 @@
       width: auto;
     }
 
+    @media screen and (min-width: 120em) {
+      right: -10em;
+    }
+
+    .hero--home & {
+
+      @media screen and (min-width: 120em) {
+        width: 75%;
+      }
+    }
+
     .hero--company & {
+
       @media screen and (min-width: 40.625em) {
         height: 43vw;
         right: 2.5em;
@@ -134,9 +146,14 @@
       @media screen and (min-width: map-get($bp, 'xl')) {
         height: auto;
       }
+
+      @media screen and (min-width: 120em) {
+        right: -10em;
+      }
     }
 
     .hero--our-work & {
+
       @media screen and (min-width: 40.625em) {
         height: 40vw;
         right: 2.5em;
@@ -157,9 +174,14 @@
         right: 1.25em;
         transform: translateY(-32%);
       }
+
+      @media screen and (min-width: 120em) {
+        right: -10em;
+      }
     }
 
     .hero--careers & {
+
       @media screen and (min-width: 40.625em) {
         height: 42vw;
         right: 8%;
@@ -174,6 +196,10 @@
         height: auto;
         right: 1.25em;
         transform: translateY(-32%);
+      }
+
+      @media screen and (min-width: 120em) {
+        right: -10em;
       }
     }
   }
