@@ -6,7 +6,7 @@
   display: block;
   font-family: $font-family-sans-serif-bold;
   font-size: 1.5em;
-  padding: $spacing-vertical-sm $spacing-horizontal * 3 $spacing-vertical-sm $spacing-horizontal;
+  padding: ($spacing-vertical-sm * 1.25) $spacing-horizontal * 3 $spacing-vertical-sm $spacing-horizontal;
   position: relative;
 
   &::after {
