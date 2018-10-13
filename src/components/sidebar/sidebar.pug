@@ -1,22 +1,7 @@
-mixin sidebar
+mixin sidebar(args)
   .sidebar
     .sidebar__component
       ul.styled-list.styled-list--inside
         li.styled-list__item
-          | We're a 
-          strong remote studio
-          | , which not only helps us recruit the best talent, but prioritises both our own and your time.
-        li.styled-list__item
-          | We use 
-          strong Basecamp
-          |  for project management and 
-          strong Google Hangouts
-          |  for conference or video calls.
-        li.styled-list__item
-          | Our hourly rate is 
-          strong £80 (plus VAT)
-          |  per person. We track our time to the minute, and charge only when we're active.
-        li.styled-list__item
-          | Invoices are issued at the end of each calendar month, and are to be paid within 
-          strong 14 days
-          | .
+          each item, index in args
+            li.styled-list__item!= item.item

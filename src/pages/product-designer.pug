@@ -70,11 +70,12 @@ block pageComponents
           a(href="mailto:hello@weareleaf.com") hello@weareleaf.com
 
         .grid__item
-          .sidebar
-            .sidebar__component
-              ul.styled-list.styled-list--inside
-                li.styled-list__item You'll receive a salary between #[strong £20,000 and £30,000-a-year], relative to your skillset and experience.
-                li.styled-list__item We're a #[strong remote-first] company, and you'll even have the oppertunity of #[strong flexible working hours].
-                li.styled-list__item We offer all staff a #[strong new Macbook Pro] and a #[strong workplace budget] to kit out your home office.
-                li.styled-list__item You'll get #[strong 20 days holiday], and well as #[strong your birthday], off each year (birthday's are for cake, and cake only).
-                li.styled-list__item #[strong Monthly one-on-ones] and #[strong 6-monthly role reviews] keep your personal progression a priority.  
+          +sidebar([{
+            item: "You'll receive a salary between <strong>£20,000 and £30,000-a-year</strong>, relative to your skillset and experience."
+          },{
+            item: "We're a <strong>remote-first</strong> company, and you'll even have the oppertunity of <strong>flexible working hours</strong>."
+          },{
+            item: "You'll get <strong>20 days holiday</strong>, and well as <strong>your birthday</strong>, off each year (birthday's are for cake, and cake only)."
+          },{
+            item: "<strong>Monthly one-on-ones</strong> and <strong>6-monthly role reviews</strong> keep your personal progression a priority.  "
+          }])
