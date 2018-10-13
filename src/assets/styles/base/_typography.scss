@@ -103,6 +103,10 @@ figure {
   }
 }
 
+ul {
+  list-style: square;
+}
+
 figcaption {
   color: $color-grey;
   font-size: .750em;
@@ -152,7 +156,7 @@ hr {
       height: .4em;
       left: -1.4em;
       position: absolute;
-      top: .5em;
+      top: .4em;
       width: .4em;
     }
   }
@@ -162,4 +166,8 @@ hr {
   background: $selection-color;
   color: $color-white;
   text-shadow: none;
+}
+
+.color-grey-dark {
+  color: $color-grey-dark;
 }

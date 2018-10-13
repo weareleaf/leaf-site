@@ -1,5 +1,5 @@
 .banner {
-  background-color: $color-grey-green;
+  background-color: $color-green-light;
   margin-bottom: $spacing-vertical-lg;
   position: relative;
 
@@ -86,5 +86,18 @@
     display: block;
     margin: 0 auto;
     max-height: 42.5em;
+  }
+
+  &__heading {
+    padding: $spacing-vertical 0;
+    text-align: center;
+
+    @media screen and (min-width: map-get($bp, 'lg')) {
+      padding: $spacing-vertical-lg 0;
+    }
+
+    @media screen and (min-width: 90em) {
+      padding: $spacing-vertical-xl 0;
+    }
   }
 }
