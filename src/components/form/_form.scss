@@ -167,6 +167,8 @@
 
     &--textarea {
       height: auto;
+      min-height: 10em;
+      resize: vertical;
     }
 
     &.erroneous {
