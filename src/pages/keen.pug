@@ -7,7 +7,8 @@ block pageComponents
   +banner({
     bannerCompany: "keen",
     bannerImage: {
-      src: "/assets/images/keen/header.png",
+      src: "/assets/images/keen/header.webp",
+      fallbackSrc: "/assets/images/keen/header.png",
       alt: "Alt text for card image",
     },
   })
@@ -21,7 +22,7 @@ block pageComponents
         },
         introText: "We worked with Keen to deliver an MVP of their customer success tool, helping organisations monitor users through the onboarding process and identify those struggling."
       })
-      
+
       +details({
         details: [
           {
@@ -42,11 +43,11 @@ block pageComponents
           }
         ]
       })
-  
+
   .section
     .container
       figure
-        img(src="/assets/images/keen/inline-1.jpg" alt="Keen application")
+        img(src="/assets/images/keen/inline-1.webp" alt="Keen application" onerror="this.onerror=null; this.src='/assets/images/keen/inline-1.jpg'")
 
       .grid.grid--two-thirds-reverse
         .grid__item
@@ -59,15 +60,15 @@ block pageComponents
           h4 The challenge
           p Building an MVP means making tough technical and design choices. With the concept inherently complex, and with limited time, the biggest challenge would be reducing the vision and building a truly Minimum Viable Product.
           p Keen also needed a tutorial creation system that allowed organisations to white-label their onboarding sites with a custom domain. For us, this meant not only supporting custom domains, but allowing end-users to securely sign-up to individual sites.
-          
+
           h4 Technology
           p We settled on a pure Ruby on Rails stack for Keen's MVP application, which enabled us to quickly build out a wide variety of features required by modern web applications, including authentication, mail sending, and solid test coverage.
           p We used JavaScript to add a layer of finesse to the application's front-end, introducing drag-and-drop image uploads and various off-canvas menus.
 
       figure
-        img(src="/assets/images/keen/inline-2.jpg" alt="Keen application")
+        img(src="/assets/images/keen/inline-2.webp" alt="Keen application" onerror="this.onerror=null; this.src='/assets/images/keen/inline-2.jpg'")
         figcaption Various mobile-first wireframes from the application
-        
+
 
       .grid.grid--two-thirds
         .grid__item

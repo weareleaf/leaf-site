@@ -3,6 +3,9 @@ mixin banner(c)
     button.banner__button(type='button', aria-label='Close')
       span(aria-hidden='true') Close
     if c.bannerImage
-      img.banner__image(src= c.bannerImage.src alt= c.bannerImage.alt)
+      if c.bannerImage.fallbackSrc
+        img.banner__image(src= c.bannerImage.src alt= c.bannerImage.alt onerror= "this.onerror=null; this.src='" + c.bannerImage.fallbackSrc + "'")
+      else
+        img.banner__image(src= c.bannerImage.fallbackSrc alt= c.bannerImage.alt)
     else
       h1.banner__heading= c.bannerHeading
