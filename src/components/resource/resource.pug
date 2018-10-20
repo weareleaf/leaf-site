@@ -10,5 +10,5 @@ mixin resource(c)
         p.resource__text= c.resourceText
       .resource__meta
         .resource__button
-          +button(c.resourceButton)
+          a.button(href= c.resourceButton.buttonUrl target="_blank" rel="noopener")= c.resourceButton.buttonText
         p.resource__meta-text= c.resourceMetaText
