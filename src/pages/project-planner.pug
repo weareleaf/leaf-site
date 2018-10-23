@@ -1,0 +1,37 @@
+extends ../layouts/page.pug
+
+block prepend vars
+  -var pageTitle = "Project Planner - Leaf"
+
+block pageComponents
+  +hero({
+    heroHeading: "Project planner",
+    heroText: "It only takes a few minutes to do, but it’ll help us better understand your motivations and your goals.",
+    heroImage: {
+      src: "/assets/images/project-planner.webp",
+      fallbackSrc: "/assets/images/project-planner.png",
+      alt: "Alt text for hero image",
+    }
+  })
+
+  section.section
+    .container
+      +page-header({
+        pageHeaderHeading: "Your enquiry",
+        pageHeaderText: "Consider this the start of a very exciting conversation. The more detail you can give, the better placed we’ll be to advise on the most appropriate next steps."
+      })
+
+      .grid.grid--two-thirds
+        .grid__item
+          +form
+
+        .grid__item
+          +sidebar([{
+            item: "We're a <strong>remote studio</strong>, which not only helps us recruit the best talent, but prioritises both our own and your time."
+          },{
+            item: "We use <strong>Basecamp</strong> for project management and  <strong>Google Hangouts</strong> for conference or video calls."
+          },{
+            item: "Our hourly rate is <strong>£80 (plus VAT)</strong> per person. We track our time to the minute, and charge only when we're active."
+          },{
+            item: "Invoices are issued at the end of each calendar month, and are to be paid within <strong>14 days</strong>."
+          }])

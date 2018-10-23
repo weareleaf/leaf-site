@@ -1,0 +1,115 @@
+// Colors
+// ==================================================
+
+$color-green: #66cc88;
+$color-green-light: #dbffe7;
+$color-red: #f77c6b;
+$color-grey-lightest: #e2e3e5;
+$color-grey-light: #c6c7cc;
+$color-grey: #6f7075;
+$color-grey-dark: #35363d;
+$color-grey-dark-transparent: rgba(53, 54, 61, .9);
+$color-grey-green: #f0f3f1;
+$color-white: #fff;
+$color-off-white: #f5f5f5;
+
+$brand-primary: $color-green !default;
+$brand-secondary: $color-red !default;
+
+$color-heha: #f2b6e8;
+$color-keen: #b6d9f2;
+$color-rift: #f2b6b6;
+$color-zendesk: #b6f2f2;
+
+// Borders
+// ==================================================
+
+$border-color: $color-grey-lightest !default;
+$border-style: solid !default;
+$border-width: 1px !default;
+
+$border: $border-style $border-width $border-color !default;
+
+// Border radius
+// ==================================================
+
+$border-radius: .25rem !default;
+
+// Breakpoints
+// ==================================================
+
+$bp: (
+  xs: 0,
+  sm: 544 / 16 * 1em,
+  md: 768 / 16 * 1em,
+  lg: 992 / 16 * 1em,
+  xl: 1200 / 16 * 1em
+) !default;
+
+// Fonts
+// ==================================================
+
+$font-family-cursive: cursive !default;
+$font-family-monospace: monospace !default;
+$font-family-sans-serif: 'Larsseit-Regular', sans-serif !default;
+$font-family-sans-serif-medium: 'Larsseit-Medium', sans-serif !default;
+$font-family-sans-serif-bold: 'Larsseit-Bold', sans-serif !default;
+$font-family-serif: serif !default;
+
+$font-family: $font-family-sans-serif !default;
+
+$line-height: 1.45 !default;
+$font-size-xs: .938rem !default;
+$font-size-sm: 1.125rem !default;
+$font-size: 1.25rem !default;
+$font-weight: 400;
+
+$selection-color: $brand-primary !default;
+
+// Spacing
+// ==================================================
+
+$spacing-horizontal: 1em !default;
+$spacing-horizontal-lg: $spacing-horizontal * 2 !default;
+$spacing-horizontal-sm: $spacing-horizontal / 2 !default;
+$spacing-horizontal-xl: $spacing-horizontal * 4 !default;
+$spacing-horizontal-xs: $spacing-horizontal / 4 !default;
+
+$spacing-horizontal-fluid: 10% !default;
+$spacing-horizontal-fluid-lg: $spacing-horizontal-fluid * 1.5 !default;
+$spacing-horizontal-fluid-sm: $spacing-horizontal-fluid / 1.5 !default;
+
+$spacing-horizontal-root: 5vw !default;
+
+$spacing-vertical: 1em !default;
+$spacing-vertical-lg: $spacing-vertical * 2 !default;
+$spacing-vertical-sm: $spacing-vertical / 2 !default;
+$spacing-vertical-xl: $spacing-vertical * 4 !default;
+$spacing-vertical-xs: $spacing-vertical / 4 !default;
+
+$spacing-vertical-fluid: 10% !default;
+$spacing-vertical-fluid-lg: $spacing-vertical-fluid * 1.5 !default;
+$spacing-vertical-fluid-sm: $spacing-vertical-fluid / 1.5 !default;
+
+$spacing-vertical-root: 5vw !default;
+
+// Body
+// ==================================================
+
+$body-bg: $color-white !default;
+$body-color: $color-grey !default;
+
+// Headings
+// ==================================================
+
+$h1-font-size: 3.998em !default;
+$h2-font-size: 2.827em !default;
+$h3-font-size: 1.999em !default;
+$h4-font-size: 1.414em !default;
+$h5-font-size: 1em !default;
+$h6-font-size: .707em !default;
+
+$heading-color: $color-grey-dark !default;
+$heading-font-family: $font-family-sans-serif-bold !default;
+$heading-font-weight: 700 !default;
+$heading-line-height: 1.2 !default;

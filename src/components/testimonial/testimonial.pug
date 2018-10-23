@@ -1,0 +1,9 @@
+mixin testimonial(c)
+  .testimonial(class= c.testimonialModifier ? "testimonial--" + c.testimonialModifier : "")
+    p.testimonial__text= c.testimonialText
+    .testimonial__author
+      .testimonial__image-container
+        img.testimonial__image(src= c.testimonialImage.src alt= c.testimonialImage.alt)
+      .testimonial__content
+        h6.testimonial__name= c.testimonialName
+        p.testimonial__role= c.testimonialRole

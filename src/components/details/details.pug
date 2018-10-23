@@ -1,0 +1,6 @@
+mixin details(c)
+  .details
+    each detail in c.details
+      .details__item
+        h4.details__heading= detail.detailHeading
+        p.details__text= detail.detailText

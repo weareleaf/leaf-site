@@ -1,0 +1,14 @@
+mixin resource(c)
+  .resource
+    if c.resourceImage.fallbackSrc
+      img.resource__image(src= c.resourceImage.src alt= c.resourceImage.alt onerror= "this.onerror=null; this.src='" + c.resourceImage.fallbackSrc + "'")
+    else
+      img.resource__image(src= c.resourceImage.src alt= c.resourceImage.alt)
+    .resource__container
+      .resource__content
+        h3.resource__heading= c.resourceHeading
+        p.resource__text= c.resourceText
+      .resource__meta
+        .resource__button
+          a.button(href= c.resourceButton.buttonUrl target="_blank" rel="noopener")= c.resourceButton.buttonText
+        p.resource__meta-text= c.resourceMetaText

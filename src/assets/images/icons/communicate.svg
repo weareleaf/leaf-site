@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg viewBox="0 0 60 60" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" preserveAspectRatio="xMinYMin meet">
+  <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M9,49 L4.476,49 C2.559,49 1,46.901 1,44.979 L1,4.48 C1,2.559 2.556,1 4.476,1 L55.524,1 C57.441,1 59,2.558 59,4.48 L59,44.979 C59,46.9 57.443,49 55.524,49 L24,49 C22,59 8,59 8,59 C8,59 10,55 9,49 Z" stroke="#66CC88" stroke-width="2"></path>
+    <path d="M23,19 C23,16.791 21.209,15 19,15 C16.791,15 15,16.791 15,19" stroke="#66CC88" stroke-width="2"></path>
+    <path d="M45,19 C45,16.791 43.209,15 41,15 C38.791,15 37,16.791 37,19" stroke="#66CC88" stroke-width="2"></path>
+    <path d="M38,30.0332 C36.956,33.4872 33.771,36.0002 30.005,36.0002 C26.227,36.0002 23.034,33.4712 22,30.0002" stroke="#66CC88" stroke-width="2"></path>
+  </g>
+</svg>

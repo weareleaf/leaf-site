@@ -1,0 +1,39 @@
+.card {
+  display: block;
+
+  &:hover {
+    text-decoration: none;
+
+    .card__image {
+      opacity: .75;
+    }
+
+    .card__heading {
+      color: $brand-primary;
+    }
+  }
+
+  &__image {
+    display: inline-block;
+    height: auto;
+    transition: opacity 150ms ease;
+    vertical-align: middle;
+    width: 100%;
+  }
+
+  &__content {
+    margin-top: $spacing-vertical * 1.5;
+  }
+
+  &__heading {
+    color: $color-grey-dark;
+    font-size: 1.5em;
+    margin: 0 0 .333em;
+    transition: color 150ms ease;
+  }
+
+  &__text {
+    color: $color-grey;
+    margin: 0;
+  }
+}

@@ -1,0 +1,95 @@
+extends ../layouts/page.pug
+
+block prepend vars
+  -var activePage = "Company"
+  -var pageTitle = "Company - Leaf"
+
+block pageComponents
+  +hero({
+    heroModifier: "company",
+    heroHeading: "Company",
+    heroText: "Four friends with experience in helping organisations fulfil their digital ambitions.",
+    heroImage: {
+      src: "/assets/images/company.webp",
+      fallbackSrc: "/assets/images/company.png",
+      alt: "Alt text for hero image",
+    }
+  })
+
+  section.section
+    .container
+      .grid.grid--statements
+        .grid__item
+          +statement({
+            statementIcon: "/assets/images/icons/leaves.svg",
+            statementHeading: "We nurture relationships",
+            statementText: "As a remote organisation, we work with clients from all across the world. Our focus on cultivating relationships puts your success first."
+          })
+
+        .grid__item
+          +statement({
+            statementIcon: "/assets/images/icons/scales.svg",
+            statementHeading: "Intentionally lean",
+            statementText: "We hate the faceless conveyor belt model of larger agencies. Keeping our overheads low and our core team small means you'll always be a priority."
+          })
+
+        .grid__item
+          +statement({
+            statementIcon: "/assets/images/icons/communicate.svg",
+            statementHeading: "We talk honestly, and often",
+            statementText: "The most honest advice can sometimes be the most difficult to give. We’ll always be completely open and tell you the truth, even when it hurts."
+          })
+
+        .grid__item
+          +statement({
+            statementIcon: "/assets/images/icons/lego.svg",
+            statementHeading: "Evolution, not revolution",
+            statementText: "With existing products, we focus on continual improvement, delivering low-risk and fast results, one considered block at a time."
+          })
+
+  section.section
+    .container
+      .grid.grid--profiles
+        .grid__item
+          +profile({
+            profileImage: {
+              src: "/assets/images/chris.webp",
+              fallbackSrc: "/assets/images/chris.jpg",
+              alt: "Chris Annetts"
+            },
+            profileHeading: "Chris Annetts",
+            profileText: "Design Director"
+          })
+
+        .grid__item
+          +profile({
+            profileImage: {
+              src: "/assets/images/mike.webp",
+              fallbackSrc: "/assets/images/mike.jpg",
+              alt: "Mike Carter"
+            },
+            profileHeading: "Mike Carter",
+            profileText: "Engineering Director"
+          })
+
+        .grid__item
+          +profile({
+            profileImage: {
+              src: "/assets/images/oj.webp",
+              fallbackSrc: "/assets/images/oj.jpg",
+              alt: "Oliver Standeven"
+            },
+            profileHeading: "Oliver Standeven",
+            profileText: "Software Engineer"
+          })
+
+        .grid__item
+          +profile({
+            profileImage: {
+              src: "/assets/images/tina.webp",
+              fallbackSrc: "/assets/images/tina.jpg",
+              alt: "Tina van Schelt"
+            },
+            profileHeading: "Tina van Schelt",
+            profileText: "Software Engineer"
+          })

@@ -1,0 +1,9 @@
+mixin profile(c)
+  .profile
+    if c.profileImage.fallbackSrc
+      img.profile__image(src= c.profileImage.src alt= c.profileImage.alt onerror= "this.onerror=null; this.src='" + c.profileImage.fallbackSrc + "'")
+    else
+      img.profile__image(src= c.profileImage.fallbackSrc alt= c.profileImage.alt)
+    .profile__content
+      h3.profile__heading= c.profileHeading
+      p.profile__text= c.profileText

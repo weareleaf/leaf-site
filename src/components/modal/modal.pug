@@ -1,0 +1,7 @@
+mixin modal
+  #modal-contact.modal(aria-hidden="true")
+    .modal__overlay(tabindex="-1" data-micromodal-close="")
+      .modal__container(role="dialog" aria-modal="true")
+        button.modal__close(aria-label="Close modal" data-micromodal-close="")
+        .modal__content
+          +contact

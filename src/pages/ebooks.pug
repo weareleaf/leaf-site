@@ -1,0 +1,38 @@
+extends ../layouts/page.pug
+
+block prepend vars
+  -var activePage = "eBooks"
+  -var pageTitle = "eBooks - Leaf"
+
+block pageComponents
+  +hero({
+    heroHeading: "eBooks",
+    heroText: "We’re creating a suite of articles to advance your skills in product design and development.",
+    heroImage: {
+      src: "/assets/images/ebooks.webp",
+      fallbackSrc: "/assets/images/ebooks.png",
+      alt: "Alt text for hero image",
+    }
+  })
+
+  section.section
+    .container
+      +page-header({
+        pageHeaderHeading: "Better Digital Teams",
+        pageHeaderText: "This series is all about creating digital teams that work well together to produce top quality work while promoting effectiveness, efficiency and happiness."
+      })
+
+      +resource({
+        resourceImage: {
+          src: "/assets/images/working-environments.webp",
+          fallbackSrc: "/assets/images/working-environments.jpg",
+          alt: "Working environments"
+        },
+        resourceHeading: "Working environments",
+        resourceText: "A good workspace is often an afterthought, when in reality, it’s essential to getting the most out of your team. Whether your working with developers, designers, or writers, this eBook will help create an environment that allows them to thrive.",
+        resourceButton: {
+          buttonUrl: "https://weareleaf.com/resources/articles/Better%20Digital%20Teams%20-%20Working%20environment.pdf",
+          buttonText: "Download (443 KB)"
+        },
+        resourceMetaText: "Last updated: 14 May 2018"
+      })

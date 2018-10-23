@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg viewBox="0 0 60 60" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" preserveAspectRatio="xMinYMin meet">
+  <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linejoin="round">
+    <path d="M3.0664,44.4258 C2.4774,44.1818 2.0004,43.4758 2.0004,42.8568 L2.0004,21.9998 L30.0004,34.0158 L30.0004,55.9998 L3.0664,44.4258 Z" stroke="#66CC88" stroke-width="2" stroke-linecap="round"></path>
+    <path d="M56.9336,44.4258 C57.5226,44.1818 57.9996,43.4758 57.9996,42.8568 L57.9996,21.9998 L29.9996,34.0158 L29.9996,55.9998 L56.9336,44.4258 Z" stroke="#66CC88" stroke-width="2" stroke-linecap="round"></path>
+    <path d="M30,18 C33.536,18 36,19.581 36,21 C36,22.419 33.536,24 30,24 C26.464,24 24,22.419 24,21 C24,19.581 26.464,18 30,18 Z" stroke="#66CC88" stroke-width="2" stroke-linecap="round"></path>
+    <path d="M24.0205,21 L23.9995,21 L24.0205,26.275 C24.2615,27.606 26.6495,29 29.9995,29 C33.3505,29 35.7385,27.606 35.9995,26.275 L35.9995,21 L35.9795,21" stroke="#66CC88" stroke-width="2" stroke-linecap="round"></path>
+    <path d="M30,4 C33.536,4 36,5.581 36,7 C36,8.419 33.536,10 30,10 C26.464,10 24,8.419 24,7 C24,5.581 26.464,4 30,4 Z" stroke="#66CC88" stroke-width="2" stroke-linecap="round"></path>
+    <path d="M24.0205,7 L23.9995,7 L24.0205,12.275 C24.2615,13.606 26.6495,15 29.9995,15 C33.3505,15 35.7385,13.606 35.9995,12.275 L35.9995,7 L35.9795,7" stroke="#66CC88" stroke-width="2" stroke-linecap="round"></path>
+    <path d="M14,11 C17.536,11 20,12.581 20,14 C20,15.419 17.536,17 14,17 C10.464,17 8,15.419 8,14 C8,12.581 10.464,11 14,11 Z" stroke="#66CC88" stroke-width="2" stroke-linecap="round"></path>
+    <path d="M8.0205,14 L7.9995,14 L8.0205,19.275 C8.2615,20.606 10.6495,22 13.9995,22 C17.3505,22 19.7385,20.606 19.9995,19.275 L19.9995,14 L19.9795,14" stroke="#66CC88" stroke-width="2" stroke-linecap="round"></path>
+    <path d="M46,11 C49.536,11 52,12.581 52,14 C52,15.419 49.536,17 46,17 C42.464,17 40,15.419 40,14 C40,12.581 42.464,11 46,11 Z" stroke="#66CC88" stroke-width="2" stroke-linecap="round"></path>
+    <path d="M40.0205,14 L39.9995,14 L40.0205,19.275 C40.2615,20.606 42.6495,22 45.9995,22 C49.3505,22 51.7385,20.606 51.9995,19.275 L51.9995,14 L51.9795,14" stroke="#66CC88" stroke-width="2" stroke-linecap="round"></path>
+    <path d="M39,13 L37,12" stroke="#66CC88" stroke-width="2" stroke-linecap="square"></path>
+    <path d="M23,12 L21,13" stroke="#66CC88" stroke-width="2" stroke-linecap="square"></path>
+    <path d="M58,22 L52,19" stroke="#66CC88" stroke-width="2" stroke-linecap="round"></path>
+    <path d="M8,19 L2,22" stroke="#66CC88" stroke-width="2" stroke-linecap="round"></path>
+  </g>
+</svg>

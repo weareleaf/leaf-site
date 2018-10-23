@@ -1,0 +1,59 @@
+.block {
+  margin-bottom: $spacing-vertical-xl;
+
+  @media screen and (min-width: map-get($bp, 'md')) {
+    align-items: center;
+    display: flex;
+  }
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+
+  &__content {
+    margin-bottom: $spacing-vertical-lg;
+
+    @media screen and (min-width: map-get($bp, 'md')) {
+      margin-bottom: 0;
+      width: 60%;
+    }
+
+    .block--reverse & {
+      @media screen and (min-width: map-get($bp, 'md')) {
+        order: 1;
+      }
+    }
+  }
+
+  &__heading {
+    font-size: 2em;
+  }
+
+  &__text {
+    strong {
+      color: $color-grey-dark;
+    }
+  }
+
+  &__image {
+    max-width: 60%;
+
+    @media screen and (min-width: map-get($bp, 'md')) {
+      padding-left: $spacing-horizontal-lg;
+      max-width: none;
+      width: 40%;
+    }
+
+    img {
+      display: inline-block;
+      vertical-align: middle;
+    }
+
+    .block--reverse & {
+      @media screen and (min-width: map-get($bp, 'md')) {
+        padding-left: 0;
+        padding-right: $spacing-horizontal-xl;
+      }
+    }
+  }
+}

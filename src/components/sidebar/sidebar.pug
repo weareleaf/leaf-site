@@ -1,0 +1,7 @@
+mixin sidebar(args)
+  .sidebar
+    .sidebar__component
+      ul.styled-list.styled-list--inside
+        li.styled-list__item
+          each item, index in args
+            li.styled-list__item!= item.item

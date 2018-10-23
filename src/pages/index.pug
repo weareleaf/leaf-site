@@ -1,0 +1,47 @@
+extends ../layouts/page.pug
+
+block prepend vars
+  -var pageTitle = "Kent based web and mobile development"
+
+block pageComponents
+  +hero({
+    heroModifier: "home",
+    heroHeading: "Every business is now digital",
+    heroText: "We blend insights and strategy to create digital products for forward-thinking organisations.",
+    heroButton: {
+      buttonUrl: "/what-we-do.html",
+      buttonText: "Find out how we do it"
+    },
+    heroImage: {
+      src: "/assets/images/home.webp",
+      fallbackSrc: "/assets/images/home.png",
+      alt: "Alt text for hero image",
+    }
+  })
+
+  section.section
+    .container
+      .grid.grid--card
+        .grid__item
+          +card({
+            cardUrl: "/rift.html",
+            cardImage: {
+              src: "/assets/images/rift.webp",
+              fallbackSrc: "/assets/images/rift.jpg",
+              alt: "MyRIFT",
+            },
+            cardHeading: "Helping the UK to claim tax refunds",
+            cardText: "We helped RIFT re-imagine their MyRIFT web application, allowing UK-based workers to claim tax refunds on the move."
+          })
+
+        .grid__item
+          +card({
+            cardUrl: "/heha.html",
+            cardImage: {
+              src: "/assets/images/heha.webp",
+              fallbackSrc: "/assets/images/heha.jpg",
+              alt: "HEHA!",
+            },
+            cardHeading: "Taking the hassle out of travel",
+            cardText: "Planning trips can be a headache. We worked with Holiday Extras  to create HEHA!, an iOS and Android app to make the journey easier."
+          })

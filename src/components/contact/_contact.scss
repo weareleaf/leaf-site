@@ -1,0 +1,82 @@
+.contact {
+  background-color: $color-white;
+
+  @media screen and (min-width: 66.25em) {
+    display: flex;
+  }
+
+  @media screen and (min-width: map-get($bp, 'xl')) {
+    background: $color-white url('../images/contact.jpg') no-repeat 60vw center;
+  }
+
+  @media screen and (min-width: 87.5em) {
+    background: $color-white url('../images/contact.jpg') no-repeat 53vw center;
+  }
+
+  @media screen and (min-width: 97.625em) {
+    background: $color-white url('../images/contact.jpg') no-repeat right center;
+  }
+
+  &__sidebar {
+    display: flex;
+    justify-content: space-between;
+    padding: $spacing-vertical * 3 $spacing-horizontal * 3;
+
+    @media screen and (min-width: map-get($bp, 'sm')) {
+      background-color: $color-grey-green;
+      justify-content: space-around;
+    }
+
+    @media screen and (min-width: 66.25em) {
+      display: block;
+      flex: 0 0 auto;
+      order: 0;
+      padding: $spacing-vertical * 3 $spacing-horizontal * 1.5;
+      width: 14em;
+    }
+  }
+
+  &__social-tile {
+    &:not(:last-child) {
+      @media screen and (min-width: 66.25em) {
+        margin-bottom: $spacing-vertical * 3;
+      }
+    }
+  }
+
+  &__content {
+    padding: $spacing-vertical * 7 $spacing-horizontal * 3 0;
+
+    @media screen and (min-width: map-get($bp, 'sm')) {
+      padding: $spacing-vertical * 5 $spacing-horizontal * 3 $spacing-vertical * 3;
+    }
+
+    @media screen and (min-width: map-get($bp, 'sm')) {
+      padding: $spacing-vertical-xl $spacing-horizontal * 3 $spacing-vertical * 3;
+    }
+
+    @media screen and (min-width: 66.25em) {
+      order: 1;
+      padding: $spacing-vertical * 3 $spacing-horizontal * 3;
+    }
+  }
+
+  &__tile {
+    border-bottom: 3px solid $color-grey-lightest;
+    margin-bottom: $spacing-vertical * 3;
+    padding-bottom: $spacing-vertical * 3;
+
+    &:last-child {
+      margin-bottom: 0;
+
+      @media screen and (min-width: map-get($bp, 'sm')) {
+        border-bottom: 0;
+        padding-bottom: 0;
+      }
+    }
+
+    @media screen and (min-width: 93.75em) {
+      padding-right: $spacing-horizontal-lg;
+    }
+  }
+}

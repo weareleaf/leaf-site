@@ -1,0 +1,34 @@
+.button {
+  background-color: $color-red;
+  border: none;
+  border-radius: $border-radius;
+  color: $color-white;
+  cursor: pointer;
+  display: inline-block;
+  font-family: $font-family-sans-serif-medium;
+  font-size: .938rem;
+  margin: 0;
+  padding: ($spacing-vertical * 1.2) $spacing-horizontal $spacing-vertical;
+  text-align: center;
+  text-decoration: none;
+  transition: background-color 250ms ease-in-out, transform 150ms ease;
+
+  @media screen and (min-width: map-get($bp, sm)) {
+    font-size: $font-size;
+  }
+
+  &:hover,
+  &:focus {
+    background-color: lighten($color-red, 5%);
+    text-decoration: none;
+  }
+
+  &--secondary {
+    background-color: $color-green;
+
+    &:hover,
+    &:focus {
+      background-color: lighten($color-green, 5%);
+    }
+  }
+}

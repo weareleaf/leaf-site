@@ -1,0 +1,103 @@
+.banner {
+  background-color: $color-green-light;
+  margin-bottom: $spacing-vertical-lg;
+  position: relative;
+
+  @media screen and (min-width: map-get($bp, 'lg')) {
+    margin-bottom: $spacing-vertical-xl;
+  }
+
+  @media screen and (min-width: map-get($bp, 'xl')) {
+    margin-bottom: $spacing-vertical * 6;
+  }
+
+  &--heha {
+    background-color: $color-heha;
+  }
+
+  &--keen {
+    background-color: $color-keen;
+  }
+
+  &--rift {
+    background-color: $color-rift;
+  }
+
+  &--zendesk {
+    background-color: $color-zendesk;
+  }
+
+  &__button {
+    background: rgba(53, 54, 61, .3);
+    border: 0;
+    border-radius: 50%;
+    cursor: pointer;
+    height: 2em;
+    padding: 0;
+    position: fixed;
+    right: 1em;
+    top: 1em;
+    transition: background .2s ease-in-out;
+    width: 2em;
+    -webkit-appearance: none;
+
+    @media screen and (min-width: map-get($bp, 'xl')) {
+      right: 3em;
+      top: 3em;
+    }
+
+    &:hover,
+    &:active {
+      background: rgba(53, 54, 61, .6);
+    }
+
+    span {
+      border: 0;
+      clip: rect(0,0,0,0);
+      height: 1px;
+      overflow: hidden;
+      padding: 0;
+      position: absolute;
+      white-space: nowrap;
+      width: 1px;
+    }
+
+    &::before,
+    &::after {
+      background-color: $color-white;
+      content: '';
+      height: .15em;
+      left: 50%;
+      position: absolute;
+      top: 50%;
+      width: 1em;
+    }
+
+    &::before {
+      transform: translate(-50%, -50%) rotate(45deg);
+    }
+
+    &::after {
+      transform: translate(-50%, -50%) rotate(-45deg);
+    }
+  }
+
+  &__image {
+    display: block;
+    margin: 0 auto;
+    max-height: 42.5em;
+  }
+
+  &__heading {
+    padding: $spacing-vertical 0;
+    text-align: center;
+
+    @media screen and (min-width: map-get($bp, 'lg')) {
+      padding: $spacing-vertical-lg 0;
+    }
+
+    @media screen and (min-width: 90em) {
+      padding: $spacing-vertical-xl 0;
+    }
+  }
+}

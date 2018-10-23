@@ -1,0 +1,38 @@
+.social {
+  &__list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  &__item {
+
+    &:not(:last-child) {
+      margin-bottom: $spacing-vertical;
+    }
+
+    .social--inline & {
+      display: inline-block;
+      margin: 0 $spacing-horizontal-lg 0 0;
+    }
+  }
+
+  &__link {
+    display: block;
+  }
+
+  svg {
+    display: inline-block;
+    height: 1.2em;
+    vertical-align: middle;
+    width: 1.2em;
+  }
+
+  &__fill {
+    transition: fill .2s ease-in-out;
+
+    .social__link:hover & {
+      fill: lighten($color-grey-dark, 10%);
+    }
+  }
+}
