@@ -10,7 +10,7 @@ Run `npm install`
 
 - Run `npm run dev` to build the site
 - Run `npm run watch` to build the site and watch for changes
-- Run `npm run prod` to build a production ready version of the site
+- Run `npm run deploy` to build a production ready version of the site and deploy it to https://weareleaf.com
 
 ## Deployments
 
