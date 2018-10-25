@@ -20,7 +20,7 @@
   &__sidebar {
     display: flex;
     justify-content: space-between;
-    padding: $spacing-vertical * 3 $spacing-horizontal * 3;
+    padding: $spacing-vertical * 2 $spacing-horizontal * 2;
 
     @media screen and (min-width: map-get($bp, 'sm')) {
       background-color: $color-grey-green;
@@ -28,31 +28,20 @@
     }
 
     @media screen and (min-width: 66.25em) {
-      display: block;
       flex: 0 0 auto;
+      flex-direction: column;
+      justify-content: space-between;
       order: 0;
       padding: $spacing-vertical * 3 $spacing-horizontal * 1.5;
       width: 14em;
     }
   }
 
-  &__social-tile {
-    &:not(:last-child) {
-      @media screen and (min-width: 66.25em) {
-        margin-bottom: $spacing-vertical * 3;
-      }
-    }
-  }
-
   &__content {
-    padding: $spacing-vertical * 7 $spacing-horizontal * 3 0;
+    padding: $spacing-vertical * 2 $spacing-horizontal * 2 0;
 
     @media screen and (min-width: map-get($bp, 'sm')) {
-      padding: $spacing-vertical * 5 $spacing-horizontal * 3 $spacing-vertical * 3;
-    }
-
-    @media screen and (min-width: map-get($bp, 'sm')) {
-      padding: $spacing-vertical-xl $spacing-horizontal * 3 $spacing-vertical * 3;
+      padding: $spacing-vertical * 2 $spacing-horizontal * 2;
     }
 
     @media screen and (min-width: 66.25em) {
