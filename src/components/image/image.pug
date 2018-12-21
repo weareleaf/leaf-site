@@ -1,0 +1,5 @@
+mixin image(c)
+  picture(class= c.class)
+    source(srcset= c.src type="image/webp")
+    source(srcset= c.fallbackSrc type="image/jpeg")
+    img(src= c.fallbackSrc alt= c.alt)

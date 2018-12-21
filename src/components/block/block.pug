@@ -3,8 +3,9 @@ mixin block(c)
     .block__content
       h2.block__heading= c.blockHeading
       .block__text!= c.blockContent
-    .block__image
-      if c.blockImage.fallbackSrc
-        img(src= c.blockImage.src alt= c.blockImage.alt onerror= "this.onerror=null; this.src='" + c.blockImage.fallbackSrc + "'")
-      else
-        img(src= c.blockImage.src alt= c.blockImage.alt)
+    +image({
+      class: "block__image",
+      src: c.blockImage.src,
+      fallbackSrc: c.blockImage.fallbackSrc,
+      alt: c.blockImage.alt
+    })

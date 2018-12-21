@@ -1,9 +1,11 @@
 mixin card(c)
   a.card(href= c.cardUrl)
-    if c.cardImage.fallbackSrc
-      img.card__image(src= c.cardImage.src alt= c.cardImage.alt onerror= "this.onerror=null; this.src='" + c.cardImage.fallbackSrc + "'")
-    else
-      img.card__image(src= c.cardImage.fallbackSrc alt= c.cardImage.alt)
+    +image({
+      class: "card__image",
+      src: c.cardImage.src,
+      fallbackSrc: c.cardImage.fallbackSrc,
+      alt: c.cardImage.alt
+    })
     .card__content
       h3.card__heading= c.cardHeading
       p.card__text= c.cardText

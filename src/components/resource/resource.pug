@@ -1,9 +1,11 @@
 mixin resource(c)
   .resource
-    if c.resourceImage.fallbackSrc
-      img.resource__image(src= c.resourceImage.src alt= c.resourceImage.alt onerror= "this.onerror=null; this.src='" + c.resourceImage.fallbackSrc + "'")
-    else
-      img.resource__image(src= c.resourceImage.src alt= c.resourceImage.alt)
+    +image({
+      class: "resource__image",
+      src: c.resourceImage.src,
+      fallbackSrc: c.resourceImage.fallbackSrc,
+      alt: c.resourceImage.alt
+    })
     .resource__container
       .resource__content
         h3.resource__heading= c.resourceHeading
