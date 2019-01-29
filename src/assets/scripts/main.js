@@ -1,13 +1,12 @@
 require("core-js/fn/array/from");
 require("core-js/fn/object/assign");
+require('./pageTransitions.js')
 
 import banner from "../../components/banner/banner.js";
 import modal from "../../components/modal/modal.js";
-// import slider from "../../components/slider/slider.js";
 
 banner();
 modal();
-// slider();
 
 // Unregister any service workers from the old site.
 if(window.navigator && navigator.serviceWorker) {
@@ -25,7 +24,6 @@ function isMobileDevice() {
   var agent = navigator.userAgent
   return agent.match(/Android/i) || agent.match(/webOS/i) || agent.match(/iPhone/i) || agent.match(/iPad/i) || agent.match(/iPod/i) || agent.match(/BlackBerry/i) || agent.match(/Windows Phone/i)
 }
-
 
 function canUseWebP() {
   var elem = document.createElement('canvas');
