@@ -1,0 +1,56 @@
+extends ../layouts/page.pug
+
+block prepend vars
+  -var pageTitle = "Referrals - Leaf"
+
+block pageComponents
+  +hero({
+    heroHeading: "Referrals",
+    heroText: "Some of our best working relationships come to us from friends, and we want to share our success.",
+    heroImage: {
+      src: "/assets/images/referrals.webp",
+      fallbackSrc: "/assets/images/referrals.png",
+      alt: "Alt text for hero image",
+    }
+  })
+
+  section.section
+    .container
+      +page-header({
+        pageHeaderHeading: "How it works",
+        pageHeaderModifier: "sm-spacing"
+      })
+
+      .grid.grid--two-thirds
+        .grid__item
+          p We're currently looking to build a close working relationship with a new organisation, and we want to offer our friends something in return for putting in a good word on our behalf. Unsurprisingly, those who know us best are perfectly positioned to refer us to others!
+
+          h4 What we're looking for
+          p Our goal with our client work is to use our product, design, and engineering knowledge to make significant improvements to the success of organisations by working on new and existing digital products.
+
+          p We look for organisations where we can build long-term relationships, establish an intricate understanding of their business, and tackle larger or harder problems than you'd typically expect from an external developer.
+
+          h4 The referral offer
+          p We're happy to share <b>10%</b> of the billed income any referred client we take on, limited to the first 3 months of billable work, and up to a cap of <b>£3,000</b>.
+
+          p So, if as a result of your referral we billed £10,000 within the first 3 months of a new relationship, you'd get <b>£1,000</b>. Similarly, if we billed £30,000 in the same period, you'd get <b>£3,000</b> (the cap).
+
+          h4 Making a referral
+          p If you think we're a good fit for an organisation you know, drop us an email at <a href="mailto:hello@weareleaf.com">hello@weareleaf.com</a> with some details. We'll then let you know if we'd be interested in working with them.
+
+          p We're a small company that care deeply about building mutually beneficial relationships, so please don't make email introductions to other organisations without our consent.
+
+          h4 Additional information
+
+          p If you're unsure about whether we'd be a good fit for a referral, the following might help you:
+
+          ul
+            li We're a remote-first business. We don't mind making infrequent site visits, but working on-site won't be the norm.
+            li Our programming toolkit consists mainly of JavaScript (client and server) and Ruby, but we're no strangers to changing tech.
+            li We work at an hourly rate of £100 per person, per hour, and avoid fixed-cost work. See <a href="https://medium.com/leaf-software/fixed-cost-is-hurting-your-business-ec3d63ffa329" target="_blank" rel="noopener">this blog post</a> for reasoning.
+            li We tend to look for an initial engagement in a new relationship of £10,000+.
+            li We're happy to take on Service Level Agreements (SLAs) or sign Non Disclosure Agreements (NDAs) where necessary.
+            li With few exceptions, we don't work with businesses without an existing revenue stream.
+
+          p
+            small Last updated: 5 Feb 2019

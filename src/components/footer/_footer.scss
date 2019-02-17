@@ -27,6 +27,7 @@
   &__cta-link {
     color: $brand-secondary;
     font-family: $font-family-sans-serif-medium;
+    margin-left: $spacing-horizontal * .25;
     white-space: nowrap;
   }
 
