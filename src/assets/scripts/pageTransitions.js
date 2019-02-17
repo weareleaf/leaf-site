@@ -40,17 +40,17 @@ const PageTransition = Barba.BaseTransition.extend({
     const promisedLoad = this.newContainerLoading
     setTimeout(() => {
       this.reset()
+      body.scrollTop = 0
       promisedLoad.then(() => this.finish())
     }, TRANSITION_TIME)
   },
 
   finish: function() {
     this.done()
+    body.classList.remove('modal-open')
     banner()
     modal()
-    body.classList.remove("modal-open")
     this.reloadHowdy()
-    body.scrollTop = 0
     this.in()
     console.log('Ended transition')
   }
