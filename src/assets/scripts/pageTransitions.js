@@ -2,8 +2,7 @@ import Barba from "barba.js"
 import banner from "../../components/banner/banner.js"
 import modal from "../../components/modal/modal.js"
 
-const transitioner = document.getElementById('transitioner')
-const TRANSITION_TIME = 334
+const TRANSITION_TIME = 800
 const PageTransition = Barba.BaseTransition.extend({
   // This is pretty awful. Howdy has no way to manually trigger a
   // reload so we need to remove & re-add the script to the page
@@ -20,27 +19,58 @@ const PageTransition = Barba.BaseTransition.extend({
     }
   },
 
-  active: function() {
-    transitioner.classList.add('active')
+  out: function() {
+    const headerAddress = document.querySelector('.header__address')
+    headerAddress.classList.remove('transition-in')
+    headerAddress.classList.add('transition-out')
+
+    const headerSocial = document.querySelector('.header__social')
+    headerSocial.classList.remove('transition-in')
+    headerSocial.classList.add('transition-out')
+
+    const heroContent = document.querySelector('.hero__content')
+    heroContent.classList.remove('transition-in')
+    heroContent.classList.add('transition-out')
+
+    const heroImage = document.querySelector('.hero__image img')
+    heroImage.classList.remove('transition-in')
+    heroImage.classList.add('transition-out')
+
+    const sections = document.querySelectorAll('.section')
+    sections.forEach((section) => {
+      section.classList.remove('transition-in')
+      section.classList.add('transition-out')
+    })
   },
 
-  inactive: function() {
-    transitioner.classList.remove('active')
-  },
+  in: function() {
+    const headerAddress = document.querySelector('.header__address')
+    headerAddress.classList.add('transition-in')
+    headerAddress.classList.remove('transition-out')
 
-  opaque: function() {
-    transitioner.classList.add('opaque')
-  },
+    const headerSocial = document.querySelector('.header__social')
+    headerSocial.classList.add('transition-in')
+    headerSocial.classList.remove('transition-out')
 
-  transparent: function() {
-    transitioner.classList.remove('opaque')
+    const heroContent = document.querySelector('.hero__content')
+    heroContent.classList.add('transition-in')
+    heroContent.classList.remove('transition-out')
+
+    const heroImage = document.querySelector('.hero__image img')
+    heroImage.classList.add('transition-in')
+    heroImage.classList.remove('transition-out')
+
+    const sections = document.querySelectorAll('.section')
+    sections.forEach((section) => {
+      section.classList.add('transition-in')
+      section.classList.remove('transition-out')
+    })
   },
 
   start: function() {
     console.log('Starting transition')
-    this.active()
+    this.out()
     const promisedLoad = this.newContainerLoading
-    this.opaque()
     setTimeout(() => {
       promisedLoad.then(() => this.finish())
     }, TRANSITION_TIME)
@@ -48,17 +78,19 @@ const PageTransition = Barba.BaseTransition.extend({
 
   finish: function() {
     document.body.scrollTop = 0
-    this.transparent()
     this.done()
     banner()
     modal()
     this.reloadHowdy()
-    setTimeout(() => {
-      this.inactive()
-      console.log('Ended transition')
-    }, TRANSITION_TIME)
+    this.in()
+    console.log('Ended transition')
   }
 })
+
+window.addEventListener('load', function() {
+  PageTransition.in()
+})
+
 
 Barba.Pjax.originalPreventCheck = Barba.Pjax.preventCheck
 Barba.Pjax.preventCheck = function(evt, element) {

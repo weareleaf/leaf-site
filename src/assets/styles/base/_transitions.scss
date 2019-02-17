@@ -1,17 +1,138 @@
-#transitioner {
-  height: 0;
-  opacity: 0;
-  position: absolute;
-  transition: opacity .3s ease-in;
-  z-index: 110;
+.header {
+  &__address {
+    left: -10%;
 
-  &.active {
-    background: #fff;
-    height: 100%;
-    width: 100%;
+    &.transition-out {
+      transition: left .2s ease-in;
+      left: -10%;
+    }
+
+    &.transition-in {
+      transition: left .4s ease-out;
+      left: $spacing-horizontal-xl;
+    }
   }
 
-  &.opaque {
-    opacity: 1;
+  &__social {
+    right: -10%;
+
+    &.transition-out {
+      transition: right .3s ease-in;
+      right: -10%;
+    }
+
+    &.transition-in {
+      transition: right .3s ease-out;
+      right: $spacing-horizontal-xl;
+    }
+  }
+}
+
+.section {
+  transform: translateX(120%);
+
+  &.transition-out {
+    transition: transform .5s ease-in;
+    transform: translateX(-120%);
+  }
+
+  &.transition-in {
+    transition: transform .4s ease-out;
+    transform: translateX(0);
+  }
+}
+
+.hero {
+  &__content {
+    transform: translateX(120%);
+
+    &.transition-out {
+      transition: transform .3s ease-in;
+      transform: translateX(-120%) !important;
+    }
+
+    &.transition-in {
+      transition: transform .2s ease-out;
+      transform: translateX(0);
+    }
+  }
+
+  &__image img {
+    right: -100%;
+
+    &.transition-out {
+      transition: right .5s ease-in;
+      right: 120%;
+    }
+
+    &.transition-in {
+      transition: right .3s ease-out;
+
+      @media screen and (min-width: 40.625em) {
+        right: 1.25em;
+      }
+
+      @media screen and (min-width: map-get($bp, 'xl')) {
+        right: 0;
+      }
+
+      @media screen and (min-width: 120em) {
+        right: -10em;
+      }
+
+      .hero--company & {
+        @media screen and (min-width: 40.625em) {
+          right: 2.5em;
+        }
+
+        @media screen and (min-width: map-get($bp, 'xl')) {
+          height: auto;
+        }
+
+        @media screen and (min-width: 120em) {
+          right: -10em;
+        }
+      }
+
+      .hero--our-work & {
+        @media screen and (min-width: 40.625em) {
+          right: 2.5em;
+        }
+
+        @media screen and (min-width: map-get($bp, 'md')) {
+          right: 12vw;
+        }
+
+        @media screen and (min-width: map-get($bp, 'xl')) {
+          right: 2.5em;
+        }
+
+        @media screen and (min-width: 90em) {
+          right: 1.25em;
+        }
+
+        @media screen and (min-width: 120em) {
+          right: -10em;
+        }
+      }
+
+      .hero--careers & {
+        @media screen and (min-width: 40.625em) {
+          right: 8%;
+        }
+
+        @media screen and (min-width: map-get($bp, 'xl')) {
+          right: 2.5em;
+        }
+
+        @media screen and (min-width: 90em) {
+          right: 1.25em;
+        }
+
+        @media screen and (min-width: 120em) {
+          right: -10em;
+        }
+      }
+    }
   }
 }
