@@ -1,5 +1,6 @@
 .footer {
   background-color: $color-grey-green;
+  display: block;
   padding: $spacing-vertical-lg 0;
 
   @media screen and (min-width: map-get($bp, 'md')) {
