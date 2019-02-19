@@ -134,7 +134,18 @@ hr {
     position: relative;
 
     &:not(:last-child) {
-      margin-bottom: $spacing-vertical * 1.5;
+      margin-bottom: $spacing-vertical-sm;
+    }
+
+    &--gap-lg {
+
+      &:not(:last-child) {
+        margin-bottom: $spacing-vertical * 1.5;
+      }
+    }
+
+    .styled-list--inside-lg & {
+      margin-left: $spacing-horizontal-lg;
     }
 
     .styled-list--inside & {

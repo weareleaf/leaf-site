@@ -25,7 +25,6 @@
     content: '';
     display: block;
     height: 90%;
-    left: 0;
     position: absolute;
     top: 0;
     width: 100%;
@@ -110,7 +109,6 @@
       bottom: -2em;
       height: 45vw;
       position: absolute;
-      right: 1.25em;
       width: auto;
       z-index: 10;
     }
@@ -118,87 +116,55 @@
     @media screen and (min-width: map-get($bp, 'xl')) {
       bottom: auto;
       height: auto;
-      right: 0;
       top: 50%;
       transform: translateY(-32%);
       width: auto;
     }
 
-    @media screen and (min-width: 120em) {
-      right: -10em;
-    }
-
     .hero--home & {
-
       @media screen and (min-width: 120em) {
         width: 75%;
       }
     }
 
     .hero--company & {
-
       @media screen and (min-width: 40.625em) {
         height: 43vw;
-        right: 2.5em;
       }
 
       @media screen and (min-width: map-get($bp, 'xl')) {
         height: auto;
-      }
-
-      @media screen and (min-width: 120em) {
-        right: -10em;
       }
     }
 
     .hero--our-work & {
-
       @media screen and (min-width: 40.625em) {
         height: 40vw;
-        right: 2.5em;
-      }
-
-      @media screen and (min-width: map-get($bp, 'md')) {
-        right: 12vw;
       }
 
       @media screen and (min-width: map-get($bp, 'xl')) {
         height: 45vw;
-        right: 2.5em;
         transform: translateY(-22%);
       }
 
       @media screen and (min-width: 90em) {
         height: auto;
-        right: 1.25em;
         transform: translateY(-32%);
-      }
-
-      @media screen and (min-width: 120em) {
-        right: -10em;
       }
     }
 
     .hero--careers & {
-
       @media screen and (min-width: 40.625em) {
         height: 42vw;
-        right: 8%;
       }
 
       @media screen and (min-width: map-get($bp, 'xl')) {
-        right: 2.5em;
         transform: translateY(-22%);
       }
 
       @media screen and (min-width: 90em) {
         height: auto;
-        right: 1.25em;
         transform: translateY(-32%);
-      }
-
-      @media screen and (min-width: 120em) {
-        right: -10em;
       }
     }
   }

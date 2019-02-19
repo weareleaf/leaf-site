@@ -24,6 +24,7 @@ mix.js('src/assets/scripts/main.js', 'dist/assets/scripts/')
    .sass('src/assets/styles/main.scss', 'dist/assets/styles/')
    .copy('src/assets/images/', 'dist/assets/images/', false)
    .copy('src/assets/fonts/', 'dist/assets/fonts/', false)
+   .copy('src/resources/articles/', 'dist/resources/articles/', false)
    .copy('static/', 'dist/', false)
    .pug('src/pages/*.pug', '../../dist', {
       pug: {

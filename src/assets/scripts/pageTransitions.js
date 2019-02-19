@@ -2,8 +2,8 @@ import Barba from "barba.js"
 import banner from "../../components/banner/banner.js"
 import modal from "../../components/modal/modal.js"
 
-const transitioner = document.getElementById('transitioner')
-const TRANSITION_TIME = 334
+const body = document.body
+const TRANSITION_TIME = 500
 const PageTransition = Barba.BaseTransition.extend({
   // This is pretty awful. Howdy has no way to manually trigger a
   // reload so we need to remove & re-add the script to the page
@@ -20,45 +20,46 @@ const PageTransition = Barba.BaseTransition.extend({
     }
   },
 
-  active: function() {
-    transitioner.classList.add('active')
+  out: function() {
+    body.classList.add('transition-out')
   },
 
-  inactive: function() {
-    transitioner.classList.remove('active')
+  reset: function() {
+    body.classList.remove('transition-in')
+    body.classList.remove('transition-out')
   },
 
-  opaque: function() {
-    transitioner.classList.add('opaque')
-  },
-
-  transparent: function() {
-    transitioner.classList.remove('opaque')
+  in: function() {
+    body.classList.add('transition-in')
   },
 
   start: function() {
     console.log('Starting transition')
-    this.active()
+    this.reset()
+    this.out()
     const promisedLoad = this.newContainerLoading
-    this.opaque()
     setTimeout(() => {
+      this.reset()
+      body.scrollTop = 0
       promisedLoad.then(() => this.finish())
     }, TRANSITION_TIME)
   },
 
   finish: function() {
-    document.body.scrollTop = 0
-    this.transparent()
     this.done()
+    body.classList.remove('modal-open')
     banner()
     modal()
     this.reloadHowdy()
-    setTimeout(() => {
-      this.inactive()
-      console.log('Ended transition')
-    }, TRANSITION_TIME)
+    this.in()
+    console.log('Ended transition')
   }
 })
+
+window.addEventListener('load', function() {
+  PageTransition.in()
+})
+
 
 Barba.Pjax.originalPreventCheck = Barba.Pjax.preventCheck
 Barba.Pjax.preventCheck = function(evt, element) {

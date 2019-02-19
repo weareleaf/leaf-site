@@ -41,7 +41,6 @@
   &__address {
     bottom: $spacing-vertical * 3.5;
     display: none;
-    left: $spacing-horizontal-xl;
     position: absolute;
 
     @media screen and (min-width: 96.875em) {
@@ -53,7 +52,6 @@
     bottom: $spacing-vertical * 3.5;
     display: none;
     position: absolute;
-    right: $spacing-horizontal-xl;
 
     @media screen and (min-width: 96.875em) {
       display: block;
