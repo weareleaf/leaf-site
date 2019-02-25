@@ -39,6 +39,7 @@
     top: 1em;
     transition: background .2s ease-in-out;
     width: 2em;
+    z-index: 1;
     -webkit-appearance: none;
 
     @media screen and (min-width: map-get($bp, 'xl')) {
