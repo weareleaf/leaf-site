@@ -20,6 +20,28 @@
     }
   }
 
+  &__blob {
+    // border: 1px solid #000;
+    display: none;
+    position: absolute;
+    left: -900px;
+    top: -1500px;
+    width: 2000px;
+    height: 2000px;
+
+    .hero--home & {
+      top: -1350px;
+    }
+
+    @media screen and (min-width: 40.625em) {
+      display: block;
+    }
+
+    &-path {
+      fill: $color-green-light;
+    }
+  }
+
   &::before {
     background-color: $color-green-light;
     content: '';
@@ -31,12 +53,7 @@
     z-index: 10;
 
     @media screen and (min-width: 40.625em) {
-      height: 100%;
-    }
-
-    @media screen and (min-width: map-get($bp, 'xl')) {
-      height: 100%;
-      width: 72%;
+      display: none;
     }
   }
 

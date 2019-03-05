@@ -1,6 +1,5 @@
 const path = require('path')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
-const SassPlugin = require('sass-webpack-plugin')
 const CopyPlugin = require('copy-webpack-plugin');
 const pages = [
   'careers',
@@ -26,13 +25,10 @@ const pagePlugins = pages.map((page) => {
     filename: `${page}.html`
   })
 })
-const sassPlugin = new SassPlugin('./src/assets/styles/main.scss', process.env.NODE_ENV)
 const filePlugins = new CopyPlugin([
   { from: './src/assets/fonts/', to: './assets/fonts' },
   { from: './src/assets/images/', to: './assets/images/' },
-  { from: './src/resources/', to: './resources/' },
-  { from: './dist/main.css', to: './assets/styles/' },
-  { from: './dist/main.css.map', to: './assets/styles/' }
+  { from: './src/resources/', to: './resources/' }
 ])
 
 const config = {
@@ -45,7 +41,6 @@ const config = {
   },
   devServer: {
     contentBase: path.join(__dirname, 'dist'),
-    compress: true,
     port: 3000,
     historyApiFallback: {
       rewrites: [
@@ -56,7 +51,7 @@ const config = {
       ]
     }
   },
-  plugins: [].concat(sassPlugin, pagePlugins, filePlugins),
+  plugins: [].concat(pagePlugins, filePlugins),
   module: {
     rules: [
       {
@@ -64,8 +59,15 @@ const config = {
         use: ['pug-loader']
       },
       {
-        test: /\.scss$/,
-        use: ['style-loader', 'css-loader', 'sass-loader']
+        test: /\.js$/,
+        exclude: /(node_modules|dist)/,
+        use: {
+          loader: 'babel-loader',
+          options: {
+            presets: ['@babel/preset-env'],
+            plugins: ['@babel/plugin-proposal-object-rest-spread']
+          }
+        }
       }
     ]
   }

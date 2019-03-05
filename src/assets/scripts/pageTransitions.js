@@ -1,6 +1,7 @@
 import Barba from "barba.js"
 import banner from "../../components/banner/banner.js"
 import modal from "../../components/modal/modal.js"
+import { createBlob } from "./blob.js"
 
 const body = document.body
 const TRANSITION_TIME = 500
@@ -18,6 +19,25 @@ const PageTransition = Barba.BaseTransition.extend({
       newHowdy.setAttribute('src', howdy.src)
       head.appendChild(newHowdy)
     }
+  },
+
+  startBlob: function() {
+    const blob = document.querySelector('.hero__blob-path')
+
+    if (!blob) {
+      return
+    }
+
+    createBlob({
+      element: blob,
+      numPoints: 30,
+      centerX: 500,
+      centerY: 500,
+      minRadius: 460,
+      maxRadius: 500,
+      minDuration: 5,
+      maxDuration: 8
+    })
   },
 
   out: function() {
@@ -51,6 +71,7 @@ const PageTransition = Barba.BaseTransition.extend({
     banner()
     modal()
     this.reloadHowdy()
+    this.startBlob()
     this.in()
     console.log('Ended transition')
   }
@@ -58,6 +79,7 @@ const PageTransition = Barba.BaseTransition.extend({
 
 window.addEventListener('load', function() {
   PageTransition.in()
+  PageTransition.startBlob()
 })
 
 
