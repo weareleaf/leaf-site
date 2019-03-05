@@ -40,7 +40,7 @@ const PageTransition = Barba.BaseTransition.extend({
     const promisedLoad = this.newContainerLoading
     setTimeout(() => {
       this.reset()
-      body.scrollTop = 0
+      window.scrollTo(0, 0)
       promisedLoad.then(() => this.finish())
     }, TRANSITION_TIME)
   },
