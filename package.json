@@ -1,15 +1,16 @@
 {
   "name": "leaf",
   "version": "1.0.0",
-  "description": "",
+  "description": "The Leaf Website",
   "private": true,
   "scripts": {
-    "build": "webpack --mode=production",
-    "build:dev": "webpack --mode=development",
-    "build:css": "node-sass --include-path scss src/assets/styles/main.scss dist/assets/styles/main.css",
-    "watch:css": "nodemon --ignore dist/ -e scss -x \"npm run build:css\"",
-    "start": "webpack-dev-server --mode=development",
-    "deploy": "webpack --mode=production && gh-pages -d dist"
+    "build:scripts": "webpack --mode=production",
+    "build:styles": "node-sass --include-path scss src/assets/styles/main.scss dist/assets/styles/main.css",
+    "watch:scripts": "webpack-dev-server --mode=development",
+    "watch:css": "nodemon --ignore dist/ -e scss -x \"npm run build:styles\"",
+    "git:gh-pages": "gh-pages -d dist",
+    "start": "run-p watch:scripts watch:styles",
+    "deploy": "run-s build:scripts build:styles git:gh-pages"
   },
   "keywords": [],
   "author": "",
@@ -29,6 +30,7 @@
     "node-sass": "^4.11.0",
     "nodemon": "^1.18.10",
     "normalize.css": "^8.0.0",
+    "npm-run-all": "^4.1.5",
     "pug": "^2.0.3",
     "pug-loader": "^2.4.0",
     "sass-loader": "^7.1.0",
