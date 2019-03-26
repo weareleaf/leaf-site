@@ -5,6 +5,7 @@ const pages = [
   'careers',
   'company',
   'ebooks',
+  'blog',
   'heha',
   'index',
   'keen',
