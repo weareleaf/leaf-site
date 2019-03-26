@@ -7,7 +7,7 @@
     "build:scripts": "webpack --mode=production",
     "build:styles": "node-sass --include-path scss src/assets/styles/main.scss dist/assets/styles/main.css",
     "watch:scripts": "webpack-dev-server --mode=development",
-    "watch:css": "nodemon --ignore dist/ -e scss -x \"npm run build:styles\"",
+    "watch:styles": "nodemon --ignore dist/ -e scss -x \"npm run build:styles\"",
     "git:gh-pages": "gh-pages -d dist",
     "start": "run-p watch:scripts watch:styles",
     "deploy": "run-s build:scripts build:styles git:gh-pages"
