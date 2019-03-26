@@ -20,7 +20,7 @@ npm install
 - Run `npm run start` run the development server
 - Run `npm run deploy` to build a production ready version of the site and deploy it to https://weareleaf.com
 
-## Development notes
+## Development Notes
 - Once started, the development server should be viewable at http://localhost:3000.
 - Changes to Pug and JavaScript files should automatically reload the page.
 - Changes to SCSS will not automatically reload the page.
