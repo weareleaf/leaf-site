@@ -1,9 +1,17 @@
 # Leaf Website
 This is Leaf's static site build. It uses [Pug](https://pugjs.org/api/getting-started.html) for the templating, [npm](https://www.npmjs.com/) for client side dependencies, [Sass](https://sass-lang.com/) for styling and [Webpack](https://webpack.js.org) for the build.
 
-## Install
+## Initial Setup
+First, install [Homebrew](https://brew.sh) and use it to set up [NVM](https://github.com/creationix/nvm) (Node Version Manager):
 
 ```
+brew install nvm
+```
+
+Then, install the required version of node and install the dependencies for the project:
+
+```
+nvm install 8.12.0
 nvm use
 npm install
 ```
