@@ -6,18 +6,18 @@
   grid-column-gap: $spacing-horizontal-lg;
   grid-row-gap: $spacing-vertical-lg;
 
-  @media screen and (min-width: map-get($bp, 'lg')) {
+  @media screen and (min-width: map-get($bp, "lg")) {
     grid-column-gap: $spacing-horizontal-xl;
   }
 
-  @media screen and (min-width: map-get($bp, 'xl')) {
+  @media screen and (min-width: map-get($bp, "xl")) {
     grid-column-gap: 6em;
   }
 
   &--half {
     -ms-grid-rows: 100% $spacing-vertical-lg 100%;
 
-    @media screen and (min-width: map-get($bp, 'sm')) {
+    @media screen and (min-width: map-get($bp, "sm")) {
       -ms-grid-columns: 1fr $spacing-horizontal-lg 1fr;
       -ms-grid-rows: 100%;
       grid-template-columns: 1fr 1fr;
@@ -27,13 +27,13 @@
   &--two-thirds {
     -ms-grid-rows: 100% $spacing-vertical-lg 100%;
 
-    @media screen and (min-width: map-get($bp, 'lg')) {
+    @media screen and (min-width: map-get($bp, "lg")) {
       -ms-grid-columns: 60% $spacing-horizontal-lg 1fr;
       -ms-grid-rows: 100%;
       grid-template-columns: 60% 1fr;
     }
 
-    @media screen and (min-width: map-get($bp, 'xl')) {
+    @media screen and (min-width: map-get($bp, "xl")) {
       -ms-grid-columns: 60% ($spacing-horizontal * 6) 1fr;
     }
   }
@@ -41,7 +41,7 @@
   &--two-thirds-reverse {
     -ms-grid-rows: 100% $spacing-vertical-lg 100%;
 
-    @media screen and (min-width: map-get($bp, 'lg')) {
+    @media screen and (min-width: map-get($bp, "lg")) {
       -ms-grid-columns: 1fr ($spacing-horizontal * 6) 60%;
       -ms-grid-rows: 100%;
       grid-template-columns: 1fr 60%;
@@ -49,14 +49,14 @@
   }
 
   &--card {
-    @media screen and (min-width: map-get($bp, 'md')) {
+    @media screen and (min-width: map-get($bp, "md")) {
       -ms-grid-columns: 1fr $spacing-horizontal-lg 1fr;
       grid-template-columns: 1fr 1fr;
       grid-column-gap: $spacing-horizontal-xl;
       padding-bottom: 12em;
     }
 
-    @media screen and (min-width: map-get($bp, 'lg')) {
+    @media screen and (min-width: map-get($bp, "lg")) {
       -ms-grid-columns: 1fr ($spacing-horizontal * 6) 1fr;
       grid-column-gap: ($spacing-horizontal * 6);
     }
@@ -64,14 +64,13 @@
     .grid__item:not(:last-child) {
       margin-bottom: $spacing-vertical-lg;
 
-      @media screen and (min-width: map-get($bp, 'md')) {
+      @media screen and (min-width: map-get($bp, "md")) {
         margin-bottom: $spacing-vertical-xl;
       }
     }
 
     .grid__item:nth-child(even) {
-
-      @media screen and (min-width: map-get($bp, 'md')) {
+      @media screen and (min-width: map-get($bp, "md")) {
         position: relative;
         top: 12em;
       }
@@ -79,30 +78,31 @@
   }
 
   &--statements {
-    @media screen and (min-width: map-get($bp, 'sm')) {
+    @media screen and (min-width: map-get($bp, "sm")) {
       grid-row-gap: $spacing-vertical * 3;
     }
 
-    @media screen and (min-width: map-get($bp, 'md')) {
+    @media screen and (min-width: map-get($bp, "md")) {
       -ms-grid-columns: 1fr $spacing-horizontal-lg 1fr;
       -ms-grid-rows: 100% $spacing-vertical-lg 100%;
       grid-template-columns: 1fr 1fr;
     }
 
-    @media screen and (min-width: map-get($bp, 'lg')) {
+    @media screen and (min-width: map-get($bp, "lg")) {
       -ms-grid-columns: 1fr $spacing-horizontal-xl 1fr;
       grid-row-gap: $spacing-vertical-xl;
     }
 
-    @media screen and (min-width: map-get($bp, 'xl')) {
+    @media screen and (min-width: map-get($bp, "xl")) {
       -ms-grid-columns: 1fr 6em 1fr;
     }
   }
 
   &--profiles {
-    -ms-grid-rows: 100% $spacing-vertical-lg 100% $spacing-vertical-lg 100% $spacing-vertical-lg 100%;
+    -ms-grid-rows: 100% $spacing-vertical-lg 100% $spacing-vertical-lg 100%
+      $spacing-vertical-lg 100%;
 
-    @media screen and (min-width: map-get($bp, 'sm')) {
+    @media screen and (min-width: map-get($bp, "sm")) {
       -ms-grid-columns: 1fr $spacing-horizontal * 6 1fr;
       -ms-grid-rows: 100% $spacing-vertical-xl 100%;
       grid-column-gap: $spacing-horizontal * 6;
@@ -110,14 +110,15 @@
       grid-template-columns: 1fr 1fr;
     }
 
-    @media screen and (min-width: map-get($bp, 'lg')) {
-      -ms-grid-columns: 1fr $spacing-horizontal-xl 1fr $spacing-horizontal-xl 1fr $spacing-horizontal-xl 1fr;
+    @media screen and (min-width: map-get($bp, "lg")) {
+      -ms-grid-columns: 1fr $spacing-horizontal-xl 1fr $spacing-horizontal-xl
+        1fr $spacing-horizontal-xl 1fr;
       -ms-grid-rows: 100%;
       grid-column-gap: $spacing-horizontal-xl;
       grid-template-columns: 1fr 1fr 1fr 1fr;
     }
 
-    @media screen and (min-width: map-get($bp, 'xl')) {
+    @media screen and (min-width: map-get($bp, "xl")) {
       grid-column-gap: $spacing-horizontal * 6;
     }
   }
@@ -128,7 +129,7 @@
     grid-row-gap: 1em;
     margin-bottom: $spacing-vertical;
 
-    @media screen and (min-width: map-get($bp, 'md')) {
+    @media screen and (min-width: map-get($bp, "md")) {
       -ms-grid-columns: 1fr $spacing-horizontal 1fr;
       -ms-grid-rows: 100%;
       grid-column-gap: 1em;
@@ -141,7 +142,7 @@
     -ms-grid-rows: 100% $spacing-vertical-lg 100%;
     grid-column-gap: 4em;
 
-    @media screen and (min-width: map-get($bp, 'lg')) {
+    @media screen and (min-width: map-get($bp, "lg")) {
       -ms-grid-columns: 1fr $spacing-horizontal-lg 1fr;
       -ms-grid-rows: 100%;
       grid-template-columns: 1fr 1fr;
@@ -155,7 +156,7 @@
         -ms-grid-row: 1;
         -ms-grid-column: 1;
 
-        @media screen and (min-width: map-get($bp, 'sm')) {
+        @media screen and (min-width: map-get($bp, "sm")) {
           -ms-grid-row: 1;
           -ms-grid-column: 1;
         }
@@ -165,7 +166,7 @@
         -ms-grid-row: 3;
         -ms-grid-column: 1;
 
-        @media screen and (min-width: map-get($bp, 'sm')) {
+        @media screen and (min-width: map-get($bp, "sm")) {
           -ms-grid-row: 1;
           -ms-grid-column: 3;
         }
@@ -177,7 +178,7 @@
         -ms-grid-row: 1;
         -ms-grid-column: 1;
 
-        @media screen and (min-width: map-get($bp, 'lg')) {
+        @media screen and (min-width: map-get($bp, "lg")) {
           -ms-grid-row: 1;
           -ms-grid-column: 1;
         }
@@ -187,7 +188,7 @@
         -ms-grid-row: 3;
         -ms-grid-column: 1;
 
-        @media screen and (min-width: map-get($bp, 'lg')) {
+        @media screen and (min-width: map-get($bp, "lg")) {
           -ms-grid-row: 1;
           -ms-grid-column: 3;
         }
@@ -199,7 +200,7 @@
         -ms-grid-row: 1;
         -ms-grid-column: 1;
 
-        @media screen and (min-width: map-get($bp, 'lg')) {
+        @media screen and (min-width: map-get($bp, "lg")) {
           -ms-grid-row: 1;
           -ms-grid-column: 1;
         }
@@ -209,7 +210,7 @@
         -ms-grid-row: 3;
         -ms-grid-column: 1;
 
-        @media screen and (min-width: map-get($bp, 'lg')) {
+        @media screen and (min-width: map-get($bp, "lg")) {
           -ms-grid-row: 1;
           -ms-grid-column: 3;
         }
@@ -243,7 +244,7 @@
         -ms-grid-row: 1;
         -ms-grid-column: 1;
 
-        @media screen and (min-width: map-get($bp, 'md')) {
+        @media screen and (min-width: map-get($bp, "md")) {
           -ms-grid-row: 1;
           -ms-grid-column: 1;
         }
@@ -253,7 +254,7 @@
         -ms-grid-row: 2;
         -ms-grid-column: 1;
 
-        @media screen and (min-width: map-get($bp, 'md')) {
+        @media screen and (min-width: map-get($bp, "md")) {
           -ms-grid-row: 1;
           -ms-grid-column: 3;
         }
@@ -263,7 +264,7 @@
         -ms-grid-row: 3;
         -ms-grid-column: 1;
 
-        @media screen and (min-width: map-get($bp, 'md')) {
+        @media screen and (min-width: map-get($bp, "md")) {
           -ms-grid-row: 3;
           -ms-grid-column: 1;
         }
@@ -273,7 +274,7 @@
         -ms-grid-row: 4;
         -ms-grid-column: 1;
 
-        @media screen and (min-width: map-get($bp, 'md')) {
+        @media screen and (min-width: map-get($bp, "md")) {
           -ms-grid-row: 3;
           -ms-grid-column: 3;
         }
@@ -285,12 +286,12 @@
         -ms-grid-row: 1;
         -ms-grid-column: 1;
 
-        @media screen and (min-width: map-get($bp, 'sm')) {
+        @media screen and (min-width: map-get($bp, "sm")) {
           -ms-grid-row: 1;
           -ms-grid-column: 1;
         }
 
-        @media screen and (min-width: map-get($bp, 'lg')) {
+        @media screen and (min-width: map-get($bp, "lg")) {
           -ms-grid-row: 1;
           -ms-grid-column: 1;
         }
@@ -300,12 +301,12 @@
         -ms-grid-row: 3;
         -ms-grid-column: 1;
 
-        @media screen and (min-width: map-get($bp, 'sm')) {
+        @media screen and (min-width: map-get($bp, "sm")) {
           -ms-grid-row: 1;
           -ms-grid-column: 3;
         }
 
-        @media screen and (min-width: map-get($bp, 'lg')) {
+        @media screen and (min-width: map-get($bp, "lg")) {
           -ms-grid-row: 1;
           -ms-grid-column: 3;
         }
@@ -315,12 +316,12 @@
         -ms-grid-row: 5;
         -ms-grid-column: 1;
 
-        @media screen and (min-width: map-get($bp, 'sm')) {
+        @media screen and (min-width: map-get($bp, "sm")) {
           -ms-grid-row: 3;
           -ms-grid-column: 1;
         }
 
-        @media screen and (min-width: map-get($bp, 'lg')) {
+        @media screen and (min-width: map-get($bp, "lg")) {
           -ms-grid-row: 1;
           -ms-grid-column: 5;
         }
@@ -330,12 +331,12 @@
         -ms-grid-row: 7;
         -ms-grid-column: 1;
 
-        @media screen and (min-width: map-get($bp, 'sm')) {
+        @media screen and (min-width: map-get($bp, "sm")) {
           -ms-grid-row: 3;
           -ms-grid-column: 3;
         }
 
-        @media screen and (min-width: map-get($bp, 'lg')) {
+        @media screen and (min-width: map-get($bp, "lg")) {
           -ms-grid-row: 1;
           -ms-grid-column: 7;
         }
@@ -347,7 +348,7 @@
         -ms-grid-row: 1;
         -ms-grid-column: 1;
 
-        @media screen and (min-width: map-get($bp, 'md')) {
+        @media screen and (min-width: map-get($bp, "md")) {
           -ms-grid-row: 1;
           -ms-grid-column: 1;
         }
@@ -359,7 +360,7 @@
         -ms-grid-row: 1;
         -ms-grid-column: 1;
 
-        @media screen and (min-width: map-get($bp, 'lg')) {
+        @media screen and (min-width: map-get($bp, "lg")) {
           -ms-grid-row: 1;
           -ms-grid-column: 1;
         }
@@ -369,11 +370,24 @@
         -ms-grid-row: 3;
         -ms-grid-column: 1;
 
-        @media screen and (min-width: map-get($bp, 'lg')) {
+        @media screen and (min-width: map-get($bp, "lg")) {
           -ms-grid-row: 1;
           -ms-grid-column: 3;
         }
       }
     }
   }
+}
+
+.blog-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 360px);
+  grid-template-rows: repeat(2, 465px);
+  grid-gap: 60px;
+}
+
+.blog__item {
+  background-color: #c1c1c1;
+  padding: 20px;
+  font-size: 14px;
 }

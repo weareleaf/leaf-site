@@ -3,7 +3,7 @@ extends ../layouts/page.pug
 block prepend vars
   -var activePage = "Blog"
   -var pageTitle = "Blog - Leaf"
-  -var metaUrl = "https://weareleaf.com/Blog"
+  -var metaUrl = "https://weareleaf.com/blog"
   -var metaTitle = "Blog"
   -var metaDescription = "A collection of content dedicated to all things design, tech and process."
 
@@ -26,3 +26,11 @@ block pageComponents
         pageHeaderHeading: "Our content",
         pageHeaderText: "We aim to give an insight into what it is we do when building digital products, as well as show you more of Leaf and how we operate behind the scenes."
       })
+
+      .blog-grid
+          .blog__item A
+          .blog__item B
+          .blog__item C
+          .blog__item D
+          .blog__item E
+          .blog__item F
