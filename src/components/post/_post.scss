@@ -1,0 +1,43 @@
+.post {
+  display: block;
+
+  &:hover {
+    text-decoration: none;
+
+    .post__image {
+      opacity: 0.75;
+    }
+
+    .post__heading {
+      color: $brand-primary;
+    }
+  }
+
+  &__image {
+    display: block;
+    width: 100%;
+
+    img {
+      display: block;
+      height: 200px;
+      transition: opacity 150ms ease;
+      width: 100%;
+    }
+  }
+
+  &__content {
+    margin-top: $spacing-vertical * 1.5;
+  }
+
+  &__heading {
+    color: $color-grey-dark;
+    font-size: 1.5em;
+    margin: 0 0 0.333em;
+    transition: color 150ms ease;
+  }
+
+  &__text {
+    color: $color-grey;
+    margin: 0;
+  }
+}

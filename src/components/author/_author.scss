@@ -1,0 +1,41 @@
+.author {
+  display: block;
+
+  &:hover {
+    text-decoration: none;
+
+    .card__heading {
+      color: $brand-primary;
+    }
+  }
+
+  &__thumbnail {
+    display: block;
+    margin-top: 20px;
+
+    img {
+      border-radius: 100%;
+      display: block;
+      height: 50px;
+      width: 50px;
+    }
+  }
+
+  &__content {
+    margin-left: 65px;
+    margin-top: -43px;
+  }
+
+  &__name {
+    color: $color-grey-dark;
+    font-size: 18px;
+    margin-bottom: 0;
+    transition: color 150ms ease;
+  }
+
+  &__details {
+    color: $color-grey;
+    font-size: 13px;
+    margin: 0;
+  }
+}

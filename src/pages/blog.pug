@@ -28,9 +28,40 @@ block pageComponents
       })
 
       .blog-grid
-          .blog__item A
-          .blog__item B
-          .blog__item C
-          .blog__item D
-          .blog__item E
-          .blog__item F
+        .blog-grid__item
+          +post({
+            postUrl: "https://medium.com/leaf-software/the-power-of-development-phases-c65aa077e0ca",
+            postImage: {
+              src: "/assets/images/blog.png",
+              fallbackSrc: "/assets/images/blog.png",
+              alt: "HEHA!",
+            },
+            postHeading: "The power of development phases",
+            postText: "Learn how splitting software feature into phases can transform your team’s productivity, trust and relationships …"
+          })
+
+        .blog-grid__item
+          +post({
+            postUrl: "https://medium.com/leaf-software/the-power-of-development-phases-c65aa077e0ca",
+            postImage: {
+              src: "/assets/images/blog.png",
+              fallbackSrc: "/assets/images/blog.png",
+              alt: "MyRIFT",
+            },
+            postHeading: "The power of development phases",
+            postText: "Learn how splitting software feature into phases can transform your team’s productivity, trust and relationships …"
+          })
+
+        .blog-grid__item
+          +post({
+            postUrl: "https://medium.com/leaf-software/the-power-of-development-phases-c65aa077e0ca",
+            postImage: {
+              src: "/assets/images/blog.png",
+              fallbackSrc: "/assets/images/blog.png",
+              alt: "MyRIFT",
+            },
+            postHeading: "The power of development phases",
+            postText: "Learn how splitting software feature into phases can transform your team’s productivity, trust and relationships …"
+          })
+
+          
