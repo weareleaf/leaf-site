@@ -1,25 +1,25 @@
-.post {
+.post-large {
   display: block;
 
   &:hover {
     text-decoration: none;
 
-    .post__image {
+    .post-large__image {
       opacity: 0.75;
     }
 
-    .post__heading {
+    .post-large__heading {
       color: $brand-primary;
     }
   }
 
-  &__image {
+  &__image-large {
     display: block;
     width: 100%;
 
     img {
       display: block;
-      height: 200px;
+      height: 240px;
       transition: opacity 150ms ease;
       width: 100%;
     }
@@ -39,6 +39,7 @@
   &__text {
     color: $color-grey;
     margin: 0;
+    width: 720px;
   }
 
   &__footer {

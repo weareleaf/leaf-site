@@ -377,11 +377,11 @@
       }
     }
   }
-}
 
-.blog-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(360px, 1fr));
-  grid-template-rows: repeat(2, 465px);
-  grid-gap: 60px;
+  &--blog {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(360px, 1fr));
+    grid-template-rows: repeat(2, 465px, 1fr);
+    grid-gap: 60px;
+  }
 }

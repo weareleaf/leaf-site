@@ -1,0 +1,24 @@
+mixin post-large(c)
+  a.post-large(href= c.cardUrl)
+    +image({
+      class: "post-large__image-large",
+      src: c.postImage.src,
+      fallbackSrc: c.postImage.fallbackSrc,
+      alt: c.postImage.alt
+    })
+    .post-large__content
+      h3.post-large__heading= c.postHeading
+      p.post-large__text= c.postText
+      .post-large__footer
+        +author({
+          authorUrl: "/heha",
+          authorThumbnail: {
+            src: "/assets/images/mike_blog.png",
+            fallbackSrc: "/assets/images/mike_blog.png",
+            alt: "Mike",
+          },
+          authorName: "Mike Carter",
+          authorDetails: "20 Nov 2018 · 4 min read"
+        })
+
+      
