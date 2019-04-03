@@ -4,16 +4,16 @@
   &:hover {
     text-decoration: none;
 
-    .post-large__image {
+    .post__image {
       opacity: 0.75;
     }
 
-    .post-large__heading {
+    .post__heading {
       color: $brand-primary;
     }
   }
 
-  &__image-large {
+  &__image {
     display: block;
     width: 100%;
 
@@ -39,7 +39,6 @@
   &__text {
     color: $color-grey;
     margin: 0;
-    width: 720px;
   }
 
   &__footer {

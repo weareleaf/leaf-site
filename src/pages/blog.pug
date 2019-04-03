@@ -28,16 +28,16 @@ block pageComponents
       })
 
       .grid.grid--blog
-        .grid__item
-          +post({
+        .grid__item-large
+          +post-large({
             postUrl: "https://medium.com/leaf-software/the-power-of-development-phases-c65aa077e0ca",
             postImage: {
-              src: "/assets/images/blog.png",
-              fallbackSrc: "/assets/images/blog.png",
+              src: "/assets/images/blog-large.png",
+              fallbackSrc: "/assets/images/blog-large.png",
               alt: "Power of Development Phases",
             },
-            postHeading: "The power of development phases",
-            postText: "Learn how splitting software feature into phases can transform your team’s productivity, trust and relationships …"
+            postHeading: "Working too much? Please stop",
+            postText: "These days, people in most organisations are encouraged to work in their personal time. These expectations are sometimes explicit out of hours requests; “Could just reply to that email”, “Did you see that …"
           })
 
         .grid__item
