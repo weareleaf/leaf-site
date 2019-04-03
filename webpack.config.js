@@ -6,6 +6,7 @@ const pages = [
   'company',
   'ebooks',
   'blog',
+  'blog-post',
   'heha',
   'index',
   'keen',
