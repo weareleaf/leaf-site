@@ -24,6 +24,18 @@ block pageComponents
       .grid.grid--card
         .grid__item
           +card({
+            cardUrl: "/laced",
+            cardImage: {
+              src: "/assets/images/rift.webp",
+              fallbackSrc: "/assets/images/rift.jpg",
+              alt: "Laced",
+            },
+            cardHeading: "21st century sneaker trading",
+            cardText: "We built a e-commerce platform from the ground up that allows people to effortlessly buy and sell rare sneakers."
+          })
+
+        .grid__item
+          +card({
             cardUrl: "/keen",
             cardImage: {
               src: "/assets/images/keen.webp",
