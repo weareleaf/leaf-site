@@ -23,28 +23,13 @@ mixin form
       legend.form__legend The project
       .form__grid.form__grid--custom
         .form__group
-          span.form__label Is it a brand new product or a re-design of existing product?
-          .form__checkboxes
-            .form__checkbox
-              input#web-app.form__checkbox-input(type="checkbox" name="project_type" value="web-app")
-              label.form__label.form__label--checkbox(for="web-app") Web application
-            .form__checkbox
-              input#mobile-app.form__checkbox-input(type="checkbox" name="project_type" value="mobile-app")
-              label.form__label.form__label--checkbox(for="mobile-app") Mobile app (iOS or Android)
-            .form__checkbox
-              input#website.form__checkbox-input(type="checkbox" name="project_type" value="website")
-              label.form__label.form__label--checkbox(for="website") Website
-            .form__checkbox
-              input#other.form__checkbox-input(type="checkbox" name="project_type" value="other")
-              label.form__label.form__label--checkbox(for="other") Other
-        .form__group
           label.form__label(for="project_estimate") How much are you looking to invest?
           input#project_estimate.form__input(name="project_estimate" type="text" placeholder="£15,000")
         .form__group
           label.form__label(for="project_deadline") Do you have a deadline?
           input#project_deadline.form__input(name="project_deadline" type="text" placeholder="We need it live by May")
         .form__group
-          label.form__label(for="project_description") Tell us about the project
+          label.form__label(for="project_description") How can we help?
           textarea#project_description.form__input.form__input--textarea(name="project_description" rows="7" placeholder="The more you can share with us, the better")
     +button({
       buttonText: "Send your enquiry",

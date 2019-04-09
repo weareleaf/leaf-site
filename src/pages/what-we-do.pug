@@ -5,12 +5,12 @@ block prepend vars
   -var pageTitle = 'What we do - Leaf'
   -var metaUrl = "https://weareleaf.com/what-we-do"
   -var metaTitle = "What we do"
-  -var metaDescription = "We don’t consider ourselves an agency, and don’t act like one. We’re in it for the long haul."
+  -var metaDescription = "Research ensures our software automates the right problems, experience ensures we deliver effectively."
 
 block pageComponents
   +hero({
-    heroHeading: "What we do",
-    heroText: "We don’t consider ourselves an agency, and don’t act like one. We’re in it for the long haul.",
+    heroHeading: metaTitle,
+    heroText: metaDescription,
     heroImage: {
       src: "/assets/images/what-we-do.webp",
       fallbackSrc: "/assets/images/what-we-do.png",
@@ -21,8 +21,8 @@ block pageComponents
   section.section
     .container
       +block({
-        blockHeading: "Insight",
-        blockContent: "<ul class=\"styled-list styled-list--inside-sm\"><li class=\"styled-list__item\"><strong>Behavioural analytics</strong> allow you to see what users are doing on your digital products, identifying sticking points based on actual user data.</li><li class=\"styled-list__item\"><strong>Split testing</strong> allows us to put multiple variants of a feature head to head to see which is best for your business, driving continual improvement.</li><li class=\"styled-list__item\"><strong>Staff shadowing</strong> gives us insight into any unnecessary overheads in your business processes, identifying opportunities for automation.</li></ul>",
+        blockHeading: "Research",
+        blockContent: "<p>First, we verify the problems you're having. We use techniques like <strong>staff shadowing</strong>, <strong>behavioural analytics</strong>, and <strong>recorded user sessions</strong> to validate any assumptions and establish a baseline for efficiency in the processes you're looking to improve.</p><p>From this, we'll put together a series of <strong>recommendations</strong> for using software to improve your level of automation, along with rationale on the benefits to your staff, customers, and bottom line.</p>",
         blockImage: {
           src: "/assets/images/insight.webp",
           fallbackSrc: "/assets/images/insight.jpg",
@@ -32,7 +32,7 @@ block pageComponents
 
       +block({
         blockHeading: "Design",
-        blockContent: "<ul class=\"styled-list styled-list--inside-sm\"><li class=\"styled-list__item\"><strong>Sketching and wireframing</strong> places a focus on the underlying design problems that need solving, rather than shallow visual details of your product.</li><li class=\"styled-list__item\"><strong>Prototyping</strong> provides a cost-effective method of overcoming technological and design hurdles before building a product or feature.</li><li class=\"styled-list__item\"><strong>Visual design</strong> gives a polished and professional validation to your product, whilst helping build trust and familiarity with your brand itself.</li><li class=\"styled-list__item\"><strong>Styleguides</strong> and <strong>Pattern libraries</strong> promote a consistent design language, informing future design decisions for more efficient development process.</li></ul>",
+        blockContent: "<p>Next, we work through each of our recommendations, designing automated solutions to bottlenecks in your business processes. We use <strong>sketching</strong>, <strong>wireframing</strong>, <strong>prototyping</strong>, and <strong>visual design</strong> to communicate a clear vision for how your software will work.</p><p>This allows us to identify and eliminate technological and design hurdles early on, while promoting confidence in the end result from stakeholders, staff, and customers.</p>",
         blockImage: {
           src: "/assets/images/design.webp",
           fallbackSrc: "/assets/images/design.jpg",
@@ -43,7 +43,7 @@ block pageComponents
 
       +block({
         blockHeading: "Development",
-        blockContent: "<ul class=\"styled-list styled-list--inside-sm\"><li class=\"styled-list__item\"><strong>Software engineering</strong> with cutting edge JavaScript, Node and Ruby means we’re able to deliver value quickly on a wide range of products.</li><li class=\"styled-list__item\"><strong>Technical leadership</strong> is in our DNA. We promote best practices, ownership, and trust in order to get the best from development teams.</li><li class=\"styled-list__item\"><strong>Business automation</strong> removes bottlenecks in your daily operations with software. This promotes speed, quality, and scalability in your business.</li><li class=\"styled-list__item\"><strong>Automated testing</strong> checks that your products are working properly, meaning we can confidently make website or app changes at a moments notice.</li><li class=\"styled-list__item\"><strong>Peer reviewed code</strong> ensures that only well implemented work make it through to your customers, keeping quality high and bug counts low.</li></ul>",
+        blockContent: "<p>Finally, we use technologies like <strong>React</strong>, <strong>Node.js</strong> and <strong>Ruby</strong> to build and deliver the designed solutions. To verify success, we measure the updated processes against our original baseline from the research phase.</p><p>Everything we build is backed by extensive <strong>automated testing</strong>, stringent <strong>code review</strong> processes, and live <strong>performance monitoring</strong> to ensure continual bug-free operation.</p>",
         blockImage: {
           src: "/assets/images/development.webp",
           fallbackSrc: "/assets/images/development.jpg",
