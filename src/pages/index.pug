@@ -27,6 +27,18 @@ block pageComponents
       .grid.grid--card
         .grid__item
           +card({
+            cardUrl: "/laced",
+            cardImage: {
+              src: "/assets/images/rift.webp",
+              fallbackSrc: "/assets/images/rift.jpg",
+              alt: "Laced",
+            },
+            cardHeading: "A 21st century sneakerhead experience",
+            cardText: "We helped RIFT re-imagine their MyRIFT web application, allowing UK-based workers to claim tax refunds on the move."
+          })
+
+        .grid__item
+          +card({
             cardUrl: "/rift",
             cardImage: {
               src: "/assets/images/rift.webp",
