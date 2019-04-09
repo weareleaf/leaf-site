@@ -8,6 +8,13 @@
 }
 
 .hero {
+  &__blob {
+    opacity: 0;
+    transform: translateX(0);
+    transition:
+      opacity 400ms ease,
+      transform 400ms ease;
+  }
 
   &__content {
     opacity: 0;
@@ -27,7 +34,6 @@
 }
 
 .transition-out {
-
   .section,
   .footer {
     opacity: 0;
@@ -35,7 +41,10 @@
   }
 
   .hero {
-
+    &__blob {
+      opacity: 0;
+      transform: translateX(-10%);
+    }
 
     &__content {
       opacity: 0;
@@ -50,8 +59,11 @@
 }
 
 .transition-in {
-
   .hero {
+    &__blob {
+      opacity: 1;
+      transform: translateX(0);
+    }
 
     &__content {
       opacity: 1;
