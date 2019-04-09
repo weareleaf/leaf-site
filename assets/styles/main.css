@@ -754,6 +754,11 @@ hr {
   transform: translateY(0);
   transition: opacity 400ms ease, transform 400ms ease; }
 
+.hero__blob {
+  opacity: 0;
+  transform: translateX(0);
+  transition: opacity 400ms ease, transform 400ms ease; }
+
 .hero__content {
   opacity: 0;
   transform: translateX(0);
@@ -769,6 +774,10 @@ hr {
   opacity: 0;
   transform: translateY(10%); }
 
+.transition-out .hero__blob {
+  opacity: 0;
+  transform: translateX(-10%); }
+
 .transition-out .hero__content {
   opacity: 0;
   transform: translateX(-10%); }
@@ -776,6 +785,10 @@ hr {
 .transition-out .hero__image {
   opacity: 0;
   transform: translateX(10%); }
+
+.transition-in .hero__blob {
+  opacity: 1;
+  transform: translateX(0); }
 
 .transition-in .hero__content {
   opacity: 1;
