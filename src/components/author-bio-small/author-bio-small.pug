@@ -1,0 +1,30 @@
+mixin author-bio-small(c)
+  a.twitter(href= c.twitterUrl)
+    +image({
+      class: "twitter__image",
+      src: c.twitterImage.src,
+      fallbackSrc: c.twitterImage.fallbackSrc,
+      alt: c.twitterImage.alt
+    })
+  a.linkedin(href= c.linkedinUrl)
+    +image({
+      class: "linkedin__image",
+      src: c.linkedinImage.src,
+      fallbackSrc: c.linkedinImage.fallbackSrc,
+      alt: c.linkedinImage.alt
+    })
+    +author({
+          authorUrl: "/blog-post",
+          authorThumbnail: {
+            src: "/assets/images/mike_blog.png",
+            fallbackSrc: "/assets/images/mike_blog.png",
+            alt: "Mike",
+          },
+          authorName: "Mike Carter",
+          authorDetails: "20 Nov 2018 · 4 min read"
+        })
+    .bio__content
+      h3.author-bio__heading= c.authorHeading
+      h4.author-bio__text= c.authorSubHeading
+      p.author-bio__paragraph= c.authorParagraph
+      

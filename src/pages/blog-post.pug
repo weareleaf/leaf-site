@@ -18,6 +18,26 @@ block pageComponents
 
   .grid.grid--two-thirds
     .grid__item
+      +author-bio-small({
+        twitterUrl: "https://twitter.com/we_are_leaf",
+        twitterImage: {
+          src: "https://img.icons8.com/metro/420/twitter.png",
+          fallbackSrc: "https://twitter.com/",
+          alt: "Find Mike on Twitter",
+        },
+        linkedinUrl: "https://www.linkedin.com/company/weareleaf/",
+        linkedinImage: {
+          src: "https://image.flaticon.com/icons/png/512/34/34227.png",
+          fallbackSrc: "https://www.linkedin.com/feed/",
+          alt: "Find Mike on LinkedIn",
+        },
+        authorHeading: "Mike Carter",
+        authorSubHeading: "Director · Leaf",
+        authorParagraph: "Lorem ipsum",
+      })
+        
+  .grid.grid--two-thirds
+    .grid__item
       h1 Working too much? Please stop
       p.intro-paragraph These days, people in most organisations are encouraged to work in their personal time.
       p These expectations are sometimes explicit out of hours requests”“Could just reply to that email”, “Did you see that thing from Sarah?”, “Can you take a look over this for me?”; and sometimes just an implicit pressure to do more work than you can actually manage in your 9-5.

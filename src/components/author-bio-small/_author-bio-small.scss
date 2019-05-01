@@ -1,27 +1,12 @@
-.card {
+.author-bio-small {
   display: block;
 
-  &:hover {
-    text-decoration: none;
-
-    .card__image {
-      opacity: 0.75;
-    }
-
-    .card__heading {
-      color: $brand-primary;
-    }
+  .twitter__image {
+    display: block;
   }
 
-  &__image {
+  .linkedin__image {
     display: block;
-    width: 100%;
-
-    img {
-      display: block;
-      transition: opacity 150ms ease;
-      width: 100%;
-    }
   }
 
   &__content {
@@ -36,6 +21,11 @@
   }
 
   &__text {
+    color: $color-grey;
+    margin: 0;
+  }
+
+  &__paragraph {
     color: $color-grey;
     margin: 0;
   }
