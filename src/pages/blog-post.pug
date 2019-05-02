@@ -31,9 +31,25 @@ block pageComponents
           fallbackSrc: "https://www.linkedin.com/feed/",
           alt: "Find Mike on LinkedIn",
         },
-        authorHeading: "Mike Carter",
-        authorSubHeading: "Director · Leaf",
-        authorParagraph: "Lorem ipsum",
+        authorParagraph: "I'm a Software Engineer & Director at Leaf, and like the web, dogs, food & travel.",
+        authorLink: "Get to know the team →",
+      })
+
+      .grid.grid--two-thirds
+    .grid__item
+      +share-icons({
+        twitterUrl: "https://twitter.com/we_are_leaf",
+        twitterImage: {
+          src: "https://img.icons8.com/metro/420/twitter.png",
+          fallbackSrc: "https://twitter.com/",
+          alt: "Find Mike on Twitter",
+        },
+        linkedinUrl: "https://www.linkedin.com/company/weareleaf/",
+        linkedinImage: {
+          src: "https://image.flaticon.com/icons/png/512/34/34227.png",
+          fallbackSrc: "https://www.linkedin.com/feed/",
+          alt: "Find Mike on LinkedIn",
+        },
       })
         
   .grid.grid--two-thirds

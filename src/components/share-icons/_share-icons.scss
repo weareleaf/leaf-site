@@ -1,0 +1,14 @@
+.share-icons {
+  &__image {
+    display: block;
+
+    &--twitter {
+      display: block;
+      width: 24px;
+    }
+    &--linkedin {
+      display: block;
+      width: 24px;
+    }
+  }
+}

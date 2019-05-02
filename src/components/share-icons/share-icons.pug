@@ -1,0 +1,15 @@
+mixin share-icons(c)
+  a.twitter(href= c.twitterUrl)
+    +image({
+      class: "share-icons share-icons__image--linkedin",
+      src: c.twitterImage.src,
+      fallbackSrc: c.twitterImage.fallbackSrc,
+      alt: c.twitterImage.alt
+    })
+  a.linkedin(href= c.linkedinUrl)
+    +image({
+      class: "share-icons share-icons__image--linkedin",
+      src: c.linkedinImage.src,
+      fallbackSrc: c.linkedinImage.fallbackSrc,
+      alt: c.linkedinImage.alt
+    })
