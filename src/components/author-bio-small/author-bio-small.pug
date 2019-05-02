@@ -1,28 +1,29 @@
 mixin author-bio-small(c)
-  a.twitter(href= c.twitterUrl)
-    +image({
-      class: "author-bio-small__image author-bio-small__image--twitter",
-      src: c.twitterImage.src,
-      fallbackSrc: c.twitterImage.fallbackSrc,
-      alt: c.twitterImage.alt
-    })
-  a.linkedin(href= c.linkedinUrl)
-    +image({
-      class: "author-bio-small__image author-bio-small__image--linkedin",
-      src: c.linkedinImage.src,
-      fallbackSrc: c.linkedinImage.fallbackSrc,
-      alt: c.linkedinImage.alt
-    })
-  +author({
-      authorUrl: "/blog-post",
-      authorThumbnail: {
+  .author-bio-small()
+    a.twitter(href= c.twitterUrl)
+      +image({
+        class: "author-bio-small__image author-bio-small__image--twitter",
+        src: c.twitterImage.src,
+        fallbackSrc: c.twitterImage.fallbackSrc,
+        alt: c.twitterImage.alt
+      })
+    a.linkedin(href= c.linkedinUrl)
+      +image({
+        class: "author-bio-small__image author-bio-small__image--linkedin",
+        src: c.linkedinImage.src,
+        fallbackSrc: c.linkedinImage.fallbackSrc,
+        alt: c.linkedinImage.alt
+      })
+    +author({
+        authorUrl: "/blog-post",
+        authorThumbnail: {
         src: "/assets/images/mike_blog.png",
         fallbackSrc: "/assets/images/mike_blog.png",
         alt: "Mike",
       },
       authorName: "Mike Carter",
       authorDetails: "Director · Leaf"
-        })
-  .bio__content
-    p.author-bio-small__paragraph= c.authorParagraph
-    a.author-bio-small__link= c.authorLink
+      })
+    .bio__content
+      p.author-bio-small__paragraph= c.authorParagraph
+      a.author-bio-small__link= c.authorLink
