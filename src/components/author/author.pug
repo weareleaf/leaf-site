@@ -1,11 +1,11 @@
 mixin author(c)
-  .author
+  .author(class= c.class)
     +image({
       class: "author__thumbnail",
       src: c.authorThumbnail.src,
       fallbackSrc: c.authorThumbnail.fallbackSrc,
       alt: c.authorThumbnail.alt
     })
-  .author__content
+    .author__content
       h5.author__name= c.authorName
       p.author__details= c.authorDetails

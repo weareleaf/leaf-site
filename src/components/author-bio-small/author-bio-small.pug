@@ -1,22 +1,24 @@
 mixin author-bio-small(c)
   .author-bio-small()
-    a.twitter(href= c.twitterUrl)
-      +image({
-        class: "author-bio-small__image author-bio-small__image--twitter",
-        src: c.twitterImage.src,
-        fallbackSrc: c.twitterImage.fallbackSrc,
-        alt: c.twitterImage.alt
-      })
-    a.linkedin(href= c.linkedinUrl)
-      +image({
-        class: "author-bio-small__image author-bio-small__image--linkedin",
-        src: c.linkedinImage.src,
-        fallbackSrc: c.linkedinImage.fallbackSrc,
-        alt: c.linkedinImage.alt
-      })
+    .author-bio-small__social-icons
+      a.twitter(href= c.twitterUrl)
+        +image({
+          class: "author-bio-small__image author-bio-small__image--twitter",
+          src: c.twitterImage.src,
+          fallbackSrc: c.twitterImage.fallbackSrc,
+          alt: c.twitterImage.alt
+        })
+      a.linkedin(href= c.linkedinUrl)
+        +image({
+          class: "author-bio-small__image author-bio-small__image--linkedin",
+          src: c.linkedinImage.src,
+          fallbackSrc: c.linkedinImage.fallbackSrc,
+          alt: c.linkedinImage.alt
+        })
     +author({
         authorUrl: "/blog-post",
         authorThumbnail: {
+        class: "author-bio__mike",
         src: "/assets/images/mike_blog.png",
         fallbackSrc: "/assets/images/mike_blog.png",
         alt: "Mike",

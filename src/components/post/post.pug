@@ -11,6 +11,7 @@ mixin post(c)
       p.post__text= c.postText
       .post__footer
         +author({
+          class: "author--margin-top",
           authorUrl: "/heha",
           authorThumbnail: {
             src: "/assets/images/mike_blog.png",

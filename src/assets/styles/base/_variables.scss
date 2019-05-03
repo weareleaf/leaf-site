@@ -8,7 +8,7 @@ $color-grey-lightest: #e2e3e5;
 $color-grey-light: #c6c7cc;
 $color-grey: #6f7075;
 $color-grey-dark: #35363d;
-$color-grey-dark-transparent: rgba(53, 54, 61, .9);
+$color-grey-dark-transparent: rgba(53, 54, 61, 0.9);
 $color-grey-green: #f0f3f1;
 $color-white: #fff;
 $color-off-white: #f5f5f5;
@@ -33,7 +33,7 @@ $border: $border-style $border-width $border-color !default;
 // Border radius
 // ==================================================
 
-$border-radius: .25rem !default;
+$border-radius: 0.25rem !default;
 
 // Breakpoints
 // ==================================================
@@ -51,15 +51,15 @@ $bp: (
 
 $font-family-cursive: cursive !default;
 $font-family-monospace: monospace !default;
-$font-family-sans-serif: 'Larsseit-Regular', sans-serif !default;
-$font-family-sans-serif-medium: 'Larsseit-Medium', sans-serif !default;
-$font-family-sans-serif-bold: 'Larsseit-Bold', sans-serif !default;
+$font-family-sans-serif: "Larsseit-Regular", sans-serif !default;
+$font-family-sans-serif-medium: "Larsseit-Medium", sans-serif !default;
+$font-family-sans-serif-bold: "Larsseit-Bold", sans-serif !default;
 $font-family-serif: serif !default;
 
 $font-family: $font-family-sans-serif !default;
 
 $line-height: 1.45 !default;
-$font-size-xs: .938rem !default;
+$font-size-xs: 0.938rem !default;
 $font-size-sm: 1.125rem !default;
 $font-size: 1.25rem !default;
 $font-weight: 400;
@@ -107,9 +107,17 @@ $h2-font-size: 2.827em !default;
 $h3-font-size: 1.999em !default;
 $h4-font-size: 1.414em !default;
 $h5-font-size: 1em !default;
-$h6-font-size: .707em !default;
+$h6-font-size: 0.707em !default;
 
 $heading-color: $color-grey-dark !default;
 $heading-font-family: $font-family-sans-serif-bold !default;
 $heading-font-weight: 700 !default;
 $heading-line-height: 1.2 !default;
+
+// Blog Styles
+// ==================================================
+
+//fonts
+$author-heading: 1.125rem !default;
+$author-details: 0.8125rem !default;
+$bio-font-size: 1rem !default;

@@ -11,6 +11,7 @@ mixin post-large(c)
       p.post-large__text= c.postText
       .post__footer
         +author({
+          class: "author--margin-top",
           authorUrl: "/blog-post",
           authorThumbnail: {
             src: "/assets/images/mike_blog.png",
