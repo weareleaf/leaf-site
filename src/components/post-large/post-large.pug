@@ -7,9 +7,9 @@ mixin post-large(c)
       alt: c.postImage.alt
     })
     .post__content
-      h3.post__heading= c.postHeading
+      h3.post-large__heading= c.postHeading
       p.post-large__text= c.postText
-      .post__footer
+      .post-large__footer
         +author({
           class: "author--margin-top",
           authorUrl: "/heha",
