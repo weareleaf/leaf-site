@@ -16,7 +16,7 @@ block pageComponents
     },
   })
 
-  .grid.grid--two-thirds
+  .grid.grid--blog-post
     .grid__item
       +author-bio-small({
         twitterUrl: "https://twitter.com/we_are_leaf",
@@ -35,7 +35,6 @@ block pageComponents
         authorLink: "Get to know the team →",
       })
 
-  .grid.grid--two-thirds
     .grid__item
       +share-icons({
         twitterUrl: "https://twitter.com/we_are_leaf",
@@ -51,8 +50,7 @@ block pageComponents
           alt: "Find Mike on LinkedIn",
         },
       })
-        
-  .grid.grid--two-thirds
+      
     .grid__item
       h1 Working too much? Please stop
       p.intro-paragraph These days, people in most organisations are encouraged to work in their personal time.
@@ -64,10 +62,11 @@ block pageComponents
       p When you look at things a little more closely it becomes clear how flawed our thinking is. It’s easily demonstrated by looking at our income relative to time.
       p Let’s imagine you earn £24,000 a year. Assuming 260 working days in the year and a 37.5 hour (5 day) week, you’d be paid paid ~£12 per hour. Doing the same work in 30 hours per week you’ll make ~£15 per hour — go you! Flipping this on its head though, delivering that work in 45 hours per week, you’re only making about £10 per hour.
 
-  figure
+  .grid.grid--blog-post
+    figure
         img(src="/assets/images/blog-figure.png" alt="Blog figure image" onerror="this.onerror=null; this.src='/assets/images/blog-figure'")
   
-  .grid.grid--two-thirds
+  .grid.grid--blog-post
     .grid__item
       h4 The hidden cost
       p More worrying than our ability to under-value our time is the negative impact working too much can have on our mental health, and our silent complicity with this.
@@ -108,4 +107,43 @@ block pageComponents
         },
         authorParagraph: "I'm a Software Engineer & Director at Leaf, and like the web, dogs, food & travel.",
         authorLink: "Get to know the team →",
+      })
+
+    .grid__item
+      hr.divider
+  
+    .grid__item
+          +post({
+            postUrl: "https://medium.com/leaf-software/the-power-of-development-phases-c65aa077e0ca",
+            postImage: {
+              src: "/assets/images/blog.png",
+              fallbackSrc: "/assets/images/blog.png",
+              alt: "Power of Development Phases",
+            },
+            postHeading: "The power of development phases",
+            postText: "Learn how splitting software feature into phases can transform your team’s productivity, trust and relationships …"
+          })
+
+    .grid__item
+      +post({
+        postUrl: "https://medium.com/leaf-software/the-power-of-development-phases-c65aa077e0ca",
+        postImage: {
+          src: "/assets/images/blog.png",
+          fallbackSrc: "/assets/images/blog.png",
+          alt: "Power of Development Phases",
+        },
+        postHeading: "The power of development phases",
+        postText: "Learn how splitting software feature into phases can transform your team’s productivity, trust and relationships …"
+      })
+
+    .grid__item
+      +post({
+        postUrl: "https://medium.com/leaf-software/the-power-of-development-phases-c65aa077e0ca",
+        postImage: {
+          src: "/assets/images/blog.png",
+          fallbackSrc: "/assets/images/blog.png",
+          alt: "Power of Development Phases",
+        },
+        postHeading: "The power of development phases",
+        postText: "Learn how splitting software feature into phases can transform your team’s productivity, trust and relationships …"
       })
