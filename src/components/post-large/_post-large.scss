@@ -4,11 +4,11 @@
   &:hover {
     text-decoration: none;
 
-    .post__image {
+    .post-large__image {
       opacity: 0.75;
     }
 
-    .post__heading {
+    .post-large__heading {
       color: $brand-primary;
     }
   }
@@ -21,7 +21,6 @@
       display: block;
       height: 240px;
       transition: opacity 150ms ease;
-      width: 100%;
     }
   }
 

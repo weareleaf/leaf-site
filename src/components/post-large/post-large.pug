@@ -1,5 +1,5 @@
 mixin post-large(c)
-  a.post-large(href= c.cardUrl)
+  a.post-large(href= c.postUrl)
     +image({
       class: "post-large__image",
       src: c.postImage.src,
@@ -12,7 +12,7 @@ mixin post-large(c)
       .post__footer
         +author({
           class: "author--margin-top",
-          authorUrl: "/blog-post",
+          authorUrl: "/heha",
           authorThumbnail: {
             src: "/assets/images/mike_blog.png",
             fallbackSrc: "/assets/images/mike_blog.png",

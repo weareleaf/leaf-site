@@ -34,6 +34,7 @@ $border: $border-style $border-width $border-color !default;
 // ==================================================
 
 $border-radius: 0.25rem !default;
+$border-radius-full: 100% !default;
 
 // Breakpoints
 // ==================================================
@@ -117,7 +118,27 @@ $heading-line-height: 1.2 !default;
 // Blog Styles
 // ==================================================
 
-//fonts
+//Font Sizes
 $author-heading: 1.125rem !default;
 $author-details: 0.8125rem !default;
 $bio-font-size: 1rem !default;
+
+//Line Heights
+$bio-paragraph-leading: 1.375rem !default;
+
+//Spacing
+$bio-spacing-base: 5px !default;
+$bio-spacing-xs: $bio-spacing-base * 2 !default;
+$bio-spacing-sm: $bio-spacing-base * 3 !default;
+$bio-spacing-md: $bio-spacing-base * 4 !default;
+$bio-spacing-lg: $bio-spacing-base * 6 !default;
+
+//Element Sizing & Widths
+$size-base: 1em !default;
+$size-large: 50px !default;
+
+//Bio Container Sizes
+$bio-container-sm: 360px !default;
+$text-width-sm: 240px !default;
+$bio-container-lg: 780px !default;
+$text-width-lg: 480px !default;

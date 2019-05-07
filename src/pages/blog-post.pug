@@ -91,3 +91,21 @@ block pageComponents
 
     .grid__item
       p Give this a try – You won’t get fired, you won’t get less done, and you won’t “miss out”. At worst you’re risking a few snarky remarks from your peers to begin with, but you have everything to gain; new hobbies, free time, less stress, the respect of your coworkers, more room to be successful. You’re more in control than you think, all you need to do is stop.
+
+    .grid__item
+      +author-bio-large({
+        twitterUrl: "https://twitter.com/we_are_leaf",
+        twitterImage: {
+          src: "https://img.icons8.com/metro/420/twitter.png",
+          fallbackSrc: "https://twitter.com/",
+          alt: "Find Mike on Twitter",
+        },
+        linkedinUrl: "https://www.linkedin.com/company/weareleaf/",
+        linkedinImage: {
+          src: "https://image.flaticon.com/icons/png/512/34/34227.png",
+          fallbackSrc: "https://www.linkedin.com/feed/",
+          alt: "Find Mike on LinkedIn",
+        },
+        authorParagraph: "I'm a Software Engineer & Director at Leaf, and like the web, dogs, food & travel.",
+        authorLink: "Get to know the team →",
+      })
