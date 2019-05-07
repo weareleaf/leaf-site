@@ -18,7 +18,10 @@
     width: 100%;
 
     img {
-      height: 240px;
+      height: 204px;
+      @media screen and (min-width: 1240px) {
+        height: 240px;
+      }
       transition: opacity 150ms ease;
     }
   }
