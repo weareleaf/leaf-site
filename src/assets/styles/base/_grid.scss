@@ -399,8 +399,7 @@
   }
   &--blog-post {
     display: grid;
-    grid-template-columns: repeat(3, 360px);
     max-width: 1200px;
-    margin: 120px auto;
+    margin: auto;
   }
 }
