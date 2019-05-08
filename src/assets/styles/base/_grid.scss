@@ -400,6 +400,10 @@
   &--blog-post {
     display: grid;
     max-width: 1200px;
+    grid-template-columns: repeat(2, 720px);
     margin: auto;
+  }
+  &--blog-post > * {
+    grid-column: 1;
   }
 }
