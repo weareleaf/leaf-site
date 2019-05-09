@@ -1,4 +1,8 @@
 .bullet {
+  &--margin {
+    margin: $spacing-horizontal-lg 0;
+  }
+
   &__text {
     strong {
       color: $color-grey-dark;
