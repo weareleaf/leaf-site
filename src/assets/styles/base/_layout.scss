@@ -16,6 +16,7 @@ body {
 
 .container {
   @include container;
+  position: relative;
 }
 
 .section {
@@ -31,5 +32,12 @@ body {
     @media screen and (min-width: map-get($bp, 'lg')) {
       margin-bottom: $spacing-vertical-xl;
     }
+  }
+}
+
+.blog-post {
+
+  @media screen and (min-width: map-get($bp, 'xl')) {
+    padding-right: 60px;
   }
 }
