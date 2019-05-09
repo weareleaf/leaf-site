@@ -2,7 +2,7 @@
   background-color: $color-off-white;
   padding: $bio-spacing-lg;
   position: relative;
-  width: $bio-container-lg;
+  width: 720px;
 
   &__social-icons {
     display: flex;
@@ -22,7 +22,7 @@
     line-height: $bio-paragraph-leading;
     margin-top: $bio-spacing-md;
     font-size: $bio-font-size;
-    width: $text-width-lg;
+    width: 480px;
   }
   &__link {
     color: $color-red;

@@ -398,9 +398,9 @@
     }
   }
   &--blog-post {
+    column-gap: 120px;
     display: grid;
-    max-width: 1200px;
-    grid-template-columns: 40px 1fr 100px;
-    margin: auto;
+    width: 1200px;
+    grid-template-columns: 1fr 720px 360px;
   }
 }
