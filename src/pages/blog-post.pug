@@ -9,110 +9,112 @@ block prepend vars
 block pageComponents
   +banner({
     bannerCompany: "Blog",
+    bannerModifer: "photo",
     bannerImage: {
       src: "/assets/images/blog-banner.png",
       fallbackSrc: "/assets/images/blog-banner.png",
       alt: "Blog post banner",
     },
   })
-
-  .grid.grid--blog-post
-    .grid__item
-      +author-bio-small({
-        twitterUrl: "https://twitter.com/we_are_leaf",
-        twitterImage: {
-          src: "https://img.icons8.com/metro/420/twitter.png",
-          fallbackSrc: "https://twitter.com/",
-          alt: "Find Mike on Twitter",
-        },
-        linkedinUrl: "https://www.linkedin.com/company/weareleaf/",
-        linkedinImage: {
-          src: "https://image.flaticon.com/icons/png/512/34/34227.png",
-          fallbackSrc: "https://www.linkedin.com/feed/",
-          alt: "Find Mike on LinkedIn",
-        },
-        authorParagraph: "I'm a Software Engineer & Director at Leaf, and like the web, dogs, food & travel.",
-        authorLink: "Get to know the team →",
-      })
-
-    .grid__item
-      +share-icons({
-        twitterUrl: "https://twitter.com/we_are_leaf",
-        twitterImage: {
-          src: "https://img.icons8.com/metro/420/twitter.png",
-          fallbackSrc: "https://twitter.com/",
-          alt: "Find Mike on Twitter",
-        },
-        linkedinUrl: "https://www.linkedin.com/company/weareleaf/",
-        linkedinImage: {
-          src: "https://image.flaticon.com/icons/png/512/34/34227.png",
-          fallbackSrc: "https://www.linkedin.com/feed/",
-          alt: "Find Mike on LinkedIn",
-        },
-      })
-      
-    .grid__item
-      h1 Working too much? Please stop
-      p.intro-paragraph These days, people in most organisations are encouraged to work in their personal time.
-      p These expectations are sometimes explicit out of hours requests”“Could just reply to that email”, “Did you see that thing from Sarah?”, “Can you take a look over this for me?”; and sometimes just an implicit pressure to do more work than you can actually manage in your 9-5.
-      p Strangely we seem willing to go along with this. Many of us believe the extra work makes us dedicated and hard-working. We feel like team players who’ll go above and beyond the call of duty to get things done and achieve organisational goals.
-      p In some ways it’s not surprising we think working extra hours helps you to be successful. After all, it’s not uncommon for the out of hours workers in organisations to get the promotions and pay rises, apparently “getting ahead” of everyone else. That’s plain wrong; we’ve got it all backwards.
-
-      h4 Doing the math
-      p When you look at things a little more closely it becomes clear how flawed our thinking is. It’s easily demonstrated by looking at our income relative to time.
-      p Let’s imagine you earn £24,000 a year. Assuming 260 working days in the year and a 37.5 hour (5 day) week, you’d be paid paid ~£12 per hour. Doing the same work in 30 hours per week you’ll make ~£15 per hour — go you! Flipping this on its head though, delivering that work in 45 hours per week, you’re only making about £10 per hour.
-
-  .grid.grid--blog-post
-    figure
-        img(src="/assets/images/blog-figure.png" alt="Blog figure image" onerror="this.onerror=null; this.src='/assets/images/blog-figure'")
   
-  .grid.grid--blog-post
-    .grid__item
-      h4 The hidden cost
-      p More worrying than our ability to under-value our time is the negative impact working too much can have on our mental health, and our silent complicity with this.
-      p The working population has a problem with stress. It impacts both our health and our ability to perform well at work, which in turn means we work harder to compensate, leading to yet more stress.
+  .section
+    .container
 
-    .grid__item
-      p.quote Most of us bounce in and out of this cycle several times a year. This is leaving us less successful, less productive and less happy than we could otherwise be.
+      .grid.grid--blog-post
+        .grid__item
+          +share-icons({
+            twitterUrl: "https://twitter.com/we_are_leaf",
+            twitterImage: {
+              src: "https://img.icons8.com/metro/420/twitter.png",
+              fallbackSrc: "https://twitter.com/",
+              alt: "Find Mike on Twitter",
+            },
+            linkedinUrl: "https://www.linkedin.com/company/weareleaf/",
+            linkedinImage: {
+              src: "https://image.flaticon.com/icons/png/512/34/34227.png",
+              fallbackSrc: "https://www.linkedin.com/feed/",
+              alt: "Find Mike on LinkedIn",
+            },
+          })
+
+        .grid__item
+          h1 Working too much? Please stop
+          p.intro-paragraph These days, people in most organisations are encouraged to work in their personal time.
+          p These expectations are sometimes explicit out of hours requests”“Could just reply to that email”, “Did you see that thing from Sarah?”, “Can you take a look over this for me?”; and sometimes just an implicit pressure to do more work than you can actually manage in your 9-5.
+          p Strangely we seem willing to go along with this. Many of us believe the extra work makes us dedicated and hard-working. We feel like team players who’ll go above and beyond the call of duty to get things done and achieve organisational goals.
+          p In some ways it’s not surprising we think working extra hours helps you to be successful. After all, it’s not uncommon for the out of hours workers in organisations to get the promotions and pay rises, apparently “getting ahead” of everyone else. That’s plain wrong; we’ve got it all backwards.
+
+          h4 Doing the math
+          p When you look at things a little more closely it becomes clear how flawed our thinking is. It’s easily demonstrated by looking at our income relative to time.
+          p Let’s imagine you earn £24,000 a year. Assuming 260 working days in the year and a 37.5 hour (5 day) week, you’d be paid paid ~£12 per hour. Doing the same work in 30 hours per week you’ll make ~£15 per hour — go you! Flipping this on its head though, delivering that work in 45 hours per week, you’re only making about £10 per hour.
+
+          figure
+            img(src="/assets/images/blog-figure.png" alt="Blog figure image" onerror="this.onerror=null; this.src='/assets/images/blog-figure'")
+        
+          h4 The hidden cost
+          p More worrying than our ability to under-value our time is the negative impact working too much can have on our mental health, and our silent complicity with this.
+          p The working population has a problem with stress. It impacts both our health and our ability to perform well at work, which in turn means we work harder to compensate, leading to yet more stress.
+
+          p.quote Most of us bounce in and out of this cycle several times a year. This is leaving us less successful, less productive and less happy than we could otherwise be.
+        
+          p This cycle continues until either we decide to give ourselves a reprieve, the stressors disappear, or we’re forced to stop through burnout. The good news is, this isn’t how life has to be.
+          
+          hr.divider
+        
+          h4 How you can change this
+          p Organisations are unlikely to do much to rectify the situation as they’re often either unaware of the problem, or just aren’t incentivised to change. They see the output you generate, but it’s much harder for them to see the personal time invested, or personal toll work related stress can take on you.
+          p The hard truth you need to face is that the solution to your work life balance is actually entirely in your control. All of the ability to control your situation rests with you, your employers and co-workers can only influence you, they cannot make you do anything. To begin improving the situation, all you have to do is stop:
+
+          +bullet({
+            bulletContent: "<ul class=\"styled-list styled-list--inside-sm\"><li class=\"styled-list__item\"><strong>Stop</strong>  working out of hours; spend your time on things you want to do.</li><li class=\"styled-list__item\"><strong>Stop</strong> wasting time at work; work at improving your effectiveness.</li><li class=\"styled-list__item\"><strong>Stop</strong> committing to deadlines etc you cannot make; deliver on those you can.</li></ul>",
+          })
+
+          p Give this a try – You won’t get fired, you won’t get less done, and you won’t “miss out”. At worst you’re risking a few snarky remarks from your peers to begin with, but you have everything to gain; new hobbies, free time, less stress, the respect of your coworkers, more room to be successful. You’re more in control than you think, all you need to do is stop.
+
+          +author-bio-large({
+            twitterUrl: "https://twitter.com/we_are_leaf",
+            twitterImage: {
+              src: "https://img.icons8.com/metro/420/twitter.png",
+              fallbackSrc: "https://twitter.com/",
+              alt: "Find Mike on Twitter",
+            },
+            linkedinUrl: "https://www.linkedin.com/company/weareleaf/",
+            linkedinImage: {
+              src: "https://image.flaticon.com/icons/png/512/34/34227.png",
+              fallbackSrc: "https://www.linkedin.com/feed/",
+              alt: "Find Mike on LinkedIn",
+            },
+            authorParagraph: "I'm a Software Engineer & Director at Leaf, and like the web, dogs, food & travel.",
+            authorLink: "Get to know the team →",
+          })
+          
+        .grid__item
+          +author-bio-small({
+            twitterUrl: "https://twitter.com/we_are_leaf",
+            twitterImage: {
+              src: "https://img.icons8.com/metro/420/twitter.png",
+              fallbackSrc: "https://twitter.com/",
+              alt: "Find Mike on Twitter",
+            },
+            linkedinUrl: "https://www.linkedin.com/company/weareleaf/",
+            linkedinImage: {
+              src: "https://image.flaticon.com/icons/png/512/34/34227.png",
+              fallbackSrc: "https://www.linkedin.com/feed/",
+              alt: "Find Mike on LinkedIn",
+            },
+            authorParagraph: "I'm a Software Engineer & Director at Leaf, and like the web, dogs, food & travel.",
+            authorLink: "Get to know the team →",
+          })
+          
     
-    .grid__item
-      p This cycle continues until either we decide to give ourselves a reprieve, the stressors disappear, or we’re forced to stop through burnout. The good news is, this isn’t how life has to be.
-      hr.divider
     
-      h4 How you can change this
-      p Organisations are unlikely to do much to rectify the situation as they’re often either unaware of the problem, or just aren’t incentivised to change. They see the output you generate, but it’s much harder for them to see the personal time invested, or personal toll work related stress can take on you.
-      p The hard truth you need to face is that the solution to your work life balance is actually entirely in your control. All of the ability to control your situation rests with you, your employers and co-workers can only influence you, they cannot make you do anything. To begin improving the situation, all you have to do is stop:
-
-    .grid__item
-     +bullet({
-      bulletContent: "<ul class=\"styled-list styled-list--inside-sm\"><li class=\"styled-list__item\"><strong>Stop</strong>  working out of hours; spend your time on things you want to do.</li><li class=\"styled-list__item\"><strong>Stop</strong> wasting time at work; work at improving your effectiveness.</li><li class=\"styled-list__item\"><strong>Stop</strong> committing to deadlines etc you cannot make; deliver on those you can.</li></ul>",
-     })
-
-    .grid__item
-      p Give this a try – You won’t get fired, you won’t get less done, and you won’t “miss out”. At worst you’re risking a few snarky remarks from your peers to begin with, but you have everything to gain; new hobbies, free time, less stress, the respect of your coworkers, more room to be successful. You’re more in control than you think, all you need to do is stop.
-
-    .grid__item
-      +author-bio-large({
-        twitterUrl: "https://twitter.com/we_are_leaf",
-        twitterImage: {
-          src: "https://img.icons8.com/metro/420/twitter.png",
-          fallbackSrc: "https://twitter.com/",
-          alt: "Find Mike on Twitter",
-        },
-        linkedinUrl: "https://www.linkedin.com/company/weareleaf/",
-        linkedinImage: {
-          src: "https://image.flaticon.com/icons/png/512/34/34227.png",
-          fallbackSrc: "https://www.linkedin.com/feed/",
-          alt: "Find Mike on LinkedIn",
-        },
-        authorParagraph: "I'm a Software Engineer & Director at Leaf, and like the web, dogs, food & travel.",
-        authorLink: "Get to know the team →",
-      })
-
-    .grid__item
-      hr.divider
-  
-    .grid__item
+  .section
+    .container
+    
+      hr.divider.divider--margin
+        
+      .grid.grid--blog
+        .grid__item
           +post({
             postUrl: "https://medium.com/leaf-software/the-power-of-development-phases-c65aa077e0ca",
             postImage: {
@@ -124,26 +126,26 @@ block pageComponents
             postText: "Learn how splitting software feature into phases can transform your team’s productivity, trust and relationships …"
           })
 
-    .grid__item
-      +post({
-        postUrl: "https://medium.com/leaf-software/the-power-of-development-phases-c65aa077e0ca",
-        postImage: {
-          src: "/assets/images/blog.png",
-          fallbackSrc: "/assets/images/blog.png",
-          alt: "Power of Development Phases",
-        },
-        postHeading: "The power of development phases",
-        postText: "Learn how splitting software feature into phases can transform your team’s productivity, trust and relationships …"
-      })
+        .grid__item
+          +post({
+            postUrl: "https://medium.com/leaf-software/the-power-of-development-phases-c65aa077e0ca",
+            postImage: {
+              src: "/assets/images/blog.png",
+              fallbackSrc: "/assets/images/blog.png",
+              alt: "Power of Development Phases",
+            },
+            postHeading: "The power of development phases",
+            postText: "Learn how splitting software feature into phases can transform your team’s productivity, trust and relationships …"
+          })
 
-    .grid__item
-      +post({
-        postUrl: "https://medium.com/leaf-software/the-power-of-development-phases-c65aa077e0ca",
-        postImage: {
-          src: "/assets/images/blog.png",
-          fallbackSrc: "/assets/images/blog.png",
-          alt: "Power of Development Phases",
-        },
-        postHeading: "The power of development phases",
-        postText: "Learn how splitting software feature into phases can transform your team’s productivity, trust and relationships …"
-      })
+        .grid__item
+          +post({
+            postUrl: "https://medium.com/leaf-software/the-power-of-development-phases-c65aa077e0ca",
+            postImage: {
+              src: "/assets/images/blog.png",
+              fallbackSrc: "/assets/images/blog.png",
+              alt: "Power of Development Phases",
+            },
+            postHeading: "The power of development phases",
+            postText: "Learn how splitting software feature into phases can transform your team’s productivity, trust and relationships …"
+          })

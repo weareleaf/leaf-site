@@ -11,6 +11,11 @@
     margin-bottom: $spacing-vertical * 6;
   }
 
+  &--photo img {
+    object-fit: cover;
+    width: 100%;
+  }
+
   &--heha {
     background-color: $color-heha;
   }

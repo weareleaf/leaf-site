@@ -119,10 +119,21 @@ img {
   max-width: 100%;
 }
 
-hr {
+.divider {
   border: 0;
   border-top: 3px solid $color-grey-lightest;
-  margin: 6em 0 0;
+
+  &--margin {
+    margin: 6em 0;
+  }
+
+  &--margin-bottom {
+    margin-bottom: 6em;
+  }
+
+  &--margin-top {
+    margin-top: 6em;
+  }
 }
 
 .styled-list {
