@@ -6,11 +6,11 @@ body {
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
 
-  @media screen and (min-width: map-get($bp, 'md')) {
+  @media screen and (min-width: map-get($bp, "md")) {
     font-size: $font-size-sm;
   }
 
-  @media screen and (min-width: map-get($bp, 'lg')) {
+  @media screen and (min-width: map-get($bp, "lg")) {
     font-size: $font-size;
   }
 }
@@ -25,7 +25,7 @@ h6 {
   font-family: $heading-font-family;
   font-weight: 400;
   line-height: $heading-line-height;
-  margin: 1.414em 0 .5em;
+  margin: 1.414em 0 0.5em;
 
   &:first-child {
     margin-top: 0;
@@ -81,15 +81,15 @@ strong {
 figure {
   margin: $spacing-vertical-lg 0;
 
-  @media screen and (min-width: map-get($bp, 'md')) {
+  @media screen and (min-width: map-get($bp, "md")) {
     margin: $spacing-vertical-lg 0 $spacing-vertical * 3;
   }
 
-  @media screen and (min-width: map-get($bp, 'lg')) {
+  @media screen and (min-width: map-get($bp, "lg")) {
     margin: $spacing-vertical-lg 0 $spacing-vertical-xl;
   }
 
-  @media screen and (min-width: map-get($bp, 'xl')) {
+  @media screen and (min-width: map-get($bp, "xl")) {
     margin: $spacing-vertical * 3 0 $spacing-vertical-xl;
   }
 
@@ -109,8 +109,8 @@ ul {
 
 figcaption {
   color: $color-grey;
-  font-size: .750em;
-  padding: .467em 0;
+  font-size: 0.75em;
+  padding: 0.467em 0;
   text-align: center;
 }
 
@@ -130,9 +130,17 @@ img {
   &--margin-bottom {
     margin-bottom: 6em;
   }
-
   &--margin-top {
     margin-top: 6em;
+  }
+  &--margin-blog {
+    margin: 3.75em 0;
+  }
+  &--block-hr {
+    justify-content: center;
+    margin-bottom: 60px;
+    margin-top: 60px;
+    width: 3.75em;
   }
 }
 
@@ -149,7 +157,6 @@ img {
     }
 
     &--gap-lg {
-
       &:not(:last-child) {
         margin-bottom: $spacing-vertical * 1.5;
       }
@@ -173,13 +180,13 @@ img {
 
     &::before {
       background-color: $brand-primary;
-      content: '';
+      content: "";
       display: block;
-      height: .4em;
+      height: 0.4em;
       left: -1.4em;
       position: absolute;
-      top: .4em;
-      width: .4em;
+      top: 0.4em;
+      width: 0.4em;
     }
   }
 }
@@ -192,4 +199,11 @@ img {
 
 .color-grey-dark {
   color: $color-grey-dark;
+}
+
+.intro-paragraph {
+  color: $color-grey-dark;
+  font-size: $font-size-lg;
+  line-height: 40px;
+  margin-bottom: $font-size-lg;
 }

@@ -1,4 +1,5 @@
 .author-bio-small {
+  display: none;
   background-color: $color-off-white;
   padding: $bio-spacing-lg;
   position: relative;
@@ -28,5 +29,8 @@
     color: $color-red;
     font-size: $bio-font-size;
     margin-top: $bio-spacing-sm;
+  }
+  @media screen and (min-width: map-get($bp, "xl")) {
+    display: block;
   }
 }
