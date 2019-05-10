@@ -134,12 +134,13 @@ img {
     margin-top: 6em;
   }
   &--margin-blog {
-    margin: 3.75em 0;
+    margin-bottom: $spacing-blog-grid;
+    margin-top: $spacing-blog-grid;
   }
   &--block-hr {
     justify-content: center;
-    margin-bottom: 60px;
-    margin-top: 60px;
+    margin-bottom: $spacing-blog-hr;
+    margin-top: $spacing-blog-hr;
     width: 3.75em;
   }
 }
