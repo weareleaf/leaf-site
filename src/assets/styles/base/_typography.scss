@@ -136,7 +136,7 @@ img {
   &--margin-blog {
     margin-bottom: $spacing-blog-grid;
   }
-  @media screen and (min-width: map-get($bp, "sm")) {
+  @media screen and (min-width: map-get($bp, "xl")) {
     &--margin-blog {
       margin-top: $spacing-blog-grid;
     }
@@ -211,4 +211,42 @@ img {
   font-size: $font-size-lg;
   line-height: 40px;
   margin-bottom: $font-size-lg;
+}
+
+blockquote {
+  display: grid;
+  margin: 60px auto;
+  padding: 10px 60px 10px 70px;
+  position: relative;
+
+  q {
+    color: $color-grey-dark;
+    display: block;
+    font-size: 1.875em;
+    font-weight: 200;
+    line-height: 45px;
+    margin-bottom: 20px;
+    quotes: "“";
+
+    &::before {
+      color: $color-grey-lightest;
+      content: open-quote;
+      font-family: "Larseitte";
+      font-size: 200px;
+      font-weight: bold;
+      line-height: 120px;
+      left: 20px;
+      top: 0;
+      position: absolute;
+      z-index: -1;
+    }
+
+    &::after {
+      display: none;
+    }
+  }
+
+  cite {
+    color: $color-grey;
+  }
 }
