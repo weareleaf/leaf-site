@@ -135,7 +135,11 @@ img {
   }
   &--margin-blog {
     margin-bottom: $spacing-blog-grid;
-    margin-top: $spacing-blog-grid;
+  }
+  @media screen and (min-width: map-get($bp, "sm")) {
+    &--margin-blog {
+      margin-top: $spacing-blog-grid;
+    }
   }
   &--block-hr {
     justify-content: center;
