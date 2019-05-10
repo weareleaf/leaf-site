@@ -3,6 +3,16 @@
   padding: $bio-spacing-lg;
   position: relative;
 
+  &--margin-top {
+    margin-top: $spacing-blog-grid;
+  }
+
+  @media screen and (min-width: map-get($bp, "sm")) {
+    &--margin-top {
+      margin-top: 0;
+    }
+  }
+
   &__social-icons {
     display: flex;
     position: absolute;

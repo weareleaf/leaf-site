@@ -1,5 +1,5 @@
 mixin author-bio-large(c)
-  .author-bio-large()
+  .author-bio-large(class= c.class)
     .author-bio-large__social-icons
       a.twitter(href= c.twitterUrl)
         +image({
