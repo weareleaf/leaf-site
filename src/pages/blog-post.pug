@@ -74,6 +74,16 @@ block pageComponents
 
           +author-bio-large({
             class: "author-bio-large--margin-top",
+            author: {
+              class: "author--margin-top",
+              authorDetails: "5 Sep 2018 · 4 min read",
+              authorName: "Chris Annetts",
+              authorThumbnail: {
+                src: "/assets/images/mike_blog.png",
+                fallbackSrc: "/assets/images/mike_blog.png",
+                alt: "Chris Annetts"
+              }
+            },
             twitterUrl: "https://twitter.com/we_are_leaf",
             twitterImage: {
               src: "https://img.icons8.com/metro/420/twitter.png",
@@ -92,16 +102,15 @@ block pageComponents
           
         .grid__item
           +author-bio-small({
-            authorUrl: "/blog-post",
-            authorThumbnail: {
-              class: "author-bio__user",
-              src: "/assets/images/mike_blog.png",
-              fallbackSrc: "/assets/images/mike_blog.png",
-              alt: "Mike"
-            },
-            authorContent: {
-              authorName: "Mike Carter",
-              authorDetails: "Director · Leaf"
+            author: {
+              class: "author--margin-top",
+              authorDetails: "5 Sep 2018 · 4 min read",
+              authorName: "Chris Annetts",
+              authorThumbnail: {
+                src: "/assets/images/mike_blog.png",
+                fallbackSrc: "/assets/images/mike_blog.png",
+                alt: "Chris Annetts"
+              }
             },
             twitterUrl: "https://twitter.com/we_are_leaf",
             twitterImage: {
@@ -123,10 +132,20 @@ block pageComponents
       .container
       
         hr.divider.divider--margin-blog
-          
+      
         .grid.grid--blog
           .grid__item
             +post({
+              author: {
+                class: "author--margin-top",
+                authorDetails: "5 Sep 2018 · 4 min read",
+                authorName: "Tina van Schelt",
+                authorThumbnail: {
+                  src: "/assets/images/mike_blog.png",
+                  fallbackSrc: "/assets/images/mike_blog.png",
+                  alt: "Mike"
+                }
+              },
               postUrl: "https://medium.com/leaf-software/the-power-of-development-phases-c65aa077e0ca",
               postImage: {
                 src: "/assets/images/blog.png",
@@ -139,6 +158,16 @@ block pageComponents
 
           .grid__item
             +post({
+              author: {
+                class: "author--margin-top",
+                authorDetails: "5 Sep 2018 · 4 min read",
+                authorName: "Chris Annetts",
+                authorThumbnail: {
+                  src: "/assets/images/mike_blog.png",
+                  fallbackSrc: "/assets/images/mike_blog.png",
+                  alt: "Mike"
+                }
+              },
               postUrl: "https://medium.com/leaf-software/the-power-of-development-phases-c65aa077e0ca",
               postImage: {
                 src: "/assets/images/blog.png",
@@ -151,6 +180,16 @@ block pageComponents
 
           .grid__item
             +post({
+              author: {
+                class: "author--margin-top",
+                authorDetails: "5 Sep 2018 · 4 min read",
+                authorName: "Mike Carter",
+                authorThumbnail: {
+                  src: "/assets/images/mike_blog.png",
+                  fallbackSrc: "/assets/images/mike_blog.png",
+                  alt: "Mike"
+                }
+              },
               postUrl: "https://medium.com/leaf-software/the-power-of-development-phases-c65aa077e0ca",
               postImage: {
                 src: "/assets/images/blog.png",

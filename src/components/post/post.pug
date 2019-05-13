@@ -11,15 +11,13 @@ mixin post(c)
       p.post__text= c.postText
       .post__footer
         +author({
-          class: "author--margin-top",
-          authorUrl: "/heha",
+          class: c.author.class,
+          authorDetails: c.author.authorDetails,
+          authorName: c.author.authorName,
           authorThumbnail: {
-            src: "/assets/images/mike_blog.png",
-            fallbackSrc: "/assets/images/mike_blog.png",
-            alt: "Mike",
-          },
-          authorName: "Mike Carter",
-          authorDetails: "2 Aug 2018 · 3 min read"
+            alt: c.author.authorThumbnail.alt,
+            fallbackSrc: c.author.authorThumbnail.fallbackSrc,
+            src: c.author.authorThumbnail.src
+          }
         })
-
       
