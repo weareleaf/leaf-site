@@ -36,10 +36,6 @@ body {
 }
 
 .blog-post {
-  padding: 0 0 0 0;
-}
-
-.blog-post {
   @media screen and (min-width: map-get($bp, "xl")) {
     padding-right: 60px;
     padding-bottom: 60px;

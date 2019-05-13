@@ -208,34 +208,41 @@ img {
 
 .intro-paragraph {
   color: $color-grey-dark;
-  font-size: $font-size-lg;
-  line-height: 40px;
+  font-size: $font-size-sm;
+  line-height: 1.6875em;
   margin-bottom: $font-size-lg;
+}
+@media screen and (min-width: map-get($bp, "md")) {
+  .intro-paragraph {
+    color: $color-grey-dark;
+    font-size: $font-size-lg;
+    line-height: 1.5;
+    margin-bottom: $font-size-lg;
+  }
 }
 
 blockquote {
-  display: grid;
-  margin: 60px auto;
-  padding: 10px 60px 10px 70px;
+  margin: $spacing-blog-grid auto;
+  padding: 10px 0 10px 40px;
   position: relative;
 
   q {
     color: $color-grey-dark;
     display: block;
+    font-family: $font-family-sans-serif-light;
     font-size: 1.875em;
-    font-weight: 200;
-    line-height: 45px;
-    margin-bottom: 20px;
+    line-height: 1.375em;
+    margin-bottom: $spacing-vertical-sm;
+    width: 100%;
     quotes: "“";
 
     &::before {
       color: $color-grey-lightest;
       content: open-quote;
-      font-family: "Larseitte";
       font-size: 200px;
       font-weight: bold;
-      line-height: 120px;
-      left: 20px;
+      line-height: 140px;
+      left: 0;
       top: 0;
       position: absolute;
       z-index: -1;
@@ -248,5 +255,6 @@ blockquote {
 
   cite {
     color: $color-grey;
+    font-size: $font-size-sm;
   }
 }
