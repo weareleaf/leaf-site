@@ -92,6 +92,17 @@ block pageComponents
           
         .grid__item
           +author-bio-small({
+            authorUrl: "/blog-post",
+            authorThumbnail: {
+              class: "author-bio__user",
+              src: "/assets/images/mike_blog.png",
+              fallbackSrc: "/assets/images/mike_blog.png",
+              alt: "Mike"
+            },
+            authorContent: {
+              authorName: "Mike Carter",
+              authorDetails: "Director · Leaf"
+            },
             twitterUrl: "https://twitter.com/we_are_leaf",
             twitterImage: {
               src: "https://img.icons8.com/metro/420/twitter.png",

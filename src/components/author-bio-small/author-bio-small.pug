@@ -16,16 +16,18 @@ mixin author-bio-small(c)
           alt: c.linkedinImage.alt
         })
     +author({
-        authorUrl: "/blog-post",
-        authorThumbnail: {
-        class: "author-bio__mike",
-        src: "/assets/images/mike_blog.png",
-        fallbackSrc: "/assets/images/mike_blog.png",
-        alt: "Mike",
+      authorUrl: c.authorUrl,
+      authorThumbnail: {
+        class: "author-bio__user",
+        src: c.authorThumbnail.src,
+        fallbackSrc: c.authorThumbnail.fallbackSrc,
+        alt: c.authorThumbnail.alt
       },
-      authorName: "Mike Carter",
-      authorDetails: "Director · Leaf"
-      })
+      authorContent: {
+        authorName: c.authorName,
+        authorDetails: c.authorDetails
+      },
+    })
     .bio__content
       p.author-bio-small__paragraph= c.authorParagraph
-      a.author-bio-small__link= c.authorLink
+      a.author-bio-small__link= c.authorLink 
