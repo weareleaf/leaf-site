@@ -15,10 +15,11 @@
 
   &__image {
     display: block;
-    width: 100%;
 
     img {
       height: 204px;
+      width: 100%;
+      object-fit: cover;
       @media screen and (min-width: 1240px) {
         height: 240px;
       }

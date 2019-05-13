@@ -15,12 +15,12 @@
 
   &__image {
     display: block;
-    width: 100%;
 
     img {
       height: 204px;
-      transition: opacity 150ms ease;
       width: 100%;
+      object-fit: cover;
+      transition: opacity 150ms ease;
     }
   }
 
