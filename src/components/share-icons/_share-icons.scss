@@ -9,12 +9,6 @@
     position: absolute;
   }
 
-  @media screen and (min-width: map-get($bp, "lg")) {
-    left: -60px;
-    margin: 0;
-    position: absolute;
-  }
-
   &__link {
     display: inline-block;
     margin-right: 15px;
