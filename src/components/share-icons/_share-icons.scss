@@ -9,7 +9,7 @@
 
   &__link {
     display: inline-block;
-    margin-right: 15px;
+    margin-right: $spacing-horizontal;
 
     /*@media screen and (min-width: map-get($bp, "xl")) {
       display: block;
@@ -23,6 +23,7 @@
     width: 24px;
   }
 }
+
 .section {
   &--margin {
     margin-bottom: $spacing-blog-grid / 2;
