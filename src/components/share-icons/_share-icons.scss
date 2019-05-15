@@ -1,26 +1,38 @@
-.share-icons {
-  display: block;
-
-  /*@media screen and (min-width: map-get($bp, "xl")) {
-    left: -60px;
+.share {
+  &__list {
+    list-style: none;
     margin: 0;
-    position: absolute;
-  }*/
-
-  &__link {
-    display: inline-block;
-    margin-right: $spacing-horizontal;
-
-    /*@media screen and (min-width: map-get($bp, "xl")) {
-      display: block;
-      margin-bottom: 30px;
-      margin-right: 0;
-    }*/
+    padding: 0;
   }
 
-  &__image {
+  &__item {
+    &:not(:last-child) {
+      margin-bottom: $spacing-vertical;
+    }
+
+    .share--inline & {
+      display: inline-block;
+      margin: 0 1.875em 0 0;
+    }
+  }
+
+  &__link {
     display: block;
-    width: 24px;
+  }
+
+  svg {
+    display: inline-block;
+    height: 1.5em;
+    vertical-align: middle;
+    width: 1.5em;
+  }
+
+  &__fill {
+    transition: fill 0.2s ease-in-out;
+
+    .share__link:hover & {
+      fill: lighten($color-grey-dark, 10%);
+    }
   }
 }
 
