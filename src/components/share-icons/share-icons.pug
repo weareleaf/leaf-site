@@ -14,3 +14,10 @@ mixin share-icons(c)
         fallbackSrc: c.linkedinImage.fallbackSrc,
         alt: c.linkedinImage.alt
       })
+    a.share-icons__link.share-icons__link--facebook(href= c.facebookUrl)
+      +image({
+        class: "share-icons__image share-icons__image--facebook",
+        src: c.facebookImage.src,
+        fallbackSrc: c.facebookImage.fallbackSrc,
+        alt: c.facebookImage.alt
+      })
