@@ -1,27 +1,38 @@
 .share-icons {
   display: block;
-  margin-bottom: 30px;
-  margin-top: 40px;
 
-  @media screen and (min-width: map-get($bp, "xl")) {
-    left: -80px;
+  /*@media screen and (min-width: map-get($bp, "xl")) {
+    left: -60px;
     margin: 0;
     position: absolute;
-  }
+  }*/
 
   &__link {
     display: inline-block;
     margin-right: 15px;
 
-    @media screen and (min-width: map-get($bp, "xl")) {
+    /*@media screen and (min-width: map-get($bp, "xl")) {
       display: block;
       margin-bottom: 30px;
       margin-right: 0;
-    }
+    }*/
   }
 
   &__image {
     display: block;
     width: 24px;
+  }
+}
+.section {
+  &--margin {
+    margin-bottom: $spacing-blog-grid / 2;
+    margin-top: $spacing-blog-grid;
+  }
+}
+@media screen and (min-width: map-get($bp, "md")) {
+  .section {
+    &--margin {
+      margin-bottom: $spacing-vertical-lg;
+    }
   }
 }
