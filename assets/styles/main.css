@@ -416,6 +416,7 @@ a {
     text-decoration: underline; }
 
 strong {
+  color: #35363d;
   font-family: "Larsseit-Bold", sans-serif;
   font-weight: 400; }
 
