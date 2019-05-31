@@ -5,13 +5,13 @@ block prepend vars
   -var pageTitle = "Our Work - Leaf"
   -var metaUrl = "https://weareleaf.com/our-work"
   -var metaTitle = "Our work"
-  -var metaDescription = "We're lucky enough to have helped some wonderful clients in achieving their goals."
+  -var metaDescription = "We've helped some wonderful clients add automation to their products and services."
 
 block pageComponents
   +hero({
     heroModifier: "our-work",
-    heroHeading: "Our work",
-    heroText: "We're lucky enough to have helped some wonderful clients in achieving their goals.",
+    heroHeading: metaTitle,
+    heroText: metaDescription,
     heroImage: {
       src: "/assets/images/our-work.webp",
       fallbackSrc: "/assets/images/our-work.png",
@@ -24,18 +24,6 @@ block pageComponents
       .grid.grid--card
         .grid__item
           +card({
-            cardUrl: "/keen",
-            cardImage: {
-              src: "/assets/images/keen.webp",
-              fallbackSrc: "/assets/images/keen.jpg",
-              alt: "Keen",
-            },
-            cardHeading: "Onboarding users the right way",
-            cardText: "No two users are the same, and shouldn’t be treated as such. We partnered with Keen to build an MVP of their customer-success tool."
-          })
-
-        .grid__item
-          +card({
             cardUrl: "/heha",
             cardImage: {
               src: "/assets/images/heha.webp",
@@ -43,7 +31,7 @@ block pageComponents
               alt: "HEHA!",
             },
             cardHeading: "Taking the hassle out of travel",
-            cardText: "Planning trips can be a headache. We worked with Holiday Extras to create HEHA!, an iOS and Android app to make the journey easier."
+            cardText: "Planning trips can be a headache. We worked with Holiday Extras to create HEHA!, an iOS and Android app to make the task simple."
           })
 
         .grid__item
@@ -55,7 +43,19 @@ block pageComponents
               alt: "MyRIFT",
             },
             cardHeading: "Helping the UK to claim tax refunds",
-            cardText: "We helped RIFT re-imagine their MyRIFT web application, allowing UK-based workers to claim tax refunds on the move."
+            cardText: "We helped RIFT re-imagine their web application, making tax refund claims easier to manage for their customers and staff."
+          })
+
+        .grid__item
+          +card({
+            cardUrl: "/keen",
+            cardImage: {
+              src: "/assets/images/keen.webp",
+              fallbackSrc: "/assets/images/keen.jpg",
+              alt: "Keen",
+            },
+            cardHeading: "Onboarding users the right way",
+            cardText: "No two users are the same, and shouldn’t be treated as such. We partnered with Keen to build an MVP of their customer-success tool."
           })
 
         .grid__item

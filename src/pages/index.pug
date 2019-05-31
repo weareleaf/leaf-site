@@ -3,14 +3,14 @@ extends ../layouts/page.pug
 block prepend vars
   -var pageTitle = "Kent based web and mobile development"
   -var metaUrl = "https://weareleaf.com"
-  -var metaTitle = "Every business is now digital"
-  -var metaDescription = "We blend insights and strategy to create digital products for forward-thinking organisations."
+  -var metaTitle = "Bespoke software automation"
+  -var metaDescription = "We use research and technology to drive automation within forward-thinking organisations."
 
 block pageComponents
   +hero({
     heroModifier: "home",
-    heroHeading: "Every business is now digital",
-    heroText: "We blend insights and strategy to create digital products for forward-thinking organisations.",
+    heroHeading: metaTitle,
+    heroText: metaDescription,
     heroButton: {
       buttonUrl: "/what-we-do",
       buttonText: "Find out how we do it"
@@ -34,7 +34,7 @@ block pageComponents
               alt: "MyRIFT",
             },
             cardHeading: "Helping the UK to claim tax refunds",
-            cardText: "We helped RIFT re-imagine their MyRIFT web application, allowing UK-based workers to claim tax refunds on the move."
+            cardText: "We helped RIFT re-imagine their web application, making tax refund claims easier to manage for their customers and staff."
           })
 
         .grid__item
@@ -46,5 +46,5 @@ block pageComponents
               alt: "HEHA!",
             },
             cardHeading: "Taking the hassle out of travel",
-            cardText: "Planning trips can be a headache. We worked with Holiday Extras to create HEHA!, an iOS and Android app to make the journey easier."
+            cardText: "Planning trips can be a headache. We worked with Holiday Extras to create HEHA!, an iOS and Android app to make the task simple."
           })
