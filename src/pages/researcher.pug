@@ -1,0 +1,88 @@
+extends ../layouts/case-study.pug
+
+block prepend vars
+  -var pageTitle = "Researcher job - Leaf"
+  -var metaUrl = "https://weareleaf.com/researcher"
+  -var metaTitle = "Researcher"
+  -var metaDescription = "We're looking for a researcher to drive exciting changes at Leaf, helping us deliver on a more mature lead-generation strategy, and enhancing the value we can offer our clients."
+
+block pageComponents
+  +banner({
+    bannerCompany: "leaf",
+    bannerHeading: "Researcher"
+  })
+
+  .section.section--sm-spacing
+    .container
+      +intro({
+        introImage: {
+          src: "/assets/images/researcher/logo.svg",
+          alt: "Leaf",
+        },
+        introText: metaDescription
+      })
+
+  .section
+    .container
+      figure
+        img(src="/assets/images/researcher/inline-1.webp" alt="Mike Carter" onerror="this.onerror=null; this.src='/assets/images/researcher/inline-1.jpg'")
+
+      .grid.grid--two-thirds-reverse
+        .grid__item
+          +summary({
+            summaryHeading: "Who are we?",
+            summaryText: "Leaf are a remote studio based in South-East England, using research-led insights to build software that automates forward-thinking organisations."
+          })
+
+        .grid__item
+          h4 About the role
+          p We celebrate our 4<sup>th</sup> birthday in June, and while it has been a wonderful ride to be on, we're looking for a researcher to help ensure that the next 4 are every bit as fun.
+          p To date, Leaf's marketing strategy could be boiled down to something along the lines of, #[em 'people talk; do good work, and we'll win more']. Going forward, that strategy will be somewhat more calculated, and research is that heart of it. 
+
+      figure
+        img(src="/assets/images/researcher/inline-2.webp" alt="Chris and Mike" onerror="this.onerror=null; this.src='/assets/images/researcher/inline-2.jpg'")
+        figcaption Chris and Mike on a face-to-face team catch-up day
+
+      .grid.grid--two-thirds
+        .grid__item
+          h4 Primary responsibilities
+          ul.styled-list.styled-list--inside-lg
+            li.styled-list__item Devising and undertaking market and UX research to support Leaf's lead generation strategy.
+            li.styled-list__item Setting-up and running qualitative and quantitative user research activities.
+            li.styled-list__item Communicating your findings effectively to the team and external content editors.
+            li.styled-list__item Conducting interviews and creating relationships with key stakeholders.
+            li.styled-list__item Sourcing individuals from appropriate demographics for user testing sessions.
+            br
+            p <strong>Note: </strong> In this role, you'll be asked to wear many hats, work outside your comfort zone, and have complete ownership of the area.  
+          
+          h4 About you
+          ul.styled-list.styled-list--inside-lg
+            li.styled-list__item You have background in research, with at least 3 years industry experience.
+            li.styled-list__item You thrive being a big fish in a smaller pond (you'll be the 6<sup>th</sup> member of the team).
+            li.styled-list__item You're a natural communicator; being able to articulate your point, both internally and to users, is essential.
+            li.styled-list__item You have a portfolio of case studies that show-off your best moves.
+            li.styled-list__item You love to teach what you know, and learn what you don't.
+            li.styled-list__item You're bursting with passion, and have a natural drive to better yourself.
+            
+          h5 Bonus points if…
+          ul.styled-list.styled-list--inside-lg
+            li.styled-list__item You have experience conducting research remotely.
+            li.styled-list__item You're able to lead, rather than be lead.
+            li.styled-list__item You have real-World experience or are further educated in psychology or a related field.        
+      
+          h4 Location
+          p This is a remote position, although a few times a year we like everyone to drop into Canterbury for a bit of face-time with the rest of the team. The company themselves are based in Canterbury; famous for its cathedrals, cobbles and tales.
+
+          h4 How to apply
+          p Email your CV to <a href="mailto:hello@weareleaf.com">hello@weareleaf.com</a>, along with a little about yourself, some examples of your work, and why you think you'd be a good fit.
+
+        .grid__item
+          +sidebar([{
+            item: "The role is for an initial <strong>12 months</strong>, and you'll receive a competitive starting salary, inline with your experience."
+          },{
+            item: "We're a <strong>remote-first</strong> company, and you'll even have the opportunity of <strong>flexible working hours</strong>."
+          },{
+            item: "You'll get <strong>20 days holiday</strong>, and well as <strong>your birthday</strong>, off each year (birthdays are for cake, and cake only)."
+          },{
+            item: "<strong>Monthly one-on-ones</strong> and <strong>6-monthly performance reviews</strong> keep your personal progression a priority.  "
+          }])
