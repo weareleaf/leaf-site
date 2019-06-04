@@ -18,7 +18,20 @@ const pages = [
   'rift',
   'terms',
   'what-we-do',
-  'zendesk'
+  'zendesk',
+  'blog/fixed-cost-is-hurting-your-business',
+  'blog/how-to-write-better-work-enquiries',
+  'blog/leaf-is-two-years-old',
+  'blog/working-too-much-please-stop',
+  'blog/behavioural-traps-in-software-teams',
+  'blog/a-home-office-for-productivity',
+  'blog/the-power-of-small-development-phases',
+  'blog/5-tips-for-actually-shipping-a-side-project',
+  'blog/your-users-are-humans-too',
+  'blog/there-are-no-excuses-for-poor-engineering-in-2017',
+  'blog/for-the-love-of-winning-work',
+  'blog/burnout-in-tech-and-why-you-could-be-part-of-the-problem',
+  'blog/the-importance-of-designing-with-empathy'
 ]
 
 const pagePlugins = pages.map((page) => {

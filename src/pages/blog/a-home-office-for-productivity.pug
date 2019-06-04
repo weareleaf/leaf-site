@@ -1,0 +1,186 @@
+extends ../../layouts/case-study.pug
+
+block prepend vars
+  -var pageTitle = "A home office for productivity - Leaf"
+  -var metaUrl = "https://weareleaf.com/blog/a-home-office-for-productivity"
+  -var metaTitle = "A home office for productivity"
+  -var metaDescription = "Compared to the average office, where people are constantly walking around in the background or making sporadic eye contact, my home environment is much less disruptive."
+
+block pageComponents
+  +banner({
+    bannerCompany: "A home office for productivity",
+    bannerModifer: "photo",
+    bannerImage: {
+      src: "/assets/images/blog/mike-setup.jpg",
+      fallbackSrc: "/assets/images/blog/mike-setup.jpg",
+      alt: "Mike's setup",
+    },
+  })
+
+  .section.section--margin
+    .container
+      +share-icons({
+        socialModifier: "inline"
+      })
+
+  .section
+    .container
+
+      .grid.grid--blog
+        .grid__item.grid__item--span-2
+          .blog-post
+            h1 A home office for productivity
+
+            p.intro-paragraph At Leaf, we embrace remote work to get a productive edge. However, it’s easy for a remote environment to work against you.
+
+            p The image above is my workspace. It’s very boring looking, and not particularly fancy, but I’ve taken several steps to make it a great place for me to get things done.
+
+            h4 Peripheral vision
+
+            p I’m easily distracted by movement, so I’ve positioned my desk in an alcove so that my I have walls 180 degrees around me. There’s a window there so I’m not completely boxed in, but there’s nothing particularly distracting going on outside — it’s mostly clouds.
+
+            p Compared to the average office, where people are constantly walking around in the background or making sporadic eye contact, my home environment is much less disruptive for me.
+
+            h4 Light control
+
+            p I’ve also installed a blackout blind, and dimmable lamp that I can control directly from my computer. This allows me to adjust the amount of light around me, so on bright days or if my eyes are tired, I can dim everything down and work without strain.
+
+            p It’s a small thing, but the aggressive fluorescent lighting of shared offices can get very wearing over time, and personal preferences in lighting vary a lot from person to person. Having this level of control makes it that much easier to settle into focussed work.
+
+            h4 Room to breathe
+
+            p Working from home means I get to be selfish with my space. My workspace isn’t huge, but there’s plenty of room there for me to move about, or have extra stuff on my desk.
+
+            p Most importantly, however, it’s completely tailored to me. I’m 6'5" tall, so the desk it extra deep to accommodate my legs, and sits a couple of inches higher than a standard office desk, which feels much better to work at. I also invested in a proper chair, preventing me from fidgeting, and allowing me to get comfortable.
+
+            h4 Sound
+
+            p I find I’m able to concentrate much more with the right kind of music playing. In a shared working environment I’m forced to use headphones, but at home I can crank up the Sonos in comfort.
+
+            p There’s also no background chatter at home either, meaning it’s impossible for me to be dragged into conversations, or get distracted by noises behind me.
+
+          +author-bio-large({
+            class: "author-bio-large--margin-top",
+            author: {
+              authorName: "Chris Annetts",
+              authorDetails: "Director · Leaf",
+              authorThumbnail: {
+                src: "/assets/images/mike_blog.png",
+                fallbackSrc: "/assets/images/mike_blog.png",
+                alt: "Mike"
+              }
+            },
+            twitterUrl: "https://twitter.com/we_are_leaf",
+            twitterImage: {
+              src: "/assets/images/twitter.svg",
+              fallbackSrc: "https://img.icons8.com/metro/420/twitter.png",
+              alt: "Find Mike on Twitter",
+            },
+            linkedinUrl: "https://www.linkedin.com/company/weareleaf/",
+            linkedinImage: {
+              src: "assets/images/linkedin.svg",
+              fallbackSrc: "https://image.flaticon.com/icons/png/512/34/34227.png",
+              alt: "Find Mike on LinkedIn",
+            },
+            authorParagraph: "I'm a Software Engineer & Director at Leaf, and like the web, dogs, food & travel.",
+            authorLinkUrl: "https://weareleaf.com/company",
+          })
+
+        .grid__item
+          +author-bio-small({
+            author: {
+              authorName: "Mike Carter",
+              authorDetails: "Director · Leaf",
+              authorThumbnail: {
+                src: "/assets/images/mike_blog.png",
+                fallbackSrc: "/assets/images/mike_blog.png",
+                alt: "Mike"
+              }
+            },
+            twitterUrl: "https://twitter.com/we_are_leaf",
+            twitterImage: {
+              src: "/assets/images/twitter.svg",
+              fallbackSrc: "https://img.icons8.com/metro/420/twitter.png",
+              alt: "Find Mike on Twitter",
+            },
+            linkedinUrl: "https://www.linkedin.com/company/weareleaf/",
+            linkedinImage: {
+              src: "assets/images/linkedin.svg",
+              fallbackSrc: "https://image.flaticon.com/icons/png/512/34/34227.png",
+              alt: "Find Mike on LinkedIn",
+            },
+            authorParagraph: "I'm a Software Engineer & Director at Leaf, and like the web, dogs, food & travel.",
+            authorLinkUrl: "https://weareleaf.com/company",
+          })
+
+    .section
+      .container
+
+        hr.divider.divider--margin-blog
+
+        .grid.grid--blog
+          .grid__item
+            +post({
+              author: {
+                class: "author--margin-top",
+                authorDetails: "2 Aug 2018 · 3 min read",
+                authorName: "Mike Carter",
+                authorThumbnail: {
+                  src: "/assets/images/mike_blog.png",
+                  fallbackSrc: "/assets/images/mike_blog.png",
+                  alt: "Mike"
+                }
+              },
+              postUrl: "https://medium.com/leaf-software/a-home-office-for-productivity-d23f0aee627b",
+              postImage: {
+                src: "/assets/images/home-office.png",
+                fallbackSrc: "/assets/images/home-office.png",
+                alt: "A home office for productivity",
+              },
+              postHeading: "A home office for productivity",
+              postText: "At Leaf, we embrace remote work to get a productive edge. However, it’s easy for a remote environment to work against you."
+            })
+
+          .grid__item
+            +post({
+              author: {
+                class: "author--margin-top",
+                authorDetails: "21 May 2018 · 3 min read",
+                authorName: "Mike Carter",
+                authorThumbnail: {
+                  src: "/assets/images/mike_blog.png",
+                  fallbackSrc: "/assets/images/mike_blog.png",
+                  alt: "Mike"
+                }
+              },
+              postUrl: "https://medium.com/leaf-software/behavioural-traps-in-software-teams-e27806f35884",
+              postImage: {
+                src: "/assets/images/behavioural-traps.png",
+                fallbackSrc: "/assets/images/behavioural-traps.png",
+                alt: "Behavioural traps in software teams",
+              },
+              postHeading: "Behavioural traps in software teams",
+              postText: "In my experience of software teams, there are a few behavioural traps that leaders (senior stakeholders …"
+            })
+
+          .grid__item
+            +post({
+              author: {
+                class: "author--margin-top",
+                authorDetails: "20 Nov 2017 · 4 min read",
+                authorName: "Mike Carter",
+                authorThumbnail: {
+                  src: "/assets/images/mike_blog.png",
+                  fallbackSrc: "/assets/images/mike_blog.png",
+                  alt: "Mike"
+                }
+              },
+              postUrl: "https://medium.com/leaf-software/working-too-much-please-stop-8dc0ac3ec179",
+              postImage: {
+                src: "/assets/images/work-too-much.png",
+                fallbackSrc: "/assets/images/work-too-much.png",
+                alt: "Working too much? Please stop",
+              },
+              postHeading: "Working too much? Please stop",
+              postText: "These days, people in most organisations are encouraged to work in their personal time …"
+            })

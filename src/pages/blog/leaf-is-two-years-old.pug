@@ -1,0 +1,220 @@
+extends ../../layouts/case-study.pug
+
+block prepend vars
+  -var pageTitle = "Leaf is two years old - Leaf"
+  -var metaUrl = "https://weareleaf.com/blog/leaf-is-two-years-old"
+  -var metaTitle = "Leaf is two years old"
+  -var metaDescription = "We’re not bankrupt yet, so we’ve written a few words to celebrate"
+
+block pageComponents
+  +banner({
+    bannerCompany: "Leaf is two years old",
+    bannerModifer: "photo",
+    bannerImage: {
+      src: "/assets/images/blog/candles.jpg",
+      fallbackSrc: "/assets/images/blog/candles.jpg",
+      alt: "Candles",
+    },
+  })
+
+  .section.section--margin
+    .container
+      +share-icons({
+        socialModifier: "inline"
+      })
+
+  .section
+    .container
+
+      .grid.grid--blog
+        .grid__item.grid__item--span-2
+          .blog-post
+            h1 Leaf is two years old
+
+            p.intro-paragraph We’re not bankrupt yet, so we’ve written a few words to celebrate
+
+            p By the age of two, many toddlers will have gained significant new skills; from improvements in their ability to communicate, to awareness of both themselves and others. They’ll be developing quickly, and it’s an exciting time for all involved.
+
+
+            p The first couple of years in a new business isn’t hugely dissimilar to the experience described above, with more than a few parallels; and as of today, our little web studio is itself two years old.
+
+
+            p Leaf started out as a series of sporadic off-the-cuff comments, before being conceived as something more concrete during a stag do on 7th March 2015. A few months later, on 30th June 2015, we registered the company.
+
+            p The first 12 months were relatively low key; we made a conscious effort to minimise risk, which meant continuing in our full-time employments, with evenings and weekends our opportunity to create a financial safety net.
+
+            p Mike, my co-founder, was the first to take the plunge and become a full-timer; with an overload of engineering work, and a sensible amount saved up, it felt like the right time to jump. I myself followed a few months later, and very quickly, our little bit on the side had become Facebook official.
+
+            h4 What we’ve learnt so far
+
+            p Relatively speaking, we’re still just starting out. That said, we’ve already gathered a few nuggets that we would love to have shared with our former selves 24 months ago.
+
+            h5 Have a buffer
+
+            p When it comes to making this your full time role, I cannot stress enough how important it is to have a healthy amount of cash saved up.
+
+            p When we went full-time, we started with around four months of runway, which would have covered wages, subscriptions, fees, and any other recurring costs in the event that we had nothing at all coming in.
+
+            p Our buffer may sound high, but in such a saturated industry, there’s very little reason to believe your new company is going to come out on top against handfuls of more established options.
+
+            p In hindsight, that financial buffer turned out to be the best early decision we made. We didn’t win any new work for the first two months, and our only income during this period was ad hoc pieces from existing clients. Without that safety net, we’d have either gone under, or started making panicked decisions ahead of time.
+
+            h5 You’ll question it
+
+            p There will, in all likelihood, be moments when you wonder whether you made the right call at all.
+
+            p In times of struggle, you may doubt everything from the wisdom to taking a financial risk, right down to your own ability to steer the ship.
+
+            p Having spoken to other studio owners, self doubt is pretty common; especially in those early days. Stepping in to the unknown is inherently scary, but you’ll come out of the other side all the more knowledgable, rounded, and confident for it.
+
+            h5 Good work pays off
+
+            p When we first started Leaf, we put a lot of effort in to winning new clients. We developed the brand, redesigned our website, created landing pages, ran several pay-per-click campaigns, responded to a high number of tenders, created pieces purely for Dribbble, started blogging, and when none of that was working, we literally cold-contacted around 150 start-ups, companies, and organisations.
+
+            p Those attempts at putting ourselves in the shop window took up an awful lot of effort. It was time consuming, costly, and when it wasn’t working, it was mentally draining.
+
+            p Eventually, the tide changed; we started receiving a steady stream of enquiries. However, 90% of them were coming via referrals from happy clients.
+
+            p It stands to reason. For most people, commissioning a new website is a big deal. Some will have saved for years. Others are risking their annual budget. Get it wrong, and peoples livelihoods are on the line.
+
+            p Where risk and unknowns play a part, people often favour those they’ve had good experiences with, or that others have recommended to them.
+
+            h5 Clients seem comfortable with remote
+
+            p At Leaf, we don’t have an office. With the team so small, there’s little justification for such an overhead.
+
+            p During early exploration around who and what Leaf was, both Mike and I were concerned about how being a satellite studio would be perceived. Is there an expectation that we would or should have an office? Would it be seen as a negative; an indictment of our ability to deliver value?
+
+            p Two years on, it hasn’t held us back at all. We’re yet to experience a client raising it as a concern, and everything so far has pointed towards the normalisation of not only the remote worker, but the remote studio.
+
+            h4 What’s next
+
+            p The biggest recent shift is that we’re currently looking for our first hire in the form of another engineer. Growing the team is something we’ve been keen to do for a while now, and with a little luck, they’ll be the first of many to join the team.
+
+            p Really though, who knows what’s next? These two years have taught us that the journey is as unpredictable as it is exciting. If you ask me, that’s part of the fun.
+
+          +author-bio-large({
+            class: "author-bio-large--margin-top",
+            author: {
+              authorName: "Chris Annetts",
+              authorDetails: "Director · Leaf",
+              authorThumbnail: {
+                src: "/assets/images/mike_blog.png",
+                fallbackSrc: "/assets/images/mike_blog.png",
+                alt: "Mike"
+              }
+            },
+            twitterUrl: "https://twitter.com/we_are_leaf",
+            twitterImage: {
+              src: "/assets/images/twitter.svg",
+              fallbackSrc: "https://img.icons8.com/metro/420/twitter.png",
+              alt: "Find Mike on Twitter",
+            },
+            linkedinUrl: "https://www.linkedin.com/company/weareleaf/",
+            linkedinImage: {
+              src: "assets/images/linkedin.svg",
+              fallbackSrc: "https://image.flaticon.com/icons/png/512/34/34227.png",
+              alt: "Find Mike on LinkedIn",
+            },
+            authorParagraph: "I'm a Software Engineer & Director at Leaf, and like the web, dogs, food & travel.",
+            authorLinkUrl: "https://weareleaf.com/company",
+          })
+
+        .grid__item
+          +author-bio-small({
+            author: {
+              authorName: "Mike Carter",
+              authorDetails: "Director · Leaf",
+              authorThumbnail: {
+                src: "/assets/images/mike_blog.png",
+                fallbackSrc: "/assets/images/mike_blog.png",
+                alt: "Mike"
+              }
+            },
+            twitterUrl: "https://twitter.com/we_are_leaf",
+            twitterImage: {
+              src: "/assets/images/twitter.svg",
+              fallbackSrc: "https://img.icons8.com/metro/420/twitter.png",
+              alt: "Find Mike on Twitter",
+            },
+            linkedinUrl: "https://www.linkedin.com/company/weareleaf/",
+            linkedinImage: {
+              src: "assets/images/linkedin.svg",
+              fallbackSrc: "https://image.flaticon.com/icons/png/512/34/34227.png",
+              alt: "Find Mike on LinkedIn",
+            },
+            authorParagraph: "I'm a Software Engineer & Director at Leaf, and like the web, dogs, food & travel.",
+            authorLinkUrl: "https://weareleaf.com/company",
+          })
+
+    .section
+      .container
+
+        hr.divider.divider--margin-blog
+
+        .grid.grid--blog
+          .grid__item
+            +post({
+              author: {
+                class: "author--margin-top",
+                authorDetails: "2 Aug 2018 · 3 min read",
+                authorName: "Mike Carter",
+                authorThumbnail: {
+                  src: "/assets/images/mike_blog.png",
+                  fallbackSrc: "/assets/images/mike_blog.png",
+                  alt: "Mike"
+                }
+              },
+              postUrl: "https://medium.com/leaf-software/a-home-office-for-productivity-d23f0aee627b",
+              postImage: {
+                src: "/assets/images/home-office.png",
+                fallbackSrc: "/assets/images/home-office.png",
+                alt: "A home office for productivity",
+              },
+              postHeading: "A home office for productivity",
+              postText: "At Leaf, we embrace remote work to get a productive edge. However, it’s easy for a remote environment to work against you."
+            })
+
+          .grid__item
+            +post({
+              author: {
+                class: "author--margin-top",
+                authorDetails: "21 May 2018 · 3 min read",
+                authorName: "Mike Carter",
+                authorThumbnail: {
+                  src: "/assets/images/mike_blog.png",
+                  fallbackSrc: "/assets/images/mike_blog.png",
+                  alt: "Mike"
+                }
+              },
+              postUrl: "https://medium.com/leaf-software/behavioural-traps-in-software-teams-e27806f35884",
+              postImage: {
+                src: "/assets/images/behavioural-traps.png",
+                fallbackSrc: "/assets/images/behavioural-traps.png",
+                alt: "Behavioural traps in software teams",
+              },
+              postHeading: "Behavioural traps in software teams",
+              postText: "In my experience of software teams, there are a few behavioural traps that leaders (senior stakeholders …"
+            })
+
+          .grid__item
+            +post({
+              author: {
+                class: "author--margin-top",
+                authorDetails: "20 Nov 2017 · 4 min read",
+                authorName: "Mike Carter",
+                authorThumbnail: {
+                  src: "/assets/images/mike_blog.png",
+                  fallbackSrc: "/assets/images/mike_blog.png",
+                  alt: "Mike"
+                }
+              },
+              postUrl: "https://medium.com/leaf-software/working-too-much-please-stop-8dc0ac3ec179",
+              postImage: {
+                src: "/assets/images/work-too-much.png",
+                fallbackSrc: "/assets/images/work-too-much.png",
+                alt: "Working too much? Please stop",
+              },
+              postHeading: "Working too much? Please stop",
+              postText: "These days, people in most organisations are encouraged to work in their personal time …"
+            })

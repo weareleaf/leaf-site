@@ -1,0 +1,211 @@
+extends ../../layouts/case-study.pug
+
+block prepend vars
+  -var pageTitle = "For the love of winning work - Leaf"
+  -var metaUrl = "https://weareleaf.com/blog/for-the-love-of-winning-work"
+  -var metaTitle = "For the love of winning work"
+  -var metaDescription = "Looking for the one is often a slog. Stepping into the unknown, the desire to please, kissing frogs; it’s time consuming, and it’s difficult."
+
+block pageComponents
+  +banner({
+    bannerCompany: "For the love of winning work",
+    bannerModifer: "photo",
+    bannerImage: {
+      src: "/assets/images/blog/man-with-flowers.jpg",
+      fallbackSrc: "/assets/images/blog/man-with-flowers.jpg",
+      alt: "Man holding flowers",
+    },
+  })
+
+  .section.section--margin
+    .container
+      +share-icons({
+        socialModifier: "inline"
+      })
+
+  .section
+    .container
+
+      .grid.grid--blog
+        .grid__item.grid__item--span-2
+          .blog-post
+            h1 For the love of winning work
+
+            p My wife recently turned to me during an episode of First Dates and remarked how lucky we were that we’d, “never have to do that again”. She was of course referring to the torturous, treacherous road to finding love.
+
+            p Looking for the one is often a slog. Stepping into the unknown, the desire to please, kissing frogs; it’s time consuming, and it’s difficult.
+
+            p Except, these problems are not exclusive to dating. Instead, they’re products of seeking out people you’re prepared to invest in. In the case of love, it’s an emotional investment. In business, it’s often financial.
+
+            h4 Looking to win work? Learn to date
+
+            p Finding the right client to invest in isn’t easy. Like dating, it’s a minefield. But if you’re prepared to look in unexpected places, there’s more advice than anyone could ever possibly need.
+
+            p Like anything that affects the masses, the Internet is awash with dating hints, tips, and how-to’s. Except they’re not simply pointers on looking for love; they’re blueprints that tap into human behaviour, helping us find, impress, and then analyse people.
+
+            p On a date, everything in up from grabs. Every detail, from your attire all the way to intimacies like eye-contact, are opportunities to either impress or disappoint. Meeting potential clients is no different.
+
+            h4 The search
+
+            h5 Figure out what you want
+            p What are you actually looking for? A quick fling or a long-term partnership? Deciding what you want from the outset will keep you focussed on only those who are looking for the same thing.
+
+            h5 Broaden your horizons
+            p There are opportunities everywhere, but where you look has a bearing on the kind of partner you’ll find. The places people frequent and the circles that they mix in are just two indicators of what you can expect from them.
+
+            h5 Be proactive
+            p It’s rare that a good thing simply falls in to your lap, and you’re going to have to put yourself out there if you want to get noticed. Don’t sit about and hope for the best; get out there and make it happen.
+
+            h5 Lean on mutual acquaintances
+            p Matchmakers are good thing. Once the relationship has started, both parties are invested, for better or worse; having someone to vouch for either side is lower risk than a blind date.
+
+            h4 First date
+
+            h5 First impressions matter
+            p Humans supposedly judge one-another in the first 7 seconds, and how you present yourself the first time is a strong indication of what they can expect from you going forward.
+
+            h5 Believe in yourself
+            p Confidence is key; believing you’re good enough is half the battle. Whether it comes naturally or not, the key is preparation; have a plan, and make sure you know it inside out. If you’re not confident in yourself, how can they be?
+
+            h5 Be attentive
+            p Don’t be that person who focuses on themselves; there are two parties getting to know each other. Pay attention to their needs; get to know them, and understand what makes them tick.
+
+            h5 What are they looking for?
+            p This is also your opportunity to gauge whether they’re a good fit for you. What are their expectations from this partnership? It’s a two-way street, and you’re both going to have to work well together.
+
+            h4 Reflection
+
+            h5 Did you want the same thing?
+            p If their needs don’t align to yours, that’s fine. In fact, it’s much better to realise that now, rather than two months in to a project. Pressing on regardless, or painfully bending to fit their expectations, will only end badly.
+
+            h5 Did you even like them?
+            p For all the effort you put in trying to impress them, it’s just as important to reflect on whether they did it for you too. You’re probably going to be spending a lot of time with this person, and getting along is going to make everything that much easier.
+
+            h5 Don’t fixate on the one
+            p If something doesn’t work out, don’t beat yourself up. There will be pain in the pursuit of work. Get back on that horse; there’s plenty more organisations in the sea.
+
+          +author-bio-large({
+            class: "author-bio-large--margin-top",
+            author: {
+              authorName: "Chris Annetts",
+              authorDetails: "Director · Leaf",
+              authorThumbnail: {
+                src: "/assets/images/mike_blog.png",
+                fallbackSrc: "/assets/images/mike_blog.png",
+                alt: "Mike"
+              }
+            },
+            twitterUrl: "https://twitter.com/we_are_leaf",
+            twitterImage: {
+              src: "/assets/images/twitter.svg",
+              fallbackSrc: "https://img.icons8.com/metro/420/twitter.png",
+              alt: "Find Mike on Twitter",
+            },
+            linkedinUrl: "https://www.linkedin.com/company/weareleaf/",
+            linkedinImage: {
+              src: "assets/images/linkedin.svg",
+              fallbackSrc: "https://image.flaticon.com/icons/png/512/34/34227.png",
+              alt: "Find Mike on LinkedIn",
+            },
+            authorParagraph: "I'm a Software Engineer & Director at Leaf, and like the web, dogs, food & travel.",
+            authorLinkUrl: "https://weareleaf.com/company",
+          })
+
+        .grid__item
+          +author-bio-small({
+            author: {
+              authorName: "Mike Carter",
+              authorDetails: "Director · Leaf",
+              authorThumbnail: {
+                src: "/assets/images/mike_blog.png",
+                fallbackSrc: "/assets/images/mike_blog.png",
+                alt: "Mike"
+              }
+            },
+            twitterUrl: "https://twitter.com/we_are_leaf",
+            twitterImage: {
+              src: "/assets/images/twitter.svg",
+              fallbackSrc: "https://img.icons8.com/metro/420/twitter.png",
+              alt: "Find Mike on Twitter",
+            },
+            linkedinUrl: "https://www.linkedin.com/company/weareleaf/",
+            linkedinImage: {
+              src: "assets/images/linkedin.svg",
+              fallbackSrc: "https://image.flaticon.com/icons/png/512/34/34227.png",
+              alt: "Find Mike on LinkedIn",
+            },
+            authorParagraph: "I'm a Software Engineer & Director at Leaf, and like the web, dogs, food & travel.",
+            authorLinkUrl: "https://weareleaf.com/company",
+          })
+
+    .section
+      .container
+
+        hr.divider.divider--margin-blog
+
+        .grid.grid--blog
+          .grid__item
+            +post({
+              author: {
+                class: "author--margin-top",
+                authorDetails: "2 Aug 2018 · 3 min read",
+                authorName: "Mike Carter",
+                authorThumbnail: {
+                  src: "/assets/images/mike_blog.png",
+                  fallbackSrc: "/assets/images/mike_blog.png",
+                  alt: "Mike"
+                }
+              },
+              postUrl: "https://medium.com/leaf-software/a-home-office-for-productivity-d23f0aee627b",
+              postImage: {
+                src: "/assets/images/home-office.png",
+                fallbackSrc: "/assets/images/home-office.png",
+                alt: "A home office for productivity",
+              },
+              postHeading: "A home office for productivity",
+              postText: "At Leaf, we embrace remote work to get a productive edge. However, it’s easy for a remote environment to work against you."
+            })
+
+          .grid__item
+            +post({
+              author: {
+                class: "author--margin-top",
+                authorDetails: "21 May 2018 · 3 min read",
+                authorName: "Mike Carter",
+                authorThumbnail: {
+                  src: "/assets/images/mike_blog.png",
+                  fallbackSrc: "/assets/images/mike_blog.png",
+                  alt: "Mike"
+                }
+              },
+              postUrl: "https://medium.com/leaf-software/behavioural-traps-in-software-teams-e27806f35884",
+              postImage: {
+                src: "/assets/images/behavioural-traps.png",
+                fallbackSrc: "/assets/images/behavioural-traps.png",
+                alt: "Behavioural traps in software teams",
+              },
+              postHeading: "Behavioural traps in software teams",
+              postText: "In my experience of software teams, there are a few behavioural traps that leaders (senior stakeholders …"
+            })
+
+          .grid__item
+            +post({
+              author: {
+                class: "author--margin-top",
+                authorDetails: "20 Nov 2017 · 4 min read",
+                authorName: "Mike Carter",
+                authorThumbnail: {
+                  src: "/assets/images/mike_blog.png",
+                  fallbackSrc: "/assets/images/mike_blog.png",
+                  alt: "Mike"
+                }
+              },
+              postUrl: "https://medium.com/leaf-software/working-too-much-please-stop-8dc0ac3ec179",
+              postImage: {
+                src: "/assets/images/work-too-much.png",
+                fallbackSrc: "/assets/images/work-too-much.png",
+                alt: "Working too much? Please stop",
+              },
+              postHeading: "Working too much? Please stop",
+              postText: "These days, people in most organisations are encouraged to work in their personal time …"
+            })

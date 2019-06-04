@@ -1,0 +1,202 @@
+extends ../../layouts/case-study.pug
+
+block prepend vars
+  -var pageTitle = "Working too much? Please stop - Leaf"
+  -var metaUrl = "https://weareleaf.com/blog/working-too-much-please-stop"
+  -var metaTitle = "Working too much? Please stop"
+  -var metaDescription = "Why you should resist the pressure to work out of hours, and how you can change your work habits for the better."
+
+block pageComponents
+  +banner({
+    bannerCompany: "Working too much? Please stop",
+    bannerModifer: "photo",
+    bannerImage: {
+      src: "/assets/images/blog/watch.jpg",
+      fallbackSrc: "/assets/images/blog/watch.jpg",
+      alt: "Stacked coins",
+    },
+  })
+
+  .section.section--margin
+    .container
+      +share-icons({
+        socialModifier: "inline"
+      })
+
+  .section
+    .container
+
+      .grid.grid--blog
+        .grid__item.grid__item--span-2
+          .blog-post
+            h1 Working too much? Please stop
+
+            p.intro-paragraph Projects turn in to games of brinksmanship, where neither side wins.
+
+            p These days, people in most organisations are encouraged to work in their personal time. These expectations are sometimes explicit out of hours requests; <i>“Could just reply to that email”</i>, <i>“Did you see that thing from Sarah?”</i>, <i>“Can you take a look over this for me?”</i>; and sometimes just an implicit pressure to do more work than you can actually manage in your 9-5.
+
+            p Strangely we seem willing to go along with this. Many of us believe the extra work makes us dedicated and hard-working. We feel like team players who’ll go above and beyond the call of duty to get things done and achieve organisational goals.
+
+            p In some ways it’s not surprising we think working extra hours helps you to be successful. After all, it’s not uncommon for the out of hours workers in organisations to get the promotions and pay rises, apparently “getting ahead” of everyone else. That’s plain wrong; we’ve got it all backwards.
+
+            hr.divider.divider--block-hr
+
+            h4 Doing the math
+
+            p When you look at things a little more closely it becomes clear how flawed our thinking is. It’s easily demonstrated by looking at our income <i>relative to time.</i>
+
+            p Let’s imagine you earn £24,000 a year. Assuming 260 working days in the year and a 37.5 hour (5 day) week, you’d be paid paid ~<strong>£12</strong> per hour. Doing the same work in 30 hours per week you’ll make ~<strong>£15</strong> per hour — go you! Flipping this on its head though, delivering that work in 45 hours per week, you’re only making about <strong>£10</strong> per hour.
+
+            h4 The hidden cost
+
+            p More worrying than our ability to under-value our time is the negative impact working too much can have on our mental health, and our silent complicity with this.
+
+            p The working population has a problem with stress. It impacts both our health and our ability to perform well at work, which in turn means we work harder to compensate, leading to yet more stress. This cycle continues until either we decide to give ourselves a reprieve, the stressors disappear, or we’re forced to stop through burnout.
+
+            p Most of us bounce in and out of this cycle several times a year. This is leaving us less successful, less productive and less happy than we could otherwise be. The good news is, isn’t how life has to be.
+
+            h4 How you can change this
+
+            p Organisations are unlikely to do much to rectify the situation as they’re often either unaware of the problem, or just aren’t incentivised to change. They see the output you generate, but it’s much harder for them to see the personal time invested, or personal toll work related stress can take on you.
+
+            p Even if they could, a lot seem to be stuck in the mindset that their employees owe them some sort of allegiance beyond what’s stipulated in their contract. Don’t believe me? Try turning up 2 hours late every week and, when challenged, say “Oh it’s just this once!”. See how well that works, and keep in mind the same is being asked of you every time you agree to work in your own time.
+
+            p It doesn’t need to be so complicated. What if you were rewarded for getting more done during your paid work hours? How much less stressful could your life be? How much happier might you be? How much more productive?
+
+            p The hard truth you need to face is that the solution to your work life balance is actually entirely in your control. All of the ability to control your situation rests with you, your employers and co-workers can only influence you, they cannot make you do anything. To begin improving the situation, all you have to do is stop:
+
+            ul
+              li Stop working out of hours; spend your time on things you want to do.
+              li Stop wasting time at work; work at improving your effectiveness.
+              li Stop committing to deadlines etc you cannot make; deliver on those you can.
+              li Stop trying to outperform your peers; outperform yourself.
+              li Stop worrying about what others think; worry about what you think.
+              li Stop trying to do everything; focus on what matters.
+
+            p Give this a try – You won’t get fired, you won’t get less done, and you won’t “miss out”. At worst you’re risking a few snarky remarks from your peers to begin with, but you have everything to gain; new hobbies, free time, less stress, the respect of your coworkers, more room to be successful. You’re more in control than you think, all you need to do is stop.
+
+          +author-bio-large({
+            class: "author-bio-large--margin-top",
+            author: {
+              authorName: "Chris Annetts",
+              authorDetails: "Director · Leaf",
+              authorThumbnail: {
+                src: "/assets/images/mike_blog.png",
+                fallbackSrc: "/assets/images/mike_blog.png",
+                alt: "Mike"
+              }
+            },
+            twitterUrl: "https://twitter.com/we_are_leaf",
+            twitterImage: {
+              src: "/assets/images/twitter.svg",
+              fallbackSrc: "https://img.icons8.com/metro/420/twitter.png",
+              alt: "Find Mike on Twitter",
+            },
+            linkedinUrl: "https://www.linkedin.com/company/weareleaf/",
+            linkedinImage: {
+              src: "assets/images/linkedin.svg",
+              fallbackSrc: "https://image.flaticon.com/icons/png/512/34/34227.png",
+              alt: "Find Mike on LinkedIn",
+            },
+            authorParagraph: "I'm a Software Engineer & Director at Leaf, and like the web, dogs, food & travel.",
+            authorLinkUrl: "https://weareleaf.com/company",
+          })
+
+        .grid__item
+          +author-bio-small({
+            author: {
+              authorName: "Mike Carter",
+              authorDetails: "Director · Leaf",
+              authorThumbnail: {
+                src: "/assets/images/mike_blog.png",
+                fallbackSrc: "/assets/images/mike_blog.png",
+                alt: "Mike"
+              }
+            },
+            twitterUrl: "https://twitter.com/we_are_leaf",
+            twitterImage: {
+              src: "/assets/images/twitter.svg",
+              fallbackSrc: "https://img.icons8.com/metro/420/twitter.png",
+              alt: "Find Mike on Twitter",
+            },
+            linkedinUrl: "https://www.linkedin.com/company/weareleaf/",
+            linkedinImage: {
+              src: "assets/images/linkedin.svg",
+              fallbackSrc: "https://image.flaticon.com/icons/png/512/34/34227.png",
+              alt: "Find Mike on LinkedIn",
+            },
+            authorParagraph: "I'm a Software Engineer & Director at Leaf, and like the web, dogs, food & travel.",
+            authorLinkUrl: "https://weareleaf.com/company",
+          })
+
+    .section
+      .container
+
+        hr.divider.divider--margin-blog
+
+        .grid.grid--blog
+          .grid__item
+            +post({
+              author: {
+                class: "author--margin-top",
+                authorDetails: "2 Aug 2018 · 3 min read",
+                authorName: "Mike Carter",
+                authorThumbnail: {
+                  src: "/assets/images/mike_blog.png",
+                  fallbackSrc: "/assets/images/mike_blog.png",
+                  alt: "Mike"
+                }
+              },
+              postUrl: "https://medium.com/leaf-software/a-home-office-for-productivity-d23f0aee627b",
+              postImage: {
+                src: "/assets/images/home-office.png",
+                fallbackSrc: "/assets/images/home-office.png",
+                alt: "A home office for productivity",
+              },
+              postHeading: "A home office for productivity",
+              postText: "At Leaf, we embrace remote work to get a productive edge. However, it’s easy for a remote environment to work against you."
+            })
+
+          .grid__item
+            +post({
+              author: {
+                class: "author--margin-top",
+                authorDetails: "21 May 2018 · 3 min read",
+                authorName: "Mike Carter",
+                authorThumbnail: {
+                  src: "/assets/images/mike_blog.png",
+                  fallbackSrc: "/assets/images/mike_blog.png",
+                  alt: "Mike"
+                }
+              },
+              postUrl: "https://medium.com/leaf-software/behavioural-traps-in-software-teams-e27806f35884",
+              postImage: {
+                src: "/assets/images/behavioural-traps.png",
+                fallbackSrc: "/assets/images/behavioural-traps.png",
+                alt: "Behavioural traps in software teams",
+              },
+              postHeading: "Behavioural traps in software teams",
+              postText: "In my experience of software teams, there are a few behavioural traps that leaders (senior stakeholders …"
+            })
+
+          .grid__item
+            +post({
+              author: {
+                class: "author--margin-top",
+                authorDetails: "20 Nov 2017 · 4 min read",
+                authorName: "Mike Carter",
+                authorThumbnail: {
+                  src: "/assets/images/mike_blog.png",
+                  fallbackSrc: "/assets/images/mike_blog.png",
+                  alt: "Mike"
+                }
+              },
+              postUrl: "https://medium.com/leaf-software/working-too-much-please-stop-8dc0ac3ec179",
+              postImage: {
+                src: "/assets/images/work-too-much.png",
+                fallbackSrc: "/assets/images/work-too-much.png",
+                alt: "Working too much? Please stop",
+              },
+              postHeading: "Working too much? Please stop",
+              postText: "These days, people in most organisations are encouraged to work in their personal time …"
+            })

@@ -1,0 +1,196 @@
+extends ../../layouts/case-study.pug
+
+block prepend vars
+  -var pageTitle = "Behavioural traps in software teams - Leaf"
+  -var metaUrl = "https://weareleaf.com/blog/behavioural-traps-in-software-teams"
+  -var metaTitle = "Behavioural traps in software teams"
+  -var metaDescription = "In my experience of software teams, there are a few behavioural traps that leaders fall into repeatedly, and that developers aren’t good at handling. Whether a leader or developer yourself, see if you can relate to any of these."
+
+block pageComponents
+  +banner({
+    bannerCompany: "Behavioural traps in software teams",
+    bannerModifer: "photo",
+    bannerImage: {
+      src: "/assets/images/blog/fist-bump.jpg",
+      fallbackSrc: "/assets/images/blog/fist-bump.jpg",
+      alt: "Fist-bumping team",
+    },
+  })
+
+  .section.section--margin
+    .container
+      +share-icons({
+        socialModifier: "inline"
+      })
+
+  .section
+    .container
+
+      .grid.grid--blog
+        .grid__item.grid__item--span-2
+          .blog-post
+            h1 Behavioural traps in software teams
+
+            p In my experience of software teams, there are a few behavioural traps that leaders (senior stakeholders, managers, product owners, etc.) fall into repeatedly, and that developers aren’t good at handling. Whether a leader or developer yourself, see if you can relate to any of these.
+
+            h4 "I was really hoping we could have it by the deadline…"
+
+            p So were your developers. In fact, they’re probably feeling the pain of not delivering on time a lot more than you are.
+
+            p It takes guts to look a leader in the eyes and deliver them news you know is going to be disappointing. If you only ever hear that deadlines are going to be missed at the last minute, it’s because your developers have incorrectly delayed having that conversation until it was an absolute certainty it would be needed. Ask yourself why that might be.
+
+            p <strong>Leaders —</strong> When you‘re told a deadline won’t be met, express thanks — for the hard work, for being direct about it, and for any early warning you’re getting. You’ll rewarded with honest estimates, more frequent updates, and happier developers in future.
+
+            p <strong>Developers —</strong> Always be open and honest with your confidence on estimates. When deadlines are going to slip, make sure you speak up, articulate why, and have an adjusted estimate in mind. It’s often useful to think about ways scope could be reduced to keep things on track too.
+
+            h4 "How did we let that happen?!"
+
+            p These are fine questions to ask if you’re actually interested in spending time on getting an answer, but they’re usually asked rhetorically with a hint of anger. While nobody is messing things up on purpose, it’s also very easy for developers to sweep major bugs and security issues under the carpet if they’re afraid of the reaction they’ll get by raising them.
+
+            p <strong>Leaders —</strong> Again, thanking your developers is your best course of action. You can then ask them to find out the impact on customers and get an honest, useful answer. From there, you can shield your developers from the rest of the business so they can concentrate on fixing things.
+
+            p <strong>Developers —</strong> When reporting an issue, do your best to come prepared with a human explanation, an idea of the impact on customers, and a suggested plan of action (with timescales). This is much more useful than just letting people know everything is broken. Once the problem is resolved, figure out what can be done better next time and make adjustments where necessary.
+
+            h4 “Are we there yet?”
+
+            p Repeatedly asking for status updates harms your team in a few ways. First, it forces them to context switch away from tasks that require focus to do well. Second, it often comes across as pressure to finish, meaning quality gets sacrificed for speed. Third, it doesn’t recognise or address the underlying gap in communication.
+
+            p <strong>Leaders —</strong> If you’re repeatedly chasing status updates, you need to make them part of the development workflow so a single written update is linkable and accessible to all stakeholders. This way, your developers can update at a time that doesn’t force a context switch, and if you check the status of everything going on in one place without bothering people or making them feel hurried.
+
+            p <strong>Developers —</strong> You’re responsible for keeping stakeholders up to date. If you’re asked for an update, either link your most recent, or add one in the agreed system and then link to it. This will encourage people to go check the proper channels for themselves, and get you into the habit of writing them.
+
+            h4 “We need to do x to fix y”
+
+            p When presented with a problem, your subconscious will often do the work of finding solutions for you. This is helpful, but as a leader remember to resist the urge to prescribe solutions; they can rob your developers of the opportunity to think for themselves.
+
+            p The end result of this behaviour is that you end up frustrated at the lack of apparent common sense in your team, and your developers lose any sense of autonomy in their work, or feeling of respect for their ideas.
+
+            p <strong>Leaders —</strong> Share problems, and your thoughts around potential solutions, but encourage your developers to think of alternative solutions and always get their feedback. You’ll be surprised at the ingenuity of even your most junior team members when they’re left to figure things out for themselves.
+
+            p <strong>Developers —</strong> Don’t blindly accept technical solutions given to you. Always make sure you deeply understand the problem that’s trying to be solved and the constraints around it, and see if you can think of a better way forward.
+
+          +author-bio-large({
+            class: "author-bio-large--margin-top",
+            author: {
+              authorName: "Chris Annetts",
+              authorDetails: "Director · Leaf",
+              authorThumbnail: {
+                src: "/assets/images/mike_blog.png",
+                fallbackSrc: "/assets/images/mike_blog.png",
+                alt: "Mike"
+              }
+            },
+            twitterUrl: "https://twitter.com/we_are_leaf",
+            twitterImage: {
+              src: "/assets/images/twitter.svg",
+              fallbackSrc: "https://img.icons8.com/metro/420/twitter.png",
+              alt: "Find Mike on Twitter",
+            },
+            linkedinUrl: "https://www.linkedin.com/company/weareleaf/",
+            linkedinImage: {
+              src: "assets/images/linkedin.svg",
+              fallbackSrc: "https://image.flaticon.com/icons/png/512/34/34227.png",
+              alt: "Find Mike on LinkedIn",
+            },
+            authorParagraph: "I'm a Software Engineer & Director at Leaf, and like the web, dogs, food & travel.",
+            authorLinkUrl: "https://weareleaf.com/company",
+          })
+
+        .grid__item
+          +author-bio-small({
+            author: {
+              authorName: "Mike Carter",
+              authorDetails: "Director · Leaf",
+              authorThumbnail: {
+                src: "/assets/images/mike_blog.png",
+                fallbackSrc: "/assets/images/mike_blog.png",
+                alt: "Mike"
+              }
+            },
+            twitterUrl: "https://twitter.com/we_are_leaf",
+            twitterImage: {
+              src: "/assets/images/twitter.svg",
+              fallbackSrc: "https://img.icons8.com/metro/420/twitter.png",
+              alt: "Find Mike on Twitter",
+            },
+            linkedinUrl: "https://www.linkedin.com/company/weareleaf/",
+            linkedinImage: {
+              src: "assets/images/linkedin.svg",
+              fallbackSrc: "https://image.flaticon.com/icons/png/512/34/34227.png",
+              alt: "Find Mike on LinkedIn",
+            },
+            authorParagraph: "I'm a Software Engineer & Director at Leaf, and like the web, dogs, food & travel.",
+            authorLinkUrl: "https://weareleaf.com/company",
+          })
+
+    .section
+      .container
+
+        hr.divider.divider--margin-blog
+
+        .grid.grid--blog
+          .grid__item
+            +post({
+              author: {
+                class: "author--margin-top",
+                authorDetails: "2 Aug 2018 · 3 min read",
+                authorName: "Mike Carter",
+                authorThumbnail: {
+                  src: "/assets/images/mike_blog.png",
+                  fallbackSrc: "/assets/images/mike_blog.png",
+                  alt: "Mike"
+                }
+              },
+              postUrl: "https://medium.com/leaf-software/a-home-office-for-productivity-d23f0aee627b",
+              postImage: {
+                src: "/assets/images/home-office.png",
+                fallbackSrc: "/assets/images/home-office.png",
+                alt: "A home office for productivity",
+              },
+              postHeading: "A home office for productivity",
+              postText: "At Leaf, we embrace remote work to get a productive edge. However, it’s easy for a remote environment to work against you."
+            })
+
+          .grid__item
+            +post({
+              author: {
+                class: "author--margin-top",
+                authorDetails: "21 May 2018 · 3 min read",
+                authorName: "Mike Carter",
+                authorThumbnail: {
+                  src: "/assets/images/mike_blog.png",
+                  fallbackSrc: "/assets/images/mike_blog.png",
+                  alt: "Mike"
+                }
+              },
+              postUrl: "https://medium.com/leaf-software/behavioural-traps-in-software-teams-e27806f35884",
+              postImage: {
+                src: "/assets/images/behavioural-traps.png",
+                fallbackSrc: "/assets/images/behavioural-traps.png",
+                alt: "Behavioural traps in software teams",
+              },
+              postHeading: "Behavioural traps in software teams",
+              postText: "In my experience of software teams, there are a few behavioural traps that leaders (senior stakeholders …"
+            })
+
+          .grid__item
+            +post({
+              author: {
+                class: "author--margin-top",
+                authorDetails: "20 Nov 2017 · 4 min read",
+                authorName: "Mike Carter",
+                authorThumbnail: {
+                  src: "/assets/images/mike_blog.png",
+                  fallbackSrc: "/assets/images/mike_blog.png",
+                  alt: "Mike"
+                }
+              },
+              postUrl: "https://medium.com/leaf-software/working-too-much-please-stop-8dc0ac3ec179",
+              postImage: {
+                src: "/assets/images/work-too-much.png",
+                fallbackSrc: "/assets/images/work-too-much.png",
+                alt: "Working too much? Please stop",
+              },
+              postHeading: "Working too much? Please stop",
+              postText: "These days, people in most organisations are encouraged to work in their personal time …"
+            })
