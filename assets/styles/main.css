@@ -829,6 +829,8 @@ hr {
     background-color: #f2b6b6; }
   .banner--zendesk {
     background-color: #b6f2f2; }
+  .banner--laced {
+    background-color: #879AC9; }
   .banner__button {
     background: rgba(53, 54, 61, 0.3);
     border: 0;
@@ -1585,7 +1587,8 @@ hr {
     .intro__image img {
       display: inline-block;
       height: 4.2em;
-      vertical-align: middle; }
+      vertical-align: middle;
+      max-width: 15em; }
   .intro__text {
     color: #35363d;
     font-size: 1.3em;
