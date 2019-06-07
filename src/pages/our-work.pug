@@ -24,6 +24,18 @@ block pageComponents
       .grid.grid--card
         .grid__item
           +card({
+            cardUrl: "/rift",
+            cardImage: {
+              src: "/assets/images/rift.webp",
+              fallbackSrc: "/assets/images/rift.jpg",
+              alt: "MyRIFT",
+            },
+            cardHeading: "Helping the UK to claim tax refunds",
+            cardText: "We helped RIFT re-imagine their web application, making tax refund claims easier to manage for their customers and staff."
+          })
+
+        .grid__item
+          +card({
             cardUrl: "/laced",
             cardImage: {
               src: "/assets/images/laced.webp",
@@ -44,18 +56,6 @@ block pageComponents
             },
             cardHeading: "Taking the hassle out of travel",
             cardText: "Planning trips can be a headache. We worked with Holiday Extras to create HEHA!, an iOS and Android app to make the task simple."
-          })
-
-        .grid__item
-          +card({
-            cardUrl: "/rift",
-            cardImage: {
-              src: "/assets/images/rift.webp",
-              fallbackSrc: "/assets/images/rift.jpg",
-              alt: "MyRIFT",
-            },
-            cardHeading: "Helping the UK to claim tax refunds",
-            cardText: "We helped RIFT re-imagine their web application, making tax refund claims easier to manage for their customers and staff."
           })
 
         .grid__item
