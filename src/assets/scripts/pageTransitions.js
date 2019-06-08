@@ -1,6 +1,6 @@
 import Barba from "barba.js"
-import banner from "../../components/banner/banner.js"
-import modal from "../../components/modal/modal.js"
+import banner from "./banner.js"
+import modal from "./modal.js"
 import { createBlob } from "./blob.js"
 
 const body = document.body
@@ -80,6 +80,8 @@ const PageTransition = Barba.BaseTransition.extend({
 window.addEventListener('load', function() {
   PageTransition.in()
   PageTransition.startBlob()
+  banner()
+  modal()
 })
 
 

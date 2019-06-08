@@ -1,44 +1,16 @@
 const path = require('path')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
-const CopyPlugin = require('copy-webpack-plugin');
-const pages = [
-  'careers',
-  'company',
-  'ebooks',
-  'blog',
-  'blog-post',
-  'heha',
-  'laced',
-  'index',
-  'keen',
-  'our-work',
-  'project-planner',
-  'referrals',
-  'researcher',
-  'resources',
-  'rift',
-  'terms',
-  'what-we-do',
-  'zendesk',
-  'blog/fixed-cost-is-hurting-your-business',
-  'blog/how-to-write-better-work-enquiries',
-  'blog/leaf-is-two-years-old',
-  'blog/working-too-much-please-stop',
-  'blog/behavioural-traps-in-software-teams',
-  'blog/a-home-office-for-productivity',
-  'blog/the-power-of-small-development-phases',
-  'blog/5-tips-for-actually-shipping-a-side-project',
-  'blog/your-users-are-humans-too',
-  'blog/there-are-no-excuses-for-poor-engineering-in-2017',
-  'blog/for-the-love-of-winning-work',
-  'blog/burnout-in-tech-and-why-you-could-be-part-of-the-problem',
-  'blog/the-importance-of-designing-with-empathy'
-]
+const CopyPlugin = require('copy-webpack-plugin')
+const glob = require('glob')
+
+const pages = glob.sync('**/*.pug', {
+  cwd: path.resolve(__dirname, 'src/pages')
+})
 
 const pagePlugins = pages.map((page) => {
   return new HtmlWebpackPlugin({
-    template: `./src/pages/${page}.pug`,
-    filename: `${page}.html`
+    template: `./src/pages/${page}`,
+    filename: page.replace('.pug', '.html')
   })
 })
 const filePlugins = new CopyPlugin([
@@ -80,7 +52,7 @@ const config = {
         use: {
           loader: 'babel-loader',
           options: {
-            presets: ['@babel/preset-env'],
+            presets: ['@babel/preset-env', '@babel/preset-react'],
             plugins: ['@babel/plugin-proposal-object-rest-spread']
           }
         }
