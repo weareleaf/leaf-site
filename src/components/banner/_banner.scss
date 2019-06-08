@@ -32,6 +32,10 @@
     background-color: $color-zendesk;
   }
 
+  &--laced {
+    background-color: $color-laced;
+  }
+
   &__button {
     background: rgba(53, 54, 61, .3);
     border: 0;

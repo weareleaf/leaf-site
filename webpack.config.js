@@ -8,6 +8,7 @@ const pages = [
   'blog',
   'blog-post',
   'heha',
+  'laced',
   'index',
   'keen',
   'our-work',

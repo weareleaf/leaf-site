@@ -8,7 +8,7 @@ html.no-js(lang="en-GB")
     meta(charset="utf-8")
     meta(http-equiv="x-ua-compatible", content="ie=edge")
     title= pageTitle
-    meta(name="description", content="Kent based web and mobile development")
+    meta(name="description", content="Bespoke software automation")
     meta(name="viewport", content="width=device-width, initial-scale=1, shrink-to-fit=no")
 
     link(rel="apple-touch-icon", sizes="57x57", href="/assets/images/favicons/apple-icon-57x57.png")
@@ -37,6 +37,8 @@ html.no-js(lang="en-GB")
     if metaDescription
       meta(property="og:description" content=metaDescription)
       meta(name="twitter:description" content=metaDescription)
+    if metaImage
+      meta(name="twitter:image" content=metaImage)
     meta(name="twitter:card" content="summary")
     meta(name="twitter:site" content="@we_are_leaf")
     meta(name="twitter:creator" content="@we_are_leaf")
