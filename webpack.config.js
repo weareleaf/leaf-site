@@ -33,7 +33,10 @@ const config = {
       rewrites: [
         {
           from: /^(?!.*\.(js|css|png|jpg|svg|webp)|$).*$/,
-          to: (context) => context.parsedUrl.pathname + '.html'
+          to: (context) => {
+            let { pathname } = context.parsedUrl
+            return `${pathname}.html`
+          }
         }
       ]
     }

@@ -3,14 +3,6 @@ function isMobileDevice() {
   return agent.match(/Android/i) || agent.match(/webOS/i) || agent.match(/iPhone/i) || agent.match(/iPad/i) || agent.match(/iPod/i) || agent.match(/BlackBerry/i) || agent.match(/Windows Phone/i)
 }
 
-function canUseWebP() {
-  var elem = document.createElement('canvas')
-  if (!!(elem.getContext && elem.getContext('2d'))) {
-    return elem.toDataURL('image/webp').indexOf('data:image/webp') == 0
-  }
-  return false
-}
-
 function preload(src) {
   var i = new Image()
   i.src = src
@@ -18,16 +10,15 @@ function preload(src) {
 
 if (!isMobileDevice()) {
   window.addEventListener('load', function() {
-    var ext = canUseWebP() ? 'webp' : 'png'
     console.log('Preloading images...')
-    preload('/assets/images/what-we-do.' + ext)
-    preload('/assets/images/company.' + ext)
-    preload('/assets/images/home.' + ext)
-    preload('/assets/images/ebooks.' + ext)
-    preload('/assets/images/jobs.' + ext)
-    preload('/assets/images/our-work.' + ext)
-    preload('/assets/images/project-planner.' + ext)
-    preload('/assets/images/resources.' + ext)
-    preload('/assets/images/terms.' + ext)
+    preload('/assets/images/what-we-do.png')
+    preload('/assets/images/company.png')
+    preload('/assets/images/home.png')
+    preload('/assets/images/ebooks.png')
+    preload('/assets/images/jobs.png')
+    preload('/assets/images/our-work.png')
+    preload('/assets/images/project-planner.png')
+    preload('/assets/images/resources.png')
+    preload('/assets/images/terms.png')
   })
 }
