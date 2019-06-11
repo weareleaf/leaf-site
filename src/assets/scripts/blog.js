@@ -272,13 +272,11 @@ const getRandomGridItems = function(arr, n) {
 const mountBlogComponents = function() {
   const indexMountPoint = document.querySelector('.grid--blog-index')
   if (indexMountPoint) {
-    console.log('In blog index')
     return ReactDOM.render(<BlogPostGrid gridItems={gridItems} />, indexMountPoint)
   }
 
   const postMountPoint = document.querySelector('.grid--blog-post')
   if (postMountPoint) {
-    console.log('In post')
     const randomGridItems = getRandomGridItems(gridItems, 3)
     return ReactDOM.render(<BlogPostGrid gridItems={randomGridItems} allSmall={true} />, postMountPoint)
   }

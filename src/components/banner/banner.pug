@@ -1,6 +1,6 @@
 mixin banner(c)
   .banner(class= c.bannerModifer ? "banner--" + c.bannerModifer : "")
-    button.banner__button(type='button', aria-label='Close')
+    a.banner__button(href='/' aria-label='Close')
       span(aria-hidden='true') Close
     if c.bannerImage
       +image({

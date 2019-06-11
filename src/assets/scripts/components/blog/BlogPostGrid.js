@@ -10,6 +10,7 @@ class BlogPostGrid extends Component {
     const large = index == 0 && !allSmall
     return (
       <BlogPostGridItem
+        key={`post-${index}`}
         author={author}
         large={large}
         postUrl={postUrl}

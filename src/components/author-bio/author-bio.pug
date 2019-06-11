@@ -1,16 +1,16 @@
-mixin author-bio-large(c)
-  .author-bio-large(class= c.class)
-    .author-bio-large__social-icons
+mixin author-bio(c)
+  .author-bio(class= c.class)
+    .author-bio__social-icons
       a.twitter(href= c.twitterUrl)
         +image({
-          class: "author-bio-large__image author-bio-large__image--twitter",
+          class: "author-bio__image author-bio__image--twitter",
           src: c.twitterImage.src,
           fallbackSrc: c.twitterImage.fallbackSrc,
           alt: c.twitterImage.alt
         })
       a.linkedin(href= c.linkedinUrl)
         +image({
-          class: "author-bio-large__image author-bio-large__image--linkedin",
+          class: "author-bio__image author-bio__image--linkedin",
           src: c.linkedinImage.src,
           fallbackSrc: c.linkedinImage.fallbackSrc,
           alt: c.linkedinImage.alt
@@ -26,5 +26,5 @@ mixin author-bio-large(c)
       }
     })
     .bio__content
-      p.author-bio-large__paragraph= c.authorParagraph
-      a.author-bio-large__link(href= c.authorLinkUrl) Get to know the team &rarr;
+      p.author-bio__paragraph= c.authorParagraph
+      a.author-bio__link(href= c.authorLinkUrl) Get to know the team &rarr;

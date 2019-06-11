@@ -1,15 +1,22 @@
 function onClick() {
-  window.history.go(-1);
-}
+  const { pathname, origin } = window.location
 
-function bind(button) {
-  button.addEventListener('click', onClick)
+  if (pathname.match(/blog/)) {
+    window.location = `${origin}/blog`
+  } else {
+    window.location = `${origin}/our-work`
+  }
 }
 
 export default function () {
   const bannerButton = document.querySelector(".banner__button");
 
   if (bannerButton) {
-    bind(bannerButton);
+    const { pathname, origin } = window.location
+    if (pathname.match(/blog/)) {
+      bannerButton.href = '/blog'
+    } else {
+      bannerButton.href = '/our-work'
+    }
   }
 }

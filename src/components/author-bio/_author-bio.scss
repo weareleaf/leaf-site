@@ -1,5 +1,6 @@
-.author-bio-large {
+.author-bio {
   background-color: $color-off-white;
+  margin-bottom: $spacing-blog-grid;
   padding: $bio-spacing-lg;
   position: relative;
 
@@ -33,9 +34,9 @@
     font-size: $bio-font-size;
     width: 100%;
 
-    @media screen and (min-width: map-get($bp, "sm")) {
-      width: 480px;
-    }
+    // @media screen and (min-width: map-get($bp, "sm")) {
+    //   width: 480px;
+    // }
   }
 
   &__link {
