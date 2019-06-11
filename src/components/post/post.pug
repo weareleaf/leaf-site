@@ -3,7 +3,6 @@ mixin post(c)
     +image({
       class: "post__image",
       src: c.postImage.src,
-      fallbackSrc: c.postImage.fallbackSrc,
       alt: c.postImage.alt
     })
     .post__content
@@ -20,4 +19,4 @@ mixin post(c)
             src: c.author.authorThumbnail.src
           }
         })
-      
+

@@ -2,7 +2,6 @@ const path = require('path')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 const CopyPlugin = require('copy-webpack-plugin')
 const glob = require('glob')
-
 const pages = glob.sync('**/*.pug', {
   cwd: path.resolve(__dirname, 'src/pages')
 })

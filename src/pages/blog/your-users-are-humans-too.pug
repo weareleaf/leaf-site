@@ -12,7 +12,6 @@ block pageComponents
     bannerModifer: "photo",
     bannerImage: {
       src: "/assets/images/blog/people-body-shots.jpg",
-      fallbackSrc: "/assets/images/blog/people-body-shots.jpg",
       alt: "User body shots",
     },
   })
@@ -50,31 +49,7 @@ block pageComponents
             p Like it or not, some of your users are having a shitty day, week, or even year; and that isn’t your fault. But by acknowledging the emotional frailties that make them human, you can make sure you’re not making their lives any harder.
 
         .grid__item
-          +author-bio({
-            author: {
-              authorName: "Mike Carter",
-              authorDetails: "Director · Leaf",
-              authorThumbnail: {
-                src: "/assets/images/mike_blog.png",
-                fallbackSrc: "/assets/images/mike_blog.png",
-                alt: "Mike"
-              }
-            },
-            twitterUrl: "https://twitter.com/we_are_leaf",
-            twitterImage: {
-              src: "/assets/images/twitter.svg",
-              fallbackSrc: "https://img.icons8.com/metro/420/twitter.png",
-              alt: "Find Mike on Twitter",
-            },
-            linkedinUrl: "https://www.linkedin.com/company/weareleaf/",
-            linkedinImage: {
-              src: "assets/images/linkedin.svg",
-              fallbackSrc: "https://image.flaticon.com/icons/png/512/34/34227.png",
-              alt: "Find Mike on LinkedIn",
-            },
-            authorParagraph: "I'm a Software Engineer & Director at Leaf, and like the web, dogs, food & travel.",
-            authorLinkUrl: "https://weareleaf.com/company",
-          })
+          +author-bio-chris()
 
     .section
       .container

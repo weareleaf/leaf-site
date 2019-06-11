@@ -12,7 +12,6 @@ block pageComponents
     bannerModifer: "photo",
     bannerImage: {
       src: "/assets/images/blog/work-enquiries.jpg",
-      fallbackSrc: "/assets/images/blog/work-enquiries.jpg",
       alt: "Writing a work enquiry",
     },
   })
@@ -87,31 +86,7 @@ block pageComponents
             p Being upfront about your budget allows us to quickly understand whether or not the project is going to be possible, and being able to quickly dismiss an unsuitable enquiry saves both parties time and energy.
 
         .grid__item
-          +author-bio({
-            author: {
-              authorName: "Mike Carter",
-              authorDetails: "Director · Leaf",
-              authorThumbnail: {
-                src: "/assets/images/mike_blog.png",
-                fallbackSrc: "/assets/images/mike_blog.png",
-                alt: "Mike"
-              }
-            },
-            twitterUrl: "https://twitter.com/we_are_leaf",
-            twitterImage: {
-              src: "/assets/images/twitter.svg",
-              fallbackSrc: "https://img.icons8.com/metro/420/twitter.png",
-              alt: "Find Mike on Twitter",
-            },
-            linkedinUrl: "https://www.linkedin.com/company/weareleaf/",
-            linkedinImage: {
-              src: "assets/images/linkedin.svg",
-              fallbackSrc: "https://image.flaticon.com/icons/png/512/34/34227.png",
-              alt: "Find Mike on LinkedIn",
-            },
-            authorParagraph: "I'm a Software Engineer & Director at Leaf, and like the web, dogs, food & travel.",
-            authorLinkUrl: "https://weareleaf.com/company",
-          })
+          +author-bio-chris()
 
     .section
       .container

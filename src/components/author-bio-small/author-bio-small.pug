@@ -5,14 +5,12 @@ mixin author-bio-small(c)
         +image({
           class: "author-bio-small__image author-bio-small__image--twitter",
           src: c.twitterImage.src,
-          fallbackSrc: c.twitterImage.fallbackSrc,
           alt: c.twitterImage.alt
         })
       a.linkedin(href= c.linkedinUrl)
         +image({
           class: "author-bio-small__image author-bio-small__image--linkedin",
           src: c.linkedinImage.src,
-          fallbackSrc: c.linkedinImage.fallbackSrc,
           alt: c.linkedinImage.alt
         })
     +author({
@@ -21,7 +19,6 @@ mixin author-bio-small(c)
       authorName: c.author.authorName,
       authorThumbnail: {
         alt: c.author.authorThumbnail.alt,
-        fallbackSrc: c.author.authorThumbnail.fallbackSrc,
         src: c.author.authorThumbnail.src
       }
     })
