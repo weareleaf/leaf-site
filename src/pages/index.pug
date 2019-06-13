@@ -28,35 +28,34 @@ block pageComponents
         pageHeaderText: "Automation is the act of using data, design and technology to turn a task, traditionally undertaken by humans, into a partially or completely automatic process."
       })
 
+      .grid.grid--statements
+        .grid__item
+          +statement({
+            statementIcon: "/assets/images/icons/magic.svg",
+            statementHeading: "Business Processes",
+            statementText: "Automating repetitive and well-defined tasks, like running weekly reports or reviewing an application, keeps your team focused on doing the hard parts computers can't do well."
+          })
 
-    .grid.grid--statements
-      .grid__item
-        +statement({
-          statementIcon: "/assets/images/icons/magic.svg",
-          statementHeading: "Business Processes",
-          statementText: "Automating repetitive and well-defined tasks, like running weekly reports or reviewing an application, keeps your team focused on doing the hard parts computers can't do well."
-        })
+        .grid__item
+          +statement({
+            statementIcon: "/assets/images/icons/tasks.svg",
+            statementHeading: "Higher data quality",
+            statementText: "Lookups and autocompleting fields make it easier for users to provide high-quality information, which itself creates further automation opportunities in processing and handling said data."
+          })
 
-      .grid__item
-        +statement({
-          statementIcon: "/assets/images/icons/tasks.svg",
-          statementHeading: "Higher data quality",
-          statementText: "Lookups and autocompleting fields make it easier for users to provide high-quality information, which itself creates further automation opportunities in processing and handling said data."
-        })
+        .grid__item
+          +statement({
+            statementIcon: "/assets/images/icons/growth.svg",
+            statementHeading: "Improved service",
+            statementText: "Create convenience by automating customer processes; automatic emails and online self-help are quicker and more cost-effective than hand-posted letters or physical 9-5 support teams."
+          })
 
-      .grid__item
-        +statement({
-          statementIcon: "/assets/images/icons/growth.svg",
-          statementHeading: "Improved service",
-          statementText: "Create convenience by automating customer processes; automatic emails and online self-help are quicker and more cost-effective than hand-posted letters or physical 9-5 support teams."
-        })
-        
-      .grid__item
-        +statement({
-          statementIcon: "/assets/images/icons/coins.svg",
-          statementHeading: "Reduced costs",
-          statementText: "Once they're set up, automation systems cost very little to run. Unlike people, computers are immune to dips in efficiency, and work around the clock at their given task."
-        })
+        .grid__item
+          +statement({
+            statementIcon: "/assets/images/icons/coins.svg",
+            statementHeading: "Reduced costs",
+            statementText: "Once they're set up, automation systems cost very little to run. Unlike people, computers are immune to dips in efficiency, and work around the clock at their given task."
+          })
 
       .grid.grid--card
         .grid__item
