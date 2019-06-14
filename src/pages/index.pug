@@ -1,10 +1,10 @@
 extends ../layouts/page.pug
 
 block prepend vars
-  -var pageTitle = "Bespoke software automation - Leaf"
+  -var pageTitle = "Bespoke business automation - Leaf"
   -var metaUrl = "https://weareleaf.com"
-  -var metaTitle = "Bespoke software automation"
-  -var metaDescription = "We use research and technology to drive automation within forward-thinking organisations."
+  -var metaTitle = "Bespoke business automation"
+  -var metaDescription = "We're specialists in using technology to automate all kinds of traditionally human tasks."
 
 block pageComponents
   +hero({
@@ -17,45 +17,44 @@ block pageComponents
     },
     heroImage: {
       src: "/assets/images/home.png",
-      alt: "Alt text for hero image",
+      alt: "We work with you to uncover automation opportunities.",
     }
   })
 
   section.section
     .container
-      +page-header({
-        pageHeaderHeading: "What is automation?",
-        pageHeaderText: "Automation is the act of using data, design and technology to turn a task, traditionally undertaken by humans, into a partially or completely automatic process."
-      })
 
       .grid.grid--statements
         .grid__item
           +statement({
             statementIcon: "/assets/images/icons/magic.svg",
             statementHeading: "Business Processes",
-            statementText: "Automating repetitive and well-defined tasks, like running weekly reports or reviewing an application, keeps your team focused on doing the hard parts computers can't do well."
+            statementText: "Automating repetitive tasks, like running weekly reports, reviewing job applications, or handling data transfers, keeps your team focused on doing things computers can't."
           })
 
         .grid__item
           +statement({
             statementIcon: "/assets/images/icons/tasks.svg",
             statementHeading: "Higher data quality",
-            statementText: "Lookups and autocompleting fields make it easier for users to provide high-quality information, which itself creates further automation opportunities in processing and handling said data."
+            statementText: "Auto-completion of forms, and stringent validation of fields, ensures data enters your systems efficiently and accurately from both staff and customers."
           })
 
         .grid__item
           +statement({
             statementIcon: "/assets/images/icons/growth.svg",
             statementHeading: "Improved service",
-            statementText: "Create convenience by automating customer processes; automatic emails and online self-help are quicker and more cost-effective than hand-posted letters or physical 9-5 support teams."
+            statementText: "Digital products allow customers to self-serve in convenience, with communications via their preferred medium, and entirely unconstrained by the 9-to-5."
           })
 
         .grid__item
           +statement({
             statementIcon: "/assets/images/icons/coins.svg",
             statementHeading: "Reduced costs",
-            statementText: "Once they're set up, automation systems cost very little to run. Unlike people, computers are immune to dips in efficiency, and work around the clock at their given task."
+            statementText: "Once they're set up, automations cost very little to run. Unlike people, computers are immune to dips in efficiency, work around the clock, and don't make mistakes."
           })
+  
+  section.section
+    .container
 
       .grid.grid--card
         .grid__item

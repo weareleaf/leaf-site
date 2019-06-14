@@ -3,11 +3,15 @@
   padding: 9em 0 0;
   position: relative;
 
+  &--home {
+    margin-bottom: 0;
+  }
+
   @media screen and (min-width: 40.625em) {
     padding: 9em 0;
 
     &--home {
-      padding: 9em 0 10%;
+      //padding: 9em 0 10%;
     }
   }
 
@@ -16,12 +20,11 @@
     padding: 9em 0 12em;
 
     &--home {
-      padding: 9em 0;
+      //padding: 9em 0;
     }
   }
 
   &__blob {
-    // border: 1px solid #000;
     display: none;
     position: absolute;
     left: -900px;
@@ -139,6 +142,7 @@
     }
 
     .hero--home & {
+
       @media screen and (min-width: 120em) {
         width: 75%;
       }
@@ -187,24 +191,7 @@
   }
 }
 
-
-
-
-
-
-
-
 .hero {
-
-  &::before {
-    //transition: left .3s ease-out;
-    //left: 0;
-  }
-
-  &__content {
-    //transition: transform .2s ease-out;
-    //transform: translateX(0);
-  }
 
   &__image {
     display: block;
@@ -218,19 +205,27 @@
     @media screen and (min-width: 75em) {
       top: -7rem;
     }
+
+    .hero--home & {
+      top: -4em;
+
+      @media screen and (min-width: 40.625em) {
+        top: 5em;
+      }
+
+      @media screen and (min-width: 75em) {
+        top: -12em;
+      }
+
+      @media screen and (min-width: 120em) {
+        //top: -12em;
+      }
+    }
   }
 
   &__image img {
-    //transition-duration: .3s;
-    //transition-timing-function: ease-out;
-
-    @media screen and (max-width: 40.624em) {
-      //transition-property: transform;
-      //transform: translateX(0);
-    }
 
     @media screen and (min-width: 40.625em) {
-      //transition-property: right;
       right: 1.25em;
     }
 
@@ -243,6 +238,7 @@
     }
 
     .hero--company & {
+
       @media screen and (min-width: 40.625em) {
         right: 2.5em;
       }
@@ -257,6 +253,7 @@
     }
 
     .hero--our-work & {
+
       @media screen and (min-width: 40.625em) {
         right: 2.5em;
       }
@@ -279,6 +276,7 @@
     }
 
     .hero--careers & {
+
       @media screen and (min-width: 40.625em) {
         right: 8%;
       }
