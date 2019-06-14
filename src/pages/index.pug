@@ -1,10 +1,10 @@
 extends ../layouts/page.pug
 
 block prepend vars
-  -var pageTitle = "Bespoke software automation - Leaf"
+  -var pageTitle = "Bespoke business automation - Leaf"
   -var metaUrl = "https://weareleaf.com"
-  -var metaTitle = "Bespoke software automation"
-  -var metaDescription = "We use research and technology to drive automation within forward-thinking organisations."
+  -var metaTitle = "Bespoke business automation"
+  -var metaDescription = "We're specialists in using technology to automate all kinds of traditionally human tasks."
 
 block pageComponents
   +hero({
@@ -17,12 +17,45 @@ block pageComponents
     },
     heroImage: {
       src: "/assets/images/home.png",
-      alt: "Alt text for hero image",
+      alt: "We work with you to uncover automation opportunities.",
     }
   })
 
   section.section
     .container
+
+      .grid.grid--statements
+        .grid__item
+          +statement({
+            statementIcon: "/assets/images/icons/magic.svg",
+            statementHeading: "Business Processes",
+            statementText: "Automating repetitive tasks, like running weekly reports, reviewing job applications, or handling data transfers, keeps your team focused on doing things computers can't."
+          })
+
+        .grid__item
+          +statement({
+            statementIcon: "/assets/images/icons/tasks.svg",
+            statementHeading: "Higher data quality",
+            statementText: "Auto-completion of forms, and stringent validation of fields, ensures data enters your systems efficiently and accurately from both staff and customers."
+          })
+
+        .grid__item
+          +statement({
+            statementIcon: "/assets/images/icons/growth.svg",
+            statementHeading: "Improved service",
+            statementText: "Digital products allow customers to self-serve in convenience, with communications via their preferred medium, and entirely unconstrained by the 9-to-5."
+          })
+
+        .grid__item
+          +statement({
+            statementIcon: "/assets/images/icons/coins.svg",
+            statementHeading: "Reduced costs",
+            statementText: "Once they're set up, automations cost very little to run. Unlike people, computers are immune to dips in efficiency, work around the clock, and don't make mistakes."
+          })
+  
+  section.section
+    .container
+
       .grid.grid--card
         .grid__item
           +card({
