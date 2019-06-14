@@ -1507,17 +1507,15 @@ blockquote {
   margin-bottom: 4em;
   padding: 9em 0 0;
   position: relative; }
+  .hero--home {
+    margin-bottom: 0; }
   @media screen and (min-width: 40.625em) {
     .hero {
-      padding: 9em 0; }
-      .hero--home {
-        padding: 9em 0 10%; } }
+      padding: 9em 0; } }
   @media screen and (min-width: 75em) {
     .hero {
       margin-bottom: 6em;
-      padding: 9em 0 12em; }
-      .hero--home {
-        padding: 9em 0; } }
+      padding: 9em 0 12em; } }
   .hero__blob {
     display: none;
     position: absolute;
@@ -1649,6 +1647,14 @@ blockquote {
   @media screen and (min-width: 75em) {
     .hero__image {
       top: -7rem; } }
+  .hero--home .hero__image {
+    top: -4em; }
+    @media screen and (min-width: 40.625em) {
+      .hero--home .hero__image {
+        top: 5em; } }
+    @media screen and (min-width: 75em) {
+      .hero--home .hero__image {
+        top: -12em; } }
 
 @media screen and (min-width: 40.625em) {
   .hero__image img {
