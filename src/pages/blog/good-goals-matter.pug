@@ -1,0 +1,113 @@
+extends ../../layouts/case-study.pug
+
+block prepend vars
+  -var pageTitle = "Goals matter - Leaf"
+  -var metaUrl = "https://weareleaf.com/blog/the-power-of-small-development-phases"
+  -var metaTitle = "Goals matter"
+  -var metaDescription = "How choosing good goals can make your team more productive, effective, and happier."
+
+block pageComponents
+  +banner({
+    bannerCompany: "Goals matter",
+    bannerModifer: "photo",
+    bannerImage: {
+      src: "/assets/images/blog/goal.jpg",
+      alt: "Coloured chalk",
+    },
+  })
+
+  .section.section--margin
+    .container
+      +share-icons({
+        socialModifier: "inline"
+      })
+
+  .section
+    .container
+
+      .grid.grid--blog
+        .grid__item.grid__item--span-2
+          .blog-post
+            h1 Goals matter
+
+            p.intro-paragraph Are your developers forever picking up new tasks? Do they fail to measure their work? Is progress slow and uncertain? If so, they need a better goal.
+
+            p A goal is something you collectively agree that you’d like to accomplish together. It’s simultaneously a result to work towards, and a compass to help guide your efforts in getting there.
+
+            p Goals can scale from a single person to an entire organisation, but they're most effective when given to a team just large enough to effectively achieve it. At Leaf, we use goals often to help get traction in challenging development environments.
+
+            h3 Goals should be smart
+            ul
+              li <strong>Specific</strong> - They state what will be done.
+              li <strong>Measureable</strong> - They can be objectively verified as being achieved.
+              li <strong>Achievable</strong> - They are reasonably achievable by their team.
+              li <strong>Relevant</strong> - They are of some benefit to the organisation they’re contributing to.
+              li <strong>Time-based</strong> - They have some sort of expiry date set against them.
+
+            p Using the S.M.A.R.T criteria help to ensure your development team agree to goals they all understand, that they can accomplish, that matter to the business, and that can be completed within an agreed time. Consider the following example:
+
+            blockquote
+              q
+                | Improve our web application to reduce the percentage of customer data that needs correcting from 25% to 5% by Christmas 2019.
+              cite Joe Schmoe, Project Leader
+
+            p This is a good goal. It's Specific, Measureable, and Time-based, and in Joe Schmoe's world it's Achieveable and Relevant. Keep in mind though, achievability and relevance are subjective to the situation and organisation at hand.
+
+            h3 Goals need focus
+            p In most workplaces, development teams work towards multiple goals at once. However, having many goals for a single team does not work well. When multiple goals are the priority, none of your goals are a priority.
+
+            p Using small teams with separate goals is much better, allowing parallelism while preserving a focus for individual teams. With this approach, no one person has more than one goal or priority, but many things can still get done.
+
+            p It's likely that you'll end up with a surplus of goals to choose from, but since you can only focus on one, make a good choice by asking yourself the following:
+
+            ul
+              li Which goal will your team make the most impact on?
+              li How well are your team’s strengths and weaknesses are aligned to each goal?
+              li How much enthusiasm does your team have for each goal?
+
+            p You’ll know you’ve hit good matches when your team is able to make a big impact on a goal well suited to their strengths, that they’re enthusiastic about getting to work on. Focus on these.
+
+            h3 Goals promote success
+
+            p <strong>Speed</strong> - Goals keep teams focussed on achieving a single outcome. This is invaluable for software development, in which complex changes can take a lot of time. Having a goal in place prevents time being wasted on busy work, helping your business to make progress quickly.
+
+            p <strong>Focus</strong> - Software development efficiency benefits hugely from focus, and a single goal means this becomes the default way of working. Goals ensure that unrelated work is identified and ruled out early, leaving only what matters now.
+
+            p <strong>Ideation</strong> - People are idea machines. Undirected, they will think of ways to improve all aspects of an organisation. However, these ideas aren’t always of the highest priority to your business. Goals help to channel this ideation towards useful, high value problem solving.
+
+            p <strong>Autonomy</strong> - When people are blocked from proceeding with their work, a goal helps them to make a smart decision about what to do next. No more “I’m blocked, what do I work on now?”.
+
+            p <strong>Alignment</strong> - Without goals, it's common for teams to accidentally end up working on the same tasks, or on tasks that counteract each other. Clearly assigned goals can help prevent this wheel-spinning, and keep everyone on the same page.
+
+            hr.divider.divider--block-hr
+
+            p As we work to add automation to our client's businesses, we define a clear goals before starting each piece of work. They make a tremendous difference in the productivity, effectiveness, and happiness of the teams we work with.
+
+        .grid__item
+          +author-bio({
+            author: {
+              authorName: "Mike Carter",
+              authorDetails: "Director · Leaf",
+              authorThumbnail: {
+                src: "/assets/images/mike_blog.png",
+                alt: "Mike"
+              }
+            },
+            twitterUrl: "https://twitter.com/we_are_leaf",
+            twitterImage: {
+              src: "https://img.icons8.com/metro/420/twitter.png",
+              alt: "Find Mike on Twitter",
+            },
+            linkedinUrl: "https://www.linkedin.com/company/weareleaf/",
+            linkedinImage: {
+              src: "https://image.flaticon.com/icons/png/512/34/34227.png",
+              alt: "Find Mike on LinkedIn",
+            },
+            authorParagraph: "I'm a Software Engineer & Director at Leaf, and like the web, dogs, food & travel.",
+            authorLinkUrl: "https://weareleaf.com/company",
+          })
+
+    .section
+      .container
+        hr.divider.divider--margin-blog
+        .grid.grid--blog.grid--blog-post
