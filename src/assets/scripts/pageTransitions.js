@@ -40,6 +40,15 @@ const PageTransition = Barba.BaseTransition.extend({
     })
   },
 
+  trackVirtualPageView: function() {
+    if (ga) {
+      const path = window.location.pathname
+      ga('set', 'page', path)
+      ga('send', 'pageview')
+      console.log('Tracked virtual page view "' + path + '"')
+    }
+  },
+
   out: function() {
     body.classList.add('transition-out')
   },
@@ -66,6 +75,7 @@ const PageTransition = Barba.BaseTransition.extend({
   },
 
   finish: function() {
+    this.trackVirtualPageView()
     this.done()
     body.classList.remove('modal-open')
     banner()
@@ -74,6 +84,7 @@ const PageTransition = Barba.BaseTransition.extend({
     this.startBlob()
     this.in()
     console.log('Ended transition')
+
   }
 })
 
