@@ -27,7 +27,7 @@ export default function () {
     let visible = false
 
     window.addEventListener('scroll', (e) => {
-      const offset = document.body.scrollTop
+      const offset = window.scrollY
 
       if (offset >= fadeInOffset && !visible) {
         bannerLogo.classList.add('banner__logo--visible')
