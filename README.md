@@ -26,4 +26,18 @@ npm install
 - Changes to SCSS will not automatically reload the page.
 - When you add new files, you'll need to restart the development server for them to be picked up.
 
+
+## Adding blog posts
+
+ 1. Copy the existing blog post `src/pages/blog/goals-matter` to a new file. Choose a sensible name with dash-separated words, as this will form the URL of your post.
+ 2. Start or restart the development server so that it picks up the new file.
+ 3. View your post at http://localhost:3000/blog/your-post-filename
+ 4. Edit your blog content by updating your new pug file.
+ 5. Add a banner image to `src/assets/images/blog/` (banner image) and `src/assets/images/blog/thumbnails` (thumbnail). The thumbnail should be 720x400, the banner image can be larger, but shouldn't be so big that it's going to take an age to download, and should be around about a 3:2 aspect ratio. Both images should be .jpg.
+ 6. Update the variables at the top of your blog post file, this is important as they're used to display a correct link preview when sharing on social media.
+ 7. Update the `gridItems` array in `src/assets/scripts/blog.js` to include an entry for your blog post as the the first entry in the array. This will ensure the blog post displays on http://localhost:3000/blog, and is included in the thumbnails at the bottom of each blog post automatically.
+ 8. If you've not posted before. Ensure you have an author avatar image present in `src/assets/images`, this should end with `_blog`, e.g. `mike_blog.png`.
+ 9. Check everything is as you want it, and put your post up for review by submitting a pull request on Github!
+
+
 Enjoy ❤️

@@ -42,7 +42,7 @@ const gridItems = [
       alt: "The power of small development phases",
     },
     postHeading: "The power of small development phases",
-    postText: "Imagine this scenario — someone in your company proposes a new software feature with the potential to save the business thousands of hours of human effort per year. It’s going to replace it all with error free, instant, cheap automation …"
+    postText: "Imagine this scenario — someone in your company proposes a new software feature with the potential to save the business …"
   },
   {
     author: {

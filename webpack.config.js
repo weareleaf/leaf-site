@@ -25,6 +25,7 @@ const config = {
   output: {
     path: path.resolve(__dirname, 'dist'),
     filename: "main.js",
+    publicPath: "/"
   },
   devServer: {
     contentBase: path.join(__dirname, 'dist'),
@@ -35,6 +36,9 @@ const config = {
           from: /^(?!.*\.(js|css|png|jpg|svg|webp)|$).*$/,
           to: (context) => {
             let { pathname } = context.parsedUrl
+            if (pathname.charAt(pathname.length -1) === '/') {
+              pathname = pathname.substring(0, pathname.length - 1)
+            }
             return `${pathname}.html`
           }
         }
