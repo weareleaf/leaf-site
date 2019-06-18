@@ -9,6 +9,25 @@ const gridItems = [
   {
     author: {
       authorName: "Mike Carter",
+      authorDetails: "18 June 2018 · 5 min read",
+      authorThumbnail: {
+        src: "/assets/images/mike_blog.png",
+        fallbackSrc: "/assets/images/mike_blog.png",
+        alt: "Mike"
+      }
+    },
+    postUrl: "/blog/goals-matter",
+    postImage: {
+      src: "/assets/images/blog/thumbnails/goal.jpg",
+      fallbackSrc: "/assets/images/blog/thumbnails/goal.jpg",
+      alt: "Goals matter",
+    },
+    postHeading: "Goals matter",
+    postText: "Without a clear definition of success, it's hard to know which direction to take, or whether you're making any progress. Goals provide direction and clarity for your teams."
+  },
+  {
+    author: {
+      authorName: "Mike Carter",
       authorDetails: "17 Dec 2018 · 3 min read",
       authorThumbnail: {
         src: "/assets/images/mike_blog.png",

@@ -1,3 +1,5 @@
+$logo-breakpoint: 1400px;
+
 .banner {
   background-color: $color-green-light;
   margin-bottom: $spacing-vertical-lg;
@@ -36,6 +38,69 @@
     background-color: $color-laced;
   }
 
+  &__controls {
+    background: transparent;
+    position: absolute;
+    width: 100%;
+
+    .banner--photo & {
+      background: #fff;
+      position: relative;
+    }
+
+    @media screen and (max-width: $logo-breakpoint) {
+      display: flex;
+      justify-content: space-between;
+      padding: 1em 1em .75em 1em;
+    }
+
+    @media screen and (min-width: 40em) {
+      padding-top: 2.5rem;
+
+      .banner--photo & {
+        padding-top: 1em;
+      }
+    }
+
+    @media screen and (min-width: $logo-breakpoint) {
+      background: none;
+      position: absolute;
+
+      .banner--photo & {
+        padding-top: 0;
+      }
+    }
+  }
+
+  &__logo {
+    width: 3.3em;
+
+    @media screen and (min-width: 90em) {
+      left: 2em;
+      top: 3em;
+    }
+
+    @media screen and (min-width: $logo-breakpoint) {
+      position: fixed;
+      z-index: 1000;
+
+      svg {
+        opacity: 0;
+        transform: translateY(50%);
+        transition:
+          opacity 400ms ease,
+          transform 400ms ease;
+      }
+
+      &--visible {
+        svg {
+          opacity: 1;
+          transform: translateY(0)
+        }
+      }
+    }
+  }
+
   &__button {
     background: rgba(53, 54, 61, .3);
     border: 0;
@@ -43,15 +108,14 @@
     cursor: pointer;
     height: 2em;
     padding: 0;
-    position: fixed;
-    right: 1em;
-    top: 1em;
+    position: relative;
     transition: background .2s ease-in-out;
     width: 2em;
     z-index: 1;
     -webkit-appearance: none;
 
-    @media screen and (min-width: map-get($bp, 'xl')) {
+    @media screen and (min-width: $logo-breakpoint) {
+      position:fixed;
       right: 3em;
       top: 3em;
     }
@@ -62,14 +126,20 @@
     }
 
     span {
+      display: none;
       border: 0;
       clip: rect(0,0,0,0);
       height: 1px;
       overflow: hidden;
       padding: 0;
-      position: absolute;
       white-space: nowrap;
       width: 1px;
+      position: relative;
+
+      @media screen and (min-width: $logo-breakpoint) {
+        display: inline;
+        position: absolute;
+      }
     }
 
     &::before,
