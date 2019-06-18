@@ -9,7 +9,7 @@ const gridItems = [
   {
     author: {
       authorName: "Mike Carter",
-      authorDetails: "16 June 2018 · 5 min read",
+      authorDetails: "18 June 2018 · 5 min read",
       authorThumbnail: {
         src: "/assets/images/mike_blog.png",
         fallbackSrc: "/assets/images/mike_blog.png",
@@ -20,10 +20,10 @@ const gridItems = [
     postImage: {
       src: "/assets/images/blog/thumbnails/goal.jpg",
       fallbackSrc: "/assets/images/blog/thumbnails/goal.jpg",
-      alt: "The power of small development phases",
+      alt: "Goals matter",
     },
     postHeading: "Goals matter",
-    postText: "Are your developers forever picking up new tasks? Do they fail to measure their work? Is progress slow and uncertain? If so, they need a better goal."
+    postText: "Without a clear definition of success, it's hard to know which direction to take, or whether you're making any progress. Goals provide direction and clarity for your teams."
   },
   {
     author: {
