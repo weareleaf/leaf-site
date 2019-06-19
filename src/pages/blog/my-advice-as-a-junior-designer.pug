@@ -1,0 +1,118 @@
+extends ../../layouts/case-study.pug
+
+block prepend vars
+  -var pageTitle = "My Advice As A Junior Designer - Leaf"
+  -var metaUrl = "https://weareleaf.com/blog/my-advice-as-a-junior-designer"
+  -var metaTitle = "My Advice As A Junior Designer"
+  -var metaDescription = "5 tips to help juniors and graduates in the tech and creative industry get ahead, based on my own personal experiences."
+  -var metaImage = "https://weareleaf.com/assets/images/blog/thumbnails/goal.jpg"
+
+block pageComponents
+  +banner({
+    bannerCompany: "My Advice As A Junior Designer",
+    bannerModifer: "photo",
+    bannerImage: {
+      src: "/assets/images/blog/my-advice-banner.jpg",
+      alt: "My Advice",
+    },
+  })
+
+  .section.section--margin
+    .container
+      +share-icons({
+        socialModifier: "inline"
+      })
+
+  .section
+    .container
+
+      .grid.grid--blog
+        .grid__item.grid__item--span-2
+          .blog-post
+            h1 My Advice As A Junior Designer
+
+            p.intro-paragraph Over the past couple of months, I’ve had the privilege of working remotely at <a href="/">Leaf</a>, helping them design and build digital products, both internally and for their client-base.
+
+            p As a junior to the industry, my time spent at Leaf has already proved to be extremely rewarding in terms of learning new skills, gaining confidence in my work and what I do, and witnessing both design and engineering best practices first-hand. Seeing how much I have developed in such a short space of time is a credit to the company’s approach to personal development, and a good indicator as to why nurturing young people’s potential is vital to their success.
+
+            p Although it’s commendable that companies try and provide opportunities to those starting out in the industry, it shouldn’t fall entirely on them to find talented juniors; the individual themselves should be just as proactive in seeking out opportunities.
+
+            p Based on my own experiences, I’ve come up with ​<strong>5</strong> tips to help anyone starting out in the industry not only find themselves new avenues to kick-start their career, but to also exceed their own expectations of what they thought was achievable.
+
+            h3 #1 - Make yourself heard!
+
+            p Now I’m not saying become an online celebrity, but the internet’s a busy place. In the tech industry alone it’s easy to become lost among the noise of the latest trends, tools and frameworks. You have to be proactive when putting yourself out there, and make sure you’re engaging with the tech community,  both online, and in the real world.
+
+            p Network with others, display your work, and reach out to people and companies. You’d be surprised by the types of connections and work offers you get by actively showing enthusiasm for what you do. If you have any design or tech events taking place in your area, attend! You’ll get to meet a tonne of interesting people, and even learn a thing or two while you’re at it.
+
+            p So, what are you waiting for? Put yourself out there, reach out to people, and get networking! There’s a whole world of opportunities out there… and it’s also a great way to feel attuned to the ever evolving world of the tech and design community.
+
+            h3 #2 - Find a mentor
+
+            p Learn from people who have achieved what you want to achieve! Remember, this doesn't need to happen one-on-one; Twitter conversations, books, podcasts, or even quality Youtube interviews are all good mentorship options. By making sure that you surround yourself with people who encourage  both personal and professional development, your mindset and goals will begin to grow with you.
+
+            p No matter how far into your career you may be, these connections are invaluable to your success, so make the most of them! A mantra I tend to live by goes something like:
+
+            blockquote
+              q
+                | If you’re the smartest person in the room, then you’re in the wrong room.
+
+            p Don’t see mentorship as a weakness on your part. See it as an opportunity to nurture your hidden potential, and learn from the best!
+
+            h3 #3 - Never stop learning!
+
+            p Ever. You should live to learn, and make a conscious effort to do so everyday, no matter how big or small it may be. If it adds value to your career, then that’s a bonus. If it’s something as simple as learning how to correctly fold a fajita, then that’s cool as well! Remember, <i>"Knowledge is power".</i>
+
+            p Gaining knowledge in your career makes you employable. Gaining knowledge in multiple different fields and topics makes you interesting -- It’s a win-win! It may sound boring to some, but for me, I almost see it as levelling up.
+
+            p Strong memory recall is also key to making sure you are able to stay on top of industry developments, learn new skills, and always be at the top of your game. Just don’t overdo it though. As much as your brain needs the exercise, you can run the risk of burning out if you never give yourself enough time to relax. As soon as you feel your attention span slipping, it’s your brain's way of telling you to take a break. Don’t try and power through; come back to whatever it is you were focussed on once you’re mind is refreshed, and you'll be amazed how much better you are at retaining new information.
+
+            h3 #4 - Embrace self-doubt
+
+            p It’s easy to tell people to just avoid self doubt and soldier on, but that’s almost as laughable as telling someone not to worry right before they take their driving test… It’s inevitable that as highly driven, creative people, we won’t experience some level of <i>Imposter Syndrome</i> throughout our careers; but it’s how we deal with it that has the biggest impact.
+
+            p One key thing that I like to do, is take a mental listing of everything I have accomplished up until this point, and visualise where I’d like to be within the next 1, 5, or even 10 years. Of course you can’t accurately predict what will happen, but by allowing your mind to have a more calmer state of thinking, it helps you realise why you’re doing what you do.
+
+            p Don’t neglect any weaknesses that you feel may be holding you back either. The chances are these issues can be resolved over time by simply following the above points. The important thing is to not beat yourself up; there’s a high chance you’re already smashing it!
+
+            h3 #5 - Do your best
+
+            p It’s all anyone can ask from you. As every working day comes, you need to have a goal in mind, and maintain that drive in order to reach it! By breaking your goals up into smaller, more accessible targets, your accomplishments will soon rack up!
+
+            blockquote
+              q
+                | The mind is everything. What you think, you become.
+              cite Buddha
+
+            p Since starting at <a href="/">Leaf</a>, I get to work with some amazing people everyday, and despite any mistakes I make, all they ever expect is that I try my best. Make sure to work hard, work smart, and best of all, play hard; don’t forget to take a break from time-to-time, as too much of a good thing can become a bad thing.
+
+            p With that in mind, I hope these <strong>5</strong> tips have helped in giving you a much greater understanding of how you can begin getting ahead as a junior, and remember that no matter what you aim to achieve in life, if you put your mind to it, things will eventually pay off!
+
+        .grid__item
+          +author-bio({
+            author: {
+              authorName: "Curtis Lee",
+              authorDetails: "Designer · Leaf",
+              authorThumbnail: {
+                src: "/assets/images/curt_blog.jpg",
+                alt: "Curt"
+              }
+            },
+            twitterUrl: "https://twitter.com/CurtisLee97",
+            twitterImage: {
+              src: "https://img.icons8.com/metro/420/twitter.png",
+              alt: "Find Curt on Twitter",
+            },
+            linkedinUrl: "https://www.linkedin.com/in/curtis97lee/",
+            linkedinImage: {
+              src: "https://image.flaticon.com/icons/png/512/34/34227.png",
+              alt: "Find Curt on LinkedIn",
+            },
+            authorParagraph: "I'm a Product Designer at Leaf, and love the web, mountain biking, ice hockey and cars.",
+            authorLinkUrl: "https://weareleaf.com/company",
+          })
+
+    .section
+      .container
+        hr.divider.divider--margin-blog
+        .grid.grid--blog.grid--blog-post
