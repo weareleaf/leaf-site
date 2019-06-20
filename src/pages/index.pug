@@ -4,7 +4,7 @@ block prepend vars
   -var pageTitle = "Bespoke business automation - Leaf"
   -var metaUrl = "https://weareleaf.com"
   -var metaTitle = "Bespoke business automation"
-  -var metaDescription = "We're specialists in using technology to automate all kinds of traditionally human tasks."
+  -var metaDescription = "We're specialists in building products & services that automate traditionally human tasks."
 
 block pageComponents
   +hero({
@@ -23,7 +23,6 @@ block pageComponents
 
   section.section
     .container
-
       .grid.grid--statements
         .grid__item
           +statement({
@@ -55,8 +54,8 @@ block pageComponents
   
   section.section
     .container
-
-      .grid.grid--card
+      h2 Recent work
+      .grid.grid--symmetrical-card
         .grid__item
           +card({
             cardUrl: "/rift",
@@ -78,3 +77,8 @@ block pageComponents
             cardHeading: "21st century sneaker trading",
             cardText: "We moved Laced's entire business online, allowing their customers to effortlessly buy and sell rare sneakers."
           })
+
+  section.section.section--sm-spacing
+    .container
+      h2 From the blog
+      .grid.grid--blog.grid--blog-post
