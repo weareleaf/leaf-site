@@ -594,6 +594,15 @@ blockquote {
         -ms-grid-rows: 100%;
         grid-template-columns: 1fr 60%; } }
   @media screen and (min-width: 48em) {
+    .grid--symmetrical-card {
+      -ms-grid-columns: 1fr 2em 1fr;
+      grid-template-columns: 1fr 1fr;
+      grid-column-gap: 4em; } }
+  @media screen and (min-width: 62em) {
+    .grid--symmetrical-card {
+      -ms-grid-columns: 1fr 6em 1fr;
+      grid-column-gap: 6em; } }
+  @media screen and (min-width: 48em) {
     .grid--card {
       -ms-grid-columns: 1fr 2em 1fr;
       grid-template-columns: 1fr 1fr;
