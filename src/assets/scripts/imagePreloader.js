@@ -18,6 +18,7 @@ function preload(src) {
 
 if (!isMobileDevice()) {
   window.addEventListener('load', function() {
+    window.pageLoaded = true
     console.log('Preloading images...')
     preload('/assets/images/heros/home.gif')
     preload('/assets/images/heros/what-we-do.gif')

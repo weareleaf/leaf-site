@@ -36,9 +36,11 @@
   }
 
   &__image {
+    margin: 0 auto;
     max-width: 60%;
 
     @media screen and (min-width: map-get($bp, 'md')) {
+      margin: 0;
       padding-left: $spacing-horizontal-lg;
       max-width: none;
       width: 40%;

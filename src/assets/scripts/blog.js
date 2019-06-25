@@ -20,11 +20,11 @@ const gridItems = [
     postImage: {
       src: '/assets/images/blog/thumbnails/my-advice-curt.jpg',
       fallbackSrc: '/assets/images/blog/thumbnails/my-advice-curt.jpg',
-      alt: 'My Advice As A Junior Designer'
+      alt: 'My advice as a junior designer'
     },
-    postHeading: 'My Advice As A Junior Designer',
+    postHeading: 'My advice as a junior designer',
     postText:
-      'Over the past couple of months, I’ve had the privilege of working remotely at Leaf, helping them design and build digital products, both internally and for their client-base.'
+      'Over the past couple of months, I’ve had the privilege of working remotely at Leaf, helping them design and build digital products.'
   },
   {
     author: {
@@ -337,6 +337,15 @@ const mountBlogComponents = function() {
     return ReactDOM.render(
       <BlogPostGrid gridItems={randomGridItems} allSmall={true} />,
       postMountPoint
+    )
+  }
+
+  const previewMountPoint = document.querySelector('.grid--blog-preview')
+  if (previewMountPoint) {
+    const firstGridItems = gridItems.slice(0, 3)
+    return ReactDOM.render(
+      <BlogPostGrid gridItems={firstGridItems} allSmall={true} />,
+      previewMountPoint
     )
   }
 }
