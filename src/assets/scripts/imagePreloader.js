@@ -19,6 +19,7 @@ function preload(src) {
 if (!isMobileDevice()) {
   window.addEventListener('load', function() {
     console.log('Preloading images...')
+    preload('/assets/images/heros/home.gif')
     preload('/assets/images/heros/what-we-do.gif')
     preload('/assets/images/heros/company.gif')
   })
