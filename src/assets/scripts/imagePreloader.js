@@ -17,12 +17,9 @@ function preload(src) {
 }
 
 if (!isMobileDevice()) {
-  window.addEventListener(
-    'load',
-    setTimeout(function() {
-      console.log('Preloading images...')
-      preload('/assets/images/what-we-do.png')
-      preload('/assets/images/company.png')
-    }, 1000)
-  )
+  window.addEventListener('load', function() {
+    console.log('Preloading images...')
+    preload('/assets/images/heros/what-we-do.gif')
+    preload('/assets/images/heros/company.gif')
+  })
 }
