@@ -23,8 +23,6 @@ if (!isMobileDevice()) {
       console.log('Preloading images...')
       preload('/assets/images/what-we-do.png')
       preload('/assets/images/company.png')
-      preload('/assets/images/our-work.png')
-      preload('/assets/images/project-planner.png')
     }, 1000)
   )
 }

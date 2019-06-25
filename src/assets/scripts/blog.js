@@ -31,8 +31,8 @@ const gridItems = [
       authorName: 'Mike Carter',
       authorDetails: '18 June 2019 · 5 min read',
       authorThumbnail: {
-        src: '/assets/images/mike_blog.png',
-        fallbackSrc: '/assets/images/mike_blog.png',
+        src: '/assets/images/mike_blog.jpg',
+        fallbackSrc: '/assets/images/mike_blog.jpg',
         alt: 'Mike'
       }
     },
@@ -51,8 +51,8 @@ const gridItems = [
       authorName: 'Mike Carter',
       authorDetails: '17 Dec 2018 · 3 min read',
       authorThumbnail: {
-        src: '/assets/images/mike_blog.png',
-        fallbackSrc: '/assets/images/mike_blog.png',
+        src: '/assets/images/mike_blog.jpg',
+        fallbackSrc: '/assets/images/mike_blog.jpg',
         alt: 'Mike'
       }
     },
@@ -71,8 +71,8 @@ const gridItems = [
       authorName: 'Mike Carter',
       authorDetails: '2 Aug 2018 · 3 min read',
       authorThumbnail: {
-        src: '/assets/images/mike_blog.png',
-        fallbackSrc: '/assets/images/mike_blog.png',
+        src: '/assets/images/mike_blog.jpg',
+        fallbackSrc: '/assets/images/mike_blog.jpg',
         alt: 'Mike'
       }
     },
@@ -91,8 +91,8 @@ const gridItems = [
       authorName: 'Mike Carter',
       authorDetails: '21 May 2018 · 3 min read',
       authorThumbnail: {
-        src: '/assets/images/mike_blog.png',
-        fallbackSrc: '/assets/images/mike_blog.png',
+        src: '/assets/images/mike_blog.jpg',
+        fallbackSrc: '/assets/images/mike_blog.jpg',
         alt: 'Mike'
       }
     },
@@ -111,8 +111,8 @@ const gridItems = [
       authorName: 'Mike Carter',
       authorDetails: '20 Nov 2017 · 4 min read',
       authorThumbnail: {
-        src: '/assets/images/mike_blog.png',
-        fallbackSrc: '/assets/images/mike_blog.png',
+        src: '/assets/images/mike_blog.jpg',
+        fallbackSrc: '/assets/images/mike_blog.jpg',
         alt: 'Mike'
       }
     },
@@ -131,8 +131,8 @@ const gridItems = [
       authorName: 'Chris Annetts',
       authorDetails: '30 Jun 2017 · 4 min read',
       authorThumbnail: {
-        src: '/assets/images/chris_blog.png',
-        fallbackSrc: '/assets/images/chris_blog.png',
+        src: '/assets/images/chris_blog.jpg',
+        fallbackSrc: '/assets/images/chris_blog.jpg',
         alt: 'Chris'
       }
     },
@@ -151,8 +151,8 @@ const gridItems = [
       authorName: 'Chris Annetts',
       authorDetails: '30 May 2018 · 3 min read',
       authorThumbnail: {
-        src: '/assets/images/chris_blog.png',
-        fallbackSrc: '/assets/images/chris_blog.png',
+        src: '/assets/images/chris_blog.jpg',
+        fallbackSrc: '/assets/images/chris_blog.jpg',
         alt: 'Chris'
       }
     },
@@ -171,8 +171,8 @@ const gridItems = [
       authorName: 'Chris Annetts',
       authorDetails: '9 May 2017 · 3 min read',
       authorThumbnail: {
-        src: '/assets/images/chris_blog.png',
-        fallbackSrc: '/assets/images/chris_blog.png',
+        src: '/assets/images/chris_blog.jpg',
+        fallbackSrc: '/assets/images/chris_blog.jpg',
         alt: 'Chris'
       }
     },
@@ -191,8 +191,8 @@ const gridItems = [
       authorName: 'Mike Carter',
       authorDetails: '20 March 2017 · 4 min read',
       authorThumbnail: {
-        src: '/assets/images/mike_blog.png',
-        fallbackSrc: '/assets/images/mike_blog.png',
+        src: '/assets/images/mike_blog.jpg',
+        fallbackSrc: '/assets/images/mike_blog.jpg',
         alt: 'Mike'
       }
     },
@@ -211,8 +211,8 @@ const gridItems = [
       authorName: 'Chris Annetts',
       authorDetails: '10 March 2017 · 2 min read',
       authorThumbnail: {
-        src: '/assets/images/chris_blog.png',
-        fallbackSrc: '/assets/images/chris_blog.png',
+        src: '/assets/images/chris_blog.jpg',
+        fallbackSrc: '/assets/images/chris_blog.jpg',
         alt: 'Chris'
       }
     },
@@ -231,8 +231,8 @@ const gridItems = [
       authorName: 'Mike Carter',
       authorDetails: '2 March 2017 · 3 min read',
       authorThumbnail: {
-        src: '/assets/images/mike_blog.png',
-        fallbackSrc: '/assets/images/mike_blog.png',
+        src: '/assets/images/mike_blog.jpg',
+        fallbackSrc: '/assets/images/mike_blog.jpg',
         alt: 'Mike'
       }
     },
@@ -251,8 +251,8 @@ const gridItems = [
       authorName: 'Chris Annetts',
       authorDetails: '15 February 2017 · 3 min read',
       authorThumbnail: {
-        src: '/assets/images/chris_blog.png',
-        fallbackSrc: '/assets/images/chris_blog.png',
+        src: '/assets/images/chris_blog.jpg',
+        fallbackSrc: '/assets/images/chris_blog.jpg',
         alt: 'Chris'
       }
     },
@@ -271,8 +271,8 @@ const gridItems = [
       authorName: 'Chris Annetts',
       authorDetails: '6 February 2017 · 2 min read',
       authorThumbnail: {
-        src: '/assets/images/chris_blog.png',
-        fallbackSrc: '/assets/images/chris_blog.png',
+        src: '/assets/images/chris_blog.jpg',
+        fallbackSrc: '/assets/images/chris_blog.jpg',
         alt: 'Chris'
       }
     },
@@ -291,8 +291,8 @@ const gridItems = [
       authorName: 'Chris Annetts',
       authorDetails: '31 January 2017 · 2 min read',
       authorThumbnail: {
-        src: '/assets/images/chris_blog.png',
-        fallbackSrc: '/assets/images/chris_blog.png',
+        src: '/assets/images/chris_blog.jpg',
+        fallbackSrc: '/assets/images/chris_blog.jpg',
         alt: 'Chris'
       }
     },
