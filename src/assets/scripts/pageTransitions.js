@@ -42,9 +42,8 @@ const PageTransition = Barba.BaseTransition.extend({
 
   trackVirtualPageView: function() {
     const path = window.location.pathname
-    if (window.ga) {
-      window.ga('set', 'page', path)
-      window.ga('send', 'pageview')
+    if (window.gtag) {
+      gtag('config', 'UA-62036216-1', {page_path: path})
       console.log('Tracked virtual page view "' + path + '"')
     } else {
       console.log('Could not track page view "' + path + '"')
