@@ -1,0 +1,143 @@
+extends ../../layouts/case-study.pug
+
+block prepend vars
+  -var pageTitle = "Automate where it matters with process maps - Leaf"
+  -var metaUrl = "https://weareleaf.com/blog/goals-matter"
+  -var metaTitle = "Automate where it matters with process maps"
+  -var metaDescription = "How process maps can be used to get concrete shared understanding of a business for smart decision making around automation."
+  -var metaImage = "https://weareleaf.com/assets/images/blog/thumbnails/goal.jpg"
+
+block pageComponents
+  +banner({
+    bannerCompany: "Automate where it matters with process maps",
+    bannerModifer: "photo",
+    bannerImage: {
+      src: "/assets/images/blog/walkers-hill.jpg",
+      alt: "Walkers on a hill",
+    },
+  })
+
+  .section.section--margin
+    .container
+      +share-icons({
+        socialModifier: "inline"
+      })
+
+  .section
+    .container
+
+      .grid.grid--blog
+        .grid__item.grid__item--span-2
+          .blog-post
+            h1 Automate where it matters with process maps
+
+            p.intro-paragraph When introducing software automation, it's hard to know where to start or what kind of return to expect. Process maps clear the fog, and save you money.
+
+            p Surprisingly, most businesses map their processes using mental models. These form automatically among employees as they do their work, and over time everyone comes to a rough agreement on how things fit together.
+
+            p Unfortunately, mental models are often inaccurate and ego-centric. Through no fault of their own, people tend to over-emphasise their role in the operation of the business, and inaccurately represent the role of others.
+
+            p The ego-centrism of mental models makes it difficult for stakeholders to agree where to invest in improving their business' operation. Everyone fights for what's most important as they see it, but not as it actually is.
+
+            p Additionally, forming a shared mental model from this position is very time consuming. A shared mental model needs regular reinforcement among stakeholders to ensure it is maintained and understood.
+
+            p Instead of invisible mental process models, we need to make processes <em>visible</em>.
+
+            h3 Process maps
+
+            p A process map provides visibility. It's is a diagram that shows the activiites involved in a process, and how they relate to one another. In business terms, the process may be the entire operation, or some part of it.
+
+            p Process maps have nodes for inputs, activities, and outputs. Lines connect the nodes, showing how each part of the process feeds into others, and the numbers are displayed each node.
+
+            p Process maps provide a fantastic method for making processes visible. They allow stakeholders to easily form a single shared understanding of a business's operation, and provide a concrete point of reference for decision making.
+
+            p Below is a rudimentary example of a process map for an imaginary e-commerce site is selling shoes.
+
+            +image({
+              class: "banner__image",
+              src: "/assets/images/blog/process-diagram.jpg",
+              alt: "A basic process diagram"
+            })
+            br
+
+            p From this rudimentary example, you can easily see:
+
+            ul
+              li The website gets 16,000 visitors a day from different sources.
+              li Most of those visitors drop out after landing on the website.
+              li Those which don't either phone, log in, or register.
+              li More drop out after this, only 2,500 a day place an order.
+              li Many orders suffer from payment failure, delivery failure, or a customer issue.
+              li About 1,500 customers receive successful deliveries per day.
+
+            p The beauty here is that the numbers don't need to be completely accurate in order for the map to be useful. We can work effectively with good guesses because we're analysing trends at a high level, not sweating the detail when we don't have it.
+
+            p However, should we get the detail, it could be added in the form of more nodes to get a more granular view of the business. For example, we may wish to dig into:
+
+            ul
+              li Where the leads who drop out from the website go.
+              li What happens to those who ring the call centre but never make a payment.
+              li What are the reasons for payments failing, and what those customers do next.
+              li What human activities happen between payment being accepted and the shoes being sent for delivery.
+
+            p These could be added by just building upon what's already included in the process map, without making the map any harder to understand for stakeholders who don't need such detailed information.
+
+            h3 Driving automation
+
+            p Process maps are fantastic tools for businesses looking to drive performance, efficiency, and scaleability through automation. They allow us to quickly see where inefficiencies lie, and allow us to make good predictions about what would happen if we were change things.
+
+            p For example, looking at our example e-commerce organisation again, conventional wisdom might tell us that in order to increase purchases, we need to increase marketing spend on advertising to drive more leads to the site.
+
+            p From the process diagram, however, we can see that lead numbers are not the whole picture. Half of the customers visiting the website drop out right away, and a further third end up on the phones, where they have a low chance to purchase, and we need humans available to take incoming calls.
+
+            p Following this logic, if we could keep the customers happy online, our process diagram tells us they'd be more likely to purchase, and would do so via a much cheaper channel.
+
+            p In conclusion, instead of simply increasing leads, we'd be much better off looking at why so many customers drop out from the website or resort to using the phone. We could then work to make it easier and more convenient for customers to carry on online.
+
+            h3 A helpful workflow
+
+            p As we work to add automation to our client's businesses <a href="/" target="_blank" rel="noopener">at Leaf</a>, we use process maps to help both ourselves and stakeholders achieve a shared understanding of their businesses, identify where improvements can be made, and where money is best invested to make the biggest positive impact. We follow this workflow:
+
+            ol
+              li <strong>Build a process map</strong> - Sometimes this will be for the entire business, and sometimes a particular process within the business. As a general guideline, we aim for a map detailed enough that it accurately reflects 80% of the possible scenarios in the process we're trying to improve.
+              li <strong>Identify areas for improvement</strong> - With a map in place, we can begin to identify the main areas for improvement. Typically these are things that are time consuming or expensive to complete, cause a significant dropoff, or otherwise introduce some sort of bottleneck to efficiency.
+              li <strong>Create goals</strong> - Once we know where we want to improve, we can create S.M.A.R.T goals around these areas. Side note - we wrote <a href="https://weareleaf.com/blog/goals-matter" target="_blank" rel="noopener">a whole post on how to use goals effectively</a>.
+              li <strong>Assign goals</strong> - At this point, we've got a list of goals we need to achieve in order to make the business process better. We assign each to a capable person or team to complete.
+              li <strong>Build and work backlogs</strong> - Teams and individuals build backlogs of work focussed on achieving their goal, and work through them.
+              li <strong>Repeat</strong> - Once the goals have been achieved (or failed to be achieved), we update our process map to reflect the impact of the changes and repeat the process.
+
+            p With this workflow, we're systematically rooting out inefficiencies, figuring out where we can have the biggest positive impact, using our knowledge of the numbers to set realistic goals, and building up focussed roadmaps around those goals to give stakeholders confidence in the value being delivered.
+
+            p This is effective because work is driven from a solid <strong>shared understanding</strong> of the business, and a <strong>shared agreement</strong> about how where best to focus energy on improving things. If necessary, we can course correct after each iteration of the workflow. This ensures a continued focus and improvement in the right areas.
+
+            p At the end of the day, using this process map workflow helps to ensure a good return on investment for our clients. So, if you're struggling to get everyone on the same page about where to focus their energy, or aren't clear on the value being delivered by your development and automation efforts, give it a try.
+
+
+        .grid__item
+          +author-bio({
+            author: {
+              authorName: "Mike Carter",
+              authorDetails: "Director · Leaf",
+              authorThumbnail: {
+                src: "/assets/images/mike_blog.jpg",
+                alt: "Mike"
+              }
+            },
+            twitterUrl: "https://twitter.com/we_are_leaf",
+            twitterImage: {
+              src: "https://img.icons8.com/metro/420/twitter.png",
+              alt: "Find Mike on Twitter",
+            },
+            linkedinUrl: "https://www.linkedin.com/company/weareleaf/",
+            linkedinImage: {
+              src: "https://image.flaticon.com/icons/png/512/34/34227.png",
+              alt: "Find Mike on LinkedIn",
+            },
+            authorParagraph: "I'm a Software Engineer & Director at Leaf, and like the web, dogs, food & travel.",
+            authorLinkUrl: "https://weareleaf.com/company",
+          })
+
+    .section
+      .container
+        hr.divider.divider--margin-blog
+        .grid.grid--blog.grid--blog-post
