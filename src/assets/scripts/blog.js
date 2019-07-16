@@ -8,6 +8,26 @@ import BlogPostGrid from './components/blog/BlogPostGrid'
 const gridItems = [
   {
     author: {
+      authorName: 'Mike Carter',
+      authorDetails: '16 July 2019 · 6 min read',
+      authorThumbnail: {
+        src: '/assets/images/mike_blog.jpg',
+        fallbackSrc: '/assets/images/mike_blog.jpg',
+        alt: 'Mike'
+      }
+    },
+    postUrl: '/blog/automate-where-it-matters-with-process-maps',
+    postImage: {
+      src: '/assets/images/blog/thumbnails/walkers-hill.jpg',
+      fallbackSrc: '/assets/images/blog/thumbnails/walkers-hill.jpg',
+      alt: 'Automate where it matters with process maps'
+    },
+    postHeading: 'Automate where it matters with process maps',
+    postText:
+      "We've experienced how competing stakeholders, unclear ROIs, and uncertainty can make committing to business automation difficult. Process maps provide a powerful way to clear the fog."
+  },
+  {
+    author: {
       authorName: 'Curtis Lee',
       authorDetails: '19 June 2019 · 4 min read',
       authorThumbnail: {
