@@ -9,7 +9,7 @@ const gridItems = [
   {
     author: {
       authorName: 'Mike Carter',
-      authorDetails: '10 July 2019 · 6 min read',
+      authorDetails: '16 July 2019 · 6 min read',
       authorThumbnail: {
         src: '/assets/images/mike_blog.jpg',
         fallbackSrc: '/assets/images/mike_blog.jpg',
