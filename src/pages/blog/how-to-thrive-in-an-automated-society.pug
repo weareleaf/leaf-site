@@ -1,0 +1,184 @@
+extends ../../layouts/case-study.pug
+
+block prepend vars
+  -var pageTitle = "How to thrive in an automated society - Leaf"
+  -var metaUrl = "https://weareleaf.com/blog/how-to-thrive-in-an-automated-society"
+  -var metaTitle = "How to thrive in an automated society"
+  -var metaDescription = "How can your business thrive when you're constantly being disrupted by leaner, faster, more automated competition on a global scale?"
+  -var metaImage = "https://weareleaf.com/assets/images/blog/thumbnails/code.jpg"
+
+block pageComponents
+  +banner({
+    bannerCompany: "How to thrive in an automated society",
+    bannerModifer: "photo",
+    bannerImage: {
+      src: "/assets/images/blog/code.jpg",
+      alt: "Code",
+    },
+  })
+
+  .section.section--margin
+    .container
+      +share-icons({
+        socialModifier: "inline"
+      })
+
+  .section
+    .container
+
+      .grid.grid--blog
+        .grid__item.grid__item--span-2
+          .blog-post
+            h1 How to thrive in an automated society
+            p.intro-paragraph How do you thrive when you're constantly being disrupted by leaner, faster, more automated competition on a global scale?
+
+            p Specialist software we wrote on a bespoke basis 5 years ago is now available to anyone with £30/month to spare, and jobs that were specialist roles 10 years ago now no longer exist. Cars are becoming self driving, you can speak to your computer like it's a person, and startups are regularly disrupting and toppling entire industries.
+
+            p All of this change is being driven smart people leveraging software automation. There's been a lot of gloomy talk in the media about the impact this is having on jobs and businesses, and while a fully automated society is a way off still, automation presents significant challenges for businesses not wise to it, and significant opportunities for those with an eye on the horizon.
+
+            p None of us can afford to keep our head in the sand, so in this post, we'll answer the following questions:
+
+            ul
+              li What is automation?
+              li Why is automation a big deal?
+              li How will automation affect businesses?
+              li How can I automate my business?
+
+            h3 What is automation?
+            p Automation is a trend towards less human involvement being needed to complete business activities. In this post, we'll focus on the automation of information-based activities, acheived through software.
+
+            p Some basic examples of automation include:
+
+            ul
+              li <strong>Allowing customers to interact with your business on a self-service basis:</strong> This is typically via a web portal or a smartphone app, but could be over a phone call, using a digital voice assistant ("Hey Google"), or even via a television-based app.
+              li <strong>Supplementing or replacing customer service roles:</strong> Chatbots, support sites, ticketing systems, and community forums take the burdern of providing support away from staff.
+              li <strong>Automating internal data processing:</strong> Where reports were manually collated, they can now be generated automatically. Where data was stored across multiple systems (or filing cabinets), is can now be digital, centralised, and searchable. Where data previously needed to be processed by a person, we can now make decisions and derive insight using software systems, and Artificial Intelligence.
+              li <strong>Integrations with other organisations and systems:</strong> Application Programming Interfaces (APIs) and Software Development Kits (SDKs) allow the systems in one business to interact with the systems in another, making vast amounts of data and cutting edge technology accessible to even the smallest organisations.
+
+            p Automation is largely driven by technological and cultural changes:
+
+            ul
+              li <strong>Improvements in infrastructure:</strong> Faster, more reliable networks mean businesses can count on technology working seamlessly for their customers.
+              li <strong>Software proliferation:</strong> Where organisations used to have to build all of their own software, there are now many website, CRM, advertising, reporting and support products that can be integrated and managed  with little technical knowledge.
+              li <strong>Globalisation:</strong> Instead of operating at a local or national level, it's common for many new businesses operate globally right away. Globalised business requires high levels of automation by default.
+              li <strong>Changing expectations:</strong> As consumers benefit from the convenience automation can bring, their expectations rise, while their tolerance for hassle, delays, and expending effort lowers.
+              li <strong>Other automation:</strong> Because automated activities can handle high volume, un-automated activities in processes quickly become bottlenecks. These then require automation in turn to keep throughput high throughout the entire process.
+
+            h3 Why is automation a big deal?
+
+            p Well implemented automation increases the speed, accuracy, scaleability, competitiveness, and global reach of a business, while also reducing its costs. These increases are typically orders of magnitude larger than their non-automated counterparts.
+
+            p Where a person-based sales team might be able to process 200 customers per day, a well automated sales funnel could cope with 200,000 for a similar cost, and could be scaled to 2 million or beyond. What's more, the automated funnel will provide a better service, being easily accessible to customers any time, anywhere, on any device, and in many languages.
+
+            p E-commerce isn't new, but it's a good illustration from recent history of the power of automation to level the playing field. We now live in a world where tiny companies are able to compete with much larger established players, and where customers are gained or lost based on the quality of the product offered, rather than the size of the company offering it.
+
+            p When automation is combined with innovation, startups can even force change in an entire industry by providing a radically better solution to a problem; a process known as disruption.
+
+            p It's easy to think of them as giants now, but Netflix, a 21 year old company, famously disrupted and destroyed the traditional movie rental industry. It then went on to disrupt broadcast television. Similarly, Amazon is barely 25 years old, but has changed the way we shop forever, and become one of the worlds most valuable companies in the process.
+
+            p In more recent times, Uber has disrupted the taxi industry, Tesla has disrupted the automotive industry, and AirBnB has disrupted the travel industry.
+
+            p Using automation to provide innovative products and services is a common trait among the worlds leading businesses, and it is being embraced in ever smaller markets to get a competitive edge. In order to stay competitive tomorrow, you must understand and embrace automation today.
+
+            h3 How will automation affect business?
+            p In all businesses, automation will continue to supplement and replace people in activities, completing them faster, to a higher quality, and more cost effectively than before. To understand how this trend will affect society as a whole, you need to understand how easy or hard things are to automate:
+
+            ul
+              li <strong>Easy:</strong> Repetitive simple tasks involving structured high-quality data. Examples include data collection, storage and retrieval, payment processing, data lookups, and basic reporting.
+              li <strong>Medium:</strong> Repetitive complex tasks involving varying qualities of information. Examples include online experiences tailored to the customer, automatically cleaning up poorly structured or inaccurate data, generation of basic insight from raw data, detecting fraudulent patterns of behaviour, or assigning of workloads to staff.
+              li <strong>Hard:</strong> Complex tasks involving understanding of language and context. Examples include effective chatbot or automated phone support, extraction of useful structured data from written text, images or video, analysis of text or speech for sentiment, predicting behaviour patterns, and deriving deep and complex insights from data.
+              li <strong>Currently impossible:</strong> Tasks involving a deep understanding of complex language, context, emotion, or human activities. Examples include people management, having empathy with disgruntled customers, generating effective marketing material, content creation, product design, software development, and complex decision making with limited information.
+
+            h4 Now
+            p Activities from the "easy" and "medium" categories above are already highly automated in many businesses. Call centres are being replaced by online portals and apps, and information is already processed and reported on in an highly automated way. Software is well understood to be faster, better and cheaper than people for these tasks.
+
+            p Activities from the "hard" category can be partially automated, but typically require some human supervision. For example, chat bots and automated phone support can help to solve a lot of support queries, but businesses that rely on them too much tend to frustrate customers. A person is still needed to help with a complex or unique situation. Here, automation is supporting staff to allow them to do achieve more, but not replacing roles entirely.
+
+            p Activities from the "Currently impossible" category are too complex to automate with current technology. They typically require generalised understanding, empathy, and management intelligence. At best, Artificial Intellgience (AI) today is useful for limited single purpose tasks, like "autopilot" safety features in cars, or recognising faces in photos on your smartphone.
+
+            h4 Future
+            p Increasing numbers of small and medium sized businesses will nail the easy and medium categories above, while selectively adopting the harder automations as their level of automation increases.
+
+            p As AI improves, it will become more generalised and more productised. We'll see AI based tools begin to support activities in the "currently impossible" category, improving the general quality of management and decision making in businesses using it.
+
+            p With globalisation, niching will continue to rise in popularity as a way to carve out a competitive edge. This will be made popular business model, as building highly automated, scaleable businesses with fewer staff and at a lower cost continues to get easier. Niche businesses will typically take the form of "x for x", e.g. "A job board for remote workers", "Business insurance for freelancers", "A trading platform for sneaker enthusiasts".
+
+            p All businesses will have to embrace automation to some degree to survive. Getting smarter, faster, scaleable, and globalised will not be a choice, but a requirement to stay relevant and competitive.
+
+            h3 How can I automate my business?
+
+            h4 Long term thinking
+
+            p Make a commitment to improve your level of automation over the long term. Like getting fit, this may require significant amount of work up front, but eventually you'll just be maintaining a high level of automation, rather than grinding to get there.
+
+            h4 Take a smart approach
+            p Many businesses automate individual activities by taking random stabs at obvious opportunities. This is prone to creating bottlenecks at other stages of the businesses operations, where the level of automation is lower.
+
+            p To truly get the most from automation, you need to look at entire processes, and intelligently apply automation where it can have the greatest effect. From here, you repeatedly working on automating other parts of the process to eliminate bottlenecks and make the entire operation efficient. We wrote <a href="https://weareleaf.com/blog/automate-where-it-matters-with-process-maps" rel="noopener" target="_blank">a blog post on using process maps to achieve this</a>.
+
+            h4 Invest in your own software
+
+            p Many businesses rely too heavily on staff to manually facilitate interactions between separate pieces of off the shelf automation software; copying data, manually creating reports, and updating the same data across many software products is common.
+
+            p By investing in your own bespoke automation software to connect these systems, you can fully automate much of your businesses operation, and create unique intellctual property in the process. A common example of this is integrating the data from your CRM product, your web portal, and your analytics product together.
+
+            p Integrating off the shelf automation products with one another improves scalability, improves data quality, reduces data duplication, and even makes your business easily programmable for new internal products, or other B2B arrangements via an API.
+
+            h4 Niche and scale
+            p Traditional logic tells us that in order to thrive, should remain generalists and attract as much business as possible. Unfortunately, it's hard to grow a business that caters to everyone's needs an automated way, and if you do succeed, you end up blending into a crowd of countless competitors that look the same.
+
+            p Picking a niche makes it easier to automate, as your customers increasingly fit a similar mold that you can build robust processes around. You can then scale this while standing out from the crowd as the clear choice for your particular niche.
+
+            p At a global scale, you can build a decent sized business around even relatively obscure niches, and if you want to grow even further, you can begin to cater for a broader range of customers from a position of notoriety and strength.
+
+            h4 Embrace new revenue streams
+            p As you automate, you'll free up time for your business to work on other things. You can compound the benefit you get from automation by re-using existing automated processes to cater for new markets, or building new products entirely. Common examples include:
+
+            ul
+              li Charging other organisations to integrate with your services on a self-service basis.
+              li Becoming established in a niche at a global level, and <em>then</em> beginning to generalise.
+              li Building entirely new products that complement your existing product offerings.
+              li Teaching, and consulting for other businesses.
+              li Selling customer information in an ethical way.
+
+            p This not only allows you to grow your business, but helps to diversify your revenue to protect against uncertainty in the future.
+
+            h4 Focus on the 80%
+
+            p The Pareto Principle states that roughly 80% of effects come from 20% of causes. While it's not a hard rule, it applies in an uncanny way to all kinds of situations. For example, in automated businesses, it's normal for 80% of the manual work to come from 20% (or fewer) of the customers.
+
+            p With this in mind, it often makes sense to focus your automation efforts on catering for the 80% of customers that fit neatly into a similar mold, rather than wasting a lot of time and effort going after the unpredictable 20% that need human intervention to process. You may even want to hone your marketing efforts at attracting these customers, and letting those which prevent you from automating go elsewhere.
+
+            h3 Getting started
+            p To get you started, we've shared <a href="https://weareleaf.com/blog/automate-where-it-matters-with-process-maps">the workflow we use for business automation</a>. It uses process maps to identify the highest value automation opportunities in your business, and guides you through the most efficient route to increasing the speed, accuracy, scaleability, competitiveness, and global reach of your business through automation.
+
+            p We're also specialists in building digital products & services that automate business, so if you want a helping hand, don't hesitate to <a href="https://weareleaf.com/project-planner" refl="noopener" target="_blank">get in touch</a>.
+
+        .grid__item
+          +author-bio({
+            author: {
+              authorName: "Mike Carter",
+              authorDetails: "Director · Leaf",
+              authorThumbnail: {
+                src: "/assets/images/mike_blog.jpg",
+                alt: "Mike"
+              }
+            },
+            twitterUrl: "https://twitter.com/we_are_leaf",
+            twitterImage: {
+              src: "https://img.icons8.com/metro/420/twitter.png",
+              alt: "Find Mike on Twitter",
+            },
+            linkedinUrl: "https://www.linkedin.com/company/weareleaf/",
+            linkedinImage: {
+              src: "https://image.flaticon.com/icons/png/512/34/34227.png",
+              alt: "Find Mike on LinkedIn",
+            },
+            authorParagraph: "I'm a Software Engineer & Director at Leaf, and like the web, dogs, food & travel.",
+            authorLinkUrl: "https://weareleaf.com/company",
+          })
+
+    .section
+      .container
+        hr.divider.divider--margin-blog
+        .grid.grid--blog.grid--blog-post

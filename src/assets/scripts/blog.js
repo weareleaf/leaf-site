@@ -9,22 +9,22 @@ const gridItems = [
   {
     author: {
       authorName: 'Mike Carter',
-      authorDetails: '6 August 2019 · 8 min read',
+      authorDetails: '13 August 2019 · 8 min read',
       authorThumbnail: {
         src: '/assets/images/mike_blog.jpg',
         fallbackSrc: '/assets/images/mike_blog.jpg',
         alt: 'Mike'
       }
     },
-    postUrl: '/blog/why-automate',
+    postUrl: '/blog/how-to-thrive-in-an-automated-society',
     postImage: {
-      src: '/assets/images/blog/thumbnails/walkers-hill.jpg',
-      fallbackSrc: '/assets/images/blog/thumbnails/walkers-hill.jpg',
-      alt: 'Why automate?'
+      src: '/assets/images/blog/thumbnails/code.jpg',
+      fallbackSrc: '/assets/images/blog/thumbnails/code.jpg',
+      alt: 'How to thrive in an automated society'
     },
-    postHeading: 'Why automate?',
+    postHeading: 'How to thrive in an automated society',
     postText:
-      "We've experienced how competing stakeholders, unclear ROIs, and uncertainty can make committing to business automation difficult. Process maps provide a powerful way to clear the fog."
+      "How can your business thrive when you're constantly being disrupted by leaner, faster, more automated competition on a global scale?"
   },
   {
     author: {
