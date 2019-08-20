@@ -9,20 +9,20 @@ const gridItems = [
   {
     author: {
       authorName: 'Mike Carter',
-      authorDetails: '13 August 2019 · 8 min read',
+      authorDetails: '20 August 2019 · 8 min read',
       authorThumbnail: {
         src: '/assets/images/mike_blog.jpg',
         fallbackSrc: '/assets/images/mike_blog.jpg',
         alt: 'Mike'
       }
     },
-    postUrl: '/blog/how-to-thrive-in-an-automated-society',
+    postUrl: '/blog/how-to-thrive-in-an-automated-business-world',
     postImage: {
       src: '/assets/images/blog/thumbnails/code.jpg',
       fallbackSrc: '/assets/images/blog/thumbnails/code.jpg',
       alt: 'How to thrive in an automated society'
     },
-    postHeading: 'How to thrive in an automated society',
+    postHeading: 'How to thrive in an automated business world',
     postText:
       "How can your business thrive when you're constantly being disrupted by leaner, faster, more automated competition on a global scale?"
   },
