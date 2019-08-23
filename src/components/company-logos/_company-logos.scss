@@ -1,0 +1,27 @@
+.logos {
+  &__list {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+  }
+
+  .--inline & {
+    display: inline-block;
+    margin: 0 $spacing-horizontal-lg 0 0;
+  }
+
+  &__link {
+    display: block;
+  }
+
+  svg {
+    display: inline-block;
+    height: auto;
+    vertical-align: middle;
+    width: 50%;
+  }
+}

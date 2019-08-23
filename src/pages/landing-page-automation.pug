@@ -54,6 +54,12 @@ block pageComponents
           }
         ]
       })
+  
+  section.section
+    .container
+      +company-logos({
+        logosModifier: "inline"
+      })
 
   section.section
     .container
@@ -72,7 +78,11 @@ block pageComponents
 
         .grid__item
             +sidebar([{
-              item: "We're a <strong>remote studio</strong>, which not only helps us recruit the best talent, but prioritises both our own and your time."
+              item: "Use automation to help make your business more <strong> globally scalable </strong> for less of the cost."
             },{
-              item: "Invoices are issued at the end of each calendar month, and are to be paid within <strong>14 days</strong>."
+              item: "Reduce your <strong> staffing costs </strong>, by allowing automated software to effectively handle workloads <strong> 24/7 </strong>."
+            },{
+              item: "Increase the <strong> speed </strong> and <strong> reliability </strong> of your services with the help of smarter, automated workflows."
+            },{
+              item: "Maximise your products reach by using automation to <strong> integrate your systems </strong> with other businesses."
             }])
