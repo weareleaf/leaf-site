@@ -1,10 +1,11 @@
 .metric {
   display: flex;
   flex-wrap: wrap;
+  justify-content: space-between;
 
   &__item {
     margin-bottom: $spacing-vertical;
-    width: 100%;
+    width: 320px;
 
     @media screen and (min-width: map-get($bp, 'sm')) {
       width: 50%;
