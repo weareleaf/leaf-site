@@ -54,3 +54,25 @@ block pageComponents
           }
         ]
       })
+
+  section.section
+    .container
+      hr.divider.divider--margin-top
+
+  section.section
+    .container
+      +page-header({
+        pageHeaderHeading: "Want to hear more?",
+        pageHeaderText: "We're always happy to help, so if there's anything you want to know, feel free to drop us an email and we'll get back to you as quickly as possible."
+      })
+
+      .grid.grid--two-thirds
+        .grid__item
+          +contact-form
+
+        .grid__item
+            +sidebar([{
+              item: "We're a <strong>remote studio</strong>, which not only helps us recruit the best talent, but prioritises both our own and your time."
+            },{
+              item: "Invoices are issued at the end of each calendar month, and are to be paid within <strong>14 days</strong>."
+            }])
