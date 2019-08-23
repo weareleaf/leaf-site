@@ -1,0 +1,43 @@
+extends ../layouts/page.pug
+
+block prepend vars
+  -var pageTitle = "Bespoke business automation - Leaf"
+  -var metaUrl = "https://weareleaf.com"
+  -var metaTitle = "Bespoke business automation"
+  -var metaDescription = "We're specialists in building digital products & services that automate business."
+
+block pageComponents
+  +hero({
+    heroModifier: "home",
+    heroHeading: metaTitle,
+    heroText: metaDescription,
+    heroButton: {
+      buttonUrl: "/what-we-do",
+      buttonText: "Get in touch with us"
+    },
+    heroImage: {
+      src: "/assets/images/heros/home.gif",
+      alt: "We work with you to uncover automation opportunities.",
+    }
+  })
+
+  section.section
+    .container
+      +page-header({
+        pageHeaderHeading: "Improve your products",
+        pageHeaderText: "We have a proven success rate in helping businesses to automate their processes through intelligent design and software solutions."
+      })
+  
+  section.section
+    .container
+      .grid.grid--symmetrical-card
+        .grid__item
+          img(src="/assets/images/laced.jpg", alt="Laced")
+
+        .grid__item
+          img(src="/assets/images/rift.jpg", alt="Rift")
+
+  section.section.section--sm-spacing
+    .container
+      h2.small From the blog
+      .grid.grid--blog.grid--blog-preview
