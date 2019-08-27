@@ -35,6 +35,22 @@ body {
   }
 }
 
+.section--margin-b {
+  margin-bottom: 0;
+
+  @media screen and (min-width: map-get($bp, 'md')) {
+    margin-bottom: 6em;
+  }
+
+  &--sm-spacing {
+    margin-bottom: $spacing-vertical-lg;
+
+    @media screen and (min-width: map-get($bp, 'lg')) {
+      margin-bottom: $spacing-vertical-xl;
+    }
+  }
+}
+
 .blog-post {
   @media screen and (min-width: map-get($bp, 'xl')) {
     padding-right: 60px;
