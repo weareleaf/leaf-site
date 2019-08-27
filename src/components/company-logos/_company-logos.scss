@@ -1,6 +1,7 @@
 .logos {
   &__list {
     display: flex;
+    flex-wrap: wrap;
     align-items: center;
     justify-content: center;
     list-style: none;
@@ -8,18 +9,21 @@
     padding: 0;
     width: 100%;
 
-    @media screen and (max-width: map-get($bp, 'md')) {
-      flex-wrap: wrap;
+    @media screen and (min-width: map-get($bp, 'md')) {
+      flex-wrap: nowrap;
+      justify-content: space-between;
     }
   }
 
   &__item {
-    flex: 0 2 auto;
-    padding: 0 $spacing-horizontal;
+    flex: 0 0 auto;
+    margin-bottom: $spacing-horizontal-lg;
+    padding: $spacing-horizontal-sm $spacing-horizontal-lg;
 
-    @media screen and (max-width: map-get($bp, 'md')) {
-      flex: 0 0 auto;
-      padding: $spacing-horizontal-sm $spacing-horizontal-lg;
+    @media screen and (min-width: map-get($bp, 'md')) {
+      flex: 0 2 auto;
+      margin-bottom: 0;
+      padding: 0 $spacing-horizontal;
     }
   }
 }

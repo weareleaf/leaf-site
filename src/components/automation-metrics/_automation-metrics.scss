@@ -5,15 +5,11 @@
 
   &__item {
     margin-bottom: $spacing-vertical;
-    width: 320px;
+    width: 100%;
 
-    @media screen and (min-width: map-get($bp, 'sm')) {
-      width: 50%;
-    }
-
-    @media screen and (min-width: map-get($bp, 'lg')) {
-      margin-bottom: 0;
-      width: 25%;
+    @media screen and (min-width: map-get($bp, 'md')) {
+      flex-wrap: nowrap;
+      width: 320px;
     }
   }
 
