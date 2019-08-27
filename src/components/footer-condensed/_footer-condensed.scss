@@ -1,30 +1,30 @@
 .footer-condensed {
   background-color: $color-grey-green;
   display: block;
-  padding: $spacing-vertical-lg 0;
+  padding: $spacing-vertical * 2;
 
   @media screen and (min-width: map-get($bp, 'md')) {
-    padding: $spacing-vertical * 6 0;
+    padding: $spacing-vertical * 2;
   }
 
   &__grid {
     display: -ms-grid;
     display: grid;
     grid-gap: 1em;
-    -ms-grid-columns: 1fr 1fr;
+    -ms-grid-columns: 1fr;
     -ms-grid-rows: 100% $spacing-vertical 100%;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr;
 
     @media screen and (min-width: map-get($bp, 'md')) {
-      -ms-grid-columns: 1fr 1fr 1fr;
+      -ms-grid-columns: 1fr;
       -ms-grid-rows: 100% 100%;
     }
 
     @media screen and (min-width: map-get($bp, 'lg')) {
-      -ms-grid-columns: 1fr 1fr 1fr;
+      -ms-grid-columns: 1fr;
       -ms-grid-rows: 100% 100;
-      grid-template-columns: 1fr 1fr 1fr;
-      grid-template-rows: 1fr 1fr;
+      grid-template-columns: 1fr;
+      grid-template-rows: 1fr;
     }
   }
 
@@ -38,7 +38,7 @@
     @media screen and (min-width: map-get($bp, 'md')) {
       font-size: 0.75em;
       grid-row: 2 / 3;
-      text-align: right;
+      text-align: left;
       -ms-grid-row: 1;
       -ms-grid-column: 3;
     }
@@ -54,7 +54,7 @@
       font-size: 0.75em;
       grid-column: 3;
       grid-row: 1 / 2;
-      text-align: right;
+      text-align: left;
       -ms-grid-row: 2;
       -ms-grid-column: 3;
     }
