@@ -150,11 +150,9 @@
     }
   }
 
-  @media screen and (min-width: map-get($bp, 'sm')) {
-    &--metrics {
-      display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
-    }
+  &--metrics {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
   }
 
   &--footer {

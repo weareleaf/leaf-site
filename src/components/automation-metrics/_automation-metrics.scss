@@ -1,15 +1,6 @@
 .metric {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-
   &__item {
-    margin-bottom: $spacing-vertical;
     width: 100%;
-
-    @media screen and (min-width: map-get($bp, 'md')) {
-      width: 320px;
-    }
   }
 
   &__heading {
