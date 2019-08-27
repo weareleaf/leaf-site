@@ -8,7 +8,6 @@
     width: 100%;
 
     @media screen and (min-width: map-get($bp, 'md')) {
-      flex-wrap: nowrap;
       width: 320px;
     }
   }
