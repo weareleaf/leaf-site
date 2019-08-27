@@ -2,25 +2,24 @@
   &__list {
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: center;
     list-style: none;
     margin: 0;
     padding: 0;
     width: 100%;
+
+    @media screen and (max-width: map-get($bp, 'md')) {
+      flex-wrap: wrap;
+    }
   }
 
-  .--inline & {
-    display: inline-block;
-    margin: 0 $spacing-horizontal-lg 0 0;
-  }
+  &__item {
+    flex: 0 2 auto;
+    padding: 0 $spacing-horizontal;
 
-  &__link {
-    display: block;
-  }
-
-  svg {
-    display: inline-block;
-    vertical-align: middle;
-    width: auto;
+    @media screen and (max-width: map-get($bp, 'md')) {
+      flex: 0 0 auto;
+      padding: $spacing-horizontal-sm $spacing-horizontal-lg;
+    }
   }
 }
