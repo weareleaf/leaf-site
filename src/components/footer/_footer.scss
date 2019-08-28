@@ -139,7 +139,12 @@
   }
 
   &__logo {
-    width: 3.3em;
+    display: none;
+
+    @media screen and (min-width: map-get($bp, 'md')) {
+      display: block;
+      width: 3.3em;
+    }
   }
 
   //align the logo to the right of the grid
