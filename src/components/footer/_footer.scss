@@ -129,6 +129,7 @@
 
     &--condensed {
       grid-column-start: 1;
+      margin-bottom: 0;
       text-align: left;
     }
   }
@@ -137,8 +138,13 @@
     color: $color-grey-dark;
   }
 
-  .logo-container {
-    grid-column-start: 4;
-    width: 25%;
+  &__logo {
+    width: 3.3em;
+  }
+
+  //align the logo to the right of the grid
+
+  .grid__item.grid__item--align {
+    grid-column-start: -1;
   }
 }
