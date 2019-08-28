@@ -143,13 +143,8 @@
 
     @media screen and (min-width: map-get($bp, 'md')) {
       display: block;
+      margin-left: auto;
       width: 3.3em;
     }
-  }
-
-  //align the logo to the right of the grid
-
-  .grid__item.grid__item--align {
-    grid-column-start: -1;
   }
 }
