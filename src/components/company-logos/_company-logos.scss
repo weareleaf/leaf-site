@@ -23,7 +23,7 @@
     @media screen and (min-width: map-get($bp, 'md')) {
       flex: 0 2 auto;
       margin-bottom: 0;
-      padding: 0 $spacing-horizontal;
+      padding: 0;
     }
 
     &--last {
