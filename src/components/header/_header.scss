@@ -49,6 +49,13 @@
     }
   }
 
+  .email-button {
+    background-color: $color-red;
+    border: none;
+    border-radius: $border-radius;
+    padding: 25px 22px 25px 21px;
+  }
+
   &__address {
     bottom: $spacing-vertical * 3.5;
     display: none;
