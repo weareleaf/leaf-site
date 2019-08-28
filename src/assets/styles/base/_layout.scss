@@ -33,6 +33,10 @@ body {
       margin-bottom: $spacing-vertical-xl;
     }
   }
+
+  &--condensed {
+    margin-bottom: 0;
+  }
 }
 
 .section--margin-b {
