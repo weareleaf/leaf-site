@@ -1,0 +1,5 @@
+mixin email-button(c)
+  if c.buttonUrl
+    a.button(class= c.buttonModifier ? "button--" + c.buttonModifier : "" href= c.buttonUrl)= c.buttonText
+  else
+    button.button(class= c.buttonModifier ? "button--" + c.buttonModifier : "" type= c.buttonType ? c.buttonType : "button")= c.buttonText

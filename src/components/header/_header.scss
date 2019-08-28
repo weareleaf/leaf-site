@@ -38,6 +38,16 @@
     }
   }
 
+  &__email {
+    position: absolute;
+    right: 1.25rem;
+    top: 2.5rem;
+
+    @media screen and (min-width: 90em) {
+      top: $spacing-vertical * 3.5;
+    }
+  }
+
   &__address {
     bottom: $spacing-vertical * 3.5;
     display: none;
