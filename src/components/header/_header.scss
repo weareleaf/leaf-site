@@ -44,6 +44,7 @@
     top: 2.5rem;
 
     @media screen and (min-width: 90em) {
+      right: $spacing-horizontal-xl;
       top: $spacing-vertical * 3.5;
     }
   }
