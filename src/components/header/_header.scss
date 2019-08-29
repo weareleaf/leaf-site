@@ -53,7 +53,9 @@
     background-color: $color-red;
     border: none;
     border-radius: $border-radius;
+    cursor: pointer;
     padding: 12px 10px 12px 10px;
+    transition: background-color 250ms ease-in-out, transform 150ms ease;
 
     svg {
       height: 12px;
@@ -70,6 +72,11 @@
         height: 23px;
         width: 31px;
       }
+    }
+
+    &:hover,
+    &:focus {
+      background-color: lighten($color-red, 5%);
     }
   }
 
