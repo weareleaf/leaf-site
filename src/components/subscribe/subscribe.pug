@@ -6,7 +6,5 @@ mixin subscribe
           p.subscribe__text <strong>Subscribe to the Leaf newsletter</strong> for fortnightly emails on business automation best practices and company updates.
         
         .grid__item
-          form.form
-            .form__group
-              label.form__label(for="name") What's your name?
-              input#name.form__input(name="name" type="text" placeholder="James P. Sullivan")
+          +email-input ({
+          })
