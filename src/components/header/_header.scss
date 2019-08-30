@@ -63,7 +63,7 @@
       width: 16px;
     }
 
-    @media screen and (min-width: map-get($bp, 'md')) {
+    @media screen and (min-width: map-get($bp, 'sm')) {
       background-color: $color-red;
       border: none;
       border-radius: $border-radius;
