@@ -42,7 +42,7 @@
     text-decoration: none;
     transition: background-color 250ms ease-in-out, transform 150ms ease;
 
-    @media screen and (min-width: map-get($bp, sm)) {
+    @media screen and (min-width: map-get($bp, lg)) {
       font-size: $font-size;
     }
 
