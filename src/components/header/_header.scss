@@ -54,7 +54,7 @@
     border: none;
     border-radius: $border-radius;
     cursor: pointer;
-    opacity: 0;
+    opacity: 1;
     padding: 12px 10px 12px 10px;
     transition: background-color 250ms ease-in-out, transform 150ms ease;
 
@@ -81,7 +81,7 @@
     }
 
     &--visible {
-      opacity: 1;
+      opacity: 0;
     }
   }
 
