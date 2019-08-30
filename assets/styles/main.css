@@ -641,9 +641,9 @@ blockquote {
     -ms-grid-rows: 100% 2em 100% 2em 100% 2em 100%; }
     @media screen and (min-width: 34em) {
       .grid--profiles {
-        -ms-grid-columns: 1fr 6em 1fr;
+        -ms-grid-columns: 1fr 4em 1fr;
         -ms-grid-rows: 100% 4em 100%;
-        grid-column-gap: 6em;
+        grid-column-gap: 4em;
         grid-row-gap: 4em;
         grid-template-columns: 1fr 1fr; } }
     @media screen and (min-width: 62em) {
@@ -651,10 +651,10 @@ blockquote {
         -ms-grid-columns: 1fr 4em 1fr 4em 1fr 4em 1fr;
         -ms-grid-rows: 100%;
         grid-column-gap: 4em;
-        grid-template-columns: 1fr 1fr 1fr 1fr; } }
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr; } }
     @media screen and (min-width: 75em) {
       .grid--profiles {
-        grid-column-gap: 6em; } }
+        grid-column-gap: 4em; } }
   .grid--tile {
     -ms-grid-columns: 1fr;
     -ms-grid-rows: 100%;
