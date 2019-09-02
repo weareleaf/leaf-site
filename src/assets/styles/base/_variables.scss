@@ -8,6 +8,7 @@ $color-grey-lightest: #e2e3e5;
 $color-grey-light: #c6c7cc;
 $color-grey: #6f7075;
 $color-grey-dark: #35363d;
+$color-earth-brown: #504249;
 $color-grey-dark-transparent: rgba(53, 54, 61, 0.9);
 $color-grey-green: #f0f3f1;
 $color-white: #fff;
@@ -20,7 +21,7 @@ $color-heha: #f2b6e8;
 $color-keen: #b6d9f2;
 $color-rift: #f2b6b6;
 $color-zendesk: #b6f2f2;
-$color-laced: #879AC9;
+$color-laced: #879ac9;
 
 // Borders
 // ==================================================
@@ -53,10 +54,10 @@ $bp: (
 
 $font-family-cursive: cursive !default;
 $font-family-monospace: monospace !default;
-$font-family-sans-serif-light: "Larsseit-Light", sans-serif !default;
-$font-family-sans-serif: "Larsseit-Regular", sans-serif !default;
-$font-family-sans-serif-medium: "Larsseit-Medium", sans-serif !default;
-$font-family-sans-serif-bold: "Larsseit-Bold", sans-serif !default;
+$font-family-sans-serif-light: 'Larsseit-Light', sans-serif !default;
+$font-family-sans-serif: 'Larsseit-Regular', sans-serif !default;
+$font-family-sans-serif-medium: 'Larsseit-Medium', sans-serif !default;
+$font-family-sans-serif-bold: 'Larsseit-Bold', sans-serif !default;
 $font-family-serif: serif !default;
 
 $font-family: $font-family-sans-serif !default;

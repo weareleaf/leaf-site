@@ -1,0 +1,60 @@
+.email {
+  &__field {
+    display: flex;
+  }
+
+  &__input {
+    appearance: none;
+    background-color: $color-off-white;
+    border: 1px solid $color-off-white;
+    border-radius: $border-radius 0 0 $border-radius;
+    color: $color-grey-dark;
+    display: block;
+    font-size: 0.9em;
+    line-height: 1;
+    margin: 0;
+    padding: ($spacing-vertical * 1.1) $spacing-horizontal $spacing-vertical;
+    transition: border-color 0.15s ease-in-out;
+    width: 100%;
+
+    &--textarea {
+      height: auto;
+      min-height: 10em;
+      resize: vertical;
+    }
+
+    &.erroneous {
+      border: 1px solid $color-red;
+    }
+  }
+
+  &__button {
+    background-color: $color-red;
+    border: none;
+    border-radius: 0 $border-radius $border-radius 0;
+    color: $color-white;
+    cursor: pointer;
+    font-family: $font-family-sans-serif-medium;
+    font-size: 0.938rem;
+    margin: 0;
+    padding: 0 $spacing-horizontal 0 $spacing-horizontal;
+    text-align: center;
+    text-decoration: none;
+    transition: background-color 250ms ease-in-out, transform 150ms ease;
+
+    @media screen and (min-width: map-get($bp, lg)) {
+      font-size: $font-size;
+    }
+
+    &:hover,
+    &:focus {
+      background-color: lighten($color-red, 5%);
+      text-decoration: none;
+    }
+  }
+
+  .error {
+    color: $color-red;
+    font-size: 0.75em;
+  }
+}

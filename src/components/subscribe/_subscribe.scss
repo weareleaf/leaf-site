@@ -1,0 +1,17 @@
+.subscribe {
+  background-color: $color-earth-brown;
+  display: block;
+  padding: $spacing-blog-grid 0;
+
+  &__text {
+    color: $color-white;
+    font-size: 1.133em;
+    line-height: 1.412em;
+    margin: 0;
+
+    @media screen and (min-width: map-get($bp, 'sm')) {
+      font-size: 1.1em;
+      line-height: 1.545em;
+    }
+  }
+}

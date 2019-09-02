@@ -1,0 +1,6 @@
+mixin email-input
+  script#howdy-script(async src='https://static.howdyform.com/howdyClient.js?token=aGVsbG9Ad2VhcmVsZWFmLmNvbQ==' data-howdy-recipient='hello@weareleaf.com')
+  form.email
+    .email__field
+      input#email.email__input(name="email" type="email" placeholder="Your email address")
+      button.email__button(type='button') Subscribe

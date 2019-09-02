@@ -150,6 +150,18 @@
     }
   }
 
+  &--subscribe {
+    -ms-grid-columns: 1fr;
+    -ms-grid-rows: 100% $spacing-vertical-lg 100%;
+    grid-column-gap: 4em;
+
+    @media screen and (min-width: map-get($bp, 'md')) {
+      -ms-grid-columns: 1fr $spacing-horizontal-lg 1fr;
+      -ms-grid-rows: 100%;
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+
   &--footer {
     -ms-grid-columns: 1fr;
     -ms-grid-rows: 100% $spacing-vertical-lg 100%;
