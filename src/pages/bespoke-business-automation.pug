@@ -1,0 +1,105 @@
+extends ../layouts/automation-page.pug
+
+block prepend vars
+  -var pageTitle = "Bespoke business automation - Leaf"
+  -var metaUrl = "https://weareleaf.com"
+  -var metaTitle = "Bespoke business automation"
+  -var metaDescription = "We're specialists in building digital products & services that automate business."
+
+block pageComponents
+  +hero({
+    heroModifier: "home",
+    heroHeading: metaTitle,
+    heroText: metaDescription,
+    heroButton: {
+      buttonUrl: "#contact",
+      buttonText: "Get in touch"
+    },
+    heroImage: {
+      src: "/assets/images/heros/home.gif",
+      alt: "We work with you to uncover automation opportunities.",
+    }
+  })
+
+  section.section
+    .container
+      +page-header({
+        pageHeaderHeading: "Value to your business",
+        pageHeaderText: "Our unique approach delivers efficient, scaleable, and reliable automation that transforms the organisations we work with, while keeping value delivered front and centre."
+      })
+
+  section.section
+    .container
+      .grid.grid--symmetrical-card
+        .grid__item
+          img(src="/assets/images/laced.jpg", alt="Laced")
+        .grid__item
+          img(src="/assets/images/rift.jpg", alt="Rift")
+
+  section.section
+    .container
+      .grid.grid--metrics
+        .grid__item
+          +automation-metrics({
+            metric: [
+              {
+                metricHeading: "Increased efficiency",
+                metricText: "By automating away human involvement from business processes, you can scale up without hiring new staff."
+              }
+            ]
+          })
+
+        .grid__item
+          +automation-metrics({
+            metric: [
+              {
+                metricHeading: "Higher productivity",
+                metricText: "Automations can complete in milliseconds what people take hours to do, giving your staff time for valuable creative work."
+              }
+            ]
+          })
+
+        .grid__item
+          +automation-metrics({
+            metric: [
+              {
+                metricHeading: "Consistent reliability",
+                metricText: "No more mistakes! Software automations operate perfectly all year long, and don't get tired."
+              }
+            ]
+          })
+
+  section.section--margin-b
+    .container
+      +company-logos({
+      })
+
+  section.section
+    .container
+      hr.divider.divider--margin-top
+
+  section#contact.section
+    .container
+      +page-header({
+        pageHeaderHeading: "Want to hear more?",
+        pageHeaderText: "We're always happy to help. If there's anything you want to know, feel free to drop us an email and we'll get back to you as quickly as possible."
+      })
+
+      .grid.grid--two-thirds
+        .grid__item
+          +contact-form
+
+        .grid__item
+            +sidebar([{
+              item: "We'll work with you to define a clear <strong>return on investment</strong> for your business."
+              },{
+              item: "Reduce your <strong>staffing costs</strong> with automations that handle workloads <strong>24/7</strong>."
+            },{
+              item: "Increase the <strong>speed</strong> and <strong>reliability</strong> of your business with smarter, automated workflows."
+            },{
+              item: "Create <strong>new revenue streams</strong>, with automations that integrate your business with other products."
+            }])
+
+  section.section--condensed
+    +footer-condensed ({
+  })

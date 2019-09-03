@@ -1,0 +1,218 @@
+.form {
+  &__fieldset--spacing {
+    border: 0;
+    border-top: 3px solid $color-grey-lightest;
+    margin: -3px 0 $spacing-vertical-lg;
+    padding: 0;
+
+    @media screen and (min-width: map-get($bp, 'md')) {
+      margin: -3px 0 $spacing-vertical-lg;
+    }
+  }
+
+  &__fieldset--no-border {
+    border: 0;
+    border-top: none;
+    margin: -3px 0 $spacing-vertical-lg;
+    padding: 0;
+
+    @media screen and (min-width: map-get($bp, 'md')) {
+      margin: -3px 0 $spacing-vertical * 3;
+    }
+  }
+
+  &__legend {
+    background-color: $color-white;
+    color: $color-grey-dark;
+    font-family: $font-family-sans-serif-bold;
+    font-size: 1.5em;
+    margin-bottom: 0.767em;
+    padding-right: $spacing-horizontal;
+    position: relative;
+  }
+
+  &__grid {
+    @media screen and (min-width: map-get($bp, 'md')) {
+      display: -ms-grid;
+      display: grid;
+
+      &--half {
+        -ms-grid-columns: 1fr ($spacing-horizontal * 3) 1fr;
+        grid-template-columns: 1fr 1fr;
+        grid-column-gap: 3em;
+      }
+
+      &--custom {
+        -ms-grid-columns: 1fr ($spacing-horizontal * 3) 1fr;
+        -ms-grid-rows: 100% $spacing-vertical-lg 100% $spacing-vertical-lg 100%;
+        grid-template-columns: 1fr 1fr;
+        grid-column-gap: 3em;
+        grid-row-gap: 2em;
+      }
+    }
+  }
+
+  &__group {
+    &:not(:last-child) {
+      margin-bottom: $spacing-vertical;
+    }
+
+    @media screen and (min-width: map-get($bp, 'md')) {
+      &:not(:last-child) {
+        margin-bottom: 0;
+      }
+
+      .form__grid--custom & {
+        &:nth-child(1) {
+          -ms-grid-row: 1;
+          -ms-grid-column: 1;
+          grid-column: 1;
+        }
+
+        &:nth-child(2) {
+          -ms-grid-row: 1;
+          -ms-grid-column: 3;
+          -ms-grid-column-span: 3;
+          grid-column: 2;
+        }
+
+        &:nth-child(3) {
+          -ms-grid-row: 3;
+          -ms-grid-column: 1;
+          -ms-grid-column-span: 3;
+          grid-column: 1 / 3;
+        }
+      }
+
+      .form__grid--half & {
+        &:nth-child(1) {
+          -ms-grid-row: 1;
+          -ms-grid-column: 1;
+        }
+
+        &:nth-child(2) {
+          -ms-grid-row: 1;
+          -ms-grid-column: 3;
+        }
+      }
+    }
+  }
+
+  &__label {
+    color: $color-grey-dark;
+    display: inline-block;
+    font-family: $font-family-sans-serif-medium;
+    margin-bottom: 0.1em;
+
+    &--checkbox {
+      color: $color-grey;
+      font-family: $font-family;
+      font-size: 0.9em;
+      margin: 0;
+
+      &::before,
+      &::after {
+        content: '';
+        position: absolute;
+      }
+
+      &::before {
+        background: $color-off-white;
+        border-radius: $border-radius / 2;
+        height: 18px;
+        left: 0;
+        top: 50%;
+        transform: translateY(-53%);
+        width: 18px;
+
+        @media screen and (min-width: map-get($bp, 'md')) {
+          transform: translateY(-54%);
+        }
+
+        @media screen and (min-width: map-get($bp, 'lg')) {
+          transform: translateY(-60%);
+        }
+      }
+
+      &::after {
+        border: solid;
+        border-color: $color-white;
+        border-top-color: transparent;
+        border-width: 0 0 2px 2px;
+        height: 6px;
+        left: 4px;
+        opacity: 0;
+        top: 5px;
+        transform: rotate(-45deg);
+        width: 10px;
+
+        @media screen and (min-width: map-get($bp, 'md')) {
+          border-width: 0 0 3px 3px;
+          height: 7px;
+          left: 3px;
+          top: 8px;
+          width: 12px;
+        }
+      }
+    }
+  }
+
+  &__input {
+    appearance: none;
+    background-color: $color-off-white;
+    border: 1px solid $color-off-white;
+    border-radius: $border-radius;
+    color: $color-grey-dark;
+    display: block;
+    font-size: 0.9em;
+    line-height: 1;
+    margin: 0;
+    padding: ($spacing-vertical * 1.1) $spacing-horizontal $spacing-vertical;
+    transition: border-color 0.15s ease-in-out;
+    width: 100%;
+
+    &--textarea {
+      height: auto;
+      min-height: 10em;
+      resize: vertical;
+    }
+
+    &.erroneous {
+      border: 1px solid $color-red;
+    }
+  }
+
+  &__checkboxes {
+    margin-top: $spacing-vertical;
+  }
+
+  &__checkbox {
+    margin-bottom: $spacing-vertical-sm;
+    padding-left: 1.5em;
+    position: relative;
+
+    @media screen and (min-width: map-get($bp, 'sm')) {
+      padding-left: 1.35em;
+    }
+  }
+
+  &__checkbox-input {
+    margin: 0;
+    opacity: 0;
+    position: absolute;
+    z-index: 1;
+
+    &:checked + .form__label--checkbox::before {
+      background: $brand-primary;
+    }
+
+    &:checked + .form__label--checkbox::after {
+      opacity: 1;
+    }
+  }
+
+  .error {
+    color: $color-red;
+    font-size: 0.75em;
+  }
+}

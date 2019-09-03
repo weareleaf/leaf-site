@@ -150,6 +150,11 @@
     }
   }
 
+  &--metrics {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  }
+
   &--footer {
     -ms-grid-columns: 1fr;
     -ms-grid-rows: 100% $spacing-vertical-lg 100%;
