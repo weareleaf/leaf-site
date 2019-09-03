@@ -2,6 +2,7 @@ html {
   box-sizing: border-box;
   min-height: 100%;
   position: relative;
+  scroll-behavior: smooth;
 }
 
 body {
@@ -21,6 +22,26 @@ body {
 
 .section {
   margin-bottom: $spacing-vertical-xl;
+
+  @media screen and (min-width: map-get($bp, 'md')) {
+    margin-bottom: 6em;
+  }
+
+  &--sm-spacing {
+    margin-bottom: $spacing-vertical-lg;
+
+    @media screen and (min-width: map-get($bp, 'lg')) {
+      margin-bottom: $spacing-vertical-xl;
+    }
+  }
+
+  &--condensed {
+    margin-bottom: 0;
+  }
+}
+
+.section--margin-b {
+  margin-bottom: 0;
 
   @media screen and (min-width: map-get($bp, 'md')) {
     margin-bottom: 6em;

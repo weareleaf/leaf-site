@@ -38,6 +38,53 @@
     }
   }
 
+  &__email {
+    position: absolute;
+    right: 1.25rem;
+    top: 2.5rem;
+
+    @media screen and (min-width: 90em) {
+      right: $spacing-horizontal-xl;
+      top: $spacing-vertical * 3.5;
+    }
+  }
+
+  .email-button {
+    background-color: $color-red;
+    border: none;
+    border-radius: $border-radius;
+    cursor: pointer;
+    opacity: 1;
+    padding: 12px 10px 12px 10px;
+    transition: background-color 250ms ease-in-out, transform 150ms ease;
+
+    svg {
+      height: 12px;
+      width: 16px;
+    }
+
+    @media screen and (min-width: map-get($bp, 'sm')) {
+      background-color: $color-red;
+      border: none;
+      border-radius: $border-radius;
+      padding: 25px 21px 25px 21px;
+
+      svg {
+        height: 23px;
+        width: 31px;
+      }
+    }
+
+    &:hover,
+    &:focus {
+      background-color: lighten($color-red, 5%);
+    }
+
+    &--visible {
+      opacity: 0;
+    }
+  }
+
   &__address {
     bottom: $spacing-vertical * 3.5;
     display: none;

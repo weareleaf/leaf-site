@@ -1,0 +1,6 @@
+mixin automation-metrics(c)
+  .metric
+    each metric in c.metric
+      .metric__item
+        h4.metric__heading= metric.metricHeading
+        p.metric__text= metric.metricText
