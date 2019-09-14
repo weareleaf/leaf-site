@@ -1,4 +1,4 @@
 mixin page-header(c)
   .page-header(class= c.pageHeaderModifier ? "page-header--" + c.pageHeaderModifier : "")
     h2.page-header__heading= c.pageHeaderHeading
-    p.page-header__text= c.pageHeaderText
+    p.page-header__text!= c.pageHeaderText

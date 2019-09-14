@@ -3,7 +3,7 @@ extends ../layouts/automation-page.pug
 block prepend vars
   -var pageTitle = "Bespoke business automation - Leaf"
   -var metaUrl = "https://weareleaf.com"
-  -var metaTitle = "Bespoke business automation"
+  -var metaTitle = "Wasting time on repetitive work?"
   -var metaDescription = "We're specialists in building digital products & services that automate business."
 
 block pageComponents
@@ -25,16 +25,30 @@ block pageComponents
     .container
       +page-header({
         pageHeaderHeading: "Value to your business",
-        pageHeaderText: "Our unique approach delivers efficient, scaleable, and reliable automation that transforms the organisations we work with, while keeping value delivered front and centre."
+        pageHeaderText: "Our automations make your organisation <strong>more efficient</strong>, <strong>productive</strong>, and <strong>reliable</strong>. We transform the businesses we work with, while keeping value delivered front and centre."
       })
 
   section.section
     .container
       .grid.grid--symmetrical-card
         .grid__item
-          img(src="/assets/images/laced.jpg", alt="Laced")
+          +card({
+            cardImage: {
+              src: "/assets/images/laced.jpg",
+              alt: "Laced",
+            },
+            cardHeading: "21st century sneaker trading",
+            cardText: "We moved Laced's rare sneaker trading business online, automating their buying, selling, shipping, and quality control. Laced have since secured their series A funding, and can now scale up without hiring new staff."
+          })
         .grid__item
-          img(src="/assets/images/rift.jpg", alt="Rift")
+          +card({
+            cardImage: {
+              src: "/assets/images/rift.jpg",
+              alt: "MyRIFT",
+            },
+            cardHeading: "Helping the UK to claim tax refunds",
+            cardText: "We allowed RIFT's customers self-service their tax refunds online, and synchronised all of their internal systems. This took significant cost out of call centres, staff processing, and repetitive administrative work."
+          })
 
   section.section
     .container
@@ -64,7 +78,7 @@ block pageComponents
             metric: [
               {
                 metricHeading: "Consistent reliability",
-                metricText: "No more mistakes! Software automations operate perfectly all year long, and don't get tired."
+                metricText: "No more mistakes. Software automations operate perfectly all year long, and don't get tired."
               }
             ]
           })
@@ -82,7 +96,7 @@ block pageComponents
     .container
       +page-header({
         pageHeaderHeading: "Want to hear more?",
-        pageHeaderText: "We're always happy to help. If there's anything you want to know, feel free to drop us an email and we'll get back to you as quickly as possible."
+        pageHeaderText: "We won't work with you unless we're sure we can deliver a return on investment. Feel free to drop us an email and we'll get back to you as quickly as possible."
       })
 
       .grid.grid--two-thirds
@@ -91,13 +105,13 @@ block pageComponents
 
         .grid__item
             +sidebar([{
-              item: "We'll work with you to define a clear <strong>return on investment</strong> for your business."
+              item: "We'll deliver a clear <strong>return on investment</strong> for your business."
               },{
-              item: "Reduce your <strong>staffing costs</strong> with automations that handle workloads <strong>24/7</strong>."
+              item: "We'll reduce your <strong>staffing costs</strong> with automations that handle workloads <strong>24/7</strong>."
             },{
-              item: "Increase the <strong>speed</strong> and <strong>reliability</strong> of your business with smarter, automated workflows."
+              item: "We'll increase the <strong>speed</strong> and <strong>reliability</strong> of your business with smarter, automated workflows."
             },{
-              item: "Create <strong>new revenue streams</strong>, with automations that integrate your business with other products."
+              item: "We'll create <strong>new revenue streams</strong>, with automations that integrate your business with other products."
             }])
 
   section.section--condensed

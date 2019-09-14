@@ -1,18 +1,6 @@
 .card {
   display: block;
 
-  &:hover {
-    text-decoration: none;
-
-    .card__image {
-      opacity: 0.75;
-    }
-
-    .card__heading {
-      color: $brand-primary;
-    }
-  }
-
   &__image {
     display: block;
     width: 100%;
@@ -38,5 +26,19 @@
   &__text {
     color: $color-grey;
     margin: 0;
+  }
+}
+
+a.card {
+  &:hover {
+    text-decoration: none;
+
+    .card__image {
+      opacity: 0.75;
+    }
+
+    .card__heading {
+      color: $brand-primary;
+    }
   }
 }
