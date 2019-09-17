@@ -1241,6 +1241,9 @@ blockquote {
         padding-left: 0;
         padding-right: 4em; } }
 
+.blog-post__image {
+  border: 3px solid #e2e3e5; }
+
 .button {
   background-color: #f77c6b;
   border: none;
