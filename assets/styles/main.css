@@ -1318,20 +1318,24 @@ a.card:hover {
       background: #fff url("../images/contact.jpg") no-repeat right center; } }
   .contact__sidebar {
     display: flex;
-    justify-content: space-between;
+    justify-content: start;
     padding: 2em 2em; }
     @media screen and (min-width: 34em) {
       .contact__sidebar {
-        background-color: #f0f3f1;
-        justify-content: space-around; } }
+        background-color: #f0f3f1; } }
     @media screen and (min-width: 66.25em) {
       .contact__sidebar {
         flex: 0 0 auto;
         flex-direction: column;
-        justify-content: space-between;
         order: 0;
-        padding: 3em 1.5em;
+        padding: 2em 1.5em;
         width: 14em; } }
+    .contact__sidebar .social-tile {
+      margin-right: 2em; }
+      @media screen and (min-width: 66.25em) {
+        .contact__sidebar .social-tile {
+          margin-right: 0;
+          margin-bottom: 2em; } }
   .contact__content {
     padding: 2em 2em 0; }
     @media screen and (min-width: 34em) {
