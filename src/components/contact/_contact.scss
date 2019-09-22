@@ -19,21 +19,27 @@
 
   &__sidebar {
     display: flex;
-    justify-content: space-between;
-    padding: $spacing-vertical * 2 $spacing-horizontal * 2;
+    justify-content: start;
+    padding: $spacing-horizontal * 2 $spacing-horizontal * 2;
 
     @media screen and (min-width: map-get($bp, 'sm')) {
       background-color: $color-grey-green;
-      justify-content: space-around;
     }
 
     @media screen and (min-width: 66.25em) {
       flex: 0 0 auto;
       flex-direction: column;
-      justify-content: space-between;
       order: 0;
-      padding: $spacing-vertical * 3 $spacing-horizontal * 1.5;
+      padding: $spacing-vertical * 2 $spacing-horizontal * 1.5;
       width: 14em;
+    }
+
+    .social-tile {
+      margin-right: $spacing-horizontal * 2;
+      @media screen and (min-width: 66.25em) {
+        margin-right: 0;
+        margin-bottom: $spacing-vertical * 2;
+      }
     }
   }
 

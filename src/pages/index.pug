@@ -4,7 +4,7 @@ block prepend vars
   -var pageTitle = "Bespoke business automation - Leaf"
   -var metaUrl = "https://weareleaf.com"
   -var metaTitle = "Bespoke business automation"
-  -var metaDescription = "We're specialists in building digital products & services that automate business."
+  -var metaDescription = "We're specialists in transforming organisations through businesses process automation."
 
 block pageComponents
   +hero({
@@ -23,38 +23,11 @@ block pageComponents
 
   section.section
     .container
-      .grid.grid--statements
-        .grid__item
-          +statement({
-            statementIcon: "/assets/images/icons/magic.svg",
-            statementHeading: "Business Processes",
-            statementText: "Automating repetitive tasks, like running weekly reports, reviewing job applications, or handling data transfers, keeps your team focused on doing things computers can't."
-          })
+      +benefit-statements()
 
-        .grid__item
-          +statement({
-            statementIcon: "/assets/images/icons/tasks.svg",
-            statementHeading: "Higher data quality",
-            statementText: "Auto-completion of forms, and stringent validation of fields, ensures data enters your systems efficiently and accurately from both staff and customers."
-          })
-
-        .grid__item
-          +statement({
-            statementIcon: "/assets/images/icons/growth.svg",
-            statementHeading: "Improved service",
-            statementText: "Digital products allow customers to self-serve in convenience, with communications via their preferred medium, and entirely unconstrained by the 9-to-5."
-          })
-
-        .grid__item
-          +statement({
-            statementIcon: "/assets/images/icons/coins.svg",
-            statementHeading: "Reduced costs",
-            statementText: "Once they're set up, automations cost very little to run. Unlike people, computers are immune to dips in efficiency, work around the clock, and don't make mistakes."
-          })
-  
   section.section
     .container
-      h2.small Recent work
+      h2.small Recent successes
       .grid.grid--symmetrical-card
         .grid__item
           +card({
@@ -64,7 +37,7 @@ block pageComponents
               alt: "MyRIFT",
             },
             cardHeading: "Helping the UK to claim tax refunds",
-            cardText: "We helped RIFT re-imagine their web application, making tax refund claims easier to manage for their customers and staff."
+            cardText: "We allowed RIFT's customers to self-service their tax refunds online, and synchronised all of their internal systems. This took significant cost out of call centres, staff processing, and repetitive administrative work."
           })
 
         .grid__item
@@ -75,8 +48,13 @@ block pageComponents
               alt: "Laced",
             },
             cardHeading: "21st century sneaker trading",
-            cardText: "We moved Laced's entire business online, allowing their customers to effortlessly buy and sell rare sneakers."
+            cardText: "We moved Laced's rare sneaker trading business online, automating their buying, selling, shipping, and quality control. Laced have since secured their series A funding, and can now scale up without hiring new staff."
           })
+
+  section.section--margin-b
+    .container
+      +company-logos({
+      })
 
   section.section.section--sm-spacing
     .container

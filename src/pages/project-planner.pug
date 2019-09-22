@@ -4,12 +4,12 @@ block prepend vars
   -var pageTitle = "Project Planner - Leaf"
   -var metaUrl = "https://weareleaf.com/project-planner"
   -var metaTitle = "Project planner"
-  -var metaDescription = "It only takes a few minutes to do, but it’ll help us better understand your motivations and your goals."
+  -var metaDescription = "A few words will help us better understand your motivations and your goals for automation."
 
 block pageComponents
   +hero({
-    heroHeading: "Project planner",
-    heroText: "It only takes a few minutes to do, but it’ll help us better understand your motivations and your goals.",
+    heroHeading: metaTitle,
+    heroText: metaDescription,
     heroImage: {
       src: "/assets/images/heros/project-planner.gif",
       alt: "Alt text for hero image",
@@ -20,7 +20,7 @@ block pageComponents
     .container
       +page-header({
         pageHeaderHeading: "Your enquiry",
-        pageHeaderText: "Consider this the start of a very exciting conversation. The more detail you can give, the better placed we’ll be to advise on the most appropriate next steps."
+        pageHeaderText: "We won't work with you unless we're sure we can deliver a return on investment. The more detail you can give, the better placed we’ll be to advise on the most appropriate next steps."
       })
 
       .grid.grid--two-thirds
@@ -29,7 +29,11 @@ block pageComponents
 
         .grid__item
           +sidebar([{
-            item: "We're a <strong>remote studio</strong>, which not only helps us recruit the best talent, but prioritises both our own and your time."
+            item: "We'll deliver a clear <strong>return on investment</strong> for your business."
           },{
-            item: "Invoices are issued at the end of each calendar month, and are to be paid within <strong>14 days</strong>."
+            item: "We'll reduce your <strong>staffing costs</strong> with automations that handle workloads <strong>24/7</strong>."
+          },{
+            item: "We'll increase the <strong>speed</strong> and <strong>reliability</strong> of your business with smarter, automated workflows."
+          },{
+            item: "We'll create <strong>new revenue streams</strong>, with automations that integrate your business with other products."
           }])

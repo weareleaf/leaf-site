@@ -4,7 +4,7 @@ block prepend vars
   -var pageTitle = "Bespoke business automation - Leaf"
   -var metaUrl = "https://weareleaf.com"
   -var metaTitle = "Wasting time on repetitive work?"
-  -var metaDescription = "We're specialists in building digital products & services that automate business."
+  -var metaDescription = "We're specialists in transforming organisations through businesses process automation."
 
 block pageComponents
   +hero({
@@ -23,13 +23,11 @@ block pageComponents
 
   section.section
     .container
-      +page-header({
-        pageHeaderHeading: "Value to your business",
-        pageHeaderText: "Our automations make your organisation <strong>more efficient</strong>, <strong>productive</strong>, and <strong>reliable</strong>. We transform the businesses we work with, while keeping value delivered front and centre."
-      })
+      +benefit-statements()
 
   section.section
     .container
+      h2.small Recent successes
       .grid.grid--symmetrical-card
         .grid__item
           +card({
@@ -47,40 +45,7 @@ block pageComponents
               alt: "MyRIFT",
             },
             cardHeading: "Helping the UK to claim tax refunds",
-            cardText: "We allowed RIFT's customers self-service their tax refunds online, and synchronised all of their internal systems. This took significant cost out of call centres, staff processing, and repetitive administrative work."
-          })
-
-  section.section
-    .container
-      .grid.grid--metrics
-        .grid__item
-          +automation-metrics({
-            metric: [
-              {
-                metricHeading: "Increased efficiency",
-                metricText: "By automating away human involvement from business processes, you can scale up without hiring new staff."
-              }
-            ]
-          })
-
-        .grid__item
-          +automation-metrics({
-            metric: [
-              {
-                metricHeading: "Higher productivity",
-                metricText: "Automations can complete in milliseconds what people take hours to do, giving your staff time for valuable creative work."
-              }
-            ]
-          })
-
-        .grid__item
-          +automation-metrics({
-            metric: [
-              {
-                metricHeading: "Consistent reliability",
-                metricText: "No more mistakes. Software automations operate perfectly all year long, and don't get tired."
-              }
-            ]
+            cardText: "We allowed RIFT's customers to self-service their tax refunds online, and synchronised all of their internal systems. This took significant cost out of call centres, staff processing, and repetitive administrative work."
           })
 
   section.section--margin-b

@@ -5,17 +5,17 @@ block prepend vars
   -var pageTitle = "Blog - Leaf"
   -var metaUrl = "https://weareleaf.com/blog"
   -var metaTitle = "Blog"
-  -var metaDescription = "A collection of content dedicated to all things design, tech and process."
+  -var metaDescription = "A collection of content around the themes of business process automation and agency life."
 
 
 block pageComponents
   +hero({
     heroModifier: "blog",
     heroHeading: "Blog",
-    heroText: "A collection of content dedicated to all things automation, design, tech and process.",
+    heroText: metaDescription,
     heroImage: {
       src: "/assets/images/heros/ebooks.gif",
-      alt: "Alt text for hero image",
+      alt: "Blog",
     }
   })
 
