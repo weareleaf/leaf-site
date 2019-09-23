@@ -1,3 +1,7 @@
+function isLandingPage() {
+  return window.location.pathname === '/bespoke-business-automation'
+}
+
 function isMobileDevice() {
   var agent = navigator.userAgent
   return (
@@ -16,7 +20,7 @@ function preload(src) {
   i.src = src
 }
 
-if (!isMobileDevice()) {
+if (!isMobileDevice() && !isLandingPage()) {
   window.addEventListener('load', function() {
     window.pageLoaded = true
     console.log('Preloading images...')
