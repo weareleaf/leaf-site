@@ -1,0 +1,8 @@
+mixin header-automation
+  header.header(role="banner")
+    .header__logo
+      +logo
+    .header__email
+      +email-button({
+        emailUrl: "#contact"
+      })

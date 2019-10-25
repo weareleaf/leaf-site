@@ -7,6 +7,10 @@
     padding: $spacing-vertical * 6 0;
   }
 
+  &--condensed {
+    padding: $spacing-vertical * 2 0;
+  }
+
   &__cta-heading {
     font-family: $font-family-sans-serif-medium;
     margin: 0 0 $spacing-vertical;
@@ -21,14 +25,14 @@
     margin: 0;
 
     @media screen and (min-width: map-get($bp, 'md')) {
-      font-size: .850em;
+      font-size: 0.85em;
     }
   }
 
   &__cta-link {
     color: $brand-secondary;
     font-family: $font-family-sans-serif-medium;
-    margin-left: $spacing-horizontal * .25;
+    margin-left: $spacing-horizontal * 0.25;
     white-space: nowrap;
   }
 
@@ -58,13 +62,18 @@
 
   &__copyright {
     color: $color-grey-dark;
-    font-size: .8em;
+    font-size: 0.8em;
     margin: 0;
 
     @media screen and (min-width: map-get($bp, 'md')) {
-      font-size: .75em;
+      font-size: 0.75em;
       grid-row: 2 / 3;
       text-align: right;
+    }
+
+    &--condensed {
+      grid-column-start: 1;
+      text-align: left;
     }
   }
 
@@ -72,14 +81,30 @@
     font-size: .8em;
 
     @media screen and (min-width: map-get($bp, 'md')) {
-      font-size: .75em;
+      font-size: 0.75em;
       grid-column: 3;
       grid-row: 1 / 2;
       text-align: right;
+    }
+
+    &--condensed {
+      grid-column-start: 1;
+      margin-bottom: 0;
+      text-align: left;
     }
   }
 
   &__link {
     color: $color-grey-dark;
+  }
+
+  &__logo {
+    display: none;
+
+    @media screen and (min-width: map-get($bp, 'md')) {
+      display: block;
+      margin-left: auto;
+      width: 3.3em;
+    }
   }
 }

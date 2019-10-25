@@ -20,17 +20,9 @@ mixin form
           label.form__label(for="company_location") Where are you based?
           input#company_location.form__input(name="company_location" type="text" placeholder="Monstropolis")
     fieldset.form__fieldset
-      legend.form__legend The project
-      .form__grid.form__grid--custom
-        .form__group
-          label.form__label(for="project_estimate") How much are you looking to invest?
-          input#project_estimate.form__input(name="project_estimate" type="text" placeholder="£15,000")
-        .form__group
-          label.form__label(for="project_deadline") Do you have a deadline?
-          input#project_deadline.form__input(name="project_deadline" type="text" placeholder="We need it live by May")
-        .form__group
-          label.form__label(for="project_description") How can we help?
-          textarea#project_description.form__input.form__input--textarea(name="project_description" rows="7" placeholder="The more you can share with us, the better")
+      legend.form__legend The problem
+      label.form__label(for="project_description") How can we help?
+      textarea#project_description.form__input.form__input--textarea(name="project_description" rows="7" placeholder="The more you can share with us, the better")
     +button({
       buttonText: "Send your enquiry",
       buttonType: "submit"

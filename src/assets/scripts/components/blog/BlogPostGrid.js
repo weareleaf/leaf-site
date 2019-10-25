@@ -4,9 +4,27 @@ import PropTypes from 'prop-types'
 import BlogPostGridItem from './BlogPostGridItem'
 
 class BlogPostGrid extends Component {
+  constructor(props) {
+    super(props)
+
+    this.state = {
+      pageLoaded: window.pageLoaded || false
+    }
+  }
+
+  componentDidMount() {
+    const { pageLoaded } = this.state
+    if (!pageLoaded) {
+      window.addEventListener('load', () => {
+        window.pageLoaded = true
+        this.setState({ pageLoaded: true })
+      })
+    }
+  }
+
   renderGridItem(item, index) {
     const { allSmall } = this.props
-    const { author, postUrl, postImage, postHeading, postText} = item
+    const { author, postUrl, postImage, postHeading, postText } = item
     const large = index == 0 && !allSmall
     return (
       <BlogPostGridItem
@@ -22,12 +40,14 @@ class BlogPostGrid extends Component {
   }
 
   render() {
+    const { pageLoaded } = this.state
     const { gridItems } = this.props
-    return (
-      <Fragment>
-        {gridItems.map(this.renderGridItem.bind(this))}
-      </Fragment>
-    )
+
+    if (!pageLoaded) {
+      return null
+    }
+
+    return <Fragment>{gridItems.map(this.renderGridItem.bind(this))}</Fragment>
   }
 }
 

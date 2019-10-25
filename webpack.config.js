@@ -6,7 +6,7 @@ const pages = glob.sync('**/*.pug', {
   cwd: path.resolve(__dirname, 'src/pages')
 })
 
-const pagePlugins = pages.map((page) => {
+const pagePlugins = pages.map(page => {
   return new HtmlWebpackPlugin({
     template: `./src/pages/${page}`,
     filename: page.replace('.pug', '.html')
@@ -15,7 +15,8 @@ const pagePlugins = pages.map((page) => {
 const filePlugins = new CopyPlugin([
   { from: './src/assets/fonts/', to: './assets/fonts' },
   { from: './src/assets/images/', to: './assets/images/' },
-  { from: './src/resources/', to: './resources/' }
+  { from: './src/resources/', to: './resources/' },
+  { from: './src/robots.txt', to: './robots.txt' }
 ])
 
 const config = {
@@ -24,7 +25,8 @@ const config = {
   },
   output: {
     path: path.resolve(__dirname, 'dist'),
-    filename: "main.js",
+    filename: 'main.js',
+    publicPath: '/'
   },
   devServer: {
     contentBase: path.join(__dirname, 'dist'),
@@ -33,8 +35,11 @@ const config = {
       rewrites: [
         {
           from: /^(?!.*\.(js|css|png|jpg|svg|webp)|$).*$/,
-          to: (context) => {
+          to: context => {
             let { pathname } = context.parsedUrl
+            if (pathname.charAt(pathname.length - 1) === '/') {
+              pathname = pathname.substring(0, pathname.length - 1)
+            }
             return `${pathname}.html`
           }
         }
@@ -46,7 +51,7 @@ const config = {
     rules: [
       {
         test: /\.pug$/,
-        use: ['pug-loader']
+        use: ['html-loader?attrs=false', 'pug-html-loader']
       },
       {
         test: /\.js$/,

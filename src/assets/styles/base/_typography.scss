@@ -84,15 +84,15 @@ strong {
 figure {
   margin: $spacing-vertical-lg 0;
 
-  @media screen and (min-width: map-get($bp, "md")) {
+  @media screen and (min-width: map-get($bp, 'md')) {
     margin: $spacing-vertical-lg 0 $spacing-vertical * 3;
   }
 
-  @media screen and (min-width: map-get($bp, "lg")) {
+  @media screen and (min-width: map-get($bp, 'lg')) {
     margin: $spacing-vertical-lg 0 $spacing-vertical-xl;
   }
 
-  @media screen and (min-width: map-get($bp, "xl")) {
+  @media screen and (min-width: map-get($bp, 'xl')) {
     margin: $spacing-vertical * 3 0 $spacing-vertical-xl;
   }
 
@@ -139,7 +139,7 @@ img {
   &--margin-blog {
     margin-bottom: $spacing-blog-grid;
   }
-  @media screen and (min-width: map-get($bp, "xl")) {
+  @media screen and (min-width: map-get($bp, 'xl')) {
     &--margin-blog {
       margin-top: $spacing-blog-grid;
     }
@@ -188,7 +188,7 @@ img {
 
     &::before {
       background-color: $brand-primary;
-      content: "";
+      content: '';
       display: block;
       height: 0.4em;
       left: -1.4em;
@@ -215,7 +215,7 @@ img {
   line-height: 1.6875em;
   margin-bottom: $font-size-lg;
 }
-@media screen and (min-width: map-get($bp, "md")) {
+@media screen and (min-width: map-get($bp, 'md')) {
   .intro-paragraph {
     color: $color-grey-dark;
     font-size: $font-size-lg;
@@ -237,7 +237,7 @@ blockquote {
     line-height: 1.375em;
     margin-bottom: $spacing-vertical-sm;
     width: 100%;
-    quotes: "“";
+    quotes: '“';
 
     &::before {
       color: $color-grey-lightest;

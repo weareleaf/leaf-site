@@ -4,11 +4,11 @@
   grid-column-gap: $spacing-horizontal-lg;
   grid-row-gap: $spacing-vertical-lg;
 
-  @media screen and (min-width: map-get($bp, "lg")) {
+  @media screen and (min-width: map-get($bp, 'lg')) {
     grid-column-gap: $spacing-horizontal-xl;
   }
 
-  @media screen and (min-width: map-get($bp, "xl")) {
+  @media screen and (min-width: map-get($bp, 'xl')) {
     grid-column-gap: 6em;
   }
 
@@ -33,6 +33,27 @@
     }
   }
 
+  &--symmetrical-card {
+    @media screen and (min-width: map-get($bp, 'md')) {
+      -ms-grid-columns: 1fr $spacing-horizontal-lg 1fr;
+      grid-template-columns: 1fr 1fr;
+      grid-column-gap: $spacing-horizontal-xl;
+    }
+
+    @media screen and (min-width: map-get($bp, 'lg')) {
+      -ms-grid-columns: 1fr ($spacing-horizontal * 6) 1fr;
+      grid-column-gap: ($spacing-horizontal * 6);
+    }
+
+    > *:nth-child(1) {
+      -ms-grid-column: 1;
+    }
+
+    > *:nth-child(2) {
+      -ms-grid-column: 3;
+    }
+  }
+
   &--card {
 
     @media screen and (min-width: map-get($bp, "md")) {
@@ -48,13 +69,13 @@
     .grid__item:not(:last-child) {
       margin-bottom: $spacing-vertical-lg;
 
-      @media screen and (min-width: map-get($bp, "md")) {
+      @media screen and (min-width: map-get($bp, 'md')) {
         margin-bottom: $spacing-vertical-xl;
       }
     }
 
     .grid__item:nth-child(even) {
-      @media screen and (min-width: map-get($bp, "md")) {
+      @media screen and (min-width: map-get($bp, 'md')) {
         position: relative;
         top: 12em;
       }
@@ -100,11 +121,57 @@
     }
   }
 
+  &--metrics {
+    grid-template-columns: 1fr;
+    -ms-grid-columns: 1fr;
+    -ms-grid-rows: 100%;
+
+    > *:nth-child(1) {
+      -ms-grid-row: 1;
+    }
+
+    > *:nth-child(2) {
+      -ms-grid-row: 2;
+    }
+
+    > *:nth-child(3) {
+      -ms-grid-row: 3;
+    }
+
+    @media screen and (min-width: map-get($bp, 'md')) {
+      grid-template-columns: 1fr 1fr 1fr;
+      -ms-grid-columns: 1fr 1fr 1fr;
+
+      > *:nth-child(1) {
+        -ms-grid-column: 1;
+        -ms-grid-row: 1;
+      }
+
+      > *:nth-child(2) {
+        -ms-grid-column: 2;
+        -ms-grid-row: 1;
+      }
+
+      > *:nth-child(3) {
+        -ms-grid-column: 3;
+        -ms-grid-row: 1;
+      }
+    }
+  }
+
   &--footer {
     grid-column-gap: 4em;
 
     @media screen and (min-width: map-get($bp, "lg")) {
       grid-template-columns: 1fr 1fr;
+      -ms-grid-rows: 100%;
+      > *:nth-child(1) {
+        -ms-grid-column: 1;
+      }
+
+      > *:nth-child(2) {
+        -ms-grid-column: 3;
+      }
     }
   }
 
@@ -116,12 +183,105 @@
   }
 
   //Blog
-  @media screen and (min-width: map-get($bp, "sm")) {
-    &--blog {
-      display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(360px, 1fr));
-      grid-template-rows: repeat(2, 465px, 1fr);
+  &--blog {
+    grid-template-columns: 1fr;
+    -ms-grid-columns: 1fr;
+    -ms-grid-rows: 100%;
+
+    @media screen and (min-width: map-get($bp, 'md')) {
       grid-gap: $spacing-blog-grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      -ms-grid-columns: 1fr $spacing-blog-grid 1fr $spacing-blog-grid 1fr;
+
+      > *:nth-child(1) {
+        -ms-grid-column: 1;
+        -ms-grid-row: 1;
+      }
+
+      > *:nth-child(2) {
+        -ms-grid-column: 3;
+        -ms-grid-row: 1;
+      }
+
+      > *:nth-child(3) {
+        -ms-grid-column: 5;
+        -ms-grid-row: 1;
+      }
+
+      > *:nth-child(4) {
+        -ms-grid-column: 1;
+        -ms-grid-row: 2;
+      }
+
+      > *:nth-child(5) {
+        -ms-grid-column: 3;
+        -ms-grid-row: 2;
+      }
+
+      > *:nth-child(6) {
+        -ms-grid-column: 5;
+        -ms-grid-row: 2;
+      }
+
+      > *:nth-child(7) {
+        -ms-grid-column: 1;
+        -ms-grid-row: 3;
+      }
+
+      > *:nth-child(8) {
+        -ms-grid-column: 3;
+        -ms-grid-row: 3;
+      }
+
+      > *:nth-child(9) {
+        -ms-grid-column: 5;
+        -ms-grid-row: 3;
+      }
+
+      > *:nth-child(10) {
+        -ms-grid-column: 1;
+        -ms-grid-row: 4;
+      }
+
+      > *:nth-child(11) {
+        -ms-grid-column: 3;
+        -ms-grid-row: 4;
+      }
+
+      > *:nth-child(12) {
+        -ms-grid-column: 5;
+        -ms-grid-row: 4;
+      }
+
+      > *:nth-child(13) {
+        -ms-grid-column: 1;
+        -ms-grid-row: 5;
+      }
+
+      > *:nth-child(14) {
+        -ms-grid-column: 3;
+        -ms-grid-row: 5;
+      }
+
+      > *:nth-child(15) {
+        -ms-grid-column: 5;
+        -ms-grid-row: 5;
+      }
+
+      > *:nth-child(16) {
+        -ms-grid-column: 1;
+        -ms-grid-row: 6;
+      }
+
+      > *:nth-child(17) {
+        -ms-grid-column: 3;
+        -ms-grid-row: 6;
+      }
+
+      > *:nth-child(18) {
+        -ms-grid-column: 5;
+        -ms-grid-row: 6;
+      }
     }
   }
 

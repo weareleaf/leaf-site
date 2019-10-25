@@ -1,7 +1,7 @@
-import Barba from "barba.js"
-import banner from "./banner.js"
-import modal from "./modal.js"
-import { createBlob } from "./blob.js"
+import Barba from 'barba.js'
+import banner from './banner.js'
+import modal from './modal.js'
+import { createBlob } from './blob.js'
 
 const body = document.body
 const TRANSITION_TIME = 500
@@ -40,6 +40,16 @@ const PageTransition = Barba.BaseTransition.extend({
     })
   },
 
+  trackVirtualPageView: function() {
+    const path = window.location.pathname
+    if (window.gtag) {
+      gtag('config', 'UA-62036216-1', {page_path: path})
+      console.log('Tracked virtual page view "' + path + '"')
+    } else {
+      console.log('Could not track page view "' + path + '"')
+    }
+  },
+
   out: function() {
     body.classList.add('transition-out')
   },
@@ -73,6 +83,7 @@ const PageTransition = Barba.BaseTransition.extend({
     this.reloadHowdy()
     this.startBlob()
     this.in()
+    this.trackVirtualPageView()
     console.log('Ended transition')
   }
 })
@@ -83,7 +94,6 @@ window.addEventListener('load', function() {
   banner()
   modal()
 })
-
 
 Barba.Pjax.originalPreventCheck = Barba.Pjax.preventCheck
 Barba.Pjax.preventCheck = function(evt, element) {

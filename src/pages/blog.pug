@@ -5,17 +5,17 @@ block prepend vars
   -var pageTitle = "Blog - Leaf"
   -var metaUrl = "https://weareleaf.com/blog"
   -var metaTitle = "Blog"
-  -var metaDescription = "A collection of content dedicated to all things design, tech and process."
+  -var metaDescription = "A collection of content around the themes of business process automation and agency life."
 
 
 block pageComponents
   +hero({
     heroModifier: "blog",
     heroHeading: "Blog",
-    heroText: "A collection of content dedicated to all things design, tech and process.",
+    heroText: metaDescription,
     heroImage: {
-      src: "/assets/images/ebooks.png",
-      alt: "Alt text for hero image",
+      src: "/assets/images/heros/ebooks.gif",
+      alt: "Blog",
     }
   })
 
@@ -23,7 +23,7 @@ block pageComponents
     .container
       +page-header({
         pageHeaderHeading: "Our content",
-        pageHeaderText: "We aim to give an insight into what it is we do when building digital products, as well as show you more of Leaf and how we operate behind the scenes."
+        pageHeaderText: "We aim to give an insight into what it is we do when automating businesses, as well as show you more of Leaf and how we operate behind the scenes."
       })
 
       .grid.grid--blog.grid--blog-index

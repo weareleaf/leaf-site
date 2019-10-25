@@ -17,9 +17,16 @@
     @media screen and (min-width: map-get($bp, 'md')) {
       flex: 0 0 auto;
       flex-direction: column;
-      justify-content: space-between;
       order: 0;
       padding: $spacing-6;
+    }
+
+    .social-tile {
+      margin-right: $spacing-horizontal * 2;
+      @media screen and (min-width: 66.25em) {
+        margin-right: 0;
+        margin-bottom: $spacing-vertical * 2;
+      }
     }
   }
 
