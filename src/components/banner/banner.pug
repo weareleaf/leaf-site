@@ -5,6 +5,7 @@ mixin banner(c)
     if c.bannerImage
       +image({
         class: "banner__image",
+        context: "banner",
         src: c.bannerImage.src,
         alt: c.bannerImage.alt
       })

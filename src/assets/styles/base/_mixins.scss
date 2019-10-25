@@ -7,7 +7,12 @@
 }
 
 @mixin container {
-  max-width: 62em;
   margin: 0 auto;
+  max-width: 60rem;
   padding: 0 1.25rem;
+}
+
+@mixin size($size) {
+  height: $size;
+  width: $size;
 }

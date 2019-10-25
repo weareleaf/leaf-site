@@ -1,28 +1,26 @@
 .details {
-  display: flex;
-  flex-wrap: wrap;
+  display: grid;
+
+  @media screen and (min-width: map-get($bp, 'sm')) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @media screen and (min-width: map-get($bp, 'lg')) {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
 
   &__item {
-    margin-bottom: $spacing-vertical;
-    width: 100%;
-
-    @media screen and (min-width: map-get($bp, 'sm')) {
-      width: 50%;
-    }
-
-    @media screen and (min-width: map-get($bp, 'lg')) {
-      margin-bottom: 0;
-      width: 25%;
-    }
+    margin-bottom: $spacing-4;
   }
 
   &__heading {
-    font-size: .85em;
-    margin: 0 0 .118em;
+    font-size: $font-size-small;
+    margin-bottom: $spacing-1;
   }
 
   &__text {
-    font-size: .8em;
-    margin: 0;
+    font-size: $font-size-small;
+    margin-bottom: 0;
   }
 }

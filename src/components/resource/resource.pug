@@ -1,7 +1,8 @@
 mixin resource(c)
   .resource
-    +image({
+    +image({    
       class: "resource__image",
+      context: "resource",
       src: c.resourceImage.src,
       alt: c.resourceImage.alt
     })
@@ -11,5 +12,5 @@ mixin resource(c)
         p.resource__text= c.resourceText
       .resource__meta
         .resource__button
-          a.button(href= c.resourceButton.buttonUrl target="_blank" rel="noopener")= c.resourceButton.buttonText
+          a.button.button--small(href= c.resourceButton.buttonUrl target="_blank" rel="noopener")= c.resourceButton.buttonText
         p.resource__meta-text= c.resourceMetaText

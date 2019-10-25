@@ -1,12 +1,13 @@
 // Vendor
 @import "../../../node_modules/normalize.css/normalize"; // https://necolas.github.io/normalize.css/
-// @import '../../../node_modules/flickity/css/flickity'; // https://flickity.metafizzy.co/
+//-@import '../../../node_modules/flickity/css/flickity'; // https://flickity.metafizzy.co/
 
 // Mixins
 @import "base/mixins";
 
 // Base
 @import "base/variables";
+@import "base/base";
 @import "base/fonts";
 @import "base/layout";
 @import "base/typography";
@@ -40,10 +41,10 @@
 @import "../../components/resource/resource";
 @import "../../components/share-icons/share-icons";
 @import "../../components/sidebar/sidebar";
-// @import '../../components/slider/slider';
+//-@import '../../components/slider/slider';
 @import "../../components/social/social";
 @import "../../components/social-tile/social-tile";
 @import "../../components/statement/statement";
 @import "../../components/summary/summary";
-@import "../../components/testimonial/testimonial";
+//-@import "../../components/testimonial/testimonial";
 @import "../../components/tile/tile";

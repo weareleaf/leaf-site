@@ -1,5 +1,6 @@
 .social-tile {
-  @media screen and (min-width: 66.25em) {
+
+  @media screen and (min-width: map-get($bp, 'md')) {
     display: flex;
   }
 
@@ -8,7 +9,7 @@
     width: 1.2em;
     text-align: center;
 
-    @media screen and (min-width: 66.25em) {
+    @media screen and (min-width: map-get($bp, 'md')) {
       flex: 0 0 auto;
       margin-right: $spacing-horizontal / 1.25;
     }
@@ -23,7 +24,7 @@
   &__content {
     display: none;
 
-    @media screen and (min-width: 66.25em) {
+    @media screen and (min-width: map-get($bp, 'md')) {
       display: block;
     }
   }

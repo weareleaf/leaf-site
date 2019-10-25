@@ -5,16 +5,16 @@
   color: $color-white;
   cursor: pointer;
   display: inline-block;
-  font-family: $font-family-sans-serif-medium;
-  font-size: .938rem;
+  font-family: $font-family-sans-serif-regular;
+  font-size: .9rem;
   margin: 0;
-  padding: ($spacing-vertical * 1.2) $spacing-horizontal $spacing-vertical;
+  padding: $spacing-4 $spacing-5;
   text-align: center;
   text-decoration: none;
-  transition: background-color 250ms ease-in-out, transform 150ms ease;
+  transition: background-color $duration-base $timing-base;
 
   @media screen and (min-width: map-get($bp, sm)) {
-    font-size: $font-size;
+    //font-size: $font-size-base;
   }
 
   &:hover,
@@ -30,5 +30,9 @@
     &:focus {
       background-color: lighten($color-green, 5%);
     }
+  }
+
+  &--small {
+    font-size: .8em;
   }
 }

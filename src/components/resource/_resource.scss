@@ -1,7 +1,7 @@
 .resource {
-  margin-bottom: $spacing-vertical-xl;
+  margin-bottom: $spacing-9;
 
-  &__image img {
+  &__image {
     display: inline-block;
     height: auto;
     vertical-align: middle;
@@ -9,7 +9,7 @@
   }
 
   &__container {
-    margin-top: $spacing-vertical * 1.5;
+    margin-top: $spacing-6;
 
     @media screen and (min-width: map-get($bp, md)) {
       display: flex;
@@ -18,7 +18,7 @@
   }
 
   &__content {
-    margin-bottom: $spacing-vertical * 1.5;
+    margin-bottom: $spacing-6;
 
     @media screen and (min-width: map-get($bp, md)) {
       margin: 0;
@@ -27,16 +27,18 @@
   }
 
   &__heading {
-    color: $color-grey-dark;
-    font-size: 1.5em;
+    //color: $color-grey-dark;
+    //font-size: 1.5em;
   }
 
   &__text {
-    color: $color-grey;
+    //color: $color-grey;
+    font-size: .9rem;
     margin: 0;
   }
 
   &__meta {
+
     @media screen and (min-width: map-get($bp, md)) {
       display: flex;
       flex-direction: column;
@@ -44,13 +46,9 @@
     }
   }
 
-  &__button {
-    margin-bottom: $spacing-vertical-lg;
-  }
-
   &__meta-text {
     font-size: .75em;
-    margin: $spacing-vertical 0 0;
+    margin: $spacing-5 0 0;
 
     @media screen and (min-width: map-get($bp, md)) {
       margin: 0;

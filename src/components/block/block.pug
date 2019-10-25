@@ -1,10 +1,10 @@
 mixin block(c)
   .block(class= c.blockModifer ? "block--" + c.blockModifer : "")
     .block__content
-      h2.block__heading= c.blockHeading
+      h3.block__heading= c.blockHeading
       .block__text!= c.blockContent
     +image({
-      class: "block__image",
+      context: "block",
       src: c.blockImage.src,
       alt: c.blockImage.alt
     })

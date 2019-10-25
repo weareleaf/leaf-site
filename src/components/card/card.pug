@@ -2,6 +2,7 @@ mixin card(c)
   a.card(href= c.cardUrl)
     +image({
       class: "card__image",
+      context: "card",
       src: c.cardImage.src,
       alt: c.cardImage.alt
     })

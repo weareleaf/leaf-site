@@ -38,12 +38,7 @@ mixin footer
                   {
                     navItemUrl: "/blog",
                     navItemText: "Blog"
-                  },
-                  {
-                    navItemUrl: "#",
-                    navItemText: "Contact us",
-                    navItemTriggerModal: true
-                  },
+                  }
                 ]
               })
             .footer__nav.footer__nav--secondary
@@ -67,9 +62,10 @@ mixin footer
                     navItemText: "Jobs at Leaf"
                   },
                   {
-                    navItemUrl: "/terms",
-                    navItemText: "Terms"
-                  },
+                    navItemUrl: "#",
+                    navItemText: "Contact us",
+                    navItemTriggerModal: true
+                  }
                 ]
               })
 
@@ -79,5 +75,7 @@ mixin footer
               | Company no: 09664307
               br
               | VAT no: 265 1253 17
+              br
+              | <a href="/terms">Terms of service</a>
             .footer__contact
               a.footer__link(href="mailto:hello@weareleaf.com") hello@weareleaf.com

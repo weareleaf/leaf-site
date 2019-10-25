@@ -1,0 +1,24 @@
+//- Base Styles
+$root-font-size: 1rem; // 16px
+$root-font-size-xl: 1.25rem; // 20px
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+html,
+body {
+  min-height: 100%;
+}
+
+html {
+  box-sizing: border-box;
+  font-size: $root-font-size;
+  text-size-adjust: 100%;
+
+  @media screen and (min-width: map-get($bp, "xl")) {
+    font-size: $root-font-size-xl;
+  }
+}
