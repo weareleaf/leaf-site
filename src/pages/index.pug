@@ -1,10 +1,10 @@
 extends ../layouts/page.pug
 
 block prepend vars
-  -var pageTitle = "Bespoke business automation - Leaf"
+  -var pageTitle = "Kent based web and mobile development"
   -var metaUrl = "https://weareleaf.com"
-  -var metaTitle = "Bespoke business automation"
-  -var metaDescription = "We're specialists in transforming organisations through businesses process automation."
+  -var metaTitle = "Bespoke software automation"
+  -var metaDescription = "We use research and technology to drive automation within forward-thinking organisations."
 
 block pageComponents
   +hero({
@@ -17,13 +17,9 @@ block pageComponents
     },
     heroImage: {
       src: "/assets/images/heros/home.gif",
-      alt: "We work with you to uncover automation opportunities.",
+      alt: metaTitle
     }
   })
-
-  section.section
-    .container
-      +benefit-statements()
 
   section.section
     .container
@@ -42,19 +38,19 @@ block pageComponents
 
         .grid__item
           +card({
-            cardUrl: "/laced",
+            cardUrl: "/heha",
             cardImage: {
-              src: "/assets/images/laced.jpg",
-              alt: "Laced",
+              src: "/assets/images/heha.webp",
+              fallbackSrc: "/assets/images/heha.jpg",
+              alt: "HEHA!",
             },
-            cardHeading: "21st century sneaker trading",
-            cardText: "We moved Laced's rare sneaker trading business online, automating their buying, selling, shipping, and quality control. Laced have since secured their series A funding, and can now scale up without hiring new staff."
+            cardHeading: "Taking the hassle out of travel",
+            cardText: "Planning trips can be a headache. We worked with Holiday Extras to create HEHA!, an iOS and Android app to make the task simple."
           })
 
   section.section--margin-b
     .container
-      +company-logos({
-      })
+      +company-logos
 
   section.section.section--sm-spacing
     .container
