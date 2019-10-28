@@ -12,6 +12,26 @@
   padding: 0 1.25rem;
 }
 
+@mixin margin-horizontal($margin) {
+  margin-left: $margin;
+  margin-right: $margin;
+}
+
+@mixin margin-vertical($margin) {
+  margin-bottom: $margin;
+  margin-top: $margin;
+}
+
+@mixin padding-horizontal($padding) {
+  padding-left: $padding;
+  padding-right: $padding;
+}
+
+@mixin padding-vertical($padding) {
+  padding-bottom: $padding;
+  padding-top: $padding;
+}
+
 @mixin size($size) {
   height: $size;
   width: $size;

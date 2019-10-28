@@ -173,15 +173,12 @@ $logo-breakpoint: 1400px;
   }
 
   &__heading {
-    padding: $spacing-vertical 0;
+    @include padding-vertical($spacing-9);
     text-align: center;
 
     @media screen and (min-width: map-get($bp, 'lg')) {
-      padding: $spacing-vertical-lg 0;
+      @include padding-vertical($spacing-10);
     }
 
-    @media screen and (min-width: 90em) {
-      padding: $spacing-vertical-xl 0;
-    }
   }
 }

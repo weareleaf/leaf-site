@@ -24,7 +24,6 @@
     font-size: 1.25rem;
 
     @media screen and (min-width: map-get($bp, 'md')) {
-      font-size: 1.5rem;
       max-width: 60%;
     }
   }
