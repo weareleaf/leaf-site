@@ -1,17 +1,17 @@
 body {
   color: $body-color;
   font-family: $font-family-sans-serif-light;
-  //font-size: .75em;
+  font-size: .8em;
   -webkit-font-smoothing: subpixel-antialiased;
   letter-spacing: $letter-spacing-base;
   line-height: $line-height;
 
   @media screen and (min-width: map-get($bp, "md")) {
-    //font-size: .9em;
+    font-size: .9em;
   }
 
   @media screen and (min-width: map-get($bp, "lg")) {
-    //font-size: 1em;
+    font-size: 1em;
   }
 }
 
@@ -29,8 +29,13 @@ h6 {
 
 h1 {
   font-family: $font-family-sans-serif-medium;
-  font-size: $font-size-h1;
-  margin: 0 0 $spacing-5;
+  font-size: $font-size-h1-sm;
+  margin: 0 0 $spacing-3;
+
+  @media screen and (min-width: map-get($bp, "md")) {
+    font-size: $font-size-h1;
+    margin-bottom: $spacing-3;
+  }
 }
 
 h2 {

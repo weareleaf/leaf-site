@@ -1,8 +1,8 @@
 mixin hero(c)
   section.hero(class= c.heroModifier ? "hero--" + c.heroModifier : "")
-    svg.hero__blob(viewBox="0 0 1000 1000")
-      path.hero__blob-path
     .hero__container
+      svg.hero__blob(viewBox="0 0 1000 1000")
+        path.hero__blob-path
       .hero__content
         h1.hero__heading= c.heroHeading
         p.hero__text= c.heroText
