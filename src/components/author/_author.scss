@@ -6,7 +6,7 @@
     margin-top: $bio-spacing-md;
   }
 
-  &__thumbnail {
+  &__media {
     display: block;
 
     img {
@@ -23,13 +23,12 @@
 
   &__name {
     color: $color-grey-dark;
-    font-size: $author-heading;
     margin-bottom: 0;
   }
 
   &__details {
     color: $color-grey;
-    font-size: $author-details;
+    font-size: $font-size-small;
     margin: 0;
   }
 }

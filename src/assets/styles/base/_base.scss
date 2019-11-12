@@ -16,6 +16,7 @@ body {
 html {
   box-sizing: border-box;
   font-size: $root-font-size;
+  scroll-behavior: smooth;
   text-size-adjust: 100%;
 
   @media screen and (min-width: map-get($bp, "xl")) {

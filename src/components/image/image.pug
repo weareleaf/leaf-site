@@ -1,4 +1,6 @@
 mixin image(c)
-  div(class= c.context + '__media')
-    img(class= c.context + '__image' src= c.src alt= c.alt)
-    
+  div(class= c.context + "__media")
+    img(
+      class= c.modifier ? c.context + "__image" + " " + c.context + "--" + c.modifier : c.context + "__image"
+      src= c.src 
+      alt= c.alt)

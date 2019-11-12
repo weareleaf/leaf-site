@@ -1,5 +1,6 @@
-.card {
+.study {
   display: block;
+  position: relative;
 
   &__media {
     display: block;
@@ -12,7 +13,12 @@
   }
 
   &__content {
-    margin-top: $spacing-6;
+    background-color: $color-white;
+    bottom: 0;
+    left: 0;
+    padding: $spacing-5 $spacing-5 0 0;
+    position: absolute;
+    width: 50%;
   }
 
   &__heading {
@@ -31,25 +37,6 @@
     display: block;
     font-family: $font-family-sans-serif-medium;
     font-size: $font-size-small;
-    margin-top: $spacing-1;
-  }
-}
-
-a.card {
-
-  &:hover {
-    text-decoration: none;
-
-    .card__image {
-      opacity: 0.75;
-    }
-
-    .card__heading {
-      color: $brand-primary;
-    }
-
-    .card__image {
-      opacity: .75;
-    }
+    margin-top: $spacing-2;
   }
 }

@@ -3,7 +3,8 @@
   padding: 9em 0 0;
   position: relative;
 
-  &--home {
+  &--home,
+  &--landing {
     margin-bottom: 0;
   }
 
@@ -32,7 +33,8 @@
     width: 2000px;
     height: 2000px;
 
-    .hero--home & {
+    .hero--home &,
+    .hero--landing & {
       top: -1350px;
     }
 
@@ -125,6 +127,8 @@
     margin-top: $spacing-vertical-lg;
     vertical-align: middle;
     max-width: 100%;
+    //width: 70%;
+    //margin-top: 4rem;
 
     @media screen and (min-width: 40.625em) {
       bottom: -2em;
@@ -142,7 +146,9 @@
       width: auto;
     }
 
-    .hero--home & {
+    .hero--home &,
+    .hero--landing & {
+
       @media screen and (min-width: 120em) {
         width: 75%;
       }
@@ -186,10 +192,6 @@
         width: 70%;
       }
     }
-
-
-    width: 70%;
-margin-top: 4rem;
 
     .hero--our-work & {
       @media screen and (min-width: 40.625em) {
@@ -238,15 +240,29 @@ margin-top: 4rem;
       top: -7rem;
     }
 
-    .hero--home & {
-      top: -4em;
+    .hero--home &,
+    .hero--landing & {
+      //margin-bottom: -4rem;
+      //top: -18rem;
+      //margin-top: -9rem;
+      //top: auto;
+      margin: -5rem 0 2rem;
+
+      @media screen and (min-width: map-get($bp, 'sm')) {
+        //top: 5em;
+        margin-bottom: 4rem;
+      }
+
+      @media screen and (min-width: map-get($bp, 'md')) {
+        margin-bottom: 6rem;
+      }
 
       @media screen and (min-width: 40.625em) {
-        top: 5em;
+        //top: 5em;
       }
 
       @media screen and (min-width: 75em) {
-        top: -12em;
+        //top: -12em;
       }
 
       @media screen and (min-width: 120em) {
@@ -266,6 +282,21 @@ margin-top: 4rem;
 
     @media screen and (min-width: 120em) {
       right: -10em;
+    }
+
+    .hero--home & {
+
+      @media screen and (min-width: 40.625em) {
+        right: 3.25em;
+      }
+
+      @media screen and (min-width: map-get($bp, 'xl')) {
+        right: 0;
+      }
+
+      @media screen and (min-width: 120em) {
+        right: -10em;
+      }
     }
 
     .hero--company & {

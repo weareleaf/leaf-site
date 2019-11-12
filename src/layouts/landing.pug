@@ -1,12 +1,16 @@
 extends ../base.pug
 
 block pageContent
-  +header({})
+  +header({
+    headerNav: false
+  })
 
   main(role="main")
     block pageComponents
     
-  +footer({})
+  +footer({
+    footerNav: false
+  })
   
   +modal
   

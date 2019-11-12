@@ -13,7 +13,10 @@
 
   &__cta-heading {
     font-family: $font-family-sans-serif-medium;
+    font-size: 1.4rem;
+    line-height: $heading-line-height;
     margin: 0 0 $spacing-vertical;
+
 
     @media screen and (min-width: map-get($bp, 'lg')) {
       margin: 0 0 $spacing-vertical * 1.7;
@@ -26,6 +29,10 @@
 
     @media screen and (min-width: map-get($bp, 'md')) {
       font-size: 0.85em;
+    }
+
+    strong {
+      margin-right: $spacing-horizontal * 0.25;
     }
   }
 
@@ -51,8 +58,8 @@
     grid-template-columns: 1fr 1fr;
 
     @media screen and (min-width: map-get($bp, 'lg')) {
-      //grid-template-columns: 1fr 1fr 1fr;
-      //grid-template-rows: 1fr 1fr;
+      grid-template-columns: 1fr 1fr 1fr;
+      grid-template-rows: 1fr 1fr;
     }
   }
 

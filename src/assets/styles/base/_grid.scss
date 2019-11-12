@@ -165,6 +165,11 @@
     @media screen and (min-width: map-get($bp, "lg")) {
       grid-template-columns: 1fr 1fr;
       -ms-grid-rows: 100%;
+
+      .body--landing & {
+        grid-template-columns: 2fr 1fr;
+      }
+
       > *:nth-child(1) {
         -ms-grid-column: 1;
       }

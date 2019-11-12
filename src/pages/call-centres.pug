@@ -1,0 +1,203 @@
+extends ../layouts/landing.pug
+
+block prepend vars
+  -var activePage = "call-centres"
+  -var bodyClass = "landing"
+  -var pageTitle = "Digital products for companies with call-centres - Leaf"
+  -var metaUrl = "https://weareleaf.com/call-centres"
+  -var metaTitle = "Digital products for companies with call-centres"
+  -var metaDescription = "We supercharge tradionally offline businesses with powerful applications customers love."
+
+
+block pageComponents
+  +hero({
+    heroModifier: "landing", 
+    heroHeading: metaTitle, 
+    heroText: metaDescription,
+    heroButton: {
+      buttonUrl: "#",
+      buttonText: "Start the conversation",
+      navItemTriggerModal: true
+    },
+    heroImage: {
+      src: "/assets/images/heros/home.gif",
+      alt: metaTitle
+    }
+  })
+
+  section.section(id="what-we-do")
+    .container
+      .grid.grid--statements
+        .grid__item
+          +statement({
+            statementIcon: "/assets/images/icons/consult.svg",
+            statementHeading: "Consultancy",
+            statementText: "We'll work together to guide your architectural and technical approaches, stepping you towards achieving your business goals.",
+            statementLink: {
+              href: "#",
+              text: "Find out more",
+              triggerModal: true
+            }
+          })
+        
+        .grid__item
+          +statement({
+            statementIcon: "/assets/images/icons/tasks.svg",
+            statementHeading: "Performance audit",
+            statementText: "We'll review your existing application, making detailed and prioritised recommendations, helping you focus your efforts.",
+            statementLink: {
+              href: "#",
+              text: "Find out more",
+              triggerModal: true
+            }
+          })
+
+        .grid__item
+          +statement({
+            statementIcon: "/assets/images/icons/magic.svg",
+            statementHeading: "UX Design",
+            statementText: "We'll make sure your customers love your product, creating applications that meet not only their needs, but those of the business.",
+            statementLink: {
+              href: "#",
+              text: "Find out more",
+              triggerModal: true
+            }
+          })
+
+        .grid__item
+          +statement({
+            statementIcon: "/assets/images/icons/code.svg",
+            statementHeading: "Development",
+            statementText: "If you'd like our help with implementing our recommendations, we'll ensure your product is as performant as your codebase is maintainable.",
+            statementLink: {
+              href: "#",
+              text: "Find out more",
+              triggerModal: true
+            }
+          })
+          
+  section.section(id="our-work")
+    .container
+      h2.small Recent successes
+      .grid.grid--symmetrical-card
+        .grid__item
+          +card({
+            cardImage: {
+              src: "/assets/images/rift.jpg",
+              alt: "MyRIFT",
+            },
+            cardHeading: "Helping the UK to claim tax refunds",
+            cardText: "We allowed RIFT's customers to make their tax refunds online, significant reducing call centre, staff processing, administrative overheads.",
+            cardLink: {
+              href: "#",
+              text: "Find out more",
+              triggerModal: true
+            }
+          })
+      
+        .grid__item
+          +card({
+            cardImage: {
+              src: "/assets/images/hx.jpg",
+              alt: "Holiday Extras",
+            },
+            cardHeading: "Rethinking parking and hotel bookings",
+            cardText: "We helped refine Holiday Extras' digital transformation from a tradionally offline business by redesigning both Travel Insurance process and their native iOS & Android applications.",
+            cardLink: {
+              href: "#",
+              text: "Find out more",
+              triggerModal: true
+            }
+          })
+          
+          
+      hr.divider.divider--margin-top
+    
+  
+  section.section(id="company")
+    .container
+      .grid.grid--statements
+        .grid__item
+          +statement({
+            statementIcon: "/assets/images/icons/leaves.svg",
+            statementHeading: "We nurture relationships",
+            statementText: "As a remote organisation, we work with clients from all across the world. Our focus on cultivating relationships puts your success first."
+          })
+
+        .grid__item
+          +statement({
+            statementIcon: "/assets/images/icons/scales.svg",
+            statementHeading: "Intentionally lean",
+            statementText: "We hate the faceless conveyor belt model of larger agencies. Keeping our overheads low and our core team small means you'll always be a priority."
+          })
+
+        .grid__item
+          +statement({
+            statementIcon: "/assets/images/icons/communicate.svg",
+            statementHeading: "We talk honestly, and often",
+            statementText: "The most honest advice can sometimes be the most difficult to give. We’ll always be completely open and tell you the truth, even when it hurts."
+          })
+
+        .grid__item
+          +statement({
+            statementIcon: "/assets/images/icons/puzzle.svg",
+            statementHeading: "Evolution, not revolution",
+            statementText: "With existing products, we focus on continual improvement, delivering low-risk and fast results, one considered piece at a time."
+          })
+
+  section.section
+    .container
+      .grid.grid--profiles
+        .grid__item
+          +profile({
+            profileImage: {
+              context: "profile",
+              src: "/assets/images/chris.jpg",
+              alt: "Chris Annetts"
+            },
+            profileHeading: "Chris Annetts",
+            profileText: "Design Director"
+          })
+
+        .grid__item
+          +profile({
+            profileImage: {
+              context: "profile",
+              src: "/assets/images/mike.jpg",
+              alt: "Mike Carter"
+            },
+            profileHeading: "Mike Carter",
+            profileText: "Engineering Director"
+          })
+
+        .grid__item
+          +profile({
+            profileImage: {
+              context: "profile",
+              src: "/assets/images/oj.jpg",
+              alt: "Oliver Standeven"
+            },
+            profileHeading: "Oliver Standeven",
+            profileText: "Software Engineer"
+          })
+
+        .grid__item
+          +profile({
+            profileImage: {
+              context: "profile",
+              src: "/assets/images/tina.jpg",
+              alt: "Tina van Schelt"
+            },
+            profileHeading: "Tina van Schelt",
+            profileText: "Software Engineer"
+          })
+
+        .grid__item
+          +profile({
+            profileImage: {
+              src: "/assets/images/curt.jpg",
+              alt: "Curtis Lee"
+            },
+            profileHeading: "Curtis Lee",
+            profileText: "Product Designer"          
+          })
