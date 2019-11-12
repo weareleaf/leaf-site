@@ -1,89 +1,56 @@
-@import url("//hello.myfonts.net/count/39966e");
+@import url("//hello.myfonts.net/count/3a8a2c");
 
 @font-face {
   font-family: 'Larsseit-ExtraBold';
-  font-display: swap;
-  src: url('webfonts/39966E_0_0.eot');
-  src:
-    url('webfonts/39966E_0_0.eot?#iefix') format('embedded-opentype'),
-    url('webfonts/39966E_0_0.woff2') format('woff2'),
-    url('webfonts/39966E_0_0.woff') format('woff'),
-    url('webfonts/39966E_0_0.ttf') format('truetype');
+  src: url('../fonts/3A8A2C_0_0.eot');
+  src: url('../fonts/3A8A2C_0_0.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/3A8A2C_0_0.woff2') format('woff2'),
+    url('../fonts/3A8A2C_0_0.woff') format('woff'),
+    url('../fonts/3A8A2C_0_0.ttf') format('truetype');
 }
 
 @font-face {
   font-family: 'Larsseit-Light';
-  font-display: swap;
-  src: url('webfonts/39966E_1_0.eot');
-  src:
-    url('webfonts/39966E_1_0.eot?#iefix') format('embedded-opentype'),
-    url('webfonts/39966E_1_0.woff2') format('woff2'),
-    url('webfonts/39966E_1_0.woff') format('woff'),
-    url('webfonts/39966E_1_0.ttf') format('truetype');
+  src: url('../fonts/3A8A2C_1_0.eot');
+  src: url('../fonts/3A8A2C_1_0.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/3A8A2C_1_0.woff2') format('woff2'),
+    url('../fonts/3A8A2C_1_0.woff') format('woff'),
+    url('../fonts/3A8A2C_1_0.ttf') format('truetype');
 }
 
 @font-face {
-  font-family: 'Larsseit-Bold';
-  font-display: swap;
-  src: url('webfonts/39966E_2_0.eot');
-  src:
-    url('webfonts/39966E_2_0.eot?#iefix') format('embedded-opentype'),
-    url('webfonts/39966E_2_0.woff2') format('woff2'),
-    url('webfonts/39966E_2_0.woff') format('woff'),
-    url('webfonts/39966E_2_0.ttf') format('truetype');
-}
-
-@font-face {
-  font-family: 'Larsseit-LightItalic';
-  font-display: swap;
-  src: url('webfonts/39966E_3_0.eot');
-  src:
-    url('webfonts/39966E_3_0.eot?#iefix') format('embedded-opentype'),
-    url('webfonts/39966E_3_0.woff2') format('woff2'),
-    url('webfonts/39966E_3_0.woff') format('woff'),
-    url('webfonts/39966E_3_0.ttf') format('truetype');
+  font-family: 'Larsseit';
+  font-weight: bold;font-style: normal;
+  src: url('../fonts/3A8A2C_2_0.eot');
+  src: url('../fonts/3A8A2C_2_0.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/3A8A2C_2_0.woff2') format('woff2'),
+    url('../fonts/3A8A2C_2_0.woff') format('woff'),
+    url('../fonts/3A8A2C_2_0.ttf') format('truetype');
 }
 
 @font-face {
   font-family: 'Larsseit-Medium';
-  font-display: swap;
-  src: url('webfonts/39966E_4_0.eot');
-  src:
-    url('webfonts/39966E_4_0.eot?#iefix') format('embedded-opentype'),
-    url('webfonts/39966E_4_0.woff2') format('woff2'),
-    url('webfonts/39966E_4_0.woff') format('woff'),
-    url('webfonts/39966E_4_0.ttf') format('truetype');
+  src: url('../fonts/3A8A2C_3_0.eot');
+  src: url('../fonts/3A8A2C_3_0.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/3A8A2C_3_0.woff2') format('woff2'),
+    url('../fonts/3A8A2C_3_0.woff') format('woff'),url('webfonts/3A8A2C_3_0.ttf') format('truetype');
 }
 
 @font-face {
-  font-family: 'Larsseit-Regular';
-  font-display: swap;
-  src: url('webfonts/39966E_5_0.eot');
-  src:
-    url('webfonts/39966E_5_0.eot?#iefix') format('embedded-opentype'),
-    url('webfonts/39966E_5_0.woff2') format('woff2'),
-    url('webfonts/39966E_5_0.woff') format('woff'),
-    url('webfonts/39966E_5_0.ttf') format('truetype');
+  font-family: 'Larsseit';
+  font-weight: normal;font-style: normal;
+  src: url('../fonts/3A8A2C_4_0.eot');
+  src: url('../fonts/3A8A2C_4_0.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/3A8A2C_4_0.woff2') format('woff2'),
+    url('../fonts/3A8A2C_4_0.woff') format('woff'),
+    url('../fonts/3A8A2C_4_0.ttf') format('truetype');
 }
 
 @font-face {
-  font-family: 'Larsseit-RegularItalic';
-  font-display: swap;
-  src: url('webfonts/39966E_6_0.eot');
-  src:
-    url('webfonts/39966E_6_0.eot?#iefix') format('embedded-opentype'),
-    url('webfonts/39966E_6_0.woff2') format('woff2'),
-    url('webfonts/39966E_6_0.woff') format('woff'),
-    url('webfonts/39966E_6_0.ttf') format('truetype');
-}
-
-@font-face {
-  font-family: 'Larsseit-MediumItalic';
-  font-display: swap;
-  src: url('webfonts/39966E_7_0.eot');
-  src:
-    url('webfonts/39966E_7_0.eot?#iefix') format('embedded-opentype'),
-    url('webfonts/39966E_7_0.woff2') format('woff2'),
-    url('webfonts/39966E_7_0.woff') format('woff'),
-    url('webfonts/39966E_7_0.ttf') format('truetype');
+  font-family: 'Larsseit';
+  font-weight: normal;font-style: italic;
+  src: url('../fonts/3A8A2C_5_0.eot');
+  src: url('../fonts/3A8A2C_5_0.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/3A8A2C_5_0.woff2') format('woff2'),
+    url('../fonts/3A8A2C_5_0.woff') format('woff'),url('webfonts/3A8A2C_5_0.ttf') format('truetype');
 }
