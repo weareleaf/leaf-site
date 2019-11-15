@@ -121,6 +121,26 @@
     margin-top: $spacing-vertical-lg;
   }
 
+  &__media {
+
+    .hero--what-we-do & {
+      margin-top: -5rem;
+
+      @media screen and (min-width: map-get($bp, 'sm')) {
+        margin-top: 0;
+      }
+
+      @media screen and (min-width: map-get($bp, 'md')) {
+        margin-top: 10rem;
+        position: relative;
+      }
+
+      @media screen and (min-width: map-get($bp, 'xl')) {
+        margin-top: 0;
+      }
+    }
+  }
+
   &__image {
     display: inline-block;
     height: auto;
