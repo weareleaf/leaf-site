@@ -10,7 +10,7 @@ mixin footer(c)
               strong Interested in working together?
               | Tell us what you’re looking to achieve, and we’ll start thinking about how we can help.
               if c.footerNav === false
-                a.footer__cta-link(href="#", data-micromodal-trigger="modal-contact") Introduce your project &rarr;
+                a.footer__cta-link(href="javascript:void(0)", data-micromodal-trigger="modal-contact") Introduce your project &rarr;
               else
                 a.footer__cta-link(href="/project-planner") Introduce your project &rarr;
             .footer__social
@@ -63,7 +63,7 @@ mixin footer(c)
                       navItemText: "Jobs at Leaf"
                     },
                     {
-                      navItemUrl: "#",
+                      navItemUrl: "javascript:void(0)",
                       navItemText: "Contact us",
                       navItemTriggerModal: true
                     }

@@ -11,11 +11,11 @@ block prepend vars
 
 block pageComponents
   +hero({
-    heroModifier: "landing", 
-    heroHeading: metaTitle, 
+    heroModifier: "landing",
+    heroHeading: metaTitle,
     heroText: metaDescription,
     heroButton: {
-      buttonUrl: "#",
+      buttonUrl: "javascript:void(0)",
       buttonText: "Start the conversation",
       navItemTriggerModal: true
     },
@@ -34,19 +34,19 @@ block pageComponents
             statementHeading: "Consultancy",
             statementText: "We'll work together to guide your architectural and technical approaches, stepping you towards achieving your business goals.",
             statementLink: {
-              href: "#",
+              href: "javascript:void(0)",
               text: "Find out more",
               triggerModal: true
             }
           })
-        
+
         .grid__item
           +statement({
             statementIcon: "/assets/images/icons/tasks.svg",
             statementHeading: "Performance audit",
             statementText: "We'll review your existing application, making detailed and prioritised recommendations, helping you focus your efforts.",
             statementLink: {
-              href: "#",
+              href: "javascript:void(0)",
               text: "Find out more",
               triggerModal: true
             }
@@ -58,7 +58,7 @@ block pageComponents
             statementHeading: "UX Design",
             statementText: "We'll make sure your customers love your product, creating applications that meet not only their needs, but those of the business.",
             statementLink: {
-              href: "#",
+              href: "javascript:void(0)",
               text: "Find out more",
               triggerModal: true
             }
@@ -70,12 +70,12 @@ block pageComponents
             statementHeading: "Development",
             statementText: "If you'd like our help with implementing our recommendations, we'll ensure your product is as performant as your codebase is maintainable.",
             statementLink: {
-              href: "#",
+              href: "javascript:void(0)",
               text: "Find out more",
               triggerModal: true
             }
           })
-          
+
   section.section(id="our-work")
     .container
       h2.small Recent success
@@ -87,13 +87,13 @@ block pageComponents
         studyHeading: "Helping travellers gain peace-of-mind",
         studyText: "Travel can be stressful, but it doesn't need to be. We helped Holiday Extras redesign their mobile-first travel insurance web flow.",
         studyLink: {
-          href: "#",
+          href: "javascript:void(0)",
           text: "Find out more",
           triggerModal: true
         }
       })
-      
-  
+
+
   section.section(id="company")
     .container
       .grid.grid--statements
@@ -179,5 +179,5 @@ block pageComponents
               alt: "Curtis Lee"
             },
             profileHeading: "Curtis Lee",
-            profileText: "Product Designer"          
+            profileText: "Product Designer"
           })
