@@ -11,8 +11,8 @@ block prepend vars
 
 block pageComponents
   +hero({
-    heroModifier: "landing", 
-    heroHeading: metaTitle, 
+    heroModifier: "landing",
+    heroHeading: metaTitle,
     heroText: metaDescription,
     heroButton: {
       buttonUrl: "#",
@@ -75,7 +75,7 @@ block pageComponents
               triggerModal: true
             }
           })
-          
+
   section.section(id="our-work")
     .container
       h2.small Recent successes
@@ -111,11 +111,11 @@ block pageComponents
             }
           })
 
-  section.section--margin-b
+  section.section.section--margin-b
     .container
       +company-logos
-      
-  
+
+
   section.section(id="company")
     .container
       .grid.grid--statements
@@ -201,5 +201,5 @@ block pageComponents
               alt: "Curtis Lee"
             },
             profileHeading: "Curtis Lee",
-            profileText: "Product Designer"          
+            profileText: "Product Designer"
           })
