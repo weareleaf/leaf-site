@@ -19,7 +19,7 @@
     position: fixed;
     right: 0;
     top: 0;
-    will-change: transform;
+    will-change: opacity;
     z-index: 1001;
 
     .modal[aria-hidden="false"] & {

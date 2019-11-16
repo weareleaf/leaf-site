@@ -22,7 +22,7 @@ export default function () {
     }
   }
 
-  if (bannerLogo) {
+  if (bannerLogo && bannerImage) {
     const fadeInOffset = bannerImage.offsetHeight
     let visible = false
 
