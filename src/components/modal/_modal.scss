@@ -23,11 +23,13 @@
     z-index: 1001;
 
     .modal[aria-hidden="false"] & {
-      animation: mmfadeIn .3s cubic-bezier(0, 0, .2, 1);
+      //animation: mmfadeIn .3s cubic-bezier(0, 0, .2, 1);
+      animation: mmfadeIn 200ms ease;
     }
 
     .modal[aria-hidden="true"] & {
-      animation: mmfadeOut .3s cubic-bezier(0, 0, .2, 1);
+      //animation: mmfadeOut .3s cubic-bezier(0, 0, .2, 1);
+      animation: mmfadeOut 200ms ease;
     }
   }
 
@@ -48,11 +50,13 @@
     }
 
     .modal[aria-hidden="false"] & {
-      animation: mmslideIn .3s cubic-bezier(0, 0, .2, 1);
+      //animation: mmslideIn .3s cubic-bezier(0, 0, .2, 1);
+      animation: mmslideIn 200ms ease;
     }
 
     .modal[aria-hidden="true"] & {
-      animation: mmslideOut .3s cubic-bezier(0, 0, .2, 1);
+      //animation: mmslideOut .3s cubic-bezier(0, 0, .2, 1);
+      animation: mmslideOut 200ms ease;
     }
   }
 
@@ -84,11 +88,11 @@
 }
 
 @keyframes mmslideIn {
-  from { transform: translateY(15%); }
+  from { transform: translateY(5%); }
   to { transform: translateY(0); }
 }
 
 @keyframes mmslideOut {
   from { transform: translateY(0); }
-  to { transform: translateY(-10%); }
+  to { transform: translateY(-5%); }
 }
