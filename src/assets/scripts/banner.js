@@ -3,6 +3,8 @@ function onClick() {
 
   if (pathname.match(/blog/)) {
     window.location = `${origin}/blog`
+  } else if (pathname.match(/careers/)) {
+    window.location = `${origin}/careers`
   } else {
     window.location = `${origin}/our-work`
   }
@@ -11,12 +13,14 @@ function onClick() {
 export default function () {
   const bannerButton = document.querySelector('.banner__button')
   const bannerLogo = document.querySelector('.banner__logo')
-  const bannerImage = document.querySelector('.banner__image')
+  const bannerImage = document.querySelector('.banner__media')
 
   if (bannerButton) {
     const { pathname, origin } = window.location
     if (pathname.match(/blog/)) {
       bannerButton.href = '/blog'
+    } else if (pathname.match(/careers/)) {
+      bannerButton.href = '/careers'
     } else {
       bannerButton.href = '/our-work'
     }
