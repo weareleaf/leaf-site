@@ -34,6 +34,7 @@
   }
 
   &--symmetrical-card {
+
     @media screen and (min-width: map-get($bp, 'md')) {
       grid-template-columns: 1fr 1fr;
       grid-column-gap: $spacing-horizontal-xl;
@@ -145,13 +146,12 @@
     @media screen and (min-width: map-get($bp, 'md')) {
       grid-gap: $spacing-blog-grid;
       grid-template-columns: 1fr 1fr 1fr;
-
     }
   }
 
   @media screen and (min-width: map-get($bp, "md")) {
     .grid__item-large {
-      grid-column: span 2;}
+      grid-column: span 2;
     }
   }
 }
