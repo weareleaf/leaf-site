@@ -24,7 +24,7 @@
       @media screen and (min-width: 1240px) {
         height: 240px;
       }
-      transition: opacity $duration-1 $timing-base;
+      transition: opacity $duration-2 $timing-1;
     }
   }
 
@@ -36,7 +36,7 @@
     color: $color-grey-dark;
     font-size: 1.5em;
     margin: 0 0 0.333em;
-    transition: color $duration-1 $timing-base;
+    transition: color $duration-2 $timing-1;
   }
 
   &__text {

@@ -80,7 +80,7 @@
         background: currentColor;
         transform-origin: center left;
         transform: scaleX(0);
-        transition: transform $duration-1 cubic-bezier(0.55, 0, 0.1, 1);
+        transition: transform $duration-5 cubic-bezier(0.55, 0, 0.1, 1);
       }
 
       &:hover::after {

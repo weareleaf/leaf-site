@@ -21,15 +21,15 @@ $color-zendesk: #b6f2f2;
 $color-laced: #879ac9;
 
 // Animations
-//$animation-delay: 5s;
-$duration-1: 250ms;
-$duration-2: 300ms;
-$duration-3: 400ms;
-//$duration-fast: 150ms;
-//$duration-slow: 450ms;
-//$duration-snail: 600ms;
-$timing-base: ease;
-$timing-ease-in-out: ease-in-out;
+$duration-1: 150ms;
+$duration-2: 250ms;
+$duration-3: 300ms;
+$duration-4: 400ms;
+$duration-5: 500ms;
+
+$timing-1: ease;
+$timing-2: ease-in-out;
+$timing-3: ease-in;
 
 // Borders
 $border-color: $color-grey-lightest !default;
