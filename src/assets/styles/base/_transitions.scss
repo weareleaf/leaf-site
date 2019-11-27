@@ -1,25 +1,25 @@
 .section,
 .footer {
-  opacity: $opacity-0;
+  opacity: 0;
   transform: translateY(0);
   transition: opacity $duration-4 $timing-1, transform $duration-4 $timing-1;
 }
 
 .hero {
   &__blob {
-    opacity: $opacity-0;
+    opacity: 0;
     transform: translateX(0);
     transition: opacity $duration-4 $timing-1, transform $duration-4 $timing-1;
   }
 
   &__content {
-    opacity: $opacity-0;
+    opacity: 0;
     transform: translateX(0);
     transition: opacity $duration-4 $timing-1, transform $duration-4 $timing-1;
   }
 
   &__media {
-    opacity: $opacity-0;
+    opacity: 0;
     transform: translateX(0);
     transition: opacity $duration-4 $timing-1, transform $duration-4 $timing-1;
   }
@@ -28,23 +28,23 @@
 .transition-out {
   .section,
   .footer {
-    opacity: $opacity-0;
+    opacity: 0;
     transform: translateY(10%);
   }
 
   .hero {
     &__blob {
-      opacity: $opacity-0;
+      opacity: 0;
       transform: translateX(-10%);
     }
 
     &__content {
-      opacity: $opacity-0;
+      opacity: 0;
       transform: translateX(-10%);
     }
 
     &__media {
-      opacity: $opacity-0;
+      opacity: 0;
       transform: translateX(10%);
     }
   }
@@ -53,24 +53,24 @@
 .transition-in {
   .hero {
     &__blob {
-      opacity: $opacity-1;
+      opacity: 1;
       transform: translateX(0);
     }
 
     &__content {
-      opacity: $opacity-1;
+      opacity: 1;
       transform: translateX(0);
     }
 
     &__media {
-      opacity: $opacity-1;
+      opacity: 1;
       transform: translateX(0);
     }
   }
 
   .section,
   .footer {
-    opacity: $opacity-1;
+    opacity: 1;
     transform: translateY(0);
   }
 }

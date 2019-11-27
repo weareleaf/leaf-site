@@ -40,7 +40,7 @@ a.card {
     text-decoration: none;
 
     .card__image {
-      opacity: $opacity-75;
+      opacity: 0.75;
     }
 
     .card__heading {
@@ -48,7 +48,7 @@ a.card {
     }
 
     .card__image {
-      opacity: $opacity-75;
+      opacity: 0.75;
     }
   }
 }

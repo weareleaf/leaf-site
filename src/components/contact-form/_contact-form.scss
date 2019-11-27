@@ -1,7 +1,7 @@
 .form {
   &__fieldset--spacing {
     border: 0;
-    border-top: 3px solid $color-grey-lightest;
+    border-top: $border-width-lg $border-style $border-color;
     margin: -3px 0 $spacing-vertical-lg;
     padding: 0;
 
@@ -178,7 +178,7 @@
     }
 
     &.erroneous {
-      border: 1px solid $color-red;
+      border: $border-width-base $border-style $color-red;
     }
   }
 

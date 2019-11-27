@@ -5,7 +5,7 @@ $color-red: #f77c6b;
 $color-grey-lightest: #e2e3e5;
 $color-grey-light: #c6c7cc;
 $color-grey: #6f7075;
-$color-grey-dark: hsl(200, 15%, 20%);
+$color-grey-dark: #2b363b;
 $color-grey-dark-transparent: rgba($color-grey-dark, 0.9);
 $color-grey-green: #f0f3f1;
 $color-white: #fff;
@@ -36,10 +36,9 @@ $border-color: $color-grey-lightest !default;
 $border-style: solid !default;
 
 $border-width-base: 1px !default;
-$border-width-lg: 3px !default;
-$border-width-sm: 2px !default;
-
-$border: $border-style $border-width-base $border-color !default;
+$border-width-sm: $border-width-base * 2 !default;
+$border-width-lg: $border-width-base * 3 !default;
+$border-width-xl: $border-width-base * 4 !default;
 
 // Border radius
 $border-radius: 0.25rem !default;
@@ -63,12 +62,14 @@ $font-family-sans-serif-bold: 'Larsseit-Bold', sans-serif !default;
 
 $letter-spacing-base: 0.0125rem;
 $line-height: 1.75 !default;
+
 $font-size-xs: 1rem !default;
 $font-size-sm: 1.125rem !default;
 $font-size-lg: 1.875rem !default;
 $font-size-base: 1.25rem !default;
 $font-size-small: 0.8rem !default;
 $font-size-tiny: 0.7rem !default;
+
 $font-weight-base: 400;
 
 $selection-color: $brand-primary !default;
@@ -144,8 +145,3 @@ $bio-spacing-lg: $bio-spacing-base * 6 !default;
 // Element Sizing & Widths
 $size-base: 1rem !default;
 $size-large: 50px !default;
-
-// Opacity
-$opacity-1: 1;
-$opacity-75: 0.75;
-$opacity-0: 0;

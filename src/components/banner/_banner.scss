@@ -85,7 +85,7 @@ $logo-breakpoint: 1400px;
       z-index: 1000;
 
       svg {
-        opacity: $opacity-0;
+        opacity: 0;
         transform: translateY(50%);
         transition: opacity $duration-4 $timing-1,
           transform $duration-4 $timing-1;
@@ -93,7 +93,7 @@ $logo-breakpoint: 1400px;
 
       &--visible {
         svg {
-          opacity: $opacity-1;
+          opacity: 1;
           transform: translateY(0);
         }
       }
@@ -132,7 +132,7 @@ $logo-breakpoint: 1400px;
       overflow: hidden;
       padding: 0;
       white-space: nowrap;
-      width: 1px;
+      width: $border-width-base;
       position: relative;
 
       @media screen and (min-width: $logo-breakpoint) {
