@@ -8,7 +8,7 @@
 
   &__image {
     display: block;
-    transition: opacity $duration-base $timing-base;
+    transition: opacity $duration-1 $timing-base;
     width: 100%;
   }
 
@@ -23,12 +23,12 @@
 
   &__heading {
     color: $color-grey-dark;
-    transition: color $duration-base $timing-base;
+    transition: color $duration-1 $timing-base;
   }
 
   &__text {
     color: initial;
-    font-size: .9rem;
+    font-size: 0.9rem;
     margin-bottom: 0;
   }
 

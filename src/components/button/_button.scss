@@ -6,12 +6,12 @@
   cursor: pointer;
   display: inline-block;
   font-family: $font-family-sans-serif-regular;
-  font-size: .9rem;
+  font-size: 0.9rem;
   margin: 0;
   padding: $spacing-4 $spacing-5;
   text-align: center;
   text-decoration: none;
-  transition: background-color $duration-base $timing-base;
+  transition: background-color $duration-1 $timing-base;
 
   @media screen and (min-width: map-get($bp, sm)) {
     //font-size: $font-size-base;
@@ -33,6 +33,6 @@
   }
 
   &--small {
-    font-size: .8em;
+    font-size: 0.8em;
   }
 }
