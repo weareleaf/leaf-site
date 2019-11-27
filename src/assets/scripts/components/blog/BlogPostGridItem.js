@@ -18,7 +18,7 @@ class BlogPostGridItem extends Component {
             <p className={`${postPrefix}__text`}>{postText}</p>
             <div className={`${postPrefix}__footer`}>
               <div className="author author--margin-top">
-                <picture className="author__thumbnail">
+                <picture className="author__media">
                   <source srcSet={author.authorThumbnail.src} type="image/webp" />
                   <img src={author.authorThumbnail.fallbackSrc} alt="Mike" />
                 </picture>

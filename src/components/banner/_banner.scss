@@ -163,25 +163,20 @@ $logo-breakpoint: 1400px;
   }
 
   &__image {
-    img {
-      display: block;
-      margin: 0 auto;
-      max-height: 42.5em;
-      width: auto;
-      max-width: 100%;
-    }
+    display: block;
+    margin: 0 auto;
+    max-height: 42.5em;
+    width: auto;
+    max-width: 100%;
   }
 
   &__heading {
-    padding: $spacing-vertical 0;
+    @include padding-vertical($spacing-9);
     text-align: center;
 
     @media screen and (min-width: map-get($bp, 'lg')) {
-      padding: $spacing-vertical-lg 0;
+      @include padding-vertical($spacing-10);
     }
 
-    @media screen and (min-width: 90em) {
-      padding: $spacing-vertical-xl 0;
-    }
   }
 }

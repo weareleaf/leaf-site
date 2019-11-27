@@ -1,7 +1,7 @@
 mixin author(c)
   .author(class= c.class)
     +image({
-      class: "author__thumbnail",
+      context: "author",
       src: c.authorThumbnail.src,
       alt: c.authorThumbnail.alt
     })

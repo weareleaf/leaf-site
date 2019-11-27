@@ -1,10 +1,10 @@
 mixin profile(c)
   .profile
     +image({
-      class: "profile__image",
+      context: "profile",
       src: c.profileImage.src,
       alt: c.profileImage.alt
     })
     .profile__content
-      h3.profile__heading= c.profileHeading
+      h4.profile__heading= c.profileHeading
       p.profile__text= c.profileText

@@ -1,5 +1,5 @@
 .block {
-  margin-bottom: $spacing-vertical-xl;
+  margin-bottom: $spacing-9;
 
   @media screen and (min-width: map-get($bp, 'md')) {
     align-items: center;
@@ -11,50 +11,33 @@
   }
 
   &__content {
-    margin-bottom: $spacing-vertical-lg;
 
     @media screen and (min-width: map-get($bp, 'md')) {
-      margin-bottom: 0;
-      width: 60%;
+      width: 50%;
     }
 
     .block--reverse & {
+
       @media screen and (min-width: map-get($bp, 'md')) {
         order: 1;
       }
     }
   }
 
-  &__heading {
-    font-size: 2em;
-  }
-
-  &__text {
-    strong {
-      color: $color-grey-dark;
-    }
-  }
-
-  &__image {
-    margin: 0 auto;
-    max-width: 60%;
+  &__media {
+    max-width: 80%;
 
     @media screen and (min-width: map-get($bp, 'md')) {
-      margin: 0;
-      padding-left: $spacing-horizontal-lg;
+      margin-left: $spacing-7;
       max-width: none;
       width: 40%;
     }
 
-    img {
-      display: inline-block;
-      vertical-align: middle;
-    }
-
     .block--reverse & {
+
       @media screen and (min-width: map-get($bp, 'md')) {
-        padding-left: 0;
-        padding-right: $spacing-horizontal-xl;
+        margin-left: 0;
+        margin-right: $spacing-7;
       }
     }
   }

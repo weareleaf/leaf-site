@@ -11,7 +11,7 @@ mixin hero(c)
           .hero__button
             +button(c.heroButton)
       +image({
-        class: "hero__image",
+        context: "hero",
         src: c.heroImage.src,
         alt: c.heroImage.alt
       })

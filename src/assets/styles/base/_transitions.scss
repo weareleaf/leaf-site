@@ -24,7 +24,7 @@
       transform 400ms ease;
   }
 
-  &__image {
+  &__media {
     opacity: 0;
     transform: translateX(0);
     transition:
@@ -51,7 +51,7 @@
       transform: translateX(-10%);
     }
 
-    &__image {
+    &__media {
       opacity: 0;
       transform: translateX(10%);
     }
@@ -70,7 +70,7 @@
       transform: translateX(0);
     }
 
-    &__image {
+    &__media {
       opacity: 1;
       transform: translateX(0);
     }

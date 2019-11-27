@@ -1,0 +1,14 @@
+mixin study(c)
+  .study
+    +image({
+      context: "study",
+      src: c.studyImage.src,
+      alt: c.studyImage.alt
+    })
+    .study__content
+      h3.study__heading= c.studyHeading
+      p.study__text= c.studyText
+      if c.studyLink
+        a.study__link(
+          data-micromodal-trigger=(c.studyLink.triggerModal ? "modal-contact" : undefined)
+          href= c.studyLink.href)= c.studyLink.text

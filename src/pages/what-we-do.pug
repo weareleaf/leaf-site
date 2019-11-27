@@ -5,45 +5,45 @@ block prepend vars
   -var pageTitle = 'What we do - Leaf'
   -var metaUrl = "https://weareleaf.com/what-we-do"
   -var metaTitle = "What we do"
-  -var metaDescription = "We take a three step approach when helping our clients to automate their businesses."
+  -var metaDescription = "We don’t consider ourselves an agency, and don’t act like one. We’re in it for the long haul."
 
 block pageComponents
   +hero({
+    heroModifier: "what-we-do",
     heroHeading: metaTitle,
     heroText: metaDescription,
     heroImage: {
-      src: "/assets/images/heros/what-we-do.gif",
-      alt: "Alt text for hero image",
+      src: "/assets/images/what-we-do.png",
+      alt: metaTitle
     }
   })
 
   section.section
     .container
       +block({
-        blockHeading: "1. Analysis",
-        blockContent: "<p>First of all, we'll make sure we <strong>understand your business</strong>, the <strong>problems you're having</strong>, and <strong>your automation goals</strong>. Taking time to listen helps us to get a clear picture of what's important to you, and how we can best <strong>deliver value</strong>.</p><p>Once we have a shared understanding of your problems and goals, we'll use techniques such as <strong>staff shadowing</strong>, <strong>interviews</strong>, <strong>data analysis</strong>, and <strong>user research</strong> to uncover automation opportunities.</p>",
+        blockHeading: "Insight",
+        blockContent: "<ul class=\"styled-list styled-list--inside-sm\"><li class=\"styled-list__item\"><strong>Behavioural analytics</strong> allow you to see what users are doing on your digital products, identifying sticking points based on actual user data.</li><li class=\"styled-list__item\"><strong>Split testing</strong> allows us to put multiple variants of a feature head to head to see which is best for your business, driving continual improvement.</li><li class=\"styled-list__item\"><strong>Staff shadowing</strong> gives us insight into any unnecessary overheads in your business processes, identifying opportunities for automation.</li></ul>",
         blockImage: {
           src: "/assets/images/insight.jpg",
-          alt: "Analysing your business"
+          alt: ""
         }
       })
 
       +block({
-        blockHeading: "2. Recommendations",
-        blockContent: "<p>We'll create a report detailing automation opportunities that will <strong>increase the speed</strong>, <strong>accuracy</strong>, and <strong>scaleability</strong> of your business. Each recommendation will have a clear explanation of its value, helping you prioritise and budget based on the <strong>return on investment</strong>.</p><p>If at this point you'd like to handle the implementation yourself, either in-house or through a third-party, <strong>we can treat our recommendations as a standalone engagement</strong>. You'll never be locked into services you don't need or want.</p>",
+        blockHeading: "Design",
+        blockContent: "<ul class=\"styled-list styled-list--inside-sm\"><li class=\"styled-list__item\"><strong>Sketching and wireframing</strong> places a focus on the underlying design problems that need solving, rather than shallow visual details of your product.</li><li class=\"styled-list__item\"><strong>Prototyping</strong> provides a cost-effective method of overcoming technological and design hurdles before building a product or feature.</li><li class=\"styled-list__item\"><strong>Visual design</strong> gives a polished and professional validation to your product, whilst helping build trust and familiarity with your brand itself.</li><li class=\"styled-list__item\"><strong>Styleguides</strong> and <strong>Pattern libraries</strong> promote a consistent design language, informing future design decisions for more efficient development process.</li></ul>",
         blockImage: {
           src: "/assets/images/design.jpg",
-          alt: "Writing our recommendations"
+          alt: ""
         },
         blockModifer: "reverse",
       })
 
       +block({
-        blockHeading: "3. Implementation",
-        blockContent: "<p>With sensitivity to existing business procedures and deadlines, our team of software engineers and designers begin to implement our recommendations in priority order to ensure value is delivered early. Typically, this may involve:</p><ul class='styled-list styled-list--inside-sm'> <li class='styled-list__item'><strong>Creating or updating web and mobile apps</strong>, so that customers and staff can interact with your business on a self-service basis, from anywhere, and at any time.</li><li class='styled-list__item'><strong>Improving information capture</strong>, so that data is more accurate, operating costs are reduced, and customer frustration is lower.</li><li class='styled-list__item'><strong>Building APIs</strong>, so B2B partners can write software that connects with your business, and you can build new software products and services more easily.</li><li class='styled-list__item'><strong>Integrating third-party APIs</strong> to automate common tasks, deliver additional functionality to your customers, and allow you to offer new products and services.</li><li class='styled-list__item'><strong>Automatically enriching and cleaning up customer data</strong>, so that you can operate with high quality, immediately available information.</li><li class='styled-list__item'><strong>Automatically extracting structured data from scans and images</strong>, so that your staff don't need to manually process physical documents or photos of documents.</li><li class='styled-list__item'><strong>Automating reporting and analytics</strong>, so that you always have the information you need to hand, and no staff time is being wasted manually collating this for you.</li></ul>",
+        blockHeading: "Development",
+        blockContent: "<ul class=\"styled-list styled-list--inside-sm\"><li class=\"styled-list__item\"><strong>Software engineering</strong> with cutting edge JavaScript, Node and Ruby means we’re able to deliver value quickly on a wide range of products.</li><li class=\"styled-list__item\"><strong>Technical leadership</strong> is in our DNA. We promote best practices, ownership, and trust in order to get the best from development teams.</li><li class=\"styled-list__item\"><strong>Business automation</strong> removes bottlenecks in your daily operations with software. This promotes speed, quality, and scalability in your business.</li><li class=\"styled-list__item\"><strong>Automated testing</strong> checks that your products are working properly, meaning we can confidently make website or app changes at a moments notice.</li><li class=\"styled-list__item\"><strong>Peer reviewed code</strong> ensures that only well implemented work make it through to your customers, keeping quality high and bug counts low.</li></ul>",
         blockImage: {
           src: "/assets/images/development.jpg",
-          alt: "Implementating automation"
+          alt: ""
         }
       })
-

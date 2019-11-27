@@ -5,17 +5,16 @@ block prepend vars
   -var pageTitle = "Company - Leaf"
   -var metaUrl = "https://weareleaf.com/company"
   -var metaTitle = "Company"
-  -var metaDescription = "Four friends with experience in helping organisations fulfil their digital ambitions."
-
+  -var metaDescription = "Five friends with experience in helping organisations fulfil their digital ambitions."
 
 block pageComponents
   +hero({
-    heroModifier: "company",
-    heroHeading: "Company",
-    heroText: "Four friends with experience in helping organisations fulfil their digital ambitions.",
+    heroModifier: metaTitle, 
+    heroHeading: metaTitle, 
+    heroText: metaDescription,
     heroImage: {
       src: "/assets/images/heros/company.gif",
-      alt: "Alt text for hero image",
+      alt: metaTitle
     }
   })
 
@@ -56,6 +55,7 @@ block pageComponents
         .grid__item
           +profile({
             profileImage: {
+              context: "profile",
               src: "/assets/images/chris.jpg",
               alt: "Chris Annetts"
             },
@@ -66,6 +66,7 @@ block pageComponents
         .grid__item
           +profile({
             profileImage: {
+              context: "profile",
               src: "/assets/images/mike.jpg",
               alt: "Mike Carter"
             },
@@ -76,6 +77,7 @@ block pageComponents
         .grid__item
           +profile({
             profileImage: {
+              context: "profile",
               src: "/assets/images/oj.jpg",
               alt: "Oliver Standeven"
             },
@@ -86,6 +88,7 @@ block pageComponents
         .grid__item
           +profile({
             profileImage: {
+              context: "profile",
               src: "/assets/images/tina.jpg",
               alt: "Tina van Schelt"
             },

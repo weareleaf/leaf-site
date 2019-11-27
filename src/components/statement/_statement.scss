@@ -3,16 +3,19 @@
 
   &__icon {
     flex: 0 0 auto;
-    margin-right: $spacing-horizontal * 1.5;
+    margin-right: $spacing-5;
     width: 3em;
   }
 
-  &__heading {
-    color: $color-grey-dark;
-    font-size: 1.5em;
+  &__text {
+    margin-bottom: 0;
   }
 
-  &__text {
-    margin: 0;
+  &__link {
+    color: $brand-secondary;
+    display: block;
+    font-family: $font-family-sans-serif-medium;
+    font-size: $font-size-small;
+    margin-top: $spacing-2;
   }
 }

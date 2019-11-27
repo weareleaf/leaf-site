@@ -5,7 +5,7 @@ block prepend vars
   -var pageTitle = "Our Work - Leaf"
   -var metaUrl = "https://weareleaf.com/our-work"
   -var metaTitle = "Our work"
-  -var metaDescription = "We've helped some wonderful clients add automation to their products and services."
+  -var metaDescription = "We've helped some wonderful clients use technology to improve to their products and processes."
 
 block pageComponents
   +hero({
@@ -14,7 +14,7 @@ block pageComponents
     heroText: metaDescription,
     heroImage: {
       src: "/assets/images/heros/our-work.gif",
-      alt: "Alt text for hero image",
+      alt: metaTitle
     }
   })
 
@@ -40,7 +40,7 @@ block pageComponents
               alt: "Laced",
             },
             cardHeading: "21st century sneaker trading",
-            cardText: "We moved Laced's entire business online, allowing their customers to effortlessly buy and sell rare sneakers."
+            cardText: "We moved Laced's rare sneaker trading business online, automating their buying, selling, shipping, and quality control. Laced have since secured their series A funding, and can now scale up without hiring new staff."
           })
 
         .grid__item

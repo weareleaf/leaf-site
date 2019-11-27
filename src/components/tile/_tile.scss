@@ -1,32 +1,32 @@
 .tile {
+  align-items: center;
   background-color: $color-white;
-  border: $border-style 3px $border-color;
+  border: $border-style $border-width-lg $border-color;
   border-radius: $border-radius;
   color: $color-red;
-  display: block;
-  font-family: $font-family-sans-serif-bold;
-  font-size: 1.5em;
-  padding: ($spacing-vertical-sm * 1.25) $spacing-horizontal * 3 $spacing-vertical-sm $spacing-horizontal;
-  position: relative;
+  display: flex;
+  font-family: $font-family-sans-serif-medium;
+  font-size: $font-size-lg;
+  padding: $spacing-4;
 
   &::after {
+    @include size(1em);
     background: url('../images/icons/arrow-right.svg') no-repeat center center;
     content: '';
     display: block;
-    height: 1em;
-    position: absolute;
-    right: 1em;
-    top: 50%;
-    transform: translateY(-50%);
-    transition: right .1s ease-in;
-    width: 1em;
+    right: $spacing-4;
+    transition: transform .1s ease-in;
   }
 
   &:hover {
     text-decoration: none;
 
     &::after {
-      right: .667em;
+      transform: translateX($spacing-1);
     }
+  }
+
+  &__title {
+    flex: 1 0 auto;
   }
 }

@@ -4,7 +4,7 @@ mixin block(c)
       h2.block__heading= c.blockHeading
       .block__text!= c.blockContent
     +image({
-      class: "block__image",
+      context: "block",
       src: c.blockImage.src,
       alt: c.blockImage.alt
     })

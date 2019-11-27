@@ -7,8 +7,8 @@ $color-red: #f77c6b;
 $color-grey-lightest: #e2e3e5;
 $color-grey-light: #c6c7cc;
 $color-grey: #6f7075;
-$color-grey-dark: #35363d;
-$color-grey-dark-transparent: rgba(53, 54, 61, 0.9);
+$color-grey-dark: hsl(200, 15%, 20%);
+$color-grey-dark-transparent: rgba($color-grey-dark, .9);
 $color-grey-green: #f0f3f1;
 $color-white: #fff;
 $color-off-white: #f5f5f5;
@@ -20,21 +20,34 @@ $color-heha: #f2b6e8;
 $color-keen: #b6d9f2;
 $color-rift: #f2b6b6;
 $color-zendesk: #b6f2f2;
-$color-laced: #879AC9;
+$color-laced: #879ac9;
+
+//- Animations
+$animation-delay: 5s;
+$duration-base: 300ms;
+$duration-fast: 150ms;
+$duration-slow: 450ms;
+$duration-snail: 600ms;
+$elastic-timing: cubic-bezier(.075, .82, .165, 1);
+$timing-base: ease;
+
 
 // Borders
 // ==================================================
 
 $border-color: $color-grey-lightest !default;
 $border-style: solid !default;
-$border-width: 1px !default;
 
-$border: $border-style $border-width $border-color !default;
+$border-width-base: 1px !default;
+$border-width-lg: 3px !default;
+$border-width-sm: 2px !default;
+
+$border: $border-style $border-width-base $border-color !default;
 
 // Border radius
 // ==================================================
 
-$border-radius: 0.25rem !default;
+$border-radius: .25rem !default;
 $border-radius-full: 100% !default;
 
 // Breakpoints
@@ -51,29 +64,27 @@ $bp: (
 // Fonts
 // ==================================================
 
-$font-family-cursive: cursive !default;
-$font-family-monospace: monospace !default;
 $font-family-sans-serif-light: "Larsseit-Light", sans-serif !default;
-$font-family-sans-serif: "Larsseit-Regular", sans-serif !default;
+$font-family-sans-serif-regular: "Larsseit-Regular", sans-serif !default;
 $font-family-sans-serif-medium: "Larsseit-Medium", sans-serif !default;
 $font-family-sans-serif-bold: "Larsseit-Bold", sans-serif !default;
-$font-family-serif: serif !default;
 
-$font-family: $font-family-sans-serif !default;
-
-$line-height: 1.45 !default;
-$font-size-xs: 0.938rem !default;
+$letter-spacing-base: .0125rem;
+$line-height: 1.75 !default;
+$font-size-xs: 1rem !default;
 $font-size-sm: 1.125rem !default;
 $font-size-lg: 1.875rem !default;
-$font-size: 1.25rem !default;
-$font-weight: 400;
+$font-size-base: 1.25rem !default;
+$font-size-small: .8rem !default;
+$font-size-tiny: .7rem !default;
+$font-weight-base: 400;
 
 $selection-color: $brand-primary !default;
 
 // Spacing
 // ==================================================
 
-$spacing-horizontal: 1em !default;
+$spacing-horizontal: 1rem !default;
 $spacing-horizontal-lg: $spacing-horizontal * 2 !default;
 $spacing-horizontal-sm: $spacing-horizontal / 2 !default;
 $spacing-horizontal-xl: $spacing-horizontal * 4 !default;
@@ -86,7 +97,7 @@ $spacing-horizontal-fluid-sm: $spacing-horizontal-fluid / 1.5 !default;
 
 $spacing-horizontal-root: 5vw !default;
 
-$spacing-vertical: 1em !default;
+$spacing-vertical: 1rem !default;
 $spacing-vertical-lg: $spacing-vertical * 2 !default;
 $spacing-vertical-sm: $spacing-vertical / 2 !default;
 $spacing-vertical-xl: $spacing-vertical * 4 !default;
@@ -98,37 +109,49 @@ $spacing-vertical-fluid-sm: $spacing-vertical-fluid / 1.5 !default;
 
 $spacing-vertical-root: 5vw !default;
 
+//- Spacing scale
+$spacing-1: .125rem;
+$spacing-2: .5rem;
+$spacing-3: .75rem;
+$spacing-4: 1rem;
+$spacing-5: 1.5rem;
+$spacing-6: 2rem;
+$spacing-7: 3rem;
+$spacing-8: 4rem;
+$spacing-9: 6rem;
+$spacing-10: 12rem;
+
 // Body
 // ==================================================
 
 $body-bg: $color-white !default;
-$body-color: $color-grey !default;
+$body-color: $color-grey-dark !default;
 
 // Headings
 // ==================================================
 
-$h1-font-size: 3.998em !default;
-$h2-font-size: 2.827em !default;
-$h3-font-size: 1.999em !default;
-$h4-font-size: 1.414em !default;
-$h5-font-size: 1em !default;
-$h6-font-size: 0.707em !default;
+$font-size-h1: 4rem !default;
+$font-size-h1-sm: 2.2rem !default;
+$font-size-h2: 2rem !default;
+$font-size-h3: 1.5rem !default;
+$font-size-h4: 1rem !default;
+$font-size-h5: .9rem !default;
+$font-size-h6: .7rem !default;
 
 $heading-color: $color-grey-dark !default;
-$heading-font-family: $font-family-sans-serif-bold !default;
-$heading-font-weight: 700 !default;
+$heading-font-family: $font-family-sans-serif-medium !default;
+$heading-font-weight: 400 !default;
 $heading-line-height: 1.2 !default;
 
 // Blog Styles
 // ==================================================
 
 //Font Sizes
-$author-heading: 1.125rem !default;
-$author-details: 0.8125rem !default;
+$author-details: .8rem !default;
 $bio-font-size: 1rem !default;
 
 //Line Heights
-$bio-paragraph-leading: 1.375rem !default;
+$bio-paragraph-leading: 1.4rem !default;
 
 //Spacing
 $bio-spacing-base: 5px !default;
@@ -138,5 +161,5 @@ $bio-spacing-md: $bio-spacing-base * 4 !default;
 $bio-spacing-lg: $bio-spacing-base * 6 !default;
 
 //Element Sizing & Widths
-$size-base: 1em !default;
+$size-base: 1rem !default;
 $size-large: 50px !default;

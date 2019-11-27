@@ -1,7 +1,7 @@
 mixin post(c)
   a.post(href= c.postUrl)
     +image({
-      class: "post__image",
+      context: "post",
       src: c.postImage.src,
       alt: c.postImage.alt
     })
@@ -19,4 +19,3 @@ mixin post(c)
             src: c.author.authorThumbnail.src
           }
         })
-

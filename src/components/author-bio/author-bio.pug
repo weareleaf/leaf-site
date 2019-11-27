@@ -3,13 +3,15 @@ mixin author-bio(c)
     .author-bio__social-icons
       a.twitter(href= c.twitterUrl)
         +image({
-          class: "author-bio__image author-bio__image--twitter",
+          context: "author-bio",
+          modifier: "twitter",
           src: c.twitterImage.src,
           alt: c.twitterImage.alt
         })
       a.linkedin(href= c.linkedinUrl)
         +image({
-          class: "author-bio__image author-bio__image--linkedin",
+          context: "author-bio",
+          modifier: "linkedin",
           src: c.linkedinImage.src,
           alt: c.linkedinImage.alt
         })

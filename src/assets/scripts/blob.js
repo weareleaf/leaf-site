@@ -1,6 +1,6 @@
 import { TweenMax, TweenLite } from "gsap/TweenMax";
 
-export function createBlob(options) {
+export function createBlob(options, paused) {
   var points = [];
   var path = options.element;
   var slice = (Math.PI * 2) / options.numPoints;
@@ -39,7 +39,15 @@ export function createBlob(options) {
     path.setAttribute("d", cardinal(points, true, 1));
   }
 
-  return options;
+  if (paused) {
+    // Let the animation advance for one frame before pausing.
+    // This way it renders something before pausing.
+    setTimeout(() => {
+      tl.pause()
+    }, 16)
+  }
+
+  return tl;
 }
 
 // Cardinal spline - a uniform Catmull-Rom spline with a tension option

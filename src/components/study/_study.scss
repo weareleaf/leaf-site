@@ -1,0 +1,42 @@
+.study {
+  display: block;
+  position: relative;
+
+  &__media {
+    display: block;
+  }
+
+  &__image {
+    display: block;
+    transition: opacity $duration-base $timing-base;
+    width: 100%;
+  }
+
+  &__content {
+    background-color: $color-white;
+    bottom: 0;
+    left: 0;
+    padding: $spacing-5 $spacing-5 0 0;
+    position: absolute;
+    width: 50%;
+  }
+
+  &__heading {
+    color: $color-grey-dark;
+    transition: color $duration-base $timing-base;
+  }
+
+  &__text {
+    color: initial;
+    font-size: .9rem;
+    margin-bottom: 0;
+  }
+
+  &__link {
+    color: $brand-secondary;
+    display: block;
+    font-family: $font-family-sans-serif-medium;
+    font-size: $font-size-small;
+    margin-top: $spacing-2;
+  }
+}

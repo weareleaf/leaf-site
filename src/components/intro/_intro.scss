@@ -1,37 +1,30 @@
 .intro {
-  margin-bottom: $spacing-vertical-lg;
+  margin-bottom: $spacing-8;
 
   @media screen and (min-width: map-get($bp, 'md')) {
     display: flex;
     justify-content: space-between;
   }
 
-  @media screen and (min-width: map-get($bp, 'lg')) {
-    margin-bottom: $spacing-vertical-xl;
-  }
-
-  @media screen and (min-width: map-get($bp, 'xl')) {
-    margin-bottom: $spacing-vertical * 6;
-  }
-
   &__image {
-    margin-bottom: $spacing-vertical;
+    margin-bottom: $spacing-4;
 
     @media screen and (min-width: map-get($bp, 'md')) {
-      margin: 0 $spacing-horizontal-xl 0 0;
+      margin-bottom: 0 $spacing-3 0 0;
     }
 
     img {
-      display: inline-block;
-      height: 4.2em;
-      vertical-align: middle;
-      max-width: 15em;
+      height: 4.5rem;
+      max-width: 12rem;
     }
   }
 
   &__text {
     color: $color-grey-dark;
-    font-size: 1.3em;
-    max-width: 27em;
+    font-size: 1.25rem;
+
+    @media screen and (min-width: map-get($bp, 'md')) {
+      max-width: 60%;
+    }
   }
 }

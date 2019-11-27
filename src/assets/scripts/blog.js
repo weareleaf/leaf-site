@@ -9,6 +9,26 @@ const gridItems = [
   {
     author: {
       authorName: 'Mike Carter',
+      authorDetails: '17 September 2019 · 4 min read',
+      authorThumbnail: {
+        src: '/assets/images/mike_blog.jpg',
+        fallbackSrc: '/assets/images/mike_blog.jpg',
+        alt: 'Mike'
+      }
+    },
+    postUrl: '/blog/putting-amazon-textract-to-the-test',
+    postImage: {
+      src: '/assets/images/blog/thumbnails/documents.jpg',
+      fallbackSrc: '/assets/images/blog/thumbnails/documents.jpg',
+      alt: 'Putting Amazon Textract to the test'
+    },
+    postHeading: 'Putting Amazon Textract to the test',
+    postText:
+      'Amazon Textract extracts text and structured data from scanned or photographed documents, but how reliably can it be used for business process automation? We put it to the test.'
+  },
+  {
+    author: {
+      authorName: 'Mike Carter',
       authorDetails: '20 August 2019 · 8 min read',
       authorThumbnail: {
         src: '/assets/images/mike_blog.jpg',
@@ -20,7 +40,7 @@ const gridItems = [
     postImage: {
       src: '/assets/images/blog/thumbnails/code.jpg',
       fallbackSrc: '/assets/images/blog/thumbnails/code.jpg',
-      alt: 'How to thrive in an automated society'
+      alt: 'How to thrive in an automated business world'
     },
     postHeading: 'How to thrive in an automated business world',
     postText:
@@ -205,26 +225,6 @@ const gridItems = [
     postHeading: 'How to write better work enquiries',
     postText:
       'Five steps to start off on the right foot. As somebody with little-to-no experience of the web, the idea of enquiring …'
-  },
-  {
-    author: {
-      authorName: 'Chris Annetts',
-      authorDetails: '9 May 2017 · 3 min read',
-      authorThumbnail: {
-        src: '/assets/images/chris_blog.jpg',
-        fallbackSrc: '/assets/images/chris_blog.jpg',
-        alt: 'Chris'
-      }
-    },
-    postUrl: '/blog/fixed-cost-is-hurting-your-business',
-    postImage: {
-      src: '/assets/images/blog/thumbnails/fixed-costs.jpg',
-      fallbackSrc: '/assets/images/blog/thumbnails/fixed-costs.jpg',
-      alt: 'Fixed cost is hurting your business'
-    },
-    postHeading: 'Fixed cost is hurting your business',
-    postText:
-      'Projects turn in to games of brinksmanship, where neither side wins. If you’ve ever been on either side of …'
   },
   {
     author: {
