@@ -34,6 +34,7 @@ $timing-3: ease-in;
 // Borders
 $border-color: $color-grey-lightest !default;
 $border-style: solid !default;
+$no-border: 0;
 
 $border-width-base: 1px !default;
 $border-width-sm: $border-width-base * 2 !default;

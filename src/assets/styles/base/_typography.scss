@@ -144,7 +144,7 @@ img {
 }
 
 .divider {
-  border: 0;
+  border: $no-border;
   border-top: $border-width-lg $border-style $border-color;
 
   &--margin {

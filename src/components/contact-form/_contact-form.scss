@@ -1,6 +1,6 @@
 .form {
   &__fieldset--spacing {
-    border: 0;
+    border: $no-border;
     border-top: $border-width-lg $border-style $border-color;
     margin: -3px 0 $spacing-vertical-lg;
     padding: 0;
@@ -11,7 +11,7 @@
   }
 
   &__fieldset--no-border {
-    border: 0;
+    border: $no-border;
     border-top: none;
     margin: -3px 0 $spacing-vertical-lg;
     padding: 0;
@@ -135,7 +135,7 @@
       }
 
       &::after {
-        border: solid;
+        border: $border-style;
         border-color: $color-white;
         border-top-color: transparent;
         border-width: 0 0 2px 2px;
@@ -160,7 +160,7 @@
   &__input {
     appearance: none;
     background-color: $color-off-white;
-    border: 1px solid $color-off-white;
+    border: $border-style $color-off-white;
     border-radius: $border-radius;
     color: $color-grey-dark;
     display: block;

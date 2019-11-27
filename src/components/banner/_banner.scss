@@ -102,7 +102,7 @@ $logo-breakpoint: 1400px;
 
   &__button {
     background: rgba(53, 54, 61, 0.3);
-    border: 0;
+    border: $no-border;
     border-radius: $border-radius-half;
     cursor: pointer;
     height: 2em;
@@ -126,7 +126,7 @@ $logo-breakpoint: 1400px;
 
     span {
       display: none;
-      border: 0;
+      border: $no-border;
       clip: rect(0, 0, 0, 0);
       height: 1px;
       overflow: hidden;

@@ -1,5 +1,4 @@
 .contact {
-
   @media screen and (min-width: map-get($bp, 'md')) {
     background: url('../images/contact.jpg') no-repeat 40rem center / auto 100%;
     display: flex;
@@ -39,7 +38,7 @@
   }
 
   &__tile {
-    border-bottom: 3px solid $color-grey-lightest;
+    border-bottom: $border-width-lg $border-style $color-grey-lightest;
     margin-bottom: $spacing-6;
     padding-bottom: $spacing-6;
 
