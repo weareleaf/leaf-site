@@ -1,5 +1,4 @@
 .testimonial {
-
   &--inline {
     align-items: center;
     display: flex;
@@ -8,13 +7,13 @@
   &__text {
     color: $color-grey-dark;
     font-size: 1.3em;
-    margin: 0 0 .769em;
+    margin: 0 0 0.769em;
 
     .testimonial--inline & {
       border: 1px solid $color-grey-light;
       border-radius: $border-radius;
       color: $color-grey;
-      font-size: .850em;
+      font-size: 0.85em;
       margin: 0 $spacing-horizontal-lg 0 0;
       max-width: 20em;
       padding: 1.765em;
@@ -30,7 +29,7 @@
         display: block;
         height: 1.176em;
         position: absolute;
-        right: -.647em;
+        right: -0.647em;
         top: 50%;
         transform: translateY(-50%) rotate(45deg);
         width: 1.176em;
@@ -66,27 +65,23 @@
   }
 
   &__image-container {
-    margin-right: .75em;
+    margin-right: 0.75em;
   }
 
   &__image {
-    border-radius: 50%;
+    border-radius: $border-radius-half;
     display: inline-block;
     vertical-align: middle;
   }
 
-  &__content {
-
-  }
-
   &__name {
-    font-size: .95em;
+    font-size: 0.95em;
     font-family: $font-family-sans-serif-bold;
     margin: 0;
   }
 
   &__role {
-    font-size: .75em;
+    font-size: 0.75em;
     margin: 0;
   }
 }
