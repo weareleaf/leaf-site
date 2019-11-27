@@ -87,7 +87,8 @@ $logo-breakpoint: 1400px;
       svg {
         opacity: $opacity-0;
         transform: translateY(50%);
-        transition: opacity 400ms ease, transform 400ms ease;
+        transition: opacity $duration-4 $timing-1,
+          transform $duration-4 $timing-1;
       }
 
       &--visible {
@@ -107,7 +108,7 @@ $logo-breakpoint: 1400px;
     height: 2em;
     padding: 0;
     position: relative;
-    transition: background 0.2s ease-in-out;
+    transition: background 0.2s $timing-2;
     width: 2em;
     z-index: 1;
     -webkit-appearance: none;

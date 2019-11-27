@@ -2,26 +2,26 @@
 .footer {
   opacity: $opacity-0;
   transform: translateY(0);
-  transition: opacity $duration-2 ease, transform $duration-2 ease;
+  transition: opacity $duration-4 $timing-1, transform $duration-4 $timing-1;
 }
 
 .hero {
   &__blob {
     opacity: $opacity-0;
     transform: translateX(0);
-    transition: opacity $duration-2 ease, transform $duration-2 ease;
+    transition: opacity $duration-4 $timing-1, transform $duration-4 $timing-1;
   }
 
   &__content {
     opacity: $opacity-0;
     transform: translateX(0);
-    transition: opacity $duration-2 ease, transform $duration-2 ease;
+    transition: opacity $duration-4 $timing-1, transform $duration-4 $timing-1;
   }
 
   &__media {
     opacity: $opacity-0;
     transform: translateX(0);
-    transition: opacity $duration-2 ease, transform $duration-2 ease;
+    transition: opacity $duration-4 $timing-1, transform $duration-4 $timing-1;
   }
 }
 

@@ -29,7 +29,7 @@
   }
 
   &__fill {
-    transition: fill 0.2s ease-in-out;
+    transition: fill 0.2s $timing-2;
 
     .share__link:hover & {
       fill: lighten($color-grey-dark, 20%);
@@ -43,7 +43,7 @@
     margin-top: $spacing-blog-grid;
   }
 }
-@media screen and (min-width: map-get($bp, "md")) {
+@media screen and (min-width: map-get($bp, 'md')) {
   .section {
     &--margin {
       margin-bottom: $spacing-vertical-lg;

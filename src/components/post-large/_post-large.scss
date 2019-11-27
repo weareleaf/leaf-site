@@ -20,10 +20,11 @@
       height: 204px;
       width: 100%;
       object-fit: cover;
+      // 77.5em
       @media screen and (min-width: 1240px) {
         height: 240px;
       }
-      transition: opacity 150ms ease;
+      transition: opacity $duration-1 $timing-base;
     }
   }
 
@@ -35,7 +36,7 @@
     color: $color-grey-dark;
     font-size: 1.5em;
     margin: 0 0 0.333em;
-    transition: color 150ms ease;
+    transition: color $duration-1 $timing-base;
   }
 
   &__text {
