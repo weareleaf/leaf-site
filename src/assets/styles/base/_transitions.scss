@@ -1,58 +1,50 @@
 .section,
 .footer {
-  opacity: 0;
+  opacity: $opacity-0;
   transform: translateY(0);
-  transition:
-    opacity 400ms ease,
-    transform 400ms ease;
+  transition: opacity 400ms ease, transform 400ms ease;
 }
 
 .hero {
   &__blob {
-    opacity: 0;
+    opacity: $opacity-0;
     transform: translateX(0);
-    transition:
-      opacity 400ms ease,
-      transform 400ms ease;
+    transition: opacity 400ms ease, transform 400ms ease;
   }
 
   &__content {
-    opacity: 0;
+    opacity: $opacity-0;
     transform: translateX(0);
-    transition:
-      opacity 400ms ease,
-      transform 400ms ease;
+    transition: opacity 400ms ease, transform 400ms ease;
   }
 
   &__media {
-    opacity: 0;
+    opacity: $opacity-0;
     transform: translateX(0);
-    transition:
-      opacity 400ms ease,
-      transform 400ms ease;
+    transition: opacity 400ms ease, transform 400ms ease;
   }
 }
 
 .transition-out {
   .section,
   .footer {
-    opacity: 0;
+    opacity: $opacity-0;
     transform: translateY(10%);
   }
 
   .hero {
     &__blob {
-      opacity: 0;
+      opacity: $opacity-0;
       transform: translateX(-10%);
     }
 
     &__content {
-      opacity: 0;
+      opacity: $opacity-0;
       transform: translateX(-10%);
     }
 
     &__media {
-      opacity: 0;
+      opacity: $opacity-0;
       transform: translateX(10%);
     }
   }
@@ -61,24 +53,24 @@
 .transition-in {
   .hero {
     &__blob {
-      opacity: 1;
+      opacity: $opacity-1;
       transform: translateX(0);
     }
 
     &__content {
-      opacity: 1;
+      opacity: $opacity-1;
       transform: translateX(0);
     }
 
     &__media {
-      opacity: 1;
+      opacity: $opacity-1;
       transform: translateX(0);
     }
   }
 
   .section,
   .footer {
-    opacity: 1;
+    opacity: $opacity-1;
     transform: translateY(0);
   }
 }

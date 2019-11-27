@@ -22,7 +22,7 @@
 
   &__text {
     color: initial;
-    font-size: .9rem;
+    font-size: 0.9rem;
     margin-bottom: 0;
   }
 
@@ -36,7 +36,6 @@
 }
 
 a.card {
-
   &:hover {
     text-decoration: none;
 
@@ -49,7 +48,7 @@ a.card {
     }
 
     .card__image {
-      opacity: .75;
+      opacity: 0.75;
     }
   }
 }

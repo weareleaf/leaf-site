@@ -51,7 +51,7 @@ $logo-breakpoint: 1400px;
     @media screen and (max-width: $logo-breakpoint) {
       display: flex;
       justify-content: space-between;
-      padding: 1em 1em .75em 1em;
+      padding: 1em 1em 0.75em 1em;
     }
 
     @media screen and (min-width: 40em) {
@@ -85,50 +85,48 @@ $logo-breakpoint: 1400px;
       z-index: 1000;
 
       svg {
-        opacity: 0;
+        opacity: $opacity-0;
         transform: translateY(50%);
-        transition:
-          opacity 400ms ease,
-          transform 400ms ease;
+        transition: opacity 400ms ease, transform 400ms ease;
       }
 
       &--visible {
         svg {
-          opacity: 1;
-          transform: translateY(0)
+          opacity: $opacity-1;
+          transform: translateY(0);
         }
       }
     }
   }
 
   &__button {
-    background: rgba(53, 54, 61, .3);
+    background: rgba(53, 54, 61, 0.3);
     border: 0;
     border-radius: 50%;
     cursor: pointer;
     height: 2em;
     padding: 0;
     position: relative;
-    transition: background .2s ease-in-out;
+    transition: background 0.2s ease-in-out;
     width: 2em;
     z-index: 1;
     -webkit-appearance: none;
 
     @media screen and (min-width: $logo-breakpoint) {
-      position:fixed;
+      position: fixed;
       right: 3em;
       top: 3em;
     }
 
     &:hover,
     &:active {
-      background: rgba(53, 54, 61, .6);
+      background: rgba(53, 54, 61, 0.6);
     }
 
     span {
       display: none;
       border: 0;
-      clip: rect(0,0,0,0);
+      clip: rect(0, 0, 0, 0);
       height: 1px;
       overflow: hidden;
       padding: 0;
@@ -146,7 +144,7 @@ $logo-breakpoint: 1400px;
     &::after {
       background-color: $color-white;
       content: '';
-      height: .15em;
+      height: 0.15em;
       left: 50%;
       position: absolute;
       top: 50%;
@@ -177,6 +175,5 @@ $logo-breakpoint: 1400px;
     @media screen and (min-width: map-get($bp, 'lg')) {
       @include padding-vertical($spacing-10);
     }
-
   }
 }

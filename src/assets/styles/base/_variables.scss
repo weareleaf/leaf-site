@@ -1,6 +1,4 @@
 // Colors
-// ==================================================
-
 $color-green: #66cc88;
 $color-green-light: #dbffe7;
 $color-red: #f77c6b;
@@ -8,7 +6,7 @@ $color-grey-lightest: #e2e3e5;
 $color-grey-light: #c6c7cc;
 $color-grey: #6f7075;
 $color-grey-dark: hsl(200, 15%, 20%);
-$color-grey-dark-transparent: rgba($color-grey-dark, .9);
+$color-grey-dark-transparent: rgba($color-grey-dark, 0.9);
 $color-grey-green: #f0f3f1;
 $color-white: #fff;
 $color-off-white: #f5f5f5;
@@ -22,19 +20,16 @@ $color-rift: #f2b6b6;
 $color-zendesk: #b6f2f2;
 $color-laced: #879ac9;
 
-//- Animations
-$animation-delay: 5s;
+// Animations
+//$animation-delay: 5s;
 $duration-base: 300ms;
-$duration-fast: 150ms;
-$duration-slow: 450ms;
-$duration-snail: 600ms;
-$elastic-timing: cubic-bezier(.075, .82, .165, 1);
+//$duration-fast: 150ms;
+//$duration-slow: 450ms;
+//$duration-snail: 600ms;
+//$elastic-timing: cubic-bezier(0.075, 0.82, 0.165, 1);
 $timing-base: ease;
 
-
 // Borders
-// ==================================================
-
 $border-color: $color-grey-lightest !default;
 $border-style: solid !default;
 
@@ -45,14 +40,10 @@ $border-width-sm: 2px !default;
 $border: $border-style $border-width-base $border-color !default;
 
 // Border radius
-// ==================================================
-
-$border-radius: .25rem !default;
+$border-radius: 0.25rem !default;
 $border-radius-full: 100% !default;
 
 // Breakpoints
-// ==================================================
-
 $bp: (
   xs: 0,
   sm: 544 / 16 * 1em,
@@ -62,28 +53,24 @@ $bp: (
 ) !default;
 
 // Fonts
-// ==================================================
+$font-family-sans-serif-light: 'Larsseit-Light', sans-serif !default;
+$font-family-sans-serif-regular: 'Larsseit-Regular', sans-serif !default;
+$font-family-sans-serif-medium: 'Larsseit-Medium', sans-serif !default;
+$font-family-sans-serif-bold: 'Larsseit-Bold', sans-serif !default;
 
-$font-family-sans-serif-light: "Larsseit-Light", sans-serif !default;
-$font-family-sans-serif-regular: "Larsseit-Regular", sans-serif !default;
-$font-family-sans-serif-medium: "Larsseit-Medium", sans-serif !default;
-$font-family-sans-serif-bold: "Larsseit-Bold", sans-serif !default;
-
-$letter-spacing-base: .0125rem;
+$letter-spacing-base: 0.0125rem;
 $line-height: 1.75 !default;
 $font-size-xs: 1rem !default;
 $font-size-sm: 1.125rem !default;
 $font-size-lg: 1.875rem !default;
 $font-size-base: 1.25rem !default;
-$font-size-small: .8rem !default;
-$font-size-tiny: .7rem !default;
+$font-size-small: 0.8rem !default;
+$font-size-tiny: 0.7rem !default;
 $font-weight-base: 400;
 
 $selection-color: $brand-primary !default;
 
 // Spacing
-// ==================================================
-
 $spacing-horizontal: 1rem !default;
 $spacing-horizontal-lg: $spacing-horizontal * 2 !default;
 $spacing-horizontal-sm: $spacing-horizontal / 2 !default;
@@ -94,8 +81,6 @@ $spacing-blog-grid: $spacing-horizontal * 3 !default;
 $spacing-horizontal-fluid: 10% !default;
 $spacing-horizontal-fluid-lg: $spacing-horizontal-fluid * 1.5 !default;
 $spacing-horizontal-fluid-sm: $spacing-horizontal-fluid / 1.5 !default;
-
-$spacing-horizontal-root: 5vw !default;
 
 $spacing-vertical: 1rem !default;
 $spacing-vertical-lg: $spacing-vertical * 2 !default;
@@ -109,10 +94,10 @@ $spacing-vertical-fluid-sm: $spacing-vertical-fluid / 1.5 !default;
 
 $spacing-vertical-root: 5vw !default;
 
-//- Spacing scale
-$spacing-1: .125rem;
-$spacing-2: .5rem;
-$spacing-3: .75rem;
+// Spacing scale
+$spacing-1: 0.125rem;
+$spacing-2: 0.5rem;
+$spacing-3: 0.75rem;
 $spacing-4: 1rem;
 $spacing-5: 1.5rem;
 $spacing-6: 2rem;
@@ -122,44 +107,42 @@ $spacing-9: 6rem;
 $spacing-10: 12rem;
 
 // Body
-// ==================================================
-
 $body-bg: $color-white !default;
 $body-color: $color-grey-dark !default;
 
 // Headings
-// ==================================================
-
 $font-size-h1: 4rem !default;
 $font-size-h1-sm: 2.2rem !default;
 $font-size-h2: 2rem !default;
 $font-size-h3: 1.5rem !default;
 $font-size-h4: 1rem !default;
-$font-size-h5: .9rem !default;
-$font-size-h6: .7rem !default;
+$font-size-h5: 0.9rem !default;
+$font-size-h6: 0.7rem !default;
 
 $heading-color: $color-grey-dark !default;
 $heading-font-family: $font-family-sans-serif-medium !default;
 $heading-font-weight: 400 !default;
 $heading-line-height: 1.2 !default;
 
-// Blog Styles
-// ==================================================
-
-//Font Sizes
-$author-details: .8rem !default;
+// Font Sizes
+$author-details: 0.8rem !default;
 $bio-font-size: 1rem !default;
 
-//Line Heights
+// Line Heights
 $bio-paragraph-leading: 1.4rem !default;
 
-//Spacing
+// Spacing
 $bio-spacing-base: 5px !default;
 $bio-spacing-xs: $bio-spacing-base * 2 !default;
 $bio-spacing-sm: $bio-spacing-base * 3 !default;
 $bio-spacing-md: $bio-spacing-base * 4 !default;
 $bio-spacing-lg: $bio-spacing-base * 6 !default;
 
-//Element Sizing & Widths
+// Element Sizing & Widths
 $size-base: 1rem !default;
 $size-large: 50px !default;
+
+// Opacity
+$opacity-1: 1;
+$opacity-75: 0.75;
+$opacity-0: 0;
