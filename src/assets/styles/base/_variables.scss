@@ -41,6 +41,8 @@ $border-width-sm: $border-width-base * 2 !default;
 $border-width-lg: $border-width-base * 3 !default;
 $border-width-xl: $border-width-base * 4 !default;
 
+$border-default: $border-width-lg $border-style $border-color;
+
 // Border radius
 $border-radius: 0.25rem !default;
 $border-radius-half: 50% !default;

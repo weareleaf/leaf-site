@@ -128,7 +128,7 @@ img {
 
 .divider {
   border: $no-border;
-  border-top: $border-width-lg $border-style $border-color;
+  border-top: $border-default;
 
   &--margin {
     margin: $spacing-9 0;

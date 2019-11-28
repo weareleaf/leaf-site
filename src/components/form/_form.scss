@@ -1,7 +1,7 @@
 .form {
   &__fieldset {
     border: $no-border;
-    border-top: $border-width-lg $border-style $border-color;
+    border-top: $border-default;
     margin: -3px 0 $spacing-vertical-lg;
     padding: 0;
 

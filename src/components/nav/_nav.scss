@@ -40,7 +40,7 @@
       pointer-events: none;
 
       .nav--primary & {
-        border-right: 4px solid $brand-primary;
+        border-right: $border-width-xl $border-style $brand-primary;
         padding-right: 1.714em;
         position: relative;
         text-decoration: line-through;
