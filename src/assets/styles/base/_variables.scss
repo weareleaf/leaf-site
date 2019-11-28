@@ -57,7 +57,7 @@ $line-height: 1.75 !default;
 // Borders
 $border-color: $color-grey-lightest !default;
 $border-style: solid !default;
-$no-border: 0;
+$no-border: 0; //make this border-none
 
 $border-width-base: 1px !default;
 $border-width-sm: $border-width-base * 2 !default;
@@ -79,7 +79,7 @@ $duration-4: 400ms;
 $duration-5: 500ms;
 
 $timing-1: ease;
-$timing-2: ease-in-out;
+$timing-2: ease-in-out; // fix these to have the name of the timing
 $timing-3: ease-in;
 
 // Spacing

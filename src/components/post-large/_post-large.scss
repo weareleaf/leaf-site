@@ -17,12 +17,11 @@
     display: block;
 
     img {
-      height: 204px;
+      height: 10rem;
       width: 100%;
       object-fit: cover;
-      // 77.5em
-      @media screen and (min-width: 1240px) {
-        height: 240px;
+      @media screen and (min-width: 77.5em) {
+        height: 12rem;
       }
       transition: opacity $duration-2 $timing-1;
     }
@@ -34,7 +33,7 @@
 
   &__heading {
     color: $color-grey-dark;
-    font-size: 1.5em;
+    font-size: $font-size-h3;
     margin: 0 0 0.333em;
     transition: color $duration-2 $timing-1;
   }
@@ -45,6 +44,6 @@
   }
 
   &__footer {
-    height: 50px;
+    height: 2.5rem;
   }
 }
