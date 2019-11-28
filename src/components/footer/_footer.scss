@@ -13,10 +13,9 @@
 
   &__cta-heading {
     font-family: $font-family-sans-serif-medium;
-    font-size: 1.4rem;
+    font-size: $footer-cta-heading;
     line-height: $heading-line-height;
     margin: 0 0 $spacing-vertical;
-
 
     @media screen and (min-width: map-get($bp, 'lg')) {
       margin: 0 0 $spacing-vertical * 1.7;
@@ -28,7 +27,7 @@
     margin: 0;
 
     @media screen and (min-width: map-get($bp, 'md')) {
-      font-size: 0.85em;
+      font-size: $font-size-sm;
     }
 
     strong {
@@ -69,11 +68,10 @@
 
   &__copyright {
     color: $color-grey-dark;
-    font-size: 0.8em;
+    font-size: $font-size-xs;
     margin: 0;
 
     @media screen and (min-width: map-get($bp, 'md')) {
-      font-size: 0.75em;
       grid-row: 2 / 3;
       text-align: right;
     }
@@ -85,10 +83,9 @@
   }
 
   &__contact {
-    font-size: .8em;
+    font-size: $font-size-xs;
 
     @media screen and (min-width: map-get($bp, 'md')) {
-      font-size: 0.75em;
       grid-column: 3;
       grid-row: 1 / 2;
       text-align: right;

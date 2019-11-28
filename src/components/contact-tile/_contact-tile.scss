@@ -1,8 +1,7 @@
 .contact-tile {
-
   &__text {
     color: $color-grey;
-    font-size: .9rem;
+    font-size: $font-size-sm;
     margin: 0;
     max-width: 20em;
 
@@ -30,6 +29,6 @@
 
   &__email {
     color: $brand-secondary;
-    font-size: .9rem;
+    font-size: $font-size-sm;
   }
 }
