@@ -1,20 +1,3 @@
-body {
-  color: $body-color;
-  font-family: $font-family-sans-serif-light;
-  font-size: 0.8em;
-  -webkit-font-smoothing: subpixel-antialiased;
-  letter-spacing: $letter-spacing-base;
-  line-height: $line-height;
-
-  @media screen and (min-width: map-get($bp, 'md')) {
-    font-size: 0.9em;
-  }
-
-  @media screen and (min-width: map-get($bp, 'lg')) {
-    font-size: 1em;
-  }
-}
-
 h1,
 h2,
 h3,

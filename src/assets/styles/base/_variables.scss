@@ -93,8 +93,6 @@ $spacing-vertical-fluid: 10% !default;
 $spacing-vertical-fluid-lg: $spacing-vertical-fluid * 1.5 !default;
 $spacing-vertical-fluid-sm: $spacing-vertical-fluid / 1.5 !default;
 
-$spacing-vertical-root: 5vw !default;
-
 // Spacing scale
 $spacing-1: 0.125rem;
 $spacing-2: 0.5rem;
@@ -106,10 +104,6 @@ $spacing-7: 3rem;
 $spacing-8: 4rem;
 $spacing-9: 6rem;
 $spacing-10: 12rem;
-
-// Body
-$body-bg: $color-white !default;
-$body-color: $color-grey-dark !default;
 
 // Headings
 $font-size-h1: 4rem !default;
