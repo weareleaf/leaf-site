@@ -1,6 +1,6 @@
 .form {
   &__fieldset--spacing {
-    border: $no-border;
+    border: $border-none;
     border-top: $border-default;
     margin: -3px 0 $spacing-vertical-lg;
     padding: 0;
@@ -11,7 +11,7 @@
   }
 
   &__fieldset--no-border {
-    border: $no-border;
+    border: $border-none;
     border-top: none;
     margin: -3px 0 $spacing-vertical-lg;
     padding: 0;

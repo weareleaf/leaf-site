@@ -81,8 +81,6 @@ a {
 
 strong {
   color: $color-grey-dark;
-  //font-family: $font-family-sans-serif-bold;
-  //font-weight: 700p
 }
 
 figure {
@@ -127,7 +125,7 @@ img {
 }
 
 .divider {
-  border: $no-border;
+  border: $border-none;
   border-top: $border-default;
 
   &--margin {
@@ -222,7 +220,7 @@ img {
 @media screen and (min-width: map-get($bp, 'md')) {
   .intro-paragraph {
     color: $color-grey-dark;
-    font-size: 1.5rem;
+    font-size: $font-size-h3;
     line-height: 1.5;
     margin-bottom: $font-size-lg;
   }
