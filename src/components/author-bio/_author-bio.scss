@@ -8,7 +8,7 @@
     margin-top: $spacing-blog-grid;
   }
 
-  @media screen and (min-width: map-get($bp, "sm")) {
+  @media screen and (min-width: map-get($bp, 'sm')) {
     &--margin-top {
       margin-top: 0;
     }
@@ -31,17 +31,13 @@
     color: $color-grey;
     line-height: $bio-paragraph-leading;
     margin-top: $bio-spacing-md;
-    font-size: $bio-font-size;
+    font-size: $root-font-size;
     width: 100%;
-
-    // @media screen and (min-width: map-get($bp, "sm")) {
-    //   width: 480px;
-    // }
   }
 
   &__link {
     color: $color-red;
-    font-size: $bio-font-size;
+    font-size: $root-font-size;
     margin-top: $bio-spacing-sm;
   }
 }

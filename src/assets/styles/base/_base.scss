@@ -22,7 +22,7 @@ html {
 
 body {
   font-family: $font-family-sans-serif-light;
-  font-size: 0.875em;
+  font-size: $font-size-sm;
   -webkit-font-smoothing: subpixel-antialiased;
   letter-spacing: $letter-spacing-base;
   line-height: $line-height;
