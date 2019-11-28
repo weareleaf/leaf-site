@@ -28,7 +28,7 @@
   }
 
   &__fill {
-    transition: fill 0.2s $timing-2;
+    transition: fill .2s $timing-2;
 
     .social__link:hover & {
       fill: lighten($color-grey-dark, 10%);

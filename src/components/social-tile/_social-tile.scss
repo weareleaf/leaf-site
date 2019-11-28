@@ -30,13 +30,13 @@
   }
 
   &__heading {
-    font-size: .85em;
+    font-size: $font-size-sm;
     margin: 0 0 .118em;
   }
 
   &__text {
     color: $color-grey-dark;
-    font-size: .8em;
+    font-size: $font-size-xs;
     margin: 0;
   }
 
@@ -44,6 +44,6 @@
     color: $brand-secondary;
     display: block;
     font-family: $font-family-sans-serif-medium;
-    font-size: .85em;
+    font-size: $font-size-sm;
   }
 }

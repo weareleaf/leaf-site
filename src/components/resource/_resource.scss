@@ -26,19 +26,12 @@
     }
   }
 
-  &__heading {
-    //color: $color-grey-dark;
-    //font-size: 1.5em;
-  }
-
   &__text {
-    //color: $color-grey;
-    font-size: .9rem;
+    font-size: $font-size-sm;
     margin: 0;
   }
 
   &__meta {
-
     @media screen and (min-width: map-get($bp, md)) {
       display: flex;
       flex-direction: column;
@@ -47,7 +40,7 @@
   }
 
   &__meta-text {
-    font-size: .75em;
+    font-size: $font-size-xs;
     margin: $spacing-5 0 0;
 
     @media screen and (min-width: map-get($bp, md)) {
