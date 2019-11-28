@@ -1,11 +1,10 @@
 .author-bio {
   background-color: $color-off-white;
-  margin-bottom: $spacing-blog-grid;
   padding: $bio-spacing-lg;
   position: relative;
 
   &--margin-top {
-    margin-top: $spacing-blog-grid;
+    margin-top: $spacing-7;
   }
 
   @media screen and (min-width: map-get($bp, 'sm')) {

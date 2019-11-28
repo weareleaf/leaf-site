@@ -18,13 +18,13 @@
 
   &__item {
     flex: 0 0 auto;
-    margin-bottom: $spacing-horizontal-lg;
-    padding: $spacing-horizontal-sm $spacing-horizontal-lg;
+    margin-bottom: $spacing-6;
+    padding: $spacing-2 $spacing-6;
 
     @media screen and (min-width: map-get($bp, 'md')) {
       flex: 0 2 auto;
       margin-bottom: 0;
-      padding: 0 $spacing-horizontal 0 $spacing-horizontal;
+      padding: 0 $spacing-4 0 $spacing-4;
 
       &--left {
         padding-left: 0;

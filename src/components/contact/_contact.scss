@@ -21,10 +21,10 @@
     }
 
     .social-tile {
-      margin-right: $spacing-horizontal * 2;
+      margin-right: $spacing-4 * 2;
       @media screen and (min-width: 66.25em) {
         margin-right: 0;
-        margin-bottom: $spacing-vertical * 2;
+        margin-bottom: $spacing-4 * 2;
       }
     }
   }

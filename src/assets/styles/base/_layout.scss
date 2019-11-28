@@ -25,17 +25,17 @@ main {
 }
 
 .section {
-  margin-bottom: $spacing-vertical-xl;
+  margin-bottom: $spacing-8;
 
   @media screen and (min-width: map-get($bp, 'md')) {
     margin-bottom: 6em;
   }
 
   &--sm-spacing {
-    margin-bottom: $spacing-vertical-lg;
+    margin-bottom: $spacing-6;
 
     @media screen and (min-width: map-get($bp, 'lg')) {
-      margin-bottom: $spacing-vertical-xl;
+      margin-bottom: $spacing-8;
     }
   }
 
@@ -52,17 +52,17 @@ main {
   }
 
   &--sm-spacing {
-    margin-bottom: $spacing-vertical-lg;
+    margin-bottom: $spacing-6;
 
     @media screen and (min-width: map-get($bp, 'lg')) {
-      margin-bottom: $spacing-vertical-xl;
+      margin-bottom: $spacing-8;
     }
   }
 }
 
 .blog-post {
   @media screen and (min-width: map-get($bp, 'xl')) {
-    padding-right: 60px;
-    padding-bottom: 60px;
+    padding-right: $spacing-8 - .75rem;
+    padding-bottom: $spacing-8 - .75rem;
   }
 }

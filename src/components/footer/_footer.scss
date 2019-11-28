@@ -1,24 +1,24 @@
 .footer {
   background-color: $color-grey-green;
   display: block;
-  padding: $spacing-vertical-lg 0;
+  padding: $spacing-6 0;
 
   @media screen and (min-width: map-get($bp, 'md')) {
-    padding: $spacing-vertical * 6 0;
+    padding: $spacing-4 * 6 0;
   }
 
   &--condensed {
-    padding: $spacing-vertical * 2 0;
+    padding: $spacing-4 * 2 0;
   }
 
   &__cta-heading {
     font-family: $font-family-sans-serif-medium;
     font-size: $footer-cta-heading;
     line-height: $heading-line-height;
-    margin: 0 0 $spacing-vertical;
+    margin: 0 0 $spacing-4;
 
     @media screen and (min-width: map-get($bp, 'lg')) {
-      margin: 0 0 $spacing-vertical * 1.7;
+      margin: 0 0 $spacing-4 * 1.7;
     }
   }
 
@@ -31,19 +31,19 @@
     }
 
     strong {
-      margin-right: $spacing-horizontal * 0.25;
+      margin-right: $spacing-4 * 0.25;
     }
   }
 
   &__cta-link {
     color: $brand-secondary;
     font-family: $font-family-sans-serif-medium;
-    margin-left: $spacing-horizontal * 0.25;
+    margin-left: $spacing-4 * 0.25;
     white-space: nowrap;
   }
 
   &__social {
-    margin-top: $spacing-vertical * 1.5;
+    margin-top: $spacing-4 * 1.5;
 
     @media screen and (min-width: 96.875em) {
       display: none;
