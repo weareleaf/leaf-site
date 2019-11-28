@@ -62,16 +62,18 @@
 
   &__close {
     background: transparent;
-    border: $border-style;
-    font-size: 2em;
+    border: $no-border;
+    cursor: pointer;
+    font-size: $font-size-h2;
     line-height: 1;
+    outline: none;
     padding: 0;
     position: absolute;
     right: $spacing-horizontal * 1.5;
     top: $spacing-vertical * 1.5;
 
     &::before {
-      color: rgba(111, 112, 117, 0.5);
+      color: rgba(111, 112, 117, 0.6);
       content: '\2715';
     }
   }

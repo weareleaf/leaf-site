@@ -21,7 +21,7 @@
 
   &__text {
     color: $color-grey-dark;
-    font-size: 1.25rem;
+    font-size: $root-font-size-xl;
 
     @media screen and (min-width: map-get($bp, 'md')) {
       max-width: 60%;
