@@ -84,35 +84,29 @@ $timing-2: ease-in-out; // 2
 $timing-3: ease-in; // 3
 
 // Spacing
-$spacing-horizontal: 1rem !default;
-$spacing-horizontal-xs: $spacing-horizontal / 4 !default;
-$spacing-horizontal-sm: $spacing-horizontal / 2 !default;
-$spacing-horizontal-lg: $spacing-horizontal * 2 !default;
-$spacing-horizontal-xl: $spacing-horizontal * 4 !default;
-
-$spacing-blog-grid: $spacing-horizontal * 3 !default;
+$spacing-horizontal: 1rem !default; //16
+$spacing-horizontal-xs: $spacing-horizontal / 4 !default; //4
+$spacing-horizontal-sm: $spacing-horizontal / 2 !default; //8
+$spacing-horizontal-lg: $spacing-horizontal * 2 !default; //32
+$spacing-horizontal-xl: $spacing-horizontal * 4 !default; //64
 
 $spacing-vertical: 1rem !default;
-$spacing-vertical-lg: $spacing-vertical * 2 !default;
-$spacing-vertical-sm: $spacing-vertical / 2 !default;
-$spacing-vertical-xl: $spacing-vertical * 4 !default;
-$spacing-vertical-xs: $spacing-vertical / 4 !default;
-
-$spacing-vertical-fluid: 10% !default;
-$spacing-vertical-fluid-lg: $spacing-vertical-fluid * 1.5 !default;
-$spacing-vertical-fluid-sm: $spacing-vertical-fluid / 1.5 !default;
+$spacing-vertical-lg: $spacing-vertical * 2 !default; //32
+$spacing-vertical-sm: $spacing-vertical / 2 !default; //8
+$spacing-vertical-xl: $spacing-vertical * 4 !default; //64
+$spacing-vertical-xs: $spacing-vertical / 4 !default; //4
 
 // Spacing scale
-$spacing-1: .125rem;
-$spacing-2: .5rem;
-$spacing-3: .75rem;
-$spacing-4: 1rem;
-$spacing-5: 1.5rem;
-$spacing-6: 2rem;
-$spacing-7: 3rem;
-$spacing-8: 4rem;
-$spacing-9: 6rem;
-$spacing-10: 12rem;
+$spacing-1: .125rem; //2px
+$spacing-2: .5rem;  //8px
+$spacing-3: .75rem; //12px
+$spacing-4: 1rem; //16px
+$spacing-5: 1.5rem; //24px
+$spacing-6: 2rem; //32px
+$spacing-7: 3rem; //48px
+$spacing-8: 4rem; //64px
+$spacing-9: 6rem; //96px
+$spacing-10: 12rem; //192px : why?
 
 // Breakpoints
 $bp: (

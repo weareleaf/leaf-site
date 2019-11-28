@@ -1,8 +1,8 @@
 .grid {
   display: grid;
   grid-template-columns: 1fr;
-  grid-column-gap: $spacing-horizontal-lg;
-  grid-row-gap: $spacing-vertical-lg;
+  grid-column-gap: $spacing-6;
+  grid-row-gap: $spacing-6;
 
   @media screen and (min-width: map-get($bp, 'lg')) {
     grid-column-gap: $spacing-horizontal-xl;

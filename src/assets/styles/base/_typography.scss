@@ -148,7 +148,7 @@ img {
   }
   &--block-hr {
     justify-content: center;
-    margin-bottom: $spacing-blog-grid;
+    margin-bottom: $spacing-blog-grid; //*3
     margin-top: $spacing-blog-grid;
     width: 3.75em;
   }
