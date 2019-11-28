@@ -9,18 +9,17 @@
     grid-template-columns: repeat(4, 1fr);
   }
 
-
   &__item {
     margin-bottom: $spacing-4;
   }
 
   &__heading {
-    font-size: $font-size-small;
+    font-size: $font-size-sm;
     margin-bottom: $spacing-1;
   }
 
   &__text {
-    font-size: $font-size-small;
+    font-size: $font-size-sm;
     margin-bottom: 0;
   }
 }
