@@ -13,10 +13,6 @@
   text-decoration: none;
   transition: background-color $duration-2 $timing-1;
 
-  @media screen and (min-width: map-get($bp, sm)) {
-    //font-size: $font-size-base;
-  }
-
   &:hover,
   &:focus {
     background-color: lighten($color-red, 5%);

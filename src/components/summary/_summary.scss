@@ -1,13 +1,12 @@
-  .summary {
-
+.summary {
   &__heading {
     color: $color-grey;
-    font-size: $font-size-tiny;
+    font-size: $font-size-xs;
   }
 
   &__text {
     color: $color-grey-dark;
-    font-size: $font-size-base;
+    font-size: $root-font-size-xl;
     margin: 0;
   }
 }
