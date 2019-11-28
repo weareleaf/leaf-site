@@ -57,17 +57,6 @@ $selection-color: $brand-primary !default;
 $author-details: 0.8rem !default;
 $bio-font-size: 1rem !default;
 
-// Animations
-$duration-1: 150ms;
-$duration-2: 250ms;
-$duration-3: 300ms;
-$duration-4: 400ms;
-$duration-5: 500ms;
-
-$timing-1: ease;
-$timing-2: ease-in-out;
-$timing-3: ease-in;
-
 // Borders
 $border-color: $color-grey-lightest !default;
 $border-style: solid !default;
@@ -85,14 +74,16 @@ $border-radius: 0.25rem !default;
 $border-radius-half: 50% !default;
 $border-radius-full: 100% !default;
 
-// Breakpoints
-$bp: (
-  xs: 0,
-  sm: 544 / 16 * 1em,
-  md: 768 / 16 * 1em,
-  lg: 992 / 16 * 1em,
-  xl: 1200 / 16 * 1em
-) !default;
+// Animations
+$duration-1: 150ms;
+$duration-2: 250ms;
+$duration-3: 300ms;
+$duration-4: 400ms;
+$duration-5: 500ms;
+
+$timing-1: ease;
+$timing-2: ease-in-out;
+$timing-3: ease-in;
 
 // Spacing
 $spacing-horizontal: 1rem !default;
@@ -124,6 +115,15 @@ $spacing-7: 3rem;
 $spacing-8: 4rem;
 $spacing-9: 6rem;
 $spacing-10: 12rem;
+
+// Breakpoints
+$bp: (
+  xs: 0,
+  sm: 544 / 16 * 1em,
+  md: 768 / 16 * 1em,
+  lg: 992 / 16 * 1em,
+  xl: 1200 / 16 * 1em
+) !default;
 
 // Line Heights
 $bio-paragraph-leading: 1.4rem !default;
