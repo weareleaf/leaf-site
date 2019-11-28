@@ -96,6 +96,8 @@ $spacing-vertical-sm: $spacing-vertical / 2 !default; //8
 $spacing-vertical-xl: $spacing-vertical * 4 !default; //64
 $spacing-vertical-xs: $spacing-vertical / 4 !default; //4
 
+$spacing-blog-grid: $spacing-horizontal * 3;
+
 // Spacing scale
 $spacing-1: .125rem; //2px
 $spacing-2: .5rem;  //8px
