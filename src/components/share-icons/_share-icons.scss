@@ -29,7 +29,7 @@
   }
 
   &__fill {
-    transition: fill 0.2s $timing-2;
+    transition: fill 0.2s $timing-ease-in-out;
 
     .share__link:hover & {
       fill: lighten($color-grey-dark, 20%);

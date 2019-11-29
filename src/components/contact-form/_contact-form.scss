@@ -168,7 +168,7 @@
     line-height: 1;
     margin: 0;
     padding: ($spacing-4 * 1.1) $spacing-4 $spacing-4;
-    transition: border-color 0.15s $timing-2;
+    transition: border-color 0.15s $timing-ease-in-out;
     width: 100%;
 
     &--textarea {

@@ -23,13 +23,11 @@
     z-index: 1001;
 
     .modal[aria-hidden='false'] & {
-      //animation: mmfadeIn .3s cubic-bezier(0, 0, .2, 1);
-      animation: mmfadeIn $duration-2 $timing-1;
+      animation: mmfadeIn $duration-2 $timing-ease;
     }
 
     .modal[aria-hidden='true'] & {
-      //animation: mmfadeOut .3s cubic-bezier(0, 0, .2, 1);
-      animation: mmfadeOut $duration-2 $timing-1;
+      animation: mmfadeOut $duration-2 $timing-ease;
     }
   }
 
@@ -50,13 +48,11 @@
     }
 
     .modal[aria-hidden='false'] & {
-      //animation: mmslideIn .3s cubic-bezier(0, 0, .2, 1);
-      animation: mmslideIn $duration-2 $timing-1;
+      animation: mmslideIn $duration-2 $timing-ease;
     }
 
     .modal[aria-hidden='true'] & {
-      //animation: mmslideOut .3s cubic-bezier(0, 0, .2, 1);
-      animation: mmslideOut $duration-2 $timing-1;
+      animation: mmslideOut $duration-2 $timing-ease;
     }
   }
 

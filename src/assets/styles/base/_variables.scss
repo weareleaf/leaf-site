@@ -89,9 +89,9 @@ $duration-3: 300ms;
 $duration-4: 400ms;
 $duration-5: 500ms;
 
-$timing-1: ease; // 1
-$timing-2: ease-in-out; // 2 // fix these
-$timing-3: ease-in; // 3
+$timing-ease: ease;
+$timing-ease-in-out: ease-in-out;
+$timing-ease-in: ease-in;
 
 // Breakpoints
 $bp: (
@@ -101,3 +101,5 @@ $bp: (
   lg: 992 / 16 * 1em,
   xl: 1200 / 16 * 1em
 ) !default;
+
+$logo-breakpoint: 87.5em;
