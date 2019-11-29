@@ -51,9 +51,21 @@ $font-size-md: 1.125rem !default; //18px
 $font-size-lg: 1.875rem !default; // 30px
 
 $font-weight-base: 400;
-$letter-spacing-base: 0.0125rem;
+$letter-spacing-base: .0125rem;
 $line-height-bio: 1.4rem !default;
 $line-height: 1.75 !default;
+
+// Spacing
+$spacing-1: .125rem; //2px
+$spacing-2: .5rem;  //8px
+$spacing-3: .75rem; //12px
+$spacing-4: 1rem; //16px
+$spacing-5: 1.5rem; //24px
+$spacing-6: 2rem; //32px
+$spacing-7: 3rem; //48px
+$spacing-8: 4rem; //64px
+$spacing-9: 6rem; //96px
+$spacing-10: 12rem; //192px
 
 // Borders
 $border-color: $color-grey-lightest !default;
@@ -67,7 +79,6 @@ $border-width-xl: $border-width-base * 4 !default;
 
 $border-default: $border-width-lg $border-style $border-color;
 
-// Border radius
 $border-radius: .25rem !default;
 $border-radius-half: 50% !default;
 $border-radius-full: 100% !default;
@@ -80,35 +91,8 @@ $duration-4: 400ms;
 $duration-5: 500ms;
 
 $timing-1: ease; // 1
-$timing-2: ease-in-out; // 2
+$timing-2: ease-in-out; // 2 // fix these
 $timing-3: ease-in; // 3
-
-/*// Spacing
-$spacing-horizontal: 1rem !default; //16
-$spacing-horizontal-xs: $spacing-horizontal / 4 !default; //4
-$spacing-horizontal-sm: $spacing-horizontal / 2 !default; //8
-$spacing-horizontal-lg: $spacing-horizontal * 2 !default; //32
-$spacing-horizontal-xl: $spacing-horizontal * 4 !default; //64
-
-$spacing-vertical: 1rem !default;
-$spacing-vertical-lg: $spacing-vertical * 2 !default; //32
-$spacing-vertical-sm: $spacing-vertical / 2 !default; //8
-$spacing-vertical-xl: $spacing-vertical * 4 !default; //64
-$spacing-vertical-xs: $spacing-vertical / 4 !default; //4
-
-$spacing-blog-grid: $spacing-horizontal * 3;*/
-
-// Spacing scale
-$spacing-1: .125rem; //2px
-$spacing-2: .5rem;  //8px
-$spacing-3: .75rem; //12px
-$spacing-4: 1rem; //16px
-$spacing-5: 1.5rem; //24px
-$spacing-6: 2rem; //32px
-$spacing-7: 3rem; //48px
-$spacing-8: 4rem; //64px
-$spacing-9: 6rem; //96px
-$spacing-10: 12rem; //192px : why?
 
 // Breakpoints
 $bp: (
@@ -131,5 +115,4 @@ $bio-spacing-md: $bio-spacing-base * 4 !default;
 $bio-spacing-lg: $bio-spacing-base * 6 !default;
 
 // Element Sizing & Widths
-$size-base: 1rem !default;
 $size-large: 50px !default;
