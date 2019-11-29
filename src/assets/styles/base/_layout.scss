@@ -65,4 +65,8 @@ main {
     padding-right: $spacing-8 - .75rem;
     padding-bottom: $spacing-8 - .75rem;
   }
+
+  &__image {
+    width: 100%;
+  }
 }
