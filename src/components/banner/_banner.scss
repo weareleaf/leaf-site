@@ -2,15 +2,15 @@ $logo-breakpoint: 1400px;
 
 .banner {
   background-color: $color-green-light;
-  margin-bottom: $spacing-vertical-lg;
+  margin-bottom: $spacing-6;
   position: relative;
 
   @media screen and (min-width: map-get($bp, 'lg')) {
-    margin-bottom: $spacing-vertical-xl;
+    margin-bottom: $spacing-8;
   }
 
   @media screen and (min-width: map-get($bp, 'xl')) {
-    margin-bottom: $spacing-vertical * 6;
+    margin-bottom: $spacing-4 * 6;
   }
 
   &--photo img {

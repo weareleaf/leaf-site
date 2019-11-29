@@ -7,7 +7,7 @@
 
   &__item {
     &:not(:last-child) {
-      margin-bottom: $spacing-vertical;
+      margin-bottom: $spacing-4;
     }
 
     .share--inline & {
@@ -39,14 +39,14 @@
 
 .section {
   &--margin {
-    margin-bottom: $spacing-blog-grid / 2;
-    margin-top: $spacing-blog-grid;
+    margin-bottom: $spacing-7 / 2;
+    margin-top: $spacing-7;
   }
 }
 @media screen and (min-width: map-get($bp, 'md')) {
   .section {
     &--margin {
-      margin-bottom: $spacing-vertical-lg;
+      margin-bottom: $spacing-6;
     }
   }
 }

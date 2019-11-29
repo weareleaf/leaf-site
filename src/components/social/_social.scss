@@ -7,7 +7,7 @@
 
   &__item {
     &:not(:last-child) {
-      margin-bottom: $spacing-vertical;
+      margin-bottom: $spacing-4;
     }
 
     .social--inline & {
