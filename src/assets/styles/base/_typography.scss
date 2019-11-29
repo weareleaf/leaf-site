@@ -12,7 +12,7 @@ h6 {
 
 h1 {
   font-family: $font-family-sans-serif-medium;
-  font-size: $font-size-h1-sm;
+  font-size: 2.2rem;
   margin: 0 0 $spacing-3;
 
   @media screen and (min-width: map-get($bp, 'md')) {

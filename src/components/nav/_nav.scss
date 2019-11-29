@@ -16,7 +16,7 @@
   &__link {
     color: $color-grey-dark;
     display: block;
-    font-size: $font-size-md;
+    font-size: $font-size-xs;
     position: relative;
 
     @media screen and (min-width: map-get($bp, 'lg')) {
