@@ -42,13 +42,13 @@ $heading-font-family: $font-family-sans-serif-medium !default;
 $heading-line-height: 1.2 !default;
 
 // Fonts
-$root-font-size: 1rem; // 16px
-$root-font-size-xl: 1.25rem; // 20px
+$root-font-size: 1rem;
+$root-font-size-xl: 1.25rem;
 
-$font-size-xs: .75rem !default; // 12px
-$font-size-sm: .875rem !default; // 14px
-$font-size-md: 1.125rem !default; //18px
-$font-size-lg: 1.875rem !default; // 30px
+$font-size-xs: .8rem !default;
+$font-size-sm: .9rem !default;
+$font-size-md: 1.125rem !default;
+$font-size-lg: 1.875rem !default;
 
 $font-weight-base: 400;
 $letter-spacing-base: .0125rem;
@@ -56,16 +56,16 @@ $line-height-bio: 1.4rem !default;
 $line-height: 1.75 !default;
 
 // Spacing
-$spacing-1: .125rem; //2px
-$spacing-2: .5rem;  //8px
-$spacing-3: .75rem; //12px
-$spacing-4: 1rem; //16px
-$spacing-5: 1.5rem; //24px
-$spacing-6: 2rem; //32px
-$spacing-7: 3rem; //48px
-$spacing-8: 4rem; //64px
-$spacing-9: 6rem; //96px
-$spacing-10: 12rem; //192px
+$spacing-1: .125rem; 
+$spacing-2: .5rem;  
+$spacing-3: .75rem; 
+$spacing-4: 1rem; 
+$spacing-5: 1.5rem; 
+$spacing-6: 2rem; 
+$spacing-7: 3rem; 
+$spacing-8: 4rem; 
+$spacing-9: 6rem; 
+$spacing-10: 12rem; 
 
 // Borders
 $border-color: $color-grey-lightest !default;
@@ -113,6 +113,3 @@ $bio-spacing-xs: $bio-spacing-base * 2 !default;
 $bio-spacing-sm: $bio-spacing-base * 3 !default;
 $bio-spacing-md: $bio-spacing-base * 4 !default;
 $bio-spacing-lg: $bio-spacing-base * 6 !default;
-
-// Element Sizing & Widths
-$size-large: 50px !default;

@@ -1,6 +1,6 @@
 .author-bio {
   background-color: $color-off-white;
-  padding: $bio-spacing-lg;
+  padding: 1.5rem;
   position: relative;
 
   &--margin-top {
@@ -16,20 +16,20 @@
   &__social-icons {
     display: flex;
     position: absolute;
-    right: $bio-spacing-lg;
+    right: 1.5rem;
   }
 
   &__image {
     display: block;
     height: auto;
-    margin-left: $bio-spacing-sm;
+    margin-left: $spacing-3;
     width: 1rem;
   }
 
   &__paragraph {
     color: $color-grey;
     line-height: $line-height-bio;
-    margin-top: $bio-spacing-md;
+    margin: $spacing-3 0 $spacing-3 0;
     font-size: $root-font-size;
     width: 100%;
   }
@@ -37,6 +37,5 @@
   &__link {
     color: $color-red;
     font-size: $root-font-size;
-    margin-top: $bio-spacing-sm;
   }
 }
