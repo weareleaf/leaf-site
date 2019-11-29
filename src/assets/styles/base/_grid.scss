@@ -139,6 +139,7 @@
   }
 
   &--blog {
+    grid-gap: 0;
     grid-template-columns: 1fr;
 
     @media screen and (min-width: map-get($bp, 'md')) {
