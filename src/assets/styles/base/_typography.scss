@@ -139,17 +139,11 @@ img {
     margin-top: $spacing-9;
   }
   &--margin-blog {
-    margin-bottom: $spacing-6;
-  }
-  @media screen and (min-width: map-get($bp, 'xl')) {
-    &--margin-blog {
-      margin-top: $spacing-6;
-    }
+    margin-bottom: $spacing-7;
   }
   &--block-hr {
     justify-content: center;
-    margin-bottom: $spacing-6;
-    margin-top: $spacing-6;
+    margin: $spacing-7 0 $spacing-7 0;
     width: 3.75em;
   }
 }
@@ -215,40 +209,38 @@ img {
 
 .intro-paragraph {
   color: $color-grey-dark;
-  font-size: $font-size-sm;
-  line-height: 1.6875em;
+  font-size: $font-size-md;
+  line-height: $line-height;
   margin-bottom: $font-size-lg;
 }
 @media screen and (min-width: map-get($bp, 'md')) {
   .intro-paragraph {
     color: $color-grey-dark;
     font-size: $font-size-h3;
-    line-height: 1.5;
     margin-bottom: $font-size-lg;
   }
 }
 
 blockquote {
   margin: $spacing-6 auto;
-  padding: 10px 0 10px 40px;
+  padding: $spacing-2 0 $spacing-2 $spacing-6;
   position: relative;
 
   q {
     color: $color-grey-dark;
     display: block;
     font-family: $font-family-sans-serif-light;
-    font-size: 1.875em;
-    line-height: 1.375em;
+    font-size: $font-size-lg;
+    line-height: $line-height - .30;
     margin-bottom: $spacing-2;
     width: 100%;
-    quotes: '“';
 
     &::before {
       color: $color-grey-lightest;
       content: open-quote;
-      font-size: 200px;
+      font-size: $font-size-h1 * 2.5;
       font-weight: bold;
-      line-height: 140px;
+      line-height: 8rem;
       left: 0;
       top: 0;
       position: absolute;
@@ -256,7 +248,8 @@ blockquote {
     }
 
     &::after {
-      display: none;
+      content: close-quote;
+      visibility: hidden;
     }
   }
 

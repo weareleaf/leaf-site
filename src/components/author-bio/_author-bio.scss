@@ -1,5 +1,6 @@
 .author-bio {
   background-color: $color-off-white;
+  margin-bottom: 3rem;
   padding: 1.5rem;
   position: relative;
 
@@ -28,7 +29,7 @@
 
   &__paragraph {
     color: $color-grey;
-    line-height: $line-height-bio;
+    line-height: $line-height - .35rem;
     margin: $spacing-3 0 $spacing-3 0;
     font-size: $root-font-size;
     width: 100%;
