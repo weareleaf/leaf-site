@@ -31,12 +31,13 @@
     color: $color-grey;
     line-height: $line-height - .35rem;
     margin: $spacing-3 0 $spacing-3 0;
-    font-size: $root-font-size;
+    font-size: $font-size-sm;
     width: 100%;
   }
 
   &__link {
     color: $color-red;
-    font-size: $root-font-size;
+    font-family: larsseit-medium,sans-serif;
+    font-size: $font-size-sm;
   }
 }

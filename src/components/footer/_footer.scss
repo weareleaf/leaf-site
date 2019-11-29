@@ -31,14 +31,14 @@
     }
 
     strong {
-      margin-right: $spacing-4 * 0.25;
+      margin-right: $spacing-4 * .25;
     }
   }
 
   &__cta-link {
     color: $brand-secondary;
     font-family: $font-family-sans-serif-medium;
-    margin-left: $spacing-4 * 0.25;
+    margin-left: $spacing-4 * .25;
     white-space: nowrap;
   }
 
@@ -68,7 +68,7 @@
 
   &__copyright {
     color: $color-grey-dark;
-    font-size: $font-size-xs;
+    font-size: $font-size-h6;
     margin: 0;
 
     @media screen and (min-width: map-get($bp, 'md')) {
@@ -83,7 +83,7 @@
   }
 
   &__contact {
-    font-size: $font-size-xs;
+    font-size: $font-size-h6;
 
     @media screen and (min-width: map-get($bp, 'md')) {
       grid-column: 3;
