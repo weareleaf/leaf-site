@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 
 class BlogPostGridItem extends Component {
   render() {
-    const { author, large, postUrl, postImage, postHeading, postText} = this.props
+    const { author, large, postUrl, postImage, postHeading, postText } = this.props
     const postPrefix = large ? 'post-large' : 'post'
 
     return (
@@ -17,7 +17,7 @@ class BlogPostGridItem extends Component {
             <h3 className={`${postPrefix}__heading`}>{postHeading}</h3>
             <p className={`${postPrefix}__text`}>{postText}</p>
             <div className={`${postPrefix}__footer`}>
-              <div className="author author--margin-top">
+              <div className="author">
                 <picture className="author__media">
                   <source srcSet={author.authorThumbnail.src} type="image/webp" />
                   <img src={author.authorThumbnail.fallbackSrc} alt="Mike" />
