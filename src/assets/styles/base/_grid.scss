@@ -132,7 +132,7 @@
   }
 
   &__item {
-    @media screen and (min-width: map-get($bp, "lg")) {
+    @media screen and (min-width: map-get($bp, "md")) {
       &--span-2 {
         grid-column: 1 / span 2;
       }
