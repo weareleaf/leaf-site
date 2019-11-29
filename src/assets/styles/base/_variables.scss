@@ -102,14 +102,3 @@ $bp: (
   lg: 992 / 16 * 1em,
   xl: 1200 / 16 * 1em
 ) !default;
-
-
-
-// sort this out ... 
-
-// Spacing
-$bio-spacing-base: 5px !default;
-$bio-spacing-xs: $bio-spacing-base * 2 !default;
-$bio-spacing-sm: $bio-spacing-base * 3 !default;
-$bio-spacing-md: $bio-spacing-base * 4 !default;
-$bio-spacing-lg: $bio-spacing-base * 6 !default;
