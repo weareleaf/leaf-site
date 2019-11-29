@@ -1,14 +1,14 @@
 mixin author-bio(c)
   .author-bio(class= c.class)
     .author-bio__social-icons
-      a.twitter(href= c.twitterUrl)
+      a.twitter(href= c.twitterUrl target="_blank")
         +image({
           context: "author-bio",
           modifier: "twitter",
           src: c.twitterImage.src,
           alt: c.twitterImage.alt
         })
-      a.linkedin(href= c.linkedinUrl)
+      a.linkedin(href= c.linkedinUrl target="_blank")
         +image({
           context: "author-bio",
           modifier: "linkedin",
