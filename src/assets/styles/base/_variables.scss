@@ -93,17 +93,6 @@ $timing-ease-in-out: ease-in-out;
 $timing-ease-in: ease-in;
 
 // Breakpoints
-$bp: (
-  xs: 0,
-  sm: 34em,
-  md: 48em,
-  lg: 62em,
-  xl: 75em
-) !default;
-
-$logo-breakpoint: 87.5em;
-
-
 $breakpoint: (
   breakpoint-0: 0,
   breakpoint-1: 34em, //sm
