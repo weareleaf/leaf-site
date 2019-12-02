@@ -15,7 +15,7 @@ html {
   scroll-behavior: smooth;
   text-size-adjust: 100%;
 
-  @media screen and (min-width: map-get($bp, 'xl')) {
+  @media screen and (min-width: map-get($breakpoint, "breakpoint-6")) {
     font-size: $root-font-size-xl;
   }
 }
@@ -27,11 +27,11 @@ body {
   letter-spacing: $letter-spacing-base;
   line-height: $line-height;
 
-  @media screen and (min-width: map-get($bp, 'md')) {
+  @media screen and (min-width: map-get($breakpoint,  "breakpoint-3")) {
     font-size: 0.9em;
   }
 
-  @media screen and (min-width: map-get($bp, 'lg')) {
+  @media screen and (min-width: map-get($breakpoint, "breakpoint-4")) {
     font-size: 1em;
   }
 }
