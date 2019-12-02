@@ -7,14 +7,10 @@
     padding: $spacing-4 * 6 0;
   }
 
-  &--condensed {
-    padding: $spacing-4 * 2 0;
-  }
-
   &__cta-heading {
     font-family: $font-family-sans-serif-medium;
-    font-size: $footer-cta-heading;
-    line-height: $heading-line-height;
+    font-size: 1.4rem;
+    line-height: 1.2;
     margin: 0 0 $spacing-4;
 
     @media screen and (min-width: map-get($breakpoint, "breakpoint-4")) {
@@ -75,11 +71,6 @@
       grid-row: 2 / 3;
       text-align: right;
     }
-
-    &--condensed {
-      grid-column-start: 1;
-      text-align: left;
-    }
   }
 
   &__contact {
@@ -89,12 +80,6 @@
       grid-column: 3;
       grid-row: 1 / 2;
       text-align: right;
-    }
-
-    &--condensed {
-      grid-column-start: 1;
-      margin-bottom: 0;
-      text-align: left;
     }
   }
 
