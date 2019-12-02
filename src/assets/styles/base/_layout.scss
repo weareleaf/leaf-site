@@ -68,5 +68,37 @@ main {
 
   &__image {
     width: 100%;
+
+    @media screen and (min-width: map-get($breakpoint, "breakpoint-2")) {
+      width: 75%;
+    }
+
+    @media screen and (min-width: map-get($breakpoint, "breakpoint-4")) {
+      width: 100%;
+    }
+  }
+
+  & h1 {
+    width: 100%;
+
+    @media screen and (min-width: map-get($breakpoint, "breakpoint-2")) {
+      width: 75%;
+    }
+
+    @media screen and (min-width: map-get($breakpoint, "breakpoint-4")) {
+      width: 100%;
+    }
+  }
+
+  & p {
+    width: 100%;
+
+    @media screen and (min-width: map-get($breakpoint, "breakpoint-2")) {
+      width: 75%;
+    }
+
+    @media screen and (min-width: map-get($breakpoint, "breakpoint-4")) {
+      width: 100%;
+    }
   }
 }
