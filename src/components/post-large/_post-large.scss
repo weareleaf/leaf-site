@@ -20,10 +20,11 @@
       height: 10rem;
       width: 100%;
       object-fit: cover;
-      @media screen and (min-width: 77.5em) {
+      transition: opacity $duration-2 $timing-ease;
+
+      @media screen and (min-width: map-get($breakpoint, "breakpoint-6")) {
         height: 12rem;
       }
-      transition: opacity $duration-2 $timing-ease;
     }
   }
 

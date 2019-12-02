@@ -10,7 +10,7 @@
     padding: 0;
     width: 100%;
 
-    @media screen and (min-width: map-get($bp, 'md')) {
+    @media screen and (min-width: map-get($breakpoint, "breakpoint-3")) {
       flex-wrap: nowrap;
       justify-content: space-between;
     }
@@ -21,7 +21,7 @@
     margin-bottom: $spacing-6;
     padding: $spacing-2 $spacing-6;
 
-    @media screen and (min-width: map-get($bp, 'md')) {
+    @media screen and (min-width: map-get($breakpoint, "breakpoint-3")) {
       flex: 0 2 auto;
       margin-bottom: 0;
       padding: 0 $spacing-4 0 $spacing-4;

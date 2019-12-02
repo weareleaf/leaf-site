@@ -8,13 +8,13 @@
     grid-column-gap: $spacing-8;
   }
 
-  @media screen and (min-width: map-get($bp, "xl")) {
+  @media screen and (min-width: map-get($breakpoint, "breakpoint-6")) {
     grid-column-gap: 6em;
   }
 
   &--half {
 
-    @media screen and (min-width: map-get($bp, "sm")) {
+    @media screen and (min-width: map-get($breakpoint, "breakpoint-1")) {
       grid-template-columns: 1fr 1fr;
     }
   }
@@ -35,7 +35,7 @@
 
   &--symmetrical-card {
 
-    @media screen and (min-width: map-get($breakpoint, "breakpoint-4")) {
+    @media screen and (min-width: map-get($breakpoint, "breakpoint-3")) {
       grid-template-columns: 1fr 1fr;
       grid-column-gap: $spacing-8;
     }
@@ -47,25 +47,25 @@
 
   &--card {
 
-    @media screen and (min-width: map-get($bp, "md")) {
+    @media screen and (min-width: map-get($breakpoint, "breakpoint-3")) {
       grid-template-columns: 1fr 1fr;
       grid-column-gap: $spacing-8;
     }
 
-    @media screen and (min-width: map-get($bp, "lg")) {
+    @media screen and (min-width: map-get($breakpoint, "breakpoint-4")) {
       grid-column-gap: $spacing-9;
     }
 
     .grid__item:not(:last-child) {
       margin-bottom: $spacing-6;
 
-      @media screen and (min-width: map-get($bp, "md")) {
+      @media screen and (min-width: map-get($breakpoint, "breakpoint-3")) {
         margin-bottom: $spacing-8;
       }
     }
 
     .grid__item:nth-child(even) {
-      @media screen and (min-width: map-get($bp, "md")) {
+      @media screen and (min-width: map-get($breakpoint, "breakpoint-3")) {
         position: relative;
         top: 12em;
       }
@@ -74,15 +74,15 @@
 
   &--statements {
 
-    @media screen and (min-width: map-get($bp, "sm")) {
+    @media screen and (min-width: map-get($breakpoint, "breakpoint-1")) {
       grid-row-gap: $spacing-4 * 3;
     }
 
-    @media screen and (min-width: map-get($bp, "md")) {
+    @media screen and (min-width: map-get($breakpoint, "breakpoint-3")) {
       grid-template-columns: 1fr 1fr;
     }
 
-    @media screen and (min-width: map-get($bp, "lg")) {
+    @media screen and (min-width: map-get($breakpoint, "breakpoint-4")) {
       grid-row-gap: $spacing-8;
     }
   }
@@ -92,11 +92,11 @@
     grid-row-gap: $spacing-8;
     grid-template-columns: 1fr 1fr;
 
-    @media screen and (min-width: map-get($bp, "lg")) {
+    @media screen and (min-width: map-get($breakpoint, "breakpoint-4")) {
       grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
     }
 
-    @media screen and (min-width: map-get($bp, "xl")) {
+    @media screen and (min-width: map-get($breakpoint, "breakpoint-6")) {
       grid-column-gap: $spacing-7;
     }
   }
@@ -105,7 +105,7 @@
     grid-row-gap: 1em;
     margin-bottom: $spacing-4;
 
-    @media screen and (min-width: map-get($bp, "md")) {
+    @media screen and (min-width: map-get($breakpoint, "breakpoint-3")) {
       grid-column-gap: 1em;
       grid-template-columns: 1fr 1fr;
     }
@@ -114,7 +114,7 @@
   &--metrics {
     grid-template-columns: 1fr;
 
-    @media screen and (min-width: map-get($bp, 'md')) {
+    @media screen and (min-width: map-get($breakpoint, "breakpoint-3")) {
       grid-template-columns: 1fr 1fr 1fr;
     }
   }
@@ -122,7 +122,7 @@
   &--footer {
     grid-column-gap: 4em;
 
-    @media screen and (min-width: map-get($bp, "lg")) {
+    @media screen and (min-width: map-get($breakpoint, "breakpoint-4")) {
       grid-template-columns: 1fr 1fr;
 
       .body--landing & {
@@ -132,7 +132,7 @@
   }
 
   &__item {
-    @media screen and (min-width: map-get($bp, "md")) {
+    @media screen and (min-width: map-get($breakpoint, "breakpoint-3")) {
       &--span-2 {
         grid-column: 1 / span 2;
       }
@@ -143,18 +143,18 @@
     grid-column-gap: 0;
     grid-template-columns: 1fr;
 
-    @media screen and (min-width: map-get($bp, 'md')) {
+    @media screen and (min-width: map-get($breakpoint, "breakpoint-3")) {
       grid-gap: $spacing-7;
       grid-template-columns: 1fr 1fr;
     }
 
-    @media screen and (min-width: map-get($bp, 'lg')) {
+    @media screen and (min-width: map-get($breakpoint, "breakpoint-4")) {
       grid-gap: $spacing-7;
       grid-template-columns: 1fr 1fr 1fr;
     }
   }
 
-  @media screen and (min-width: map-get($bp, "lg")) {
+  @media screen and (min-width: map-get($breakpoint, "breakpoint-4")) {
     .grid__item-large {
       grid-column: span 2;
     }

@@ -1,6 +1,6 @@
 .social-tile {
 
-  @media screen and (min-width: map-get($bp, 'md')) {
+  @media screen and (min-width: map-get($breakpoint, "breakpoint-3")) {
     display: flex;
   }
 
@@ -9,7 +9,7 @@
     width: 1.2em;
     text-align: center;
 
-    @media screen and (min-width: map-get($bp, 'md')) {
+    @media screen and (min-width: map-get($breakpoint, "breakpoint-3")) {
       flex: 0 0 auto;
       margin-right: $spacing-4 / 1.25;
     }
@@ -24,7 +24,7 @@
   &__content {
     display: none;
 
-    @media screen and (min-width: map-get($bp, 'md')) {
+    @media screen and (min-width: map-get($breakpoint, "breakpoint-3")) {
       display: block;
     }
   }

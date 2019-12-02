@@ -43,7 +43,7 @@
     margin-top: $spacing-7;
   }
 }
-@media screen and (min-width: map-get($bp, 'md')) {
+@media screen and (min-width: map-get($breakpoint, "breakpoint-3")) {
   .section {
     &--margin {
       margin-bottom: $spacing-6;

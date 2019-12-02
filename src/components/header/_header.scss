@@ -8,7 +8,7 @@
   width: 100%;
   z-index: 90;
 
-  @media screen and (min-width: 96.875em) {
+  @media screen and (min-width: map-get($breakpoint, "breakpoint-11")) {
     position: fixed;
   }
 
@@ -22,7 +22,7 @@
     top: 2.5rem;
     width: 3.3em;
 
-    @media screen and (min-width: 90em) {
+    @media screen and (min-width: map-get($breakpoint, "breakpoint-10")) {
       left: $spacing-8;
       top: $spacing-4 * 3.5;
     }
@@ -33,7 +33,7 @@
     right: 0;
     top: 2.5rem;
 
-    @media screen and (min-width: 90em) {
+    @media screen and (min-width: map-get($breakpoint, "breakpoint-10")) {
       top: $spacing-4 * 3.5;
     }
   }
@@ -43,7 +43,7 @@
     right: 1.25rem;
     top: 2.5rem;
 
-    @media screen and (min-width: 90em) {
+    @media screen and (min-width: map-get($breakpoint, "breakpoint-10")) {
       right: $spacing-8;
       top: $spacing-4 * 3.5;
     }
@@ -64,7 +64,7 @@
       width: 16px;
     }
 
-    @media screen and (min-width: map-get($bp, 'sm')) {
+    @media screen and (min-width: map-get($breakpoint, "breakpoint-1")) {
       background-color: $color-red;
       border: none;
       border-radius: $border-radius;
@@ -91,7 +91,7 @@
     display: none;
     position: absolute;
 
-    @media screen and (min-width: 96.875em) {
+    @media screen and (min-width: map-get($breakpoint, "breakpoint-11")) {
       display: block;
       left: 4em;
     }
@@ -102,7 +102,7 @@
     display: none;
     position: absolute;
 
-    @media screen and (min-width: 96.875em) {
+    @media screen and (min-width: map-get($breakpoint, "breakpoint-11")) {
       display: block;
       right: 4em;
     }
