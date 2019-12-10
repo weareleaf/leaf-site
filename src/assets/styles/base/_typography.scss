@@ -15,7 +15,7 @@ h1 {
   font-size: 2.2rem;
   margin: 0 0 $spacing-3;
 
-  @media screen and (min-width: map-get($breakpoint, "breakpoint-3")) {
+  @media screen and (min-width: map-get($breakpoint, 'breakpoint-3')) {
     font-size: $font-size-h1;
     margin-bottom: $spacing-3;
   }
@@ -88,15 +88,15 @@ strong {
 figure {
   margin: $spacing-6 0;
 
-  @media screen and (min-width: map-get($breakpoint, "breakpoint-3")) {
+  @media screen and (min-width: map-get($breakpoint, 'breakpoint-3')) {
     margin: $spacing-6 0 $spacing-4 * 3;
   }
 
-  @media screen and (min-width: map-get($breakpoint, "breakpoint-4")) {
+  @media screen and (min-width: map-get($breakpoint, 'breakpoint-4')) {
     margin: $spacing-6 0 $spacing-8;
   }
 
-  @media screen and (min-width: map-get($breakpoint, "breakpoint-6")) {
+  @media screen and (min-width: map-get($breakpoint, 'breakpoint-6')) {
     margin: $spacing-4 * 3 0 $spacing-8;
   }
 
@@ -179,7 +179,7 @@ img {
     .styled-list--inside-sm & {
       margin-left: $spacing-5;
 
-      @media screen and (min-width: map-get($breakpoint, "breakpoint-8")) {
+      @media screen and (min-width: map-get($breakpoint, 'breakpoint-8')) {
         margin-left: 0;
       }
     }
@@ -207,17 +207,18 @@ img {
   color: $color-grey-dark;
 }
 
-.intro-paragraph {
-  color: $color-grey-dark;
-  font-size: $font-size-md;
-  line-height: $line-height;
-  margin-bottom: $font-size-lg;
-}
-@media screen and (min-width: map-get($breakpoint, "breakpoint-3")) {
-  .intro-paragraph {
+.blog-post {
+  &__intro-paragraph {
     color: $color-grey-dark;
-    font-size: $font-size-h3;
+    font-size: $font-size-md;
+    line-height: $line-height;
     margin-bottom: $font-size-lg;
+
+    @media screen and (min-width: map-get($breakpoint, 'breakpoint-3')) {
+      color: $color-grey-dark;
+      font-size: $font-size-h3;
+      margin-bottom: $font-size-lg;
+    }
   }
 }
 
@@ -227,22 +228,22 @@ blockquote {
   position: relative;
   width: 100%;
 
-    @media screen and (min-width: map-get($breakpoint, "breakpoint-2")) {
-      margin: 0;
-      padding: $spacing-3 0 $spacing-4 $spacing-4;
-      width: 75%;
-    }
+  @media screen and (min-width: map-get($breakpoint, 'breakpoint-2')) {
+    margin: 0;
+    padding: $spacing-3 0 $spacing-4 $spacing-4;
+    width: 75%;
+  }
 
-    @media screen and (min-width: map-get($breakpoint, "breakpoint-4")) {
-      width: 100%;
-    }
+  @media screen and (min-width: map-get($breakpoint, 'breakpoint-4')) {
+    width: 100%;
+  }
 
   q {
     color: $color-grey-dark;
     display: block;
     font-family: $font-family-sans-serif-light;
     font-size: $font-size-lg;
-    line-height: $line-height - .30;
+    line-height: $line-height - 0.3;
     margin-bottom: $spacing-2;
     width: 100%;
 
