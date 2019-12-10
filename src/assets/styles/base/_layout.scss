@@ -70,6 +70,7 @@ main {
   &__h2,
   &__h3,
   &__h4,
+  &__h5,
   &__intro,
   &__text,
   &__image,
@@ -79,7 +80,6 @@ main {
     @media screen and (min-width: map-get($breakpoint, 'breakpoint-2')) {
       width: 75%;
     }
-
     @media screen and (min-width: map-get($breakpoint, 'breakpoint-4')) {
       width: 100%;
     }
