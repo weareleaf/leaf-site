@@ -51,6 +51,7 @@ main {
     margin-bottom: 6em;
   }
 
+  // Duplicate code which could be addressed? May be a case of coding it once and just applying the mod to the actual class...
   &--sm-spacing {
     margin-bottom: $spacing-6;
 
