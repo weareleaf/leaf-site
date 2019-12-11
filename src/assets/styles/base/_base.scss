@@ -28,10 +28,10 @@ body {
   line-height: $line-height;
 
   @media screen and (min-width: map-get($breakpoints,  "breakpoint-3")) {
-    font-size: 0.9em;
+    font-size: $font-size-sm;
   }
 
   @media screen and (min-width: map-get($breakpoints, "breakpoint-4")) {
-    font-size: 1em;
+    font-size: $root-font-size;
   }
 }

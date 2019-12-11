@@ -7,13 +7,13 @@
   &__text {
     color: $color-grey-dark;
     font-size: 1.3em;
-    margin: 0 0 0.769em;
+    margin: 0 0 $spacing-3;
 
     .testimonial--inline & {
-      border: 1px solid $color-grey-light;
+      border: $border-width-base $border-style $color-grey-light;
       border-radius: $border-radius;
       color: $color-grey;
-      font-size: 0.85em;
+      font-size: .85em;
       margin: 0 $spacing-6 0 0;
       max-width: 20em;
       padding: 1.765em;
@@ -21,7 +21,7 @@
 
       &::after {
         background-color: $color-white;
-        border: 1px solid $color-grey-light;
+        border: $border-width-base $border-style $color-grey-light;
         border-bottom-color: $color-white;
         border-left-color: $color-white;
         border-top-right-radius: $border-radius;
@@ -29,7 +29,7 @@
         display: block;
         height: 1.176em;
         position: absolute;
-        right: -0.647em;
+        right: -.647em;
         top: 50%;
         transform: translateY(-50%) rotate(45deg);
         width: 1.176em;
@@ -40,19 +40,19 @@
   &__author {
     align-items: center;
     display: flex;
-    padding-right: 2.9em;
+    padding-right: $spacing-7;
     position: relative;
 
     &::after {
       background: url('../images/icons/quotation.svg') no-repeat center center;
       content: '';
       display: block;
-      height: 2.4em;
+      height: $size-4;
       position: absolute;
       right: 0;
       top: 50%;
       transform: translateY(-50%);
-      width: 2.9em;
+      width: $size-5;
     }
 
     .testimonial--inline & {
@@ -65,7 +65,7 @@
   }
 
   &__image-container {
-    margin-right: 0.75em;
+    margin-right: $spacing-3;
   }
 
   &__image {
