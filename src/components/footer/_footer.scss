@@ -4,17 +4,17 @@
   padding: $spacing-6 0;
 
   @media screen and (min-width: map-get($breakpoints, "breakpoint-3")) {
-    padding: $spacing-4 * 6 0;
+    padding: $spacing-9 0;
   }
 
   &__cta-heading {
     font-family: $font-family-sans-serif-medium;
     font-size: 1.4rem;
-    line-height: 1.2;
+    line-height: $heading-line-height;
     margin: 0 0 $spacing-4;
 
     @media screen and (min-width: map-get($breakpoints, "breakpoint-4")) {
-      margin: 0 0 $spacing-4 * 1.7;
+      margin: 0 0 $spacing-5;
     }
   }
 
@@ -27,19 +27,19 @@
     }
 
     strong {
-      margin-right: $spacing-4 * .25;
+      margin-right: $spacing-4;
     }
   }
 
   &__cta-link {
     color: $brand-secondary;
     font-family: $font-family-sans-serif-medium;
-    margin-left: $spacing-4 * .25;
+    margin-left: $spacing-4;
     white-space: nowrap;
   }
 
   &__social {
-    margin-top: $spacing-4 * 1.5;
+    margin-top: $spacing-5;
 
     @media screen and (min-width: map-get($breakpoints, "breakpoint-11")) {
       display: none;
@@ -49,7 +49,7 @@
   &__grid {
     display: -ms-grid;
     display: grid;
-    grid-gap: 1em;
+    grid-gap: $spacing-4;
     grid-template-columns: 1fr 1fr;
 
     @media screen and (min-width: map-get($breakpoints, "breakpoint-4")) {
@@ -93,7 +93,7 @@
     @media screen and (min-width: map-get($breakpoints, "breakpoint-3")) {
       display: block;
       margin-left: auto;
-      width: 3.3em;
+      width: $size-4;
     }
   }
 }

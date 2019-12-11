@@ -21,10 +21,10 @@
     }
 
     .social-tile {
-      margin-right: $spacing-4 * 2;
-      @media screen and (min-width: 66.25em) {
+      margin-right: $spacing-6;
+      @media screen and (min-width: map-get($breakpoints, "breakpoint-5")) {
         margin-right: 0;
-        margin-bottom: $spacing-4 * 2;
+        margin-bottom: $spacing-6;
       }
     }
   }
