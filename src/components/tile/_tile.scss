@@ -15,7 +15,7 @@
     content: '';
     display: block;
     right: $spacing-4;
-    transition: transform .1s $timing-ease-in;
+    transition: transform $duration-1 $timing-ease-in;
   }
 
   &:hover {

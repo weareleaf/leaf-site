@@ -23,11 +23,11 @@
     z-index: 1001;
 
     .modal[aria-hidden='false'] & {
-      animation: mmfadeIn $duration-2 $timing-ease;
+      animation: mmfadeIn $duration-3 $timing-ease;
     }
 
     .modal[aria-hidden='true'] & {
-      animation: mmfadeOut $duration-2 $timing-ease;
+      animation: mmfadeOut $duration-3 $timing-ease;
     }
   }
 
@@ -48,11 +48,11 @@
     }
 
     .modal[aria-hidden='false'] & {
-      animation: mmslideIn $duration-2 $timing-ease;
+      animation: mmslideIn $duration-3 $timing-ease;
     }
 
     .modal[aria-hidden='true'] & {
-      animation: mmslideOut $duration-2 $timing-ease;
+      animation: mmslideOut $duration-3 $timing-ease;
     }
   }
 

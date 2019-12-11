@@ -2,26 +2,26 @@
 .footer {
   opacity: 0;
   transform: translateY(0);
-  transition: opacity $duration-4 $timing-ease, transform $duration-4 $timing-ease;
+  transition: opacity $duration-5 $timing-ease, transform $duration-4 $timing-ease;
 }
 
 .hero {
   &__blob {
     opacity: 0;
     transform: translateX(0);
-    transition: opacity $duration-4 $timing-ease, transform $duration-4 $timing-ease;
+    transition: opacity $duration-5 $timing-ease, transform $duration-4 $timing-ease;
   }
 
   &__content {
     opacity: 0;
     transform: translateX(0);
-    transition: opacity $duration-4 $timing-ease, transform $duration-4 $timing-ease;
+    transition: opacity $duration-5 $timing-ease, transform $duration-4 $timing-ease;
   }
 
   &__media {
     opacity: 0;
     transform: translateX(0);
-    transition: opacity $duration-4 $timing-ease, transform $duration-4 $timing-ease;
+    transition: opacity $duration-5 $timing-ease, transform $duration-4 $timing-ease;
   }
 }
 

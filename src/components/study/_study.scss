@@ -8,7 +8,7 @@
 
   &__image {
     display: block;
-    transition: opacity $duration-2 $timing-ease;
+    transition: opacity $duration-4 $timing-ease;
     width: 100%;
   }
 
@@ -23,7 +23,7 @@
 
   &__heading {
     color: $color-grey-dark;
-    transition: color $duration-2 $timing-ease;
+    transition: color $duration-4 $timing-ease;
   }
 
   &__text {

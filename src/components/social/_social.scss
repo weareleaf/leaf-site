@@ -22,13 +22,13 @@
 
   svg {
     display: inline-block;
-    height: 1.2em;
+    height: 1.2rem;
     vertical-align: middle;
-    width: 1.2em;
+    width: 1.2rem;
   }
 
   &__fill {
-    transition: fill .2s $timing-ease-in-out;
+    transition: fill $duration-2 $timing-ease-in-out;
 
     .social__link:hover & {
       fill: lighten($color-grey-dark, 10%);

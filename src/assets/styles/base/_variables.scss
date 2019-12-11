@@ -85,12 +85,13 @@ $border-radius: .25rem !default;
 $border-radius-half: 50% !default;
 $border-radius-full: 100% !default;
 
-// Durations (will need to add and update a new variable (.2s = 200ms = $duration-2))
+// Durations
 $duration-1: 150ms;
-$duration-2: 250ms;
-$duration-3: 300ms;
-$duration-4: 400ms;
-$duration-5: 500ms;
+$duration-2: 200ms;
+$duration-3: 250ms;
+$duration-4: 300ms;
+$duration-5: 400ms;
+$duration-6: 500ms;
 
 // Timings
 $timing-ease: ease;
