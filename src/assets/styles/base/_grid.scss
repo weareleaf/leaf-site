@@ -9,7 +9,7 @@
   }
 
   @media screen and (min-width: map-get($breakpoints, "breakpoint-6")) {
-    grid-column-gap: 6em;
+    grid-column-gap: $spacing-9;
   }
 
   &--half {
@@ -67,7 +67,7 @@
     .grid__item:nth-child(even) {
       @media screen and (min-width: map-get($breakpoints, "breakpoint-3")) {
         position: relative;
-        top: 12em;
+        top: $spacing-11;
       }
     }
   }
@@ -75,7 +75,7 @@
   &--statements {
 
     @media screen and (min-width: map-get($breakpoints, "breakpoint-1")) {
-      grid-row-gap: $spacing-4 * 3;
+      grid-row-gap: $spacing-7;
     }
 
     @media screen and (min-width: map-get($breakpoints, "breakpoint-3")) {
@@ -102,11 +102,11 @@
   }
 
   &--tile {
-    grid-row-gap: 1em;
+    grid-row-gap: $spacing-4;
     margin-bottom: $spacing-4;
 
     @media screen and (min-width: map-get($breakpoints, "breakpoint-3")) {
-      grid-column-gap: 1em;
+      grid-column-gap: $spacing-4;
       grid-template-columns: 1fr 1fr;
     }
   }
@@ -120,7 +120,7 @@
   }
 
   &--footer {
-    grid-column-gap: 4em;
+    grid-column-gap: $spacing-8;
 
     @media screen and (min-width: map-get($breakpoints, "breakpoint-4")) {
       grid-template-columns: 1fr 1fr;
