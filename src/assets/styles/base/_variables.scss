@@ -43,8 +43,9 @@ $font-size-md: 1.125rem !default;
 $font-size-lg: 1.875rem !default;
 
 // Line heights
-$line-height: 1.75 !default;
 $heading-line-height: 1.2 !default;
+$line-height: 1.75 !default;
+$quote-line-height: 1.5;
 
 // Spacing
 $spacing-1: .125rem; 
@@ -89,7 +90,7 @@ $timing-ease-in-out: ease-in-out;
 $timing-ease-in: ease-in;
 
 // Breakpoints
-$breakpoint: (
+$breakpoints: (
   breakpoint-0: 0,
   breakpoint-1: 34em,
   breakpoint-2: 40em,

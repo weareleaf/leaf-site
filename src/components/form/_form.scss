@@ -5,7 +5,7 @@
     margin: -3px 0 $spacing-6;
     padding: 0;
 
-    @media screen and (min-width: map-get($breakpoint, "breakpoint-3")) {
+    @media screen and (min-width: map-get($breakpoints, "breakpoint-3")) {
       margin: -3px 0 $spacing-4 * 3;
     }
   }
@@ -21,7 +21,7 @@
   }
 
   &__grid {
-    @media screen and (min-width: map-get($breakpoint, "breakpoint-3")) {
+    @media screen and (min-width: map-get($breakpoints, "breakpoint-3")) {
       display: -ms-grid;
       display: grid;
 
@@ -46,7 +46,7 @@
       margin-bottom: $spacing-4;
     }
 
-    @media screen and (min-width: map-get($breakpoint, "breakpoint-3")) {
+    @media screen and (min-width: map-get($breakpoints, "breakpoint-3")) {
       &:not(:last-child) {
         margin-bottom: 0;
       }
@@ -113,11 +113,11 @@
         transform: translateY(-53%);
         width: 18px;
 
-        @media screen and (min-width: map-get($breakpoint, "breakpoint-3")) {
+        @media screen and (min-width: map-get($breakpoints, "breakpoint-3")) {
           transform: translateY(-54%);
         }
 
-        @media screen and (min-width: map-get($breakpoint, "breakpoint-4")) {
+        @media screen and (min-width: map-get($breakpoints, "breakpoint-4")) {
           transform: translateY(-60%);
         }
       }
@@ -134,7 +134,7 @@
         transform: rotate(-45deg);
         width: 10px;
 
-        @media screen and (min-width: map-get($breakpoint, "breakpoint-3")) {
+        @media screen and (min-width: map-get($breakpoints, "breakpoint-3")) {
           border-width: 0 0 3px 3px;
           height: 7px;
           left: 3px;
@@ -179,7 +179,7 @@
     padding-left: 1.5em;
     position: relative;
 
-    @media screen and (min-width: map-get($breakpoint, "breakpoint-1")) {
+    @media screen and (min-width: map-get($breakpoints, "breakpoint-1")) {
       padding-left: 1.35em;
     }
   }

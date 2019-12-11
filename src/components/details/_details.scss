@@ -1,11 +1,11 @@
 .details {
   display: grid;
 
-  @media screen and (min-width: map-get($breakpoint, "breakpoint-1")) {
+  @media screen and (min-width: map-get($breakpoints, "breakpoint-1")) {
     grid-template-columns: repeat(2, 1fr);
   }
 
-  @media screen and (min-width: map-get($breakpoint, "breakpoint-4")) {
+  @media screen and (min-width: map-get($breakpoints, "breakpoint-4")) {
     grid-template-columns: repeat(4, 1fr);
   }
 

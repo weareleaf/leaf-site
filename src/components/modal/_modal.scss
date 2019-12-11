@@ -40,7 +40,7 @@
     width: 100%;
     will-change: transform;
 
-    @media screen and (min-width: map-get($breakpoint, "breakpoint-1")) {
+    @media screen and (min-width: map-get($breakpoints, "breakpoint-1")) {
       border-radius: $border-radius;
       height: auto;
       max-width: 62rem;

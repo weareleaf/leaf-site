@@ -1,5 +1,5 @@
 .contact {
-  @media screen and (min-width: map-get($breakpoint, "breakpoint-3")) {
+  @media screen and (min-width: map-get($breakpoints, "breakpoint-3")) {
     background: url('../images/contact.jpg') no-repeat 40rem center / auto 100%;
     display: flex;
   }
@@ -9,11 +9,11 @@
     justify-content: space-around;
     padding: $spacing-5;
 
-    @media screen and (min-width: map-get($breakpoint, "breakpoint-1")) {
+    @media screen and (min-width: map-get($breakpoints, "breakpoint-1")) {
       background-color: $color-grey-green;
     }
 
-    @media screen and (min-width: map-get($breakpoint, "breakpoint-3")) {
+    @media screen and (min-width: map-get($breakpoints, "breakpoint-3")) {
       flex: 0 0 auto;
       flex-direction: column;
       order: 0;
@@ -32,7 +32,7 @@
   &__content {
     padding: $spacing-6;
 
-    @media screen and (min-width: map-get($breakpoint, "breakpoint-3")) {
+    @media screen and (min-width: map-get($breakpoints, "breakpoint-3")) {
       order: 1;
     }
   }
@@ -45,7 +45,7 @@
     &:last-child {
       margin-bottom: 0;
 
-      @media screen and (min-width: map-get($breakpoint, "breakpoint-1")) {
+      @media screen and (min-width: map-get($breakpoints, "breakpoint-1")) {
         border-bottom: 0;
         padding-bottom: 0;
       }

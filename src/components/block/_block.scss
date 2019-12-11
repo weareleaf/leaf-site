@@ -1,7 +1,7 @@
 .block {
   margin-bottom: $spacing-9;
 
-  @media screen and (min-width: map-get($breakpoint, "breakpoint-3")) {
+  @media screen and (min-width: map-get($breakpoints, "breakpoint-3")) {
     align-items: center;
     display: flex;
   }
@@ -12,13 +12,13 @@
 
   &__content {
 
-    @media screen and (min-width: map-get($breakpoint, "breakpoint-3")) {
+    @media screen and (min-width: map-get($breakpoints, "breakpoint-3")) {
       width: 50%;
     }
 
     .block--reverse & {
 
-      @media screen and (min-width: map-get($breakpoint, "breakpoint-3")) {
+      @media screen and (min-width: map-get($breakpoints, "breakpoint-3")) {
         order: 1;
       }
     }
@@ -28,7 +28,7 @@
     margin-top: $spacing-6;
     max-width: 80%;
 
-    @media screen and (min-width: map-get($breakpoint, "breakpoint-3")) {
+    @media screen and (min-width: map-get($breakpoints, "breakpoint-3")) {
       margin-left: $spacing-7;
       max-width: none;
       width: 40%;
@@ -36,7 +36,7 @@
 
     .block--reverse & {
 
-      @media screen and (min-width: map-get($breakpoint, "breakpoint-3")) {
+      @media screen and (min-width: map-get($breakpoints, "breakpoint-3")) {
         margin-left: 0;
         margin-right: $spacing-7;
       }
