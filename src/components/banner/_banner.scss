@@ -100,7 +100,7 @@
 
   &__button {
     background: rgba(53, 54, 61, 0.3);
-    border: $border-none;
+    border: none;
     border-radius: $border-radius-half;
     cursor: pointer;
     height: 2em;
@@ -124,7 +124,7 @@
 
     span {
       display: none;
-      border: $border-none;
+      border: none;
       clip: rect(0, 0, 0, 0);
       height: 1px;
       overflow: hidden;

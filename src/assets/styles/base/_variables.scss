@@ -42,8 +42,9 @@ $font-size-sm: .9rem !default;
 $font-size-md: 1.125rem !default;
 $font-size-lg: 1.875rem !default;
 
-// Base line height
+// Line heights
 $line-height: 1.75 !default;
+$heading-line-height: 1.2 !default;
 
 // Spacing
 $spacing-1: .125rem; 
@@ -60,7 +61,6 @@ $spacing-10: 12rem;
 // Border styling
 $border-color: $color-grey-lightest !default;
 $border-style: solid !default;
-$border-none: 0;
 
 // Border sizing
 $border-width-base: 1px !default;
