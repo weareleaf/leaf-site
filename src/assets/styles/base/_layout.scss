@@ -50,15 +50,6 @@ main {
   @media screen and (min-width: map-get($breakpoint, 'breakpoint-3')) {
     margin-bottom: 6em;
   }
-
-  // Duplicate code which could be addressed? May be a case of coding it once and just applying the mod to the actual class...
-  &--sm-spacing {
-    margin-bottom: $spacing-6;
-
-    @media screen and (min-width: map-get($breakpoint, 'breakpoint-4')) {
-      margin-bottom: $spacing-8;
-    }
-  }
 }
 
 .blog-post {
