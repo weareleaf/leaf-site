@@ -24,7 +24,7 @@
     }
 
     .nav--primary & {
-      padding-right: 2em;
+      padding-right: $spacing-6;
 
       @media screen and (min-width: map-get($breakpoints, "breakpoint-6")) {
         padding-right: 4.706em; // Magic number to ensure nav aligns with rest of content in header
@@ -80,7 +80,7 @@
         background: currentColor;
         transform-origin: center left;
         transform: scaleX(0);
-        transition: transform $duration-5 cubic-bezier(0.55, 0, 0.1, 1);
+        transition: transform $duration-5 cubic-bezier(.55, 0, 0.1, 1);
       }
 
       &:hover::after {

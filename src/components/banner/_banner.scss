@@ -71,7 +71,7 @@
   }
 
   &__logo {
-    width: $size-4;
+    width: $size-6;
 
     @media screen and (min-width: map-get($breakpoints, "breakpoint-10")) {
       left: $spacing-6;
@@ -103,11 +103,11 @@
     border: none;
     border-radius: $border-radius-half;
     cursor: pointer;
-    height: $size-2;
+    height: $size-3;
     padding: 0;
     position: relative;
     transition: background .2s $timing-ease-in-out;
-    width: $size-2;
+    width: $size-3;
     z-index: 1;
     -webkit-appearance: none;
 

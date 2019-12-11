@@ -61,10 +61,11 @@ $spacing-10: 12rem;
 
 // Sizing
 $size-1: 1rem;
-$size-2: 2rem;
-$size-3: 2.5rem;
-$size-4: 3rem;
-$size-4: 3.5rem;
+$size-2: 1.5rem;
+$size-3: 2rem;
+$size-4: 2.5rem;
+$size-5: 3rem;
+$size-6: 3.5rem;
 
 // Border styling
 $border-color: $color-grey-lightest !default;
@@ -79,12 +80,12 @@ $border-width-xl: $border-width-base * 4 !default;
 // Default border
 $border-default: $border-width-lg $border-style $border-color;
 
-// Default radius
+// Border radius
 $border-radius: .25rem !default;
 $border-radius-half: 50% !default;
 $border-radius-full: 100% !default;
 
-// Durations
+// Durations (will need to add and update a new variable (.2s = 200ms = $duration-2))
 $duration-1: 150ms;
 $duration-2: 250ms;
 $duration-3: 300ms;

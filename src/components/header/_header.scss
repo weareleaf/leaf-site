@@ -20,7 +20,7 @@
     left: 1.25rem;
     position: absolute;
     top: $spacing-6;
-    width: $size-4;
+    width: $size-6;
 
     @media screen and (min-width: map-get($breakpoints, "breakpoint-10")) {
       left: $spacing-8;
