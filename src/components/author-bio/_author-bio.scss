@@ -1,7 +1,7 @@
 .author-bio {
   background-color: $color-off-white;
-  margin-bottom: 3rem;
-  padding: 1.5rem;
+  margin-bottom: $spacing-7;
+  padding: $spacing-5;
   position: relative;
 
   &--margin-top {
@@ -17,19 +17,19 @@
   &__social-icons {
     display: flex;
     position: absolute;
-    right: 1.5rem;
+    right: $spacing-5;
   }
 
   &__image {
     display: block;
     height: auto;
     margin-left: $spacing-3;
-    width: 1rem;
+    width: $size-1;
   }
 
   &__paragraph {
     color: $color-grey;
-    line-height: $line-height - .35rem;
+    line-height: 1.6;
     margin: $spacing-3 0 $spacing-3 0;
     font-size: $font-size-sm;
     width: 100%;

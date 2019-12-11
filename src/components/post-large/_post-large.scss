@@ -5,7 +5,7 @@
     text-decoration: none;
 
     .post-large__image {
-      opacity: 0.75;
+      opacity: .75;
     }
 
     .post-large__heading {
@@ -29,13 +29,13 @@
   }
 
   &__content {
-    margin-top: $spacing-4 * 1.5;
+    margin-top: $spacing-5;
   }
 
   &__heading {
     color: $color-grey-dark;
     font-size: $font-size-h3;
-    margin: 0 0 0.333em;
+    margin: 0 0 .333em;
     transition: color $duration-2 $timing-ease;
   }
 
@@ -45,7 +45,7 @@
   }
 
   &__footer {
-    height: 2.5rem;
+    height: $size-3;
     margin-top: $spacing-3;
   }
 }

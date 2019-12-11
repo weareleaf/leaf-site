@@ -19,44 +19,44 @@
   &__logo {
     left: 1.25rem;
     position: absolute;
-    top: 2.5rem;
-    width: 3.3em;
+    top: $spacing-6;
+    width: $size-4;
 
     @media screen and (min-width: map-get($breakpoints, "breakpoint-10")) {
       left: $spacing-8;
-      top: $spacing-4 * 3.5;
+      top: $spacing-7;
     }
   }
 
   &__nav {
     position: absolute;
     right: 0;
-    top: 2.5rem;
+    top: $spacing-6;
 
     @media screen and (min-width: map-get($breakpoints, "breakpoint-10")) {
-      top: $spacing-4 * 3.5;
+      top: $spacing-7;
     }
   }
 
   &__address {
-    bottom: $spacing-4 * 3.5;
+    bottom: $spacing-7;
     display: none;
     position: absolute;
 
     @media screen and (min-width: map-get($breakpoints, "breakpoint-11")) {
       display: block;
-      left: 4em;
+      left: $spacing-8;
     }
   }
 
   &__social {
-    bottom: $spacing-4 * 3.5;
+    bottom: $spacing-7;
     display: none;
     position: absolute;
 
     @media screen and (min-width: map-get($breakpoints, "breakpoint-11")) {
       display: block;
-      right: 4em;
+      right: $spacing-8;
     }
   }
 }
