@@ -6,14 +6,14 @@
 
   &__text {
     color: $color-grey-dark;
-    font-size: 1.3em;
+    font-size: 1.3rem;
     margin: 0 0 $spacing-3;
 
     .testimonial--inline & {
       border: $border-width-base $border-style $color-grey-light;
       border-radius: $border-radius;
       color: $color-grey;
-      font-size: .85em;
+      font-size: .85rem;
       margin: 0 $spacing-6 0 0;
       max-width: 20em;
       padding: 1.765em;
@@ -27,12 +27,12 @@
         border-top-right-radius: $border-radius;
         content: '';
         display: block;
-        height: 1.176em;
+        height: 1.175em;
         position: absolute;
-        right: -.647em;
+        right: -.650em;
         top: 50%;
         transform: translateY(-50%) rotate(45deg);
-        width: 1.176em;
+        width: 1.175em;
       }
     }
   }
