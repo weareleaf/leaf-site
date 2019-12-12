@@ -67,13 +67,12 @@ main {
   &__text,
   &__image,
   &__list {
-    width: 100%;
 
     @media screen and (min-width: map-get($breakpoints, 'breakpoint-2')) {
       width: 75%;
     }
     @media screen and (min-width: map-get($breakpoints, 'breakpoint-4')) {
-      width: 100%;
+      width: auto;
     }
   }
 }

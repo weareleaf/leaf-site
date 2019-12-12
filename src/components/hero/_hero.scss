@@ -1,6 +1,6 @@
 .hero {
   margin-bottom: $spacing-8;
-  padding: 9em 0 0;
+  padding: 9rem 0 0;
   position: relative;
 
   &--home,
@@ -9,12 +9,12 @@
   }
 
   @media screen and (min-width: map-get($breakpoints, "breakpoint-2")) {
-    padding: 9em 0;
+    padding: 9rem 0;
   }
 
   @media screen and (min-width: map-get($breakpoints, "breakpoint-6")) {
     margin-bottom: $spacing-9;
-    padding: 9em 0 12em;
+    padding: 9rem 0 12rem;
   }
 
   &__blob {
@@ -79,18 +79,18 @@
   }
 
   &__heading {
-    font-size: 2.665em;
-    line-height: 1.125em;
-    max-width: calc(100% - 2em);
+    font-size: 2.665rem;
+    line-height: 1.125rem;
+    max-width: calc(100% - 2rem);
 
     @media screen and (min-width: map-get($breakpoints, "breakpoint-1")) {
-      font-size: 3em;
+      font-size: 3rem;
       line-height: 1.075em;
-      max-width: 8em;
+      max-width: 8rem;
     }
 
     @media screen and (min-width: map-get($breakpoints, "breakpoint-6")) {
-      font-size: 4em;
+      font-size: 4rem;
     }
   }
 
@@ -99,10 +99,10 @@
     font-size: $root-font-size-xl;
     line-height: 1.4;
     margin: 0;
-    max-width: 14.545em;
+    max-width: 14.545rem;
 
     @media screen and (min-width: map-get($breakpoints, "breakpoint-1")) {
-      font-size: 1.1em;
+      font-size: 1.1rem;
       line-height: 1.6;
     }
   }
@@ -287,7 +287,7 @@
 
   &__image {
     @media screen and (min-width: map-get($breakpoints, "breakpoint-2")) {
-      right: 1.25em;
+      right: 1.25rem;
     }
 
     @media screen and (min-width: map-get($breakpoints, "breakpoint-6")) {
@@ -295,14 +295,14 @@
     }
 
     @media screen and (min-width: map-get($breakpoints, "breakpoint-12")) {
-      right: -10em;
+      right: -10rem;
     }
 
     .hero--home & {
 
       @media screen and (min-width: map-get($breakpoints, "breakpoint-2")) {
         max-height: 30rem;
-        right: 3.25em;
+        right: 3.25rem;
       }
 
       @media screen and (min-width: map-get($breakpoints, "breakpoint-6")) {
@@ -310,23 +310,23 @@
       }
 
       @media screen and (min-width: map-get($breakpoints, "breakpoint-12")) {
-        right: -10em;
+        right: -10rem;
       }
     }
 
     .hero--company & {
       @media screen and (min-width: map-get($breakpoints, "breakpoint-2")) {
-        right: 2.5em;
+        right: 2.5rem;
       }
 
       @media screen and (min-width: map-get($breakpoints, "breakpoint-12")) {
-        right: -10em;
+        right: -10rem;
       }
     }
 
     .hero--our-work & {
       @media screen and (min-width: map-get($breakpoints, "breakpoint-2")) {
-        right: 2.5em;
+        right: 2.5rem;
       }
 
       @media screen and (min-width: map-get($breakpoints, "breakpoint-3")) {
@@ -334,15 +334,15 @@
       }
 
       @media screen and (min-width: map-get($breakpoints, "breakpoint-6")) {
-        right: 2.5em;
+        right: 2.5rem;
       }
 
       @media screen and (min-width: map-get($breakpoints, "breakpoint-10")) {
-        right: 1.25em;
+        right: 1.25rem;
       }
 
       @media screen and (min-width: map-get($breakpoints, "breakpoint-12")) {
-        right: -10em;
+        right: -10rem;
       }
     }
 
@@ -366,11 +366,11 @@
       }
 
       @media screen and (min-width: map-get($breakpoints, "breakpoint-5")) {
-        right: 1em;
+        right: 1rem;
       }
 
       @media screen and (min-width: map-get($breakpoints, "breakpoint-6")) {
-        right: 8em;
+        right: 8rem;
       }
 
       @media screen and (min-width: map-get($breakpoints, "breakpoint-6")) {
