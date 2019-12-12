@@ -167,6 +167,10 @@
       z-index: 10;
     }
 
+    @media screen and (min-width: map-get($breakpoints, "breakpoint-4")) {
+      max-height: 28rem;
+    }
+
     @media screen and (min-width: map-get($breakpoints, "breakpoint-6")) {
       bottom: auto;
       height: auto;
@@ -291,7 +295,7 @@
     }
 
     @media screen and (min-width: map-get($breakpoints, "breakpoint-6")) {
-      right: 0;
+      right: 2.5rem;
     }
 
     @media screen and (min-width: map-get($breakpoints, "breakpoint-12")) {
