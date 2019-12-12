@@ -54,8 +54,8 @@ main {
 
 .blog-post {
   @media screen and (min-width: map-get($breakpoints, 'breakpoint-6')) {
-    padding-right: $spacing-7;
     padding-bottom: $spacing-7;
+    padding-right: $spacing-7;
   }
 
   &__h1,

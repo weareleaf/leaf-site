@@ -1,3 +1,5 @@
+$testimonial-size: 1.175rem;
+
 .testimonial {
   &--inline {
     align-items: center;
@@ -15,8 +17,8 @@
       color: $color-grey;
       font-size: .85rem;
       margin: 0 $spacing-6 0 0;
-      max-width: 20em;
-      padding: 1.765em;
+      max-width: 20rem;
+      padding: 1.765rem;
       position: relative;
 
       &::after {
@@ -27,12 +29,12 @@
         border-top-right-radius: $border-radius;
         content: '';
         display: block;
-        height: 1.175em;
+        height: $testimonial-size;
         position: absolute;
-        right: -.650em;
+        right: -.650rem;
         top: 50%;
         transform: translateY(-50%) rotate(45deg);
-        width: 1.175em;
+        width: $testimonial-size;
       }
     }
   }

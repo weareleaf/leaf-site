@@ -6,17 +6,17 @@ h5,
 h6 {
   color: $color-grey-dark;
   font-family: $font-family-sans-serif-medium;
-  font-weight: 400;
+  font-weight: $font-weight-base;
   line-height: $heading-line-height;
 }
 
 h1 {
   font-family: $font-family-sans-serif-medium;
-  font-size: 2.2rem;
+  font-size: $font-size-h1;
   margin: 0 0 $spacing-3;
 
   @media screen and (min-width: map-get($breakpoints, 'breakpoint-3')) {
-    font-size: $font-size-h1;
+    font-size: 4rem;
     margin-bottom: $spacing-3;
   }
 }
@@ -146,7 +146,7 @@ img {
   &--block-hr {
     justify-content: center;
     margin: $spacing-7 0 $spacing-7 0;
-    width: 3.75em;
+    width: 3.75rem;
   }
 }
 
@@ -188,11 +188,11 @@ img {
       background-color: $brand-primary;
       content: '';
       display: block;
-      height: .4em;
-      left: -1.4em;
+      height: .4rem;
+      left: -1.4rem;
       position: absolute;
-      top: .4em;
-      width: .4em;
+      top: .4rem;
+      width: .4rem;
     }
   }
 }

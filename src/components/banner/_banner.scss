@@ -99,6 +99,7 @@
   }
 
   &__button {
+    -webkit-appearance: none;
     background: rgba(53, 54, 61, .3);
     border: none;
     border-radius: $border-radius-half;
@@ -109,7 +110,6 @@
     transition: background $duration-2 $timing-ease-in-out;
     width: $size-3;
     z-index: 1;
-    -webkit-appearance: none;
 
     @media screen and (min-width: map-get($breakpoints, "breakpoint-10")) {
       position: fixed;
@@ -129,9 +129,9 @@
       height: 1px;
       overflow: hidden;
       padding: 0;
+      position: relative;
       white-space: nowrap;
       width: $border-width-base;
-      position: relative;
 
       @media screen and (min-width: map-get($breakpoints, "breakpoint-10")) {
         display: inline;

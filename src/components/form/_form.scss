@@ -1,3 +1,5 @@
+$checkbox-pseudo-size: .25rem;
+
 .form {
   &__fieldset {
     border: none;
@@ -107,11 +109,11 @@
       &::before {
         background: $color-off-white;
         border-radius: .125rem;
-        height: .25rem;
+        height: $checkbox-pseudo-size;
         left: 0;
         top: 50%;
         transform: translateY(-53%);
-        width: .25rem;
+        width: $checkbox-pseudo-size;
 
         @media screen and (min-width: map-get($breakpoints, "breakpoint-3")) {
           transform: translateY(-54%);
