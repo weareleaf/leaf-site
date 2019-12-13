@@ -1,5 +1,5 @@
 // Leaf colors
-$color-green: #66cc88;
+$color-green: #55F6DB;
 $color-green-light: #dbffe7;
 $color-red: #f77c6b;
 $color-grey-lightest: #e2e3e5;
@@ -41,6 +41,10 @@ $font-size-xs: .8rem !default;
 $font-size-sm: .9rem !default;
 $font-size-md: 1.125rem !default;
 $font-size-lg: 1.875rem !default;
+
+// Font colours
+$heading-color: $color-green;
+$paragraph-color: $color-white;
 
 // Font weights
 $font-weight-base: 400;
