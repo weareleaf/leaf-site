@@ -14,14 +14,17 @@ block pageComponents
 
   section.section
     .container
-      .grid.grid--work-preview
-        .grid__item
-          +work-preview({
-            workPreviewImage: "/assets/images/icons/leaves.svg",
-            workPreviewHeading: "We nurture relationships",
-            workPreviewText: "As a remote organisation, we work with clients from all across the world. Our focus on cultivating relationships puts your success first.",
-            workPreviewButton: "Button"
-          })
+      +work-preview({
+        workPreviewSubHeading: "MyRIFT",
+        workPreviewHeading: "Helping Brits claim back tax",
+        workPreviewText: "We helped RIFT re-imagine their web application, making tax refund claims easier to manage for their customers.",
+        workPreviewButton: "See the case study",
+        workPreviewImage: {
+        src: "/assets/images/rift/rift-image-group.png",
+        alt: "RIFT"
+        },
+        workPreviewModifier: "reverse",
+      })
           
 
   section.section.section--margin-b
@@ -30,5 +33,4 @@ block pageComponents
 
   section.section.section--sm-spacing
     .container
-      h2.small From the blog
       .grid.grid--blog.grid--blog-preview

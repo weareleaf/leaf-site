@@ -33,7 +33,7 @@
     }
   }
 
-  &--work-preview {
+  &--symmetrical-card {
 
     @media screen and (min-width: map-get($breakpoints, "breakpoint-3")) {
       grid-template-columns: 1fr 1fr;
@@ -157,6 +157,21 @@
   @media screen and (min-width: map-get($breakpoints, "breakpoint-4")) {
     .grid__item-large {
       grid-column: span 2;
+    }
+  }
+
+  &--work-preview {
+
+    @media screen and (min-width: map-get($breakpoints, "breakpoint-1")) {
+      grid-row-gap: $spacing-7;
+    }
+
+    @media screen and (min-width: map-get($breakpoints, "breakpoint-3")) {
+      grid-template-columns: 1fr 1fr;
+    }
+
+    @media screen and (min-width: map-get($breakpoints, "breakpoint-4")) {
+      grid-row-gap: $spacing-8;
     }
   }
 }

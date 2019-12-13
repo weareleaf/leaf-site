@@ -1,22 +1,29 @@
-.statement {
-  display: flex;
+.work-preview {
+  margin-bottom: $spacing-9;
 
-  &__icon {
-    flex: 0 0 auto;
-    margin-right: $spacing-5;
-    width: $size-5;
+  @media screen and (min-width: map-get($breakpoints, "breakpoint-3")) {
+    align-items: center;
+    display: flex;
   }
 
-  &__text {
-    color: $color-grey-dark;
+  &:last-child {
     margin-bottom: 0;
   }
 
-  &__link {
-    color: $brand-secondary;
-    display: block;
-    font-family: $font-family-sans-serif-medium;
-    font-size: $font-size-sm;
-    margin-top: $spacing-2;
+  &__content {
+    @media screen and (min-width: map-get($breakpoints, "breakpoint-3")) {
+      margin-left: $spacing-9;
+      max-width: 36rem;
+    }
+
+    .work-preview--reverse & {
+      @media screen and (min-width: map-get($breakpoints, "breakpoint-3")) {
+        order: 1;
+      }
+    }
+  }
+
+  &__image {
+    max-width: 41rem;
   }
 }
