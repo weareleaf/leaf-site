@@ -67,7 +67,7 @@
     .grid__item:nth-child(even) {
       @media screen and (min-width: map-get($breakpoints, "breakpoint-3")) {
         position: relative;
-        top: $spacing-11;
+        top: $spacing-12;
       }
     }
   }

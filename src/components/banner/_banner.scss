@@ -172,7 +172,7 @@
     text-align: center;
 
     @media screen and (min-width: map-get($breakpoints, "breakpoint-4")) {
-      @include padding-vertical($spacing-11);
+      @include padding-vertical($spacing-12);
     }
   }
 }

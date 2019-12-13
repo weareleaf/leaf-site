@@ -121,7 +121,7 @@
       }
 
       @media screen and (min-width: map-get($breakpoints, "breakpoint-3")) {
-        margin-top: $spacing-10;
+        margin-top: $spacing-11;
         position: relative;
       }
 
@@ -136,7 +136,7 @@
       }
 
       @media screen and (min-width: map-get($breakpoints, "breakpoint-3")) {
-        margin-top: 8rem; // Create new variable (12 spacing variables then).
+        margin-top: $spacing-10;
         right: 0;
       }
 
