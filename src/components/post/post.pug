@@ -1,21 +1,6 @@
 mixin post(c)
   a.post(href= c.postUrl)
-    +image({
-      context: "post",
-      src: c.postImage.src,
-      alt: c.postImage.alt
-    })
     .post__content
+      h6.post__meta= c.postMeta
       h3.post__heading= c.postHeading
       p.post__text= c.postText
-      .post__footer
-        +author({
-          class: c.author.class,
-          authorDetails: c.author.authorDetails,
-          authorName: c.author.authorName,
-          authorThumbnail: {
-            alt: c.author.authorThumbnail.alt,
-            fallbackSrc: c.author.authorThumbnail.fallbackSrc,
-            src: c.author.authorThumbnail.src
-          }
-        })

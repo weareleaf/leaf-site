@@ -348,7 +348,7 @@ const gridItems = [
   }
 ]
 
-const getRandomGridItems = function(arr, n) {
+const getRandomGridItems = function (arr, n) {
   const result = new Array(n)
   let len = arr.length
   const taken = new Array(len)
@@ -362,7 +362,7 @@ const getRandomGridItems = function(arr, n) {
   return result
 }
 
-const mountBlogComponents = function() {
+const mountBlogComponents = function () {
   const indexMountPoint = document.querySelector('.grid--blog-index')
   if (indexMountPoint) {
     return ReactDOM.render(

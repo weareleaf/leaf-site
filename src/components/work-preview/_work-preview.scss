@@ -1,10 +1,11 @@
-.work-preview {
-  margin-bottom: $spacing-9;
+$image-height: 30rem;
 
-  @media screen and (min-width: map-get($breakpoints, "breakpoint-3")) {
-    align-items: center;
-    display: flex;
-  }
+.work-preview {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: $spacing-9;
+  margin-bottom: $spacing-9;
+  min-height: $image-height;
 
   &:last-child {
     margin-bottom: 0;
@@ -12,8 +13,8 @@
 
   &__content {
     @media screen and (min-width: map-get($breakpoints, "breakpoint-3")) {
-      margin-left: $spacing-9;
-      max-width: 36rem;
+      align-self: center;
+      
     }
 
     .work-preview--reverse & {
@@ -23,7 +24,16 @@
     }
   }
 
+  &__media {
+    position: relative;
+  }
+
   &__image {
-    max-width: 41rem;
+    height: $image-height;
+    max-width: none;
+    position: absolute;
+    right: 0;
+    top: 0;
+    bottom: 0;
   }
 }

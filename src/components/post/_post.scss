@@ -1,31 +1,12 @@
 .post {
   display: block;
 
-  &:hover {
-    text-decoration: none;
-
-    .post__image {
-      opacity: $opacity-base;
-    }
-
-    .post__heading {
-      color: $brand-primary;
-    }
-  }
-
-  &__image {
-    display: block;
-
-    img {
-      height: 10rem;
-      object-fit: cover;
-      transition: opacity $duration-4 $timing-ease;
-      width: 100%;
-    }
-  }
-
   &__content {
     margin-top: $spacing-5;
+  }
+
+  &__meta {
+    text-transform: uppercase;
   }
 
   &__heading {
@@ -38,10 +19,5 @@
   &__text {
     color: $color-grey;
     margin: 0;
-  }
-
-  &__footer {
-    height: $size-4;
-    margin-top: $spacing-3;
   }
 }
