@@ -1,0 +1,8 @@
+mixin work-preview(c)
+  .work-preview
+    .work-preview__image
+      img(src= c.workPreviewImage alt="")
+    .work-preview__content
+      h2.work-preview__heading= c.workPreviewHeading
+      p.work-preview__text= c.workPreviewText
+      button.work-preview__button= c.workPreviewButton

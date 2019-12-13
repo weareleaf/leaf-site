@@ -1,0 +1,22 @@
+.statement {
+  display: flex;
+
+  &__icon {
+    flex: 0 0 auto;
+    margin-right: $spacing-5;
+    width: $size-5;
+  }
+
+  &__text {
+    color: $color-grey-dark;
+    margin-bottom: 0;
+  }
+
+  &__link {
+    color: $brand-secondary;
+    display: block;
+    font-family: $font-family-sans-serif-medium;
+    font-size: $font-size-sm;
+    margin-top: $spacing-2;
+  }
+}
