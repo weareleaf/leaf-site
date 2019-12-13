@@ -13,8 +13,7 @@ $image-height: 30rem;
 
   &__content {
     @media screen and (min-width: map-get($breakpoints, "breakpoint-3")) {
-      align-self: center;
-      
+      align-self: center; 
     }
 
     .work-preview--reverse & {
@@ -32,8 +31,13 @@ $image-height: 30rem;
     height: $image-height;
     max-width: none;
     position: absolute;
-    right: 0;
     top: 0;
     bottom: 0;
+
+    .work-preview--reverse & {
+      @media screen and (min-width: map-get($breakpoints, "breakpoint-3")) {
+        right: 0;
+      }
+    }
   }
 }
