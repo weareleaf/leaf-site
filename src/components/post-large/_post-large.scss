@@ -23,7 +23,7 @@
       transition: opacity $duration-4 $timing-ease;
 
       @media screen and (min-width: map-get($breakpoints, "breakpoint-6")) {
-        height: 12rem;
+        height: $size-9;
       }
     }
   }
