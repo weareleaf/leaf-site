@@ -3,49 +3,20 @@ extends ../layouts/page.pug
 block prepend vars
   -var pageTitle = "Kent based web and mobile development"
   -var metaUrl = "https://weareleaf.com"
-  -var metaTitle = "Bespoke web design & development"
-  -var metaDescription = "We're specialists in building accessible, performant, and scalable applications."
+  -var metaTitle = "We make superfast applications."
+  -var metaDescription = "(That your users will love)"
 
 block pageComponents
   +hero({
-    heroModifier: "home",
     heroHeading: metaTitle,
-    heroText: metaDescription,
-    heroButton: {
-      buttonUrl: "/what-we-do",
-      buttonText: "Find out how we do it"
-    },
-    heroImage: {
-      src: "/assets/images/heros/home.gif",
-      alt: metaTitle
-    }
+    heroSubheading: metaDescription,
   })
 
   section.section
     .container
-      h2.small Recent successes
-      .grid.grid--symmetrical-card
+      .grid.grid--work-preview
         .grid__item
-          +card({
-            cardUrl: "/rift",
-            cardImage: {
-              src: "/assets/images/rift.jpg",
-              alt: "MyRIFT",
-            },
-            cardHeading: "Helping the UK to claim tax refunds",
-            cardText: "We allowed RIFT's customers to self-service their tax refunds online, and synchronised all of their internal systems. This took significant cost out of call centres, staff processing, and repetitive administrative work."
-          })
-
-        .grid__item
-          +card({
-            cardUrl: "/heha",
-            cardImage: {
-              src: "/assets/images/heha.jpg",
-              alt: "HEHA!",
-            },
-            cardHeading: "Taking the hassle out of travel",
-            cardText: "Planning trips can be a headache. We worked with Holiday Extras to create HEHA!, an iOS and Android app to make the task simple."
-          })
+          
 
   section.section.section--margin-b
     .container

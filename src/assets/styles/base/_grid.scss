@@ -33,7 +33,7 @@
     }
   }
 
-  &--symmetrical-card {
+  &--work-preview {
 
     @media screen and (min-width: map-get($breakpoints, "breakpoint-3")) {
       grid-template-columns: 1fr 1fr;

@@ -35,14 +35,20 @@
     }
 
     @media screen and (min-width: map-get($breakpoints, "breakpoint-6")) {
-      font-size: 4em;
+      font-size: 3.5rem;
+      max-width: $size-12;
     }
   }
 
-  &__text {
+  &__subheading {
     font-size: 1rem;
     line-height: 1.412em;
     margin: 0;
     text-align: center;
+
+    @media screen and (min-width: map-get($breakpoints, "breakpoint-6")) {
+      font-size: 1.25rem;
+      max-width: $size-12;
+    }
   }
 }
