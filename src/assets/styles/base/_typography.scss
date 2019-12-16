@@ -209,6 +209,28 @@ img {
   color: $color-grey-dark;
 }
 
+.blog-content {
+  position: relative;
+
+  &__heading {
+    color: #222277;
+    font-family: $font-family-sans-serif-bold;
+    font-size: 4rem;
+    margin-bottom: -2rem;
+    text-align: center;
+    z-index: -1;
+
+    @media screen and (min-width: map-get($breakpoints, 'breakpoint-2')) {
+      font-size: 5rem;
+    }
+
+    @media screen and (min-width: map-get($breakpoints, 'breakpoint-3')) {
+      font-size: 7rem;
+      margin-bottom: -5rem;
+    }
+  }
+}
+
 .blog-post {
   &__intro {
     color: $color-grey-dark;

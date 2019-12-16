@@ -39,10 +39,11 @@ main {
     }
   }
 
-  &--condensed {
-    margin-bottom: 0;
+  &--lg-spacing {
+    @media screen and (min-width: map-get($breakpoints, 'breakpoint-4')) {
+      margin-bottom: $spacing-10;
+    }
   }
-}
 
 .section--margin-b {
   margin-bottom: 0;
@@ -57,6 +58,7 @@ main {
     padding-bottom: $spacing-7;
     padding-right: $spacing-7;
   }
+}
 
   &__h1,
   &__h2,

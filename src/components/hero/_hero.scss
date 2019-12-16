@@ -1,5 +1,6 @@
 .hero {
   margin-bottom: $spacing-8;
+  padding: $spacing-10 0 0 0;
   position: relative;
 
   @media screen and (min-width: map-get($breakpoints, "breakpoint-2")) {
@@ -24,13 +25,13 @@
   }
 
   &__heading {
-    font-size: 2rem;
+    font-size: $font-size-h1;
     line-height: 1.125em;
+    text-align: center;
 
     @media screen and (min-width: map-get($breakpoints, "breakpoint-1")) {
-      font-size: 3em;
+      font-size: 3rem;
       line-height: 1.075em;
-      text-align: center;
     }
 
     @media screen and (min-width: map-get($breakpoints, "breakpoint-6")) {
