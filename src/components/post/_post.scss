@@ -1,24 +1,27 @@
 .post {
-  background-color: blue;
+  background-color: #31319B;
   display: block;
+  padding: $spacing-6;
 
-  &__content {
-    margin-top: $spacing-5;
+  &:hover {
+    text-decoration: none;
   }
 
   &__meta {
+    color: $color-white;
+    font-size: .6rem;
+    letter-spacing: .05rem;
+    margin-bottom: $spacing-3;
     text-transform: uppercase;
   }
 
   &__heading {
-    color: $color-grey-dark;
     font-size: $font-size-h3;
-    margin: 0 0 .333em;
-    transition: color $duration-4 $timing-ease;
+    margin: 0 0 $spacing-3;
   }
 
   &__text {
-    color: $color-grey;
+    color: $color-white;
     margin: 0;
   }
 }
