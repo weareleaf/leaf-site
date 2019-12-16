@@ -1,70 +1,50 @@
 mixin header(c)
   header.header(role="banner")
-    .header__logo
-      unless c.landingPage
-        a.logo(href="/")
-          +logo
-      else
-        a.logo(href="#")
-          +logo
-      
-    .header__nav
-      unless c.landingPage
-        +nav({
-          navList: [
-            {
-              navItemUrl: "/what-we-do",
-              navItemText: "What we do"
-            },
-            {
-              navItemUrl: "/company",
-              navItemText: "Company"
-            },
-            {
-              navItemUrl: "/our-work",
-              navItemText: "Our work"
-            },
-            {
-              navItemUrl: "/blog",
-              navItemText: "Blog"
-            },
-            {
-              navItemUrl: "javascript:void(0)",
-              navItemText: "Let's talk",
-              navItemHighlight: true,
-              navItemTriggerModal: true
-            }
-          ],
-          navModifier: "primary"
-        })
-      else
-        +nav({
-          navList: [
-            {
-              navItemUrl: "#what-we-do",
-              navItemText: "What we do"
-            },
-            {
-              navItemUrl: "#our-work",
-              navItemText: "Our work"
-            },
-            {
-              navItemUrl: "#company",
-              navItemText: "Company"
-            },
-            {
-              navItemUrl: "javascript:void(0)",
-              navItemText: "Let's talk",
-              navItemHighlight: true,
-              navItemTriggerModal: true
-            }
-          ],
-          navModifier: "primary"
-        })
-
-    //-
-      .header__address
-      +address
-      
-      .header__social
-      +social({})
+    .container
+      .header__logo
+        unless c.landingPage
+          a.logo(href="/")
+            +logo
+        else
+          a.logo(href="#")
+            +logo
+        
+      .header__nav
+        .header__nav--item
+          +nav({
+            navList: [
+              {
+                navItemUrl: "/what-we-do",
+                navItemText: "Expertise"
+              },
+              {
+                navItemUrl: "/company",
+                navItemText: "Company"
+              },
+              {
+                navItemUrl: "/our-work",
+                navItemText: "Case studies"
+              },
+              {
+                navItemUrl: "/blog",
+                navItemText: "Blog"
+              }
+            ],
+          })
+        .header__nav--item
+          +nav({
+            navList: [
+              {
+                navItemUrl: "javascript:void(0)",
+                navItemText: "Contact",
+                navItemHighlight: true,
+                navItemTriggerModal: true
+              }
+            ],
+          })
+      //-
+        .header__address
+        +address
+        
+        .header__social
+        +social({})
