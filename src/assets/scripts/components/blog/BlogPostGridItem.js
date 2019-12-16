@@ -9,25 +9,10 @@ class BlogPostGridItem extends Component {
     return (
       <div className={large ? 'grid__item-large' : 'grid__item'}>
         <a className={postPrefix} href={postUrl}>
-          <picture className={large ? 'post-large__image' : 'post__image'}>
-            <source srcSet={postImage.src} type="image/webp" />
-            <img src={postImage.fallbackSrc} alt="A home office for productivity" />
-          </picture>
           <div className={`${postPrefix}__content`}>
+            <h6 className={`${postPrefix}__meta`}>{postHeading}</h6>
             <h3 className={`${postPrefix}__heading`}>{postHeading}</h3>
             <p className={`${postPrefix}__text`}>{postText}</p>
-            <div className={`${postPrefix}__footer`}>
-              <div className="author">
-                <picture className="author__media">
-                  <source srcSet={author.authorThumbnail.src} type="image/webp" />
-                  <img src={author.authorThumbnail.fallbackSrc} alt="Mike" />
-                </picture>
-                <div className="author__content">
-                  <h5 className="author__name">{author.authorName}</h5>
-                  <p className="author__details">{author.authorDetails}</p>
-                </div>
-              </div>
-            </div>
           </div>
         </a>
       </div>
