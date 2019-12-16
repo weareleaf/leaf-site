@@ -1,16 +1,15 @@
 mixin header(c)
   header.header(role="banner")
     .container
-      .header__logo
-        unless c.landingPage
-          a.logo(href="/")
-            +logo
-        else
-          a.logo(href="#")
-            +logo
-        
-      .header__nav
-        .header__nav--item
+      .header__main
+        .header__logo
+          unless c.landingPage
+            a.logo(href="/")
+              +logo
+          else
+            a.logo(href="#")
+              +logo
+        .header__nav
           +nav({
             navList: [
               {
@@ -31,7 +30,7 @@ mixin header(c)
               }
             ],
           })
-        .header__nav--item
+        .header__nav
           +nav({
             navList: [
               {
@@ -45,6 +44,6 @@ mixin header(c)
       //-
         .header__address
         +address
-        
+          
         .header__social
         +social({})
