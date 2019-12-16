@@ -119,18 +119,6 @@
     }
   }
 
-  &--footer {
-    grid-column-gap: $spacing-8;
-
-    @media screen and (min-width: map-get($breakpoints, "breakpoint-4")) {
-      grid-template-columns: 1fr 1fr;
-
-      .body--landing & {
-        grid-template-columns: 2fr 1fr;
-      }
-    }
-  }
-
   &__item {
     @media screen and (min-width: map-get($breakpoints, "breakpoint-2")) {
       &--span-2 {

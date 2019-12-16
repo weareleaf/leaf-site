@@ -28,11 +28,11 @@ $image-height: 30rem;
   }
 
   &__image {
+    bottom: 0;
     height: $image-height;
     max-width: none;
     position: absolute;
     top: 0;
-    bottom: 0;
 
     .work-preview--reverse & {
       @media screen and (min-width: map-get($breakpoints, "breakpoint-3")) {

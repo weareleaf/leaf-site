@@ -3,9 +3,6 @@ mixin block(c)
     .block__content
       h2.block__heading= c.blockHeading
       .block__text!= c.blockContent
-      if c.heroButton
-        .block__button
-          +button(c.blockButton)
     +image({
       context: "block",
       src: c.blockImage.src,

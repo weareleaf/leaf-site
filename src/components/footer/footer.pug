@@ -5,91 +5,26 @@ mixin footer(c)
         .grid__item
           .footer__cta
             p.footer__cta-heading
-              | We work closely with our clients to plan, design and build innovative applications.
+              | Start the conversation
             p.footer__cta-text
-              strong Interested in working together?
-              | Tell us what you’re looking to achieve, and we’ll start thinking about how we can help.
-              if c.footerNav === false
-                a.footer__cta-link(href="javascript:void(0)", data-micromodal-trigger="modal-contact") Introduce your project &rarr;
-              else
-                a.footer__cta-link(href="/project-planner") Introduce your project &rarr;
-            .footer__social
-              +social({
-                socialModifier: "inline"
-              })
+              | If you think we might be able to help, you’ve got a question, or you just want to say hi, don’t be a stranger.
 
         .grid__item
-          unless c.footerNav === false
             .footer__grid
-              .footer__nav.footer__nav--primary
-                +nav({
-                  navList: [
-                    {
-                      navItemUrl: "/what-we-do",
-                      navItemText: "What we do"
-                    },
-                    {
-                      navItemUrl: "/company",
-                      navItemText: "Company"
-                    },
-                    {
-                      navItemUrl: "/our-work",
-                      navItemText: "Our work"
-                    },
-                    {
-                      navItemUrl: "/blog",
-                      navItemText: "Blog"
-                    },
-                    {
-                      navItemUrl: "/ebooks",
-                      navItemText: "eBooks"
-                    }
-                  ]
-                })
-              .footer__nav.footer__nav--secondary
-                +nav({
-                  navList: [
-                    {
-                      navItemUrl: "/project-planner",
-                      navItemText: "Project planner"
-                    },
-                    {
-                      navItemUrl: "https://github.com/weareleaf/handbook",
-                      navItemText: "Handbook",
-                      newTab: true
-                    },
-                    {
-                      navItemUrl: "/resources",
-                      navItemText: "Resources"
-                    },
-                    {
-                      navItemUrl: "/careers",
-                      navItemText: "Jobs at Leaf"
-                    },
-                    {
-                      navItemUrl: "javascript:void(0)",
-                      navItemText: "Contact us",
-                      navItemTriggerModal: true
-                    }
-                  ]
-                })
+              .footer__grid--item
+                p.footer__subheading
+                | New work
+                a.footer__link(href="mailto:enquiries@weareleaf.com") enquiries@weareleaf.com
 
-              p.footer__copyright
-                | &copy; Leaf Software Ltd
-                br
-                | <a href="/terms">Terms of service</a>
-                br
-                | VAT no: GB 265125317
-              .footer__contact
+              .footer__grid--item
+                p.footer__subheading
+                | Ask us anything
                 a.footer__link(href="mailto:hello@weareleaf.com") hello@weareleaf.com
-                br
-                a.footer__link(href="tel:01227647006") 01227 647006
-          else
-            p.footer__copyright
-              | &copy; Leaf Software Ltd
-              br
-              | VAT no: GB 265125317
-            .footer__contact
-              a.footer__link(href="mailto:hello@weareleaf.com") hello@weareleaf.com
-              br
-              a.footer__link(href="tel:01227647006") 01227 647006
+              
+              .footer__grid--item
+                p.footer__subheading
+                | Get social
+                +social({
+                  socialModifier: "inline"
+                })
+                
