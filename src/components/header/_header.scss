@@ -11,10 +11,13 @@
   }
 
   &__main {
-    align-items: center;
-    display: flex;
-    justify-content: space-between;
-    padding: $spacing-5 0;
+
+    @media screen and (min-width: map-get($breakpoints, "breakpoint-2")) {
+      align-items: center;
+      display: flex;
+      justify-content: space-between;
+      padding: $spacing-5 0;
+    }
   }
 
   & > div {
