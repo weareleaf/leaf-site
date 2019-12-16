@@ -1,53 +1,48 @@
 mixin footer(c)
   footer.footer(role="contentinfo")
     .container
-      .grid.grid--footer
-        .grid__item
-          .footer__cta
-            p.footer__cta-heading
-              | Start the conversation
-            p.footer__cta-text
-              | If you think we might be able to help, you’ve got a question, or you just want to say hi, don’t be a stranger.
+      .footer__cta
+        p.footer__cta-heading
+          | Start the conversation
+        p.footer__cta-text
+          | If you think we might be able to help, you’ve got a question, or you just want to say hi, don’t be a stranger.
+      .footer__grid
+        .footer__grid--item
+          p.footer__subheading New work
+          a.footer__link(href="mailto:enquiries@weareleaf.com") enquiries@weareleaf.com
 
-        .grid__item
-            .footer__grid
-              .footer__grid--item
-                p.footer__subheading New work
-                a.footer__link(href="mailto:enquiries@weareleaf.com") enquiries@weareleaf.com
-
-              .footer__grid--item
-                p.footer__subheading Ask us anything
-                a.footer__link(href="mailto:hello@weareleaf.com") hello@weareleaf.com
+        .footer__grid--item
+          p.footer__subheading Ask us anything
+          a.footer__link(href="mailto:hello@weareleaf.com") hello@weareleaf.com
               
-              .footer__grid--item
-                p.footer__subheading Get social
-                .footer__social
-                  +social({
-                    socialModifier: "inline"
-                  })
-        .grid__item        
-          .footer__info
-            p.footer__info--copyright &copy; Leaf Software Ltd
-            .footer__info--nav
-              +nav({
-                navList: [
-                  {
-                    navItemUrl: "https://github.com/weareleaf/handbook",
-                    navItemText: "Handbook",
-                    newTab: true
-                  },
-                  {
-                    navItemUrl: "/careers",
-                    navItemText: "Careers"
-                  },
-                  {
-                    navItemUrl: "/ebooks",
-                    navItemText: "eBooks"
-                  },
-                  {
-                    navItemUrl: "/terms",
-                    navItemText: "Terms"
-                  }
-                ]
-              })
-            p.footer__info--vat VAT no: GB 265125317
+        .footer__grid--item
+          p.footer__subheading Get social
+          .footer__social
+            +social({
+              socialModifier: "inline"
+            })       
+      .footer__info
+        p.footer__info--copyright &copy; Leaf Software Ltd
+        .footer__info--nav
+          +nav({
+            navList: [
+              {
+                navItemUrl: "https://github.com/weareleaf/handbook",
+                navItemText: "Handbook",
+                newTab: true
+              },
+              {
+                navItemUrl: "/careers",
+                navItemText: "Careers"
+              },
+              {
+                navItemUrl: "/ebooks",
+                navItemText: "eBooks"
+              },
+              {
+                navItemUrl: "/terms",
+                navItemText: "Terms"
+              }
+            ]
+          })
+        p.footer__info--vat VAT no: GB 265125317

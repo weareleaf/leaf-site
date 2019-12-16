@@ -22,10 +22,6 @@
     font-size: $font-size-xs;
     position: relative;
 
-    @media screen and (min-width: map-get($breakpoints, "breakpoint-4")) {
-      font-size: $font-size-sm;
-    }
-
     &:hover {
       color: darken($color-white, 5%);
       text-decoration: none;

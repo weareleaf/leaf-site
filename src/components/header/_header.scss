@@ -1,9 +1,8 @@
 .header {
-  height: 100vh;
-  min-height: 35em;
+  background-color: #28288B;
   pointer-events: none;
   position: absolute;
-  top: $spacing-6;
+  top: 0;
   width: 100%;
   z-index: 90;
 
@@ -12,8 +11,10 @@
   }
 
   &__main {
+    align-items: center;
     display: flex;
     justify-content: space-between;
+    padding: $spacing-5 0;
   }
 
   & > div {
@@ -24,11 +25,6 @@
     left: 1.25rem;
     top: $spacing-6;
     width: $size-6;
-
-    @media screen and (min-width: map-get($breakpoints, "breakpoint-10")) {
-      left: $spacing-8;
-      top: $spacing-7;
-    }
   }
 
   &__nav {

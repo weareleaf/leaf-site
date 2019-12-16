@@ -11,7 +11,7 @@
     align-items: center;
     display: flex;
     flex-direction: column;
-    margin-bottom: $spacing-4;
+    margin-bottom: $spacing-7;
   }
 
   &__cta-heading {
@@ -80,11 +80,12 @@
   }
 
   &__info {
+    align-items: center;
     border-top: $border-width-base $border-style #5253A8;
     color: #9999E6;
     display: flex;
     font-family: $font-family-sans-serif-regular;
-    font-size: $font-size-sm;
+    font-size: $font-size-xs;
     justify-content: space-between;
     margin-top: $spacing-9;
     padding: $spacing-6 0;
