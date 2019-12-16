@@ -1,0 +1,12 @@
+mixin project(c)
+  .project(class= c.projectModifier ? "project--" + c.projectModifier : "")
+    .project__content
+      h6.project__subheading= c.projectSubHeading
+      h2.project__heading= c.projectHeading
+      p.project__text= c.projectText
+      button.project__button= c.projectButton
+    +image({
+      context: "project",
+      src: c.projectImage.src,
+      alt: c.projectImage.alt
+    })

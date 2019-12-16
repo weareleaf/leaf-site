@@ -1,6 +1,6 @@
 $image-height: 30rem;
 
-.work-preview {
+.project {
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-gap: $spacing-9;
@@ -16,10 +16,39 @@ $image-height: 30rem;
       align-self: center; 
     }
 
-    .work-preview--reverse & {
+    .project--reverse & {
       @media screen and (min-width: map-get($breakpoints, "breakpoint-3")) {
         order: 1;
       }
+    }
+  }
+
+  &__subheading {
+    color: $color-white;
+    font-family: $font-family-sans-serif-bold;
+    font-size: .6rem;
+    letter-spacing: .05rem;
+    margin-bottom: $spacing-3;
+    text-transform: uppercase;
+  }
+
+  &__text {
+    margin-bottom: $spacing-5;
+  }
+
+  &__button {
+    background-color: #161669;
+    border: none;
+    border-radius: 5px;
+    color: $color-white;
+    cursor: pointer;
+    font-size: $font-size-xs;
+    font-family: $font-family-sans-serif-medium;
+    padding: $spacing-4;
+    transition: background-color $duration-2;
+
+    &:hover {
+      background-color: darken(#161669, 3%);
     }
   }
 
@@ -34,7 +63,7 @@ $image-height: 30rem;
     position: absolute;
     top: 0;
 
-    .work-preview--reverse & {
+    .project--reverse & {
       @media screen and (min-width: map-get($breakpoints, "breakpoint-3")) {
         right: 0;
       }
