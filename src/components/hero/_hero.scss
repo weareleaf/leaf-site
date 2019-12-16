@@ -1,27 +1,10 @@
 .hero {
-  margin-bottom: $spacing-8;
+  margin-bottom: $spacing-9;
   padding: $spacing-10 0 0 0;
   position: relative;
 
-  @media screen and (min-width: map-get($breakpoints, "breakpoint-2")) {
-    padding: 9em 0;
-  }
-
-  @media screen and (min-width: map-get($breakpoints, "breakpoint-6")) {
-    margin-bottom: $spacing-9;
-    padding: 9rem 0 0 0;
-  }
-
   &__container {
     @include container;
-
-    @media screen and (min-width: map-get($breakpoints, "breakpoint-2")) {
-      position: static;
-    }
-
-    @media screen and (min-width: map-get($breakpoints, "breakpoint-6")) {
-      position: relative;
-    }
   }
 
   &__heading {
