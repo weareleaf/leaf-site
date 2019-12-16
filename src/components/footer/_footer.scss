@@ -79,35 +79,10 @@
     margin-top: .4rem;
   }
 
-  /*&__copyright {
-    color: $color-grey-dark;
-    font-size: $font-size-h6;
-    margin: 0;
-
-    @media screen and (min-width: map-get($breakpoints, "breakpoint-3")) {
-      text-align: right;
-    }
+  &__info {
+    border-top: $border-width-base $border-style #5253A8;
+    display: flex;
+    justify-content: space-between;
+    margin-top: $spacing-9;
   }
-
-  &__contact {
-    font-size: $font-size-h6;
-
-    @media screen and (min-width: map-get($breakpoints, "breakpoint-3")) {
-      text-align: right;
-    }
-  }
-
-  &__link {
-    color: $color-grey-dark;
-  }
-
-  &__logo {
-    display: none;
-
-    @media screen and (min-width: map-get($breakpoints, "breakpoint-3")) {
-      display: block;
-      margin-left: auto;
-      width: $size-6;
-    }
-  }*/
 }

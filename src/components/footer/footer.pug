@@ -25,4 +25,29 @@ mixin footer(c)
                   +social({
                     socialModifier: "inline"
                   })
-                
+        .grid__item        
+          .footer__info
+            p.footer__copyright &copy; Leaf Software Ltd
+            .footer__nav
+              +nav({
+                navList: [
+                  {
+                    navItemUrl: "https://github.com/weareleaf/handbook",
+                    navItemText: "Handbook",
+                    newTab: true
+                  },
+                  {
+                    navItemUrl: "/careers",
+                    navItemText: "Careers"
+                  },
+                  {
+                    navItemUrl: "/ebooks",
+                    navItemText: "eBooks"
+                  },
+                  {
+                    navItemUrl: "/terms",
+                    navItemText: "Terms"
+                  }
+                ]
+              })
+            p.footer__vat VAT no: GB 265125317
