@@ -13,6 +13,10 @@
     .social--inline & {
       display: inline-block;
       margin: 0 $spacing-6 0 0;
+
+      &:last-of-type {
+        margin-right: 0;
+      }
     }
   }
 

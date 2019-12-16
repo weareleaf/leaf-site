@@ -12,19 +12,17 @@ mixin footer(c)
         .grid__item
             .footer__grid
               .footer__grid--item
-                p.footer__subheading
-                | New work
+                p.footer__subheading New work
                 a.footer__link(href="mailto:enquiries@weareleaf.com") enquiries@weareleaf.com
 
               .footer__grid--item
-                p.footer__subheading
-                | Ask us anything
+                p.footer__subheading Ask us anything
                 a.footer__link(href="mailto:hello@weareleaf.com") hello@weareleaf.com
               
               .footer__grid--item
-                p.footer__subheading
-                | Get social
-                +social({
-                  socialModifier: "inline"
-                })
+                p.footer__subheading Get social
+                .footer__social
+                  +social({
+                    socialModifier: "inline"
+                  })
                 
