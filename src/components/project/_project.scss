@@ -2,18 +2,30 @@ $image-height: 30rem;
 
 .project {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-gap: $spacing-9;
-  margin-bottom: $spacing-9;
-  min-height: $image-height;
+  grid-template-columns: 1fr;
+  grid-row-gap: $spacing-6;
+  margin-bottom: $spacing-8;
+
+  @media screen and (min-width: map-get($breakpoints, "breakpoint-3")) {
+    grid-template-columns: 1fr 1fr;
+    grid-column-gap: $spacing-9;
+    margin-bottom: $spacing-9;
+    min-height: $image-height;
+  }
 
   &:last-child {
     margin-bottom: 0;
   }
 
   &__content {
+
+    @media screen and (min-width: map-get($breakpoints, "breakpoint-2")) {
+      width: 80%; 
+    }
+
     @media screen and (min-width: map-get($breakpoints, "breakpoint-3")) {
-      align-self: center; 
+      align-self: center;
+      width: 100%;
     }
 
     .project--reverse & {
@@ -57,11 +69,13 @@ $image-height: 30rem;
   }
 
   &__image {
-    bottom: 0;
-    height: $image-height;
-    max-width: none;
-    position: absolute;
-    top: 0;
+    @media screen and (min-width: map-get($breakpoints, "breakpoint-3")) {
+      bottom: 0;
+      height: $image-height;
+      max-width: none;
+      position: absolute;
+      top: 0;
+    }
 
     .project--reverse & {
       @media screen and (min-width: map-get($breakpoints, "breakpoint-3")) {
