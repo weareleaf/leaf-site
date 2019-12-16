@@ -28,20 +28,20 @@
 
   &__cta-text {
     color: $color-white;
-    line-height: 40px;
     margin: 0;
     text-align: center;
-    width: 39rem;
 
     @media screen and (min-width: map-get($breakpoints, "breakpoint-3")) {
       font-size: 1.5rem;
+      line-height: 1.33;
+      width: 39rem;
     }
   }
 
   &__grid {
     display: -ms-grid;
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr;
 
     @media screen and (min-width: map-get($breakpoints, "breakpoint-4")) {
       grid-template-columns: 1fr 1fr 1fr;
