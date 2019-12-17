@@ -1,15 +1,15 @@
 .contact {
   &__footer {
-    display: flex;
-    justify-content: space-around;
-    padding: $spacing-5;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: $spacing-6;
 
     @media screen and (min-width: map-get($breakpoints, "breakpoint-1")) {
       background-color: #28288B;
     }
 
     @media screen and (min-width: map-get($breakpoints, "breakpoint-3")) {
-      padding: $spacing-6 $spacing-5;
+      padding: $spacing-6;
     }
 
     .social-tile {
@@ -21,16 +21,14 @@
   }
 
   &__content {
-    display: flex;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: $spacing-7;
     padding: $spacing-7;
   }
 
   &__tile {
     border-bottom: $border-default;
-
-    &:not(:last-child) {
-      margin-right: $spacing-8;
-    }
 
     @media screen and (min-width: map-get($breakpoints, "breakpoint-1")) {
       border-bottom: 0;
