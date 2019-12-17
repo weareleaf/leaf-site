@@ -1,5 +1,4 @@
 .profile {
-
   &__media {
     margin-bottom: $spacing-2;
   }
@@ -7,7 +6,10 @@
   &__heading {
     color: $color-white;
     margin-bottom: 0;
-    text-align: center;
+
+    @media screen and (min-width: map-get($breakpoints, "breakpoint-4")) {
+      text-align: center;
+    }
   }
 
   &__text {
@@ -15,6 +17,9 @@
     font-family: $font-family-sans-serif-regular;
     font-size: $font-size-xs;
     margin-bottom: 0;
-    text-align: center;
+
+    @media screen and (min-width: map-get($breakpoints, "breakpoint-4")) {
+      text-align: center;
+    }
   }
 }
