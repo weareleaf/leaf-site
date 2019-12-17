@@ -5,17 +5,16 @@
     padding: $spacing-5;
 
     @media screen and (min-width: map-get($breakpoints, "breakpoint-1")) {
-      background-color: $color-grey-green;
+      background-color: #28288B;
     }
 
     @media screen and (min-width: map-get($breakpoints, "breakpoint-3")) {
-      padding: $spacing-6;
+      padding: $spacing-6 $spacing-5;
     }
 
     .social-tile {
       margin-right: $spacing-6;
       @media screen and (min-width: map-get($breakpoints, "breakpoint-5")) {
-        margin-bottom: $spacing-6;
         margin-right: 0;
       }
     }
@@ -23,17 +22,19 @@
 
   &__content {
     display: flex;
-    padding: $spacing-6;
-
-    @media screen and (min-width: map-get($breakpoints, "breakpoint-3")) {
-      order: 1;
-    }
+    padding: $spacing-7;
   }
 
   &__tile {
     border-bottom: $border-default;
-    margin-bottom: $spacing-6;
-    padding-bottom: $spacing-6;
+
+    &:not(:last-child) {
+      margin-right: $spacing-8;
+    }
+
+    @media screen and (min-width: map-get($breakpoints, "breakpoint-1")) {
+      border-bottom: 0;
+    }
 
     &:last-child {
       margin-bottom: 0;

@@ -1,5 +1,5 @@
 .modal {
-  display: none;
+  display: block; // set to none
 
   &-open {
     overflow: hidden;
@@ -32,7 +32,7 @@
   }
 
   &__container {
-    background-color: $color-white;
+    background-color: #31319B;
     height: 100vh;
     max-height: 100vh;
     position: relative;
@@ -41,9 +41,9 @@
     will-change: transform;
 
     @media screen and (min-width: map-get($breakpoints, "breakpoint-1")) {
-      border-radius: $border-radius;
+      border-radius: 1rem;
       height: auto;
-      max-width: 62rem;
+      max-width: 44rem;
       width: calc(100vw - 8em);
     }
 

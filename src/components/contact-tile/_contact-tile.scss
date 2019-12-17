@@ -1,9 +1,9 @@
 .contact-tile {
   &__text {
-    color: $color-grey;
+    color: $color-white;
     font-size: $font-size-sm;
     margin: 0;
-    max-width: 20em;
+    max-width: 15rem;
 
     a {
       color: $brand-secondary;
