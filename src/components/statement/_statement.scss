@@ -4,19 +4,20 @@
   &__icon {
     flex: 0 0 auto;
     margin-right: $spacing-5;
-    width: $size-5;
+    width: 3.8rem;
+  }
+
+  &__img {
+    align-items: center;
+    background-color: #31319B;
+    border-radius: $border-radius-full;
+    display: flex;
+    height: 3.8rem;
+    justify-content: center;
   }
 
   &__text {
-    color: $color-grey-dark;
+    color: $color-white;
     margin-bottom: 0;
-  }
-
-  &__link {
-    color: $brand-secondary;
-    display: block;
-    font-family: $font-family-sans-serif-medium;
-    font-size: $font-size-sm;
-    margin-top: $spacing-2;
   }
 }
