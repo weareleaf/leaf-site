@@ -1,4 +1,9 @@
 .contact-tile {
+
+  &__heading {
+    margin-bottom: $spacing-3;
+  }
+
   &__text {
     color: $color-white;
     font-size: $font-size-sm;
@@ -6,12 +11,12 @@
     max-width: 15rem;
 
     a {
-      color: $brand-secondary;
+      color: $color-green;
     }
   }
 
   &__ctas {
-    margin-top: $spacing-5;
+    margin-top: $spacing-4;
 
     @media screen and (min-width: map-get($breakpoints, "breakpoint-3")) {
       align-items: center;

@@ -32,18 +32,13 @@ $icon-size: 1.2rem;
   }
 
   &__heading {
+    color: $color-white;
     font-size: $font-size-sm;
     margin: 0 0 $spacing-1;
   }
 
-  &__text {
-    color: $color-grey-dark;
-    font-size: $font-size-xs;
-    margin: 0;
-  }
-
   &__link {
-    color: $brand-secondary;
+    color: $color-green;
     display: block;
     font-family: $font-family-sans-serif-medium;
     font-size: $font-size-sm;
