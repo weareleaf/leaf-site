@@ -1,11 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <svg width="24px" height="23px" viewBox="0 0 24 23" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
     <!-- Generator: Sketch 61 (89581) - https://sketch.com -->
-    <title>LinkedIn</title>
+    <title>linkedin</title>
     <desc>Created with Sketch.</desc>
-    <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-        <g id="Icons-/-Social-/-Linkedin" transform="translate(-3.000000, -3.000000)" fill="#FFFFFF" fill-rule="nonzero">
-            <path d="M8,5.5 C8,6.881 6.88104839,8 5.5,8 C4.11895161,8 3,6.881 3,5.5 C3,4.12 4.11895161,3 5.5,3 C6.88104839,3 8,4.12 8,5.5 Z M8,10 L3,10 L3,26 L8,26 L8,10 Z M15.9723508,10.4783645 L11,10.4783645 L11,26 L15.9733517,26 L15.9733517,17.8521115 C15.9733517,13.3217341 22.0076317,12.9511551 22.0076317,17.8521115 L22.0076317,26 L27,26 L27,16.1718944 C27,8.52748893 18.0701864,8.80590827 15.9723508,12.5689348 L15.9723508,10.4783645 Z" id="LinkedIn"></path>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Icons-/-Social-/-Linkedin" transform="translate(-3.000000, -3.000000)" fill-rule="nonzero">
+            <g id="linkedin">
+                <rect id="Background" x="0" y="0" width="30" height="30"></rect>
+                <path d="M8,5.5 C8,6.881 6.88104839,8 5.5,8 C4.11895161,8 3,6.881 3,5.5 C3,4.12 4.11895161,3 5.5,3 C6.88104839,3 8,4.12 8,5.5 Z M8,10 L3,10 L3,26 L8,26 L8,10 Z M15.9723508,10.4783645 L11,10.4783645 L11,26 L15.9733517,26 L15.9733517,17.8521115 C15.9733517,13.3217341 22.0076317,12.9511551 22.0076317,17.8521115 L22.0076317,26 L27,26 L27,16.1718944 C27,8.52748893 18.0701864,8.80590827 15.9723508,12.5689348 L15.9723508,10.4783645 Z" id="LinkedIn" fill="#FFFFFF"></path>
+            </g>
         </g>
     </g>
 </svg>

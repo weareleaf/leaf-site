@@ -1,4 +1,4 @@
-$icon-size: 1.2rem;
+$icon-size: 2.7rem;
 
 .social-tile {
 
@@ -7,20 +7,25 @@ $icon-size: 1.2rem;
   }
 
   &__icon {
-    height: $icon-size;
+    background-color: #31319B;
+    border-radius: $border-radius-full;
+    position: relative;
     text-align: center;
+    height: $icon-size;
     width: $icon-size;
 
     @media screen and (min-width: map-get($breakpoints, "breakpoint-3")) {
-      flex: 0 0 auto;
       margin-right: $spacing-4;
     }
+  }
 
-    img {
-      height: 100%;
-      max-width: 100%;
-      width: auto;
-    }
+  &__image {
+    height: 1rem;
+    left: 50%;
+    position: absolute;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 1rem;
   }
 
   &__content {
@@ -33,14 +38,17 @@ $icon-size: 1.2rem;
 
   &__heading {
     color: $color-white;
-    font-size: $font-size-sm;
-    margin: 0 0 $spacing-1;
+    font-family: $font-family-sans-serif-bold;
+    font-size: .6rem;
+    letter-spacing: .05rem;
+    margin-bottom: 0;
+    text-transform: uppercase;
   }
 
   &__link {
     color: $color-green;
     display: block;
     font-family: $font-family-sans-serif-medium;
-    font-size: $font-size-sm;
+    font-size: $font-size-xs;
   }
 }
