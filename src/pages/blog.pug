@@ -4,19 +4,14 @@ block prepend vars
   -var activePage = "Blog"
   -var pageTitle = "Blog - Leaf"
   -var metaUrl = "https://weareleaf.com/blog"
-  -var metaTitle = "Blog"
-  -var metaDescription = "A collection of themes including development best-practice, designing thinking, SaaS reviews, and agency life."
+  -var metaTitle = "We write about stuff."
+  -var metaDescription = "(More specifically, about business, services, tech, and agency life)"
 
 
 block pageComponents
   +hero({
-    heroModifier: "blog",
-    heroHeading: "Blog",
-    heroText: metaDescription,
-    heroImage: {
-      src: "/assets/images/heros/ebooks.gif",
-      alt: "Blog",
-    }
+    heroHeading: metaTitle,
+    heroSubheading: metaDescription,
   })
 
   section.section
