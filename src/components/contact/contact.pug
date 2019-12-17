@@ -6,11 +6,10 @@ mixin contact
           contactTileHeading: "Work enquiries",
           contactTileText: "Our project planner helps build better enquiries by asking the right questions early.",
           contactTileButton: {
-            buttonModifier: "secondary",
+            buttonModifier: "small",
             buttonUrl: "/project-planner",
-            buttonText: "Project planner"
-          },
-          contactTileEmail: "enquiries@weareleaf.com"
+            buttonText: "enquiries@weareleaf.com"
+          }
         })
 
       .contact__tile
@@ -18,14 +17,13 @@ mixin contact
           contactTileHeading: "Ask us anything",
           contactTileText: "If you’ve got a question, we’ll do our best to get you an answer.",
           contactTileButton: {
-            buttonModifier: "secondary",
+            buttonModifier: "small",
             buttonUrl: "mailto:hello@weareleaf.com",
-            buttonText: "Email the team"
-          },
-          contactTileEmail: "hello@weareleaf.com"
+            buttonText: "hello@weareleaf.com"
+          }
         })
 
-    .contact__sidebar
+    .contact__footer
       .contact__social-tile
         +social-tile({
           socialTileIcon: {

@@ -1,34 +1,25 @@
 .button {
-  background-color: $color-red;
-  border: none;
-  border-radius: $border-radius;
-  color: $color-white;
-  cursor: pointer;
-  display: inline-block;
-  font-family: $font-family-sans-serif-regular;
-  font-size: $font-size-sm;
-  margin: 0;
-  padding: $spacing-4 $spacing-5;
-  text-align: center;
-  text-decoration: none;
-  transition: background-color $duration-4 $timing-ease;
+    background-color: $color-button;
+    border: none;
+    border-radius: 5px;
+    color: $color-white;
+    cursor: pointer;
+    display: inline-block;
+    font-size: $font-size-sm;
+    font-family: $font-family-sans-serif-medium;
+    padding: $spacing-4;
+    text-align: center;
+    text-decoration: none;
+    transition: background-color $duration-2 $timing-ease;
 
   &:hover,
   &:focus {
-    background-color: lighten($color-red, 5%);
+    background-color: darken($color-button, 3%);
     text-decoration: none;
-  }
-
-  &--secondary {
-    background-color: $color-green;
-
-    &:hover,
-    &:focus {
-      background-color: lighten($color-green, 5%);
-    }
   }
 
   &--small {
     font-size: $font-size-xs;
+    padding: $spacing-2 $spacing-4;
   }
 }

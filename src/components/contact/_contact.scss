@@ -1,10 +1,5 @@
 .contact {
-  @media screen and (min-width: map-get($breakpoints, "breakpoint-3")) {
-    background: url('../images/contact.jpg') no-repeat 40rem center / auto 100%;
-    display: flex;
-  }
-
-  &__sidebar {
+  &__footer {
     display: flex;
     justify-content: space-around;
     padding: $spacing-5;
@@ -14,9 +9,6 @@
     }
 
     @media screen and (min-width: map-get($breakpoints, "breakpoint-3")) {
-      flex: 0 0 auto;
-      flex-direction: column;
-      order: 0;
       padding: $spacing-6;
     }
 
@@ -30,6 +22,7 @@
   }
 
   &__content {
+    display: flex;
     padding: $spacing-6;
 
     @media screen and (min-width: map-get($breakpoints, "breakpoint-3")) {

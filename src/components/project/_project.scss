@@ -48,22 +48,6 @@ $image-height: 30rem;
     margin-bottom: $spacing-5;
   }
 
-  &__button {
-    background-color: #161669;
-    border: none;
-    border-radius: 5px;
-    color: $color-white;
-    cursor: pointer;
-    font-size: $font-size-xs;
-    font-family: $font-family-sans-serif-medium;
-    padding: $spacing-4;
-    transition: background-color $duration-2;
-
-    &:hover {
-      background-color: darken(#161669, 3%);
-    }
-  }
-
   &__media {
     position: relative;
   }
