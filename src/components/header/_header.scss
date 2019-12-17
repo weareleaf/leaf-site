@@ -1,17 +1,18 @@
 .header {
-  background-color: #28288B;
+  background-color: #31319B;
   pointer-events: none;
-  position: absolute;
+  position: fixed;
   top: 0;
   width: 100%;
   z-index: 90;
 
-  @media screen and (min-width: map-get($breakpoints, "breakpoint-11")) {
-    position: fixed;
+  @media screen and (min-width: map-get($breakpoints, "breakpoint-3")) {
+    background-color: transparent;
+    position: static;
   }
 
   &__main {
-    @media screen and (min-width: map-get($breakpoints, "breakpoint-2")) {
+    @media screen and (min-width: map-get($breakpoints, "breakpoint-3")) {
       align-items: center;
       display: flex;
       justify-content: space-between;
