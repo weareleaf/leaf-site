@@ -15,7 +15,7 @@ $icon-size: 2.7rem;
     width: $icon-size;
 
     @media screen and (min-width: map-get($breakpoints, "breakpoint-3")) {
-      margin-right: $spacing-4;
+      margin-right: $spacing-3;
     }
   }
 
@@ -33,6 +33,7 @@ $icon-size: 2.7rem;
 
     @media screen and (min-width: map-get($breakpoints, "breakpoint-3")) {
       display: block;
+      padding-top: .2rem;
     }
   }
 

@@ -66,12 +66,7 @@
     padding: 0;
     position: absolute;
     right: $spacing-5;
-    top: $spacing-5;
-
-    &::before {
-      color: rgba(111, 112, 117, .6);
-      content: '\2715';
-    }
+    top: $spacing-4;
   }
 }
 
