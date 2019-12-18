@@ -2,11 +2,20 @@
   font-family: $font-family-sans-serif-medium;
   font-size: $font-size-lg;
 
+  &:hover,
+  &:active {
+    text-decoration: none;
+  }
+
   &__container {
     background-color: #31319B;
     border-radius: 9px;
     display: grid;
-    grid-template-columns: 1fr 2fr;
+    grid-template-columns: auto 1fr;
+
+    @media screen and (min-width: map-get($breakpoints, "breakpoint-4")) {
+      grid-template-columns: 1fr 2fr;
+    }
   }
 
   &__left {
@@ -24,10 +33,15 @@
 
   &__image {
    border-radius: 4px;
-   height: 8.5rem;
+   height: 4rem;
    object-fit: cover;
    max-width: 8.5rem;
+
+   @media screen and (min-width: map-get($breakpoints, "breakpoint-4")) {
+    height: 8.5rem;
+    width: 8.5rem;
   }
+}
 
   &__title {
     color: $color-green;
