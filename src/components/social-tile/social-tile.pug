@@ -1,7 +1,8 @@
 mixin social-tile(c)
   .social-tile
     .social-tile__icon
-      img.social-tile__image(src= c.socialTileIcon.src alt= c.socialTileIcon.alt)
+      a(href= c.socialTileLink target="_blank" rel="noopener")
+        img.social-tile__image(src= c.socialTileIcon.src alt= c.socialTileIcon.alt)
     .social-tile__content
       p.social-tile__heading= c.socialTileHeading
       a.social-tile__link(href= c.socialTileLink target="_blank" rel="noopener")= c.socialTileHandle

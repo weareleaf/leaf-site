@@ -1,32 +1,18 @@
 .tile {
-  align-items: center;
-  background-color: $color-white;
-  border: $border-default;
-  border-radius: $border-radius;
-  color: $color-red;
-  display: flex;
   font-family: $font-family-sans-serif-medium;
   font-size: $font-size-lg;
-  padding: $spacing-4;
 
-  &::after {
-    @include size(1em);
-    background: url('../images/icons/arrow-right.svg') no-repeat center center;
-    content: '';
-    display: block;
-    right: $spacing-4;
-    transition: transform $duration-1 $timing-ease-in;
-  }
-
-  &:hover {
-    text-decoration: none;
-
-    &::after {
-      transform: translateX($spacing-1);
-    }
+  &__container {
+    background-color: #31319B;
+    //display: flex;
+    padding: 3rem;
   }
 
   &__title {
-    flex: 1 0 auto;
+    
+  }
+
+  &__text {
+    color: $color-white;
   }
 }
