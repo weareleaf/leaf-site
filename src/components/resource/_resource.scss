@@ -41,21 +41,32 @@
 
   &__meta {
     align-items: center;
-    display: flex;
-  }
-
-  &__subheading {
     color: $color-white;
+    display: flex;
     font-family: $font-family-sans-serif-bold;
-    font-size: .6rem;
     letter-spacing: .05rem;
-    margin-bottom: $spacing-1;
+    position: relative;
     text-transform: uppercase;
   }
 
+  &__subheading {
+    font-size: .6rem;
+    margin-bottom: $spacing-1;
+  }
+
   &__badge {
-    font-size: 10px;
-    margin-bottom: 0;
+    background-color: #5F42F0;
+    border-radius: 2px;
+    font-size: .6rem;
+    margin: 0 0 0 5rem;
+    padding: .1rem .3rem;
+    position: absolute;
+    bottom: .05rem;
+
+    @media screen and (min-width: map-get($breakpoints, "breakpoint-4")) {
+      padding: .15rem .3rem;
+      bottom: 0;
+    }
   }
 
   &__heading {
