@@ -1,4 +1,64 @@
 .resource {
+  font-family: $font-family-sans-serif-medium;
+  font-size: $font-size-lg;
+
+  &:hover,
+  &:active {
+    text-decoration: none;
+  }
+
+  &__container {
+    background-color: #31319B;
+    border-radius: 9px;
+    display: grid;
+    grid-template-columns: auto 1fr;
+
+    @media screen and (min-width: map-get($breakpoints, "breakpoint-4")) {
+      grid-template-columns: 1fr 2fr;
+    }
+  }
+
+  &__left {
+    padding: $spacing-3;
+  }
+
+  &__right {
+    align-self: center;
+    padding: $spacing-4 $spacing-3;
+  }
+
+  &__media {
+    display: flex;
+  }
+
+  &__image {
+   border-radius: 4px;
+   height: 4rem;
+   object-fit: cover;
+   max-width: 8.5rem;
+
+   @media screen and (min-width: map-get($breakpoints, "breakpoint-4")) {
+    height: 8.5rem;
+    width: 8.5rem;
+  }
+}
+
+  &__heading {
+    color: $color-green;
+    font-size: 1.3rem;
+    margin-bottom: $spacing-1;
+  }
+
+  &__text {
+    color: $color-white;
+    font-family: $font-family-sans-serif-light;
+    font-size: $font-size-sm;
+    line-height: $line-height;
+    margin: 0;
+  }
+}
+
+/*.resource {
   margin-bottom: $spacing-9;
 
   &__image {
@@ -48,4 +108,4 @@
       text-align: right;
     }
   }
-}
+}*/
