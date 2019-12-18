@@ -14,12 +14,14 @@ block pageComponents
 
   section.section
     .container
-      +resource({
-        resourceImage: {
-          src: "/assets/images/working-environments.jpg",
-          alt: "Working environments"
-        },
-        resourceMeta: "meta",
-        resourceHeading: "Working environments",
-        resourceText: "A good workspace is often an afterthought, when in reality, it’s essential to getting the most out of your team. Whether your working with developers, designers, or writers, this eBook will help create an environment that allows them to thrive."
-      })
+      .grid.grid--tile
+        .grid__item
+          +resource({
+            resourceImage: {
+              src: "/assets/images/placeholder.jpg",
+              alt: "Working environments"
+            },
+            resourceMeta: "Episode one",
+            resourceHeading: "Working environments",
+            resourceText: "Learn how to create a productive workspace, getting the most out of your team of developers, designers, or writers."
+          })
