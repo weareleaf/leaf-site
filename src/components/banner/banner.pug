@@ -5,11 +5,3 @@ mixin banner(c)
         +logo
       a.banner__button(href='/' aria-label='Close')
         span(aria-hidden='true') Close
-    if c.bannerImage
-      +image({
-        context: "banner",
-        src: c.bannerImage.src,
-        alt: c.bannerImage.alt
-      })
-    else
-      h1.banner__heading= c.bannerHeading

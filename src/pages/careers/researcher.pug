@@ -4,12 +4,17 @@ block prepend vars
   -var pageTitle = "Researcher job - Leaf"
   -var metaUrl = "https://weareleaf.com/researcher"
   -var metaTitle = "Researcher"
-  -var metaDescription = "We're looking for a researcher to drive exciting changes at Leaf, helping us deliver on a more mature lead-generation strategy, and enhancing the value we can offer our clients."
+  -var metaDescription = "(We're looking for someone to drive exciting changes at Leaf)"
 
 block pageComponents
+
   +banner({
-    bannerCompany: "leaf",
-    bannerHeading: "Researcher"
+    
+  })
+
+  +hero({
+    heroHeading: metaTitle,
+    heroSubheading: metaDescription,
   })
 
   .section.section--sm-spacing
