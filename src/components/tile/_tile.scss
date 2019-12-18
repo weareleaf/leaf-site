@@ -15,7 +15,7 @@
 
   &__right {
     align-self: center;
-    padding: $spacing-4;
+    padding: $spacing-4 $spacing-3;
   }
 
   &__media {
@@ -32,13 +32,14 @@
   &__title {
     color: $color-green;
     font-size: 1.3rem;
-    margin-bottom: $spacing-2;
+    margin-bottom: $spacing-1;
   }
 
   &__text {
     color: $color-white;
     font-family: $font-family-sans-serif-light;
     font-size: $font-size-sm;
+    line-height: $line-height;
     margin: 0;
   }
 }
