@@ -2,9 +2,9 @@ mixin footer(c)
   footer.footer(role="contentinfo")
     .container
       .footer__cta
-        p.footer__cta-heading
+        p.footer__heading
           | Start the conversation
-        p.footer__cta-text
+        p.footer__text
           | If you think we might be able to help, you’ve got a question, or you just want to say hi, don’t be a stranger.
       .footer__grid
         .footer__grid--item
@@ -22,8 +22,8 @@ mixin footer(c)
               socialModifier: "inline"
             })       
       .footer__info
-        p.footer__info--copyright &copy; Leaf Software Ltd
-        .footer__info--nav
+        p.footer__copyright &copy; Leaf Software Ltd
+        .footer__nav
           +nav({
             navList: [
               {
@@ -45,4 +45,4 @@ mixin footer(c)
               }
             ]
           })
-        p.footer__info--vat VAT no: GB 265125317
+        p.footer__vat VAT no: GB 265125317
