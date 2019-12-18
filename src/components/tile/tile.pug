@@ -1,10 +1,12 @@
 mixin tile(c)
   a.tile(href= c.tileUrl)
     .tile__container
-      +image({
-        class: "tile__image",
-        src: c.tileImage.src,
-        alt: c.tileImage.alt
-      })
-      h4.tile__title= c.tileTitle
-      p.tile__text= c.tileText
+      .tile__left
+        +image({
+          context: "tile",
+          src: c.tileImage.src,
+          alt: c.tileImage.alt
+        })
+      .tile__right
+        p.tile__title= c.tileTitle
+        p.tile__text= c.tileText
