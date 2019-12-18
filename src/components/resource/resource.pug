@@ -10,6 +10,9 @@ mixin resource(c)
       .resource__right
         .resource__meta
           p.resource__subheading= c.resourceSubheading
-          p.resource__badge= c.resourceBadge
+
+          if c.resourceBadge
+            p.resource__badge= c.resourceBadge
+            
         p.resource__heading= c.resourceHeading
         p.resource__text= c.resourceText
