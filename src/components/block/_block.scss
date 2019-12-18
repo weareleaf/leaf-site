@@ -10,6 +10,10 @@
     margin-bottom: 0;
   }
 
+  &__heading {
+    margin-bottom: $spacing-6;
+  }
+
   &__content {
 
     @media screen and (min-width: map-get($breakpoints, "breakpoint-3")) {
