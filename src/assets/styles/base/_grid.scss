@@ -89,12 +89,12 @@
   }
 
   &--profiles {
-    grid-column-gap: $spacing-6;
-    grid-row-gap: $spacing-7;
+    grid-column-gap: $spacing-5;
+    grid-row-gap: $spacing-6;
     grid-template-columns: 1fr 1fr;
 
     @media screen and (min-width: map-get($breakpoints, "breakpoint-4")) {
-      grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+      grid-template-columns: repeat(5, 1fr);
     }
 
     @media screen and (min-width: map-get($breakpoints, "breakpoint-6")) {

@@ -26,8 +26,13 @@
 
   &__logo {
     left: 1.25rem;
+    margin: $spacing-4 auto;
     top: $spacing-6;
     width: $size-6;
+
+    @media screen and (min-width: map-get($breakpoints, "breakpoint-3")) {
+      margin: 0;
+    }
   }
 
   &__nav {
