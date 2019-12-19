@@ -1,12 +1,22 @@
 .contact-tile {
   &__heading {
     margin-bottom: $spacing-3;
+    width: 80%;
+
+    @media screen and (min-width: map-get($breakpoints, "breakpoint-3")) {
+      width: auto;
+    }
   }
 
   &__text {
     color: $color-white;
     font-size: $font-size-sm;
     margin: 0;
+    width: 80%;
+
+    @media screen and (min-width: map-get($breakpoints, "breakpoint-3")) {
+      width: auto;
+    }
   }
 
   &__ctas {
