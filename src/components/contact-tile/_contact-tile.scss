@@ -1,5 +1,4 @@
 .contact-tile {
-
   &__heading {
     margin-bottom: $spacing-3;
   }
@@ -8,11 +7,6 @@
     color: $color-white;
     font-size: $font-size-sm;
     margin: 0;
-    max-width: 15rem;
-
-    a {
-      color: $color-green;
-    }
   }
 
   &__ctas {
