@@ -14,7 +14,7 @@
   }
 
   &__item {
-    margin-right: 1.5rem;
+    margin-right: 1.75rem;
 
     @media screen and (min-width: map-get($breakpoints, "breakpoint-2")) {
       margin-right: 2.5rem;
@@ -28,8 +28,12 @@
   &__link {
     color: $color-white;
     display: block;
-    font-size: $font-size-xs;
+    font-size: .75rem;
     position: relative;
+
+    @media screen and (min-width: map-get($breakpoints, "breakpoint-1")) {
+      font-size: $font-size-xs;
+    }
 
     &:hover {
       color: darken($color-white, 5%);
