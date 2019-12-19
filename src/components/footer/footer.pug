@@ -7,15 +7,15 @@ mixin footer(c)
         p.footer__text
           | If you think we might be able to help, you’ve got a question, or you just want to say hi, don’t be a stranger.
       .footer__grid
-        .footer__item
+        .footer__item.footer__item--enquiries
           p.footer__subheading New work
           a.footer__link(href="mailto:enquiries@weareleaf.com") enquiries@weareleaf.com
 
-        .footer__item
+        .footer__item.footer__item--hello
           p.footer__subheading Ask us anything
           a.footer__link(href="mailto:hello@weareleaf.com") hello@weareleaf.com
               
-        .footer__item.footer__item--center
+        .footer__item.footer__item--icons
           p.footer__subheading Get social
           .footer__social
             +social({
