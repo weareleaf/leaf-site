@@ -1,5 +1,10 @@
 .nav {
   font-family: $font-family-sans-serif-regular;
+  margin: 0 auto;
+
+  @media screen and (min-width: map-get($breakpoints, "breakpoint-2")) {
+    margin: 0;
+  }
 
   &__list {
     display: flex;
@@ -9,7 +14,11 @@
   }
 
   &__item {
-    margin-right: 2.5rem;
+    margin-right: 1.5rem;
+
+    @media screen and (min-width: map-get($breakpoints, "breakpoint-2")) {
+      margin-right: 2.5rem;
+    }
 
     &:last-child {
       margin-right: 0;
