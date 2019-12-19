@@ -1,10 +1,18 @@
 .statement {
-  display: flex;
+  @media screen and (min-width: map-get($breakpoints, "breakpoint-1")) {
+    display: flex;
+  }
 
   &__icon {
     flex: 0 0 auto;
-    margin-right: $spacing-5;
+    margin-bottom: $spacing-4;
+    margin-right: 0;
     width: 3.8rem;
+
+    @media screen and (min-width: map-get($breakpoints, "breakpoint-1")) {
+      margin-bottom: 0;
+      margin-right: $spacing-5;
+    }
   }
 
   &__img {
