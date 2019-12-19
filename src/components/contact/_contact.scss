@@ -11,16 +11,11 @@
   }
 
   &__tile {
-    border-bottom: $border-default;
+    &:not(:last-child) {
+      border-bottom: $border-default;
+      padding-bottom: $spacing-6;
 
-    @media screen and (min-width: map-get($breakpoints, "breakpoint-1")) {
-      border-bottom: 0;
-    }
-
-    &:last-child {
-      margin-bottom: 0;
-
-      @media screen and (min-width: map-get($breakpoints, "breakpoint-1")) {
+      @media screen and (min-width: map-get($breakpoints, "breakpoint-3")) {
         border-bottom: 0;
         padding-bottom: 0;
       }
