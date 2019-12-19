@@ -41,16 +41,28 @@
     grid-row-gap: $spacing-6;
     justify-items: center;
 
-    @media screen and (min-width: map-get($breakpoints, "breakpoint-3")) {
+    @media screen and (min-width: map-get($breakpoints, "breakpoint-2")) {
       grid-template-columns: 1fr 1fr 1fr;
-      grid-gap: $spacing-7;
+      grid-template-rows: 1fr 1fr;
     }
 
-    &--item {
-      align-items: center;
-      display: flex;
-      flex-direction: column;
+    @media screen and (min-width: map-get($breakpoints, "breakpoint-3")) {
+      grid-template-columns: 1fr 1fr 1fr;
+      grid-template-rows: none;
+      grid-gap: $spacing-7;
     }
+  }
+
+  &__item {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+
+    /*&--center {
+      @media screen and (min-width: map-get($breakpoints, "breakpoint-2")) {
+        grid-area: 2 / 2;
+      }
+    }*/
   }
 
   &__subheading {
