@@ -28,24 +28,23 @@
   }
 
   &__footer {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    padding: $spacing-4;
+    display: flex;
+    padding: $spacing-5 $spacing-7;
 
     @media screen and (min-width: map-get($breakpoints, "breakpoint-1")) {
       background-color: #28288B;
     }
 
     @media screen and (min-width: map-get($breakpoints, "breakpoint-3")) {
-      grid-gap: 2rem;
       padding: $spacing-6;
     }
+  }
 
-    .social-tile {
-      margin-right: $spacing-6;
-      @media screen and (min-width: map-get($breakpoints, "breakpoint-5")) {
-        margin-right: 0;
-      }
+  &__social-tile {
+    margin-right: $spacing-7;
+
+    &:last-child {
+      margin-right: 0;
     }
   }
 }

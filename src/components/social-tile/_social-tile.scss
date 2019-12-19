@@ -1,7 +1,6 @@
 $icon-size: 2.7rem;
 
 .social-tile {
-
   @media screen and (min-width: map-get($breakpoints, "breakpoint-3")) {
     display: flex;
   }
