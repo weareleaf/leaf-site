@@ -1,9 +1,14 @@
 .block {
-  margin-bottom: $spacing-9;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-row-gap: $spacing-6;
+  margin-bottom: $spacing-8;
 
   @media screen and (min-width: map-get($breakpoints, "breakpoint-3")) {
-    align-items: center;
-    display: flex;
+    grid-template-columns: 1fr 1fr;
+    grid-column-gap: $spacing-7;
+    margin-bottom: $spacing-6;
+    min-height: 30rem;
   }
 
   &:last-child {
@@ -15,13 +20,16 @@
   }
 
   &__content {
+    @media screen and (min-width: map-get($breakpoints, "breakpoint-2")) {
+      width: 80%; 
+    }
 
     @media screen and (min-width: map-get($breakpoints, "breakpoint-3")) {
-      width: 50%;
+      align-self: center;
+      width: auto;
     }
 
     .block--reverse & {
-
       @media screen and (min-width: map-get($breakpoints, "breakpoint-3")) {
         order: 1;
       }
@@ -29,20 +37,23 @@
   }
 
   &__media {
-    //margin-top: $spacing-6;
-    max-width: 80%;
+    align-self: center;
 
     @media screen and (min-width: map-get($breakpoints, "breakpoint-3")) {
-      margin-left: $spacing-7;
       max-width: none;
-      width: 40%;
+      width: 100%;
     }
 
-    .block--reverse & {
-
+    &__image {
       @media screen and (min-width: map-get($breakpoints, "breakpoint-3")) {
-        margin-left: 0;
-        margin-right: $spacing-7;
+        height: 30rem;
+        max-width: none;
+      }
+  
+      .block--reverse & {
+        @media screen and (min-width: map-get($breakpoints, "breakpoint-3")) {
+          right: 0;
+        }
       }
     }
   }
