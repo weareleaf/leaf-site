@@ -4,27 +4,21 @@ block prepend vars
   -var pageTitle = "Terms & Conditions - Leaf"
   -var metaUrl = "https://weareleaf.com/terms"
   -var metaTitle = "Terms of business"
-  -var metaDescription = "While we don't like to get serious too often, these terms help to protect both Leaf and our clients."
+  -var metaDescription = "(These terms help to protect both Leaf and our clients)"
 
 block pageComponents
   +hero({
-    heroModifier: "terms",
-    heroHeading: "Terms of business",
-    heroText: "While we don't like to get serious too often, these terms help to protect both Leaf and our clients.",
-    heroImage: {
-      src: "/assets/images/heros/terms.gif",
-      alt: metaTitle
-    }
+    heroHeading: metaTitle,
+    heroSubheading: metaDescription,
   })
 
   section.section
     .container
-      +page-header({
-        pageHeaderHeading: "General terms",
-        pageHeaderModifier: "sm-spacing"
-      })
+      .grid.grid--center
+      
+        .grid__item
+          h2 General terms
 
-      .grid.grid--two-thirds
         .grid__item
           h4 Proposals
           p Any proposal provided by Leaf ("us", "we", or "our") should be treated as confidential, and remain our property. Proposals, and the content within them, should not be passed to third parties. Both the information provided, and the costs quoted, are valid for 30 days from the date issued.

@@ -12,6 +12,11 @@
     grid-column-gap: $spacing-9;
   }
 
+  &--center {
+    max-width: 800px;
+    margin: 0 auto;
+  }
+
   &--half {
 
     @media screen and (min-width: map-get($breakpoints, "breakpoint-1")) {
