@@ -10,31 +10,6 @@
     margin-bottom: $spacing-9;
   }
 
-  &--photo img {
-    object-fit: cover;
-    width: 100% !important;
-  }
-
-  &--heha {
-    background-color: $color-heha;
-  }
-
-  &--keen {
-    background-color: $color-keen;
-  }
-
-  &--rift {
-    background-color: $color-rift;
-  }
-
-  &--zendesk {
-    background-color: $color-zendesk;
-  }
-
-  &--laced {
-    background-color: $color-laced;
-  }
-
   &__controls {
     background: transparent;
     position: absolute;
@@ -82,17 +57,10 @@
       z-index: 1000;
 
       svg {
-        opacity: 0;
+        opacity: 1;
         transform: translateY(50%);
         transition: opacity $duration-5 $timing-ease,
           transform $duration-5 $timing-ease;
-      }
-
-      &--visible {
-        svg {
-          opacity: 1;
-          transform: translateY(0);
-        }
       }
     }
   }
@@ -137,33 +105,6 @@
         position: absolute;
       }
     }
-
-    &::before,
-    &::after {
-      background-color: $color-white;
-      content: '';
-      height: .15em;
-      left: 50%;
-      position: absolute;
-      top: 50%;
-      width: $size-1;
-    }
-
-    &::before {
-      transform: translate(-50%, -50%) rotate(45deg);
-    }
-
-    &::after {
-      transform: translate(-50%, -50%) rotate(-45deg);
-    }
-  }
-
-  &__image {
-    display: block;
-    margin: 0 auto;
-    max-height: 42.5em;
-    width: auto;
-    max-width: 100%;
   }
 
   &__heading {
