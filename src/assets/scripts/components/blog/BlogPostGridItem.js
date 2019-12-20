@@ -1,13 +1,13 @@
-import React, { Component, Fragment } from 'react'
+import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 
 class BlogPostGridItem extends Component {
   render() {
-    const { large, postUrl, postMeta, postHeading, postText } = this.props
+    const { postUrl, postMeta, postHeading, postText } = this.props
     const postPrefix = 'post'
 
     return (
-      <div className={large ? 'grid__item-large' : 'grid__item'}>
+      <div className={'grid__item'}>
         <a className={postPrefix} href={postUrl}>
           <div className={`${postPrefix}__content`}>
             <h6 className={`${postPrefix}__meta`}>{postMeta}</h6>
@@ -21,7 +21,6 @@ class BlogPostGridItem extends Component {
 }
 
 BlogPostGridItem.propTypes = {
-  large: PropTypes.bool,
   postUrl: PropTypes.string.isRequired,
   postMeta: PropTypes.string.isRequired,
   postHeading: PropTypes.string.isRequired,

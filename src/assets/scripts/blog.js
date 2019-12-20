@@ -8,6 +8,7 @@ import BlogPostGrid from './components/blog/BlogPostGrid'
 const gridItems = [
   {
     postUrl: '/blog/putting-amazon-textract-to-the-test',
+    postMeta: 'Date',
     postHeading: 'Putting Amazon Textract to the test',
     postText: 'Amazon Textract extracts text and structured data from scanned or photographed documents, but how reliably can it be used for business process automation? We put it to the test.'
   },
