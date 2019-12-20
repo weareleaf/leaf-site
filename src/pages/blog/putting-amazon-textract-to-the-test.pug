@@ -37,27 +37,19 @@ block pageComponents
 
           h2.blog-post__h2 The results
 
-          h3.blog-post__h3 Payslip
-
-          +image({
-            context: "blog-post",
-            src: "/assets/images/blog/post-content/payslip-extracted.jpg",
-            alt: "A payslip processed by Amazon Textract"
-          })
-          br
+          figure
+            img.blog-post__image(src="/assets/images/blog/post-content/payslip-extracted.jpg" alt="Payslip")
+            figcaption Payslip
 
           p.blog-post__text Payslips are heavily structured documents, usually formed by a series of nested tables, with labelled values scattered all over. They provide a good test of Textract's ability to extract structured tabular and labelled information.
 
           p.blog-post__text For our test payslip, Textract managed to extract every piece of text correctly. What’s more, Textract was able to identify tables shown in the payslip, and correctly associate all labels with their values, e.g. "Total Pay" with "1,076.23". Textract makes all of this structured data available, giving us a range of convenient different ways to handle the extracted information depending on how we want to use it.
 
-          h3.blog-post__h3 Invoice
+          h2.blog-post__h2 Invoice
 
-          +image({
-            context: "blog-post",
-            src: "/assets/images/blog/post-content/invoice-extracted.jpg",
-            alt: "An invoice processed by Amazon Textract"
-          })
-          br
+          figure
+            img.blog-post__image(src="/assets/images/blog/post-content/invoice-extracted.jpg" alt="An invoice processed by Amazon Textract")
+            figcaption Invoice
 
           p.blog-post__text Invoices are typically a semi structured document. They feature a mix of free text with labelled values, and almost always have a table at the centre detailing pricing.
 
@@ -65,14 +57,11 @@ block pageComponents
 
           p.blog-post__text Although the overall extraction was near perfect, a couple of pieces of text were incorrectly associated with labels. For example, in the bottom right of the invoice, "Amount Enclosed" was incorrectly associated with "Enter the amount you are paying above", when it should actually have been a label <em>without</em> a value.
 
-          h3.blog-post__h3 Passport
+          h2.blog-post__h2 Passport
 
-          +image({
-            context: "blog-post",
-            src: "/assets/images/blog/post-content/passport-extracted.jpg",
-            alt: "A passport processed by Amazon Textract"
-          })
-          br
+          figure
+            img.blog-post__image(src="/assets/images/blog/post-content/passport-extracted.jpg" alt="A passport processed by Amazon Textract")
+            figcaption Invoice
 
           p.blog-post__text Passports are a very loosely structured document. They contain a lot of densely packed labelled information, with little alignment between values to form any obvious structure. In addition to this, the labels for text are tiny compared to their values. Combined with the fact we're using a photo of a passport rather than a higher quality scan, the passport is a more challenging task for Textract.
 
@@ -92,7 +81,7 @@ block pageComponents
 
           h2.blog-post__h2 Takeaways
 
-          h3.blog-post__h3 Data quality
+          h4.blog-post__h4 Data quality
 
           p.blog-post__text Amazon Textract does a excellent job at extracting raw unstructured text from documents. Across all three of our tests, Textract was able to correctly extract the contents for all but the smallest, and blurriest of labels in the passport photo.
 
@@ -102,8 +91,10 @@ block pageComponents
 
           p.blog-post__text A final note on quality - With continued investment from Amazon, Textract is only going to get better over time. Any busines using it will benefit from this for free. So, with a good quality integration, you should expect to increased rates of correctly processed documents over time with no additional effort from you.
 
-          h3.blog-post__h3 Ease of integration
+          h4.blog-post__h4 Ease of integration
+          
           p.blog-post__text Amazon's documentation for Textract is extremely thorough, and they provide a wide variety of example code to work from to make it as accessible as possible to developers at different experience levels.
+
           p.blog-post__text If you're an existing Amazon Web Services (AWS) customer, Textract can load documents directly from your Amazon S3 account for processing. Alternatively, your developers can send documents to be processed directly to Textract from any data source if you store your documents elsewhere.
 
           p.blog-post__text Textract can be integrated into a wide variety of application types — consumer facing websites, business applications, scripted tasks, mobile apps, and web services can all benefit. Typical use cases for Textract include:
@@ -118,6 +109,7 @@ block pageComponents
           br
 
           h3.blog-post__h3 Benefits to your business
+
           p.blog-post__text If your staff spend a lot of time on manual document processing work, Textract can be used to deliver huge savings, free up your staff to do more valuable work, ensure you're able to process workloads 24/7, and improve the overall efficiency of your business processes.
 
           p.blog-post__text At Leaf, we specialise in using services like Textract to build digital products & services that automate business. If you want to understand more about how Textract could help you to increase efficiency, productivity, and reliability, don't hesitate to <a href="https://weareleaf.com/project-planner" refl="noopener" target="_blank">get in touch</a>.

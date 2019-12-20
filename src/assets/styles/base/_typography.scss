@@ -95,11 +95,11 @@ figure {
   }
 
   @media screen and (min-width: map-get($breakpoints, 'breakpoint-4')) {
-    margin: $spacing-6 0 $spacing-8;
+    margin: $spacing-5 0 $spacing-8;
   }
 
   @media screen and (min-width: map-get($breakpoints, 'breakpoint-6')) {
-    margin: $spacing-7 0 $spacing-8;
+    margin: $spacing-6 0 $spacing-8;
   }
 
   &:first-child {
@@ -117,8 +117,8 @@ ul {
 }
 
 figcaption {
-  color: $color-grey;
-  font-size: $font-size-xs;
+  color: $color-white;
+  font-size: $font-size-sm;
   padding: $spacing-2 0;
   text-align: center;
 }
