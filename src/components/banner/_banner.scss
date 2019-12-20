@@ -3,7 +3,7 @@
   background-color: #31319B;
   display: flex;
   justify-content: space-between;
-  padding: $spacing-7 $spacing-7 0 $spacing-7;
+  padding: 1.65rem $spacing-5;
   cursor: pointer;
   position: fixed;
   top: 0;
@@ -12,11 +12,11 @@
 
   @media screen and (min-width: map-get($breakpoints, "breakpoint-2")) {
     background-color: transparent;
+    padding: $spacing-7 $spacing-7 0 $spacing-7;
   }
 
   &__logo {
     left: 1.25rem;
-    margin: 0 auto;
     top: $spacing-6;
     width: $size-4;
 
@@ -27,9 +27,14 @@
   }
 
   &__close {
-    background-color: #31319B;
+    background-color: transparent;
     border-radius: $border-radius-full;
-    padding: $spacing-4;
+    padding: 0;
+
+    @media screen and (min-width: map-get($breakpoints, "breakpoint-2")) {
+      background-color: #31319B;
+      padding: $spacing-4;
+    }
   }
 
   &__icon {
