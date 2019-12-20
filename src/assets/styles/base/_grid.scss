@@ -13,7 +13,7 @@
   }
 
   &--center {
-    max-width: 800px;
+    max-width: 40rem;
     margin: 0 auto;
   }
 
@@ -50,33 +50,6 @@
     }
   }
 
-  &--card {
-
-    @media screen and (min-width: map-get($breakpoints, "breakpoint-3")) {
-      grid-template-columns: 1fr 1fr;
-      grid-column-gap: $spacing-8;
-    }
-
-    @media screen and (min-width: map-get($breakpoints, "breakpoint-4")) {
-      grid-column-gap: $spacing-9;
-    }
-
-    .grid__item:not(:last-child) {
-      margin-bottom: $spacing-6;
-
-      @media screen and (min-width: map-get($breakpoints, "breakpoint-3")) {
-        margin-bottom: $spacing-8;
-      }
-    }
-
-    .grid__item:nth-child(even) {
-      @media screen and (min-width: map-get($breakpoints, "breakpoint-3")) {
-        position: relative;
-        top: $spacing-12;
-      }
-    }
-  }
-
   &--statements {
 
     @media screen and (min-width: map-get($breakpoints, "breakpoint-1")) {
@@ -108,14 +81,6 @@
     @media screen and (min-width: map-get($breakpoints, "breakpoint-3")) {
       grid-column-gap: $spacing-5;
       grid-template-columns: 1fr 1fr;
-    }
-  }
-
-  &--metrics {
-    grid-template-columns: 1fr;
-
-    @media screen and (min-width: map-get($breakpoints, "breakpoint-3")) {
-      grid-template-columns: 1fr 1fr 1fr;
     }
   }
 
