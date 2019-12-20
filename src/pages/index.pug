@@ -3,13 +3,16 @@ extends ../layouts/page.pug
 block prepend vars
   -var pageTitle = "Kent based web and mobile development"
   -var metaUrl = "https://weareleaf.com"
-  -var metaTitle = "We make superfast applications."
-  -var metaDescription = "(That your users will love)"
+  -var metaTitle = "Bespoke web design & development"
+  -var metaDescription = "We're specialists in building accessible, performant, and scalable applications."
+
+  -var heroHeading = "We make superfast applications."
+  -var heroSubheading = "(That your users will love)"
 
 block pageComponents
   +hero({
-    heroHeading: metaTitle,
-    heroSubheading: metaDescription,
+    heroHeading: heroHeading,
+    heroSubheading: heroSubheading,
   })
 
   section.section

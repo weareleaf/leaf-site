@@ -3,13 +3,16 @@ extends ../layouts/page.pug
 block prepend vars
   -var pageTitle = "Careers - Leaf"
   -var metaUrl = "https://weareleaf.com/careers"
-  -var metaTitle = "We hire good people."
-  -var metaDescription = "(And give them the environment to thrive)"
+  -var metaTitle = "Jobs at Leaf"
+  -var metaDescription = "If you're driven, passionate about your craft, and keen to learn, we want to hear from you."
+
+  -var heroHeading = "We hire good people."
+  -var heroSubheading = "(And give them the environment to thrive)"
 
 block pageComponents
   +hero({
-    heroHeading: metaTitle,
-    heroSubheading: metaDescription,
+    heroHeading: heroHeading,
+    heroSubheading: heroSubheading,
   })
 
   section.section
