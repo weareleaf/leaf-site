@@ -1,8 +1,8 @@
 mixin banner(c)
-  .banner(class= c.bannerModifer ? "banner--" + c.bannerModifer : "")
-    .banner__controls
-      .banner__logo
+  .banner
+    .banner__logo
+      a.logo(href='/index')
         +logo
-      a.banner__button(href='/' aria-label='Close')
+    .banner__close
+      a.button(href='/' aria-label='Close')
         img(src='/assets/images/icons/close.svg', alt='Close')
-        span(aria-hidden='true') Close

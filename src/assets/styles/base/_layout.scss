@@ -67,3 +67,11 @@ main {
     }
   }
 }
+
+.banner-spacer {
+  height: $spacing-5;
+
+  @media screen and (min-width: map-get($breakpoints, 'breakpoint-2')) {
+    height: 4.75rem;
+  }
+}
