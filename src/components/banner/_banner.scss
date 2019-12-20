@@ -8,7 +8,7 @@
   position: fixed;
   top: 0;
   width: 100%;
-  z-index: 1000;
+  z-index: 90;
 
   @media screen and (min-width: map-get($breakpoints, "breakpoint-2")) {
     background-color: transparent;
@@ -24,5 +24,19 @@
       margin: 0;
       width: $size-6;
     }
+  }
+
+  &__close {
+    background-color: #31319B;
+    border-radius: $border-radius-full;
+    padding: $spacing-4;
+  }
+
+  &__icon {
+    align-items: center;
+    display: flex;
+    height: $size-1;
+    justify-content: center;
+    width: $size-1;
   }
 }
