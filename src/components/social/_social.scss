@@ -35,7 +35,7 @@
     transition: fill $duration-2 $timing-ease-in-out;
 
     .social__link:hover & {
-      fill: lighten($color-grey-dark, 10%);
+      fill: darken($color-white, 5%);
     }
   }
 }
