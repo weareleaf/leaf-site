@@ -5,26 +5,25 @@ block prepend vars
   -var metaUrl = "https://weareleaf.com/blog/putting-amazon-textract-to-the-test"
   -var metaTitle = "Putting Amazon Textract to the test"
   -var metaDescription = "Amazon Textract extracts text and structured data from scanned or photographed documents, but how reliably can it be used for business process automation? We put it to the test."
-  -var metaImage = "https://weareleaf.com/assets/images/blog/thumbnails/documents.jpg"
+
+  -var heroHeading = "Putting Amazon Textract to the test"
+  -var heroSubheading = "(by Mike Carter)"
 
 block pageComponents
-  +hero({
-    heroHeading: metaTitle,
-    heroSubheading: metaDescription,
-  })
 
-  .section.section--margin
-    .container
-      +share-icons({
-        socialModifier: "inline"
-      })
+  +hero({
+    heroHeading: heroHeading,
+    heroSubheading: heroSubheading,
+  })
 
   .section
     .container
 
       .grid.grid--center
+        +share-icons({
+          socialModifier: "inline"
+        })
         .blog-post
-          h1.blog-post__h1 Putting Amazon Textract to the test
 
           p.blog-post__intro <a href="https://aws.amazon.com/textract/" rel="noopener" target="_blank">Amazon Textract</a> extracts text and structured data from scanned or photographed documents, but how reliably can it be used for business process automation? We put it to the test.
 

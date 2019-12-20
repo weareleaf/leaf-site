@@ -233,16 +233,10 @@ img {
 
 .blog-post {
   &__intro {
-    color: $color-grey-dark;
+    color: $color-white;
     font-size: $font-size-md;
     line-height: $line-height;
-    margin-bottom: $font-size-lg;
-
-    @media screen and (min-width: map-get($breakpoints, 'breakpoint-3')) {
-      color: $color-grey-dark;
-      font-size: $font-size-h3;
-      margin-bottom: $font-size-lg;
-    }
+    margin-bottom: $spacing-6;
   }
 }
 
