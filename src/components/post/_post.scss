@@ -1,6 +1,8 @@
 .post {
   background-color: #31319B;
+  border-radius: 8px;
   display: block;
+  height: 100%;
   padding: $spacing-6;
 
   &:hover {
