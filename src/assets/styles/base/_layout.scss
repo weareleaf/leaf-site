@@ -45,36 +45,11 @@ main {
     }
   }
 
-.section--margin-b {
-  margin-bottom: 0;
+  .section--margin-b {
+    margin-bottom: 0;
 
-  @media screen and (min-width: map-get($breakpoints, 'breakpoint-3')) {
-    margin-bottom: $spacing-9;
-  }
-}
-
-.blog-post {
-  @media screen and (min-width: map-get($breakpoints, 'breakpoint-6')) {
-    padding-bottom: $spacing-7;
-    padding-right: $spacing-7;
-  }
-}
-
-  &__h1,
-  &__h2,
-  &__h3,
-  &__h4,
-  &__h5,
-  &__intro,
-  &__text,
-  &__image,
-  &__list {
-
-    @media screen and (min-width: map-get($breakpoints, 'breakpoint-2')) {
-      width: 75%;
-    }
-    @media screen and (min-width: map-get($breakpoints, 'breakpoint-4')) {
-      width: auto;
+    @media screen and (min-width: map-get($breakpoints, 'breakpoint-3')) {
+      margin-bottom: $spacing-9;
     }
   }
 }
