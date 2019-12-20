@@ -3,14 +3,14 @@ import PropTypes from 'prop-types'
 
 class BlogPostGridItem extends Component {
   render() {
-    const { author, large, postUrl, postImage, postHeading, postText } = this.props
-    const postPrefix = large ? 'post-large' : 'post'
+    const { large, postUrl, postMeta, postHeading, postText } = this.props
+    const postPrefix = 'post'
 
     return (
       <div className={large ? 'grid__item-large' : 'grid__item'}>
         <a className={postPrefix} href={postUrl}>
           <div className={`${postPrefix}__content`}>
-            <h6 className={`${postPrefix}__meta`}>{postHeading}</h6>
+            <h6 className={`${postPrefix}__meta`}>{postMeta}</h6>
             <h3 className={`${postPrefix}__heading`}>{postHeading}</h3>
             <p className={`${postPrefix}__text`}>{postText}</p>
           </div>
@@ -22,9 +22,8 @@ class BlogPostGridItem extends Component {
 
 BlogPostGridItem.propTypes = {
   large: PropTypes.bool,
-  author: PropTypes.object.isRequired,
   postUrl: PropTypes.string.isRequired,
-  postImage: PropTypes.object.isRequired,
+  postMeta: PropTypes.string.isRequired,
   postHeading: PropTypes.string.isRequired,
   postText: PropTypes.string.isRequired
 }

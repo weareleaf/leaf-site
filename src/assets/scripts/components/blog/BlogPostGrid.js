@@ -24,15 +24,14 @@ class BlogPostGrid extends Component {
 
   renderGridItem(item, index) {
     const { allSmall } = this.props
-    const { author, postUrl, postImage, postHeading, postText } = item
+    const { postUrl, postMeta, postHeading, postText } = item
     const large = index == 0 && !allSmall
     return (
       <BlogPostGridItem
         key={`post-${index}`}
-        author={author}
         large={large}
         postUrl={postUrl}
-        postImage={postImage}
+        postMeta={postMeta}
         postHeading={postHeading}
         postText={postText}
       />
