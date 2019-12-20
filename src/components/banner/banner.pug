@@ -3,6 +3,6 @@ mixin banner(c)
     .banner__logo
       a.logo(href='/index')
         +logo
-    .banner__close
-      a.banner__icon(href='/blog' aria-label='Close')
+    a.banner__close(href='/blog' aria-label='Close')
+      .banner__icon
         img(src='/assets/images/icons/close.svg', alt='Close')
