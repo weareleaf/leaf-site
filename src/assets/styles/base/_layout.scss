@@ -52,4 +52,10 @@ main {
       margin-bottom: $spacing-9;
     }
   }
+
+  .blog-post {
+    &__image {
+      width: 100%;
+    }
+  }
 }
