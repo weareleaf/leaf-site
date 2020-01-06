@@ -214,10 +214,6 @@ img {
   text-shadow: none;
 }
 
-.color-grey-dark {
-  color: $color-grey-dark;
-}
-
 .blog-content {
   position: relative;
 
@@ -274,7 +270,7 @@ blockquote {
   }
 
   q {
-    color: $color-grey-dark;
+    color: $color-white;
     display: block;
     font-family: $font-family-sans-serif-light;
     font-size: $font-size-lg;
@@ -283,7 +279,7 @@ blockquote {
     width: 100%;
 
     &::before {
-      color: $color-grey-lightest;
+      color: $color-purple-dark;
       content: open-quote;
       font-size: 10rem;
       font-weight: bold;
@@ -301,7 +297,7 @@ blockquote {
   }
 
   cite {
-    color: $color-grey;
+    color: $color-purple-lightest;
     font-size: $font-size-sm;
   }
 }
