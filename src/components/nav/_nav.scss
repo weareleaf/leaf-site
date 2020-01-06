@@ -45,15 +45,21 @@
       position: relative;
 
       &::after {
-        background: $color-green;
-        content: "";
-        height: 3px;
-        left:0;
-        margin: 10px auto;
-        position: absolute;
-        right:0;
-        top: 100%;
-        width: $size-1;
+        content: none;
+      }
+
+      @media screen and (min-width: map-get($breakpoints, "breakpoint-2")) {
+        &::after {
+          background: $color-green;
+          content: "";
+          height: 3px;
+          left:0;
+          margin: 10px auto;
+          position: absolute;
+          right:0;
+          top: 100%;
+          width: $size-1;
+        }
       }
     }
 
