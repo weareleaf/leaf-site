@@ -6,94 +6,92 @@ block prepend vars
   -var metaTitle = "Leaf is two years old"
   -var metaDescription = "We’re not bankrupt yet, so we’ve written a few words to celebrate"
 
+  -var heroHeading = "Leaf is two years old"
+  -var heroSubheading = "(by Chris Annetts)"
+
 block pageComponents
+
   +banner({
-    bannerCompany: "Leaf is two years old",
-    bannerModifer: "photo",
-    bannerImage: {
-      src: "/assets/images/blog/candles.jpg",
-      alt: "Candles",
-    },
   })
 
-  .section.section--margin
-    .container
-      +share-icons({
-        socialModifier: "inline"
-      })
+  .banner-spacer
+
+  +hero({
+    heroHeading: heroHeading,
+    heroSubheading: heroSubheading,
+  })
 
   .section
     .container
 
-      .grid.grid--blog
-        .grid__item.grid__item--span-2
-          .blog-post
-            h1.blog-post__h1 Leaf is two years old
+      .grid.grid--center
 
-            p.blog-post__intro We’re not bankrupt yet, so we’ve written a few words to celebrate
+        +share-icons({
+          socialModifier: "inline"
+        })
 
-            p.blog-post__text By the age of two, many toddlers will have gained significant new skills; from improvements in their ability to communicate, to awareness of both themselves and others. They’ll be developing quickly, and it’s an exciting time for all involved.
+        .blog-post
 
-            p.blog-post__text The first couple of years in a new business isn’t hugely dissimilar to the experience described above, with more than a few parallels; and as of today, our little web studio is itself two years old.
+          p.blog-post__intro We’re not bankrupt yet, so we’ve written a few words to celebrate
 
-            p.blog-post__text Leaf started out as a series of sporadic off-the-cuff comments, before being conceived as something more concrete during a stag do on 7th March 2015. A few months later, on 30th June 2015, we registered the company.
+          p.blog-post__text By the age of two, many toddlers will have gained significant new skills; from improvements in their ability to communicate, to awareness of both themselves and others. They’ll be developing quickly, and it’s an exciting time for all involved.
 
-            p.blog-post__text The first 12 months were relatively low key; we made a conscious effort to minimise risk, which meant continuing in our full-time employments, with evenings and weekends our opportunity to create a financial safety net.
+          p.blog-post__text The first couple of years in a new business isn’t hugely dissimilar to the experience described above, with more than a few parallels; and as of today, our little web studio is itself two years old.
 
-            p.blog-post__text Mike, my co-founder, was the first to take the plunge and become a full-timer; with an overload of engineering work, and a sensible amount saved up, it felt like the right time to jump. I myself followed a few months later, and very quickly, our little bit on the side had become Facebook official.
+          p.blog-post__text Leaf started out as a series of sporadic off-the-cuff comments, before being conceived as something more concrete during a stag do on 7th March 2015. A few months later, on 30th June 2015, we registered the company.
 
-            h4.blog-post__h4 What we’ve learnt so far
+          p.blog-post__text The first 12 months were relatively low key; we made a conscious effort to minimise risk, which meant continuing in our full-time employments, with evenings and weekends our opportunity to create a financial safety net.
 
-            p.blog-post__text Relatively speaking, we’re still just starting out. That said, we’ve already gathered a few nuggets that we would love to have shared with our former selves 24 months ago.
+          p.blog-post__text Mike, my co-founder, was the first to take the plunge and become a full-timer; with an overload of engineering work, and a sensible amount saved up, it felt like the right time to jump. I myself followed a few months later, and very quickly, our little bit on the side had become Facebook official.
 
-            h5.blog-post__h5 Have a buffer
+          h4.blog-post__h4 What we’ve learnt so far
 
-            p.blog-post__text When it comes to making this your full time role, I cannot stress enough how important it is to have a healthy amount of cash saved up.
+          p.blog-post__text Relatively speaking, we’re still just starting out. That said, we’ve already gathered a few nuggets that we would love to have shared with our former selves 24 months ago.
 
-            p.blog-post__text When we went full-time, we started with around four months of runway, which would have covered wages, subscriptions, fees, and any other recurring costs in the event that we had nothing at all coming in.
+          h5.blog-post__h5 Have a buffer
 
-            p.blog-post__text Our buffer may sound high, but in such a saturated industry, there’s very little reason to believe your new company is going to come out on top against handfuls of more established options.
+          p.blog-post__text When it comes to making this your full time role, I cannot stress enough how important it is to have a healthy amount of cash saved up.
 
-            p.blog-post__text In hindsight, that financial buffer turned out to be the best early decision we made. We didn’t win any new work for the first two months, and our only income during this period was ad hoc pieces from existing clients. Without that safety net, we’d have either gone under, or started making panicked decisions ahead of time.
+          p.blog-post__text When we went full-time, we started with around four months of runway, which would have covered wages, subscriptions, fees, and any other recurring costs in the event that we had nothing at all coming in.
 
-            h5.blog-post__h5 You’ll question it
+          p.blog-post__text Our buffer may sound high, but in such a saturated industry, there’s very little reason to believe your new company is going to come out on top against handfuls of more established options.
 
-            p.blog-post__text There will, in all likelihood, be moments when you wonder whether you made the right call at all.
+          p.blog-post__text In hindsight, that financial buffer turned out to be the best early decision we made. We didn’t win any new work for the first two months, and our only income during this period was ad hoc pieces from existing clients. Without that safety net, we’d have either gone under, or started making panicked decisions ahead of time.
 
-            p.blog-post__text In times of struggle, you may doubt everything from the wisdom to taking a financial risk, right down to your own ability to steer the ship.
+          h5.blog-post__h5 You’ll question it
 
-            p.blog-post__text Having spoken to other studio owners, self doubt is pretty common; especially in those early days. Stepping in to the unknown is inherently scary, but you’ll come out of the other side all the more knowledgable, rounded, and confident for it.
+          p.blog-post__text There will, in all likelihood, be moments when you wonder whether you made the right call at all.
 
-            h5.blog-post__h5 Good work pays off
+          p.blog-post__text In times of struggle, you may doubt everything from the wisdom to taking a financial risk, right down to your own ability to steer the ship.
 
-            p.blog-post__text When we first started Leaf, we put a lot of effort in to winning new clients. We developed the brand, redesigned our website, created landing pages, ran several pay-per-click campaigns, responded to a high number of tenders, created pieces purely for Dribbble, started blogging, and when none of that was working, we literally cold-contacted around 150 start-ups, companies, and organisations.
+          p.blog-post__text Having spoken to other studio owners, self doubt is pretty common; especially in those early days. Stepping in to the unknown is inherently scary, but you’ll come out of the other side all the more knowledgable, rounded, and confident for it.
 
-            p.blog-post__text Those attempts at putting ourselves in the shop window took up an awful lot of effort. It was time consuming, costly, and when it wasn’t working, it was mentally draining.
+          h5.blog-post__h5 Good work pays off
 
-            p.blog-post__text Eventually, the tide changed; we started receiving a steady stream of enquiries. However, 90% of them were coming via referrals from happy clients.
+          p.blog-post__text When we first started Leaf, we put a lot of effort in to winning new clients. We developed the brand, redesigned our website, created landing pages, ran several pay-per-click campaigns, responded to a high number of tenders, created pieces purely for Dribbble, started blogging, and when none of that was working, we literally cold-contacted around 150 start-ups, companies, and organisations.
 
-            p.blog-post__text It stands to reason. For most people, commissioning a new website is a big deal. Some will have saved for years. Others are risking their annual budget. Get it wrong, and peoples livelihoods are on the line.
+          p.blog-post__text Those attempts at putting ourselves in the shop window took up an awful lot of effort. It was time consuming, costly, and when it wasn’t working, it was mentally draining.
 
-            p.blog-post__text Where risk and unknowns play a part, people often favour those they’ve had good experiences with, or that others have recommended to them.
+          p.blog-post__text Eventually, the tide changed; we started receiving a steady stream of enquiries. However, 90% of them were coming via referrals from happy clients.
 
-            h5.blog-post__h5 Clients seem comfortable with remote
+          p.blog-post__text It stands to reason. For most people, commissioning a new website is a big deal. Some will have saved for years. Others are risking their annual budget. Get it wrong, and peoples livelihoods are on the line.
 
-            p.blog-post__text At Leaf, we don’t have an office. With the team so small, there’s little justification for such an overhead.
+          p.blog-post__text Where risk and unknowns play a part, people often favour those they’ve had good experiences with, or that others have recommended to them.
 
-            p.blog-post__text During early exploration around who and what Leaf was, both Mike and I were concerned about how being a satellite studio would be perceived. Is there an expectation that we would or should have an office? Would it be seen as a negative; an indictment of our ability to deliver value?
+          h5.blog-post__h5 Clients seem comfortable with remote
 
-            p.blog-post__text Two years on, it hasn’t held us back at all. We’re yet to experience a client raising it as a concern, and everything so far has pointed towards the normalisation of not only the remote worker, but the remote studio.
+          p.blog-post__text At Leaf, we don’t have an office. With the team so small, there’s little justification for such an overhead.
 
-            h4.blog-post__h4 What’s next
+          p.blog-post__text During early exploration around who and what Leaf was, both Mike and I were concerned about how being a satellite studio would be perceived. Is there an expectation that we would or should have an office? Would it be seen as a negative; an indictment of our ability to deliver value?
 
-            p.blog-post__text The biggest recent shift is that we’re currently looking for our first hire in the form of another engineer. Growing the team is something we’ve been keen to do for a while now, and with a little luck, they’ll be the first of many to join the team.
+          p.blog-post__text Two years on, it hasn’t held us back at all. We’re yet to experience a client raising it as a concern, and everything so far has pointed towards the normalisation of not only the remote worker, but the remote studio.
 
-            p.blog-post__text Really though, who knows what’s next? These two years have taught us that the journey is as unpredictable as it is exciting. If you ask me, that’s part of the fun.
+          h4.blog-post__h4 What’s next
 
-        .grid__item
-          +author-bio-chris()
+          p.blog-post__text The biggest recent shift is that we’re currently looking for our first hire in the form of another engineer. Growing the team is something we’ve been keen to do for a while now, and with a little luck, they’ll be the first of many to join the team.
 
-    .section
+          p.blog-post__text Really though, who knows what’s next? These two years have taught us that the journey is as unpredictable as it is exciting. If you ask me, that’s part of the fun.
+
+    .section.section--spacing-top
       .container
-        hr.divider.divider--margin-blog
         .grid.grid--blog.grid--blog-post

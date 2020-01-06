@@ -6,62 +6,60 @@ block prepend vars
   -var metaTitle = "A home office for productivity"
   -var metaDescription = "Compared to the average office, where people are constantly walking around in the background or making sporadic eye contact, my home environment is much less disruptive."
 
+  -var heroHeading = "A home office for productivity"
+  -var heroSubheading = "(by Mike Carter)"
+
 block pageComponents
+
   +banner({
-    bannerCompany: "A home office for productivity",
-    bannerModifer: "photo",
-    bannerImage: {
-      src: "/assets/images/blog/mike-setup.jpg",
-      alt: "Mike's setup",
-    },
   })
 
-  .section.section--margin
-    .container
-      +share-icons({
-        socialModifier: "inline"
-      })
+  .banner-spacer
+
+  +hero({
+    heroHeading: heroHeading,
+    heroSubheading: heroSubheading,
+  })
 
   .section
     .container
 
-      .grid.grid--blog
-        .grid__item.grid__item--span-2
-          .blog-post
-            h1.blog-post__h1 A home office for productivity
+      .grid.grid--center
 
-            p.blog-post__intro At Leaf, we embrace remote work to get a productive edge. However, it’s easy for a remote environment to work against you.
+        +share-icons({
+          socialModifier: "inline"
+        })
 
-            p.blog-post__text The image above is my workspace. It’s very boring looking, and not particularly fancy, but I’ve taken several steps to make it a great place for me to get things done.
+        .blog-post
 
-            h4.blog-post__h4 Peripheral vision
+          p.blog-post__intro At Leaf, we embrace remote work to get a productive edge. However, it’s easy for a remote environment to work against you.
 
-            p.blog-post__text I’m easily distracted by movement, so I’ve positioned my desk in an alcove so that my I have walls 180 degrees around me. There’s a window there so I’m not completely boxed in, but there’s nothing particularly distracting going on outside — it’s mostly clouds.
+          p.blog-post__text The image above is my workspace. It’s very boring looking, and not particularly fancy, but I’ve taken several steps to make it a great place for me to get things done.
 
-            p.blog-post__text Compared to the average office, where people are constantly walking around in the background or making sporadic eye contact, my home environment is much less disruptive for me.
+          h4.blog-post__h4 Peripheral vision
 
-            h4.blog-post__h4 Light control
+          p.blog-post__text I’m easily distracted by movement, so I’ve positioned my desk in an alcove so that my I have walls 180 degrees around me. There’s a window there so I’m not completely boxed in, but there’s nothing particularly distracting going on outside — it’s mostly clouds.
 
-            p.blog-post__text I’ve also installed a blackout blind, and dimmable lamp that I can control directly from my computer. This allows me to adjust the amount of light around me, so on bright days or if my eyes are tired, I can dim everything down and work without strain.
+          p.blog-post__text Compared to the average office, where people are constantly walking around in the background or making sporadic eye contact, my home environment is much less disruptive for me.
 
-            p.blog-post__text It’s a small thing, but the aggressive fluorescent lighting of shared offices can get very wearing over time, and personal preferences in lighting vary a lot from person to person. Having this level of control makes it that much easier to settle into focussed work.
+          h4.blog-post__h4 Light control
 
-            h4.blog-post__h4 Room to breathe
+          p.blog-post__text I’ve also installed a blackout blind, and dimmable lamp that I can control directly from my computer. This allows me to adjust the amount of light around me, so on bright days or if my eyes are tired, I can dim everything down and work without strain.
 
-            p.blog-post__text Working from home means I get to be selfish with my space. My workspace isn’t huge, but there’s plenty of room there for me to move about, or have extra stuff on my desk.
+          p.blog-post__text It’s a small thing, but the aggressive fluorescent lighting of shared offices can get very wearing over time, and personal preferences in lighting vary a lot from person to person. Having this level of control makes it that much easier to settle into focussed work.
 
-            p.blog-post__text Most importantly, however, it’s completely tailored to me. I’m 6'5" tall, so the desk it extra deep to accommodate my legs, and sits a couple of inches higher than a standard office desk, which feels much better to work at. I also invested in a proper chair, preventing me from fidgeting, and allowing me to get comfortable.
+          h4.blog-post__h4 Room to breathe
 
-            h4.blog-post__h4 Sound
+          p.blog-post__text Working from home means I get to be selfish with my space. My workspace isn’t huge, but there’s plenty of room there for me to move about, or have extra stuff on my desk.
 
-            p.blog-post__text I find I’m able to concentrate much more with the right kind of music playing. In a shared working environment I’m forced to use headphones, but at home I can crank up the Sonos in comfort.
+          p.blog-post__text Most importantly, however, it’s completely tailored to me. I’m 6'5" tall, so the desk it extra deep to accommodate my legs, and sits a couple of inches higher than a standard office desk, which feels much better to work at. I also invested in a proper chair, preventing me from fidgeting, and allowing me to get comfortable.
 
-            p.blog-post__text There’s also no background chatter at home either, meaning it’s impossible for me to be dragged into conversations, or get distracted by noises behind me.
+          h4.blog-post__h4 Sound
 
-        .grid__item
-          +author-bio-mike()
+          p.blog-post__text I find I’m able to concentrate much more with the right kind of music playing. In a shared working environment I’m forced to use headphones, but at home I can crank up the Sonos in comfort.
 
-    .section
+          p.blog-post__text There’s also no background chatter at home either, meaning it’s impossible for me to be dragged into conversations, or get distracted by noises behind me.
+
+    .section.section--spacing-top
       .container
-        hr.divider.divider--margin-blog
         .grid.grid--blog.grid--blog-post

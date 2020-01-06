@@ -6,87 +6,85 @@ block prepend vars
   -var metaTitle = "For the love of winning work"
   -var metaDescription = "Looking for the one is often a slog. Stepping into the unknown, the desire to please, kissing frogs; it’s time consuming, and it’s difficult."
 
+  -var heroHeading = "For the love of winning work"
+  -var heroSubheading = "(by Chris Annetts)"
+
 block pageComponents
+
   +banner({
-    bannerCompany: "For the love of winning work",
-    bannerModifer: "photo",
-    bannerImage: {
-      src: "/assets/images/blog/man-with-flowers.jpg",
-      alt: "Man holding flowers",
-    },
   })
 
-  .section.section--margin
-    .container
-      +share-icons({
-        socialModifier: "inline"
-      })
+  .banner-spacer
+
+  +hero({
+    heroHeading: heroHeading,
+    heroSubheading: heroSubheading,
+  })
 
   .section
     .container
 
-      .grid.grid--blog
-        .grid__item.grid__item--span-2
-          .blog-post
-            h1.blog-post__h1 For the love of winning work
+      .grid.grid--center
 
-            p.blog-post__intro My wife recently turned to me during an episode of First Dates and remarked how lucky we were that we’d, “never have to do that again”. She was of course referring to the torturous, treacherous road to finding love.
+        +share-icons({
+          socialModifier: "inline"
+        })
 
-            p.blog-post__text Looking for the one is often a slog. Stepping into the unknown, the desire to please, kissing frogs; it’s time consuming, and it’s difficult.
+        .blog-post
 
-            p.blog-post__text Except, these problems are not exclusive to dating. Instead, they’re products of seeking out people you’re prepared to invest in. In the case of love, it’s an emotional investment. In business, it’s often financial.
+          p.blog-post__intro My wife recently turned to me during an episode of First Dates and remarked how lucky we were that we’d, “never have to do that again”. She was of course referring to the torturous, treacherous road to finding love.
 
-            h4.blog-post__h4 Looking to win work? Learn to date
+          p.blog-post__text Looking for the one is often a slog. Stepping into the unknown, the desire to please, kissing frogs; it’s time consuming, and it’s difficult.
 
-            p.blog-post__text Finding the right client to invest in isn’t easy. Like dating, it’s a minefield. But if you’re prepared to look in unexpected places, there’s more advice than anyone could ever possibly need.
+          p.blog-post__text Except, these problems are not exclusive to dating. Instead, they’re products of seeking out people you’re prepared to invest in. In the case of love, it’s an emotional investment. In business, it’s often financial.
 
-            p.blog-post__text Like anything that affects the masses, the Internet is awash with dating hints, tips, and how-to’s. Except they’re not simply pointers on looking for love; they’re blueprints that tap into human behaviour, helping us find, impress, and then analyse people.
+          h4.blog-post__h4 Looking to win work? Learn to date
 
-            p.blog-post__text On a date, everything in up from grabs. Every detail, from your attire all the way to intimacies like eye-contact, are opportunities to either impress or disappoint. Meeting potential clients is no different.
+          p.blog-post__text Finding the right client to invest in isn’t easy. Like dating, it’s a minefield. But if you’re prepared to look in unexpected places, there’s more advice than anyone could ever possibly need.
 
-            h4.blog-post__h4 The search
+          p.blog-post__text Like anything that affects the masses, the Internet is awash with dating hints, tips, and how-to’s. Except they’re not simply pointers on looking for love; they’re blueprints that tap into human behaviour, helping us find, impress, and then analyse people.
 
-            h5.blog-post__h5 Figure out what you want
-            p.blog-post__text What are you actually looking for? A quick fling or a long-term partnership? Deciding what you want from the outset will keep you focussed on only those who are looking for the same thing.
+          p.blog-post__text On a date, everything in up from grabs. Every detail, from your attire all the way to intimacies like eye-contact, are opportunities to either impress or disappoint. Meeting potential clients is no different.
 
-            h5.blog-post__h5 Broaden your horizons
-            p.blog-post__text There are opportunities everywhere, but where you look has a bearing on the kind of partner you’ll find. The places people frequent and the circles that they mix in are just two indicators of what you can expect from them.
+          h4.blog-post__h4 The search
 
-            h5.blog-post__h5 Be proactive
-            p.blog-post__text It’s rare that a good thing simply falls in to your lap, and you’re going to have to put yourself out there if you want to get noticed. Don’t sit about and hope for the best; get out there and make it happen.
+          h5.blog-post__h5 Figure out what you want
+          p.blog-post__text What are you actually looking for? A quick fling or a long-term partnership? Deciding what you want from the outset will keep you focussed on only those who are looking for the same thing.
 
-            h5.blog-post__h5 Lean on mutual acquaintances
-            p.blog-post__text Matchmakers are good thing. Once the relationship has started, both parties are invested, for better or worse; having someone to vouch for either side is lower risk than a blind date.
+          h5.blog-post__h5 Broaden your horizons
+          p.blog-post__text There are opportunities everywhere, but where you look has a bearing on the kind of partner you’ll find. The places people frequent and the circles that they mix in are just two indicators of what you can expect from them.
 
-            h4.blog-post__h4 First date
+          h5.blog-post__h5 Be proactive
+          p.blog-post__text It’s rare that a good thing simply falls in to your lap, and you’re going to have to put yourself out there if you want to get noticed. Don’t sit about and hope for the best; get out there and make it happen.
 
-            h5.blog-post__h5 First impressions matter
-            p.blog-post__text Humans supposedly judge one-another in the first 7 seconds, and how you present yourself the first time is a strong indication of what they can expect from you going forward.
+          h5.blog-post__h5 Lean on mutual acquaintances
+          p.blog-post__text Matchmakers are good thing. Once the relationship has started, both parties are invested, for better or worse; having someone to vouch for either side is lower risk than a blind date.
 
-            h5.blog-post__h5 Believe in yourself
-            p.blog-post__text Confidence is key; believing you’re good enough is half the battle. Whether it comes naturally or not, the key is preparation; have a plan, and make sure you know it inside out. If you’re not confident in yourself, how can they be?
+          h4.blog-post__h4 First date
 
-            h5.blog-post__h5 Be attentive
-            p.blog-post__text Don’t be that person who focuses on themselves; there are two parties getting to know each other. Pay attention to their needs; get to know them, and understand what makes them tick.
+          h5.blog-post__h5 First impressions matter
+          p.blog-post__text Humans supposedly judge one-another in the first 7 seconds, and how you present yourself the first time is a strong indication of what they can expect from you going forward.
 
-            h5.blog-post__h5 What are they looking for?
-            p.blog-post__text This is also your opportunity to gauge whether they’re a good fit for you. What are their expectations from this partnership? It’s a two-way street, and you’re both going to have to work well together.
+          h5.blog-post__h5 Believe in yourself
+          p.blog-post__text Confidence is key; believing you’re good enough is half the battle. Whether it comes naturally or not, the key is preparation; have a plan, and make sure you know it inside out. If you’re not confident in yourself, how can they be?
 
-            h4.blog-post__h4 Reflection
+          h5.blog-post__h5 Be attentive
+          p.blog-post__text Don’t be that person who focuses on themselves; there are two parties getting to know each other. Pay attention to their needs; get to know them, and understand what makes them tick.
 
-            h5.blog-post__h5 Did you want the same thing?
-            p.blog-post__text If their needs don’t align to yours, that’s fine. In fact, it’s much better to realise that now, rather than two months in to a project. Pressing on regardless, or painfully bending to fit their expectations, will only end badly.
+          h5.blog-post__h5 What are they looking for?
+          p.blog-post__text This is also your opportunity to gauge whether they’re a good fit for you. What are their expectations from this partnership? It’s a two-way street, and you’re both going to have to work well together.
 
-            h5.blog-post__h5 Did you even like them?
-            p.blog-post__text For all the effort you put in trying to impress them, it’s just as important to reflect on whether they did it for you too. You’re probably going to be spending a lot of time with this person, and getting along is going to make everything that much easier.
+          h4.blog-post__h4 Reflection
 
-            h5.blog-post__h5 Don’t fixate on the one
-            p.blog-post__text If something doesn’t work out, don’t beat yourself up. There will be pain in the pursuit of work. Get back on that horse; there’s plenty more organisations in the sea.
+          h5.blog-post__h5 Did you want the same thing?
+          p.blog-post__text If their needs don’t align to yours, that’s fine. In fact, it’s much better to realise that now, rather than two months in to a project. Pressing on regardless, or painfully bending to fit their expectations, will only end badly.
 
-        .grid__item
-          +author-bio-chris()
+          h5.blog-post__h5 Did you even like them?
+          p.blog-post__text For all the effort you put in trying to impress them, it’s just as important to reflect on whether they did it for you too. You’re probably going to be spending a lot of time with this person, and getting along is going to make everything that much easier.
 
-    .section
+          h5.blog-post__h5 Don’t fixate on the one
+          p.blog-post__text If something doesn’t work out, don’t beat yourself up. There will be pain in the pursuit of work. Get back on that horse; there’s plenty more organisations in the sea.
+
+    .section.section--spacing-top
       .container
-        hr.divider.divider--margin-blog
         .grid.grid--blog.grid--blog-post
