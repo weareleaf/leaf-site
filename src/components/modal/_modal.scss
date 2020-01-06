@@ -65,8 +65,12 @@
     outline: none;
     padding: 0;
     position: absolute;
-    right: $spacing-5;
-    top: $spacing-4;
+    right: $spacing-6;
+    top: $spacing-5;
+
+    &::before {
+      content: url('/assets/images/icons/close.svg');
+    }
   }
 }
 
