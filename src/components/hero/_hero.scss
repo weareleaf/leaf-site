@@ -13,13 +13,12 @@
   &__heading {
     font-size: $font-size-h1;
     line-height: 1.125em;
-    margin-bottom: 0;
+    margin-bottom: $spacing-2;
     text-align: center;
 
     @media screen and (min-width: map-get($breakpoints, "breakpoint-1")) {
       font-size: 3rem;
       line-height: 1.075em;
-      margin-bottom: $spacing-2;
     }
 
     @media screen and (min-width: map-get($breakpoints, "breakpoint-6")) {
