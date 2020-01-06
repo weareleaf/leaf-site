@@ -3,7 +3,11 @@
   border-radius: 8px;
   display: block;
   height: 100%;
-  padding: $spacing-6;
+  padding: $spacing-5;
+
+  @media screen and (min-width: map-get($breakpoints, 'breakpoint-3')) {
+    padding: $spacing-6;
+  }
 
   &:hover {
     text-decoration: none;
@@ -20,6 +24,10 @@
   &__heading {
     font-size: $font-size-h3;
     margin: 0 0 $spacing-3;
+
+    @media screen and (min-width: map-get($breakpoints, 'breakpoint-3')) {
+      font-size: 1.5rem;
+    }
   }
 
   &__text {
