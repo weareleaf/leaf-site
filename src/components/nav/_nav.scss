@@ -42,7 +42,20 @@
 
     &--active {
       pointer-events: none;
-  }
+      position: relative;
+
+      &::after {
+        background: $color-green;
+        content: '';
+        height: 3px;
+        left:0;
+        margin: 10px auto;
+        position: absolute;
+        right:0;
+        top: 100%;
+        width: $size-1;
+      }
+    }
 
   &__text {
     display: inline-block;
