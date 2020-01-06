@@ -46,7 +46,7 @@
     max-width: 7.5rem;
 
     @media screen and (min-width: map-get($breakpoints, "breakpoint-4")) {
-      height: 10rem;
+      height: $size-8;
       width: 7.5rem;
     }
   } 

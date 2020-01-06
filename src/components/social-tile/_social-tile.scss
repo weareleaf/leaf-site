@@ -1,4 +1,5 @@
 $icon-size: 2.7rem;
+$image-size: $size-1;
 
 .social-tile {
   @media screen and (min-width: map-get($breakpoints, "breakpoint-3")) {
@@ -19,12 +20,12 @@ $icon-size: 2.7rem;
   }
 
   &__image {
-    height: 1rem;
+    height: $image-size;
     left: 50%;
     position: absolute;
     top: 50%;
     transform: translate(-50%, -50%);
-    width: 1rem;
+    width: $image-size;
   }
 
   &__content {

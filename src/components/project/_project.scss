@@ -1,4 +1,4 @@
-$image-height: 30rem;
+$image-height: $size-11;
 
 .project {
   display: grid;
@@ -44,7 +44,11 @@ $image-height: 30rem;
   }
 
   &__text {
-    margin-bottom: $spacing-5;
+    margin-bottom: $spacing-3;
+
+    @media screen and (min-width: map-get($breakpoints, "breakpoint-3")) {
+      margin-bottom: $spacing-5;
+    }
   }
 
   &__media {
