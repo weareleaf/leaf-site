@@ -89,7 +89,7 @@
   }
 
   &__subheading {
-    color: $color-purple-light;
+    color: $color-purple-lightest;
     font-family: $font-family-sans-serif-bold;
     font-size: .6rem;
     letter-spacing: .05rem;
@@ -124,8 +124,8 @@
 
   &__info {
     align-items: center;
-    border-top: $border-width-base $border-style #5253A8;
-    color: $color-purple-light;
+    border-top: $border-width-base $border-style $color-purple-light;
+    color: $color-purple-lightest;
     display: flex;
     flex-direction: column;
     font-family: $font-family-sans-serif-regular;
