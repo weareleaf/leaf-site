@@ -1,5 +1,4 @@
 .footer {
-  background-color: #28288B;
   display: block;
   padding: 0;
 
@@ -90,7 +89,7 @@
   }
 
   &__subheading {
-    color: #9999E6;
+    color: $color-purple-light;
     font-family: $font-family-sans-serif-bold;
     font-size: .6rem;
     letter-spacing: .05rem;
@@ -126,7 +125,7 @@
   &__info {
     align-items: center;
     border-top: $border-width-base $border-style #5253A8;
-    color: #9999E6;
+    color: $color-purple-light;
     display: flex;
     flex-direction: column;
     font-family: $font-family-sans-serif-regular;
