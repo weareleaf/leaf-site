@@ -21,7 +21,7 @@ html {
 }
 
 body {
-  background-color: #28288B;
+  background-color: $color-body;
   font-family: $font-family-sans-serif-light;
   font-size: $font-size-xs;
   -webkit-font-smoothing: subpixel-antialiased;

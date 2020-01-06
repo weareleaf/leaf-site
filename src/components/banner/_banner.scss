@@ -1,6 +1,6 @@
 .banner {
   align-items: center;
-  background-color: #31319B;
+  background-color: $color-container;
   display: flex;
   justify-content: space-between;
   padding: 1.65rem $spacing-5;
@@ -32,7 +32,7 @@
     padding: 0;
 
     @media screen and (min-width: map-get($breakpoints, "breakpoint-2")) {
-      background-color: #31319B;
+      background-color: $color-container;
       padding: $spacing-4;
     }
   }

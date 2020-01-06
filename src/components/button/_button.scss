@@ -1,5 +1,5 @@
 .button {
-    background-color: $color-button;
+    background-color: $color-purple-dark;
     border: none;
     border-radius: 5px;
     color: $color-white;
@@ -19,7 +19,7 @@
 
   &:hover,
   &:focus {
-    background-color: darken($color-button, 3%);
+    background-color: darken($color-purple-dark, 3%);
     text-decoration: none;
   }
 

@@ -8,7 +8,7 @@
   }
 
   &__container {
-    background-color: #31319B;
+    background-color: $color-container;
     border-radius: 9px;
 
     @media screen and (min-width: map-get($breakpoints, "breakpoint-1")) {

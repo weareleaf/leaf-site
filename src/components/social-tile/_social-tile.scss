@@ -6,7 +6,7 @@ $icon-size: 2.7rem;
   }
 
   &__icon {
-    background-color: #31319B;
+    background-color: $color-container;
     border-radius: $border-radius-full;
     position: relative;
     text-align: center;
