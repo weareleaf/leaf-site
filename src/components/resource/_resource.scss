@@ -10,17 +10,29 @@
   &__container {
     background-color: #31319B;
     border-radius: 9px;
-    display: grid;
-    grid-template-columns: auto 1fr;
+
+    @media screen and (min-width: map-get($breakpoints, "breakpoint-1")) {
+      display: grid;
+      grid-template-columns: auto 1fr;
+    }
   }
 
   &__left {
-    padding: $spacing-3;
+    display: none;
+
+    @media screen and (min-width: map-get($breakpoints, "breakpoint-1")) {
+      display: block;
+      padding: $spacing-3;
+    }
   }
 
   &__right {
     align-self: center;
-    padding: $spacing-4 $spacing-3;
+    padding: $spacing-5;
+
+    @media screen and (min-width: map-get($breakpoints, "breakpoint-1")) {
+      padding: $spacing-4 $spacing-3;
+    }
   }
 
   &__media {
