@@ -11,9 +11,8 @@
 
   &__heading {
     color: $color-green;
-    font-family: 'Larsseit', sans-serif;
+    font-family: $font-family-sans-serif-bold;
     font-size: $font-size-h2;
-    font-weight: bold;
     line-height: $heading-line-height;
     margin: 0 0 $spacing-3;
     text-align: center;
@@ -91,9 +90,8 @@
 
   &__subheading {
     color: $color-purple-lightest;
-    font-family: 'Larsseit', sans-serif;
+    font-family: $font-family-sans-serif-bold;
     font-size: .6rem;
-    font-weight: bold;
     letter-spacing: .05rem;
     margin: 0;
     text-transform: uppercase;
@@ -130,9 +128,8 @@
     color: $color-purple-lightest;
     display: flex;
     flex-direction: column;
-    font-family: 'Larsseit', sans-serif;
+    font-family: $font-family-sans-serif-regular;
     font-size: $font-size-xs;
-    font-weight: normal;
     margin-top: $spacing-7;
     padding: $spacing-5 0;
 

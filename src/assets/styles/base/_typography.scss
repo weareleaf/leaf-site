@@ -219,9 +219,8 @@ img {
 
   &__heading {
     color: #222277;
-    font-family: 'Larsseit', sans-serif;
+    font-family: $font-family-sans-serif-bold;
     font-size: 2.5rem;
-    font-weight: bold;
     margin-bottom: -1.5rem;
     text-align: center;
     z-index: -1;
