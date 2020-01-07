@@ -1,13 +1,12 @@
 mixin resource(c)
   a.resource(href= c.resourceUrl)
     .resource__container
-      .resource__left
-        +image({    
-          context: "resource",
-          src: c.resourceImage.src,
-          alt: c.resourceImage.alt
-        })
-      .resource__right
+      +image({    
+        context: "resource",
+        src: c.resourceImage.src,
+        alt: c.resourceImage.alt
+      })
+      .resource__content
         .resource__meta
           p.resource__subheading= c.resourceSubheading
           if c.resourceBadge

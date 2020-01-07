@@ -17,26 +17,13 @@
     }
   }
 
-  &__left {
+  &__media {
     display: none;
 
     @media screen and (min-width: map-get($breakpoints, "breakpoint-1")) {
-      display: block;
+      display: flex;
       padding: $spacing-3;
     }
-  }
-
-  &__right {
-    align-self: center;
-    padding: $spacing-5;
-
-    @media screen and (min-width: map-get($breakpoints, "breakpoint-1")) {
-      padding: $spacing-4 $spacing-3;
-    }
-  }
-
-  &__media {
-    display: flex;
   }
 
   &__image {
@@ -48,6 +35,15 @@
     @media screen and (min-width: map-get($breakpoints, "breakpoint-4")) {
       height: 8.5rem;
       width: 8.5rem;
+    }
+  }
+
+  &__content {
+    align-self: center;
+    padding: $spacing-5;
+
+    @media screen and (min-width: map-get($breakpoints, "breakpoint-1")) {
+      padding: $spacing-4 $spacing-3;
     }
   }
 
