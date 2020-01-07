@@ -19,7 +19,7 @@ $image-height: $size-11;
 
   &__content {
     @media screen and (min-width: map-get($breakpoints, "breakpoint-2")) {
-      width: 80%; 
+      width: 80%;
     }
 
     @media screen and (min-width: map-get($breakpoints, "breakpoint-3")) {
@@ -44,6 +44,7 @@ $image-height: $size-11;
   }
 
   &__text {
+    font-size: $font-size-md;
     margin-bottom: $spacing-3;
 
     @media screen and (min-width: map-get($breakpoints, "breakpoint-3")) {
