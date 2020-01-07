@@ -1,14 +1,13 @@
+// Larsseit Regular (Normal, Italic, Bold) to be called using standard methods.
+// e.g. font-family: 'Larsseit'; font-weight: 700;
+
+// Larsseit Light, Medium, and ExtraBold to be called via font-famaily; not font-weight.
+// e.g. font-family: 'Larsseit-Medium';
+
+// @import must be at top of file, otherwise CSS will not work
 @import url("//hello.myfonts.net/count/3a8a2c");
 
-@font-face {
-  font-family: 'Larsseit-ExtraBold';
-  src: url('../fonts/3A8A2C_0_0.eot');
-  src: url('../fonts/3A8A2C_0_0.eot?#iefix') format('embedded-opentype'),
-    url('../fonts/3A8A2C_0_0.woff2') format('woff2'),
-    url('../fonts/3A8A2C_0_0.woff') format('woff'),
-    url('../fonts/3A8A2C_0_0.ttf') format('truetype');
-}
-
+// Larsseit Light
 @font-face {
   font-family: 'Larsseit-Light';
   src: url('../fonts/3A8A2C_1_0.eot');
@@ -18,27 +17,11 @@
     url('../fonts/3A8A2C_1_0.ttf') format('truetype');
 }
 
+// Larsseit Regular
 @font-face {
   font-family: 'Larsseit';
-  font-weight: bold;font-style: normal;
-  src: url('../fonts/3A8A2C_2_0.eot');
-  src: url('../fonts/3A8A2C_2_0.eot?#iefix') format('embedded-opentype'),
-    url('../fonts/3A8A2C_2_0.woff2') format('woff2'),
-    url('../fonts/3A8A2C_2_0.woff') format('woff'),
-    url('../fonts/3A8A2C_2_0.ttf') format('truetype');
-}
-
-@font-face {
-  font-family: 'Larsseit-Medium';
-  src: url('../fonts/3A8A2C_3_0.eot');
-  src: url('../fonts/3A8A2C_3_0.eot?#iefix') format('embedded-opentype'),
-    url('../fonts/3A8A2C_3_0.woff2') format('woff2'),
-    url('../fonts/3A8A2C_3_0.woff') format('woff'),url('webfonts/3A8A2C_3_0.ttf') format('truetype');
-}
-
-@font-face {
-  font-family: 'Larsseit';
-  font-weight: normal;font-style: normal;
+  font-style: normal;
+  font-weight: normal;
   src: url('../fonts/3A8A2C_4_0.eot');
   src: url('../fonts/3A8A2C_4_0.eot?#iefix') format('embedded-opentype'),
     url('../fonts/3A8A2C_4_0.woff2') format('woff2'),
@@ -46,11 +29,46 @@
     url('../fonts/3A8A2C_4_0.ttf') format('truetype');
 }
 
+// Larsseit Regular (italic)
 @font-face {
   font-family: 'Larsseit';
-  font-weight: normal;font-style: italic;
+  font-style: italic;
+  font-weight: normal;
   src: url('../fonts/3A8A2C_5_0.eot');
   src: url('../fonts/3A8A2C_5_0.eot?#iefix') format('embedded-opentype'),
     url('../fonts/3A8A2C_5_0.woff2') format('woff2'),
-    url('../fonts/3A8A2C_5_0.woff') format('woff'),url('webfonts/3A8A2C_5_0.ttf') format('truetype');
+    url('../fonts/3A8A2C_5_0.woff') format('woff'),
+    url('webfonts/3A8A2C_5_0.ttf') format('truetype');
+}
+
+// Larsseit Medium
+@font-face {
+  font-family: 'Larsseit-Medium';
+  src: url('../fonts/3A8A2C_3_0.eot');
+  src: url('../fonts/3A8A2C_3_0.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/3A8A2C_3_0.woff2') format('woff2'),
+    url('../fonts/3A8A2C_3_0.woff') format('woff'),
+    url('webfonts/3A8A2C_3_0.ttf') format('truetype');
+}
+
+// Larsseit Bold
+@font-face {
+  font-family: 'Larsseit';
+  font-style: normal;
+  font-weight: bold;
+  src: url('../fonts/3A8A2C_2_0.eot');
+  src: url('../fonts/3A8A2C_2_0.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/3A8A2C_2_0.woff2') format('woff2'),
+    url('../fonts/3A8A2C_2_0.woff') format('woff'),
+    url('../fonts/3A8A2C_2_0.ttf') format('truetype');
+}
+
+// Larsseit ExtraBold
+@font-face {
+  font-family: 'Larsseit-ExtraBold';
+  src: url('../fonts/3A8A2C_0_0.eot');
+  src: url('../fonts/3A8A2C_0_0.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/3A8A2C_0_0.woff2') format('woff2'),
+    url('../fonts/3A8A2C_0_0.woff') format('woff'),
+    url('../fonts/3A8A2C_0_0.ttf') format('truetype');
 }

@@ -45,13 +45,13 @@
     @media screen and (min-width: map-get($breakpoints, "breakpoint-1")) {
       padding: $spacing-4 $spacing-3;
     }
-  } 
+  }
 
   &__meta {
     align-items: center;
     color: $color-white;
     display: flex;
-    font-family: $font-family-sans-serif-bold;
+    font-weight: 700;
     letter-spacing: .05rem;
     position: relative;
     text-transform: uppercase;
