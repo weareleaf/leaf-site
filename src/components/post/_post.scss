@@ -4,21 +4,29 @@
   display: block;
   height: 100%;
   padding: $spacing-5;
+  transition: transform $duration-2 $timing-ease;
 
   @media screen and (min-width: map-get($breakpoints, 'breakpoint-3')) {
     padding: $spacing-6;
   }
 
-  &:hover {
+  @include hover {
     text-decoration: none;
+    transform: scale(1.04);
   }
 
   &__meta {
     color: $color-white;
     font-size: .6rem;
+    font-family: $font-family-sans-serif-bold;
     letter-spacing: .05rem;
     margin-bottom: $spacing-3;
     text-transform: uppercase;
+  }
+
+  &__middle-dot {
+    @include margin-horizontal($spacing-1);
+    color: $color-green;
   }
 
   &__heading {
@@ -31,9 +39,11 @@
   }
 
   &__text {
+    -webkit-box-orient: vertical;
     color: $color-white;
+    display: -webkit-box;
+    -webkit-line-clamp: 4;
     margin: 0;
-    line-clamp: 3;
     overflow: hidden;
   }
 }

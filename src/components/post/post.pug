@@ -1,6 +1,10 @@
 mixin post(c)
   a.post(href= c.postUrl)
     .post__content
-      h6.post__meta= c.postMeta
+      .post__meta
+        span.post__category= c.postCategory
+        span.post__middle-dot &middot;
+        span.post__mins #{c.postMins} min read
+
       h3.post__heading= c.postHeading
       p.post__text= c.postText

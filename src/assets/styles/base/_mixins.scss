@@ -12,6 +12,25 @@
   padding: 0 1.25rem;
 }
 
+@mixin hover {
+  &:hover {
+    // The primary input mechanism of the device includes an accurate pointing device
+    @media (pointer: fine) {
+      @content;
+    }
+
+    // Target Firefox
+    @-moz-document url-prefix() {
+      @content;
+    }
+
+    // Target IE11
+    @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+      @content;
+    }
+  }
+}
+
 @mixin margin-horizontal($margin) {
   margin-left: $margin;
   margin-right: $margin;
