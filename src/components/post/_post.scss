@@ -33,5 +33,7 @@
   &__text {
     color: $color-white;
     margin: 0;
+    line-clamp: 3;
+    overflow: hidden;
   }
 }
