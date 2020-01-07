@@ -29,7 +29,6 @@
     color: $color-white;
     display: block;
     font-size: .75rem;
-    outline: none;
     position: relative;
 
     @media screen and (min-width: map-get($breakpoints, "breakpoint-1")) {

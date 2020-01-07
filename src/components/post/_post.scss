@@ -17,9 +17,8 @@
 
   &__meta {
     color: $color-white;
-    font-family: 'Larsseit', sans-serif;
     font-size: .6rem;
-    font-weight: bold;
+    font-family: $font-family-sans-serif-bold;
     letter-spacing: .05rem;
     margin-bottom: $spacing-3;
     text-transform: uppercase;

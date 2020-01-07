@@ -39,9 +39,8 @@ $image-size: $size-1;
 
   &__heading {
     color: $color-white;
-    font-family: 'Larsseit', sans-serif;
+    font-family: $font-family-sans-serif-bold;
     font-size: .6rem;
-    font-weight: bold;
     letter-spacing: .05rem;
     margin-bottom: 0;
     text-transform: uppercase;
