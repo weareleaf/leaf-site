@@ -14,13 +14,10 @@
   }
 
   &__main {
-    align-items: center;
-    display: flex;
-    flex-direction: column;
+    display: grid;
 
     @media screen and (min-width: map-get($breakpoints, "breakpoint-1")) {
-      flex-direction: row;
-      justify-content: space-between;
+      grid-template-columns: 1fr auto 1fr;
       padding: $spacing-4 0;
     }
   }
@@ -42,6 +39,7 @@
   }
 
   &__nav {
+    align-self: center;
     display: flex;
     margin-bottom: $spacing-1;
     top: $spacing-6;
@@ -53,6 +51,11 @@
     @media screen and (min-width: map-get($breakpoints, "breakpoint-10")) {
       top: $spacing-7;
     }
+  }
+
+  &__contact {
+    align-self: center;
+    justify-self: end;
   }
 
   &__address {
