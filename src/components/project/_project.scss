@@ -64,8 +64,25 @@ $image-height: $size-11;
       position: absolute;
       top: 0;
 
-      &--test {
-        height: 20rem;
+      &--120 {
+        left: 0;
+        transform: scale(1.2);
+        top: 15%;
+      }
+
+      &--90 {
+        height: 90%;
+        top: 5.5%;
+      }
+
+      &--85 {
+        height: 85%;
+        top: 12.5%;
+      }
+
+      &--80 {
+        height: 80%;
+        top: 10%;
       }
     }
 
