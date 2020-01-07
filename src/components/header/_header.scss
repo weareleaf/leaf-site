@@ -7,16 +7,19 @@
   width: 100%;
   z-index: 90;
 
-  @media screen and (min-width: map-get($breakpoints, "breakpoint-2")) {
+  @media screen and (min-width: map-get($breakpoints, "breakpoint-1")) {
     padding: 0;
     background-color: transparent;
     position: static;
   }
 
   &__main {
-    @media screen and (min-width: map-get($breakpoints, "breakpoint-2")) {
-      align-items: center;
-      display: flex;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+
+    @media screen and (min-width: map-get($breakpoints, "breakpoint-1")) {
+      flex-direction: row;
       justify-content: space-between;
       padding: $spacing-4 0;
     }
@@ -27,31 +30,28 @@
   }
 
   &__logo {
-    left: 1.25rem;
-    margin: 0 auto;
-    top: $spacing-6;
+    margin: 0 auto $spacing-1 auto;
     width: $size-4;
 
-    @media screen and (min-width: map-get($breakpoints, "breakpoint-2")) {
+    @media screen and (min-width: map-get($breakpoints, "breakpoint-1")) {
+      left: 1.25rem;
       margin: 0;
+      top: $spacing-6;
       width: $size-6;
     }
   }
 
   &__nav {
     display: flex;
+    margin-bottom: $spacing-1;
     top: $spacing-6;
+
+    @media screen and (min-width: map-get($breakpoints, "breakpoint-1")) {
+      margin-bottom: 0;
+    }
 
     @media screen and (min-width: map-get($breakpoints, "breakpoint-10")) {
       top: $spacing-7;
-    }
-  }
-
-  &__contact {
-    display: none;
-
-    @media screen and (min-width: map-get($breakpoints, "breakpoint-2")) {
-      display: block;
     }
   }
 
