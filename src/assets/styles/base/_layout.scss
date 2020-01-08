@@ -69,10 +69,9 @@ main {
 }
 
 .banner-spacer {
-  display: none;
+  height: 4rem;
 
   @media screen and (min-width: map-get($breakpoints, 'breakpoint-2')) {
-    display: block;
-    height: 4.75rem;
+    height: 5rem;
   }
 }

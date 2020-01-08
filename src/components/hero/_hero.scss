@@ -1,9 +1,9 @@
 .hero {
-  margin: $spacing-10 0 $spacing-7 0;
+  margin: $spacing-7 0;
   position: relative;
 
   @media screen and (min-width: map-get($breakpoints, "breakpoint-1")) {
-    margin: $spacing-8 0 $spacing-9 0;
+    margin: $spacing-8 0;
   }
 
   &__container {
