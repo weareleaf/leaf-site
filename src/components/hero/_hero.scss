@@ -12,13 +12,11 @@
 
   &__heading {
     font-size: $font-size-h1;
-    line-height: 1.125em;
-    margin-bottom: $spacing-2;
+    margin-bottom: $spacing-1;
     text-align: center;
 
     @media screen and (min-width: map-get($breakpoints, "breakpoint-1")) {
       font-size: 3rem;
-      line-height: 1.075em;
     }
 
     @media screen and (min-width: map-get($breakpoints, "breakpoint-6")) {
@@ -30,7 +28,6 @@
   &__subheading {
     font-family: 'Permanent Marker', cursive;
     font-size: $font-size-sm;
-    line-height: 1.412em;
     margin: 0;
     text-align: center;
 

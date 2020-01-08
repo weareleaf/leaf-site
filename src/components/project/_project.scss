@@ -66,8 +66,14 @@ $image-height: $size-11;
       position: absolute;
       top: 0;
 
-      &--120 {
+      /*
+      The Laced image was too close to the hero. It's also quite awkward and big, and deviates from
+      the sizing scale below by so much that the class feels like a one-time usage.
+      */
+
+      &--laced {
         height: 120%;
+        top: $spacing-10;
       }
 
       &--90 {
