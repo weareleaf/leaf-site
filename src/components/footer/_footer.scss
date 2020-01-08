@@ -1,6 +1,10 @@
 .footer {
   display: block;
-  padding-top: $spacing-8;
+  padding-top: $spacing-4;
+
+  @media screen and (min-width: map-get($breakpoints, 'breakpoint-3')) {
+    padding-top: $spacing-8;
+  }
 
   &__cta {
     align-items: center;
