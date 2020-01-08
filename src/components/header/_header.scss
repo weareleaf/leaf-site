@@ -1,10 +1,6 @@
 .header {
   background-color: $color-container;
-  padding: $spacing-3 0 $spacing-1 0;
-  pointer-events: none;
-  top: 0;
-  width: 100%;
-  z-index: 90;
+  padding: $spacing-4 0 $spacing-1 0;
 
   @media screen and (min-width: map-get($breakpoints, "breakpoint-1")) {
     padding: 0;
@@ -23,19 +19,12 @@
     }
   }
 
-  & > div {
-    pointer-events: auto;
-  }
-
   &__logo {
     margin: 0 auto;
-    width: $size-4;
+    width: $size-5;
 
     @media screen and (min-width: map-get($breakpoints, "breakpoint-1")) {
-      //left: 1.25rem;
-      //margin: 0;
-      //top: $spacing-6;
-      //width: $size-6;
+      margin: 0;
     }
   }
 
