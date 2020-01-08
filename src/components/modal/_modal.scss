@@ -65,11 +65,15 @@
     outline: none;
     padding: 0;
     position: absolute;
-    right: $spacing-6;
+    right: $spacing-5;
     top: $spacing-5;
 
     &::before {
       content: url('/assets/images/icons/close.svg');
+    }
+
+    @media screen and (min-width: map-get($breakpoints, "breakpoint-6")) {
+      top: 1.25rem;
     }
   }
 }
