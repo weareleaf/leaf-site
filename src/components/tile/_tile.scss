@@ -1,6 +1,4 @@
 .tile {
-  font-family: $font-family-sans-serif-medium;
-  font-size: $font-size-lg;
 
   &:hover,
   &:active {
@@ -43,19 +41,20 @@
     padding: $spacing-5;
 
     @media screen and (min-width: map-get($breakpoints, "breakpoint-1")) {
-      padding: $spacing-4 $spacing-3;
+      padding: $spacing-4 $spacing-5 $spacing-4 $spacing-3;
     }
   }
 
   &__heading {
     color: $color-green;
-    font-size: 1.3rem;
+    font-size: $font-size-h3;
+    font-weight: 700;
     margin-bottom: $spacing-1;
   }
 
   &__text {
     color: $color-white;
-    font-family: $font-family-sans-serif-light;
+    font-family: $font-family-sans-serif-regular;
     font-size: $font-size-sm;
     line-height: $line-height;
     margin: 0;
