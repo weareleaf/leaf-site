@@ -1,6 +1,15 @@
 .header {
   background-color: $color-container;
+<<<<<<< HEAD
   padding: $spacing-4 0;
+=======
+  padding: $spacing-3 0;
+  pointer-events: none;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 90;
+>>>>>>> 9835d29c790b6b986a1b02ab61fc0189dc00c617
 
   @media screen and (min-width: map-get($breakpoints, "breakpoint-1")) {
     padding: 0;
@@ -9,9 +18,11 @@
 
   &__main {
     display: grid;
+    grid-template-rows: repeat(3, 1fr);
 
     @media screen and (min-width: map-get($breakpoints, "breakpoint-1")) {
       grid-template-columns: 1fr auto 1fr;
+      grid-template-rows: none;
       padding: $spacing-4 0;
     }
   }
@@ -21,9 +32,8 @@
   }
 
   &__logo {
-    max-width: 3rem;
-    //margin: 0 auto $spacing-1 auto;
-    //width: $size-4;
+    margin: 0 auto;
+    width: $size-4;
 
     @media screen and (min-width: map-get($breakpoints, "breakpoint-1")) {
       //left: 1.25rem;
@@ -36,7 +46,6 @@
   &__nav {
     align-self: center;
     display: flex;
-    margin-bottom: $spacing-1;
     top: $spacing-6;
 
     @media screen and (min-width: map-get($breakpoints, "breakpoint-1")) {
@@ -50,7 +59,11 @@
 
   &__contact {
     align-self: center;
-    justify-self: end;
+    justify-self: center;
+
+    @media screen and (min-width: map-get($breakpoints, "breakpoint-1")) {
+      justify-self: end;
+    }
   }
 
   &__address {
