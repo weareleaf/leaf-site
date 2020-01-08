@@ -16,13 +16,16 @@
   }
 
   &__logo {
-    left: 1.25rem;
-    top: $spacing-6;
-    width: $size-4;
+    width: $size-5;
 
-    @media screen and (min-width: map-get($breakpoints, "breakpoint-2")) {
+    @media screen and (min-width: map-get($breakpoints, "breakpoint-1")) {
       margin: 0;
-      width: $size-6;
+    }
+
+    &::before {
+      content: '';
+      display: block;
+      margin-top: .5rem;
     }
   }
 
