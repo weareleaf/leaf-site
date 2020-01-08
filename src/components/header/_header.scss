@@ -32,10 +32,10 @@
     width: $size-4;
 
     @media screen and (min-width: map-get($breakpoints, "breakpoint-1")) {
-      left: 1.25rem;
-      margin: 0;
-      top: $spacing-6;
-      width: $size-6;
+      //left: 1.25rem;
+      //margin: 0;
+      //top: $spacing-6;
+      //width: $size-6;
     }
   }
 

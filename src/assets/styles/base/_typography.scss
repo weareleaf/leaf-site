@@ -7,13 +7,11 @@ h4,
 h5,
 h6 {
   color: $heading-color;
-  font-family: $font-family-sans-serif-medium;
-  font-weight: $font-weight-base;
+  font-weight: $font-weight-heading;
   line-height: $heading-line-height;
 }
 
 h1 {
-  font-family: $font-family-sans-serif-medium;
   font-size: $font-size-h1;
   margin: 0 0 $spacing-3;
 
@@ -91,10 +89,6 @@ a {
   }
 }
 
-strong {
-  font-family: $font-family-sans-serif-bold;
-}
-
 figure {
   margin: $spacing-6 0;
 
@@ -147,12 +141,15 @@ img {
   &--margin-bottom {
     margin-bottom: $spacing-9;
   }
+
   &--margin-top {
     margin-top: $spacing-9;
   }
+
   &--margin-blog {
     margin-bottom: $spacing-7;
   }
+
   &--block-hr {
     justify-content: center;
     margin: $spacing-7 0 $spacing-7 0;
@@ -219,20 +216,20 @@ img {
 
   &__heading {
     color: #222277;
-    font-family: $font-family-sans-serif-bold;
-    font-size: 2.5rem;
-    margin-bottom: -1.5rem;
+    font-size: 4rem; // Custom font-size, unrelated to global spacing system
+    font-weight: 700;
+    margin-bottom: -3rem; // Custom margin, unrelated to global spacing system
     text-align: center;
     z-index: -1;
 
     @media screen and (min-width: map-get($breakpoints, 'breakpoint-1')) {
-      font-size: 5rem;
-      margin-bottom: -2rem;
+      font-size: 5rem; // Custom font-size, unrelated to global spacing system
+      margin-bottom: -4rem; // Custom margin, unrelated to global spacing system
     }
 
     @media screen and (min-width: map-get($breakpoints, 'breakpoint-3')) {
-      font-size: 7rem;
-      margin-bottom: -5rem;
+      font-size: 7rem; // Custom font-size, unrelated to global spacing system
+      margin-bottom: -5.5rem; // Custom margin, unrelated to global spacing system
     }
   }
 }

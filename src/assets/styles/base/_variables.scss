@@ -28,9 +28,9 @@ $color-laced: #879ac9;
 
 // Fonts
 $font-family-sans-serif-light: 'Larsseit-Light', sans-serif !default;
-$font-family-sans-serif-regular: 'Larsseit-Regular', sans-serif !default;
+$font-family-sans-serif-regular: 'Larsseit', sans-serif !default;
 $font-family-sans-serif-medium: 'Larsseit-Medium', sans-serif !default;
-$font-family-sans-serif-bold: 'Larsseit-Bold', sans-serif !default;
+$font-family-sans-serif-extrabold: 'Larsseit-ExtraBold', sans-serif !default;
 
 // Heading sizes
 $font-size-h1: 2rem !default;
@@ -54,6 +54,7 @@ $paragraph-color: $color-white;
 
 // Font weights
 $font-weight-base: 400;
+$font-weight-heading: 700;
 
 // Line heights
 $heading-line-height: 1.2 !default;
@@ -118,6 +119,7 @@ $duration-6: 500ms;
 $timing-ease: ease;
 $timing-ease-in-out: ease-in-out;
 $timing-ease-in: ease-in;
+$timing-elastic: cubic-bezier(.55, 0, .1, 1);
 
 // Breakpoints
 $breakpoints: (

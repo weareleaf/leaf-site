@@ -22,9 +22,10 @@ html {
 
 body {
   background-color: $color-purple-medium;
-  font-family: $font-family-sans-serif-light;
+  font-family: $font-family-sans-serif-regular;
   font-size: $font-size-xs;
-  -webkit-font-smoothing: subpixel-antialiased;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
   letter-spacing: .0125rem;
   line-height: $line-height;
 

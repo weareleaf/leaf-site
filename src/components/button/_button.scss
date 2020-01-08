@@ -1,21 +1,28 @@
 .button {
-    background-color: $color-purple-dark;
-    border: none;
-    border-radius: 5px;
-    color: $color-white;
-    cursor: pointer;
-    display: inline-block;
-    font-size: .75rem;
-    font-family: $font-family-sans-serif-medium;
-    padding: $spacing-3 $spacing-4;
-    text-align: center;
-    text-decoration: none;
-    transition: background-color $duration-2 $timing-ease;
+  background-color: $color-purple-dark;
+  border: none;
+  border-radius: 5px;
+  color: $color-white;
+  cursor: pointer;
+  display: inline-block;
+  font-size: .75rem;
+  font-family: $font-family-sans-serif-medium;
+  padding: $spacing-3 $spacing-4;
+  text-align: center;
+  text-decoration: none;
+  transition: background-color $duration-2 $timing-ease;
 
-    @media screen and (min-width: map-get($breakpoints, 'breakpoint-3')) {
-      font-size: $font-size-sm;
-      padding: $spacing-4 $spacing-5;
-    }
+  // Gnarly hack to force visual text alignment within a button.
+  &::before {
+    content: '';
+    display: block;
+    margin-top: .125rem;
+  }
+
+  @media screen and (min-width: map-get($breakpoints, 'breakpoint-3')) {
+    font-size: $font-size-sm;
+    padding: $spacing-4 $spacing-5;
+  }
 
   &:hover,
   &:focus {
