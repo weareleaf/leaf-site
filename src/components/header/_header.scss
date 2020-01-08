@@ -26,6 +26,12 @@
     @media screen and (min-width: map-get($breakpoints, "breakpoint-1")) {
       margin: 0;
     }
+
+    &::before {
+      content: '';
+      display: block;
+      margin-top: .5rem;
+    }
   }
 
   &__nav {
