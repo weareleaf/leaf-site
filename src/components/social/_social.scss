@@ -22,6 +22,11 @@
 
   &__link {
     display: block;
+    transition: transform $duration-2 $timing-ease;
+
+    @include hover {
+      transform: scale(1.1);
+    }
   }
 
   svg {

@@ -38,6 +38,7 @@ $image-height: $size-11;
     color: $color-white;
     font-family: $font-family-sans-serif-extrabold;
     font-size: .6rem;
+    font-weight: $font-weight-base;
     letter-spacing: .05rem;
     margin-bottom: $spacing-3;
     text-transform: uppercase;
@@ -60,29 +61,25 @@ $image-height: $size-11;
     @media screen and (min-width: map-get($breakpoints, "breakpoint-3")) {
       bottom: 0;
       height: $image-height;
+      margin: auto;
       max-width: none;
       position: absolute;
       top: 0;
 
       &--120 {
-        left: 0;
-        transform: scale(1.2);
-        top: 15%;
+        height: 120%;
       }
 
       &--90 {
         height: 90%;
-        top: 5.5%;
       }
 
       &--85 {
         height: 85%;
-        top: 12.5%;
       }
 
       &--80 {
         height: 80%;
-        top: 10%;
       }
     }
 
