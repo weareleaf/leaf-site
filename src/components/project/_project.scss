@@ -104,7 +104,7 @@ $image-height: $size-11;
 
     .project--reverse & {
       @media screen and (min-width: map-get($breakpoints, "breakpoint-4")) {
-        right: 0;
+        right: 3rem;
       }
     }
   }
