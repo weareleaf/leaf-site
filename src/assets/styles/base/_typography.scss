@@ -6,7 +6,7 @@ h3,
 h4,
 h5,
 h6 {
-  color: $heading-color;
+  color: var(--color-accent);
   font-weight: $font-weight-heading;
   line-height: $heading-line-height;
 }
@@ -22,7 +22,6 @@ h1 {
 }
 
 h2 {
-  color: $brand-primary;
   font-size: $font-size-h2;
   margin: 0 0 $spacing-3;
 
@@ -38,7 +37,7 @@ h3 {
 
 h4 {
   font-size: $font-size-h4;
-  margin: 0 0 $spacing-1;
+  margin: 0 0 $spacing-2;
 
   &:not(:first-child) {
     margin-top: $spacing-6;
@@ -81,7 +80,7 @@ p {
 }
 
 a {
-  color: $color-green;
+  color: var(--color-accent);
   text-decoration: none;
 
   &:hover {
@@ -163,7 +162,6 @@ img {
   padding: 0;
 
   &__item {
-    color: $color-white;
     position: relative;
 
     &:not(:last-child) {
@@ -193,7 +191,7 @@ img {
     }
 
     &::before {
-      background-color: $brand-primary;
+      background-color: var(--color-accent);
       content: '';
       display: block;
       height: .4rem;
@@ -206,7 +204,7 @@ img {
 }
 
 ::selection {
-  background: $brand-primary;
+  background: var(--color-accent);
   color: $color-white;
   text-shadow: none;
 }
@@ -231,22 +229,6 @@ img {
       font-size: 7rem; // Custom font-size, unrelated to global spacing system
       margin-bottom: -5.5rem; // Custom margin, unrelated to global spacing system
     }
-  }
-}
-
-.blog-post {
-  &__intro {
-    color: $color-white;
-    font-size: $font-size-md;
-    line-height: $line-height;
-    margin-bottom: $spacing-6;
-  }
-  &__h3 {
-    margin-bottom: $spacing-3;
-  }
-
-  &__h4 {
-    margin-bottom: $spacing-3;
   }
 }
 

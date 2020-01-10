@@ -1,0 +1,27 @@
+mixin presentation(c)
+  .presentation(class= c.presentationModifier ? "presentation--" + c.presentationModifier : "")
+    .presentation__content
+      if c.project
+        +project({
+          projectSubHeading: c.project.projectSubHeading,
+          projectHeading: c.project.projectHeading,
+          projectText: c.project.projectText,
+          projectButton: {
+            buttonUrl: c.project.projectButton.buttonUrl,
+            buttonText: c.project.projectButton.buttonText
+          }
+        })
+      else if c.blockList
+        +block-list({
+          blockListHeading: c.blockList.blockListHeading,
+          block: {
+            blockHeading: c.blockList.block.blockHeading,
+            blockText: c.blockList.block.blockText
+          }
+        })
+    +image({
+      context: "presentation",
+      modifier: c.imageModifier,
+      src: c.presentationImage.src,
+      alt: c.presentationImage.alt
+    })

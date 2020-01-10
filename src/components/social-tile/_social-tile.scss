@@ -38,7 +38,6 @@ $image-size: $size-1;
   }
 
   &__heading {
-    color: $color-white;
     font-size: .6rem;
     font-weight: 700;
     letter-spacing: .05rem;
@@ -47,7 +46,6 @@ $image-size: $size-1;
   }
 
   &__link {
-    color: $color-green;
     display: block;
     font-family: $font-family-sans-serif-medium;
     font-size: $font-size-xs;

@@ -1,4 +1,4 @@
-extends ../layouts/case-study.pug
+extends ../layouts/content.pug
 
 block prepend vars
   -var pageTitle = "Keen Case Study - Leaf"
@@ -8,11 +8,7 @@ block prepend vars
 
 block pageComponents
   +banner({
-    bannerModifer: "keen",
-    bannerImage: {
-      src: "/assets/images/keen/header.jpg",
-      alt: metaTitle
-    },
+    href: '/case-studies'
   })
 
   .section.section--sm-spacing

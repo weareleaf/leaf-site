@@ -20,8 +20,20 @@ html {
   }
 }
 
+.page--content {
+  --color-accent: #{$color-pink};
+  --color-background: #{$color-off-purple};
+  --color-container: #{$color-off-purple-dark};
+  --color-footer-contact: #{$color-pink};
+  --color-footer-divider: #{$color-purple-lightest};
+  --color-footer-nav: #{$color-pink};
+  --color-logo: #{$color-purple-medium};
+  --color-paragraph: #{$color-purple-medium};
+  --color-share-icons: #{$color-purple-medium};
+}
+
+
 body {
-  background-color: $color-purple-medium;
   font-family: $font-family-sans-serif-regular;
   font-size: $font-size-xs;
   -webkit-font-smoothing: antialiased;
@@ -36,4 +48,16 @@ body {
   @media screen and (min-width: map-get($breakpoints, "breakpoint-4")) {
     font-size: $root-font-size;
   }
+}
+
+.page {
+  background-color: var(--color-background);
+  color: $paragraph-color;
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+}
+
+.site-content {
+  flex: 1;
 }

@@ -1,4 +1,4 @@
-extends ../../layouts/case-study.pug
+extends ../../layouts/content.pug
 
 block prepend vars
   -var pageTitle = "Researcher job - Leaf"
@@ -9,23 +9,13 @@ block prepend vars
 block pageComponents
 
   +banner({
-    
+
   })
 
   +hero({
     heroHeading: metaTitle,
     heroSubheading: metaDescription,
   })
-
-  .section.section--sm-spacing
-    .container
-      +intro({
-        introImage: {
-          src: "/assets/images/researcher/logo.svg",
-          alt: "Leaf",
-        },
-        introText: metaDescription
-      })
 
   .section
     .container

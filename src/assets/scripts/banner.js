@@ -6,12 +6,12 @@ function onClick() {
   } else if (pathname.match(/careers/)) {
     window.location = `${origin}/careers`
   } else {
-    window.location = `${origin}/our-work`
+    window.location = `${origin}/case-studies`
   }
 }
 
 export default function () {
-  const bannerButton = document.querySelector('.banner__button')
+  const bannerButton = document.querySelector('.banner__close')
   const bannerLogo = document.querySelector('.banner__logo')
   const bannerImage = document.querySelector('.banner__media')
 
@@ -22,7 +22,7 @@ export default function () {
     } else if (pathname.match(/careers/)) {
       bannerButton.href = '/careers'
     } else {
-      bannerButton.href = '/our-work'
+      bannerButton.href = '/case-studies'
     }
   }
 

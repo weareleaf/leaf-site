@@ -13,7 +13,7 @@ $testimonial-size: 1.175rem;
 
     .testimonial--inline & {
       border: $border-width-base $border-style $color-grey-light;
-      border-radius: $border-radius;
+      border-radius: $border-radius-base;
       color: $color-grey;
       font-size: .85rem;
       margin: 0 $spacing-6 0 0;
@@ -26,7 +26,7 @@ $testimonial-size: 1.175rem;
         border: $border-width-base $border-style $color-grey-light;
         border-bottom-color: $color-white;
         border-left-color: $color-white;
-        border-top-right-radius: $border-radius;
+        border-top-right-radius: $border-radius-base;
         content: '';
         display: block;
         height: $testimonial-size;

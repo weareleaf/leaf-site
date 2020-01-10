@@ -26,7 +26,8 @@
   }
 
   &__link {
-    color: $color-white;
+    @include animated-link($border-width-base);
+    color: var(--color-footer-nav);
     display: block;
     font-size: .75rem;
     outline: none;
@@ -36,22 +37,17 @@
       font-size: $font-size-xs;
     }
 
-    &:hover {
-      color: darken($color-white, 5%);
-      text-decoration: none;
-    }
-
     &--active {
       pointer-events: none;
       position: relative;
 
-      &::after {
+      &::before {
         content: none;
       }
 
       @media screen and (min-width: map-get($breakpoints, "breakpoint-2")) {
-        &::after {
-          background: $color-green;
+        &::before {
+          background: var(--color-accent);
           content: "";
           height: 3px;
           left:0;

@@ -1,4 +1,4 @@
-extends ../../layouts/case-study.pug
+extends ../../layouts/content.pug
 
 block prepend vars
   -var pageTitle = "Putting Amazon Textract to the test - Leaf"
@@ -29,7 +29,7 @@ block pageComponents
         +share-icons({
           socialModifier: "inline"
         })
-        
+
         .blog-post
 
           p.blog-post__intro <a href="https://aws.amazon.com/textract/" rel="noopener" target="_blank">Amazon Textract</a> extracts text and structured data from scanned or photographed documents, but how reliably can it be used for business process automation? We put it to the test.
@@ -97,7 +97,7 @@ block pageComponents
           p.blog-post__text A final note on quality - With continued investment from Amazon, Textract is only going to get better over time. Any busines using it will benefit from this for free. So, with a good quality integration, you should expect to increased rates of correctly processed documents over time with no additional effort from you.
 
           h4.blog-post__h4 Ease of integration
-          
+
           p.blog-post__text Amazon's documentation for Textract is extremely thorough, and they provide a wide variety of example code to work from to make it as accessible as possible to developers at different experience levels.
 
           p.blog-post__text If you're an existing Amazon Web Services (AWS) customer, Textract can load documents directly from your Amazon S3 account for processing. Alternatively, your developers can send documents to be processed directly to Textract from any data source if you store your documents elsewhere.

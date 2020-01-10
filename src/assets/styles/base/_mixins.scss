@@ -1,3 +1,33 @@
+@mixin animated-link($size) {
+  position: relative;
+
+  &:hover,
+  &:active {
+    text-decoration: none;
+  }
+
+  &::after {
+    background-color: currentColor;
+    content: '';
+    display: block;
+    height: $size;
+    margin-top: -#{$size / 2};
+    position: absolute;
+    top: 50%;
+    transform: scaleX(0);
+    transform-origin: center right;
+    transition: transform $duration-5 $timing-elastic;
+    width: 100%;
+  }
+
+  @include hover {
+    &::after {
+      transform: scaleX(1);
+      transform-origin: center left;
+    }
+  }
+}
+
 @mixin clearfix {
   &::after {
     clear: both;

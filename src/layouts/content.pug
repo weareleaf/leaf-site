@@ -1,5 +1,8 @@
 extends ../base.pug
 
+block prepend vars
+  -var pageClass = "content"
+
 block pageContent
   main(role="main")
     block pageComponents

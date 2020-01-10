@@ -1,4 +1,4 @@
-extends ../layouts/case-study.pug
+extends ../layouts/content.pug
 
 block prepend vars
   -var pageTitle = "Laced Case Study - Leaf"
@@ -9,15 +9,12 @@ block prepend vars
 
 block pageComponents
   +banner({
-    bannerModifer: "laced",
-    bannerImage: {
-      src: "/assets/images/laced/header.jpg",
-      alt: metaTitle
-    },
+    bannerModifer: "laced"
   })
 
   .section.section--sm-spacing
     .container
+
       +intro({
         introImage: {
           src: "/assets/images/laced/logo.svg",

@@ -1,4 +1,19 @@
 .blog-post {
+
+  &__intro {
+    font-size: 1.5rem;
+    line-height: $line-height;
+    margin-bottom: $spacing-6;
+  }
+
+  &__h3 {
+    margin-bottom: $spacing-3;
+  }
+
+  &__h4 {
+    margin-bottom: $spacing-3;
+  }
+
   &__image {
     border: $border-default;
   }

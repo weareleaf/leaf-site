@@ -13,11 +13,36 @@ block prepend vars
 block pageComponents
   +hero({
     heroHeading: heroHeading,
-    heroSubheading: heroSubheading,
+    heroSubheading: heroSubheading
   })
 
   section.section
     .container
+      +presentation({
+        blockList: {
+          blockListHeading: "Research",
+          blockListItems: [
+            {
+              blockHeading: "Behavioural analytics",
+              blockText: "See what users are really doing on your digital products, identifying sticking points based on actual user data."
+            },
+            {
+              blockHeading: "A/B testing",
+              blockText: "Put multiple variants of a feature head-to-head to see which is best for your business, driving continual improvement."
+            },
+            {
+              blockHeading: "Observations",
+              blockText: "Insight into any unnecessary overheads in your business processes, identifying opportunities for optimisation or automation."
+            }
+          ]
+        },
+        presentationImage: {
+          src: "/assets/images/research-image-group.png",
+          alt: "Research"
+        },
+        presentationModifier: "reverse",
+      })
+    //-
       +block({
         blockHeading: "Research",
         blockContent: "<div class=\"content-block\"><h4>Behavioural analytics</h4><p>See what users are really doing on your digital products, identifying sticking points based on actual user data.</p></div><div class=\"content-block\"><h4>A/B testing</h4><p>Put multiple variants of a feature head-to-head to see which is best for your business, driving continual improvement.</p></div><div class=\"content-block\"><h4>Observations</h4><p>Insight into any unnecessary overheads in your business processes, identifying opportunities for optimisation or automation.</p></div>",
@@ -25,7 +50,7 @@ block pageComponents
           src: "/assets/images/research-image-group.png",
           alt: "Research"
         },
-        blockModifer: "reverse",
+        blockModifier: "reverse",
       })
 
       +block({
@@ -44,7 +69,7 @@ block pageComponents
           src: "/assets/images/ui-image-group.png",
           alt: "UI Design"
         },
-        blockModifer: "reverse",
+        blockModifier: "reverse",
       })
 
       +block({

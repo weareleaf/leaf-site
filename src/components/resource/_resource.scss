@@ -8,43 +8,27 @@
 
   &__container {
     background-color: $color-container;
-    border-radius: 9px;
-
-    @media screen and (min-width: map-get($breakpoints, "breakpoint-1")) {
-      display: -ms-grid;
-      display: grid;
-      grid-template-columns: auto 1fr;
-    }
+    border-radius: $border-radius-lg;
+    display: -ms-grid;
+    display: grid;
+    grid-template-columns: auto 1fr;
   }
 
   &__media {
-    display: none;
-
-    @media screen and (min-width: map-get($breakpoints, "breakpoint-1")) {
-      display: flex;
-      padding: $spacing-3;
-    }
+    display: block;
+    padding: $spacing-3;
   }
 
   &__image {
-    border-radius: 4px;
-    height: 4rem;
+    border-radius: $border-radius-sm;
+    display: block;
+    height: $size-8;
     object-fit: cover;
-    max-width: 7.5rem;
-
-    @media screen and (min-width: map-get($breakpoints, "breakpoint-4")) {
-      height: $size-8;
-      width: 7.5rem;
-    }
+    width: 7.5rem;
   }
 
   &__content {
-    align-self: center;
-    padding: $spacing-5;
-
-    @media screen and (min-width: map-get($breakpoints, "breakpoint-1")) {
-      padding: $spacing-4 $spacing-3;
-    }
+    padding: $spacing-4 $spacing-3;
   }
 
   &__meta {
@@ -53,19 +37,20 @@
     display: flex;
     font-weight: 700;
     letter-spacing: .05rem;
+    margin-bottom: $spacing-3;
     position: relative;
     text-transform: uppercase;
   }
 
   &__subheading {
     font-size: .6rem;
-    margin-bottom: $spacing-1;
   }
 
   &__badge {
     background-color: #5F42F0;
-    border-radius: 2px;
+    border-radius: $border-radius-xs;
     font-size: .6rem;
+    font-family: $font-family-sans-serif-extrabold;
     margin: 0 0 0 5rem;
     padding: .25rem .3rem .1rem .3rem; // Magic numbers to visually align the badge nicely.
     position: absolute;
@@ -80,18 +65,8 @@
     }
   }
 
-  &__heading {
-    color: $color-green;
-    font-size: $font-size-h3;
-    font-weight: 700;
-    margin-bottom: $spacing-1;
-  }
-
   &__text {
-    color: $color-white;
-    font-family: $font-family-sans-serif-regular;
     font-size: $font-size-sm;
-    line-height: $line-height;
-    margin: 0;
+    margin-bottom: 0;
   }
 }

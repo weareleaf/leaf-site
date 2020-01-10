@@ -1,0 +1,8 @@
+mixin block-list(c)
+  .block-list
+    .block-list__content
+      h2.block-list__heading= c.blockListHeading
+      ul.block-list__list
+        each item in c.blockListItems
+          li.block__item
+            +block(item)

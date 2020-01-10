@@ -1,6 +1,7 @@
 .post {
-  background-color: $color-container;
+  background-color: var(--color-container);
   border-radius: 8px;
+  color: var(--color-paragraph);
   display: block;
   height: 100%;
   padding: $spacing-5;
@@ -16,7 +17,7 @@
   }
 
   &__meta {
-    color: $color-white;
+    color: currentColor;
     font-size: .6rem;
     font-weight: 700;
     letter-spacing: .05rem;
@@ -26,7 +27,7 @@
 
   &__middle-dot {
     @include margin-horizontal($spacing-1);
-    color: $color-green;
+    color: var(--color-accent);
   }
 
   &__heading {
@@ -36,7 +37,7 @@
 
   &__text {
     -webkit-box-orient: vertical;
-    color: $color-white;
+    color: currentColor;
     display: -webkit-box;
     font-size: $font-size-sm;
     -webkit-line-clamp: 3;

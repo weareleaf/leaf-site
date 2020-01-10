@@ -1,15 +1,15 @@
 mixin resource(c)
   a.resource(href= c.resourceUrl)
     .resource__container
-      +image({    
+      +image({
         context: "resource",
         src: c.resourceImage.src,
         alt: c.resourceImage.alt
       })
       .resource__content
         .resource__meta
-          p.resource__subheading= c.resourceSubheading
+          span.resource__subheading= c.resourceSubheading
           if c.resourceBadge
-            p.resource__badge Coming soon
-        p.resource__heading= c.resourceHeading
+            span.resource__badge Coming soon
+        h3.resource__heading= c.resourceHeading
         p.resource__text= c.resourceText

@@ -17,24 +17,15 @@
   }
 
   &__media {
-    display: none;
-
-    @media screen and (min-width: map-get($breakpoints, "breakpoint-1")) {
-      display: flex;
-      padding: $spacing-3;
-    }
+    display: flex;
+    padding: $spacing-3;
   }
 
   &__image {
     border-radius: 4px;
-    height: 4rem;
+    height: 8.5rem;
     object-fit: cover;
-    max-width: 8.5rem;
-
-    @media screen and (min-width: map-get($breakpoints, "breakpoint-4")) {
-      height: 8.5rem;
-      width: 8.5rem;
-    }
+    width: 8.5rem;
   }
 
   &__content {
@@ -46,18 +37,11 @@
     }
   }
 
-  &__heading {
-    color: $color-green;
-    font-size: $font-size-h3;
-    font-weight: 700;
-    margin-bottom: $spacing-1;
-  }
-
   &__text {
-    color: $color-white;
-    font-family: $font-family-sans-serif-regular;
+    //color: $color-white;
+    //font-family: $font-family-sans-serif-regular;
     font-size: $font-size-sm;
-    line-height: $line-height;
-    margin: 0;
+    //line-height: $line-height;
+    margin-bottom: 0;
   }
 }

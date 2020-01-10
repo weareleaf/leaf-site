@@ -1,9 +1,11 @@
 .intro {
   margin-bottom: $spacing-8;
+  margin-top: $spacing-9;
 
   @media screen and (min-width: map-get($breakpoints, "breakpoint-3")) {
     display: flex;
     justify-content: space-between;
+    margin-top: $spacing-12;
   }
 
   &__image {
@@ -20,7 +22,6 @@
   }
 
   &__text {
-    color: $color-grey-dark;
     font-size: $root-font-size-xl;
 
     @media screen and (min-width: map-get($breakpoints, "breakpoint-3")) {

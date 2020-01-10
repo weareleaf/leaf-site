@@ -151,7 +151,7 @@ $checkbox-pseudo-size: .25rem;
     appearance: none;
     background-color: $color-off-white;
     border: $border-width-base $border-style $color-off-white;
-    border-radius: $border-radius;
+    border-radius: $border-radius-base;
     color: $color-grey-dark;
     display: block;
     font-size: $font-size-sm;
@@ -193,7 +193,7 @@ $checkbox-pseudo-size: .25rem;
     z-index: 1;
 
     &:checked + .form__label--checkbox::before {
-      background: $brand-primary;
+      background: var(--color-accent);
     }
 
     &:checked + .form__label--checkbox::after {
