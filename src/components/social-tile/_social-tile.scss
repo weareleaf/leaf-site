@@ -15,7 +15,7 @@ $image-size: $size-1;
     width: $icon-size;
 
     @media screen and (min-width: map-get($breakpoints, "breakpoint-3")) {
-      margin-right: $spacing-3;
+      margin-right: $spacing-4;
     }
   }
 

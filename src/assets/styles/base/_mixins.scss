@@ -42,6 +42,40 @@
   padding: 0 1.25rem;
 }
 
+@mixin fix($side) {
+  position: fixed;
+
+  @if $side == 'bottom' {
+    bottom: 0;
+    left: 0;
+    right: 0;
+  } @else if $side == 'bottom-left' {
+    bottom: 0;
+    left: 0;
+  } @else if $side == 'bottom-right' {
+    bottom: 0;
+    right: 0;
+  } @else if $side == 'top' {
+    left: 0;
+    right: 0;
+    top: 0;
+  } @else if $side == 'top-left' {
+    left: 0;
+    top: 0;
+  } @else if $side == 'top-right' {
+    right: 0;
+    top: 0;
+  } @else if $side == 'left' {
+    bottom: 0;
+    left: 0;
+    top: 0;
+  } @else if $side == 'right' {
+    bottom: 0;
+    right: 0;
+    top: 0;
+  }
+}
+
 @mixin hover {
   &:hover {
     // The primary input mechanism of the device includes an accurate pointing device
@@ -79,6 +113,20 @@
 @mixin padding-vertical($padding) {
   padding-bottom: $padding;
   padding-top: $padding;
+}
+
+@mixin shadow-effect {
+  box-shadow: 0 .125rem .25rem 0 rgba($color-black, .025);
+  display: block;
+  transition:
+    box-shadow $duration-6 $timing-ease,
+    transform $duration-2 $timing-ease;
+
+  @include hover {
+    box-shadow: 0 .5rem 1rem 0 rgba($color-black, .075);
+    text-decoration: none;
+    transform: scale(1.04);
+  }
 }
 
 @mixin size($size) {

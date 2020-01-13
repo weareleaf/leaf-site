@@ -25,31 +25,31 @@ main {
 }
 
 .section {
-  margin-bottom: $spacing-8;
+  margin-bottom: $spacing-9;
 
   @media screen and (min-width: map-get($breakpoints, 'breakpoint-3')) {
-    margin-bottom: $spacing-9;
+    margin-bottom: $spacing-10;
   }
 
   &--sm-spacing {
-    margin-bottom: $spacing-6;
+    margin-bottom: $spacing-7;
 
     @media screen and (min-width: map-get($breakpoints, 'breakpoint-4')) {
-      margin-bottom: $spacing-8;
+      margin-bottom: $spacing-9;
     }
   }
 
   &--lg-spacing {
     @media screen and (min-width: map-get($breakpoints, 'breakpoint-4')) {
-      margin-bottom: $spacing-10;
+      margin-bottom: $spacing-11;
     }
   }
 
   &--spacing-top {
-    margin-top: $spacing-6;
+    margin-top: $spacing-7;
 
     @media screen and (min-width: map-get($breakpoints, 'breakpoint-4')) {
-      margin-top: $spacing-8;
+      margin-top: $spacing-9;
     }
   }
 
@@ -57,7 +57,7 @@ main {
     margin-bottom: 0;
 
     @media screen and (min-width: map-get($breakpoints, 'breakpoint-3')) {
-      margin-bottom: $spacing-9;
+      margin-bottom: $spacing-10;
     }
   }
 

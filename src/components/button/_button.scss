@@ -7,7 +7,7 @@
   display: inline-block;
   font-size: .75rem;
   font-family: $font-family-sans-serif-medium;
-  padding: $spacing-3 $spacing-4;
+  padding: $spacing-4 $spacing-5;
   text-align: center;
   text-decoration: none;
   transition: background-color $duration-2 $timing-ease;
@@ -21,7 +21,7 @@
 
   @media screen and (min-width: map-get($breakpoints, 'breakpoint-3')) {
     font-size: $font-size-sm;
-    padding: $spacing-4 $spacing-5;
+    padding: $spacing-5 $spacing-6;
   }
 
   &:hover,
@@ -32,6 +32,6 @@
 
   &--small {
     font-size: $font-size-xs;
-    padding: $spacing-2 $spacing-4;
+    padding: $spacing-3 $spacing-5;
   }
 }

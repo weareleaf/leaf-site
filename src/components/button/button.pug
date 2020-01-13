@@ -1,7 +1,7 @@
 mixin button(c)
   if c.buttonUrl
     a.button(
-      class= c.buttonModifier ? "button--" + c.buttonModifier : "" 
+      class= c.buttonModifier ? "button--" + c.buttonModifier : ""
       data-micromodal-trigger=(c.navItemTriggerModal ? "modal-contact" : undefined)
       href= c.buttonUrl)= c.buttonText
   else

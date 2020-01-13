@@ -1,4 +1,4 @@
-mixin resource(c)
+//-mixin resource(c)
   a.resource(href= c.resourceUrl)
     .resource__container
       +image({
@@ -13,3 +13,33 @@ mixin resource(c)
             span.resource__badge Coming soon
         h3.resource__heading= c.resourceHeading
         p.resource__text= c.resourceText
+
+
+mixin resource(c)
+  if c.resourceUrl
+    a.resource(href= c.resourceUrl)
+      .resource__container
+        +image({
+          context: "resource",
+          src: c.resourceImage.src,
+          alt: c.resourceImage.alt
+        })
+        .resource__content
+          .resource__meta
+            span.resource__subheading= c.resourceSubheading
+          h3.resource__heading= c.resourceHeading
+          p.resource__text= c.resourceText
+  else
+    .resource
+      .resource__container
+        +image({
+          context: "resource",
+          src: c.resourceImage.src,
+          alt: c.resourceImage.alt
+        })
+        .resource__content
+          .resource__meta
+            span.resource__subheading= c.resourceSubheading
+            span.resource__badge Coming soon
+          h3.resource__heading= c.resourceHeading
+          p.resource__text= c.resourceText

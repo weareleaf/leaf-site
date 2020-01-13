@@ -3,7 +3,7 @@
   background-color: var(--color-container);
   display: flex;
   justify-content: space-between;
-  padding: $spacing-4;
+  padding: $spacing-5;
   cursor: pointer;
   position: fixed;
   top: 0;
@@ -12,7 +12,7 @@
 
   @media screen and (min-width: map-get($breakpoints, "breakpoint-2")) {
     background-color: transparent;
-    padding: $spacing-7 $spacing-7 0 $spacing-7;
+    padding: $spacing-8 $spacing-8 0 $spacing-8;
   }
 
   &__logo {
@@ -36,7 +36,7 @@
 
     @media screen and (min-width: map-get($breakpoints, "breakpoint-2")) {
       background-color: var(--color-container);
-      padding: $spacing-4;
+      padding: $spacing-5;
     }
   }
 

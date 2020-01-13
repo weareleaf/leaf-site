@@ -1,28 +1,25 @@
 .tile {
-
-  &:hover,
-  &:active {
-    text-decoration: none;
-  }
+  @include shadow-effect;
+  height: 100%;
 
   &__container {
+    align-items: center;
     background-color: $color-container;
-    border-radius: 9px;
-
-    @media screen and (min-width: map-get($breakpoints, "breakpoint-1")) {
-      display: -ms-grid;
-      display: grid;
-      grid-template-columns: auto 1fr;
-    }
+    border-radius: $border-radius-lg;
+    display: -ms-grid;
+    display: grid;
+    grid-template-columns: auto 1fr;
+    height: 100%;
   }
 
   &__media {
-    display: flex;
-    padding: $spacing-3;
+    display: block;
+    padding: $spacing-4;
   }
 
   &__image {
     border-radius: 4px;
+    display: block;
     height: 8.5rem;
     object-fit: cover;
     width: 8.5rem;
@@ -30,18 +27,15 @@
 
   &__content {
     align-self: center;
-    padding: $spacing-5;
+    padding: $spacing-6;
 
     @media screen and (min-width: map-get($breakpoints, "breakpoint-1")) {
-      padding: $spacing-4 $spacing-5 $spacing-4 $spacing-3;
+      padding: $spacing-5 $spacing-6 $spacing-5 $spacing-4;
     }
   }
 
   &__text {
-    //color: $color-white;
-    //font-family: $font-family-sans-serif-regular;
     font-size: $font-size-sm;
-    //line-height: $line-height;
     margin-bottom: 0;
   }
 }

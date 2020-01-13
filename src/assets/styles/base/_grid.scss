@@ -1,15 +1,15 @@
 .grid {
   display: grid;
   grid-template-columns: 1fr;
-  grid-column-gap: $spacing-6;
-  grid-row-gap: $spacing-6;
+  grid-column-gap: $spacing-7;
+  grid-row-gap: $spacing-7;
 
   @media screen and (min-width: map-get($breakpoints, "breakpoint-4")) {
-    grid-column-gap: $spacing-8;
+    grid-column-gap: $spacing-9;
   }
 
   @media screen and (min-width: map-get($breakpoints, "breakpoint-6")) {
-    grid-column-gap: $spacing-9;
+    grid-column-gap: $spacing-10;
   }
 
   &--center {
@@ -42,18 +42,18 @@
 
     @media screen and (min-width: map-get($breakpoints, "breakpoint-3")) {
       grid-template-columns: 1fr 1fr;
-      grid-column-gap: $spacing-8;
+      grid-column-gap: $spacing-9;
     }
 
     @media screen and (min-width: map-get($breakpoints, "breakpoint-4")) {
-      grid-column-gap: $spacing-9;
+      grid-column-gap: $spacing-10;
     }
   }
 
   &--statements {
 
     @media screen and (min-width: map-get($breakpoints, "breakpoint-1")) {
-      grid-gap: $spacing-7;
+      grid-gap: $spacing-8;
     }
 
     @media screen and (min-width: map-get($breakpoints, "breakpoint-3")) {
@@ -62,8 +62,8 @@
   }
 
   &--profiles {
-    grid-column-gap: $spacing-5;
-    grid-row-gap: $spacing-6;
+    grid-column-gap: $spacing-6;
+    grid-row-gap: $spacing-7;
     grid-template-columns: 1fr 1fr;
 
     @media screen and (min-width: map-get($breakpoints, "breakpoint-4")) {
@@ -71,15 +71,15 @@
     }
 
     @media screen and (min-width: map-get($breakpoints, "breakpoint-6")) {
-      grid-column-gap: $spacing-6;
+      grid-column-gap: $spacing-7;
     }
   }
 
   &--tile {
-    grid-row-gap: $spacing-4;
+    grid-row-gap: $spacing-5;
 
     @media screen and (min-width: map-get($breakpoints, "breakpoint-3")) {
-      grid-column-gap: $spacing-5;
+      grid-column-gap: $spacing-6;
       grid-template-columns: 1fr 1fr;
     }
   }
@@ -96,7 +96,7 @@
     grid-template-columns: 1fr;
 
     @media screen and (min-width: map-get($breakpoints, "breakpoint-2")) {
-      grid-gap: $spacing-6;
+      grid-gap: $spacing-7;
       grid-template-columns: 1fr 1fr;
     }
 

@@ -13,17 +13,17 @@ h6 {
 
 h1 {
   font-size: $font-size-h1;
-  margin: 0 0 $spacing-3;
+  margin: 0 0 $spacing-4;
 
   @media screen and (min-width: map-get($breakpoints, 'breakpoint-3')) {
     font-size: 4rem;
-    margin-bottom: $spacing-3;
+    margin-bottom: $spacing-4;
   }
 }
 
 h2 {
   font-size: $font-size-h2;
-  margin: 0 0 $spacing-3;
+  margin: 0 0 $spacing-6;
 
   @media screen and (min-width: map-get($breakpoints, 'breakpoint-3')) {
     font-size: 2rem;
@@ -33,23 +33,27 @@ h2 {
 h3 {
   font-size: $font-size-h3;
   margin: 0 0 $spacing-2;
+
+  .section--longform & {
+    color: $color-purple-lightest;
+  }
 }
 
 h4 {
   font-size: $font-size-h4;
-  margin: 0 0 $spacing-2;
+  margin: 0 0 $spacing-3;
 
   &:not(:first-child) {
-    margin-top: $spacing-6;
+    margin-top: $spacing-7;
   }
 }
 
 h5 {
   font-size: $font-size-h5;
-  margin: 0 0 $spacing-2;
+  margin: 0 0 $spacing-3;
 
   &:not(:first-child) {
-    margin-top: $spacing-6;
+    margin-top: $spacing-7;
   }
 }
 
@@ -72,7 +76,7 @@ h6 {
 p {
   color: $paragraph-color;
   font-size: $font-size-sm;
-  margin: 0 0 $spacing-6;
+  margin: 0 0 $spacing-7;
 
   @media screen and (min-width: map-get($breakpoints, 'breakpoint-3')) {
     font-size: $root-font-size;
@@ -89,18 +93,18 @@ a {
 }
 
 figure {
-  margin: $spacing-6 0;
+  margin: $spacing-7 0;
 
   @media screen and (min-width: map-get($breakpoints, 'breakpoint-3')) {
-    margin: $spacing-6 0 $spacing-7;
+    margin: $spacing-7 0 $spacing-8;
   }
 
   @media screen and (min-width: map-get($breakpoints, 'breakpoint-4')) {
-    margin: $spacing-5 0 $spacing-8;
+    margin: $spacing-6 0 $spacing-9;
   }
 
   @media screen and (min-width: map-get($breakpoints, 'breakpoint-6')) {
-    margin: $spacing-6 0 $spacing-8;
+    margin: $spacing-7 0 $spacing-9;
   }
 
   &:first-child {
@@ -120,7 +124,7 @@ ul {
 figcaption {
   color: $color-white;
   font-size: $font-size-sm;
-  padding: $spacing-2 0;
+  padding: $spacing-3 0;
   text-align: center;
 }
 
@@ -134,24 +138,24 @@ img {
   border-top: $border-width-xl $border-style $color-purple-light;
 
   &--margin {
-    margin: $spacing-9 0;
+    margin: $spacing-10 0;
   }
 
   &--margin-bottom {
-    margin-bottom: $spacing-9;
+    margin-bottom: $spacing-10;
   }
 
   &--margin-top {
-    margin-top: $spacing-9;
+    margin-top: $spacing-10;
   }
 
   &--margin-blog {
-    margin-bottom: $spacing-7;
+    margin-bottom: $spacing-8;
   }
 
   &--block-hr {
     justify-content: center;
-    margin: $spacing-7 0 $spacing-7 0;
+    margin: $spacing-8 0 $spacing-8 0;
     width: 3.75rem;
   }
 }
@@ -171,25 +175,25 @@ img {
     position: relative;
 
     &:not(:last-child) {
-      margin-bottom: $spacing-2;
+      margin-bottom: $spacing-3;
     }
 
     &--gap-lg {
       &:not(:last-child) {
-        margin-bottom: $spacing-5;
+        margin-bottom: $spacing-6;
       }
     }
 
     .styled-list--inside-lg & {
-      margin-left: $spacing-6;
+      margin-left: $spacing-7;
     }
 
     .styled-list--inside & {
-      margin-left: $spacing-5;
+      margin-left: $spacing-6;
     }
 
     .styled-list--inside-sm & {
-      margin-left: $spacing-5;
+      margin-left: $spacing-6;
 
       @media screen and (min-width: map-get($breakpoints, 'breakpoint-8')) {
         margin-left: 0;
@@ -223,6 +227,7 @@ img {
     font-size: 4rem; // Custom font-size, unrelated to global spacing system
     font-weight: 700;
     margin-bottom: -3rem; // Custom margin, unrelated to global spacing system
+    pointer-events: none;
     text-align: center;
     z-index: -1;
 
@@ -239,14 +244,14 @@ img {
 }
 
 blockquote {
-  margin: $spacing-6 auto;
-  padding: $spacing-2 0 $spacing-2 $spacing-6;
+  margin: $spacing-7 auto;
+  padding: $spacing-3 0 $spacing-3 $spacing-7;
   position: relative;
   width: 100%;
 
   @media screen and (min-width: map-get($breakpoints, 'breakpoint-2')) {
     margin: 0;
-    padding: $spacing-3 0 $spacing-4 $spacing-4;
+    padding: $spacing-4 0 $spacing-5 $spacing-5;
     width: 75%;
   }
 
@@ -260,7 +265,7 @@ blockquote {
     font-family: $font-family-sans-serif-light;
     font-size: $font-size-lg;
     line-height: $quote-line-height;
-    margin-bottom: $spacing-2;
+    margin-bottom: $spacing-3;
     width: 100%;
 
     &::before {

@@ -28,7 +28,7 @@ $brand-secondary: $color-red !default;
   --color-container: #{$color-container};
   --color-footer-contact: #{$color-white};
   --color-footer-divider: #{$color-purple-light};
-  --color-footer-link: #{$color-white};
+  --color-footer-nav: #{$color-white};
   --color-logo: #{$color-white};
   --color-paragraph: #{$color-white};
   --color-share-icons: #{$color-white};
@@ -53,9 +53,9 @@ $font-family-sans-serif-extrabold: 'Larsseit-ExtraBold', sans-serif !default;
 // Heading sizes
 $font-size-h1: 2rem !default;
 $font-size-h2: 1.5rem !default;
-$font-size-h3: 1.25rem !default;
-$font-size-h4: 1rem !default;
-$font-size-h5: .875rem !default;
+$font-size-h3: 1.1rem !default;
+$font-size-h4: .9rem !default;
+$font-size-h5: .8rem !default;
 $font-size-h6: .75rem !default;
 
 // Font sizes
@@ -82,17 +82,18 @@ $quote-line-height: 1.5 !default;
 
 // Spacing
 $spacing-1: .125rem;
-$spacing-2: .5rem;
-$spacing-3: .75rem;
-$spacing-4: 1rem;
-$spacing-5: 1.5rem;
-$spacing-6: 2rem;
-$spacing-7: 3rem;
-$spacing-8: 4rem;
-$spacing-9: 6rem;
-$spacing-10: 8rem;
-$spacing-11: 10rem;
-$spacing-12: 12rem;
+$spacing-2: .25rem;
+$spacing-3: .5rem;
+$spacing-4: .75rem;
+$spacing-5: 1rem;
+$spacing-6: 1.5rem;
+$spacing-7: 2rem;
+$spacing-8: 3rem;
+$spacing-9: 4rem;
+$spacing-10: 6rem;
+$spacing-11: 8rem;
+$spacing-12: 10rem;
+$spacing-13: 12rem;
 
 // Sizing
 $size-1: 1rem;

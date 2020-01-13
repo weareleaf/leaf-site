@@ -14,7 +14,7 @@
   }
 
   &__item {
-    margin-right: $spacing-5;
+    margin-right: $spacing-6;
 
     @media screen and (min-width: map-get($breakpoints, "breakpoint-2")) {
       margin-right: 2.5rem;

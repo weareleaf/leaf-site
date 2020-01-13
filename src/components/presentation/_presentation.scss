@@ -4,19 +4,19 @@ $image-height: $size-11;
   display: -ms-grid;
   display: grid;
   grid-template-columns: 1fr;
-  grid-row-gap: $spacing-6;
-  margin-bottom: $spacing-8;
+  grid-row-gap: $spacing-7;
+  margin-bottom: $spacing-9;
 
   @media screen and (min-width: map-get($breakpoints, "breakpoint-4")) {
     grid-template-columns: 1fr 1fr;
-    grid-column-gap: $spacing-6;
+    grid-column-gap: $spacing-7;
     grid-row-gap: 0;
     min-height: $image-height;
   }
 
   @media screen and (min-width: map-get($breakpoints, "breakpoint-6")) {
-    grid-column-gap: $spacing-9;
-    margin-bottom: $spacing-9;
+    grid-column-gap: $spacing-10;
+    margin-bottom: $spacing-10;
   }
 
   &:last-child {
@@ -63,7 +63,7 @@ $image-height: $size-11;
 
         @media screen and (min-width: map-get($breakpoints, "breakpoint-4")) {
           left: -8rem;
-          top: $spacing-10;
+          top: $spacing-11;
         }
 
         @media screen and (min-width: map-get($breakpoints, "breakpoint-6")) {

@@ -1,23 +1,13 @@
 .post {
+  @include shadow-effect;
   background-color: var(--color-container);
-  box-shadow: 0 .125rem .25rem 0 rgba($color-black, .025);
   border-radius: 8px;
   color: var(--color-paragraph);
-  display: block;
   height: 100%;
-  padding: $spacing-5;
-  transition:
-    box-shadow $duration-6 $timing-ease,
-    transform $duration-2 $timing-ease;
+  padding: $spacing-6;
 
   @media screen and (min-width: map-get($breakpoints, 'breakpoint-3')) {
-    padding: $spacing-6;
-  }
-
-  @include hover {
-    box-shadow: 0 .5rem 1rem 0 rgba($color-black, .075);
-    text-decoration: none;
-    transform: scale(1.04);
+    padding: $spacing-7;
   }
 
   &__meta {
@@ -25,7 +15,7 @@
     font-size: .6rem;
     font-weight: 700;
     letter-spacing: .05rem;
-    margin-bottom: $spacing-3;
+    margin-bottom: $spacing-4;
     text-transform: uppercase;
   }
 
@@ -36,7 +26,7 @@
 
   &__heading {
     font-size: $font-size-h3;
-    margin: 0 0 $spacing-3;
+    margin: 0 0 $spacing-4;
   }
 
   &__text {
