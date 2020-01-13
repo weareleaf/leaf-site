@@ -42,40 +42,75 @@ block pageComponents
         },
         presentationModifier: "reverse",
       })
-    //-
-      +block({
-        blockHeading: "Research",
-        blockContent: "<div class=\"content-block\"><h4>Behavioural analytics</h4><p>See what users are really doing on your digital products, identifying sticking points based on actual user data.</p></div><div class=\"content-block\"><h4>A/B testing</h4><p>Put multiple variants of a feature head-to-head to see which is best for your business, driving continual improvement.</p></div><div class=\"content-block\"><h4>Observations</h4><p>Insight into any unnecessary overheads in your business processes, identifying opportunities for optimisation or automation.</p></div>",
-        blockImage: {
-          src: "/assets/images/research-image-group.png",
-          alt: "Research"
-        },
-        blockModifier: "reverse",
-      })
 
-      +block({
-        blockHeading: "UX design",
-        blockContent: "<div class=\"content-block\"><h4>Behavioural analytics</h4><p>See what users are really doing on your digital products, identifying sticking points based on actual user data.</p></div><div class=\"content-block\"><h4>Sketching and wireframing</h4><p>Place a focus on the underlying design problems that need solving, rather than shallow visual details of your product.</p></div><div class=\"content-block\"><h4>Prototyping</h4><p>A cost-effective method of overcoming technological and design hurdles before building a product or feature.</p></div>",
-        blockImage: {
+      +presentation({
+        blockList: {
+          blockListHeading: "UX design",
+          blockListItems: [
+            {
+              blockHeading: "Behavioural analytics",
+              blockText: "See what users are really doing on your digital products, identifying sticking points based on actual user data."
+            },
+            {
+              blockHeading: "Sketching and wireframing",
+              blockText: "Place a focus on the underlying design problems that need solving, rather than shallow visual details of your product."
+            },
+            {
+              blockHeading: "Prototyping",
+              blockText: "A cost-effective method of overcoming technological and design hurdles before building a product or feature."
+            }
+          ]
+        },
+        presentationImage: {
           src: "/assets/images/ux-image-group.png",
           alt: "UX Design"
         }
       })
 
-      +block({
-        blockHeading: "UI Design",
-        blockContent: "<div class=\"content-block\"><h4>Behavioural analytics</h4><p>See what users are really doing on your digital products, identifying sticking points based on actual user data.</p></div><div class=\"content-block\"><h4>A/B testing</h4><p>Put multiple variants of a feature head-to-head to see which is best for your business, driving continual improvement.</p></div><div class=\"content-block\"><h4>Observations</h4><p>Insight into any unnecessary overheads in your business processes, identifying opportunities for optimisation or automation.</p></div>",
-        blockImage: {
+      +presentation({
+        blockList: {
+          blockListHeading: "UI Design",
+          blockListItems: [
+            {
+              blockHeading: "Visual design",
+              blockText: "Visual design gives a polished and professional validation to your product, whilst helping build trust and familiarity with your brand itself."
+            },
+            {
+              blockHeading: "Motion design",
+              blockText: "Use movement cleverly to not only draw the user’s attention, but to add an subtle additional layer of flair to static pages."
+            },
+            {
+              blockHeading: "Styleguides and Pattern libraries",
+              blockText: "Promote a consistent design language, informing future design decisions for more efficient development process."
+            }
+          ]
+        },
+        presentationImage: {
           src: "/assets/images/ui-image-group.png",
           alt: "UI Design"
         },
-        blockModifier: "reverse",
+        presentationModifier: "reverse",
       })
 
-      +block({
-        blockHeading: "Development",
-        blockContent: "<div class=\"content-block\"><h4>Software engineering</h4><p>Using cutting edge JavaScript, Node, and Ruby means we’re able to deliver value quickly on a wide range of products.</p></div><div class=\"content-block\"><h4>Automated testing</h4><p>Continually checking that your products are working properly means we can confidently make website or app changes at a moments notice.</p></div><div class=\"content-block\"><h4>Performance-driven code</h4><p>Because not everyone viewing your app is on a 2019 Macbook Pro or an iPhone 11. We don’t just make products that work; we build them properly.</p></div>",
-        blockImage: {
+      +presentation({
+        blockList: {
+          blockListHeading: "Development",
+          blockListItems: [
+            {
+              blockHeading: "Software engineering",
+              blockText: "Using cutting edge JavaScript, Node, and Ruby means we’re able to deliver value quickly on a wide range of products."
+            },
+            {
+              blockHeading: "Automated testing",
+              blockText: "Continually checking that your products are working properly means we can confidently make website or app changes at a moments notice."
+            },
+            {
+              blockHeading: "Performance-driven code",
+              blockText: "Because not everyone viewing your app is on a 2019 Macbook Pro or an iPhone 11. We don’t just make products that work; we build them properly.  "
+            }
+          ]
+        },
+        presentationImage: {
           src: "/assets/images/development-image-group.png",
           alt: "Development"
         }

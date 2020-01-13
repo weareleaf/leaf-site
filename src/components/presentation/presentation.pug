@@ -12,13 +12,7 @@ mixin presentation(c)
           }
         })
       else if c.blockList
-        +block-list({
-          blockListHeading: c.blockList.blockListHeading,
-          block: {
-            blockHeading: c.blockList.block.blockHeading,
-            blockText: c.blockList.block.blockText
-          }
-        })
+        +block-list(c.blockList)
     +image({
       context: "presentation",
       modifier: c.imageModifier,

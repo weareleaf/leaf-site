@@ -1,17 +1,21 @@
 .post {
   background-color: var(--color-container);
+  box-shadow: 0 .125rem .25rem 0 rgba($color-black, .025);
   border-radius: 8px;
   color: var(--color-paragraph);
   display: block;
   height: 100%;
   padding: $spacing-5;
-  transition: transform $duration-2 $timing-ease;
+  transition:
+    box-shadow $duration-6 $timing-ease,
+    transform $duration-2 $timing-ease;
 
   @media screen and (min-width: map-get($breakpoints, 'breakpoint-3')) {
     padding: $spacing-6;
   }
 
   @include hover {
+    box-shadow: 0 .5rem 1rem 0 rgba($color-black, .075);
     text-decoration: none;
     transform: scale(1.04);
   }
