@@ -45,17 +45,18 @@
     text-transform: uppercase;
   }
 
-  &__subheading {
-
-  }
-
   &__badge {
     background-color: #5F42F0;
     border-radius: $border-radius-xs;
     margin-left: $spacing-3;
     padding: .2rem .2rem .05rem;
     position: relative;
-    top: -.05rem;
+    top: -.03rem;
+
+    @media screen and (min-width: map-get($breakpoints, "breakpoint-1")) {
+      padding: .2rem .2rem .07rem;
+      top: -.07rem;
+    }
   }
 
   &__text {
