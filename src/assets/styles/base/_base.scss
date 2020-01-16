@@ -21,17 +21,16 @@ html {
 }
 
 .page--content {
-  --color-accent: #{$color-pink};
-  --color-background: #{$color-off-purple};
-  --color-container: #{$color-off-purple-dark};
-  --color-footer-contact: #{$color-pink};
+  --color-accent: #{$color-blue};
+  --color-background: #f2f2fb;
+  --color-container: #fbfbfe;
+  --color-footer-contact: #{$color-blue};
   --color-footer-divider: #{$color-purple-lightest};
-  --color-footer-nav: #{$color-pink};
-  --color-logo: #{$color-purple-medium};
-  --color-paragraph: #{$color-purple-medium};
+  --color-footer-nav: #{$color-blue};
+  --color-logo: #{$color-blue};
+  --color-paragraph: #2e2e65;
   --color-share-icons: #{$color-purple-medium};
 }
-
 
 body {
   font-family: $font-family-sans-serif-regular;

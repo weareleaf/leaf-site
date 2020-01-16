@@ -87,8 +87,8 @@ a {
   color: var(--color-accent);
   text-decoration: none;
 
-  &:hover {
-    text-decoration: underline;
+  @include hover {
+    text-decoration: line-through;
   }
 }
 
