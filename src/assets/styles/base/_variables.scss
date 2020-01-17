@@ -26,13 +26,17 @@ $brand-secondary: $color-red !default;
 :root {
   --color-accent: #{$color-green};
   --color-background: #{$color-purple-medium};
+  --color-blog-heading: #222277;
   --color-container: #{$color-container};
   --color-footer-contact: #{$color-white};
   --color-footer-divider: #{$color-purple-light};
   --color-footer-nav: #{$color-white};
+  --color-footer-text: #{$color-purple-lightest};
   --color-logo: #{$color-white};
   --color-paragraph: #{$color-white};
   --color-share-icons: #{$color-white};
+  --color-social-icons: #{$color-white};
+  --color-close: #{$color-white};
 }
 
 // Background

@@ -4,8 +4,9 @@ $image-height: $size-11;
 
   &__subheading {
     color: $color-white;
+    font-family: $font-family-sans-serif-extrabold;
     font-size: .6rem;
-    font-weight: 700;
+    font-weight: 400;
     letter-spacing: .05rem;
     margin-bottom: $spacing-4;
     text-transform: uppercase;

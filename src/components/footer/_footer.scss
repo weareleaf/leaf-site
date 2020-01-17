@@ -90,7 +90,7 @@
   }
 
   &__subheading {
-    color: $color-purple-lightest;
+    color: var(--color-footer-text);
     font-family: $font-family-sans-serif-extrabold;
     font-size: .6rem;
     font-weight: 400;
@@ -123,7 +123,7 @@
 
   &__info {
     border-top: $border-width-base $border-style var(--color-footer-divider);
-    color: $color-purple-lightest;
+    color: var(--color-footer-text);
     display: -ms-grid;
     display: grid;
     grid-template-rows: repeat(3, 1fr);

@@ -23,13 +23,17 @@ html {
 .page--content {
   --color-accent: #{$color-blue};
   --color-background: #f2f2fb;
+  --color-blog-heading: #e1e1f0;
   --color-container: #fbfbfe;
   --color-footer-contact: #{$color-blue};
   --color-footer-divider: #{$color-purple-lightest};
   --color-footer-nav: #{$color-blue};
+  --color-footer-text: #6062a5;
   --color-logo: #{$color-blue};
   --color-paragraph: #2e2e65;
   --color-share-icons: #{$color-purple-medium};
+  --color-social-icons: #{$color-blue};
+  --color-close: #{$color-blue};
 }
 
 body {
