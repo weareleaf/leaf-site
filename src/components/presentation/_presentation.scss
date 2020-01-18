@@ -7,7 +7,7 @@ $image-height: $size-11;
   grid-row-gap: $spacing-7;
   margin-bottom: $spacing-9;
 
-  @media screen and (min-width: map-get($breakpoints, "breakpoint-4")) {
+  @media screen and (min-width: map-get($breakpoints, "breakpoint-1")) {
     grid-template-columns: 1fr 1fr;
     grid-column-gap: $spacing-7;
     grid-row-gap: 0;
@@ -24,28 +24,45 @@ $image-height: $size-11;
   }
 
   &__content {
-    @media screen and (min-width: map-get($breakpoints, "breakpoint-3")) {
-      width: 80%;
+    @media screen and (min-width: map-get($breakpoints, "breakpoint-1")) {
+      width: 60vw;
     }
 
-    @media screen and (min-width: map-get($breakpoints, "breakpoint-4")) {
+    @media screen and (min-width: map-get($breakpoints, "breakpoint-1")) {
       align-self: center;
+    }
+
+    @media screen and (min-width: map-get($breakpoints, "breakpoint-3")) {
       width: auto;
     }
 
     .presentation--reverse & {
-      @media screen and (min-width: map-get($breakpoints, "breakpoint-4")) {
+      @media screen and (min-width: map-get($breakpoints, "breakpoint-1")) {
         order: 1;
       }
     }
   }
 
   &__media {
+    margin: auto;
     position: relative;
+    width: 75%;
+
+    @media screen and (min-width: map-get($breakpoints, "breakpoint-1")) {
+      margin: unset;
+      width: auto;
+    }
   }
 
   &__image {
-    @media screen and (min-width: map-get($breakpoints, "breakpoint-4")) {
+
+    .presentation--reverse & {
+      @media screen and (min-width: map-get($breakpoints, "breakpoint-1")) {
+        right: 0;
+      }
+    }
+
+    @media screen and (min-width: map-get($breakpoints, "breakpoint-1")) {
       bottom: 0;
       height: $image-height;
       margin: auto;
@@ -61,13 +78,15 @@ $image-height: $size-11;
       &--laced {
         height: 120%;
 
-        @media screen and (min-width: map-get($breakpoints, "breakpoint-4")) {
-          left: -8rem;
+        @media screen and (min-width: map-get($breakpoints, "breakpoint-1")) {
           top: $spacing-11;
         }
 
-        @media screen and (min-width: map-get($breakpoints, "breakpoint-6")) {
-          left: -4rem;
+        .presentation--reverse & {
+
+          @media screen and (min-width: map-get($breakpoints, "breakpoint-1")) {
+            right: -7rem;
+          }
         }
       }
 
@@ -77,12 +96,6 @@ $image-height: $size-11;
 
       &--80 {
         height: 80%;
-      }
-    }
-
-    .presentation--reverse & {
-      @media screen and (min-width: map-get($breakpoints, "breakpoint-4")) {
-        right: 0;
       }
     }
   }
