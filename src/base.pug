@@ -44,10 +44,14 @@ html.no-js(lang="en-GB")
     if metaDescription
       meta(property="og:description" content=metaDescription)
       meta(name="twitter:description" content=metaDescription)
+    meta(name="twitter:card" content="summary_large_image")
     if metaImage
-      meta(name="twitter:card" content="summary_large_image")
       meta(name="twitter:image" content=metaImage)
       meta(property="og:image" content=metaImage)
+    else
+      meta(name="twitter:image" content="/assets/images/meta-image.png")
+      meta(property="og:image" content="/assets/images/meta-image.png")
+
     meta(name="twitter:card" content="summary")
     meta(name="twitter:site" content="@we_are_leaf")
     meta(name="twitter:creator" content="@we_are_leaf")

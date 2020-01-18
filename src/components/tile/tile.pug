@@ -5,11 +5,12 @@ mixin tile(c)
     target=(c.newTab ? "_blank" : undefined)
   )
     .tile__container
-      +image({
-        context: "tile",
-        src: c.tileImage.src,
-        alt: c.tileImage.alt
-      })
+      if c.tileImage
+        +image({
+          context: "tile",
+          src: c.tileImage.src,
+          alt: c.tileImage.alt
+        })
       .tile__content
         h3.tile__heading= c.tileHeading
         p.tile__text= c.tileText

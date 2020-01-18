@@ -1,5 +1,6 @@
 .resource {
   font-size: $font-size-lg;
+  height: 100%;
 
   &[href] {
     @include shadow-effect;
@@ -21,15 +22,25 @@
   }
 
   &__image {
-    border-radius: $border-radius-sm;
     display: block;
-    height: 12rem;
-    object-fit: cover;
+    width: 8rem;
+  }
+
+  &__placeholder {
+    @include aspect-ratio(160 206);
+    background: $color-purple-dark;
+    border-radius: $border-radius-sm;
+    //height: calc(100% - (#{$spacing-4} * 2));
+    margin: $spacing-4;
     width: 8rem;
   }
 
   &__content {
-    padding: $spacing-5 $spacing-4;
+    padding: $spacing-6;
+
+    @media screen and (min-width: map-get($breakpoints, "breakpoint-1")) {
+      padding: $spacing-5 $spacing-6 $spacing-5 $spacing-4;
+    }
   }
 
   &__meta {

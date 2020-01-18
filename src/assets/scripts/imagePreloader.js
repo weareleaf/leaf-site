@@ -1,3 +1,7 @@
+/*
+
+CA: Removed preloaded images temporarily
+
 function isMobileDevice() {
   var agent = navigator.userAgent
   return (
@@ -25,3 +29,4 @@ if (!isMobileDevice()) {
     preload('/assets/images/heros/company.gif')
   })
 }
+*/

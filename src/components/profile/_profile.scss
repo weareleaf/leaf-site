@@ -4,6 +4,10 @@
     margin-bottom: $spacing-3;
   }
 
+  &__image {
+    border-radius: $border-radius-lg;
+  }
+
   &__heading {
     color: $color-white;
     margin-bottom: 0;

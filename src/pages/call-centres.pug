@@ -8,21 +8,13 @@ block prepend vars
   -var metaTitle = "Digital products for companies with call-centres"
   -var metaDescription = "We supercharge tradionally offline businesses with powerful applications that customers love."
 
+  -var heroHeading = "Have a call-centre?"
+  -var heroSubheading = "(We can help you do more digitally)"
 
 block pageComponents
   +hero({
-    heroModifier: "landing",
-    heroHeading: metaTitle,
-    heroText: metaDescription,
-    heroButton: {
-      buttonUrl: "javascript:void(0)",
-      buttonText: "Start the conversation",
-      navItemTriggerModal: true
-    },
-    heroImage: {
-      src: "/assets/images/heros/home.gif",
-      alt: metaTitle
-    }
+    heroHeading: heroHeading,
+    heroSubheading: heroSubheading
   })
 
   section.section(id="what-we-do")

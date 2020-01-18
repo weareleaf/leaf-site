@@ -19,11 +19,14 @@ mixin resource(c)
   if c.resourceUrl
     a.resource(href= c.resourceUrl)
       .resource__container
-        +image({
-          context: "resource",
-          src: c.resourceImage.src,
-          alt: c.resourceImage.alt
-        })
+        if c.resourceImage
+          +image({
+            context: "resource",
+            src: c.resourceImage.src,
+            alt: c.resourceImage.alt
+          })
+        else
+          .resource__placeholder
         .resource__content
           .resource__meta
             span.resource__subheading= c.resourceSubheading
@@ -32,11 +35,14 @@ mixin resource(c)
   else
     .resource
       .resource__container
-        +image({
-          context: "resource",
-          src: c.resourceImage.src,
-          alt: c.resourceImage.alt
-        })
+        if c.resourceImage
+          +image({
+            context: "resource",
+            src: c.resourceImage.src,
+            alt: c.resourceImage.alt
+          })
+        else
+          .resource__placeholder
         .resource__content
           .resource__meta
             span.resource__subheading= c.resourceSubheading
