@@ -9,6 +9,17 @@ mixin header(c)
           else
             a.logo(href="#")
               +logo
+        .header__contact
+          +nav({
+            navList: [
+              {
+                navItemUrl: "javascript:void(0)",
+                navItemText: "Contact",
+                navItemHighlight: true,
+                navItemTriggerModal: true
+              }
+            ],
+          })
         .header__nav
           +nav({
             navList: [
@@ -30,20 +41,9 @@ mixin header(c)
               }
             ],
           })
-        .header__contact
-          +nav({
-            navList: [
-              {
-                navItemUrl: "javascript:void(0)",
-                navItemText: "Contact",
-                navItemHighlight: true,
-                navItemTriggerModal: true
-              }
-            ],
-          })
       //-
         .header__address
         +address
-          
+
         .header__social
         +social({})

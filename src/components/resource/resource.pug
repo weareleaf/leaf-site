@@ -17,7 +17,7 @@
 
 mixin resource(c)
   if c.resourceUrl
-    a.resource(href= c.resourceUrl)
+    a.resource(href= c.resourceUrl, rel="noopener", target="_blank")
       .resource__container
         if c.resourceImage
           +image({
