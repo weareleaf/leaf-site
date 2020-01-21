@@ -5,10 +5,21 @@ block prepend vars
   -var metaUrl = "https://weareleaf.com/keen"
   -var metaTitle = "Keen Case Study"
   -var metaDescription = "We worked with Keen to deliver an MVP of their customer success tool, helping organisations monitor users through the onboarding process and identify those struggling."
+  -var metaImage = "https://weareleaf.com/assets/images/keen/image-1.jpg"
+
+  -var heroHeading = "Onboarding, done right"
+  -var heroSubheading = "Case Study"
 
 block pageComponents
+
   +banner({
-    href: '/case-studies'
+  })
+
+  .banner-spacer
+
+  +hero({
+    heroHeading: heroHeading,
+    heroSubheading: heroSubheading,
   })
 
   .section.section--sm-spacing
