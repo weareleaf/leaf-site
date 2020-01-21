@@ -1,5 +1,6 @@
 .details {
   display: grid;
+  grid-gap: $spacing-6;
 
   @media screen and (min-width: map-get($breakpoints, "breakpoint-1")) {
     grid-template-columns: repeat(2, 1fr);
@@ -7,10 +8,6 @@
 
   @media screen and (min-width: map-get($breakpoints, "breakpoint-4")) {
     grid-template-columns: repeat(4, 1fr);
-  }
-
-  &__item {
-    margin-bottom: $spacing-5;
   }
 
   &__heading {
