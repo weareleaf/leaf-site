@@ -2,7 +2,7 @@ $icon-size: 2.7rem;
 $image-size: $size-1;
 
 .social-tile {
-  @media screen and (min-width: map-get($breakpoints, "breakpoint-3")) {
+  @media screen and (min-width: map-get($breakpoints, 'breakpoint-3')) {
     display: flex;
   }
 
@@ -14,7 +14,7 @@ $image-size: $size-1;
     height: $icon-size;
     width: $icon-size;
 
-    @media screen and (min-width: map-get($breakpoints, "breakpoint-3")) {
+    @media screen and (min-width: map-get($breakpoints, 'breakpoint-3')) {
       margin-right: $spacing-4;
     }
   }
@@ -31,7 +31,7 @@ $image-size: $size-1;
   &__content {
     display: none;
 
-    @media screen and (min-width: map-get($breakpoints, "breakpoint-3")) {
+    @media screen and (min-width: map-get($breakpoints, 'breakpoint-3')) {
       display: block;
       padding-top: .2rem;
     }

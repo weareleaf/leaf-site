@@ -7,7 +7,7 @@ $checkbox-pseudo-size: .25rem;
     margin: 0 0 $spacing-7 0;
     padding: 0;
 
-    @media screen and (min-width: map-get($breakpoints, "breakpoint-3")) {
+    @media screen and (min-width: map-get($breakpoints, 'breakpoint-3')) {
       margin: 0 0 $spacing-8 0;
     }
   }
@@ -23,7 +23,7 @@ $checkbox-pseudo-size: .25rem;
   }
 
   &__grid {
-    @media screen and (min-width: map-get($breakpoints, "breakpoint-3")) {
+    @media screen and (min-width: map-get($breakpoints, 'breakpoint-3')) {
       display: -ms-grid;
       display: grid;
 
@@ -48,7 +48,7 @@ $checkbox-pseudo-size: .25rem;
       margin-bottom: $spacing-5;
     }
 
-    @media screen and (min-width: map-get($breakpoints, "breakpoint-3")) {
+    @media screen and (min-width: map-get($breakpoints, 'breakpoint-3')) {
       &:not(:last-child) {
         margin-bottom: 0;
       }
@@ -115,11 +115,11 @@ $checkbox-pseudo-size: .25rem;
         transform: translateY(-53%);
         width: $checkbox-pseudo-size;
 
-        @media screen and (min-width: map-get($breakpoints, "breakpoint-3")) {
+        @media screen and (min-width: map-get($breakpoints, 'breakpoint-3')) {
           transform: translateY(-54%);
         }
 
-        @media screen and (min-width: map-get($breakpoints, "breakpoint-4")) {
+        @media screen and (min-width: map-get($breakpoints, 'breakpoint-4')) {
           transform: translateY(-60%);
         }
       }
@@ -136,7 +136,7 @@ $checkbox-pseudo-size: .25rem;
         transform: rotate(-45deg);
         width: 10px;
 
-        @media screen and (min-width: map-get($breakpoints, "breakpoint-3")) {
+        @media screen and (min-width: map-get($breakpoints, 'breakpoint-3')) {
           border-width: 0 0 $border-width-lg $border-width-lg;
           height: 7px;
           left: 3px;
@@ -181,7 +181,7 @@ $checkbox-pseudo-size: .25rem;
     padding-left: $spacing-6;
     position: relative;
 
-    @media screen and (min-width: map-get($breakpoints, "breakpoint-1")) {
+    @media screen and (min-width: map-get($breakpoints, 'breakpoint-1')) {
       padding-left: $spacing-6;
     }
   }

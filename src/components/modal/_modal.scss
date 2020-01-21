@@ -40,7 +40,7 @@
     width: 100%;
     will-change: transform;
 
-    @media screen and (min-width: map-get($breakpoints, "breakpoint-1")) {
+    @media screen and (min-width: map-get($breakpoints, 'breakpoint-1')) {
       border-radius: 1rem;
       height: auto;
       max-width: 44rem;
@@ -72,7 +72,7 @@
       content: url('/assets/images/icons/close.svg');
     }
 
-    @media screen and (min-width: map-get($breakpoints, "breakpoint-6")) {
+    @media screen and (min-width: map-get($breakpoints, 'breakpoint-6')) {
       top: 1.25rem;
     }
   }

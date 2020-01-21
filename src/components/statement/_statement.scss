@@ -1,5 +1,5 @@
 .statement {
-  @media screen and (min-width: map-get($breakpoints, "breakpoint-1")) {
+  @media screen and (min-width: map-get($breakpoints, 'breakpoint-1')) {
     display: flex;
   }
 
@@ -9,7 +9,7 @@
     margin-right: 0;
     width: 3.8rem;
 
-    @media screen and (min-width: map-get($breakpoints, "breakpoint-1")) {
+    @media screen and (min-width: map-get($breakpoints, 'breakpoint-1')) {
       margin-bottom: 0;
       margin-right: $spacing-6;
     }
@@ -24,7 +24,7 @@
     justify-content: center;
     padding: .9rem;
 
-    @media screen and (min-width: map-get($breakpoints, "breakpoint-6")) {
+    @media screen and (min-width: map-get($breakpoints, 'breakpoint-6')) {
       padding: 0;
     }
   }

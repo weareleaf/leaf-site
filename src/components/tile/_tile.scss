@@ -29,7 +29,7 @@
     align-self: center;
     padding: $spacing-6;
 
-    @media screen and (min-width: map-get($breakpoints, "breakpoint-1")) {
+    @media screen and (min-width: map-get($breakpoints, 'breakpoint-1')) {
       padding: $spacing-7;
     }
   }

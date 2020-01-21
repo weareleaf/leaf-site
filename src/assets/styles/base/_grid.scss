@@ -4,11 +4,11 @@
   grid-column-gap: $spacing-7;
   grid-row-gap: $spacing-7;
 
-  @media screen and (min-width: map-get($breakpoints, "breakpoint-4")) {
+  @media screen and (min-width: map-get($breakpoints, 'breakpoint-4')) {
     grid-column-gap: $spacing-9;
   }
 
-  @media screen and (min-width: map-get($breakpoints, "breakpoint-6")) {
+  @media screen and (min-width: map-get($breakpoints, 'breakpoint-6')) {
     grid-column-gap: $spacing-10;
   }
 
@@ -19,44 +19,44 @@
 
   &--half {
 
-    @media screen and (min-width: map-get($breakpoints, "breakpoint-1")) {
+    @media screen and (min-width: map-get($breakpoints, 'breakpoint-1')) {
       grid-template-columns: 1fr 1fr;
     }
   }
 
   &--two-thirds {
 
-    @media screen and (min-width: map-get($breakpoints, "breakpoint-4")) {
+    @media screen and (min-width: map-get($breakpoints, 'breakpoint-4')) {
       grid-template-columns: 60% 1fr;
     }
   }
 
   &--two-thirds-reverse {
 
-    @media screen and (min-width: map-get($breakpoints, "breakpoint-4")) {
+    @media screen and (min-width: map-get($breakpoints, 'breakpoint-4')) {
       grid-template-columns: 1fr 60%;
     }
   }
 
   &--symmetrical-card {
 
-    @media screen and (min-width: map-get($breakpoints, "breakpoint-3")) {
+    @media screen and (min-width: map-get($breakpoints, 'breakpoint-3')) {
       grid-template-columns: 1fr 1fr;
       grid-column-gap: $spacing-9;
     }
 
-    @media screen and (min-width: map-get($breakpoints, "breakpoint-4")) {
+    @media screen and (min-width: map-get($breakpoints, 'breakpoint-4')) {
       grid-column-gap: $spacing-10;
     }
   }
 
   &--statements {
 
-    @media screen and (min-width: map-get($breakpoints, "breakpoint-1")) {
+    @media screen and (min-width: map-get($breakpoints, 'breakpoint-1')) {
       grid-gap: $spacing-8;
     }
 
-    @media screen and (min-width: map-get($breakpoints, "breakpoint-3")) {
+    @media screen and (min-width: map-get($breakpoints, 'breakpoint-3')) {
       grid-template-columns: 1fr 1fr;
     }
   }
@@ -65,16 +65,15 @@
     grid-column-gap: $spacing-6;
     grid-row-gap: $spacing-7;
     grid-template-columns: repeat(2, 1fr);
-
-    @media screen and (min-width: map-get($breakpoints, "breakpoint-1")) {
+    @media screen and (min-width: map-get($breakpoints, 'breakpoint-1')) {
       grid-template-columns: repeat(3, 1fr);
     }
 
-    @media screen and (min-width: map-get($breakpoints, "breakpoint-3")) {
+    @media screen and (min-width: map-get($breakpoints, 'breakpoint-3')) {
       grid-template-columns: repeat(5, 1fr);
     }
 
-    @media screen and (min-width: map-get($breakpoints, "breakpoint-6")) {
+    @media screen and (min-width: map-get($breakpoints, 'breakpoint-6')) {
       grid-column-gap: $spacing-7;
     }
   }
@@ -82,14 +81,14 @@
   &--tile {
     grid-row-gap: $spacing-5;
 
-    @media screen and (min-width: map-get($breakpoints, "breakpoint-3")) {
+    @media screen and (min-width: map-get($breakpoints, 'breakpoint-3')) {
       grid-column-gap: $spacing-6;
       grid-template-columns: 1fr 1fr;
     }
   }
 
   &__item {
-    @media screen and (min-width: map-get($breakpoints, "breakpoint-2")) {
+    @media screen and (min-width: map-get($breakpoints, 'breakpoint-2')) {
       &--span-2 {
         grid-column: 1 / span 2;
       }
@@ -99,12 +98,12 @@
   &--blog {
     grid-template-columns: 1fr;
 
-    @media screen and (min-width: map-get($breakpoints, "breakpoint-2")) {
+    @media screen and (min-width: map-get($breakpoints, 'breakpoint-2')) {
       grid-gap: $spacing-7;
       grid-template-columns: 1fr 1fr;
     }
 
-    @media screen and (min-width: map-get($breakpoints, "breakpoint-4")) {
+    @media screen and (min-width: map-get($breakpoints, 'breakpoint-4')) {
       grid-template-columns: 1fr 1fr 1fr;
     }
   }

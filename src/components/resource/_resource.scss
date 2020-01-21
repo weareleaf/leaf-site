@@ -38,7 +38,7 @@
   &__content {
     padding: $spacing-6;
 
-    @media screen and (min-width: map-get($breakpoints, "breakpoint-1")) {
+    @media screen and (min-width: map-get($breakpoints, 'breakpoint-1')) {
       padding: $spacing-5 $spacing-6 $spacing-5 $spacing-4;
     }
   }
@@ -61,11 +61,14 @@
     border-radius: $border-radius-xs;
     margin-left: $spacing-3;
     padding: .2rem .2rem .05rem;
-    position: relative;
-    top: -.03rem;
+    position: absolute;
+    right: -1.7rem;
+    top: -.2rem;
 
-    @media screen and (min-width: map-get($breakpoints, "breakpoint-1")) {
+    @media screen and (min-width: map-get($breakpoints, 'breakpoint-1')) {
       padding: .2rem .2rem .07rem;
+      position: relative;
+      right: unset;
       top: -.07rem;
     }
   }

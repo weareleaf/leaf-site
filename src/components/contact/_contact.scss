@@ -1,21 +1,22 @@
 .contact {
+
   &__content {
     display: grid;
     grid-template-columns: 1fr;
     grid-gap: $spacing-8;
     padding: $spacing-8;
 
-    @media screen and (min-width: map-get($breakpoints, "breakpoint-3")) {
+    @media screen and (min-width: map-get($breakpoints, 'breakpoint-3')) {
       grid-template-columns: 1fr 1fr;
     }
   }
 
   &__tile {
     &:not(:last-child) {
-      border-bottom: $border-default;
+      border-bottom: $border-width-base $border-style var(--color-footer-divider);
       padding-bottom: $spacing-7;
 
-      @media screen and (min-width: map-get($breakpoints, "breakpoint-3")) {
+      @media screen and (min-width: map-get($breakpoints, 'breakpoint-3')) {
         border-bottom: 0;
         padding-bottom: 0;
       }
@@ -24,19 +25,20 @@
 
   &__footer {
     display: flex;
+    justify-content: space-between;
     padding: $spacing-6 $spacing-8;
 
-    @media screen and (min-width: map-get($breakpoints, "breakpoint-1")) {
+    @media screen and (min-width: map-get($breakpoints, 'breakpoint-1')) {
       background-color: $color-purple-medium;
     }
 
-    @media screen and (min-width: map-get($breakpoints, "breakpoint-3")) {
+    @media screen and (min-width: map-get($breakpoints, 'breakpoint-3')) {
       padding: $spacing-7;
     }
   }
 
   &__social-tile {
-    margin-right: $spacing-8;
+    margin-right: $spacing-5;
 
     &:last-child {
       margin-right: 0;

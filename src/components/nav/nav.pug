@@ -4,10 +4,16 @@ mixin nav(c)
       each navItem in c.navList
         li.nav__item
           a.nav__link(
-            class= activePage ===  navItem.navItemText ? "nav__link--active" : ""
+            class=(activePage ===  navItem.navItemText ? "nav__link--active" : "")
             href= navItem.navItemUrl
             data-micromodal-trigger=(navItem.navItemTriggerModal ? "modal-contact" : undefined)
+            data-mobile-only=(navItem.navItemMobileOnly ? "mobile-only" : undefined)
             target=(navItem.newTab ? "_blank" : undefined)
             rel=(navItem.newTab ? "noopener" : undefined)
           )
-            span.nav__text= navItem.navItemText
+            if navItem.navItemTextMobile
+              span.nav__text
+                span.nav__text__mobile= navItem.navItemTextMobile
+                span.nav__text__standard= navItem.navItemText
+            else
+              span.nav__text= navItem.navItemText

@@ -2,7 +2,7 @@
   font-family: $font-family-sans-serif-medium;
   margin: 0 auto;
 
-  @media screen and (min-width: map-get($breakpoints, "breakpoint-2")) {
+  @media screen and (min-width: map-get($breakpoints, 'breakpoint-2')) {
     margin: 0;
   }
 
@@ -10,16 +10,16 @@
     align-items: center;
     display: flex;
     height: 100%;
+    justify-content: center;
     list-style: none;
     margin: 0;
     padding: 0;
   }
 
   &__item {
-    margin-right: $spacing-6;
 
-    @media screen and (min-width: map-get($breakpoints, "breakpoint-2")) {
-      margin-right: 2.5rem;
+    @media screen and (min-width: map-get($breakpoints, 'breakpoint-2')) {
+      margin-right: $spacing-3;
     }
 
     &:last-child {
@@ -28,43 +28,66 @@
   }
 
   &__link {
-    @include animated-link($border-width-base);
+    @include animated-link($border-width-base, '.nav__text');
     color: var(--color-footer-nav);
-    display: block;
+    display: inline-block;
     font-size: .75rem;
     outline: none;
+    padding: $spacing-4;
     position: relative;
 
-    @media screen and (min-width: map-get($breakpoints, "breakpoint-1")) {
+    @include hover {
+      text-decoration: none;
+    }
+
+    @media screen and (min-width: map-get($breakpoints, 'breakpoint-1')) {
       font-size: $font-size-xs;
+      padding: $spacing-5;
+    }
+
+    &[data-mobile-only] {
+
+      @media screen and (min-width: map-get($breakpoints, 'breakpoint-1')) {
+        display: none;
+      }
     }
 
     &--active {
       pointer-events: none;
-      position: relative;
 
-      &::before {
-        content: none;
-      }
-
-      @media screen and (min-width: map-get($breakpoints, "breakpoint-2")) {
+      @media screen and (min-width: map-get($breakpoints, 'breakpoint-1')) {
         &::before {
           background: var(--color-accent);
-          content: "";
+          bottom: 0;
+          content: '';
           height: 3px;
-          left:0;
+          left: 0;
           margin: .25rem auto;
           position: absolute;
           right:0;
-          top: 100%;
           width: $size-1;
         }
       }
     }
+  }
 
-    &__text {
-      display: inline-block;
-      position: relative;
+  &__text {
+    display: block;
+    position: relative;
+
+    &__mobile {
+
+      @media screen and (min-width: map-get($breakpoints, 'breakpoint-1')) {
+        display: none;
+      }
+    }
+
+    &__standard {
+      display: none;
+
+      @media screen and (min-width: map-get($breakpoints, 'breakpoint-1')) {
+        display: block;
+      }
     }
   }
 }

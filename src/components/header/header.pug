@@ -10,16 +10,7 @@ mixin header(c)
             a.logo(href="#")
               +logo
         .header__contact
-          +nav({
-            navList: [
-              {
-                navItemUrl: "javascript:void(0)",
-                navItemText: "Contact",
-                navItemHighlight: true,
-                navItemTriggerModal: true
-              }
-            ],
-          })
+          a.nav__link(href="javascript:void(0)", data-micromodal-trigger="modal-contact") Contact
         .header__nav
           +nav({
             navList: [
@@ -33,11 +24,18 @@ mixin header(c)
               },
               {
                 navItemUrl: "/case-studies",
+                navItemTextMobile: "Work",
                 navItemText: "Case studies"
               },
               {
                 navItemUrl: "/blog",
                 navItemText: "Blog"
+              },
+              {
+                navItemUrl: "javascript:void(0)",
+                navItemText: "Contact",
+                navItemMobileOnly: true,
+                navItemTriggerModal: true
               }
             ],
           })

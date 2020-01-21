@@ -10,7 +10,7 @@
   width: 100%;
   z-index: 90;
 
-  @media screen and (min-width: map-get($breakpoints, "breakpoint-2")) {
+  @media screen and (min-width: map-get($breakpoints, 'breakpoint-11')) {
     background-color: transparent;
     padding: $spacing-8 $spacing-8 0 $spacing-8;
   }
@@ -18,7 +18,7 @@
   &__logo {
     width: $size-5;
 
-    @media screen and (min-width: map-get($breakpoints, "breakpoint-1")) {
+    @media screen and (min-width: map-get($breakpoints, 'breakpoint-1')) {
       margin: 0;
     }
 
@@ -30,13 +30,12 @@
   }
 
   &__close {
-    background-color: transparent;
+    background-color: $color-off-purple;
     border-radius: $border-radius-full;
-    padding: 0;
+    padding: $spacing-5;
 
-    @media screen and (min-width: map-get($breakpoints, "breakpoint-2")) {
+    @media screen and (min-width: map-get($breakpoints, 'breakpoint-11')) {
       background-color: var(--color-container);
-      padding: $spacing-5;
     }
   }
 
