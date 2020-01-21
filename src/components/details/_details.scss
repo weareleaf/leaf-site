@@ -1,8 +1,6 @@
 .details {
   display: grid;
-  grid-gap: $spacing-3;
-  justify-items: center;
-  text-align: center;
+  grid-gap: $spacing-6;
 
   @media screen and (min-width: map-get($breakpoints, "breakpoint-1")) {
     grid-template-columns: repeat(2, 1fr);
