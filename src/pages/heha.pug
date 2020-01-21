@@ -5,10 +5,21 @@ block prepend vars
   -var metaUrl = "https://weareleaf.com/heha"
   -var metaTitle = "HEHA! Case Study"
   -var metaDescription = "Not content with being the UK's market leader for travel extras, Holiday Extras decided try their hand at helping travellers plan and organise their trips together."
+    -var metaImage = "https://weareleaf.com/assets/images/heha/image-1.jpg"
+
+  -var heroHeading = "Hassle-free travel"
+  -var heroSubheading = "Case Study"
 
 block pageComponents
+
   +banner({
-    href: '/case-studies'
+  })
+
+  .banner-spacer
+
+  +hero({
+    heroHeading: heroHeading,
+    heroSubheading: heroSubheading,
   })
 
   .section.section--sm-spacing
