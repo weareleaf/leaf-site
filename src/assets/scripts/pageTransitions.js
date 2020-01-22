@@ -3,7 +3,7 @@ import banner from './banner.js'
 import modal from './modal.js'
 
 const body = document.body
-const TRANSITION_TIME = 500
+const TRANSITION_TIME = 450
 
 const PageTransition = Barba.BaseTransition.extend({
   // This is an awful hack. Howdy has no way to manually trigger a
