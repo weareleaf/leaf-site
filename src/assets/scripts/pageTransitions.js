@@ -1,10 +1,7 @@
 import Barba from 'barba.js'
 import banner from './banner.js'
 import modal from './modal.js'
-import { createBlob } from './blob.js'
-import { TweenMax } from "gsap/TweenMax";
 
-window.blob = null
 const body = document.body
 const TRANSITION_TIME = 500
 
@@ -23,33 +20,6 @@ const PageTransition = Barba.BaseTransition.extend({
       newHowdy.setAttribute('src', howdy.src)
       head.appendChild(newHowdy)
     }
-  },
-
-  createBlob: function(paused) {
-    const blobEl = document.querySelector('.hero__blob-path')
-
-    if (!blobEl) {
-      return
-    }
-
-    window.blob = createBlob({
-      element: blobEl,
-      numPoints: 30,
-      centerX: 500,
-      centerY: 500,
-      minRadius: 460,
-      maxRadius: 500,
-      minDuration: 5,
-      maxDuration: 8
-    }, paused)
-  },
-
-  pauseBlob: function() {
-    window.blob && window.blob.pause()
-  },
-
-  resumeBlob: function() {
-    window.blob && window.blob.resume()
   },
 
   trackVirtualPageView: function() {
@@ -89,8 +59,6 @@ const PageTransition = Barba.BaseTransition.extend({
   start: function() {
     console.log('Starting transition')
 
-    this.pauseBlob() // Prevent janky transition
-
     const promisedLoad = this.newContainerLoading
 
     this.addTransitionOutClass(() => {
@@ -99,10 +67,7 @@ const PageTransition = Barba.BaseTransition.extend({
       promisedLoad.then(() => {
         this.done()
         this.initialiseBannerAndModal()
-        this.createBlob(true)
-        this.addTransitionInClass(() => {
-          this.resumeBlob()
-        })
+        this.addTransitionInClass()
         this.trackVirtualPageView()
         this.reloadHowdy()
         console.log('Ended transition')
@@ -112,7 +77,6 @@ const PageTransition = Barba.BaseTransition.extend({
 })
 
 window.addEventListener('load', function() {
-  PageTransition.createBlob(false)
   PageTransition.addTransitionInClass()
   PageTransition.initialiseBannerAndModal()
 })

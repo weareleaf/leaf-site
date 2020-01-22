@@ -1,3 +1,5 @@
+import Barba from 'barba.js'
+
 const openShareWindow = function(url) {
   window.open(url, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=450,width=600')
 }
@@ -37,3 +39,4 @@ const addShareLinkListeners = function() {
 }
 
 window.addEventListener('load', addShareLinkListeners)
+Barba.Dispatcher.on('transitionCompleted', addShareLinkListeners)
