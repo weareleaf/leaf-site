@@ -150,21 +150,20 @@ const mountBlogComponents = function () {
     )
   }
 
-  const postMountPoint = document.querySelector('.grid--blog-post')
-  if (postMountPoint) {
-    const randomGridItems = getRandomGridItems(gridItems, 3)
-    return ReactDOM.render(
-      <BlogPostGrid gridItems={randomGridItems} allSmall={true} />,
-      postMountPoint
-    )
-  }
+  const postMountPoint = document.querySelector('.grid--blog-preview')
 
-  const previewMountPoint = document.querySelector('.grid--blog-preview')
-  if (previewMountPoint) {
-    const firstGridItems = gridItems.slice(0, 3)
+  if (postMountPoint) {
+    let renderableGridItems = null
+
+    if (!!window.location.href.match(/\/blog\//)) {
+      renderableGridItems = getRandomGridItems(gridItems, 3)
+    } else {
+      renderableGridItems = gridItems.slice(0, 3)
+    }
+
     return ReactDOM.render(
-      <BlogPostGrid gridItems={firstGridItems} allSmall={true} />,
-      previewMountPoint
+      <BlogPostGrid gridItems={renderableGridItems} allSmall={true} />,
+      postMountPoint
     )
   }
 }
