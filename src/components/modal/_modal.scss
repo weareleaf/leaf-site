@@ -32,7 +32,11 @@
   }
 
   &__container {
+    align-items: flex-end;
     background-color: $color-container;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     height: 100vh;
     max-height: 100vh;
     position: relative;
@@ -41,6 +45,7 @@
     will-change: transform;
 
     @media screen and (min-width: map-get($breakpoints, 'breakpoint-1')) {
+      display: block;
       border-radius: 1rem;
       height: auto;
       max-width: 44rem;
@@ -63,13 +68,18 @@
     font-size: $font-size-h2;
     line-height: 1;
     outline: none;
+    margin-right: 1.25rem;
     padding: 0;
-    position: absolute;
-    right: $spacing-6;
-    top: $spacing-6;
 
     &::before {
       content: url('/assets/images/icons/close.svg');
+    }
+
+    @media screen and (min-width: map-get($breakpoints, 'breakpoint-1')) {
+      margin-right: 0;
+      position: absolute;
+      right: $spacing-6;
+      top: $spacing-6;
     }
 
     @media screen and (min-width: map-get($breakpoints, 'breakpoint-6')) {
