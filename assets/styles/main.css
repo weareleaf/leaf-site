@@ -971,7 +971,10 @@ a.card:hover {
   display: grid;
   grid-template-columns: 1fr;
   grid-gap: 3rem;
-  padding: 3rem; }
+  padding: 0.75rem 3rem; }
+  @media screen and (min-width: 34em) {
+    .contact__content {
+      padding: 3rem; } }
   @media screen and (min-width: 48em) {
     .contact__content {
       grid-template-columns: 1fr 1fr; } }
@@ -1501,7 +1504,11 @@ a.card:hover {
     .modal[aria-hidden='true'] .modal__overlay {
       animation: mmfadeOut 250ms ease; }
   .modal__container {
+    align-items: flex-end;
     background-color: #31319B;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     height: 100vh;
     max-height: 100vh;
     position: relative;
@@ -1510,6 +1517,7 @@ a.card:hover {
     will-change: transform; }
     @media screen and (min-width: 34em) {
       .modal__container {
+        display: block;
         border-radius: 1rem;
         height: auto;
         max-width: 44rem;
@@ -1525,12 +1533,16 @@ a.card:hover {
     font-size: 1.5rem;
     line-height: 1;
     outline: none;
-    padding: 0;
-    position: absolute;
-    right: 1.5rem;
-    top: 1.5rem; }
+    margin-right: 1.25rem;
+    padding: 0; }
     .modal__close::before {
       content: url("/assets/images/icons/close.svg"); }
+    @media screen and (min-width: 34em) {
+      .modal__close {
+        margin-right: 0;
+        position: absolute;
+        right: 1.5rem;
+        top: 1.5rem; } }
     @media screen and (min-width: 75em) {
       .modal__close {
         top: 1.25rem; } }
