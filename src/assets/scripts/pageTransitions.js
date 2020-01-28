@@ -63,7 +63,6 @@ const PageTransition = Barba.BaseTransition.extend({
 
     this.addTransitionOutClass(() => {
       window.scrollTo(0, 0)
-
       promisedLoad.then(() => {
         this.done()
         this.initialiseBannerAndModal()
