@@ -101,6 +101,7 @@
 
   &__link {
     @include animated-link($border-width-sm);
+    @include focus-bg;
     color: var(--color-footer-contact);
     font-size: 1.3rem;
 
@@ -130,6 +131,11 @@
     margin-top: $spacing-8;
     padding: $spacing-3 0 $spacing-6;
 
+    .page--landing & {
+      @include padding-vertical($spacing-3);
+      grid-template-columns: 1fr 1fr;
+    }
+
     @media screen and (min-width: map-get($breakpoints, 'breakpoint-2')) {
       display: -ms-grid;
       display: grid;
@@ -137,6 +143,10 @@
       grid-template-rows: none;
       margin-top: $spacing-10;
       padding-bottom: $spacing-3;
+
+      .page--landing & {
+        grid-template-columns: 1fr 1fr;
+      }
     }
   }
 
@@ -150,6 +160,10 @@
 
     @media screen and (min-width: map-get($breakpoints, 'breakpoint-2')) {
       width: auto;
+    }
+
+    .page--landing & {
+      @include padding-vertical($spacing-4);
     }
   }
 

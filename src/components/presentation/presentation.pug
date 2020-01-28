@@ -7,8 +7,10 @@ mixin presentation(c)
           projectHeading: c.project.projectHeading,
           projectText: c.project.projectText,
           projectButton: {
+            buttonModifier: c.project.projectButton.buttonModifier,
+            buttonText: c.project.projectButton.buttonText,
             buttonUrl: c.project.projectButton.buttonUrl,
-            buttonText: c.project.projectButton.buttonText
+            triggerModal: c.project.projectButton.triggerModal,
           }
         })
       else if c.blockList

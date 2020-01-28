@@ -17,4 +17,8 @@
   &__image {
     border: $border-default;
   }
+
+  a {
+    @include focus-bg;
+  }
 }

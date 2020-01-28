@@ -6,3 +6,7 @@ mixin statement(c)
     .statement__content
       h3.statement__heading= c.statementHeading
       p.statement__text= c.statementText
+      if c.statementLink
+        a.statement__link(
+          data-micromodal-trigger=(c.statementLink.triggerModal ? "modal-contact" : undefined)
+          href= c.statementLink.href)= c.statementLink.text

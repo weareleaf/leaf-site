@@ -34,4 +34,12 @@
     font-size: $font-size-sm;
     margin-bottom: 0;
   }
+
+  &__link {
+    @include animated-link($border-width-sm);
+    display: inline-block;
+    font-family: 'Larsseit-Medium';
+    font-size: $font-size-xs;
+    margin-top: $spacing-4;
+  }
 }

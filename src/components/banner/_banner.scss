@@ -30,6 +30,7 @@
   }
 
   &__close {
+    @include focus-ring;
     background-color: $color-off-purple;
     border-radius: $border-radius-full;
     padding: $spacing-5;

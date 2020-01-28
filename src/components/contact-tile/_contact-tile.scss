@@ -1,4 +1,5 @@
 .contact-tile {
+
   &__heading {
     margin-bottom: $spacing-4;
     width: 80%;
@@ -34,10 +35,5 @@
     @media screen and (min-width: map-get($breakpoints, 'breakpoint-3')) {
       margin: 0 $spacing-6 0 0;
     }
-  }
-
-  &__email {
-    color: $brand-secondary;
-    font-size: $font-size-sm;
   }
 }

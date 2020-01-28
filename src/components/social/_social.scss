@@ -21,6 +21,8 @@
   }
 
   &__link {
+    @include focus-bg;
+    @include touch-boost;
     display: block;
     transition: transform $duration-2 $timing-ease;
 

@@ -93,6 +93,22 @@
   }
 }
 
+@mixin focus-bg {
+  &:focus {
+    background-color: $focus-bg;
+    border-radius: $border-radius-base;
+    color: $focus-color;
+    outline: none;
+  }
+}
+
+@mixin focus-ring($color: $focus-bg) {
+  &:focus {
+    box-shadow: 0 0 0 .2rem $color;
+    outline: none;
+  }
+}
+
 @mixin hover {
   &:hover {
     // The primary input mechanism of the device includes an accurate pointing device
@@ -162,4 +178,9 @@
 @mixin size($size) {
   height: $size;
   width: $size;
+}
+
+@mixin touch-boost {
+  margin: -$spacing-3;
+  padding: $spacing-3;
 }

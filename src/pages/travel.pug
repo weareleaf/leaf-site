@@ -8,17 +8,13 @@ block prepend vars
   -var metaTitle = "Digital products for the travel industry"
   -var metaDescription = "We help the travel industry to build fast, robust applications that their customers love."
 
+  -var heroHeading = "We make superfast applications."
+  -var heroSubheading = "(for the travel industry)"
 
 block pageComponents
   +hero({
-    heroModifier: "landing",
-    heroHeading: metaTitle,
-    heroText: metaDescription,
-    heroButton: {
-      buttonUrl: "javascript:void(0)",
-      buttonText: "Start the conversation",
-      navItemTriggerModal: true
-    }
+    heroHeading: heroHeading,
+    heroSubheading: heroSubheading,
   })
 
   section.section(id="what-we-do")
@@ -74,40 +70,23 @@ block pageComponents
 
   section.section(id="our-work")
     .container
-      h2.small Recent successes
-      .grid.grid--symmetrical-card
-        .grid__item
-          +card({
-            cardImage: {
-              src: "/assets/images/hx.jpg",
-              alt: "Holiday Extras",
-            },
-            cardHeading: "Rethinking parking and hotel bookings",
-            cardText: "We helped refine Holiday Extras' digital transformation from a tradionally offline business by redesigning both Travel Insurance process and their native iOS & Android applications.",
-            cardLink: {
-              href: "javascript:void(0)",
-              text: "Find out more",
-              triggerModal: true
-            }
-          })
-
-        .grid__item
-          +card({
-            cardImage: {
-              src: "/assets/images/heha.webp",
-              fallbackSrc: "/assets/images/heha.jpg",
-              alt: "HEHA!",
-            },
-            cardHeading: "Taking the hassle out of travel",
-            cardText: "Planning trips can be a headache. We worked with Holiday Extras to create HEHA!, an iOS and Android app to make the task simple.",
-            cardLink: {
-              href: "javascript:void(0)",
-              text: "Find out more",
-              triggerModal: true
-            }
-          })
-
-      hr.divider.divider--margin-top
+      +presentation({
+        project: {
+          projectSubHeading: "Heha!",
+          projectHeading: "Hassle-free travel",
+          projectText: "Planning trips is tough. We worked with Holiday Extras to create HEHA!, an iOS and Android app to simplify the task.",
+          projectButton: {
+            buttonText: "Find out more",
+            buttonUrl: "javascript:void(0)",
+            triggerModal: true
+          }
+        },
+        presentationImage: {
+          src: "/assets/images/case-studies/heha/presentation.png",
+          alt: "HEHA!"
+        },
+        imageModifier: "90"
+      })
 
 
   section.section(id="company")
@@ -148,7 +127,7 @@ block pageComponents
           +profile({
             profileImage: {
               context: "profile",
-              src: "/assets/images/chris.jpg",
+              src: "/assets/images/team/chris.jpg",
               alt: "Chris Annetts"
             },
             profileHeading: "Chris Annetts",
@@ -159,7 +138,7 @@ block pageComponents
           +profile({
             profileImage: {
               context: "profile",
-              src: "/assets/images/mike.jpg",
+              src: "/assets/images/team/mike.jpg",
               alt: "Mike Carter"
             },
             profileHeading: "Mike Carter",
@@ -170,7 +149,7 @@ block pageComponents
           +profile({
             profileImage: {
               context: "profile",
-              src: "/assets/images/oj.jpg",
+              src: "/assets/images/team/oj.jpg",
               alt: "Oliver Standeven"
             },
             profileHeading: "Oliver Standeven",
@@ -181,7 +160,7 @@ block pageComponents
           +profile({
             profileImage: {
               context: "profile",
-              src: "/assets/images/tina.jpg",
+              src: "/assets/images/team/tina.jpg",
               alt: "Tina van Schelt"
             },
             profileHeading: "Tina van Schelt",
@@ -191,7 +170,7 @@ block pageComponents
         .grid__item
           +profile({
             profileImage: {
-              src: "/assets/images/curt.jpg",
+              src: "/assets/images/team/curt.jpg",
               alt: "Curtis Lee"
             },
             profileHeading: "Curtis Lee",

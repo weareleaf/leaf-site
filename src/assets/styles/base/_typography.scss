@@ -224,21 +224,22 @@ img {
 
   &__heading {
     color: var(--color-blog-heading);
-    font-size: 4rem; // Custom font-size, unrelated to global spacing system
+    font-size: 3rem; // Custom font-size, unrelated to global spacing system
     font-weight: 700;
-    margin-bottom: -3rem; // Custom margin, unrelated to global spacing system
+    line-height: 1;
+    margin-bottom: -1rem; // Custom margin, unrelated to global spacing system
     pointer-events: none;
     text-align: center;
     z-index: -1;
 
     @media screen and (min-width: map-get($breakpoints, 'breakpoint-1')) {
       font-size: 5rem; // Custom font-size, unrelated to global spacing system
-      margin-bottom: -4rem; // Custom margin, unrelated to global spacing system
+      margin-bottom: -2rem; // Custom margin, unrelated to global spacing system
     }
 
     @media screen and (min-width: map-get($breakpoints, 'breakpoint-3')) {
       font-size: 7rem; // Custom font-size, unrelated to global spacing system
-      margin-bottom: -5.5rem; // Custom margin, unrelated to global spacing system
+      margin-bottom: -3.5rem; // Custom margin, unrelated to global spacing system
     }
   }
 }

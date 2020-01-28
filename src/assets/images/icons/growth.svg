@@ -1,11 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<svg width="60px" height="45px" viewBox="0 0 60 45" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-    <!-- Generator: Sketch 55.1 (78136) - https://sketchapp.com -->
+<svg width="40px" height="30px" viewBox="0 0 40 30" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 61.2 (89653) - https://sketch.com -->
     <title>growth</title>
     <desc>Created with Sketch.</desc>
-    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-        <g id="Desktop-HD" transform="translate(-599.000000, -838.000000)" fill="#66CC88" fill-rule="nonzero">
-            <path d="M658.0625,879.25 L602.75,879.25 L602.75,838.9375 C602.75,838.419531 602.330469,838 601.8125,838 L599.9375,838 C599.419531,838 599,838.419531 599,838.9375 L599,881.125 C599,882.160938 599.839062,883 600.875,883 L658.0625,883 C658.580469,883 659,882.580469 659,882.0625 L659,880.1875 C659,879.669531 658.580469,879.25 658.0625,879.25 Z M610.524219,861.323828 C610.158594,861.689453 610.158594,862.283594 610.524219,862.649219 L611.849609,863.974609 C612.215234,864.340234 612.809375,864.340234 613.175,863.974609 L621.693359,855.535938 L631.617969,865.460547 C632.350391,866.192969 633.5375,866.192969 634.269922,865.460547 L645.230469,854.5 L650.391406,859.660938 C650.971484,860.241016 651.683984,860.5 652.383594,860.5 C653.846094,860.5 655.25,859.363281 655.25,857.647656 L655.25,843.647266 C655.25,842.599609 654.400391,841.75 653.352734,841.75 L639.352344,841.75 C636.816406,841.75 635.547266,844.815625 637.340234,846.608594 L642.579687,851.848047 L632.944531,861.483203 L623.026953,851.565625 C622.296875,850.835547 621.114453,850.833203 620.382031,851.559766 L610.524219,861.323828 Z M641.534375,845.5 L651.5,845.5 L651.5,855.465625 L641.534375,845.5 Z" id="growth"></path>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round">
+        <g id="growth" transform="translate(1.000000, 1.000000)" stroke="#9999E6" stroke-width="2">
+            <polyline id="Path" points="0 0 0 28 38 28"></polyline>
+            <polyline id="Path-2" points="8 15 14 9 22 17 30 9"></polyline>
+            <polygon id="Path-3" points="25 3 36 14 36 3"></polygon>
         </g>
     </g>
 </svg>

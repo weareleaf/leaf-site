@@ -7,6 +7,13 @@
 
   &__main {
 
+    .page--landing & {
+      align-items: center;
+      display: -ms-grid;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+    }
+
     @media screen and (min-width: map-get($breakpoints, 'breakpoint-1')) {
       align-items: center;
       display: -ms-grid;
@@ -22,6 +29,10 @@
     position: relative;
     top: .2rem;
     width: 4rem;
+
+    .page--landing & {
+      @include margin-horizontal(unset);
+    }
 
     @media screen and (min-width: map-get($breakpoints, 'breakpoint-1')) {
       @include margin-horizontal(unset);
@@ -46,10 +57,18 @@
   &__contact {
     display: none;
 
+    .page--landing & {
+      display: block;
+
+      .nav__link {
+        display: table;
+        margin-left: auto;
+      }
+    }
+
     @media screen and (min-width: map-get($breakpoints, 'breakpoint-1')) {
       display: block;
       margin-right: -$spacing-5; // Offet position by .nav__list padding
-      order: 1;
       text-align: right;
     }
   }

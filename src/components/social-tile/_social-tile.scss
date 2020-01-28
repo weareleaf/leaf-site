@@ -2,6 +2,10 @@ $icon-size: 2.7rem;
 $image-size: $size-1;
 
 .social-tile {
+  @include focus-ring;
+  @include touch-boost;
+  display: block;
+
   @media screen and (min-width: map-get($breakpoints, 'breakpoint-3')) {
     display: flex;
   }
@@ -37,7 +41,13 @@ $image-size: $size-1;
     }
   }
 
+  &__heading,
+  &__handle {
+    display: block;
+  }
+
   &__heading {
+    color: $color-white;
     font-size: .6rem;
     font-weight: 700;
     letter-spacing: .05rem;
@@ -45,8 +55,7 @@ $image-size: $size-1;
     text-transform: uppercase;
   }
 
-  &__link {
-    display: block;
+  &__handle {
     font-family: $font-family-sans-serif-medium;
     font-size: $font-size-xs;
   }

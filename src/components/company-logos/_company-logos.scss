@@ -1,42 +1,18 @@
-.logos {
-  &__list {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: center;
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    width: 100%;
+.company-logos {
+  margin-bottom: $spacing-9;
 
-    @media screen and (min-width: map-get($breakpoints, 'breakpoint-2')) {
-      flex-wrap: nowrap;
-      justify-content: space-between;
-    }
+  &__list {
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
   }
 
   &__item {
-    flex: 0 0 auto;
-    margin-bottom: $spacing-5;
-    padding: $spacing-3 $spacing-5;
+    @include padding-horizontal($spacing-3);
     text-align: center;
-    width: 40%;
 
-    @media screen and (min-width: map-get($breakpoints, 'breakpoint-2')) {
-      flex: 0 2 auto;
-      margin-bottom: 0;
-      padding: 0 $spacing-5 0 $spacing-5;
-      width: 100%;
-
-      &--left {
-        padding-left: 0;
-        text-align: left;
-      }
-
-      &--right {
-        padding-right: 0;
-        text-align: right;
-      }
+    @media screen and (min-width: map-get($breakpoints, 'breakpoint-1')) {
+      @include padding-horizontal($spacing-6);
     }
   }
 }

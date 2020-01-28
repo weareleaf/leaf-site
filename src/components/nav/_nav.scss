@@ -29,10 +29,12 @@
 
   &__link {
     @include animated-link($border-width-base, '.nav__text');
+    @include focus-bg;
     color: var(--color-footer-nav);
     display: inline-block;
     font-size: .75rem;
     outline: none;
+    margin: $spacing-2 $spacing-1;
     padding: $spacing-4;
     position: relative;
 
@@ -42,7 +44,8 @@
 
     @media screen and (min-width: map-get($breakpoints, 'breakpoint-1')) {
       font-size: $font-size-xs;
-      padding: $spacing-5;
+      margin: $spacing-1;
+      padding: $spacing-4;
     }
 
     &[data-mobile-only] {
@@ -55,18 +58,20 @@
     &--active {
       pointer-events: none;
 
+      &::before {
+        background: var(--color-accent);
+        bottom: -6px;
+        content: '';
+        height: 3px;
+        left: 0;
+        margin: .25rem auto;
+        position: absolute;
+        right:0;
+        width: $size-1;
+      }
+
       @media screen and (min-width: map-get($breakpoints, 'breakpoint-1')) {
-        &::before {
-          background: var(--color-accent);
-          bottom: 0;
-          content: '';
-          height: 3px;
-          left: 0;
-          margin: .25rem auto;
-          position: absolute;
-          right:0;
-          width: $size-1;
-        }
+        bottom: 0;
       }
     }
   }

@@ -9,39 +9,35 @@ mixin header(c)
           else
             a.logo(href="#")
               +logo
+        unless c.landingPage
+          .header__nav
+            +nav({
+              navList: [
+                {
+                  navItemUrl: "/expertise",
+                  navItemText: "Expertise"
+                },
+                {
+                  navItemUrl: "/company",
+                  navItemText: "Company"
+                },
+                {
+                  navItemUrl: "/case-studies",
+                  navItemTextMobile: "Work",
+                  navItemText: "Case studies"
+                },
+                {
+                  navItemUrl: "/blog",
+                  navItemText: "Blog"
+                },
+                {
+                  navItemUrl: "javascript:void(0)",
+                  navItemText: "Contact",
+                  navItemMobileOnly: true,
+                  triggerModal: true
+                }
+              ],
+            })
         .header__contact
-          a.nav__link(href="javascript:void(0)", data-micromodal-trigger="modal-contact") Contact
-        .header__nav
-          +nav({
-            navList: [
-              {
-                navItemUrl: "/expertise",
-                navItemText: "Expertise"
-              },
-              {
-                navItemUrl: "/company",
-                navItemText: "Company"
-              },
-              {
-                navItemUrl: "/case-studies",
-                navItemTextMobile: "Work",
-                navItemText: "Case studies"
-              },
-              {
-                navItemUrl: "/blog",
-                navItemText: "Blog"
-              },
-              {
-                navItemUrl: "javascript:void(0)",
-                navItemText: "Contact",
-                navItemMobileOnly: true,
-                navItemTriggerModal: true
-              }
-            ],
-          })
-      //-
-        .header__address
-        +address
-
-        .header__social
-        +social({})
+          a.nav__link(href="javascript:void(0)", data-micromodal-trigger="modal-contact")
+            span.nav__text Contact

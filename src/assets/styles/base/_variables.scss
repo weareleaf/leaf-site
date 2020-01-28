@@ -2,6 +2,7 @@
 $color-green: #55F6DB;
 $color-pink: #f655c4;
 $color-blue: #4c4cde;
+$color-sky-blue: #199fff;
 $color-container: #31319B;
 $color-off-purple: #ebebff;
 $color-off-purple-dark: #eaeaf4;
@@ -23,24 +24,29 @@ $color-white: #fff;
 $color-off-white: #f5f5f5;
 $brand-secondary: $color-red !default;
 
-:root {
-  --color-accent: #{$color-green};
-  --color-background: #{$color-purple-medium};
-  --color-blog-heading: #222277;
-  --color-container: #{$color-container};
-  --color-footer-contact: #{$color-white};
-  --color-footer-divider: #{$color-purple-light};
-  --color-footer-nav: #{$color-white};
-  --color-footer-text: #{$color-purple-lightest};
-  --color-logo: #{$color-white};
-  --color-paragraph: #{$color-white};
-  --color-share-icons: #{$color-white};
-  --color-social-icons: #{$color-white};
-  --color-close: #{$color-white};
-}
-
 // Background
 $background-color: var(--color-background);
+
+// Border radius
+$border-radius-xs: .1rem !default; // 2px
+$border-radius-sm: .2rem !default; // 4px
+$border-radius-base: .25rem !default; // 5px
+$border-radius-lg: .4rem !default; // 8px
+$border-radius-half: 50% !default;
+$border-radius-full: 100% !default;
+
+// Border sizing
+$border-width-base: 1px !default;
+$border-width-sm: $border-width-base * 2 !default;
+$border-width-lg: $border-width-base * 3 !default;
+$border-width-xl: $border-width-base * 4 !default;
+
+// Border styling
+$border-color: $color-white !default;
+$border-style: solid !default;
+
+// Borders
+$border-default: $border-width-lg $border-style $border-color;
 
 // Brand colors
 $color-heha: #f2b6e8;
@@ -48,6 +54,31 @@ $color-keen: #b6d9f2;
 $color-rift: #f2b6b6;
 $color-zendesk: #b6f2f2;
 $color-laced: #879ac9;
+
+// Breakpoints
+$breakpoints: (
+  breakpoint-0: 0,
+  breakpoint-1: 34em,
+  breakpoint-2: 40em,
+  breakpoint-3: 48em,
+  breakpoint-4: 62em,
+  breakpoint-5: 68em,
+  breakpoint-6: 75em,
+  breakpoint-7: 80em,
+  breakpoint-8: 82em,
+  breakpoint-9: 84em,
+  breakpoint-10: 90em,
+  breakpoint-11: 96em,
+  breakpoint-12: 120em
+) !default;
+
+// Durations
+$duration-1: 150ms;
+$duration-2: 200ms;
+$duration-3: 250ms;
+$duration-4: 300ms;
+$duration-5: 400ms;
+$duration-6: 500ms;
 
 // Fonts
 $font-family-sans-serif-light: 'Larsseit-Light', sans-serif !default;
@@ -62,6 +93,12 @@ $font-size-h3: 1.1rem !default;
 $font-size-h4: .9rem !default;
 $font-size-h5: .8rem !default;
 $font-size-h6: .75rem !default;
+
+// Focus states
+$focus-bg: var(--color-focus-bg);
+$focus-color: var(--color-focus-color);
+$focus-style: var(--color-focus-style);
+$focus-width: var(--color-focus-width);
 
 // Font sizes
 $root-font-size: .9rem;
@@ -84,6 +121,9 @@ $font-weight-heading: 700;
 $heading-line-height: 1.2 !default;
 $line-height: 1.6 !default;
 $quote-line-height: 1.5 !default;
+
+// Opacity
+$opacity-base: .75;
 
 // Spacing
 $spacing-1: .125rem;
@@ -114,57 +154,28 @@ $size-10: 20rem;
 $size-11: 30rem;
 $size-12: 62.5rem;
 
-// Border styling
-$border-color: $color-white !default;
-$border-style: solid !default;
-
-// Border sizing
-$border-width-base: 1px !default;
-$border-width-sm: $border-width-base * 2 !default;
-$border-width-lg: $border-width-base * 3 !default;
-$border-width-xl: $border-width-base * 4 !default;
-
-// Default border
-$border-default: $border-width-lg $border-style $border-color;
-
-// Border radius
-$border-radius-xs: .1rem !default; // 2px
-$border-radius-sm: .2rem !default; // 4px
-$border-radius-base: .25rem !default; // 5px
-$border-radius-lg: .4rem !default; // 8px
-$border-radius-half: 50% !default;
-$border-radius-full: 100% !default;
-
-// Durations
-$duration-1: 150ms;
-$duration-2: 200ms;
-$duration-3: 250ms;
-$duration-4: 300ms;
-$duration-5: 400ms;
-$duration-6: 500ms;
-
 // Timings
 $timing-ease: ease;
 $timing-ease-in-out: ease-in-out;
 $timing-ease-in: ease-in;
 $timing-elastic: cubic-bezier(.55, 0, .1, 1);
 
-// Breakpoints
-$breakpoints: (
-  breakpoint-0: 0,
-  breakpoint-1: 34em,
-  breakpoint-2: 40em,
-  breakpoint-3: 48em,
-  breakpoint-4: 62em,
-  breakpoint-5: 68em,
-  breakpoint-6: 75em,
-  breakpoint-7: 80em,
-  breakpoint-8: 82em,
-  breakpoint-9: 84em,
-  breakpoint-10: 90em,
-  breakpoint-11: 96em,
-  breakpoint-12: 120em
-) !default;
-
-// Opacity
-$opacity-base: .75;
+:root {
+  --color-accent: #{$color-green};
+  --color-background: #{$color-purple-medium};
+  --color-blog-heading: #222277;
+  --color-container: #{$color-container};
+  --color-focus-bg: #{$color-sky-blue};
+  --color-focus-color: #{$color-purple-medium};
+  --color-focus-style: #{$border-style};
+  --color-focus-width: #{$border-width-sm};
+  --color-footer-contact: #{$color-white};
+  --color-footer-divider: #{$color-purple-light};
+  --color-footer-nav: #{$color-white};
+  --color-footer-text: #{$color-purple-lightest};
+  --color-logo: #{$color-white};
+  --color-paragraph: #{$color-white};
+  --color-share-icons: #{$color-white};
+  --color-social-icons: #{$color-white};
+  --color-close: #{$color-white};
+}

@@ -1,4 +1,5 @@
 .post {
+  @include focus-ring;
   @include shadow-effect;
   background-color: var(--color-container);
   border-radius: 8px;

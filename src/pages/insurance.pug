@@ -8,17 +8,13 @@ block prepend vars
   -var metaTitle = "Digital products for the insurance industry"
   -var metaDescription = "We help the insurance industry to build fast, robust applications that their customers love."
 
+  -var heroHeading = "We make superfast applications."
+  -var heroSubheading = "(for insurance companies)"
 
 block pageComponents
   +hero({
-    heroModifier: "landing",
-    heroHeading: metaTitle,
-    heroText: metaDescription,
-    heroButton: {
-      buttonUrl: "javascript:void(0)",
-      buttonText: "Start the conversation",
-      navItemTriggerModal: true
-    }
+    heroHeading: heroHeading,
+    heroSubheading: heroSubheading,
   })
 
   section.section(id="what-we-do")
@@ -74,19 +70,40 @@ block pageComponents
 
   section.section(id="our-work")
     .container
-      h2.small Recent success
-      +study({
-        studyImage: {
-          src: "/assets/images/hx-banner.webp",
-          alt: "Holiday Extras online insurance",
+      +presentation({
+        project: {
+          projectSubHeading: "MyRIFT",
+          projectHeading: "Helping Brits claim back tax",
+          projectText: "We helped RIFT re-imagine their web application, making tax refund claims easier to manage for their customers.",
+          projectButton: {
+            buttonText: "Find out more",
+            buttonUrl: "javascript:void(0)",
+            triggerModal: true
+          }
         },
-        studyHeading: "Helping travellers gain peace-of-mind",
-        studyText: "Travel can be stressful, but it doesn't need to be. We helped Holiday Extras redesign their mobile-first travel insurance web flow.",
-        studyLink: {
-          href: "javascript:void(0)",
-          text: "Find out more",
-          triggerModal: true
-        }
+        presentationImage: {
+          src: "/assets/images/case-studies/rift/presentation.png",
+          alt: "RIFT"
+        },
+        presentationModifier: "reverse"
+      })
+
+      +presentation({
+        project: {
+          projectSubHeading: "Heha!",
+          projectHeading: "Hassle-free travel",
+          projectText: "Planning trips is tough. We worked with Holiday Extras to create HEHA!, an iOS and Android app to simplify the task.",
+          projectButton: {
+            buttonText: "Find out more",
+            buttonUrl: "javascript:void(0)",
+            triggerModal: true
+          }
+        },
+        presentationImage: {
+          src: "/assets/images/case-studies/heha/presentation.png",
+          alt: "HEHA!"
+        },
+        imageModifier: "90"
       })
 
 
@@ -128,7 +145,7 @@ block pageComponents
           +profile({
             profileImage: {
               context: "profile",
-              src: "/assets/images/chris.jpg",
+              src: "/assets/images/team/chris.jpg",
               alt: "Chris Annetts"
             },
             profileHeading: "Chris Annetts",
@@ -139,7 +156,7 @@ block pageComponents
           +profile({
             profileImage: {
               context: "profile",
-              src: "/assets/images/mike.jpg",
+              src: "/assets/images/team/mike.jpg",
               alt: "Mike Carter"
             },
             profileHeading: "Mike Carter",
@@ -150,7 +167,7 @@ block pageComponents
           +profile({
             profileImage: {
               context: "profile",
-              src: "/assets/images/oj.jpg",
+              src: "/assets/images/team/oj.jpg",
               alt: "Oliver Standeven"
             },
             profileHeading: "Oliver Standeven",
@@ -161,7 +178,7 @@ block pageComponents
           +profile({
             profileImage: {
               context: "profile",
-              src: "/assets/images/tina.jpg",
+              src: "/assets/images/team/tina.jpg",
               alt: "Tina van Schelt"
             },
             profileHeading: "Tina van Schelt",
@@ -171,7 +188,7 @@ block pageComponents
         .grid__item
           +profile({
             profileImage: {
-              src: "/assets/images/curt.jpg",
+              src: "/assets/images/team/curt.jpg",
               alt: "Curtis Lee"
             },
             profileHeading: "Curtis Lee",

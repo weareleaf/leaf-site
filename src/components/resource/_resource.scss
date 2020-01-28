@@ -1,15 +1,16 @@
 .resource {
+  background-color: $color-container;
+  border-radius: $border-radius-lg;
   font-size: $font-size-lg;
   height: 100%;
 
   &[href] {
+    @include focus-ring;
     @include shadow-effect;
   }
 
   &__container {
     align-items: center;
-    background-color: $color-container;
-    border-radius: $border-radius-lg;
     display: -ms-grid;
     display: grid;
     grid-template-columns: auto 1fr;

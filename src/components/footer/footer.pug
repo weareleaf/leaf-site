@@ -20,27 +20,28 @@ mixin footer(c)
               socialModifier: "inline"
             })
       .footer__info
-        .footer__nav
-          +nav({
-            navList: [
-              {
-                navItemUrl: "https://github.com/weareleaf/handbook",
-                navItemText: "Handbook",
-                newTab: true
-              },
-              {
-                navItemUrl: "/careers",
-                navItemText: "Careers"
-              },
-              {
-                navItemUrl: "/ebooks",
-                navItemText: "eBooks"
-              },
-              {
-                navItemUrl: "/terms",
-                navItemText: "Terms"
-              }
-            ]
-          })
+        if c.footerNav
+          .footer__nav
+            +nav({
+              navList: [
+                {
+                  navItemUrl: "https://github.com/weareleaf/handbook",
+                  navItemText: "Handbook",
+                  newTab: true
+                },
+                {
+                  navItemUrl: "/careers",
+                  navItemText: "Careers"
+                },
+                {
+                  navItemUrl: "/ebooks",
+                  navItemText: "eBooks"
+                },
+                {
+                  navItemUrl: "/terms",
+                  navItemText: "Terms"
+                }
+              ]
+            })
         p.footer__copyright &copy; Leaf Software Ltd
         p.footer__vat VAT no: GB 265125317
