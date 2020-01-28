@@ -1,14 +1,16 @@
-<?xml version="1.0" encoding="utf-8"?>
-<!-- Generator: Adobe Illustrator 23.0.6, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
-<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-	 viewBox="0 0 60 60" style="enable-background:new 0 0 60 60;" xml:space="preserve">
-<style type="text/css">
-	.st0{fill:none;stroke:#66CC88;stroke-width:3.3;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;}
-</style>
-<circle class="st0" cx="30" cy="30" r="28"/>
-<circle class="st0" cx="30.4" cy="30" r="15"/>
-<line class="st0" x1="10.6" y1="10.6" x2="19.2" y2="19.2"/>
-<line class="st0" x1="49.8" y1="10.6" x2="41.2" y2="19.2"/>
-<line class="st0" x1="41.2" y1="40.8" x2="49.8" y2="49.4"/>
-<line class="st0" x1="19.2" y1="40.8" x2="10.6" y2="49.4"/>
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="42px" height="42px" viewBox="0 0 42 42" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 61.2 (89653) - https://sketch.com -->
+    <title>design</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round">
+        <g id="design" transform="translate(1.000000, 1.000000)" stroke="#9999E6" stroke-width="2">
+            <circle id="Oval" cx="20" cy="20" r="20"></circle>
+            <circle id="Oval" cx="20.2857143" cy="20" r="10.7142857"></circle>
+            <line x1="6.14285714" y1="6.14285714" x2="12.2857143" y2="12.2857143" id="Path"></line>
+            <line x1="34.1428571" y1="6.14285714" x2="28" y2="12.2857143" id="Path"></line>
+            <line x1="28" y1="27.7142857" x2="34.1428571" y2="33.8571429" id="Path"></line>
+            <line x1="12.2857143" y1="27.7142857" x2="6.14285714" y2="33.8571429" id="Path"></line>
+        </g>
+    </g>
 </svg>

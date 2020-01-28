@@ -310,6 +310,10 @@ template {
   --color-background: #28288B;
   --color-blog-heading: #222277;
   --color-container: #31319B;
+  --color-focus-bg: #199fff;
+  --color-focus-color: #28288B;
+  --color-focus-style: solid;
+  --color-focus-width: 2px;
   --color-footer-contact: #fff;
   --color-footer-divider: #5253A8;
   --color-footer-nav: #fff;
@@ -342,6 +346,7 @@ html {
   --color-background: #f2f2fb;
   --color-blog-heading: #e1e1f0;
   --color-container: #fbfbfe;
+  --color-focus-bg: #55F6DB;
   --color-footer-contact: #4c4cde;
   --color-footer-divider: #9999E6;
   --color-footer-nav: #4c4cde;
@@ -632,20 +637,21 @@ img {
   position: relative; }
   .blog-content__heading {
     color: var(--color-blog-heading);
-    font-size: 4rem;
+    font-size: 3rem;
     font-weight: 700;
-    margin-bottom: -3rem;
+    line-height: 1;
+    margin-bottom: -1rem;
     pointer-events: none;
     text-align: center;
     z-index: -1; }
     @media screen and (min-width: 34em) {
       .blog-content__heading {
         font-size: 5rem;
-        margin-bottom: -4rem; } }
+        margin-bottom: -2rem; } }
     @media screen and (min-width: 48em) {
       .blog-content__heading {
         font-size: 7rem;
-        margin-bottom: -5.5rem; } }
+        margin-bottom: -3.5rem; } }
 
 blockquote {
   margin: 2rem auto;
@@ -843,6 +849,9 @@ blockquote {
     background-color: #ebebff;
     border-radius: 100%;
     padding: 1rem; }
+    .banner__close:focus {
+      box-shadow: 0 0 0 0.2rem var(--color-focus-bg);
+      outline: none; }
     @media screen and (min-width: 96em) {
       .banner__close {
         background-color: var(--color-container); } }
@@ -867,6 +876,12 @@ blockquote {
 .blog-post__image {
   border: 3px solid #fff; }
 
+.blog-post a:focus {
+  background-color: var(--color-focus-bg);
+  border-radius: 0.25rem;
+  color: var(--color-focus-color);
+  outline: none; }
+
 .button {
   background-color: #161669;
   border: none;
@@ -880,6 +895,9 @@ blockquote {
   text-align: center;
   text-decoration: none;
   transition: background-color 200ms ease; }
+  .button:focus {
+    box-shadow: 0 0 0 0.2rem var(--color-focus-bg);
+    outline: none; }
   .button::before {
     content: '';
     display: block;
@@ -888,7 +906,7 @@ blockquote {
     .button {
       font-size: 0.9rem;
       padding: 1rem 1.5rem; } }
-  .button:hover, .button:focus {
+  .button:hover {
     background-color: #13135c;
     text-decoration: none; }
   .button--small {
@@ -932,38 +950,20 @@ a.card:hover {
   a.card:hover .card__image {
     opacity: 0.75; }
 
-.logos__list {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: center;
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  width: 100%; }
-  @media screen and (min-width: 40em) {
-    .logos__list {
-      flex-wrap: nowrap;
-      justify-content: space-between; } }
-
-.logos__item {
-  flex: 0 0 auto;
-  margin-bottom: 1rem;
-  padding: 0.5rem 1rem;
-  text-align: center;
-  width: 40%; }
-  @media screen and (min-width: 40em) {
-    .logos__item {
-      flex: 0 2 auto;
-      margin-bottom: 0;
-      padding: 0 1rem 0 1rem;
-      width: 100%; }
-      .logos__item--left {
-        padding-left: 0;
-        text-align: left; }
-      .logos__item--right {
-        padding-right: 0;
-        text-align: right; } }
+.company-logos {
+  margin-bottom: 4rem; }
+  .company-logos__list {
+    align-items: center;
+    display: flex;
+    justify-content: space-between; }
+  .company-logos__item {
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+    text-align: center; }
+    @media screen and (min-width: 34em) {
+      .company-logos__item {
+        padding-left: 1.5rem;
+        padding-right: 1.5rem; } }
 
 .contact__content {
   display: grid;
@@ -1029,10 +1029,6 @@ a.card:hover {
   @media screen and (min-width: 48em) {
     .contact-tile__button {
       margin: 0 1.5rem 0 0; } }
-
-.contact-tile__email {
-  color: #f77c6b;
-  font-size: 0.9rem; }
 
 .details {
   display: grid; }
@@ -1156,6 +1152,11 @@ a.card:hover {
       .footer__link:hover::after {
         transform: scaleX(1);
         transform-origin: center left; } }
+    .footer__link:focus {
+      background-color: var(--color-focus-bg);
+      border-radius: 0.25rem;
+      color: var(--color-focus-color);
+      outline: none; }
     @media screen and (min-width: 62em) {
       .footer__link {
         font-size: 1.5rem; } }
@@ -1178,6 +1179,10 @@ a.card:hover {
       clear: both;
       content: '';
       display: table; }
+    .page--landing .footer__info {
+      padding-bottom: 0.5rem;
+      padding-top: 0.5rem;
+      grid-template-columns: 1fr 1fr; }
     @media screen and (min-width: 40em) {
       .footer__info {
         display: -ms-grid;
@@ -1185,7 +1190,9 @@ a.card:hover {
         grid-template-columns: 1fr auto 1fr;
         grid-template-rows: none;
         margin-top: 6rem;
-        padding-bottom: 0.5rem; } }
+        padding-bottom: 0.5rem; }
+        .page--landing .footer__info {
+          grid-template-columns: 1fr 1fr; } }
   .footer__copyright, .footer__vat {
     align-self: center;
     color: inherit;
@@ -1195,6 +1202,9 @@ a.card:hover {
     @media screen and (min-width: 40em) {
       .footer__copyright, .footer__vat {
         width: auto; } }
+    .page--landing .footer__copyright, .page--landing .footer__vat {
+      padding-bottom: 0.75rem;
+      padding-top: 0.75rem; }
   .footer__copyright {
     float: left;
     text-align: right; }
@@ -1367,6 +1377,11 @@ a.card:hover {
   @media screen and (min-width: 34em) {
     .header {
       background-color: transparent; } }
+  .page--landing .header__main {
+    align-items: center;
+    display: -ms-grid;
+    display: grid;
+    grid-template-columns: 1fr 1fr; }
   @media screen and (min-width: 34em) {
     .header__main {
       align-items: center;
@@ -1381,6 +1396,9 @@ a.card:hover {
     position: relative;
     top: .2rem;
     width: 4rem; }
+    .page--landing .header__logo {
+      margin-left: unset;
+      margin-right: unset; }
     @media screen and (min-width: 34em) {
       .header__logo {
         margin-left: unset;
@@ -1400,11 +1418,15 @@ a.card:hover {
         margin: 0; } }
   .header__contact {
     display: none; }
+    .page--landing .header__contact {
+      display: block; }
+      .page--landing .header__contact .nav__link {
+        display: table;
+        margin-left: auto; }
     @media screen and (min-width: 34em) {
       .header__contact {
         display: block;
         margin-right: -1rem;
-        order: 1;
         text-align: right; } }
   .header__address {
     bottom: 3rem;
@@ -1477,7 +1499,14 @@ a.card:hover {
         max-width: 60%; } }
 
 .logo {
+  margin: -0.5rem;
+  padding: 0.5rem;
   display: block; }
+  .logo:focus {
+    box-shadow: 0 0 0 0.2rem var(--color-focus-bg);
+    outline: none; }
+  .logo svg {
+    display: block; }
 
 .modal {
   display: none; }
@@ -1525,14 +1554,18 @@ a.card:hover {
     .modal[aria-hidden='true'] .modal__container {
       animation: mmslideOut 250ms ease; }
   .modal__close {
+    margin: -0.5rem;
+    padding: 0.5rem;
     background: transparent;
     border: none;
     cursor: pointer;
     font-size: 1.5rem;
     line-height: 1;
     outline: none;
-    margin-right: 1.25rem;
-    padding: 0; }
+    margin-right: 1.25rem; }
+    .modal__close:focus {
+      box-shadow: 0 0 0 0.2rem var(--color-focus-bg);
+      outline: none; }
     .modal__close::before {
       content: url("/assets/images/icons/close.svg"); }
     @media screen and (min-width: 34em) {
@@ -1594,6 +1627,7 @@ a.card:hover {
     display: inline-block;
     font-size: .75rem;
     outline: none;
+    margin: 0.25rem 0.125rem;
     padding: 0.75rem;
     position: relative; }
     .nav__link .nav__text:hover,
@@ -1624,6 +1658,11 @@ a.card:hover {
       .nav__link:hover .nav__text::after {
         transform: scaleX(1);
         transform-origin: center left; } }
+    .nav__link:focus {
+      background-color: var(--color-focus-bg);
+      border-radius: 0.25rem;
+      color: var(--color-focus-color);
+      outline: none; }
     @media (pointer: fine) {
       .nav__link:hover {
         text-decoration: none; } }
@@ -1637,23 +1676,26 @@ a.card:hover {
     @media screen and (min-width: 34em) {
       .nav__link {
         font-size: 0.8rem;
-        padding: 1rem; } }
+        margin: 0.125rem;
+        padding: 0.75rem; } }
     @media screen and (min-width: 34em) {
       .nav__link[data-mobile-only] {
         display: none; } }
     .nav__link--active {
       pointer-events: none; }
+      .nav__link--active::before {
+        background: var(--color-accent);
+        bottom: -6px;
+        content: '';
+        height: 3px;
+        left: 0;
+        margin: .25rem auto;
+        position: absolute;
+        right: 0;
+        width: 1rem; }
       @media screen and (min-width: 34em) {
-        .nav__link--active::before {
-          background: var(--color-accent);
-          bottom: 0;
-          content: '';
-          height: 3px;
-          left: 0;
-          margin: .25rem auto;
-          position: absolute;
-          right: 0;
-          width: 1rem; } }
+        .nav__link--active {
+          bottom: 0; } }
   .nav__text {
     display: block;
     position: relative; }
@@ -1682,6 +1724,9 @@ a.card:hover {
   color: var(--color-paragraph);
   height: 100%;
   padding: 1.5rem; }
+  .post:focus {
+    box-shadow: 0 0 0 0.2rem var(--color-focus-bg);
+    outline: none; }
   @media (pointer: fine) {
     .post:hover {
       box-shadow: 0 0.5rem 1rem 0 rgba(0, 0, 0, 0.075);
@@ -1830,12 +1875,17 @@ a.card:hover {
       margin-bottom: 1.5rem; } }
 
 .resource {
+  background-color: #31319B;
+  border-radius: 0.4rem;
   font-size: 1.875rem;
   height: 100%; }
   .resource[href] {
     box-shadow: 0 0.125rem 0.25rem 0 rgba(0, 0, 0, 0.025);
     display: block;
     transition: box-shadow 500ms ease, transform 200ms ease; }
+    .resource[href]:focus {
+      box-shadow: 0 0 0 0.2rem var(--color-focus-bg);
+      outline: none; }
     @media (pointer: fine) {
       .resource[href]:hover {
         box-shadow: 0 0.5rem 1rem 0 rgba(0, 0, 0, 0.075);
@@ -1854,8 +1904,6 @@ a.card:hover {
         transform: scale(1.04); } }
   .resource__container {
     align-items: center;
-    background-color: #31319B;
-    border-radius: 0.4rem;
     display: -ms-grid;
     display: grid;
     grid-template-columns: auto 1fr;
@@ -1964,8 +2012,15 @@ a.card:hover {
     margin-right: 0; }
 
 .social__link {
+  margin: -0.5rem;
+  padding: 0.5rem;
   display: block;
   transition: transform 200ms ease; }
+  .social__link:focus {
+    background-color: var(--color-focus-bg);
+    border-radius: 0.25rem;
+    color: var(--color-focus-color);
+    outline: none; }
   @media (pointer: fine) {
     .social__link:hover {
       transform: scale(1.1); } }
@@ -1988,47 +2043,51 @@ a.card:hover {
   .social__link:hover .social__fill {
     fill: #f2f2f2; }
 
-@media screen and (min-width: 48em) {
-  .social-tile {
-    display: flex; } }
-
-.social-tile__icon {
-  background-color: #31319B;
-  border-radius: 100%;
-  position: relative;
-  text-align: center;
-  height: 2.7rem;
-  width: 2.7rem; }
+.social-tile {
+  margin: -0.5rem;
+  padding: 0.5rem;
+  display: block; }
+  .social-tile:focus {
+    box-shadow: 0 0 0 0.2rem var(--color-focus-bg);
+    outline: none; }
   @media screen and (min-width: 48em) {
-    .social-tile__icon {
-      margin-right: 0.75rem; } }
-
-.social-tile__image {
-  height: 1rem;
-  left: 50%;
-  position: absolute;
-  top: 50%;
-  transform: translate(-50%, -50%);
-  width: 1rem; }
-
-.social-tile__content {
-  display: none; }
-  @media screen and (min-width: 48em) {
-    .social-tile__content {
-      display: block;
-      padding-top: .2rem; } }
-
-.social-tile__heading {
-  font-size: .6rem;
-  font-weight: 700;
-  letter-spacing: .05rem;
-  margin-bottom: 0;
-  text-transform: uppercase; }
-
-.social-tile__link {
-  display: block;
-  font-family: "Larsseit-Medium", sans-serif;
-  font-size: 0.8rem; }
+    .social-tile {
+      display: flex; } }
+  .social-tile__icon {
+    background-color: #31319B;
+    border-radius: 100%;
+    position: relative;
+    text-align: center;
+    height: 2.7rem;
+    width: 2.7rem; }
+    @media screen and (min-width: 48em) {
+      .social-tile__icon {
+        margin-right: 0.75rem; } }
+  .social-tile__image {
+    height: 1rem;
+    left: 50%;
+    position: absolute;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 1rem; }
+  .social-tile__content {
+    display: none; }
+    @media screen and (min-width: 48em) {
+      .social-tile__content {
+        display: block;
+        padding-top: .2rem; } }
+  .social-tile__heading, .social-tile__handle {
+    display: block; }
+  .social-tile__heading {
+    color: #fff;
+    font-size: .6rem;
+    font-weight: 700;
+    letter-spacing: .05rem;
+    margin-bottom: 0;
+    text-transform: uppercase; }
+  .social-tile__handle {
+    font-family: "Larsseit-Medium", sans-serif;
+    font-size: 0.8rem; }
 
 @media screen and (min-width: 34em) {
   .statement {
@@ -2060,6 +2119,40 @@ a.card:hover {
   color: #fff;
   font-size: 0.9rem;
   margin-bottom: 0; }
+
+.statement__link {
+  position: relative;
+  display: inline-block;
+  font-family: 'Larsseit-Medium';
+  font-size: 0.8rem;
+  margin-top: 0.75rem; }
+  .statement__link:hover, .statement__link:active {
+    text-decoration: none; }
+  .statement__link::after {
+    background-color: currentColor;
+    content: '';
+    display: block;
+    height: 2px;
+    margin-top: -1px;
+    position: absolute;
+    top: 50%;
+    transform: scaleX(0);
+    transform-origin: center right;
+    transition: transform 400ms cubic-bezier(0.55, 0, 0.1, 1);
+    width: 100%; }
+  @media (pointer: fine) {
+    .statement__link:hover::after {
+      transform: scaleX(1);
+      transform-origin: center left; } }
+
+@-moz-document url-prefix() {
+  .statement__link:hover::after {
+    transform: scaleX(1);
+    transform-origin: center left; } }
+  @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+    .statement__link:hover::after {
+      transform: scaleX(1);
+      transform-origin: center left; } }
 
 .study {
   display: block;
@@ -2102,7 +2195,16 @@ a.card:hover {
   box-shadow: 0 0.125rem 0.25rem 0 rgba(0, 0, 0, 0.025);
   display: block;
   transition: box-shadow 500ms ease, transform 200ms ease;
+  align-items: center;
+  background-color: #31319B;
+  border-radius: 0.4rem;
+  display: -ms-grid;
+  display: grid;
+  grid-template-columns: auto 1fr;
   height: 100%; }
+  .tile:focus {
+    box-shadow: 0 0 0 0.2rem var(--color-focus-bg);
+    outline: none; }
   @media (pointer: fine) {
     .tile:hover {
       box-shadow: 0 0.5rem 1rem 0 rgba(0, 0, 0, 0.075);
@@ -2119,14 +2221,6 @@ a.card:hover {
       box-shadow: 0 0.5rem 1rem 0 rgba(0, 0, 0, 0.075);
       text-decoration: none;
       transform: scale(1.04); } }
-  .tile__container {
-    align-items: center;
-    background-color: #31319B;
-    border-radius: 0.4rem;
-    display: -ms-grid;
-    display: grid;
-    grid-template-columns: auto 1fr;
-    height: 100%; }
   .tile__media {
     display: block;
     padding: 0.75rem; }
