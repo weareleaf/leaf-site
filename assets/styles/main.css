@@ -332,7 +332,6 @@ body {
 html {
   box-sizing: border-box;
   font-size: 0.9rem;
-  scroll-behavior: smooth;
   text-size-adjust: 100%; }
   @media screen and (min-width: 75em) {
     html {
@@ -416,8 +415,7 @@ body {
 html {
   box-sizing: border-box;
   min-height: 100%;
-  position: relative;
-  scroll-behavior: smooth; }
+  position: relative; }
 
 body {
   height: 100%; }
