@@ -71,6 +71,7 @@ $color-purple-section: #ECECF9;
         grid-column-gap: $spacing-10;
         grid-template-columns: repeat(2, 1fr);
         grid-row-gap: $spacing-8;
+        max-width: $size-11;
         width: 100%;
     }
 
@@ -118,16 +119,24 @@ $color-purple-section: #ECECF9;
             drop-shadow(0 .5rem .5rem rgba($color-black, .2));
             filter: drop-shadow(0 2rem 4rem rgba($color-black, .4))
             drop-shadow(0 .5rem .5rem rgba($color-black, .2));
-            visibility: hidden;
             width: 40%;
         }
 
         &--heha-2 {
             left: $spacing-10;
+
+            @media screen and (min-width: map-get($breakpoints, "breakpoint-4")) {
+                visibility: hidden;
+            }
+        }
+
+        &--heha-3 {
+            visibility: hidden;
         }
 
         &--heha-4 {
             right: $spacing-10;
+            visibility: hidden;
         }
 
         &--heha-6 {
