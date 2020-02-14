@@ -1,0 +1,27 @@
+extends ../layouts/landing.pug
+
+block prepend vars
+  -var activePage = "thanks"
+  -var pageClass = "landing"
+  -var pageTitle = "Message sent - Leaf"
+  -var metaUrl = "https://weareleaf.com/thanks"
+  -var metaTitle = "Thanks"
+  -var metaDescription = "While we don't like to get serious too often, these terms help to protect both Leaf and our clients."
+
+  -var heroHeading = "We've got your message"
+  -var heroSubheading = "(Thank you for reaching out)"
+
+block pageComponents
+  +hero({
+    heroHeading: heroHeading,
+    heroSubheading: heroSubheading,
+  })
+
+  section.section.section--longform
+    .container
+      .grid.grid--center
+
+        .grid__item
+
+          h3 We'll be in touch
+          p Your message has landed safely in our Inbox, and once we've had a chance to look over it properly, one of the team will get back to you shortly.
