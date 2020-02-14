@@ -1,6 +1,3 @@
-//function splitScroll() {
-//const controller = new ScrollMagic.Controller();
-
 window.onscroll = function () { progressBar() };
 
 function progressBar() {
