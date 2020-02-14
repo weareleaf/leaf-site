@@ -1,6 +1,7 @@
 mixin details(c)
   .details
-    each detail in c.details
-      .details__item
-        h4.details__heading= detail.detailHeading
-        p.details__text= detail.detailText
+    .details__content
+      h6.details__heading= c.detailHeading
+      ul.details__list
+        each item in c.detailListItems
+          li.details__item= item.detailItem

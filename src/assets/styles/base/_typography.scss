@@ -158,6 +158,12 @@ img {
     margin: $spacing-8 0 $spacing-8 0;
     width: 3.75rem;
   }
+
+  &--thin {
+    border-top: $border-width-base $border-style #C5C5ED;
+    margin: $spacing-7 0;
+    max-width: $size-11;
+  }
 }
 
 .unstyled-list {

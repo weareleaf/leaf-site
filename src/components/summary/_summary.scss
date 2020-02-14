@@ -1,7 +1,10 @@
 .summary {
+  max-width: $size-11;
 
   &__heading {
-    font-size: $font-size-xs;
+    color: var(--color-footer-text);
+    font-size: 2.25rem;
+    margin-bottom: $spacing-3;
   }
 
   &__text {

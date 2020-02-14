@@ -1,0 +1,23 @@
+.progress {
+  display: none;
+
+  @media screen and (min-width: map-get($breakpoints, "breakpoint-4")) {
+    background: #D8D8F3;
+    border-radius: $border-radius-base;
+    display: block;
+    height: .3rem;
+    overflow: hidden;
+    position: fixed;
+    top: 50%;
+    transform: rotate(90deg);
+    right: -$spacing-4;
+    width: 6rem;
+  }
+
+  &__bar {
+    background: #199fff;
+    border-radius: $border-radius-base;
+    height: 100%;
+    width: 0%;
+  }
+}
