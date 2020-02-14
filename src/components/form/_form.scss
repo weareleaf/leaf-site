@@ -1,9 +1,10 @@
 $checkbox-pseudo-size: .25rem;
 
 .form {
+
   &__fieldset {
     border: none;
-    border-top: $border-default;
+    border-top: $border-width-lg $border-style $color-purple-light;
     margin: 0 0 $spacing-7 0;
     padding: 0;
 
@@ -13,8 +14,8 @@ $checkbox-pseudo-size: .25rem;
   }
 
   &__legend {
-    background-color: $color-white;
-    color: $color-grey-dark;
+    background-color: inherit;
+    color: $color-off-purple;
     font-size: $font-size-h3;
     font-weight: 700;
     margin-bottom: $spacing-4;
@@ -23,14 +24,15 @@ $checkbox-pseudo-size: .25rem;
   }
 
   &__grid {
+
     @media screen and (min-width: map-get($breakpoints, 'breakpoint-3')) {
       display: -ms-grid;
       display: grid;
 
       &--half {
-        -ms-grid-columns: 1fr ($spacing-8) 1fr;
+        -ms-grid-columns: 1fr ($spacing-6) 1fr;
         grid-template-columns: 1fr 1fr;
-        grid-column-gap: $spacing-8;
+        grid-column-gap: $spacing-6;
       }
 
       &--custom {
@@ -44,6 +46,7 @@ $checkbox-pseudo-size: .25rem;
   }
 
   &__group {
+
     &:not(:last-child) {
       margin-bottom: $spacing-5;
     }
@@ -90,10 +93,10 @@ $checkbox-pseudo-size: .25rem;
   }
 
   &__label {
-    color: $color-grey-dark;
+    color: $color-white;
     display: inline-block;
     font-family: $font-family-sans-serif-medium;
-    margin-bottom: .1em;
+    margin-bottom: $spacing-2;
 
     &--checkbox {
       color: $color-grey;

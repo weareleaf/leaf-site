@@ -1,26 +1,44 @@
 mixin footer(c)
   footer.footer(role="contentinfo")
     .container
-      .footer__cta
-        h4.footer__heading Start the conversation
-        p.footer__text If you think we might be able to help, you’ve got a question, or you just want to say hi, don’t be a stranger.
-      .footer__grid
-        .footer__item.footer__item--enquiries
-          h5.footer__subheading New work
-          a.footer__link(href="mailto:enquiries@weareleaf.com") enquiries@weareleaf.com
+      unless activePage === 'thanks'
+        .footer__cta
+          h4.footer__heading Start the conversation
+          p.footer__text If you think we might be able to help, you’ve got a question, or you just want to say hi, don’t be a stranger.
 
-        .footer__item.footer__item--hello
-          h5.footer__subheading Ask us anything
-          a.footer__link(href="mailto:hello@weareleaf.com") hello@weareleaf.com
+      if c.landingPage && activePage !== 'thanks'
+        form.footer__form.howdy-form(novalidate)
+          .form__grid.form__grid--half
+            .form-group.margin-bottom--spacing-6
+              label.form-group__label(for="name") Your name
+              input.form__input(id="name", type="text", name="name", placeholder="Your name")
+            .form-group.margin-bottom--spacing-6
+              label.form-group__label(for="email") Email address
+              input.form__input(id="email", type="email", name="email", placeholder="Email address")
+          .form-group.margin-bottom--spacing-6
+            label.form-group__label(for="message") Your message
+            textarea.form__input.form__input--textarea(id="message", name="message", placeholder="How can we help?")
+          input.button(type="submit", value="Send Message")
 
-        .footer__item.footer__item--icons
-          h5.footer__subheading Get social
-          .footer__social
-            +social({
-              socialModifier: "inline"
-            })
+      unless c.landingPage || activePage === 'thanks'
+        .footer__grid
+          .footer__item.footer__item--enquiries
+            h5.footer__subheading New work
+            a.footer__link(href="mailto:enquiries@weareleaf.com") enquiries@weareleaf.com
+
+          .footer__item.footer__item--hello
+            h5.footer__subheading Ask us anything
+            a.footer__link(href="mailto:hello@weareleaf.com") hello@weareleaf.com
+
+          .footer__item.footer__item--icons
+            h5.footer__subheading Get social
+            .footer__social
+              +social({
+                socialModifier: "inline"
+              })
+
       .footer__info
-        if c.footerNav
+        unless c.landingPage
           .footer__nav
             +nav({
               navList: [
