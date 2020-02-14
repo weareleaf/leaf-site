@@ -1,7 +1,7 @@
 $color-purple-section: #ECECF9;
 
 .case-study {
-    @media screen and (min-width: map-get($breakpoints, "breakpoint-4")) {
+    @media screen and (min-width: map-get($breakpoints, 'breakpoint-4')) {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
       }
@@ -14,7 +14,7 @@ $color-purple-section: #ECECF9;
         overflow: hidden;
         position: relative;
 
-        @media screen and (min-width: map-get($breakpoints, "breakpoint-4")) {
+        @media screen and (min-width: map-get($breakpoints, 'breakpoint-4')) {
             position: sticky;
             top: 0;
           }
@@ -33,7 +33,7 @@ $color-purple-section: #ECECF9;
         flex-direction: column;
         padding: $spacing-10 $spacing-6;
 
-        @media screen and (min-width: map-get($breakpoints, "breakpoint-4")) {
+        @media screen and (min-width: map-get($breakpoints, 'breakpoint-4')) {
             align-items: start;
             height: 100vh;
             padding: $spacing-10;

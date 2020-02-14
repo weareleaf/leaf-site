@@ -10,9 +10,9 @@
     margin-bottom: 3.5rem;
     padding: $spacing-8 0;
 
-    @media screen and (min-width: map-get($breakpoints, "breakpoint-4")) {
+    @media screen and (min-width: map-get($breakpoints, 'breakpoint-4')) {
       padding: $spacing-10 0;
-  }
+    }
   }
 
   &__content {
