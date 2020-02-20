@@ -10,7 +10,7 @@
   width: 100%;
   z-index: 90;
 
-  @media screen and (min-width: map-get($breakpoints, 'breakpoint-11')) {
+  @media screen and (min-width: map-get($breakpoints, 'breakpoint-4')) {
     background-color: transparent;
     padding: $spacing-7 $spacing-7 0 $spacing-7;
   }
@@ -35,7 +35,7 @@
     border-radius: $border-radius-full;
     padding: $spacing-5;
 
-    @media screen and (min-width: map-get($breakpoints, 'breakpoint-11')) {
+    @media screen and (min-width: map-get($breakpoints, 'breakpoint-4')) {
       background-color: var(--color-container);
     }
   }
