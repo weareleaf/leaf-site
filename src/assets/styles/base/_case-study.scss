@@ -10,11 +10,12 @@ $color-purple-section: #ECECF9;
         align-items: center;
         background-color: $color-purple-medium;
         display: flex;
-        height: 100vh;
+        height: 80vh;
         overflow: hidden;
         position: relative;
 
         @media screen and (min-width: map-get($breakpoints, 'breakpoint-4')) {
+            height: 100vh;
             position: sticky;
             top: 0;
           }
@@ -86,6 +87,7 @@ $color-purple-section: #ECECF9;
     }
 
     &__images-mobile {
+        background-color: $color-purple-medium;
         display: flex;
         justify-content: center;
 
@@ -108,7 +110,7 @@ $color-purple-section: #ECECF9;
 
         &--heha-1 {
             padding-top: $spacing-12;
-            width: 90%;
+            width: 80%;
 
             @media screen and (min-width: map-get($breakpoints, "breakpoint-4")) {
                 padding-top: 5rem;
@@ -119,18 +121,11 @@ $color-purple-section: #ECECF9;
         &--heha-2,
         &--heha-3,
         &--heha-4 {
-            -webkit-filter: drop-shadow(0 2rem 4rem rgba($color-black, .2))
-            drop-shadow(0 .5rem .5rem rgba($color-black, .1));
-            filter: drop-shadow(0 2rem 4rem rgba($color-black, .2))
-            drop-shadow(0 .5rem .5rem rgba($color-black, .1));
+            -webkit-filter: drop-shadow(0 2rem 4rem rgba($color-black, .3))
+            drop-shadow(0 .5rem .5rem rgba($color-black, .2));
+            filter: drop-shadow(0 2rem 4rem rgba($color-black, .3))
+            drop-shadow(0 .5rem .5rem rgba($color-black, .2));
             width: 40%;
-
-            @media screen and (min-width: map-get($breakpoints, "breakpoint-4")) {
-                -webkit-filter: drop-shadow(0 2rem 4rem rgba($color-black, .4))
-                drop-shadow(0 .5rem .5rem rgba($color-black, .2));
-                filter: drop-shadow(0 2rem 4rem rgba($color-black, .4))
-                drop-shadow(0 .5rem .5rem rgba($color-black, .2));
-            }
         }
 
         &--heha-2 {
@@ -140,17 +135,11 @@ $color-purple-section: #ECECF9;
             @media screen and (min-width: map-get($breakpoints, "breakpoint-4")) {
                 left: $spacing-10;
                 padding: 0;
-                visibility: hidden;
             }
-        }
-
-        &--heha-3 {
-            visibility: hidden;
         }
 
         &--heha-4 {
             right: $spacing-10;
-            visibility: hidden;
         }
 
         &--heha-5 {
@@ -164,14 +153,12 @@ $color-purple-section: #ECECF9;
         &--heha-6 {
             left: $spacing-10;
             top: $spacing-10;
-            visibility: hidden;
             width: 40%;
         }
 
         &--heha-7 {
             bottom: $spacing-5;
             right: $spacing-8;
-            visibility: hidden;
             width: 86%;
         }
 
