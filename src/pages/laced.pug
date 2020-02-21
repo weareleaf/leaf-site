@@ -11,53 +11,129 @@ block pageComponents
   +banner({
     href: '/case-studies'
   })
+  
+  +progress-bar ({
+  })
 
-  .section.section--sm-spacing
-    .container
+  section.case-study
+    .case-study__blue-bg
+      .case-study__images
+        .case-study__image.case-study__image--heha-1
+          img(src="/assets/images/case-studies/heha/mockup-1.png" alt="HEHA! screen")
+        .case-study__image.case-study__image--heha-2.hide-mobile
+          img(src="/assets/images/case-studies/heha/mockup-2.png" alt="HEHA! screen")
+        .case-study__image.case-study__image--heha-3.hide-mobile
+          img(src="/assets/images/case-studies/heha/mockup-3.png" alt="HEHA! screen")
+        .case-study__image.case-study__image--heha-4.hide-mobile
+          img(src="/assets/images/case-studies/heha/mockup-4.png" alt="HEHA! screen")
+        .case-study__image.case-study__image--heha-6.hide-mobile
+          img(src="/assets/images/case-studies/heha/mockup-6.png" alt="HEHA! screen")
+        .case-study__image.case-study__image--heha-7.hide-mobile
+          img(src="/assets/images/case-studies/heha/mockup-7.png" alt="HEHA! screen")
+      //-.case-study__bg
+      
+    .case-study__main
+      .case-study__content.case-study__content--intro
+        +page-header({
+          pageHeaderHeading: "21st century sneaker trading.",
+          pageHeaderText: "Laced are determined to bring the sneaker trading experience into the 21st century, and we're helping them to achieve that vision."
+        })
 
-      +intro({
-        introImage: {
-          src: "/assets/images/case-studies/laced/logo.svg",
-          alt: "Laced",
-        },
-        introText: "Laced are determined to bring the sneaker trading experience into the 21st century, and we're helping them to achieve that vision."
-      })
+        .case-study__details
+          +details({
+            detailHeading: "Themes",
+            detailListItems: [
+              {
+                detailItem: "Consultancy"
+              },
+              {
+                detailItem: "Design"
+              },
+              {
+                detailItem: "Development"
+              }
+            ]
+          })
 
-  .section
-    .container
-      figure
-        img(src="/assets/images/case-studies/laced/image-1.webp" alt="The Laced Website" onerror="this.onerror=null; this.src='/assets/images/case-studies/laced/image-1.jpg'")
+          +details({
+            detailHeading: "Deliverables",
+            detailListItems: [
+              {
+                detailItem: "Custom e-commerce platform"
+              }
+            ]
+          })
 
-      .grid.grid--two-thirds-reverse
-        .grid__item
-          +summary({
+          +details({
+            detailHeading: "Technology",
+            detailListItems: [
+              {
+                detailItem: "React"
+              },
+              {
+                detailItem: "Ruby on Rails"
+              },
+              {
+                detailItem: "API integrations"
+              }
+            ]
+          })
+
+          +details({
+            detailHeading: "Platform",
+            detailListItems: [
+              {
+                detailItem: "Web"
+              }
+            ]
+          })
+
+      .case-study__images-mobile
+        .case-study__image.case-study__image--heha-2
+          img(src="/assets/images/case-studies/heha/mockup-2.png" alt="HEHA! screen")
+          
+      .case-study__content.case-study__content--about
+        +summary({
             summaryHeading: "What is it?",
             summaryText: "Laced allows sneaker enthusiasts to buy and sell collectible sneakers online, as well as track market values, and reserve items at certain prices."
           })
+      
+      .case-study__images-mobile
+        .case-study__image.case-study__image--heha-5
+          img(src="/assets/images/case-studies/heha/mockup-5.png" alt="HEHA! screens")
 
-        .grid__item
-          h4 The challenge
-          p Laced are up against some huge competition from established sneaker trading platforms in the United States. Spotting an opportunity to own the European market, they needed a high quality automated service that could compete with the big players, delivered quickly in order to maintain a competitive edge.
+      .case-study__content.case-study__content--description
+        .case-study__block
+          h4.case-study__block-heading The challenge
+          p.case-study__block-text Laced are up against some huge competition from established sneaker trading platforms in the United States. Spotting an opportunity to own the European market, they needed a high quality automated service that could compete with the big players, delivered quickly in order to maintain a competitive edge.
 
-          h4 Our approach
-          p Before Laced, European sneaker enthusiasts were having to trade their shoes on the more generalist platforms like eBay, Facebook, or one of a few poorly executed European sneaker trading platforms available.
+          h4.case-study__block-heading Our approach
+          p.case-study__block-text Before Laced, European sneaker enthusiasts were having to trade their shoes on the more generalist platforms like eBay, Facebook, or one of a few poorly executed European sneaker trading platforms available.
+          p.case-study__block-text By using a combination of Ruby on Rails and React, we were able to quickly build Laced a high quality online trading platform. Both technologies also allow us to rapidly develop future features, setting Laced up with a strong competitive edge.
+          
+          .divider.divider--thin
 
-          p By using a combination of Ruby on Rails and React, we were able to quickly build Laced a high quality online trading platform. Both technologies also allow us to rapidly develop future features, setting Laced up with a strong competitive edge.
+        .case-study__block
+          h4.case-study__block-heading Fully automated payments
+          p.case-study__block-text As a new name in the industry, trust and loyalty are of extra importance to Laced. We integrated Stripe and PayPal into the platform, allowing customers to purchase with confidence.
+          p.case-study__block-text Predominantly a credit-based platform, users can also use their debit or credit card to add funds to their account, allowing them to automatically bid on sneakers within their own pre-defined spend limits.
+          p.case-study__block-text For sellers, withdrawals can be made through Laced transferring credit directly out of the platform, and into their own bank accounts. All of this is fully automated, and has zero human involvement.
 
-      figure
-        img(src="/assets/images/case-studies/laced/image-2.webp" alt="The Laced Website" onerror="this.onerror=null; this.src='/assets/images/case-studies/laced/image-2.jpg'")
+          h4.case-study__block-heading Shipping and quality control
+          p.case-study__block-text One of the main hassles of trading physical items online is having to arrange shipping and quality control. We streamlined this process by allowing sellers to print out pre-paid shipping labels through a UPS integration, and ensuring all items are quality inspected at Laced's headquarters before being sent to buyers. This way, quality can be guaranteed, sellers can ship products directly from their homes, and all users remain anonymous to one another.
 
-      .grid.grid--two-thirds
-        .grid__item
-          h4 Fully automated payments
-          p As a new name in the industry, trust and loyalty are of extra importance to Laced. We integrated Stripe and PayPal into the platform, allowing customers to purchase with confidence.
+      .case-study__images-mobile
+        .case-study__image.case-study__image--heha-8
+          img(src="/assets/images/case-studies/heha/mockup-8.png" alt="HEHA! screens")
+      
+      .case-study__content.case-study__content--outcome
+        +summary({
+            summaryHeading: "Outcome",
+            summaryText: "Laced launched at the beginning of 2019, and started attracting both buyers and sellers straight away, with over 1000 new accounts registered 3 months after launch. We're continuing to work with Laced on developing new features, and making updates to the platform in response to customer feedback, and our own research."
+          })
+        p.case-study__text-lg We're continuing to work with Laced on developing new features, and making updates to the platform in response to customer feedback, and our own research.
 
-          p Predominantly a credit-based platform, users can also use their debit or credit card to add funds to their account, allowing them to automatically bid on sneakers within their own pre-defined spend limits.
-
-          p For sellers, withdrawals can be made through Laced transferring credit directly out of the platform, and into their own bank accounts. All of this is fully automated, and has zero human involvement.
-
-          h4 Shipping and quality control
-          p One of the main hassles of trading physical items online is having to arrange shipping and quality control. We streamlined this process by allowing sellers to print out pre-paid shipping labels through a UPS integration, and ensuring all items are quality inspected at Laced's headquarters before being sent to buyers. This way, quality can be guaranteed, sellers can ship products directly from their homes, and all users remain anonymous to one another.
-
-          h4 The outcome
-          p Laced launched at the beginning of 2019, and started attracting both buyers and sellers straight away, with over 1000 new accounts registered 3 months after launch.  We're continuing to work with Laced on developing new features, and making updates to the platform in response to customer feedback, and our own research.
+  +next-project({
+    nextProjectUrl: "/keen",
+    nextProjectText: "Keen"
+  })

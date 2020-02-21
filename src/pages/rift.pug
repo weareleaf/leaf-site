@@ -10,47 +10,122 @@ block pageComponents
   +banner({
     href: '/case-studies'
   })
+  
+  +progress-bar ({
+  })
 
-  .section.section--sm-spacing
-    .container
-      +intro({
-        introImage: {
-          src: "/assets/images/case-studies/rift/logo.svg",
-          alt: "MyRIFT",
-        },
-        introText: "RIFT have helped claim back £153,000,000 in tax refunds, and we were tasked with rethinking MyRIFT, a web-based platform allowing users to submit their claim online."
-      })
+  section.case-study
+    .case-study__blue-bg
+      .case-study__images
+        .case-study__image.case-study__image--heha-1
+          img(src="/assets/images/case-studies/heha/mockup-1.png" alt="HEHA! screen")
+        .case-study__image.case-study__image--heha-2.hide-mobile
+          img(src="/assets/images/case-studies/heha/mockup-2.png" alt="HEHA! screen")
+        .case-study__image.case-study__image--heha-3.hide-mobile
+          img(src="/assets/images/case-studies/heha/mockup-3.png" alt="HEHA! screen")
+        .case-study__image.case-study__image--heha-4.hide-mobile
+          img(src="/assets/images/case-studies/heha/mockup-4.png" alt="HEHA! screen")
+        .case-study__image.case-study__image--heha-6.hide-mobile
+          img(src="/assets/images/case-studies/heha/mockup-6.png" alt="HEHA! screen")
+        .case-study__image.case-study__image--heha-7.hide-mobile
+          img(src="/assets/images/case-studies/heha/mockup-7.png" alt="HEHA! screen")
+      //-.case-study__bg
+      
+    .case-study__main
+      .case-study__content.case-study__content--intro
+        +page-header({
+          pageHeaderHeading: "Helping Brits claim back tax.",
+          pageHeaderText: "RIFT have helped claim back £153,000,000 in tax refunds, and we were tasked with rethinking MyRIFT, a web-based platform allowing users to submit their claim online."
+        })
 
-  .section
-    .container
-      figure
-        img(src="/assets/images/case-studies/rift/image-1.webp" alt="MyRIFT wireframes" onerror="this.onerror=null; this.src='/assets/images/case-studies/rift/image-1.jpg'")
-        figcaption Various mobile-first wireframes from the application
+        .case-study__details
+          +details({
+            detailHeading: "Themes",
+            detailListItems: [
+              {
+                detailItem: "Consultancy"
+              },
+              {
+                detailItem: "Product design"
+              }
+            ]
+          })
 
-      .grid.grid--two-thirds-reverse
-        .grid__item
-          +summary({
+          +details({
+            detailHeading: "Deliverables",
+            detailListItems: [
+              {
+                detailItem: "Wireframes"
+              },
+              {
+                detailItem: "Prototypes"
+              },
+              {
+                detailItem: "App"
+              }
+            ]
+          })
+
+          +details({
+            detailHeading: "Technology",
+            detailListItems: [
+              {
+                detailItem: "Ruby on Rails"
+              },
+              {
+                detailItem: "JavaScript"
+              }
+            ]
+          })
+
+          +details({
+            detailHeading: "Platform",
+            detailListItems: [
+              {
+                detailItem: "Web"
+              }
+            ]
+          })
+
+      .case-study__images-mobile
+        .case-study__image.case-study__image--heha-2
+          img(src="/assets/images/case-studies/heha/mockup-2.png" alt="HEHA! screen")
+          
+      .case-study__content.case-study__content--about
+        +summary({
             summaryHeading: "What is it?",
             summaryText: "MyRIFT allows people in various industries to submit tax claims, allowing RIFT to claim on their behalf to HMRC!"
           })
+      
+      .case-study__images-mobile
+        .case-study__image.case-study__image--heha-5
+          img(src="/assets/images/case-studies/heha/mockup-5.png" alt="HEHA! screens")
 
-        .grid__item
-          h4 The challenge
-          p MyRIFT was doing a poor job of converting incoming prospective claimants into successful claims. Visitors to RIFTs website were not being efficiently encouraged to sign up for MyRIFT, while the application itself wasn't nearly doing enough to guide users through an inherently complex process.
-          p We were tasked with reviewing both areas, helping eligible claimants sign-up for the MyRIFT, as well as leading them through the claims process itself, as well as increasing the quality of the information being captured.
-          p We had significant technical challenges to overcome, ensuring data was kept consistent between disparate systems, and that during the transition period we weren't interrupting "business as usual" or affecting all important lead generation.
+      .case-study__content.case-study__content--description
+        .case-study__block
+          h4.case-study__block-heading The challenge
+          p.case-study__block-text Laced are up against some huge competition from established sneaker trading platforms in the United States. Spotting an opportunity to own the European market, they needed a high quality automated service that could compete with the big players, delivered quickly in order to maintain a competitive edge.
 
-      figure
-        img(src="/assets/images/case-studies/rift/image-2.webp" alt="MyRIFT application" onerror="this.onerror=null; this.src='/assets/images/case-studies/rift/image-2.jpg'")
+          .divider.divider--thin
 
-      .grid.grid--two-thirds
-        .grid__item
-          h4 Our approach
-          p Before any changes to MyRIFT were made, we then added analytics to both the RIFT website and MyRIFT itself. This allowed us to accurately understand user behaviour as well as establishing a baseline conversion rate for new leads.
-          p In the early stages of our design exploration, we relied heavily on prototypes. This approach quickly validated (or dismissed) ideas, helped gain steakholder buy-in, and ensured we had the same shared vision.
-          p We focussed heavily on designing for slow connections with a mobile-first approach; a large number of users work in construction and the armed forces, where fast Internet connections are scarce, and mobile device usage high.
-          p We completely rebuilt the pre-registration process; a key failure point for users. An eligibility questionnaire was heavily simplified, and an enquiry form was replaced with a registration form, removing any manual involvement from RIFT.
-          p With the foundation now in shape, our focus shifted to overhauling the post-registration experience, improving signposting, using more appropriate design patterns, and re-writing web and demographic-friendly copy.
+          h4.case-study__block-heading Our approach
+          p.case-study__block-text Before any changes to MyRIFT were made, we then added analytics to both the RIFT website and MyRIFT itself. This allowed us to accurately understand user behaviour as well as establishing a baseline conversion rate for new leads.
+          p.case-study__block-text In the early stages of our design exploration, we relied heavily on prototypes. This approach quickly validated (or dismissed) ideas, helped gain steakholder buy-in, and ensured we had the same shared vision.
+          p.case-study__block-text We focussed heavily on designing for slow connections with a mobile-first approach; a large number of users work in construction and the armed forces, where fast Internet connections are scarce, and mobile device usage high.
+          p.case-study__block-text We completely rebuilt the pre-registration process; a key failure point for users. An eligibility questionnaire was heavily simplified, and an enquiry form was replaced with a registration form, removing any manual involvement from RIFT.
+          p.case-study__block-text With the foundation now in shape, our focus shifted to overhauling the post-registration experience, improving signposting, using more appropriate design patterns, and re-writing web and demographic-friendly copy.
 
-          h4 The outcome
-          p The pre-registation questionnaire and amended processes significantly improved conversion to registration, getting more and better qualified leads into the app. Such was the success our initial work with RIFT, we're continuing to work together well into 2018.
+      .case-study__images-mobile
+        .case-study__image.case-study__image--heha-8
+          img(src="/assets/images/case-studies/heha/mockup-8.png" alt="HEHA! screens")
+      
+      .case-study__content.case-study__content--outcome
+        +summary({
+            summaryHeading: "Outcome",
+            summaryText: "The pre-registation questionnaire and amended processes significantly improved conversion to registration, getting more and better qualified leads into the app. Such was the success our initial work with RIFT, we're continuing to work together well into 2018."
+          })
+
+  +next-project({
+    nextProjectUrl: "/heha",
+    nextProjectText: "HEHA!"
+  })
