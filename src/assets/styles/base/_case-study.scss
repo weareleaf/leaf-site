@@ -106,18 +106,28 @@ $color-purple-section: #ECECF9;
             position: absolute;
         }
 
+        //-----
+
         /* Laced */
 
+        //-----
+
         &--laced-1 {
-            padding-right: $spacing-6;
-            padding-top: $spacing-9;
-            width: 90%;
-            visibility: hidden;
+            padding-right: 0;
+            padding-top: $spacing-11;
+            width: 75%;
+
+            @media screen and (min-width: map-get($breakpoints, "breakpoint-4")) {
+                padding-right: $spacing-6;
+                padding-top: $spacing-9;
+                width: 90%;
+            }
         }
 
         &--laced-2 {
             right: $spacing-9;
             width: 40%;
+            visibility: hidden;
         }
 
         &--laced-3 {
@@ -125,9 +135,39 @@ $color-purple-section: #ECECF9;
             padding-top: $spacing-9; 
             width: 80%;
             z-index: -1;
+            visibility: hidden;
         }
 
+        // This will have 2 animaton states on desktop sizes: This is it's start position
+
+        &--laced-4 {
+            padding: $spacing-10 0;
+            width: 80%;
+
+            @media screen and (min-width: map-get($breakpoints, "breakpoint-4")) {
+                padding: 0;
+                visibility: hidden;
+                width: 90%;
+            }
+        }
+
+        &--laced-5 {
+            padding: $spacing-10 0;
+            top: $spacing-7;
+            width: 70%;
+        }
+
+        &--laced-6 {
+            padding: $spacing-6 0;
+            top: $spacing-9;
+            width: 70%;
+        }
+
+        //-----
+
         /* HEHA! */
+
+        //-----
 
         &--heha-1 {
             padding-top: $spacing-12;

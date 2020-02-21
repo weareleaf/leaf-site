@@ -20,10 +20,13 @@ block pageComponents
       .case-study__images
         .case-study__image.case-study__image--laced-1
           img(src="/assets/images/case-studies/laced/laced-1.png" alt="Laced iPad")
-        .case-study__image.case-study__image--laced-2
+        .case-study__image.case-study__image--laced-2.hide-mobile
           img(src="/assets/images/case-studies/laced/laced-2.png" alt="Laced iPhone X")
-        .case-study__image.case-study__image--laced-3
+        .case-study__image.case-study__image--laced-3.hide-mobile
           img(src="/assets/images/case-studies/laced/laced-3.png" alt="Laced iPhone X")
+        .case-study__image.case-study__image--laced-4.hide-mobile
+          img(src="/assets/images/case-studies/laced/laced-4.png" alt="Laced MacBook Pro")
+        
       //-.case-study__bg
       
     .case-study__main
@@ -83,8 +86,8 @@ block pageComponents
           })
 
       .case-study__images-mobile
-        .case-study__image.case-study__image--heha-2
-          img(src="/assets/images/case-studies/heha/mockup-2.png" alt="HEHA! screen")
+        .case-study__image.case-study__image--laced-5
+          img(src="/assets/images/case-studies/laced/laced-5.png" alt="Laced screens")
           
       .case-study__content.case-study__content--about
         +summary({
@@ -93,8 +96,8 @@ block pageComponents
           })
       
       .case-study__images-mobile
-        .case-study__image.case-study__image--heha-5
-          img(src="/assets/images/case-studies/heha/mockup-5.png" alt="HEHA! screens")
+        .case-study__image.case-study__image--laced-4
+          img(src="/assets/images/case-studies/laced/laced-4.png" alt="Laced MacBook Pro")
 
       .case-study__content.case-study__content--description
         .case-study__block
@@ -117,8 +120,8 @@ block pageComponents
           p.case-study__block-text One of the main hassles of trading physical items online is having to arrange shipping and quality control. We streamlined this process by allowing sellers to print out pre-paid shipping labels through a UPS integration, and ensuring all items are quality inspected at Laced's headquarters before being sent to buyers. This way, quality can be guaranteed, sellers can ship products directly from their homes, and all users remain anonymous to one another.
 
       .case-study__images-mobile
-        .case-study__image.case-study__image--heha-8
-          img(src="/assets/images/case-studies/heha/mockup-8.png" alt="HEHA! screens")
+        .case-study__image.case-study__image--laced-6
+          //-img(src="/assets/images/case-studies/laced/laced-4.png" alt="Laced MacBook Pro")
       
       .case-study__content.case-study__content--outcome
         +summary({
