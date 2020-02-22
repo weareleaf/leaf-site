@@ -7,8 +7,15 @@ import BlogPostGrid from './components/blog/BlogPostGrid'
 
 const gridItems = [
   {
+    postUrl: '/blog/developing-software-with-organisational-indecision',
+    postCategory: 'Productivity',
+    postHeading: 'Developing software with organisational indecision',
+    postMins: 5,
+    postText: 'Developing software in complex organisations is tough, but working through organisational indecision is a trait of highly effective teams. Here are a few ways we get decisions made and work done when the World is working against us.'
+  },
+  {
     postUrl: '/blog/putting-amazon-textract-to-the-test',
-    postCategory: 'Business',
+    postCategory: 'Tech',
     postHeading: 'Putting Amazon Textract to the test',
     postMins: 6,
     postText: 'Amazon Textract extracts text and structured data from scanned or photographed documents, but how reliably can it be used for business process automation? We put it to the test.'
