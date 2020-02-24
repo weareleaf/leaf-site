@@ -324,14 +324,24 @@ $color-purple-section: #ECECF9;
 
     &--heha-6 {
       left: $spacing-10;
-      top: $spacing-10;
-      width: 40%;
+      top: $spacing-13;
+      width: 50%;
+
+      @media screen and (min-width: map-get($breakpoints, "breakpoint-6")) {
+        top: $spacing-10;
+        width: 40%;
+      }
     }
 
     &--heha-7 {
-      bottom: $spacing-5;
+      bottom: $spacing-11;
       right: $spacing-8;
-      width: 86%;
+      width: 96%;
+
+      @media screen and (min-width: map-get($breakpoints, "breakpoint-6")) {
+        bottom: $spacing-5;
+        width: 86%;
+      }
     }
 
     &--heha-8 {
