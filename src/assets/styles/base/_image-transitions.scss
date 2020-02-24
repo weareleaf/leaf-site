@@ -35,7 +35,7 @@
 
 /* 
 This will animate into the centre, and then animate towards
-the left and overflow when the mobile transitions in
+the left and overflow when the mobile transitions in on the next section
 */
 
 @keyframes lacedAnimation4 {
@@ -50,3 +50,14 @@ the left and overflow when the mobile transitions in
 }
 
 // Keen animations
+
+@keyframes keenAnimation1 {
+  0% {
+    transform: translateY(0);
+  }
+
+  100% {
+    opacity: 0;
+    transform: translateY(-8rem);
+  }
+}
