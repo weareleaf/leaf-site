@@ -227,6 +227,44 @@ $color-purple-section: #ECECF9;
 
     /* -----
 
+    RIFT
+
+    ----- */
+
+    &--rift-1 {
+      padding: $spacing-10 $spacing-8 0 $spacing-8;
+
+      @media screen and (min-width: map-get($breakpoints, "breakpoint-3")) {
+        padding: $spacing-10 $spacing-10 0 $spacing-10;
+      }
+
+      @media screen and (min-width: map-get($breakpoints, "breakpoint-4")) {
+        padding: $spacing-9;
+      }
+    }
+
+    &--rift-2 {
+      padding-right: $spacing-10;
+      padding-top: $spacing-10;
+    }
+
+    &--rift-3 {
+      padding: $spacing-10 0;
+      width: 80%;
+
+      @media screen and (min-width: map-get($breakpoints, "breakpoint-4")) {
+        padding: 0;
+        width: 90%;
+      }
+    }
+
+    &--rift-4 {
+      right: $spacing-9;
+      width: 20%;
+    }
+
+    /* -----
+
     HEHA!
 
     ----- */
