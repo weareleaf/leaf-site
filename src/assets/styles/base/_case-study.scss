@@ -21,6 +21,7 @@ $color-purple-section: #ECECF9;
     }
 
   &__bg {
+    bottom: 0;
     color: #222277;
     display: flex;
     justify-content: center;
@@ -28,15 +29,15 @@ $color-purple-section: #ECECF9;
     font-size: 25rem;
     height: 100%;
     letter-spacing: -1.5rem;
-    position: relative;
+    position: absolute;
     text-transform: uppercase;
     transform: rotate(-90deg);
     width: 100%;
 
-    span {
+    /*span {
       position: absolute;
       bottom: 0;
-    }
+    }*/
   }
 
   &__content {
