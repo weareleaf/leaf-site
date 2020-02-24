@@ -96,6 +96,10 @@ $color-purple-section: #ECECF9;
     }
   }
 
+
+
+
+  
   /* Images */
 
   &__image {
@@ -114,6 +118,7 @@ $color-purple-section: #ECECF9;
     &--laced-1 {
       padding-right: 0;
       padding-top: $spacing-11;
+      transform: translateY(0); // End position
       width: 75%;
 
       @media screen and (min-width: map-get($breakpoints, "breakpoint-4")) {
@@ -125,12 +130,14 @@ $color-purple-section: #ECECF9;
 
     &--laced-2 {
       right: $spacing-9;
+      transform: translateY(0); // End position
       width: 40%;
     }
 
     &--laced-3 {
       left: $spacing-3;
-      padding-top: $spacing-9; 
+      padding-top: $spacing-9;
+      transform: translateY(0); // End position
       width: 80%;
       z-index: -1;
     }
@@ -139,6 +146,7 @@ $color-purple-section: #ECECF9;
 
     &--laced-4 {
       padding: $spacing-10 0;
+      transform: translateX(0); // End position
       width: 80%;
 
       @media screen and (min-width: map-get($breakpoints, "breakpoint-4")) {
@@ -147,8 +155,11 @@ $color-purple-section: #ECECF9;
       }
     }
 
+    // laced-5 will then animate in next to the MB Pro mockup
+
     &--laced-5 {
       right: $spacing-9;
+      transform: translateX(0); // End position
       width: 20%;
     }
 
@@ -156,11 +167,15 @@ $color-purple-section: #ECECF9;
       padding: $spacing-10 0;
       right: $spacing-5;
       top: $spacing-7;
+      transform: translateY(0); // End position
       width: 70%;
     }
 
+    // Static mobile image of the MB and iPhone X
+
     &--laced-7 {
       padding: $spacing-10 $spacing-8;
+      transform: translateY(0); // End position
     }
 
     /* -----
@@ -172,6 +187,7 @@ $color-purple-section: #ECECF9;
     &--keen-1 {
       padding-right: $spacing-8;
       padding-top: $spacing-11;
+      transform: translateY(0); // End position
       width: 80%;
 
       @media screen and (min-width: map-get($breakpoints, "breakpoint-4")) {
@@ -181,18 +197,21 @@ $color-purple-section: #ECECF9;
     }
 
     &--keen-2 {
-      padding-top: $spacing-12;
       left: $spacing-5;
+      padding-top: $spacing-12;
+      transform: translateY(0); // End position
       width: 80%;
     }
 
     &--keen-3 {
       right: $spacing-9;
+      transform: translateY(0); // End position
       width: 40%;
     }
 
     &--keen-4 {
       top: $spacing-13;
+      transform: translateY(0); // End position
       width: 80%;
 
       @media screen and (min-width: map-get($breakpoints, "breakpoint-6")) {
@@ -203,6 +222,7 @@ $color-purple-section: #ECECF9;
     &--keen-5 {
         bottom: $spacing-13;
         right: $spacing-9;
+        transform: translateY(0); // End position
         width: 50%;
 
         @media screen and (min-width: map-get($breakpoints, "breakpoint-6")) {
@@ -214,15 +234,18 @@ $color-purple-section: #ECECF9;
       padding-bottom: $spacing-6;
       padding-right: $spacing-8;
       padding-top: $spacing-10;
+      transform: translateY(0); // End position
     }
 
     &--keen-7 {
       padding: $spacing-10 $spacing-8;
+      transform: translateY(0); // End position
     }
 
     &--keen-8 {
       padding-right: $spacing-9;
       padding-top: $spacing-9;
+      transform: translateY(0); // End position
     }
 
     /* -----
@@ -233,6 +256,7 @@ $color-purple-section: #ECECF9;
 
     &--rift-1 {
       padding: $spacing-10 $spacing-8 0 $spacing-8;
+      transform: translateY(0); // End position
 
       @media screen and (min-width: map-get($breakpoints, "breakpoint-3")) {
         padding: $spacing-10 $spacing-10 0 $spacing-10;
@@ -246,10 +270,12 @@ $color-purple-section: #ECECF9;
     &--rift-2 {
       padding-right: $spacing-10;
       padding-top: $spacing-10;
+      transform: translateY(0); // End position
     }
 
     &--rift-3 {
       padding: $spacing-10 0;
+      transform: translateX(0); // End position
       width: 80%;
 
       @media screen and (min-width: map-get($breakpoints, "breakpoint-4")) {
@@ -260,16 +286,19 @@ $color-purple-section: #ECECF9;
 
     &--rift-4 {
       right: $spacing-9;
+      transform: translateX(0); // End position
       width: 20%;
     }
 
     &--rift-5 {
       padding-right: $spacing-8;
       padding-top: $spacing-9;
+      transform: translateY(0); // End position
     }
 
     &--rift-7 {
       padding: $spacing-10 $spacing-8;
+      transform: translateY(0); // End position
     }
 
     /* -----
@@ -280,6 +309,7 @@ $color-purple-section: #ECECF9;
 
     &--heha-1 {
       padding-top: $spacing-12;
+      transform: translateY(0); // End position
       width: 80%;
 
       @media screen and (min-width: map-get($breakpoints, "breakpoint-4")) {
@@ -295,6 +325,7 @@ $color-purple-section: #ECECF9;
       drop-shadow(0 .5rem .5rem rgba($color-black, .2));
       filter: drop-shadow(0 2rem 4rem rgba($color-black, .3))
       drop-shadow(0 .5rem .5rem rgba($color-black, .2));
+      transform: translateX(0); // End position
       width: 40%;
     }
 
@@ -316,6 +347,7 @@ $color-purple-section: #ECECF9;
 
     &--heha-5 {
       padding-top: $spacing-10;
+      transform: translateY(0); // End position
 
       @media screen and (min-width: map-get($breakpoints, "breakpoint-2")) {
         padding-top: $spacing-12;
@@ -325,6 +357,7 @@ $color-purple-section: #ECECF9;
     &--heha-6 {
       left: $spacing-10;
       top: $spacing-13;
+      transform: translateY(0); // End position
       width: 50%;
 
       @media screen and (min-width: map-get($breakpoints, "breakpoint-6")) {
@@ -336,6 +369,7 @@ $color-purple-section: #ECECF9;
     &--heha-7 {
       bottom: $spacing-11;
       right: $spacing-8;
+      transform: translateY(0); // End position
       width: 96%;
 
       @media screen and (min-width: map-get($breakpoints, "breakpoint-6")) {
@@ -346,9 +380,14 @@ $color-purple-section: #ECECF9;
 
     &--heha-8 {
       padding: $spacing-11 0 $spacing-8 0;
+      transform: translateY(0); // End position
       width: 80%;
     }
   }
+
+
+
+
 
   .hide-mobile {
     display: none;
