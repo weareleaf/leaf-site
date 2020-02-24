@@ -1,6 +1,6 @@
-// Laced animations
+// Fadeout (vertical)
 
-@keyframes lacedAnimation1 {
+@keyframes verticalFadeOut1 {
   0% {
     transform: translateY(0);
   }
@@ -11,18 +11,9 @@
   }
 }
 
-@keyframes lacedAnimation2 {
-  0% {
-    transform: translateY(4rem);
-  }
+// Fadein (vertical)
 
-  100% {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-@keyframes lacedAnimation3 {
+@keyframes verticalFadeIn1 {
   0% {
     transform: translateY(8rem);
   }
@@ -33,12 +24,20 @@
   }
 }
 
-/* 
-This will animate into the centre, and then animate towards
-the left and overflow when the mobile transitions in on the next section
-*/
+@keyframes verticalFadeIn2 {
+  0% {
+    transform: translateY(4rem);
+  }
 
-@keyframes lacedAnimation4 {
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+// Fadein (horizontal)
+
+@keyframes horizontalFadeIn1 {
   0% {
     transform: translateX(8rem);
   }
@@ -46,18 +45,5 @@ the left and overflow when the mobile transitions in on the next section
   100% {
     opacity: 1;
     transform: translateX(0);
-  }
-}
-
-// Keen animations
-
-@keyframes keenAnimation1 {
-  0% {
-    transform: translateY(0);
-  }
-
-  100% {
-    opacity: 0;
-    transform: translateY(-8rem);
   }
 }

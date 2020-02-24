@@ -122,7 +122,7 @@ $color-purple-section: #ECECF9;
       width: 75%;
 
       @media screen and (min-width: map-get($breakpoints, "breakpoint-4")) {
-        animation: lacedAnimation1 .5s 2s forwards;
+        animation: verticalFadeOut1 .5s 2s forwards $timing-ease;
         padding-right: $spacing-6;
         padding-top: $spacing-9;
         width: 90%;
@@ -130,14 +130,14 @@ $color-purple-section: #ECECF9;
     }
 
     &--laced-2 {
-      animation: lacedAnimation2 .5s 2.75s forwards;
+      animation: verticalFadeIn2 .5s 2.75s forwards $timing-ease;
       opacity: 0;
       right: $spacing-9;
       width: 40%;
     }
 
     &--laced-3 {
-      animation: lacedAnimation3 .5s 2.5s forwards;
+      animation: verticalFadeIn1 .5s 2.5s forwards $timing-ease;
       left: $spacing-3;
       opacity: 0;
       padding-top: $spacing-9;
@@ -153,7 +153,7 @@ $color-purple-section: #ECECF9;
 
       @media screen and (min-width: map-get($breakpoints, "breakpoint-4")) {
         opacity: 0;
-        animation: lacedAnimation4 .5s 5s forwards;
+        animation: horizontalFadeIn1 .5s 5s forwards $timing-ease;
         padding: 0;
         width: 90%;
       }
@@ -162,7 +162,7 @@ $color-purple-section: #ECECF9;
     // laced-5 will then animate in next to the MB Pro mockup
 
     &--laced-5 {
-      animation: lacedAnimation4 .5s 5.5s forwards;
+      animation: horizontalFadeIn1 .5s 5.5s forwards $timing-ease;
       opacity: 0;
       right: $spacing-9;
       width: 20%;
@@ -188,6 +188,8 @@ $color-purple-section: #ECECF9;
     ----- */
 
     &--keen-1 {
+      animation: verticalFadeOut1 .5s 2s forwards $timing-ease;
+      opacity: 1;
       padding-right: $spacing-8;
       padding-top: $spacing-11;
       width: 80%;
@@ -199,17 +201,25 @@ $color-purple-section: #ECECF9;
     }
 
     &--keen-2 {
+      animation: verticalFadeIn1 .5s 2s forwards $timing-ease;
       left: $spacing-5;
+      opacity: 0;
       padding-top: $spacing-12;
       width: 80%;
     }
 
+    // Keen-3 is a seperate event that triggers as the 3rd animation (the challenge section)
+
     &--keen-3 {
+      animation: verticalFadeIn1 .5s 2.5s forwards $timing-ease;
+      opacity: 0;
       right: $spacing-9;
       width: 40%;
     }
 
     &--keen-4 {
+      animation: verticalFadeIn1 .5s 4s forwards $timing-ease;
+      opacity: 0;
       top: $spacing-13;
       width: 80%;
 
@@ -219,7 +229,9 @@ $color-purple-section: #ECECF9;
     }
 
     &--keen-5 {
+        animation: verticalFadeIn1 .5s 4.25s forwards $timing-ease;
         bottom: $spacing-13;
+        opacity: 0;
         right: $spacing-9;
         width: 50%;
 
@@ -250,6 +262,7 @@ $color-purple-section: #ECECF9;
     ----- */
 
     &--rift-1 {
+      animation: verticalFadeOut1 .5s 2s forwards $timing-ease;
       padding: $spacing-10 $spacing-8 0 $spacing-8;
 
       @media screen and (min-width: map-get($breakpoints, "breakpoint-3")) {
@@ -262,21 +275,31 @@ $color-purple-section: #ECECF9;
     }
 
     &--rift-2 {
+      animation: verticalFadeIn1 .5s 2.5s forwards $timing-ease;
+      opacity: 0;
       padding-right: $spacing-10;
       padding-top: $spacing-10;
     }
+
+    // This will have 2 animaton states on desktop sizes: This is it's start position in the centre
 
     &--rift-3 {
       padding: $spacing-10 0;
       width: 80%;
 
       @media screen and (min-width: map-get($breakpoints, "breakpoint-4")) {
+        animation: horizontalFadeIn1 .5s 4s forwards $timing-ease;
+        opacity: 0;
         padding: 0;
         width: 90%;
       }
     }
 
+    // rift-4 will then animate in next to the MB Pro mockup
+
     &--rift-4 {
+      animation: horizontalFadeIn1 .5s 4.5s forwards $timing-ease;
+      opacity: 0;
       right: $spacing-9;
       width: 20%;
     }
@@ -301,8 +324,9 @@ $color-purple-section: #ECECF9;
       width: 80%;
 
       @media screen and (min-width: map-get($breakpoints, "breakpoint-4")) {
+        animation: verticalFadeOut1 .5s 2s forwards $timing-ease;
         padding-top: 5rem;
-        right: 1.5rem;
+        right: 4rem;
       }
     }
 
@@ -319,7 +343,9 @@ $color-purple-section: #ECECF9;
     // This will have 2 animaton states on desktop sizes: This is it's start position
 
     &--heha-2 {
+      animation: verticalFadeIn1 .5s 2.5s forwards $timing-ease;
       left: 0;
+      opacity: 0;
       padding: $spacing-10 0;
 
       @media screen and (min-width: map-get($breakpoints, "breakpoint-4")) {
@@ -328,7 +354,14 @@ $color-purple-section: #ECECF9;
       }
     }
 
+    &--heha-3 {
+      animation: horizontalFadeIn1 .5s 4s forwards $timing-ease;
+      opacity: 0;
+    }
+
     &--heha-4 {
+      animation: horizontalFadeIn1 .5s 4.5s forwards $timing-ease;
+      opacity: 0;
       right: $spacing-10;
     }
 
@@ -341,7 +374,9 @@ $color-purple-section: #ECECF9;
     }
 
     &--heha-6 {
+      animation: verticalFadeIn1 .5s 6s forwards $timing-ease;
       left: $spacing-10;
+      opacity: 0;
       top: $spacing-13;
       width: 50%;
 
@@ -352,7 +387,9 @@ $color-purple-section: #ECECF9;
     }
 
     &--heha-7 {
+      animation: verticalFadeIn1 .5s 6.25s forwards $timing-ease;
       bottom: $spacing-11;
+      opacity: 0;
       right: $spacing-8;
       width: 96%;
 
