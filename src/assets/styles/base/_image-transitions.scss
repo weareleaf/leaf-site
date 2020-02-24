@@ -1,13 +1,52 @@
 // Laced animations
 
-@keyframes laced1Animation {
+@keyframes lacedAnimation1 {
   0% {
-    opacity: 1;
     transform: translateY(0);
   }
 
   100% {
     opacity: 0;
-    transform: translateY(-10rem);
+    transform: translateY(-8rem);
   }
 }
+
+@keyframes lacedAnimation2 {
+  0% {
+    transform: translateY(4rem);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes lacedAnimation3 {
+  0% {
+    transform: translateY(8rem);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* 
+This will animate into the centre, and then animate towards
+the left and overflow when the mobile transitions in
+*/
+
+@keyframes lacedAnimation4 {
+  0% {
+    transform: translateX(8rem);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+// Keen animations

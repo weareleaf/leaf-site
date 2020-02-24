@@ -116,14 +116,13 @@ $color-purple-section: #ECECF9;
     ----- */
 
     &--laced-1 {
+      opacity: 1;
       padding-right: 0;
       padding-top: $spacing-11;
       width: 75%;
 
       @media screen and (min-width: map-get($breakpoints, "breakpoint-4")) {
-        animation: laced1Animation .5s;
-        animation-delay: 2s;
-        animation-fill-mode: forwards;
+        animation: lacedAnimation1 .5s 2s forwards;
         padding-right: $spacing-6;
         padding-top: $spacing-9;
         width: 90%;
@@ -131,12 +130,14 @@ $color-purple-section: #ECECF9;
     }
 
     &--laced-2 {
+      animation: lacedAnimation2 .5s 2.75s forwards;
       opacity: 0;
       right: $spacing-9;
       width: 40%;
     }
 
     &--laced-3 {
+      animation: lacedAnimation3 .5s 2.5s forwards;
       left: $spacing-3;
       opacity: 0;
       padding-top: $spacing-9;
@@ -148,10 +149,11 @@ $color-purple-section: #ECECF9;
 
     &--laced-4 {
       padding: $spacing-10 0;
-      opacity: 0;
       width: 80%;
 
       @media screen and (min-width: map-get($breakpoints, "breakpoint-4")) {
+        opacity: 0;
+        animation: lacedAnimation4 .5s 5s forwards;
         padding: 0;
         width: 90%;
       }
@@ -160,13 +162,13 @@ $color-purple-section: #ECECF9;
     // laced-5 will then animate in next to the MB Pro mockup
 
     &--laced-5 {
+      animation: lacedAnimation4 .5s 5.5s forwards;
       opacity: 0;
       right: $spacing-9;
       width: 20%;
     }
 
     &--laced-6 {
-      opacity: 0;
       padding: $spacing-10 0;
       right: $spacing-5;
       top: $spacing-7;
