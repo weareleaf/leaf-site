@@ -170,15 +170,40 @@ $color-purple-section: #ECECF9;
     ----- */
 
     &--keen-1 {
-      padding-right: $spacing-10;
-      padding-top: $spacing-8;
-      width: 90%;
+      padding-right: $spacing-9;
+      padding-top: $spacing-12;
+      visibility: hidden;
+      width: 85%;
 
       @media screen and (min-width: map-get($breakpoints, "breakpoint-4")) {
         padding-right: $spacing-10;
         padding-top: $spacing-8;
       }
     }
+
+    &--keen-2 {
+      padding-top: $spacing-12;
+      left: $spacing-5;
+      visibility: hidden;
+      width: 80%;
+    }
+
+    &--keen-3 {
+      right: $spacing-9;
+      visibility: hidden;
+      width: 40%;
+    }
+
+    &--keen-4 {
+      top: $spacing-10;
+      width: 80%;
+    }
+
+    &--keen-5 {
+        bottom: $spacing-8;
+        right: $spacing-9;
+        width: 50%;
+      }
 
     /* -----
 
