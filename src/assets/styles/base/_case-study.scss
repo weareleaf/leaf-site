@@ -110,7 +110,7 @@ $color-purple-section: #ECECF9;
     justify-content: center;
 
 
-    @media screen and (min-width: map-get($breakpoints, "breakpoint-4")) {
+    @media screen and (min-width: map-get($breakpoints, 'breakpoint-4')) {
       display: none;
     }
   }
@@ -120,7 +120,8 @@ $color-purple-section: #ECECF9;
   &__image {
     position: relative;
 
-    @media screen and (min-width: map-get($breakpoints, "breakpoint-4")) {
+    @media screen and (min-width: map-get($breakpoints, 'breakpoint-4')) {
+      animation: var(--animationName, verticalFadeIn1) var(--duration, .5s) var(--delay, 0s) $timing-ease forwards;
       position: absolute;
     }
 
@@ -136,8 +137,9 @@ $color-purple-section: #ECECF9;
       padding-top: $spacing-11;
       width: 75%;
 
-      @media screen and (min-width: map-get($breakpoints, "breakpoint-4")) {
-        animation: verticalFadeOut1 .5s 2s forwards $timing-ease;
+      @media screen and (min-width: map-get($breakpoints, 'breakpoint-4')) {
+        --animationName: verticalFadeOut1;
+        --delay: 2s;
         padding-right: $spacing-6;
         padding-top: $spacing-9;
         width: 90%;
@@ -145,14 +147,15 @@ $color-purple-section: #ECECF9;
     }
 
     &--laced-2 {
-      animation: verticalFadeIn2 .5s 2.75s forwards $timing-ease;
+      --animationName: verticalFadeIn2;
+      --delay: 2.75s;
       opacity: 0;
       right: $spacing-9;
       width: 40%;
     }
 
     &--laced-3 {
-      animation: verticalFadeIn1 .5s 2.5s forwards $timing-ease;
+      --delay: 2.5s;
       left: $spacing-3;
       opacity: 0;
       padding-top: $spacing-9;
@@ -166,9 +169,10 @@ $color-purple-section: #ECECF9;
       padding: $spacing-10 0;
       width: 80%;
 
-      @media screen and (min-width: map-get($breakpoints, "breakpoint-4")) {
+      @media screen and (min-width: map-get($breakpoints, 'breakpoint-4')) {
+        --animationName: horizontalFadeIn1;
+        --delay: 5s;
         opacity: 0;
-        animation: horizontalFadeIn1 .5s 5s forwards $timing-ease;
         padding: 0;
         width: 90%;
       }
@@ -177,7 +181,8 @@ $color-purple-section: #ECECF9;
     // laced-5 will then animate in next to the MB Pro mockup
 
     &--laced-5 {
-      animation: horizontalFadeIn1 .5s 5.5s forwards $timing-ease;
+      --animationName: horizontalFadeIn1;
+      --delay: 5.5s;
       opacity: 0;
       right: $spacing-9;
       width: 20%;
@@ -203,20 +208,21 @@ $color-purple-section: #ECECF9;
     ----- */
 
     &--keen-1 {
-      animation: verticalFadeOut1 .5s 2s forwards $timing-ease;
+      --animationName: verticalFadeOut1;
+      --delay: 2s;
       opacity: 1;
       padding-right: $spacing-8;
       padding-top: $spacing-11;
       width: 80%;
 
-      @media screen and (min-width: map-get($breakpoints, "breakpoint-4")) {
+      @media screen and (min-width: map-get($breakpoints, 'breakpoint-4')) {
         padding-right: $spacing-10;
         padding-top: $spacing-8;
       }
     }
 
     &--keen-2 {
-      animation: verticalFadeIn1 .5s 2s forwards $timing-ease;
+      --delay: 2s;
       left: $spacing-5;
       opacity: 0;
       padding-top: $spacing-12;
@@ -226,31 +232,32 @@ $color-purple-section: #ECECF9;
     // Keen-3 is a seperate event that triggers as the 3rd animation (the challenge section)
 
     &--keen-3 {
-      animation: verticalFadeIn1 .5s 2.5s forwards $timing-ease;
+      --animationName: verticalFadeIn2;
+      --delay: 2.5s;
       opacity: 0;
       right: $spacing-9;
       width: 40%;
     }
 
     &--keen-4 {
-      animation: verticalFadeIn1 .5s 4s forwards $timing-ease;
+      --delay: 4s;
       opacity: 0;
       top: $spacing-13;
       width: 80%;
 
-      @media screen and (min-width: map-get($breakpoints, "breakpoint-6")) {
+      @media screen and (min-width: map-get($breakpoints, 'breakpoint-6')) {
         top: $spacing-10;
       }
     }
 
     &--keen-5 {
-        animation: verticalFadeIn1 .5s 4.25s forwards $timing-ease;
+      --delay: 4.25s;
         bottom: $spacing-13;
         opacity: 0;
         right: $spacing-9;
         width: 50%;
 
-        @media screen and (min-width: map-get($breakpoints, "breakpoint-6")) {
+        @media screen and (min-width: map-get($breakpoints, 'breakpoint-6')) {
           bottom: $spacing-8;
         }
       }
@@ -277,20 +284,21 @@ $color-purple-section: #ECECF9;
     ----- */
 
     &--rift-1 {
-      animation: verticalFadeOut1 .5s 2s forwards $timing-ease;
+      --animationName: verticalFadeOut1;
+      --delay: 2s;
       padding: $spacing-10 $spacing-8 0 $spacing-8;
 
-      @media screen and (min-width: map-get($breakpoints, "breakpoint-3")) {
+      @media screen and (min-width: map-get($breakpoints, 'breakpoint-3')) {
         padding: $spacing-10 $spacing-10 0 $spacing-10;
       }
 
-      @media screen and (min-width: map-get($breakpoints, "breakpoint-4")) {
+      @media screen and (min-width: map-get($breakpoints, 'breakpoint-4')) {
         padding: $spacing-9;
       }
     }
 
     &--rift-2 {
-      animation: verticalFadeIn1 .5s 2.5s forwards $timing-ease;
+      --delay: 2.5s;
       opacity: 0;
       padding-right: $spacing-10;
       padding-top: $spacing-10;
@@ -302,8 +310,8 @@ $color-purple-section: #ECECF9;
       padding: $spacing-10 0;
       width: 80%;
 
-      @media screen and (min-width: map-get($breakpoints, "breakpoint-4")) {
-        animation: horizontalFadeIn1 .5s 4s forwards $timing-ease;
+      @media screen and (min-width: map-get($breakpoints, 'breakpoint-4')) {
+        --delay: 4s;
         opacity: 0;
         padding: 0;
         width: 90%;
@@ -313,7 +321,8 @@ $color-purple-section: #ECECF9;
     // rift-4 will then animate in next to the MB Pro mockup
 
     &--rift-4 {
-      animation: horizontalFadeIn1 .5s 4.5s forwards $timing-ease;
+      --animationName: horizontalFadeIn1;
+      --delay: 4.5s;
       opacity: 0;
       right: $spacing-9;
       width: 20%;
@@ -338,8 +347,9 @@ $color-purple-section: #ECECF9;
       padding-top: $spacing-12;
       width: 80%;
 
-      @media screen and (min-width: map-get($breakpoints, "breakpoint-4")) {
-        animation: verticalFadeOut1 .5s 2s forwards $timing-ease;
+      @media screen and (min-width: map-get($breakpoints, 'breakpoint-4')) {
+        --animationName: verticalFadeOut1;
+        --delay: 2s;
         padding-top: 5rem;
         right: 4rem;
       }
@@ -358,24 +368,26 @@ $color-purple-section: #ECECF9;
     // This will have 2 animaton states on desktop sizes: This is it's start position
 
     &--heha-2 {
-      animation: verticalFadeIn1 .5s 2.5s forwards $timing-ease;
+      --delay: 2.5s;
       left: 0;
       opacity: 0;
       padding: $spacing-10 0;
 
-      @media screen and (min-width: map-get($breakpoints, "breakpoint-4")) {
+      @media screen and (min-width: map-get($breakpoints, 'breakpoint-4')) {
         left: $spacing-10;
         padding: 0;
       }
     }
 
     &--heha-3 {
-      animation: horizontalFadeIn1 .5s 4s forwards $timing-ease;
+      --animationName: horizontalFadeIn1;
+      --delay: 4s;
       opacity: 0;
     }
 
     &--heha-4 {
-      animation: horizontalFadeIn1 .5s 4.5s forwards $timing-ease;
+      --animationName: horizontalFadeIn1;
+      --delay: 4.5s;
       opacity: 0;
       right: $spacing-10;
     }
@@ -383,32 +395,32 @@ $color-purple-section: #ECECF9;
     &--heha-5 {
       padding-top: $spacing-10;
 
-      @media screen and (min-width: map-get($breakpoints, "breakpoint-2")) {
+      @media screen and (min-width: map-get($breakpoints, 'breakpoint-2')) {
         padding-top: $spacing-12;
       }
     }
 
     &--heha-6 {
-      animation: verticalFadeIn1 .5s 6s forwards $timing-ease;
+      --delay: 6s;
       left: $spacing-10;
       opacity: 0;
       top: $spacing-13;
       width: 50%;
 
-      @media screen and (min-width: map-get($breakpoints, "breakpoint-6")) {
+      @media screen and (min-width: map-get($breakpoints, 'breakpoint-6')) {
         top: $spacing-10;
         width: 40%;
       }
     }
 
     &--heha-7 {
-      animation: verticalFadeIn1 .5s 6.25s forwards $timing-ease;
+      --delay: 6.25s;
       bottom: $spacing-11;
       opacity: 0;
       right: $spacing-8;
       width: 96%;
 
-      @media screen and (min-width: map-get($breakpoints, "breakpoint-6")) {
+      @media screen and (min-width: map-get($breakpoints, 'breakpoint-6')) {
         bottom: $spacing-5;
         width: 86%;
       }
@@ -423,7 +435,7 @@ $color-purple-section: #ECECF9;
   .hide-mobile {
     display: none;
 
-    @media screen and (min-width: map-get($breakpoints, "breakpoint-4")) {
+    @media screen and (min-width: map-get($breakpoints, 'breakpoint-4')) {
       display: block;
     }
   }
