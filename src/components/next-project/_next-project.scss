@@ -9,9 +9,14 @@
     justify-content: center;
     margin-bottom: 4rem;
     padding: $spacing-8 0;
+    transition: .2s;
 
     @media screen and (min-width: map-get($breakpoints, 'breakpoint-4')) {
       padding: $spacing-10 0;
+    }
+
+    &:hover {
+      background-color: darken(#ECECF9, 1%);
     }
   }
 
