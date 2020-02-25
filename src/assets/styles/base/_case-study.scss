@@ -20,8 +20,7 @@ $color-purple-section: #ECECF9;
       }
     }
 
-  &__bg {
-    bottom: 0;
+  /*&__bg {
     color: #222277;
     display: flex;
     justify-content: center;
@@ -29,16 +28,23 @@ $color-purple-section: #ECECF9;
     font-size: 25rem;
     height: 100%;
     letter-spacing: -1.5rem;
-    position: absolute;
+    position: relative;
     text-transform: uppercase;
-    transform: rotate(-90deg);
     width: 100%;
 
-    /*span {
+    @media screen and (min-width: map-get($breakpoints, 'breakpoint-4')) {
+      transform: rotate(-90deg)
+    }
+
+    span {
       position: absolute;
-      bottom: 0;
-    }*/
-  }
+      bottom: -$spacing-5;
+
+      @media screen and (min-width: map-get($breakpoints, 'breakpoint-6')) {
+        bottom: -$spacing-13;
+      }
+    }
+  }*/
 
   &__content {
     align-items: center;

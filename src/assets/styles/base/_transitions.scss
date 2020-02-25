@@ -74,3 +74,59 @@
     transform: translateY(0);
   }
 }
+
+/* Case Study transitions */
+
+// Fadeout (vertical)
+
+@keyframes verticalFadeOut1 {
+  0% {
+    transform: translateY(0);
+  }
+
+  100% {
+    opacity: 0;
+    transform: translateY(-8rem);
+  }
+}
+
+// Fadein (vertical)
+
+@keyframes verticalFadeIn1 {
+  0% {
+    transform: translateY(8rem);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes verticalFadeIn2 {
+  0% {
+    transform: translateY(4rem);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+// Fadein (horizontal)
+
+@keyframes horizontalFadeIn1 {
+  0% {
+    transform: translateX(8rem);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+// Page load
+
+
