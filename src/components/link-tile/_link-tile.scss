@@ -1,10 +1,10 @@
-.next-project {
+.link-tile {
   &:hover {
     text-decoration: none;
   }
 
   &__inner {
-    background-color: #ECECF9;
+    background-color: #5F42F0;
     display: flex;
     justify-content: center;
     margin-bottom: 4rem;
@@ -16,18 +16,19 @@
     }
 
     &:hover {
-      background-color: darken(#ECECF9, 1%);
+      background-color: darken(#5F42F0, 2%);
     }
   }
 
   &__content {
     align-items: center;
+    color: $color-white;
     display: flex;
     flex-direction: column;
   }
 
   &__heading {
-    color: var(--color-footer-text);
+    color: inherit;
     margin-bottom: 0;
     font-size: $font-size-md;
     letter-spacing: -.03rem;
@@ -38,13 +39,21 @@
   }
 
   &__text {
+    color: $color-green;
     margin-bottom: 0;
     font-size: $font-size-sm;
     font-family: $font-family-sans-serif-medium;
   }
 
   &__arrow {
-    color: var(--color-paragraph);
+    color: $color-green;
     font-weight: 700;
+    margin-left: $spacing-2;
+
+    &::before {
+      content: '';
+      display: block;
+      height: .04rem;
+    }
   }
 }

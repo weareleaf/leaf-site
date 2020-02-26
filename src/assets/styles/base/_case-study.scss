@@ -132,7 +132,6 @@ $color-purple-section: #ECECF9;
     ----- */
 
     &--laced-1 {
-      opacity: 1;
       padding-right: 0;
       padding-top: $spacing-11;
       width: 75%;
@@ -252,15 +251,15 @@ $color-purple-section: #ECECF9;
 
     &--keen-5 {
       --delay: 4.25s;
-        bottom: $spacing-13;
-        opacity: 0;
-        right: $spacing-9;
-        width: 50%;
+      bottom: $spacing-13;
+      opacity: 0;
+      right: $spacing-9;
+      width: 50%;
 
-        @media screen and (min-width: map-get($breakpoints, 'breakpoint-6')) {
-          bottom: $spacing-8;
-        }
+      @media screen and (min-width: map-get($breakpoints, 'breakpoint-6')) {
+        bottom: $spacing-8;
       }
+    }
 
     &--keen-6 {
       padding-bottom: $spacing-6;
