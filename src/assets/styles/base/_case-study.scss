@@ -20,6 +20,27 @@ $color-purple-section: #ECECF9;
       }
     }
 
+    &__bg-text {
+      align-items: center;
+      display: flex;
+      justify-content: center;
+      height: 100%;
+      position: absolute;
+      right: -$spacing-9;
+      width: 50%;
+
+      &::after {
+        color: #222277;
+        content: attr(data-bg-text);
+        display: block;
+        font-size: 25rem;
+        font-weight: $font-weight-heading;
+        letter-spacing: -1.5rem;
+        text-transform: uppercase;
+        transform: rotate(-90deg)
+      }
+    }
+
   /*&__bg {
     color: #222277;
     display: flex;
@@ -38,10 +59,9 @@ $color-purple-section: #ECECF9;
 
     span {
       position: absolute;
-      bottom: -$spacing-5;
 
       @media screen and (min-width: map-get($breakpoints, 'breakpoint-6')) {
-        bottom: -$spacing-13;
+        bottom: 0;
       }
     }
   }*/
