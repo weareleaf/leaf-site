@@ -41,31 +41,6 @@ $color-purple-section: #ECECF9;
       }
     }
 
-  /*&__bg {
-    color: #222277;
-    display: flex;
-    justify-content: center;
-    font-weight: $font-weight-heading;
-    font-size: 25rem;
-    height: 100%;
-    letter-spacing: -1.5rem;
-    position: relative;
-    text-transform: uppercase;
-    width: 100%;
-
-    @media screen and (min-width: map-get($breakpoints, 'breakpoint-4')) {
-      transform: rotate(-90deg)
-    }
-
-    span {
-      position: absolute;
-
-      @media screen and (min-width: map-get($breakpoints, 'breakpoint-6')) {
-        bottom: 0;
-      }
-    }
-  }*/
-
   &__content {
     align-items: center;
     display: flex;
