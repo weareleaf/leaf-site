@@ -65,6 +65,10 @@ $color-purple-section: #ECECF9;
       padding: $spacing-10;
     }
 
+    @media screen and (min-width: map-get($breakpoints, 'breakpoint-11')) {
+      align-items: center;
+    }
+
     &:nth-child(1),
     &:nth-child(5) {
       background-color: $color-purple-section;
