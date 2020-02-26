@@ -225,7 +225,7 @@ $color-purple-section: #ECECF9;
     }
 
     &--keen-2 {
-      --delay: 2s;
+      --delay: 2.25s;
       left: $spacing-5;
       opacity: 0;
       padding-top: $spacing-12;
@@ -236,14 +236,14 @@ $color-purple-section: #ECECF9;
 
     &--keen-3 {
       --animationName: verticalFadeIn2;
-      --delay: 2.25s;
+      --delay: 2.5s;
       opacity: 0;
       right: $spacing-9;
       width: 40%;
     }
 
     &--keen-4 {
-      --delay: 4s;
+      --delay: 4.5s;
       opacity: 0;
       top: $spacing-13;
       width: 80%;
@@ -254,7 +254,7 @@ $color-purple-section: #ECECF9;
     }
 
     &--keen-5 {
-      --delay: 4.25s;
+      --delay: 4.75s;
       bottom: $spacing-13;
       opacity: 0;
       right: $spacing-9;
