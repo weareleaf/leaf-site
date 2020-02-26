@@ -25,19 +25,30 @@ $color-purple-section: #ECECF9;
       display: flex;
       justify-content: center;
       height: 100%;
-      position: absolute;
-      right: -$spacing-9;
-      width: 50%;
+      padding-top: $spacing-11;
+      position: relative;
+      width: 100%;
+
+      @media screen and (min-width: map-get($breakpoints, 'breakpoint-4')) {
+        padding-top: 0;
+        position: absolute;
+        right: -$spacing-9;
+        width: 50%;
+      }
 
       &::after {
         color: #222277;
         content: attr(data-bg-text);
         display: block;
-        font-size: 25rem;
+        font-size: 20rem;
         font-weight: $font-weight-heading;
-        letter-spacing: -1.5rem;
+        letter-spacing: -$spacing-6;
         text-transform: uppercase;
-        transform: rotate(-90deg)
+
+        @media screen and (min-width: map-get($breakpoints, 'breakpoint-4')) {
+          font-size: 25rem;
+          transform: rotate(-90deg);
+        }
       }
     }
 
@@ -45,6 +56,7 @@ $color-purple-section: #ECECF9;
     align-items: center;
     display: flex;
     flex-direction: column;
+    justify-content: center;
     padding: $spacing-10 $spacing-6;
 
     @media screen and (min-width: map-get($breakpoints, 'breakpoint-4')) {
@@ -61,13 +73,6 @@ $color-purple-section: #ECECF9;
     &:nth-child(3), 
     &:nth-child(7) {
         background-color: $color-white;
-    }
-
-    &--intro,
-    &--about,
-    &--outcome {
-      display: flex;
-      justify-content: center;
     }
 
     &--description {
