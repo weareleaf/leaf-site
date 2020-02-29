@@ -1,0 +1,6 @@
+mixin sp-view-blog-article(data)
+  script.
+    dataLayer.push(
+      'event': 'spViewBlogArticle',
+      'blogTitle': data.title,
+    );
