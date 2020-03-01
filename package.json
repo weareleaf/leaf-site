@@ -11,7 +11,7 @@
     "git:gh-pages": "gh-pages -d dist",
     "start": "run-p watch:scripts watch:styles",
     "deploy": "run-s build:scripts build:styles git:gh-pages",
-    "new-post": "src/assets/scripts/post-generator/script.js"
+    "new-post": "src/assets/scripts/post-generator/inquirer.js"
   },
   "keywords": [],
   "author": "",

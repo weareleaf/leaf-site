@@ -76,7 +76,13 @@ const questions = [
   {
     name: 'postConfirm',
     type: 'confirm',
-    message: 'Create your post? You can still edit this manually in the code.',
+    message: 'Save Post? You can still edit the post manually.',
+    default: true
+  },
+  {
+    name: 'postPublished',
+    type: 'confirm',
+    message: 'Publish your post? You can toggle published in blog-posts.js.',
     default: false
   }
 ]
@@ -103,7 +109,7 @@ const run = async () => {
         `module.exports = ${JSON.stringify(updatedPosts)}`,
         err => {
           if (err) throw err
-          console.log('Posts updated')
+          console.log('Blog items updated.')
           const newFile = `src/pages/blog/${url}.pug`
           exec(
             `cp src/assets/scripts/post-generator/blank.pug ${newFile}`,
@@ -114,10 +120,10 @@ const run = async () => {
                 data
               ) {
                 if (err) throw err
-                let result = data.replace(/postAuthor/g, answers.postAuthor)
-                result = result.replace(/postTitle/g, answers.postHeading)
-                result = result.replace(/postSlug/g, url)
-                result = result.replace(/postText/g, answers.postText)
+                let result = data.replace(/#postAuthor/g, answers.postAuthor)
+                result = result.replace(/#postTitle/g, answers.postHeading)
+                result = result.replace(/#postSlug/g, url)
+                result = result.replace(/#postText/g, answers.postText)
 
                 fs.writeFile(newFile, result, 'utf8', function(err) {
                   if (err) throw err
@@ -125,6 +131,7 @@ const run = async () => {
               })
             }
           )
+          console.log('Your post has been added!')
         }
       )
     }

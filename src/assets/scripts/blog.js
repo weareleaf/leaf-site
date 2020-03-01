@@ -5,7 +5,7 @@ import React from 'react'
 import ReactDOM from 'react-dom'
 import BlogPostGrid from './components/blog/BlogPostGrid'
 
-const gridItems = require('./blog-posts.js')
+const posts = require('./blog-posts.js')
 
 const getRandomGridItems = function(arr, n) {
   const result = new Array(n)
@@ -23,6 +23,7 @@ const getRandomGridItems = function(arr, n) {
 
 const mountBlogComponents = function() {
   const indexMountPoint = document.querySelector('.grid--blog-index')
+  const gridItems = posts.filter(p => p.postPublished)
   if (indexMountPoint) {
     return ReactDOM.render(
       <BlogPostGrid gridItems={gridItems} />,
