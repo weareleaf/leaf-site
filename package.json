@@ -10,7 +10,8 @@
     "watch:styles": "nodemon --ignore dist/ -e scss -x \"npm run build:styles\"",
     "git:gh-pages": "gh-pages -d dist",
     "start": "run-p watch:scripts watch:styles",
-    "deploy": "run-s build:scripts build:styles git:gh-pages"
+    "deploy": "run-s build:scripts build:styles git:gh-pages",
+    "new-post": "src/assets/scripts/post-generator/inquirer.js"
   },
   "keywords": [],
   "author": "",
@@ -49,5 +50,10 @@
     "semi": false,
     "tabWidth": 2,
     "singleQuote": true
+  },
+  "dependencies": {
+    "clear": "^0.1.0",
+    "console-emoji": "0.0.2",
+    "inquirer": "^7.0.5"
   }
 }
