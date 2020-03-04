@@ -272,12 +272,11 @@ $color-purple-section: #ECECF9;
     }
 
     &--keen-7 {
-      padding: $spacing-10 $spacing-8;
+      padding: $spacing-11 $spacing-9 $spacing-10 $spacing-8;
     }
 
     &--keen-8 {
-      padding-right: $spacing-9;
-      padding-top: $spacing-9;
+      padding: $spacing-10 $spacing-10 $spacing-7 0;
     }
 
     /* -----
@@ -332,8 +331,11 @@ $color-purple-section: #ECECF9;
     }
 
     &--rift-5 {
-      padding-right: $spacing-8;
-      padding-top: $spacing-9;
+      padding: $spacing-10 $spacing-10 $spacing-7 0;
+
+      @media screen and (min-width: map-get($breakpoints, 'breakpoint-2')) {
+        padding: $spacing-10 $spacing-11 $spacing-7 0;
+      }
     }
 
     &--rift-7 {
@@ -373,6 +375,10 @@ $color-purple-section: #ECECF9;
     &--heha-2 {
       left: 0;
       padding: $spacing-10 0;
+
+      @media screen and (min-width: map-get($breakpoints, 'breakpoint-2')) {
+        padding: $spacing-12 0;
+      }
 
       @media screen and (min-width: map-get($breakpoints, 'breakpoint-4')) {
         --delay: 2.5s;

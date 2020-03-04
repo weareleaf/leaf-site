@@ -9,7 +9,7 @@
     justify-content: center;
     margin-bottom: 4rem;
     padding: $spacing-8 0;
-    transition: .2s;
+    transition: .3s $timing-ease;
 
     @media screen and (min-width: map-get($breakpoints, 'breakpoint-4')) {
       padding: $spacing-10 0;
