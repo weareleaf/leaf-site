@@ -1,0 +1,12 @@
+extends ../base.pug
+
+block prepend vars
+  -var pageClass = "case-study"
+
+block pageContent
+  main(role="main")
+    block pageComponents
+
+  +footer({
+    footerNav: true
+  })

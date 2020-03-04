@@ -19,11 +19,12 @@ html {
   }
 }
 
-.page--content {
+.page--content,
+.page--case-study {
   --color-accent: #{$color-blue};
   --color-background: #f2f2fb;
   --color-blog-heading: #e1e1f0;
-  --color-container: #fbfbfe;
+  --color-container: #f7f7fd;
   --color-focus-bg: #{$color-green};
   --color-footer-contact: #{$color-blue};
   --color-footer-divider: #{$color-purple-lightest};
@@ -34,6 +35,12 @@ html {
   --color-share-icons: #{$color-purple-medium};
   --color-social-icons: #{$color-blue};
   --color-close: #{$color-blue};
+}
+
+.page--case-study {
+  @media screen and (min-width: map-get($breakpoints, 'breakpoint-4')) {
+    --color-logo: #{$color-white};
+  }
 }
 
 body {
