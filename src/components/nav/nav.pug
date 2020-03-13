@@ -4,7 +4,13 @@ mixin nav(c)
       each navItem in c.navList
         li.nav__item
           if activePage ===  navItem.navItemText
-            span.nav__link.nav__link--active= navItem.navItemText
+            if navItem.navItemTextMobile
+              span.nav__link.nav__link--active
+                span.nav__text
+                  span.nav__text__mobile= navItem.navItemTextMobile
+                  span.nav__text__standard= navItem.navItemText
+            else
+              span.nav__link.nav__link--active= navItem.navItemText
           else
             a.nav__link(
               href= navItem.navItemUrl
