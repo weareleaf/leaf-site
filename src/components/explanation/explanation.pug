@@ -1,0 +1,9 @@
+mixin explanation(c)
+  .explanation
+    if c.explanationExample === true
+      img.explanation__icon(src="/assets/images/icons/ui/info.svg")
+      h3.explanation__heading For example
+    else
+      img.explanation__icon(src="/assets/images/icons/ui/question.svg")
+      h3.explanation__heading How this helps me
+    p.explanation__text= c.explanationText

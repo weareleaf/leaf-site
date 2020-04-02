@@ -6,14 +6,15 @@ h3,
 h4,
 h5,
 h6 {
-  color: var(--color-accent);
+  color: var(--color-heading);
   font-weight: $font-weight-heading;
   line-height: $heading-line-height;
+  margin-top: 0;
 }
 
 h1 {
   font-size: $font-size-h1;
-  margin: 0 0 $spacing-4;
+  margin-bottom: $spacing-4;
 
   @media screen and (min-width: map-get($breakpoints, 'breakpoint-3')) {
     font-size: 4rem;
@@ -23,25 +24,29 @@ h1 {
 
 h2 {
   font-size: $font-size-h2;
-  margin: 0 0 $spacing-6;
+  margin-bottom: $spacing-4;
 
   @media screen and (min-width: map-get($breakpoints, 'breakpoint-3')) {
-    font-size: 2rem;
+    font-size: 1.6rem;
+  }
+
+  .section--longform & {
+    margin-bottom: $spacing-6;
   }
 }
 
 h3 {
   font-size: $font-size-h3;
-  margin: 0 0 $spacing-2;
+  margin-bottom: $spacing-2;
 
   .section--longform & {
-    color: $color-purple-lightest;
+    //color: $color-purple-lightest;
   }
 }
 
 h4 {
   font-size: $font-size-h4;
-  margin: 0 0 $spacing-3;
+  margin-bottom: $spacing-3;
 
   &:not(:first-child) {
     margin-top: $spacing-7;
@@ -50,7 +55,7 @@ h4 {
 
 h5 {
   font-size: $font-size-h5;
-  margin: 0 0 $spacing-3;
+  margin-bottom: $spacing-3;
 
   &:not(:first-child) {
     margin-top: $spacing-7;
@@ -58,7 +63,7 @@ h5 {
 }
 
 h6 {
-  margin: 0;
+  margin-bottom: 0;
 }
 
 h4 {
@@ -77,10 +82,6 @@ p {
   color: $paragraph-color;
   font-size: $font-size-sm;
   margin: 0 0 $spacing-7;
-
-  @media screen and (min-width: map-get($breakpoints, 'breakpoint-3')) {
-    font-size: $root-font-size;
-  }
 }
 
 a {

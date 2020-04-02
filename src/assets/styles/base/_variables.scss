@@ -3,12 +3,11 @@ $color-green: #55F6DB;
 $color-pink: #f655c4;
 $color-blue: #4c4cde;
 $color-sky-blue: #199fff;
-$color-container: #31319B;
+$color-container: #4721CE;
 $color-off-purple: #ebebff;
 $color-off-purple-dark: #eaeaf4;
 $color-purple-lightest: #9999E6;
 $color-purple-light: #5253A8;
-$color-purple-medium: #28288B;
 $color-purple-dark: #161669;
 
 $color-black: #000;
@@ -23,6 +22,20 @@ $color-grey-green: #f0f3f1;
 $color-white: #fff;
 $color-off-white: #f5f5f5;
 $brand-secondary: $color-red !default;
+
+
+
+
+$color-majorelle: #3e18c2;
+$color-iris: #3614ab;
+$color-snow: #e7e4f9;
+$color-ivory: #f6f7fA;
+$color-powder: #bbccff;
+$color-baby-blue: #809fff;
+$color-lavender: #8990FF;
+$color-violet: #532ae1;
+
+
 
 // Background
 $background-color: var(--color-background);
@@ -101,7 +114,7 @@ $focus-style: var(--color-focus-style);
 $focus-width: var(--color-focus-width);
 
 // Font sizes
-$root-font-size: .9rem;
+$root-font-size: 1rem;
 $root-font-size-xl: 1.25rem;
 $font-size-xs: .8rem !default;
 $font-size-sm: .9rem !default;
@@ -139,6 +152,7 @@ $spacing-10: 6rem;
 $spacing-11: 8rem;
 $spacing-12: 10rem;
 $spacing-13: 12rem;
+$spacing-14: 16rem;
 
 // Sizing
 $size-1: 1rem;
@@ -161,20 +175,22 @@ $timing-ease-in: ease-in;
 $timing-elastic: cubic-bezier(.55, 0, .1, 1);
 
 :root {
-  --color-accent: #{$color-green};
-  --color-background: #{$color-purple-medium};
-  --color-blog-heading: #222277;
+  --color-accent: #{$color-baby-blue};
+  --color-background: #{$color-majorelle};
+  --color-blog-heading: #{$color-iris};
   --color-container: #{$color-container};
   --color-focus-bg: #{$color-sky-blue};
-  --color-focus-color: #{$color-purple-medium};
+  --color-focus-color: #{$color-majorelle};
   --color-focus-style: #{$border-style};
   --color-focus-width: #{$border-width-sm};
   --color-footer-contact: #{$color-white};
-  --color-footer-divider: #{$color-purple-light};
-  --color-footer-nav: #{$color-white};
-  --color-footer-text: #{$color-purple-lightest};
+  --color-footer-divider: #{$color-violet};
+  --color-footer-text: #{$color-lavender};
+  --color-heading: #{$color-ivory};
+  --color-hero-subheading: #{$color-powder};
   --color-logo: #{$color-white};
-  --color-paragraph: #{$color-white};
+  --color-nav: #{$color-powder};
+  --color-paragraph: #{$color-powder};
   --color-share-icons: #{$color-white};
   --color-social-icons: #{$color-white};
   --color-close: #{$color-white};

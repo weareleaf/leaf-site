@@ -1,0 +1,26 @@
+.explanation {
+  background-color: #4721ce;
+  padding: $spacing-5;
+
+  &__icon {
+    margin-right: $spacing-3;
+    position: relative;
+    top: .1rem;
+  }
+
+  &__heading {
+    display: inline-block;
+    font-family: $font-family-sans-serif-extrabold;
+    font-size: .55rem;
+    font-weight: 400;
+    letter-spacing: .05rem;
+    margin-bottom: $spacing-3;
+    text-transform: uppercase;
+  }
+
+  &__text {
+    color: #BECEFD;
+    font-size: .75rem;
+    margin-bottom: 0;
+  }
+}
