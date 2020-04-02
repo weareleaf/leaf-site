@@ -306,20 +306,22 @@ template {
   display: none; }
 
 :root {
-  --color-accent: #55F6DB;
-  --color-background: #28288B;
-  --color-blog-heading: #222277;
-  --color-container: #31319B;
+  --color-accent: #809fff;
+  --color-background: #3e18c2;
+  --color-blog-heading: #3614ab;
+  --color-container: #4721CE;
   --color-focus-bg: #199fff;
-  --color-focus-color: #28288B;
+  --color-focus-color: #3e18c2;
   --color-focus-style: solid;
   --color-focus-width: 2px;
   --color-footer-contact: #fff;
-  --color-footer-divider: #5253A8;
-  --color-footer-nav: #fff;
-  --color-footer-text: #9999E6;
+  --color-footer-divider: #532ae1;
+  --color-footer-text: #8990FF;
+  --color-heading: #f6f7fA;
+  --color-hero-subheading: #bbccff;
   --color-logo: #fff;
-  --color-paragraph: #fff;
+  --color-nav: #bbccff;
+  --color-paragraph: #bbccff;
   --color-share-icons: #fff;
   --color-social-icons: #fff;
   --color-close: #fff; }
@@ -335,7 +337,7 @@ body {
 
 html {
   box-sizing: border-box;
-  font-size: 0.9rem;
+  font-size: 1rem;
   text-size-adjust: 100%; }
   @media screen and (min-width: 75em) {
     html {
@@ -349,27 +351,21 @@ html {
   --color-focus-bg: #55F6DB;
   --color-footer-contact: #4c4cde;
   --color-footer-divider: #9999E6;
-  --color-footer-nav: #4c4cde;
+  --color-heading: #4c4cde;
+  --color-hero-subheading: #2e2e65;
+  --color-nav: #4c4cde;
   --color-footer-text: #6062a5;
   --color-logo: #4c4cde;
   --color-paragraph: #2e2e65;
-  --color-share-icons: #28288B;
+  --color-share-icons: #3e18c2;
   --color-social-icons: #4c4cde;
   --color-close: #4c4cde; }
 
 body {
   font-family: "Larsseit", sans-serif;
-  font-size: 0.8rem;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  letter-spacing: .0125rem;
   line-height: 1.6; }
-  @media screen and (min-width: 48em) {
-    body {
-      font-size: 0.9rem; } }
-  @media screen and (min-width: 62em) {
-    body {
-      font-size: 0.9rem; } }
 
 .page {
   background-color: var(--color-background);
@@ -435,7 +431,7 @@ main {
 
 .container {
   margin: 0 auto;
-  max-width: 62.5rem;
+  max-width: 66.5rem;
   padding: 0 1.25rem;
   position: relative; }
 
@@ -477,13 +473,14 @@ h3,
 h4,
 h5,
 h6 {
-  color: var(--color-accent);
+  color: var(--color-heading);
   font-weight: 700;
-  line-height: 1.2; }
+  line-height: 1.2;
+  margin-top: 0; }
 
 h1 {
   font-size: 2rem;
-  margin: 0 0 0.75rem; }
+  margin-bottom: 0.75rem; }
   @media screen and (min-width: 48em) {
     h1 {
       font-size: 4rem;
@@ -491,31 +488,31 @@ h1 {
 
 h2 {
   font-size: 1.5rem;
-  margin: 0 0 1.5rem; }
+  margin-bottom: 0.75rem; }
   @media screen and (min-width: 48em) {
     h2 {
-      font-size: 2rem; } }
+      font-size: 1.6rem; } }
+  .section--longform h2 {
+    margin-bottom: 1.5rem; }
 
 h3 {
   font-size: 1.1rem;
-  margin: 0 0 0.25rem; }
-  .section--longform h3 {
-    color: #9999E6; }
+  margin-bottom: 0.25rem; }
 
 h4 {
   font-size: 0.9rem;
-  margin: 0 0 0.5rem; }
+  margin-bottom: 0.5rem; }
   h4:not(:first-child) {
     margin-top: 2rem; }
 
 h5 {
   font-size: 0.8rem;
-  margin: 0 0 0.5rem; }
+  margin-bottom: 0.5rem; }
   h5:not(:first-child) {
     margin-top: 2rem; }
 
 h6 {
-  margin: 0; }
+  margin-bottom: 0; }
 
 h4 {
   font-size: 0.9rem; }
@@ -530,9 +527,6 @@ p {
   color: var(--color-paragraph);
   font-size: 0.9rem;
   margin: 0 0 2rem; }
-  @media screen and (min-width: 48em) {
-    p {
-      font-size: 0.9rem; } }
 
 a {
   color: var(--color-accent);
@@ -889,7 +883,7 @@ blockquote {
   color: #fff;
   cursor: pointer;
   display: inline-block;
-  font-size: .75rem;
+  font-size: .8rem;
   font-family: "Larsseit-Medium", sans-serif;
   padding: 0.75rem 1rem;
   text-align: center;
@@ -902,10 +896,6 @@ blockquote {
     content: '';
     display: block;
     margin-top: .125rem; }
-  @media screen and (min-width: 48em) {
-    .button {
-      font-size: 0.9rem;
-      padding: 1rem 1.5rem; } }
   .button:hover {
     background-color: #13135c;
     text-decoration: none; }
@@ -991,7 +981,7 @@ a.card:hover {
   padding: 1.5rem 3rem; }
   @media screen and (min-width: 34em) {
     .contact__footer {
-      background-color: #28288B; } }
+      background-color: #3e18c2; } }
   @media screen and (min-width: 48em) {
     .contact__footer {
       padding: 2rem; } }
@@ -1009,8 +999,6 @@ a.card:hover {
       width: auto; } }
 
 .contact-tile__text {
-  color: #fff;
-  font-size: 0.9rem;
   margin: 0;
   width: 80%; }
   @media screen and (min-width: 48em) {
@@ -1047,6 +1035,37 @@ a.card:hover {
     font-size: 0.9rem;
     margin-bottom: 0; }
 
+.explanation {
+  background-color: #4721ce;
+  padding: 1rem; }
+  .explanation__icon {
+    margin-right: 0.5rem;
+    position: relative;
+    top: .1rem; }
+  .explanation__heading {
+    display: inline-block;
+    font-family: "Larsseit-ExtraBold", sans-serif;
+    font-size: .55rem;
+    font-weight: 400;
+    letter-spacing: .05rem;
+    margin-bottom: 0.5rem;
+    text-transform: uppercase; }
+  .explanation__text {
+    color: #BECEFD;
+    font-size: .75rem;
+    margin-bottom: 0; }
+
+.explanation-list__item {
+  border-bottom: solid 1px #3614ab;
+  overflow: hidden; }
+  .explanation-list__item:first-child {
+    border-top-left-radius: 6px;
+    border-top-right-radius: 6px; }
+  .explanation-list__item:last-child {
+    border-bottom: none;
+    border-bottom-left-radius: 6px;
+    border-bottom-right-radius: 6px; }
+
 .footer {
   display: block;
   padding-top: 1rem; }
@@ -1059,26 +1078,24 @@ a.card:hover {
     flex-direction: column;
     margin-bottom: 3rem; }
   .footer__heading {
-    font-size: 1.5rem;
+    font-size: 2rem;
+    left: .2rem;
     line-height: 1.2;
     margin: 0 0 0.75rem;
+    position: relative;
     text-align: center; }
     @media screen and (min-width: 48em) {
       .footer__heading {
-        font-size: 2.5rem;
         line-height: 1.6; } }
+    .footer__heading__period {
+      color: var(--color-accent); }
   .footer__text {
     margin: 0;
-    text-align: center;
-    width: 90%;
-    max-width: 39rem; }
-    @media screen and (min-width: 40em) {
-      .footer__text {
-        width: 80%; } }
+    max-width: 28rem;
+    text-align: center; }
     @media screen and (min-width: 48em) {
       .footer__text {
-        font-size: 1.5rem;
-        line-height: 1.33; } }
+        font-size: 1.1rem; } }
   .footer__grid {
     display: -ms-grid;
     display: grid;
@@ -1373,7 +1390,7 @@ a.card:hover {
   font-size: 0.8rem; }
 
 .header {
-  background-color: #31319B; }
+  background-color: #4721CE; }
   @media screen and (min-width: 34em) {
     .header {
       background-color: transparent; } }
@@ -1393,8 +1410,6 @@ a.card:hover {
     margin-left: auto;
     margin-right: auto;
     padding: 0.75rem;
-    position: relative;
-    top: .2rem;
     width: 4rem; }
     .page--landing .header__logo {
       margin-left: unset;
@@ -1450,15 +1465,17 @@ a.card:hover {
   position: relative; }
   @media screen and (min-width: 34em) {
     .hero {
-      margin: 4rem 0; } }
+      margin: 6rem 0 8rem; } }
   .hero__container {
     margin: 0 auto;
-    max-width: 62.5rem;
+    max-width: 66.5rem;
     padding: 0 1.25rem; }
   .hero__heading {
     font-size: 2rem;
-    margin-bottom: 0.125rem;
-    text-align: center; }
+    left: .4rem;
+    margin-bottom: 1.5rem;
+    text-align: center;
+    position: relative; }
     @media screen and (min-width: 34em) {
       .hero__heading {
         font-size: 3rem; } }
@@ -1466,15 +1483,21 @@ a.card:hover {
       .hero__heading {
         font-size: 3.25rem;
         max-width: 62.5rem; } }
+    .hero__heading__period {
+      color: var(--color-accent); }
   .hero__subheading {
-    font-family: 'Permanent Marker', cursive;
-    font-size: 0.9rem;
-    margin: 0;
+    color: var(--color-hero-subheading);
+    font-size: 1rem;
+    line-height: 1.6;
+    margin: 0 auto;
     text-align: center; }
+    @media screen and (min-width: 48em) {
+      .hero__subheading {
+        font-size: 1.3rem; } }
     @media screen and (min-width: 75em) {
       .hero__subheading {
-        font-size: 1.25rem;
-        max-width: 62.5rem; } }
+        font-size: 1.1rem;
+        max-width: 36rem; } }
 
 .intro {
   margin-bottom: 4rem;
@@ -1532,7 +1555,7 @@ a.card:hover {
       animation: mmfadeOut 250ms ease; }
   .modal__container {
     align-items: flex-end;
-    background-color: #31319B;
+    background-color: #4721CE;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -1623,7 +1646,7 @@ a.card:hover {
     margin-right: 0; }
   .nav__link {
     position: relative;
-    color: var(--color-footer-nav);
+    color: var(--color-nav);
     display: inline-block;
     font-size: .75rem;
     outline: none;
@@ -1682,6 +1705,7 @@ a.card:hover {
       .nav__link[data-mobile-only] {
         display: none; } }
     .nav__link--active {
+      color: #e7e4f9;
       pointer-events: none; }
       .nav__link--active::before {
         background: var(--color-accent);
@@ -1868,14 +1892,13 @@ a.card:hover {
   text-transform: uppercase; }
 
 .project__text {
-  font-size: 1.1rem;
   margin-bottom: 0.75rem; }
   @media screen and (min-width: 62em) {
     .project__text {
       margin-bottom: 1.5rem; } }
 
 .resource {
-  background-color: #31319B;
+  background-color: #4721CE;
   border-radius: 0.4rem;
   font-size: 1.875rem;
   height: 100%; }
@@ -2050,15 +2073,32 @@ a.card:hover {
   .social-tile:focus {
     box-shadow: 0 0 0 0.2rem var(--color-focus-bg);
     outline: none; }
+  @media (pointer: fine) {
+    .social-tile:hover {
+      text-decoration: none; }
+      .social-tile:hover .social-tile__icon {
+        transform: scale(1.1); } }
+
+@-moz-document url-prefix() {
+  .social-tile:hover {
+    text-decoration: none; }
+    .social-tile:hover .social-tile__icon {
+      transform: scale(1.1); } }
+  @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+    .social-tile:hover {
+      text-decoration: none; }
+      .social-tile:hover .social-tile__icon {
+        transform: scale(1.1); } }
   @media screen and (min-width: 48em) {
     .social-tile {
       display: flex; } }
   .social-tile__icon {
-    background-color: #31319B;
+    background-color: #4721CE;
     border-radius: 100%;
     position: relative;
     text-align: center;
     height: 2.7rem;
+    transition: transform 200ms ease;
     width: 2.7rem; }
     @media screen and (min-width: 48em) {
       .social-tile__icon {
@@ -2089,6 +2129,70 @@ a.card:hover {
     font-family: "Larsseit-Medium", sans-serif;
     font-size: 0.8rem; }
 
+.specialism {
+  margin-bottom: 4rem; }
+  @media screen and (min-width: 48em) {
+    .specialism {
+      margin-bottom: 8rem; } }
+  @media screen and (min-width: 62em) {
+    .specialism {
+      display: -ms-grid;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-column-gap: 2rem;
+      grid-row-gap: 0;
+      margin-bottom: 12rem;
+      position: relative; } }
+  .specialism:last-child {
+    margin-bottom: 0; }
+  @media screen and (min-width: 62em) {
+    .specialism--reverse .specialism__content {
+      order: 1; } }
+  @media screen and (min-width: 48em) {
+    .specialism__content {
+      align-items: center;
+      display: -ms-grid;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-column-gap: 2rem;
+      grid-row-gap: 0; } }
+  @media screen and (min-width: 62em) {
+    .specialism__content {
+      display: block; } }
+  .specialism__media {
+    display: none; }
+    @media screen and (min-width: 62em) {
+      .specialism__media {
+        display: block;
+        margin: unset;
+        position: relative;
+        width: auto; } }
+  @media screen and (min-width: 62em) {
+    .specialism__image {
+      bottom: 0;
+      margin: auto;
+      max-width: 25rem;
+      position: absolute;
+      right: 0;
+      top: 0; } }
+  @media screen and (min-width: 62em) {
+    .specialism__image--writing {
+      max-width: 25.9rem; } }
+  @media screen and (min-width: 62em) {
+    .specialism--reverse .specialism__image {
+      left: 0;
+      right: auto; } }
+  .specialism__subheading {
+    font-family: "Larsseit-ExtraBold", sans-serif;
+    font-size: .55rem;
+    font-weight: 400;
+    letter-spacing: .05rem;
+    margin-bottom: 0.75rem;
+    text-transform: uppercase; }
+  @media screen and (min-width: 48em) and (max-width: 62em) {
+    .specialism__text {
+      margin-bottom: 0; } }
+
 @media screen and (min-width: 34em) {
   .statement {
     display: flex; } }
@@ -2105,7 +2209,7 @@ a.card:hover {
 
 .statement__img {
   align-items: center;
-  background-color: #31319B;
+  background-color: #4721CE;
   border-radius: 100%;
   display: flex;
   height: 3.8rem;
@@ -2116,7 +2220,6 @@ a.card:hover {
       padding: 0; } }
 
 .statement__text {
-  color: #fff;
   font-size: 0.9rem;
   margin-bottom: 0; }
 
@@ -2196,7 +2299,7 @@ a.card:hover {
   display: block;
   transition: box-shadow 500ms ease, transform 200ms ease;
   align-items: center;
-  background-color: #31319B;
+  background-color: #4721CE;
   border-radius: 0.4rem;
   display: -ms-grid;
   display: grid;
