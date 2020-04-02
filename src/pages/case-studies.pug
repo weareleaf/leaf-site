@@ -7,8 +7,8 @@ block prepend vars
   -var metaTitle = "Case studies"
   -var metaDescription = "We've helped some wonderful clients use technology to improve to their products and processes."
 
-  -var heroHeading = "We help clients capture complex data."
-  -var heroSubheading = "(by helping their customers provide well structured data easily)"
+  -var heroHeading = "We add measurable value"
+  -var heroSubheading = "The Web is the most cost-effective way to communicate to your users. From established dot-coms to bootstrapped startups, we help clients of all sizes keep their most important conversation going."
 
 block pageComponents
   +hero({
@@ -20,7 +20,7 @@ block pageComponents
     .container
       +presentation({
         project: {
-          projectSubHeading: "Laced",
+        projectSubHeading: "Laced",
           projectHeading: "21st century sneaker trading",
           projectText: "We moved Laced's rare sneaker trading business online, automating their buying, selling, shipping, and quality control.",
           projectButton: {
@@ -38,17 +38,17 @@ block pageComponents
 
       +presentation({
         project: {
-          projectSubHeading: "Keen",
-          projectHeading: "Onboarding, done right",
-          projectText: "No two users are the same. We partnered with Keen to build an MVP of their customer-success tool.",
+          projectSubHeading: "Heha!",
+          projectHeading: "Hassle-free travel",
+          projectText: "Planning trips is tough. We worked with Holiday Extras to create HEHA!, an iOS and Android app to simplify the task.",
           projectButton: {
-            buttonUrl: "/keen",
+            buttonUrl: "/heha",
             buttonText: "See the case study"
           }
         },
         presentationImage: {
-          src: "/assets/images/case-studies/keen/presentation.png",
-          alt: "Keen"
+          src: "/assets/images/case-studies/heha/presentation.png",
+          alt: "HEHA!"
         },
         imageModifier: "90"
       })
@@ -68,21 +68,4 @@ block pageComponents
           alt: "RIFT"
         },
         presentationModifier: "reverse"
-      })
-
-      +presentation({
-        project: {
-          projectSubHeading: "Heha!",
-          projectHeading: "Hassle-free travel",
-          projectText: "Planning trips is tough. We worked with Holiday Extras to create HEHA!, an iOS and Android app to simplify the task.",
-          projectButton: {
-            buttonUrl: "/heha",
-            buttonText: "See the case study"
-          }
-        },
-        presentationImage: {
-          src: "/assets/images/case-studies/heha/presentation.png",
-          alt: "HEHA!"
-        },
-        imageModifier: "90"
       })

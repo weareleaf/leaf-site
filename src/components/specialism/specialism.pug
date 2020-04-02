@@ -1,0 +1,14 @@
+mixin specialism(c)
+  .specialism(class= c.specialismModifier ? "specialism--" + c.specialismModifier : "")
+    .specialism__content
+      .specialism__introduction
+        h6.specialism__subheading= c.specialismSubHeading
+        h2.specialism__heading= c.specialismHeading
+        p.specialism__text= c.specialismText
+      +explanation-list(c.explanationList)
+    +image({
+      context: "specialism",
+      modifier: c.imageModifier,
+      alt: c.specialismImage.alt,
+      src: c.specialismImage.src,
+    })

@@ -6,6 +6,14 @@ $image-size: $size-1;
   @include touch-boost;
   display: block;
 
+  @include hover {
+    text-decoration: none;
+
+    .social-tile__icon {
+      transform: scale(1.1);
+    }
+  }
+
   @media screen and (min-width: map-get($breakpoints, 'breakpoint-3')) {
     display: flex;
   }
@@ -16,6 +24,7 @@ $image-size: $size-1;
     position: relative;
     text-align: center;
     height: $icon-size;
+    transition: transform $duration-2 $timing-ease;
     width: $icon-size;
 
     @media screen and (min-width: map-get($breakpoints, 'breakpoint-3')) {

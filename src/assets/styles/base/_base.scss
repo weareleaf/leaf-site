@@ -27,30 +27,22 @@ html {
   --color-focus-bg: #{$color-green};
   --color-footer-contact: #{$color-blue};
   --color-footer-divider: #{$color-purple-lightest};
-  --color-footer-nav: #{$color-blue};
+  --color-heading: #{$color-blue};
+  --color-hero-subheading: #2e2e65;
+  --color-nav: #{$color-blue};
   --color-footer-text: #6062a5;
   --color-logo: #{$color-blue};
   --color-paragraph: #2e2e65;
-  --color-share-icons: #{$color-purple-medium};
+  --color-share-icons: #{$color-majorelle};
   --color-social-icons: #{$color-blue};
   --color-close: #{$color-blue};
 }
 
 body {
   font-family: $font-family-sans-serif-regular;
-  font-size: $font-size-xs;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  letter-spacing: .0125rem;
   line-height: $line-height;
-
-  @media screen and (min-width: map-get($breakpoints,  'breakpoint-3')) {
-    font-size: $font-size-sm;
-  }
-
-  @media screen and (min-width: map-get($breakpoints, 'breakpoint-4')) {
-    font-size: $root-font-size;
-  }
 }
 
 .page {

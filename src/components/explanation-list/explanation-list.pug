@@ -1,0 +1,5 @@
+mixin explanation-list(c)
+  ul.explanation-list.unstyled-list
+    each item in c.explanationListItems
+      li.explanation-list__item
+        +explanation(item)

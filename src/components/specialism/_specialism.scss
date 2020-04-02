@@ -1,0 +1,100 @@
+.specialism {
+  margin-bottom: $spacing-9;
+
+  @media screen and (min-width: map-get($breakpoints, 'breakpoint-3')) {
+    margin-bottom: $spacing-11;
+  }
+
+  @media screen and (min-width: map-get($breakpoints, 'breakpoint-4')) {
+    display: -ms-grid;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-column-gap: $spacing-7;
+    grid-row-gap: 0;
+    margin-bottom: $spacing-13;
+    position: relative;
+  }
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+
+  &__content {
+
+    .specialism--reverse & {
+
+      @media screen and (min-width: map-get($breakpoints, 'breakpoint-4')) {
+        order: 1;
+      }
+    }
+  }
+
+  &__content {
+
+    @media screen and (min-width: map-get($breakpoints, 'breakpoint-3')) {
+      align-items: center;
+      display: -ms-grid;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-column-gap: $spacing-7;
+      grid-row-gap: 0;
+    }
+
+    @media screen and (min-width: map-get($breakpoints, 'breakpoint-4')) {
+      display: block;
+    }
+  }
+
+  &__media {
+    display: none;
+
+    @media screen and (min-width: map-get($breakpoints, 'breakpoint-4')) {
+      display: block;
+      margin: unset;
+      position: relative;
+      width: auto;
+    }
+  }
+
+  &__image {
+
+    @media screen and (min-width: map-get($breakpoints, 'breakpoint-4')) {
+      bottom: 0;
+      margin: auto;
+      max-width: 25rem;
+      position: absolute;
+      right: 0;
+      top: 0;
+    }
+
+    &--writing {
+
+      @media screen and (min-width: map-get($breakpoints, 'breakpoint-4')) {
+        max-width: 25.9rem;
+      }
+    }
+
+    .specialism--reverse & {
+      @media screen and (min-width: map-get($breakpoints, 'breakpoint-4')) {
+        left: 0;
+        right: auto;
+      }
+    }
+  }
+
+  &__subheading {
+    font-family: $font-family-sans-serif-extrabold;
+    font-size: .55rem;
+    font-weight: 400;
+    letter-spacing: .05rem;
+    margin-bottom: $spacing-4;
+    text-transform: uppercase;
+  }
+
+  &__text {
+
+    @media screen and (min-width: map-get($breakpoints, 'breakpoint-3')) and (max-width: map-get($breakpoints, 'breakpoint-4')) {
+      margin-bottom: 0;
+    }
+  }
+}

@@ -2,5 +2,5 @@ mixin hero(c)
   section.hero
     .hero__container
       .hero__content
-        h1.hero__heading= c.heroHeading
+        h1.hero__heading !{c.heroHeading}#[span.hero__heading__period .]
         p.hero__subheading= c.heroSubheading

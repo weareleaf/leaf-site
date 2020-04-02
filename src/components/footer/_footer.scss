@@ -14,30 +14,29 @@
   }
 
   &__heading {
-    font-size: $font-size-h2;
+    font-size: 2rem;
+    left: .2rem;
     line-height: $heading-line-height;
     margin: 0 0 $spacing-4;
+    position: relative;
     text-align: center;
 
     @media screen and (min-width: map-get($breakpoints, 'breakpoint-3')) {
-      font-size: 2.5rem;
       line-height: $line-height;
+    }
+
+    &__period {
+      color: var(--color-accent);
     }
   }
 
   &__text {
     margin: 0;
+    max-width: 28rem;
     text-align: center;
-    width: 90%;
-    max-width: 39rem;
-
-    @media screen and (min-width: map-get($breakpoints, 'breakpoint-2')) {
-      width: 80%;
-    }
 
     @media screen and (min-width: map-get($breakpoints, 'breakpoint-3')) {
-      font-size: 1.5rem;
-      line-height: 1.33;
+      font-size: 1.1rem;
     }
   }
 

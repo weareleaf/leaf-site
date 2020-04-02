@@ -13,7 +13,6 @@ $image-height: $size-11;
   }
 
   &__text {
-    font-size: $font-size-md;
     margin-bottom: $spacing-4;
 
     @media screen and (min-width: map-get($breakpoints, 'breakpoint-4')) {

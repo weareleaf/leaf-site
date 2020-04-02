@@ -3,7 +3,7 @@
   position: relative;
 
   @media screen and (min-width: map-get($breakpoints, 'breakpoint-1')) {
-    margin: $spacing-9 0;
+    margin: $spacing-10 0 $spacing-11;
   }
 
   &__container {
@@ -12,8 +12,10 @@
 
   &__heading {
     font-size: $font-size-h1;
-    margin-bottom: $spacing-1;
+    left: .4rem;
+    margin-bottom: $spacing-6;
     text-align: center;
+    position: relative;
 
     @media screen and (min-width: map-get($breakpoints, 'breakpoint-1')) {
       font-size: 3rem;
@@ -23,17 +25,26 @@
       font-size: 3.25rem;
       max-width: $size-12;
     }
+
+    &__period {
+      color: var(--color-accent);
+    }
   }
 
   &__subheading {
-    font-family: 'Permanent Marker', cursive;
-    font-size: $font-size-sm;
-    margin: 0;
+    color: var(--color-hero-subheading);
+    font-size: 1rem;
+    line-height: 1.6;
+    margin: 0 auto;
     text-align: center;
 
+    @media screen and (min-width: map-get($breakpoints, 'breakpoint-3')) {
+      font-size: 1.3rem;
+    }
+
     @media screen and (min-width: map-get($breakpoints, 'breakpoint-6')) {
-      font-size: $root-font-size-xl;
-      max-width: $size-12;
+      font-size: 1.1rem;
+      max-width: 36rem;
     }
   }
 }
