@@ -8,7 +8,7 @@ block prepend vars
   -var metaDescription = "We help organisations gather complex information using research-backed methods that keep your users feeling in control."
 
   -var heroHeading = "We know our onions"
-  -var heroSubheading = "More than just text fields and checkboxes, well executed data gathering means capturing information intelligently, humanly, and in a way that delivers the maximum possible value to the organisation."
+  -var heroSubheading = "More than just text fields and checkboxes, well executed data gathering means capturing information intelligently, ethically, and in a way that delivers the maximum possible value to the organisation."
 
 block pageComponents
   +hero({
@@ -22,11 +22,11 @@ block pageComponents
       +specialism({
         specialismSubHeading: "Forms",
         specialismHeading: "Research-backed approach to form-based data capture.",
-        specialismText: "The humble form is the Grandaddy of digital data capture, and is easy to make but difficult to make well. We create form-based user flows using decades of industry research, helping your users serve themselves.",
+        specialismText: "Web forms are the bread and butter of digital data capture, and are easy to make but difficult to make well. We create form-based user flows using decades of industry research, helping your users serve themselves.",
         explanationList: {
           explanationListItems: [
             {
-              explanationText: "Most form fields contain placeholder text, but various studies have found that users often skip over such inputs, misiterpreting them as being pre-filled or completed.",
+              explanationText: "Despite their popularity, studies have shown that form fields containing placeholder text are often left empty, with users mistaking the inputs as being pre-filled or completed.",
               explanationExample: true
             },
             {
@@ -35,7 +35,8 @@ block pageComponents
           ]
         },
         specialismImage: {
-          src: "/assets/images/expertise/forms.png",
+          src: "/assets/images/expertise/forms.webp",
+          fallbackSrc: "/assets/images/expertise/forms.png",
           alt: "Forms"
         },
         specialismModifier: "reverse"
@@ -44,7 +45,7 @@ block pageComponents
       +specialism({
         specialismSubHeading: "Accessibility",
         specialismHeading: "Inclusive design decisions and engineering practices.",
-        specialismText: "The Web is not solely for the able bodied, although it's often treated as if it were. Over a billion of us have an impairment of some kind, and designing inclusively means designing for the full spectrum of human diversity.",
+        specialismText: "The Web is not solely for those without a disability, although it's often treated as if it were. Over a billion of us have an impairment of some kind, and designing inclusively means designing for the full spectrum of human diversity.",
         explanationList: {
           explanationListItems: [
             {
@@ -52,12 +53,13 @@ block pageComponents
               explanationExample: true
             },
             {
-              explanationText: "1 in 5 of us in the UK have a long term illness, impairment or disability. As well as the many ethical reasons to, inviting everybody to the party increases your audience."
+              explanationText: "1 in 5 of us in the UK have a long term illness, impairment or disability. Making your digital products accessible isn't just ethnical, increases your audience."
             }
           ]
         },
         specialismImage: {
-          src: "/assets/images/expertise/accessibility.png",
+          src: "/assets/images/expertise/accessibility.webp",
+          fallbackSrc: "/assets/images/expertise/accessibility.png",
           alt: "Accessibility"
         }
       })
@@ -65,11 +67,11 @@ block pageComponents
       +specialism({
         specialismSubHeading: "Psychology",
         specialismHeading: "An understanding of what makes humans tick (and click).",
-        specialismText: "You can't confidently design for humans if you don't understand people. Well all make conscious and unconscious decisions, and appealing to each neurological influence is essential in crafting compelling experiences.",
+        specialismText: "You can't confidently design for humans if you don't understand people. We all make conscious and unconscious decisions, and appealing to each neurological influence is essential in crafting compelling experiences.",
         explanationList: {
           explanationListItems: [
             {
-              explanationText: "The fear of losing motivates us more than the opportunity to win. Rather than up-selling, allow users to remove elements from a comprehensive starting-point.",
+              explanationText: "Most of us can only recall 5–9 items from our short-term memories. Breaking long lists into more precise categories helps people retain new information, like where to find a feature.",
               explanationExample: true
             },
             {
@@ -78,7 +80,8 @@ block pageComponents
           ]
         },
         specialismImage: {
-          src: "/assets/images/expertise/psychology.png",
+          src: "/assets/images/expertise/psychology.webp",
+          fallbackSrc: "/assets/images/expertise/psychology.png",
           alt: "Psychology"
         },
         specialismModifier: "reverse"
@@ -91,7 +94,7 @@ block pageComponents
         explanationList: {
           explanationListItems: [
             {
-              explanationText: "Speaking your audience's language may mean avoiding technical terms, using less nouns, and opting for informal words like ‘ask’ and ‘need’ over ‘request’ and ‘require’.",
+              explanationText: "Speaking your audience's language may mean avoiding technical terms, using fewer nouns, and opting for informal words like ‘ask’ and ‘need’ over ‘request’ and ‘require’.",
               explanationExample: true
             },
             {
@@ -100,16 +103,17 @@ block pageComponents
           ]
         },
         specialismImage: {
-          src: "/assets/images/expertise/writing.png",
-          alt: "Writing"
-        },
-        imageModifier: "writing"
+          src: "/assets/images/expertise/writing.webp",
+          fallbackSrc: "/assets/images/expertise/writing.png",
+          alt: "Writing",
+          modifier: "writing"
+        }
       })
 
       +specialism({
         specialismSubHeading: "Deep thinking",
         specialismHeading: "Decision-making dictated by the needs of the audience.",
-        specialismText: "Software isn't one-size-fits-all, and different audiences will have different expectations, hopes, and fears. A well-designed product will need to cater for the variance in user capabilities, either situationally or otherwise.",
+        specialismText: "Software isn't one-size-fits-all, and different audiences will have different expectations, hopes, and fears. A well-designed product should lower the barriers to entry, catering for a range of technical and situational capabilities.",
         explanationList: {
           explanationListItems: [
             {
@@ -117,12 +121,13 @@ block pageComponents
               explanationExample: true
             },
             {
-              explanationText: "Accommodating the needs of your users is good business. Beyond conversions, empathetic design leads to referrals from customers turned brand ambassadors."
+              explanationText: "Accommodating the needs of your users is good business. Designing empathetically increases conversions, generates referrals, and turns customers into brand ambassadors."
             }
           ]
         },
         specialismImage: {
-          src: "/assets/images/expertise/deep-thinking.png",
+          src: "/assets/images/expertise/deep-thinking.webp",
+          fallbackSrc: "/assets/images/expertise/deep-thinking.png",
           alt: "Deep thinking"
         },
         specialismModifier: "reverse"
@@ -131,20 +136,21 @@ block pageComponents
       +specialism({
         specialismSubHeading: "Intelligent data capture",
         specialismHeading: "Data inferred or gathered indirectly where possible.",
-        specialismText: "It’s difficult to provide information online, so ask as little of your users as you can. With the emergence of powerful APIs, hardware-enabled sensors, and wearables, it's rare that all of our questions are answered by the user.",
+        specialismText: "The data you need doesn't always come directly from people. With the emergence of powerful <abbr title='Application programming interface'>API</abbr> lookup services, hardware-enabled sensors, and wearables, it's rare that all of our questions are answered by your users.",
         explanationList: {
           explanationListItems: [
             {
-              explanationText: "Rather than asking the user to enter every detail about their vehicle, ask for the registration, and use an appropriate API to automatically gather the information.",
+              explanationText: "Rather than asking the user to enter every detail about their vehicle, ask for the registration, and use an appropriate <abbr title='Application programming interface'>API</abbr> to automatically gather the information.",
               explanationExample: true
             },
             {
-              explanationText: "Gathering data indirectly from a well maintained API leads to easier customer tasks, increasing your convertion rates, and reducing the burden on your support staff."
+              explanationText: "Gathering data indirectly from a well maintained <abbr title='Application programming interface'>API</abbr> leads to easier customer tasks, increasing your convertion rates, and reducing the burden on your support staff."
             }
           ]
         },
         specialismImage: {
-          src: "/assets/images/expertise/intelligent-data-capture.png",
+          src: "/assets/images/expertise/intelligent-data-capture.webp",
+          fallbackSrc: "/assets/images/expertise/intelligent-data-capture.png",
           alt: "Intelligent data capture"
         }
       })
@@ -152,11 +158,11 @@ block pageComponents
       +specialism({
         specialismSubHeading: "Data quality",
         specialismHeading: "Turning high-quality data into opportunities.",
-        specialismText: "Capturing vague, varied, or poorly formated data comes at a cost, and not just financially. The better the data, the greater your ability to validate conjecture, uncover patterns or trends, and reduce human involvement.",
+        specialismText: "Capturing vague, varied, or poorly formated data comes at a cost, and not just financially. The better the data, the greater your ability to provide (or disprove) hunches, uncover patterns or trends, and reduce human involvement.",
         explanationList: {
           explanationListItems: [
             {
-              explanationText: "A well-formed address can help you understand geographical strongholds, simplify its presentation, and verify the data without any kind of manual review.",
+              explanationText: "Capturing well formed addresses reduces the likelihood of failed deliveries, removes the need for manual verification, and builds a valuable picture of your customer distribution.",
               explanationExample: true
             },
             {
@@ -165,7 +171,8 @@ block pageComponents
           ]
         },
         specialismImage: {
-          src: "/assets/images/expertise/data-quality.png",
+          src: "/assets/images/expertise/data-quality.webp",
+          fallbackSrc: "/assets/images/expertise/data-quality.png",
           alt: "Data quality"
         },
         specialismModifier: "reverse"

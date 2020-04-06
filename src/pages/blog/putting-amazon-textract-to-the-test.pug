@@ -43,7 +43,7 @@ block pageComponents
           h2.blog-post__h2 The results
 
           figure
-            img.blog-post__image(src="/assets/images/blog/payslip-extracted.jpg" alt="Payslip")
+            img.blog-post__image(src="/assets/images/blog/payslip-extracted.webp" alt="Payslip" onerror="this.onerror=null; this.src='/assets/images/blog/payslip-extracted.jpg'")
             figcaption Payslip
 
           p.blog-post__text Payslips are heavily structured documents, usually formed by a series of nested tables, with labelled values scattered all over. They provide a good test of Textract's ability to extract structured tabular and labelled information.
@@ -53,7 +53,7 @@ block pageComponents
           h2.blog-post__h2 Invoice
 
           figure
-            img.blog-post__image(src="/assets/images/blog/invoice-extracted.jpg" alt="An invoice processed by Amazon Textract")
+            img.blog-post__image(src="/assets/images/blog/invoice-extracted.webp" alt="An invoice processed by Amazon Textract" onerror="this.onerror=null; this.src='/assets/images/blog/invoice-extracted.jpg'")
             figcaption Invoice
 
           p.blog-post__text Invoices are typically a semi structured document. They feature a mix of free text with labelled values, and almost always have a table at the centre detailing pricing.
@@ -65,7 +65,7 @@ block pageComponents
           h2.blog-post__h2 Passport
 
           figure
-            img.blog-post__image(src="/assets/images/blog/passport-extracted.jpg" alt="A passport processed by Amazon Textract")
+            img.blog-post__image(src="/assets/images/blog/passport-extracted.webp" alt="A passport processed by Amazon Textract" onerror="this.onerror=null; this.src='/assets/images/blog/passport-extracted.jpg'")
             figcaption Passport
 
           p.blog-post__text Passports are a very loosely structured document. They contain a lot of densely packed labelled information, with little alignment between values to form any obvious structure. In addition to this, the labels for text are tiny compared to their values. Combined with the fact we're using a photo of a passport rather than a higher quality scan, the passport is a more challenging task for Textract.
