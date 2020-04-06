@@ -6,4 +6,4 @@ mixin explanation(c)
     else
       img.explanation__icon(src="/assets/images/icons/ui/question.svg")
       h3.explanation__heading How this helps me
-    p.explanation__text= c.explanationText
+    p.explanation__text !{c.explanationText}

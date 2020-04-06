@@ -6,6 +6,7 @@ mixin resource(c)
           +image({
             context: "resource",
             src: c.resourceImage.src,
+            fallbackSrc: c.resourceImage.fallbackSrc,
             alt: c.resourceImage.alt
           })
         else
@@ -22,6 +23,7 @@ mixin resource(c)
           +image({
             context: "resource",
             src: c.resourceImage.src,
+            fallbackSrc: c.resourceImage.fallbackSrc,
             alt: c.resourceImage.alt
           })
         else

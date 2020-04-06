@@ -3,6 +3,7 @@ mixin profile(c)
     +image({
       context: "profile",
       src: c.profileImage.src,
+      fallbackSrc: c.profileImage.fallbackSrc,
       alt: c.profileImage.alt
     })
     .profile__content

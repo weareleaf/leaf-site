@@ -1,6 +1,16 @@
 mixin image(c)
   div(class= c.context + "__media")
-    img(
-      class= c.modifier ? c.context + "__image" + " " + c.context + "__image--" + c.modifier : c.context + "__image"
-      src= c.src
-      alt= c.alt)
+    if c.fallbackSrc
+      picture
+        source(srcset= c.src, type="image/webp")
+        img(
+          class= c.modifier ? c.context + "__image" + " " + c.context + "__image--" + c.modifier : c.context + "__image"
+          src= c.fallbackSrc
+          alt= c.alt
+        )
+    else
+      img(
+        class= c.modifier ? c.context + "__image" + " " + c.context + "__image--" + c.modifier : c.context + "__image"
+        src= c.src
+        alt= c.alt
+      )
