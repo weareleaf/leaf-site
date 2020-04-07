@@ -1,6 +1,6 @@
 .banner {
   align-items: center;
-  background-color: var(--color-container);
+  background-color: var(--color-indigo);
   display: flex;
   justify-content: space-between;
   padding: $spacing-5;
@@ -31,12 +31,12 @@
 
   &__close {
     @include focus-ring;
-    background-color: $color-off-purple;
+    background-color: $color-snow;
     border-radius: $border-radius-full;
     padding: $spacing-5;
 
     @media screen and (min-width: map-get($breakpoints, 'breakpoint-11')) {
-      background-color: var(--color-container);
+      background-color: var(--color-indigo);
     }
   }
 

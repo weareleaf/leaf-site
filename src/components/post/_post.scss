@@ -1,7 +1,7 @@
 .post {
   @include focus-ring;
   @include shadow-effect;
-  background-color: var(--color-container);
+  background-color: var(--color-indigo);
   border-radius: 8px;
   color: var(--color-paragraph);
   height: 100%;

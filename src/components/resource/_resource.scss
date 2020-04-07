@@ -1,5 +1,5 @@
 .resource {
-  background-color: $color-container;
+  background-color: $color-indigo;
   border-radius: $border-radius-lg;
   font-size: $font-size-lg;
   height: 100%;
@@ -29,7 +29,7 @@
 
   &__placeholder {
     @include aspect-ratio(160 206);
-    background: $color-purple-dark;
+    background: $color-denim;
     border-radius: $border-radius-sm;
     //height: calc(100% - (#{$spacing-4} * 2));
     margin: $spacing-4;

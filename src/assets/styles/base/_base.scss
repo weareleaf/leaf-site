@@ -20,22 +20,22 @@ html {
 }
 
 .page--content {
-  --color-accent: #{$color-blue};
+  --color-accent: #{$color-cerulean};
   --color-background: #f2f2fb;
   --color-blog-heading: #e1e1f0;
-  --color-container: #fbfbfe;
-  --color-focus-bg: #{$color-powder};
-  --color-footer-contact: #{$color-blue};
-  --color-footer-divider: #{$color-powder};
-  --color-heading: #{$color-blue};
+  --color-indigo: #fbfbfe;
+  --color-focus-bg: #{$color-ice};
+  --color-footer-contact: #{$color-cerulean};
+  --color-footer-divider: #{$color-ice};
+  --color-heading: #{$color-cerulean};
   --color-hero-subheading: #2e2e65;
-  --color-nav: #{$color-blue};
+  --color-nav: #{$color-cerulean};
   --color-footer-text: #6062a5;
-  --color-logo: #{$color-blue};
+  --color-logo: #{$color-cerulean};
   --color-paragraph: #2e2e65;
   --color-share-icons: #{$color-majorelle};
-  --color-social-icons: #{$color-blue};
-  --color-close: #{$color-blue};
+  --color-social-icons: #{$color-cerulean};
+  --color-close: #{$color-cerulean};
 }
 
 body {

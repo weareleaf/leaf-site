@@ -132,7 +132,7 @@ img {
 
 .divider {
   border: none;
-  border-top: $border-width-xl $border-style $color-baby-blue;
+  border-top: $border-width-xl $border-style $color-powder;
 
   &--margin {
     margin: $spacing-10 0;
@@ -258,7 +258,7 @@ blockquote {
   }
 
   q {
-    color: $color-purple-dark;
+    color: $color-denim;
     display: block;
     font-family: $font-family-sans-serif-light;
     font-size: $font-size-lg;
@@ -267,7 +267,7 @@ blockquote {
     width: 100%;
 
     &::before {
-      color: rgba($color-purple-dark, .1);
+      color: rgba($color-denim, .1);
       content: open-quote;
       font-size: 10rem;
       font-weight: bold;
@@ -285,7 +285,7 @@ blockquote {
   }
 
   cite {
-    color: $color-blue;
+    color: $color-cerulean;
     font-size: $font-size-sm;
   }
 }

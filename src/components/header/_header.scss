@@ -1,5 +1,5 @@
 .header {
-  background-color: $color-container;
+  background-color: $color-indigo;
 
   @media screen and (min-width: map-get($breakpoints, 'breakpoint-1')) {
     background-color: transparent;
