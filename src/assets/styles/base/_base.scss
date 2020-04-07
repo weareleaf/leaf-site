@@ -21,18 +21,18 @@ html {
 
 .page--content {
   --color-accent: #{$color-cerulean};
-  --color-background: #f2f2fb;
-  --color-blog-heading: #e1e1f0;
-  --color-indigo: #fbfbfe;
+  --color-background: #{$color-silk};
+  --color-blog-heading: #{$color-dust};
+  --color-container: #{$color-ivory};
   --color-focus-bg: #{$color-ice};
   --color-footer-contact: #{$color-cerulean};
   --color-footer-divider: #{$color-ice};
   --color-heading: #{$color-cerulean};
-  --color-hero-subheading: #2e2e65;
+  --color-hero-subheading: #{$color-violet};
   --color-nav: #{$color-cerulean};
-  --color-footer-text: #6062a5;
+  --color-footer-text: #{$color-amethyst};
   --color-logo: #{$color-cerulean};
-  --color-paragraph: #2e2e65;
+  --color-paragraph: #{$color-violet};
   --color-share-icons: #{$color-majorelle};
   --color-social-icons: #{$color-cerulean};
   --color-close: #{$color-cerulean};

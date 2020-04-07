@@ -258,7 +258,7 @@ blockquote {
   }
 
   q {
-    color: $color-denim;
+    color: $color-eggplant;
     display: block;
     font-family: $font-family-sans-serif-light;
     font-size: $font-size-lg;
@@ -267,7 +267,7 @@ blockquote {
     width: 100%;
 
     &::before {
-      color: rgba($color-denim, .1);
+      color: rgba($color-eggplant, .1);
       content: open-quote;
       font-size: 10rem;
       font-weight: bold;

@@ -29,7 +29,7 @@
 
   &__placeholder {
     @include aspect-ratio(160 206);
-    background: $color-denim;
+    background: $color-eggplant;
     border-radius: $border-radius-sm;
     //height: calc(100% - (#{$spacing-4} * 2));
     margin: $spacing-4;

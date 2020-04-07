@@ -1,6 +1,6 @@
 .button {
   @include focus-ring;
-  background-color: $color-denim;
+  background-color: $color-eggplant;
   border: none;
   border-radius: $border-radius-base;
   color: $color-white;
@@ -21,7 +21,7 @@
   }
 
   &:hover {
-    background-color: darken($color-denim, 3%);
+    background-color: darken($color-eggplant, 3%);
     text-decoration: none;
   }
 
