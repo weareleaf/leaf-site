@@ -25,26 +25,15 @@
     font-size: $font-size-sm;
     margin-bottom: 0;
   }
-
-  &__link {
-    color: $brand-secondary;
-    display: block;
-    font-family: $font-family-sans-serif-medium;
-    font-size: $font-size-sm;
-    margin-top: $spacing-1;
-  }
 }
 
 a.card {
+
   &:hover {
     text-decoration: none;
 
     .card__image {
       opacity: $opacity-base;
-    }
-
-    .card__heading {
-      //color: $var(--color-accent);
     }
 
     .card__image {
