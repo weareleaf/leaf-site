@@ -38,10 +38,6 @@ h2 {
 h3 {
   font-size: $font-size-h3;
   margin-bottom: $spacing-2;
-
-  .section--longform & {
-    //color: $color-purple-lightest;
-  }
 }
 
 h4 {
@@ -136,7 +132,7 @@ img {
 
 .divider {
   border: none;
-  border-top: $border-width-xl $border-style $color-purple-light;
+  border-top: $border-width-xl $border-style $color-powder;
 
   &--margin {
     margin: $spacing-10 0;
@@ -262,7 +258,7 @@ blockquote {
   }
 
   q {
-    color: $color-purple-dark;
+    color: $color-eggplant;
     display: block;
     font-family: $font-family-sans-serif-light;
     font-size: $font-size-lg;
@@ -271,7 +267,7 @@ blockquote {
     width: 100%;
 
     &::before {
-      color: rgba($color-purple-dark, .1);
+      color: rgba($color-eggplant, .1);
       content: open-quote;
       font-size: 10rem;
       font-weight: bold;
@@ -289,7 +285,7 @@ blockquote {
   }
 
   cite {
-    color: $color-blue;
+    color: $color-cerulean;
     font-size: $font-size-sm;
   }
 }

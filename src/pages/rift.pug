@@ -52,26 +52,43 @@ block pageComponents
         .grid__item
           +summary({
             summaryHeading: "What is it?",
-            summaryText: "MyRIFT allows people in various industries to submit tax claims, allowing RIFT to claim on their behalf to HMRC!"
+            summaryText: "RIFT have helped claim back £153,000,000 in tax refunds, and we were tasked with rethinking MyRIFT, a web-based platform allowing users to submit their claim online."
           })
 
         .grid__item
-          h4 The challenge
-          p MyRIFT was doing a poor job of converting incoming prospective claimants into successful claims. Visitors to RIFTs website were not being efficiently encouraged to sign up for MyRIFT, while the application itself wasn't nearly doing enough to guide users through an inherently complex process.
-          p We were tasked with reviewing both areas, helping eligible claimants sign-up for the MyRIFT, as well as leading them through the claims process itself, as well as increasing the quality of the information being captured.
-          p We had significant technical challenges to overcome, ensuring data was kept consistent between disparate systems, and that during the transition period we weren't interrupting "business as usual" or affecting all important lead generation.
+          h2 The challenge
+          p A confusing sign-up process and a lack of guidance through an unnecessarily complicated claim process meant MyRIFT was doing a poor job of converting leads into successful claims.
+          p We were brought in to help eligible claimants sign-up for the MyRIFT, as well as leading them through the claims process itself, as well as increasing the quality of the information being captured.
+
+          h2 Our approach
+
+          h3 Uncover existing pain-points
+          p To supplement our stakeholder research, we adding Mixpanel analytics to both the RIFT website and MyRIFT itself, helping us to both understand user behaviour and establish a baseline conversion rate for new leads.
+
+          h3 Understand the audience
+          p A large portion of RIFT's customer base work in the Armed Forces, where fast Internet speeds are poor and mobile usage high. For MyRIFT to be considered a viable alternative to a phone-based claim, we'd need the application be reliable even on the slowest of connections.
+
+          h3 Move quickly and effectively
+          p We relied heavily on prototypes in the early stages of our design exploration, helping us to quickly validate ideas, gain stakeholder buy-in, and ensure a single, shared vision.
 
       figure
         img(src="/assets/images/case-studies/rift/image-2.webp" alt="MyRIFT application" onerror="this.onerror=null; this.src='/assets/images/case-studies/rift/image-2.jpg'")
 
       .grid.grid--two-thirds
         .grid__item
-          h4 Our approach
-          p Before any changes to MyRIFT were made, we then added analytics to both the RIFT website and MyRIFT itself. This allowed us to accurately understand user behaviour as well as establishing a baseline conversion rate for new leads.
-          p In the early stages of our design exploration, we relied heavily on prototypes. This approach quickly validated (or dismissed) ideas, helped gain steakholder buy-in, and ensured we had the same shared vision.
-          p We focussed heavily on designing for slow connections with a mobile-first approach; a large number of users work in construction and the armed forces, where fast Internet connections are scarce, and mobile device usage high.
-          p We completely rebuilt the pre-registration process; a key failure point for users. An eligibility questionnaire was heavily simplified, and an enquiry form was replaced with a registration form, removing any manual involvement from RIFT.
-          p With the foundation now in shape, our focus shifted to overhauling the post-registration experience, improving signposting, using more appropriate design patterns, and re-writing web and demographic-friendly copy.
 
-          h4 The outcome
-          p The pre-registation questionnaire and amended processes significantly improved conversion to registration, getting more and better qualified leads into the app. Such was the success our initial work with RIFT, we're continuing to work together well into 2018.
+          h3 Focus on the lowest hanging fruit
+          p We completely rebuilt the pre-registration process; a key failure point for users. An eligibility questionnaire, helping RIFT to pre-quality leads without human intervention, was greatly simplified, and an enquiry process replaced with a registration form, removing further manual involvement from RIFT's staff.
+
+          h3 Multi-document uploads
+          p To make a tax claim, customers have to upload a large number of documents, inclduing wage slips to prove their income and receipts to verify purchases. We created a multi-document upload system, allowing customers to upload any number of documents at once.
+
+          h3 Improve the quality of data captured
+          p Entering complicated or detailed information is inherently difficult on a handheld device, and small changes can make a big difference to both the quality and quantity of data captured.
+
+          p In MyRIFT, we made extensive use of powerful third-party <abbr title="Application Programming Interface">API</abbr> lookups to automatically make real-time suggestions as the user types. Along with the Google Maps <abbr title="Application Programming Interface">API</abbr> for capturing exact longitude and latitude values of a work location, we used further <abbr title="Application Programming Interface">API</abbr>s to look-up home addresses, employers, and vehicle details.
+
+          p We also created a small database of banks, allowing customers to quickly add their bank details ahead of receiving their refund. The list make suggestions as the user types, and even accepts alternative or former names; for example, The Co-operative Bank will be suggested if a user starts typing 'Britannia', 'Co-operative Bank', or 'Co-op bank'.
+
+          h2 The outcome
+          p The pre-registation questionnaire and amended processes significantly improved conversion to registration, getting more and better qualified leads into the app. Such was the success our initial work with RIFT, we're continuing to work together well into 2020.
