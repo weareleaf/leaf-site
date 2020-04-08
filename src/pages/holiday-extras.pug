@@ -1,0 +1,99 @@
+extends ../layouts/content.pug
+
+block prepend vars
+  -var pageTitle = "Holiday Extras Traval Insurance Case Study - Leaf"
+  -var metaUrl = "https://weareleaf.com/holiday-extras"
+  -var metaTitle = "Holiday Extras Traval Insurance Case Study"
+  -var metaDescription = "Laced are determined to bring the sneaker trading experience into the 21st century, and we're helping them to achieve that vision."
+
+block pageComponents
+  +banner({
+    href: '/case-studies'
+  })
+
+  .section.section--sm-spacing
+    .container
+
+      +intro({
+        introImage: {
+          src: "/assets/images/case-studies/hx/logo.svg",
+          alt: "Holiday Extras",
+        },
+        introText: "Having successfully worked together to reimagine their mobile booking process, Holiday Extras asked us to explore a customer-first approach their popular travel insurance product."
+      })
+
+      +details({
+        details: [
+          {
+            detailHeading: "Themes",
+            detailText: "Consultancy, UX"
+          },
+          {
+            detailHeading: "Deliverables",
+            detailText: "Wireframes, prototype"
+          },
+          {
+            detailHeading: "Technology",
+            detailText: "Sketch, Marvel"
+          },
+          {
+            detailHeading: "Platform",
+            detailText: "Web"
+          }
+        ]
+      })
+
+  .section
+    .container
+      figure
+        img(src="/assets/images/case-studies/laced/image-1.webp" alt="The Laced Website" onerror="this.onerror=null; this.src='/assets/images/case-studies/laced/image-1.jpg'")
+
+      .grid.grid--two-thirds-reverse
+        .grid__item
+          +summary({
+            summaryHeading: "What is it?",
+            summaryText: "Alongside airport parking, hotels, and lounges, Holiday Extras offer travel insurance for holidaymakers with and without pre-existing medical conditions."
+          })
+
+        .grid__item
+          h2 The challenge
+          p Holiday Extras asked us to "redefine how customers buy travel insurance online", creating an experience comparable to their award-winning call centre. Their staff are friendly, helpful, and able to shield the customer from the inherent complexity of insurance, and we needed to create a booking flow that was equally unintimidating.
+
+          h2 Our approach
+          p Although this was a "reimagination", our vision would be achieved iteratively by building on the previous online booking process. As such, the recommendations we made would need to be work both in isolation and as part of the current system.
+
+          h3 Don't make users think
+          p Particular locations have a higher risk-factor than others, which means cover may cost a little more than it otherwise would. The previous way of asking for a destination inadvertently exposed the customer to the underlying complexity (e.g. one option was 'Europe, not including Spain, Cyprus, Malta, Turkey and Greece'), so we simply asked the user to tell us where they're going.
+
+          p After reviewing the previous 12 months of policies, we found that the great number of people were going to the same places. By presenting the most popular destinations, 86% of travellers would be able to select a location via a single click/tap, with the remaining destinations available through an autocompleting search field.
+
+          h3 Be upfront about effort and progress
+          p When asking for large amounts of information, it should be clear how much effort is required to complete the task. By intoducing a progress indicator, we would be able to able to set expectations, show how far along in the process somebody was, and even allow them to navigate between steps.
+
+          h3 Provide value early
+          p In the highly competitive age of comparison sites, quote engines must offer value as quickly as possible.
+          p In the very first step of the previous process, a range of details were being asked for each traveller, even though data-of-births were the only information needed to calculate a price. Other than the data-of-birth and their first-name, which would help us gather the remaining details more gracefully later, we deferred the remaining questions until later in the process.
+
+      figure
+        img(src="/assets/images/case-studies/laced/image-2.webp" alt="The Laced Website" onerror="this.onerror=null; this.src='/assets/images/case-studies/laced/image-2.jpg'")
+
+      .grid.grid--two-thirds
+        .grid__item
+          h3 Accommodate human bahaviours
+          p People tend to scan the Web, rather than read pages word-for-word. In fact, one well-known study showed just 16% of us actually read everything. This, along with the knowledge that humans perceive images much faster that we do words, lead to us making heavy use of icons throughout the process, helping users to distinguish between options more quickly than text alone.
+
+          h3 Not everybody needs to see everything
+          p An insurance booking flow shouldn't feel like a legal document, and while it's true that that detail should be available, it shouldn't be exposed to everyone.
+
+          p We worked closely with the Holiday Extras compliance team to simplify their explanation of a pre-existing medical condition. The full description was still available for those who needed it, but the majority benefitted from a jargon-free list of illnesses and ailments.
+
+          p The explanation of available cover levels was also excessively complicated, with each tier listing every possible benefit. Our stakeholder research showed that four particular items were by the far most commonly discussed topics in the Call Centre: the policy excess, baggage allowance, cancellation cover, and the medical emergency total. We presented a comparison of the tiers available, including only these four benefits, but made the full breakdown available for those who wanted to see more.
+
+          h3 Personalise the experience
+
+          p Rather than offering every cover upgrade to all travellers, we allowed customers to set a trip type (e.g. golf trip) and limits on popular requirements (e.g. a maximum excess value). By making this step optional, the majority can continue without interacting at all, and those that do have additional requirements will see only cover upgrades that meet their needs.
+
+          p We also introduced real-time suggestions, allowing the customer to importing traveller details with a single click. For example, when a couple are travelling, and both have Mr and Mrs selected as their titles, the second traveller will be asked whether they share a surname. By asking the user if this is the case, rather than guessing that it may be, the action feels useful and thoughtful rather than rude and presumptuous.
+
+          h2 The outcome
+          p The engineering team at Holiday Extras have started introducing a number of elements of our prototype into the live booking flow, and we look forward to seeing further progress over the coming months.
