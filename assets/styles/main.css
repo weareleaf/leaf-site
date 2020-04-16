@@ -928,10 +928,7 @@ blockquote {
   display: grid;
   grid-template-columns: 1fr;
   grid-gap: 3rem;
-  padding: 0.75rem 3rem; }
-  @media screen and (min-width: 34em) {
-    .contact__content {
-      padding: 3rem; } }
+  padding: 3rem; }
   @media screen and (min-width: 48em) {
     .contact__content {
       grid-template-columns: 1fr 1fr; } }
@@ -1508,29 +1505,26 @@ blockquote {
   .modal.is-open {
     display: block; }
   .modal__overlay {
-    align-items: center;
     background-color: rgba(13, 13, 38, 0.92);
     bottom: 0;
-    display: flex;
-    justify-content: center;
     left: 0;
     position: fixed;
     right: 0;
     top: 0;
     will-change: opacity;
     z-index: 1001; }
+    @media screen and (min-width: 34em) {
+      .modal__overlay {
+        align-items: center;
+        display: flex;
+        justify-content: center; } }
     .modal[aria-hidden='false'] .modal__overlay {
       animation: mmfadeIn 250ms ease; }
     .modal[aria-hidden='true'] .modal__overlay {
       animation: mmfadeOut 250ms ease; }
   .modal__container {
-    align-items: flex-end;
     background-color: #4722ce;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
     height: 100vh;
-    max-height: 100vh;
     position: relative;
     overflow-y: auto;
     width: 100%;
@@ -1555,21 +1549,15 @@ blockquote {
     font-size: 1.5rem;
     line-height: 1;
     outline: none;
-    margin-right: 1.25rem; }
+    margin-right: 0;
+    position: absolute;
+    right: 1.5rem;
+    top: 1.5rem; }
     .modal__close:focus {
       box-shadow: 0 0 0 0.2rem var(--color-focus-bg);
       outline: none; }
     .modal__close::before {
       content: url("/assets/images/icons/close.svg"); }
-    @media screen and (min-width: 34em) {
-      .modal__close {
-        margin-right: 0;
-        position: absolute;
-        right: 1.5rem;
-        top: 1.5rem; } }
-    @media screen and (min-width: 75em) {
-      .modal__close {
-        top: 1.25rem; } }
 
 @keyframes mmfadeIn {
   from {
