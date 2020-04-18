@@ -6,7 +6,6 @@
  * 2. Prevent adjustments of font size after orientation changes in iOS.
  */
 @import url("//hello.myfonts.net/count/3a8a2c");
-@import url("https://fonts.googleapis.com/css?family=Permanent+Marker&display=swap");
 html {
   line-height: 1.15;
   /* 1 */
@@ -378,11 +377,13 @@ body {
   flex: 1; }
 
 @font-face {
+  font-display: swap;
   font-family: 'Larsseit-Light';
   src: url("../fonts/3A8A2C_1_0.eot");
   src: url("../fonts/3A8A2C_1_0.eot?#iefix") format("embedded-opentype"), url("../fonts/3A8A2C_1_0.woff2") format("woff2"), url("../fonts/3A8A2C_1_0.woff") format("woff"), url("../fonts/3A8A2C_1_0.ttf") format("truetype"); }
 
 @font-face {
+  font-display: swap;
   font-family: 'Larsseit';
   font-style: normal;
   font-weight: normal;
@@ -390,6 +391,7 @@ body {
   src: url("../fonts/3A8A2C_4_0.eot?#iefix") format("embedded-opentype"), url("../fonts/3A8A2C_4_0.woff2") format("woff2"), url("../fonts/3A8A2C_4_0.woff") format("woff"), url("../fonts/3A8A2C_4_0.ttf") format("truetype"); }
 
 @font-face {
+  font-display: swap;
   font-family: 'Larsseit';
   font-style: italic;
   font-weight: normal;
@@ -397,11 +399,13 @@ body {
   src: url("../fonts/3A8A2C_5_0.eot?#iefix") format("embedded-opentype"), url("../fonts/3A8A2C_5_0.woff2") format("woff2"), url("../fonts/3A8A2C_5_0.woff") format("woff"), url("webfonts/3A8A2C_5_0.ttf") format("truetype"); }
 
 @font-face {
+  font-display: swap;
   font-family: 'Larsseit-Medium';
   src: url("../fonts/3A8A2C_3_0.eot");
   src: url("../fonts/3A8A2C_3_0.eot?#iefix") format("embedded-opentype"), url("../fonts/3A8A2C_3_0.woff2") format("woff2"), url("../fonts/3A8A2C_3_0.woff") format("woff"), url("webfonts/3A8A2C_3_0.ttf") format("truetype"); }
 
 @font-face {
+  font-display: swap;
   font-family: 'Larsseit';
   font-style: normal;
   font-weight: bold;
@@ -409,6 +413,7 @@ body {
   src: url("../fonts/3A8A2C_2_0.eot?#iefix") format("embedded-opentype"), url("../fonts/3A8A2C_2_0.woff2") format("woff2"), url("../fonts/3A8A2C_2_0.woff") format("woff"), url("../fonts/3A8A2C_2_0.ttf") format("truetype"); }
 
 @font-face {
+  font-display: swap;
   font-family: 'Larsseit-ExtraBold';
   src: url("../fonts/3A8A2C_0_0.eot");
   src: url("../fonts/3A8A2C_0_0.eot?#iefix") format("embedded-opentype"), url("../fonts/3A8A2C_0_0.woff2") format("woff2"), url("../fonts/3A8A2C_0_0.woff") format("woff"), url("../fonts/3A8A2C_0_0.ttf") format("truetype"); }
