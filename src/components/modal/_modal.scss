@@ -10,17 +10,20 @@
   }
 
   &__overlay {
-    align-items: center;
     background-color: rgba(13, 13, 38, .92);
     bottom: 0;
-    display: flex;
-    justify-content: center;
     left: 0;
     position: fixed;
     right: 0;
     top: 0;
     will-change: opacity;
     z-index: 1001;
+
+    @media screen and (min-width: map-get($breakpoints, 'breakpoint-1')) {
+      align-items: center;
+      display: flex;
+      justify-content: center;
+    }
 
     .modal[aria-hidden='false'] & {
       animation: mmfadeIn $duration-3 $timing-ease;
@@ -32,13 +35,8 @@
   }
 
   &__container {
-    align-items: flex-end;
-    background-color: $color-container;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+    background-color: $color-indigo;
     height: 100vh;
-    max-height: 100vh;
     position: relative;
     overflow-y: auto;
     width: 100%;
@@ -70,21 +68,13 @@
     font-size: $font-size-h2;
     line-height: 1;
     outline: none;
-    margin-right: 1.25rem;
+    margin-right: 0;
+    position: absolute;
+    right: $spacing-6;
+    top: $spacing-6;
 
     &::before {
       content: url('/assets/images/icons/close.svg');
-    }
-
-    @media screen and (min-width: map-get($breakpoints, 'breakpoint-1')) {
-      margin-right: 0;
-      position: absolute;
-      right: $spacing-6;
-      top: $spacing-6;
-    }
-
-    @media screen and (min-width: map-get($breakpoints, 'breakpoint-6')) {
-      top: 1.25rem;
     }
   }
 }

@@ -1,41 +1,30 @@
 // Leaf colors
-$color-green: #55F6DB;
-$color-pink: #f655c4;
-$color-blue: #4c4cde;
-$color-sky-blue: #199fff;
-$color-container: #4721CE;
-$color-off-purple: #ebebff;
-$color-off-purple-dark: #eaeaf4;
-$color-purple-lightest: #9999E6;
-$color-purple-light: #5253A8;
-$color-purple-dark: #161669;
+$color-violet: hsl(240, 37%, 29%);
+$color-eggplant:	hsl(253, 86%, 29%);
+$color-iris: hsl(253, 79%, 37%);
+$color-majorelle: hsl(253, 78%, 43%);
+$color-indigo: hsl(253, 72%, 47%);
+$color-violet:	hsl(253, 75%, 52%);
+$color-cerulean: hsl(240, 69%, 58%);
+$color-sapphire: hsl(240, 44%, 49%);
+$color-amethyst: hsl(238, 28%, 51%);
+$color-lavender: hsl(236, 100%, 77%);
+$color-powder: 	hsl(225, 100%, 75%);
+$color-ice: hsl(225, 100%, 87%);
 
-$color-black: #000;
-$color-green-light: #dbffe7;
-$color-red: #f77c6b;
-$color-grey-lightest: #e2e3e5;
-$color-grey-light: #c6c7cc;
-$color-grey: #6f7075;
-$color-grey-dark: #2b363b;
-$color-grey-dark-transparent: rgba($color-grey-dark, .9);
-$color-grey-green: #f0f3f1;
-$color-white: #fff;
-$color-off-white: #f5f5f5;
-$brand-secondary: $color-red !default;
+$color-sky: hsl(205, 100%, 55%);
+$color-coral: hsl(7, 90%, 69%);
 
-
-
-
-$color-majorelle: #3e18c2;
-$color-iris: #3614ab;
-$color-snow: #e7e4f9;
-$color-ivory: #f6f7fA;
-$color-powder: #bbccff;
-$color-baby-blue: #809fff;
-$color-lavender: #8990FF;
-$color-violet: #532ae1;
-
-
+$color-black: hsl(0, 0%, 0%);
+$color-coal: hsl(240, 19%, 30%);
+$color-slate: hsl(200, 16%, 20%);
+$color-stone: hsl(230, 3%, 45%);
+$color-dust: hsl(240, 31%, 90%);
+$color-silk: hsl(240, 31%, 94%);
+$color-snow: hsl(250, 64%, 94%);
+$color-ivory: hsl(225, 29%, 97%);
+$color-smoke: hsl(0, 0%, 96%);
+$color-white:	hsl(0, 0%, 100%);
 
 // Background
 $background-color: var(--color-background);
@@ -60,13 +49,6 @@ $border-style: solid !default;
 
 // Borders
 $border-default: $border-width-lg $border-style $border-color;
-
-// Brand colors
-$color-heha: #f2b6e8;
-$color-keen: #b6d9f2;
-$color-rift: #f2b6b6;
-$color-zendesk: #b6f2f2;
-$color-laced: #879ac9;
 
 // Breakpoints
 $breakpoints: (
@@ -175,11 +157,11 @@ $timing-ease-in: ease-in;
 $timing-elastic: cubic-bezier(.55, 0, .1, 1);
 
 :root {
-  --color-accent: #{$color-baby-blue};
+  --color-accent: #{$color-powder};
   --color-background: #{$color-majorelle};
   --color-blog-heading: #{$color-iris};
-  --color-container: #{$color-container};
-  --color-focus-bg: #{$color-sky-blue};
+  --color-container: #{$color-indigo};
+  --color-focus-bg: #{$color-sky};
   --color-focus-color: #{$color-majorelle};
   --color-focus-style: #{$border-style};
   --color-focus-width: #{$border-width-sm};
@@ -187,10 +169,10 @@ $timing-elastic: cubic-bezier(.55, 0, .1, 1);
   --color-footer-divider: #{$color-violet};
   --color-footer-text: #{$color-lavender};
   --color-heading: #{$color-ivory};
-  --color-hero-subheading: #{$color-powder};
+  --color-hero-subheading: #{$color-ice};
   --color-logo: #{$color-white};
-  --color-nav: #{$color-powder};
-  --color-paragraph: #{$color-powder};
+  --color-nav: #{$color-ice};
+  --color-paragraph: #{$color-ice};
   --color-share-icons: #{$color-white};
   --color-social-icons: #{$color-white};
   --color-close: #{$color-white};

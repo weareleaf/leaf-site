@@ -14,7 +14,7 @@ $checkbox-pseudo-size: .25rem;
 
   &__legend {
     background-color: $color-white;
-    color: $color-grey-dark;
+    color: $color-slate;
     font-size: $font-size-h3;
     font-weight: 700;
     margin-bottom: $spacing-4;
@@ -90,13 +90,13 @@ $checkbox-pseudo-size: .25rem;
   }
 
   &__label {
-    color: $color-grey-dark;
+    color: $color-slate;
     display: inline-block;
     font-family: $font-family-sans-serif-medium;
     margin-bottom: .1em;
 
     &--checkbox {
-      color: $color-grey;
+      color: $color-stone;
       font-size: $font-size-sm;
       margin: 0;
 
@@ -107,7 +107,7 @@ $checkbox-pseudo-size: .25rem;
       }
 
       &::before {
-        background: $color-off-white;
+        background: $color-smoke;
         border-radius: .125rem;
         height: $checkbox-pseudo-size;
         left: 0;
@@ -149,10 +149,10 @@ $checkbox-pseudo-size: .25rem;
 
   &__input {
     appearance: none;
-    background-color: $color-off-white;
-    border: $border-width-base $border-style $color-off-white;
+    background-color: $color-smoke;
+    border: $border-width-base $border-style $color-smoke;
     border-radius: $border-radius-base;
-    color: $color-grey-dark;
+    color: $color-slate;
     display: block;
     font-size: $font-size-sm;
     line-height: 1;
@@ -168,7 +168,7 @@ $checkbox-pseudo-size: .25rem;
     }
 
     &.erroneous {
-      border: $border-width-base $border-style $color-red;
+      border: $border-width-base $border-style $color-coral;
     }
   }
 
@@ -202,7 +202,7 @@ $checkbox-pseudo-size: .25rem;
   }
 
   .error {
-    color: $color-red;
+    color: $color-coral;
     font-size: $font-size-xs;
   }
 }

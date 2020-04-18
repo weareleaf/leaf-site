@@ -4,11 +4,11 @@
     display: grid;
     grid-template-columns: 1fr;
     grid-gap: $spacing-8;
-    padding: $spacing-4 $spacing-8;
+    padding: $spacing-8;
 
-    @media screen and (min-width: map-get($breakpoints, 'breakpoint-1')) {
-      padding: $spacing-8;
-    }
+    // @media screen and (min-width: map-get($breakpoints, 'breakpoint-1')) {
+
+    // }
 
     @media screen and (min-width: map-get($breakpoints, 'breakpoint-3')) {
       grid-template-columns: 1fr 1fr;

@@ -1,6 +1,5 @@
 // Vendor
 @import '../../../node_modules/normalize.css/normalize'; // https://necolas.github.io/normalize.css/
-//-@import '../../../node_modules/flickity/css/flickity'; // https://flickity.metafizzy.co/
 
 // Mixins
 @import 'base/mixins';
@@ -21,7 +20,6 @@
 @import '../../components/block/block';
 @import '../../components/button/button';
 @import '../../components/bullet/bullet';
-@import '../../components/card/card';
 @import '../../components/company-logos/company-logos';
 @import '../../components/contact/contact';
 @import '../../components/contact-tile/contact-tile';
@@ -44,12 +42,9 @@
 @import '../../components/resource/resource';
 @import '../../components/share-icons/share-icons';
 @import '../../components/sidebar/sidebar';
-//-@import '../../components/slider/slider';
 @import '../../components/social/social';
 @import '../../components/social-tile/social-tile';
 @import '../../components/specialism/specialism';
 @import '../../components/statement/statement';
-@import '../../components/study/study';
 @import '../../components/summary/summary';
-//-@import '../../components/testimonial/testimonial';
 @import '../../components/tile/tile';
