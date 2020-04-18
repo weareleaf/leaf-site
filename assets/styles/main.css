@@ -306,24 +306,24 @@ template {
 
 :root {
   --color-accent: #809fff;
-  --color-background: #3e18c2;
-  --color-blog-heading: #3614ab;
-  --color-container: #4721CE;
-  --color-focus-bg: #199fff;
-  --color-focus-color: #3e18c2;
+  --color-background: #3d18c3;
+  --color-blog-heading: #3414a9;
+  --color-container: #4722ce;
+  --color-focus-bg: #1a9fff;
+  --color-focus-color: #3d18c3;
   --color-focus-style: solid;
   --color-focus-width: 2px;
-  --color-footer-contact: #fff;
-  --color-footer-divider: #532ae1;
-  --color-footer-text: #8990FF;
-  --color-heading: #f6f7fA;
-  --color-hero-subheading: #bbccff;
-  --color-logo: #fff;
-  --color-nav: #bbccff;
-  --color-paragraph: #bbccff;
-  --color-share-icons: #fff;
-  --color-social-icons: #fff;
-  --color-close: #fff; }
+  --color-footer-contact: white;
+  --color-footer-divider: #5129e0;
+  --color-footer-text: #8a92ff;
+  --color-heading: #f5f6fa;
+  --color-hero-subheading: #bdcdff;
+  --color-logo: white;
+  --color-nav: #bdcdff;
+  --color-paragraph: #bdcdff;
+  --color-share-icons: white;
+  --color-social-icons: white;
+  --color-close: white; }
 
 *,
 *::before,
@@ -343,22 +343,22 @@ html {
       font-size: 1.25rem; } }
 
 .page--content {
-  --color-accent: #4c4cde;
-  --color-background: #f2f2fb;
-  --color-blog-heading: #e1e1f0;
-  --color-container: #fbfbfe;
-  --color-focus-bg: #55F6DB;
-  --color-footer-contact: #4c4cde;
-  --color-footer-divider: #9999E6;
-  --color-heading: #4c4cde;
-  --color-hero-subheading: #2e2e65;
-  --color-nav: #4c4cde;
-  --color-footer-text: #6062a5;
-  --color-logo: #4c4cde;
-  --color-paragraph: #2e2e65;
-  --color-share-icons: #3e18c2;
-  --color-social-icons: #4c4cde;
-  --color-close: #4c4cde; }
+  --color-accent: #4a4ade;
+  --color-background: #ebebf4;
+  --color-blog-heading: #dedeed;
+  --color-container: #f5f6fa;
+  --color-focus-bg: #bdcdff;
+  --color-footer-contact: #4a4ade;
+  --color-footer-divider: #bdcdff;
+  --color-heading: #4646b4;
+  --color-hero-subheading: #5129e0;
+  --color-nav: #4a4ade;
+  --color-footer-text: #5f61a5;
+  --color-logo: #4a4ade;
+  --color-paragraph: #3e3e5b;
+  --color-share-icons: #3d18c3;
+  --color-social-icons: #4a4ade;
+  --color-close: #4a4ade; }
 
 body {
   font-family: "Larsseit", sans-serif;
@@ -437,7 +437,7 @@ main {
 .container {
   margin: 0 auto;
   max-width: 66.5rem;
-  padding: 0 1.25rem;
+  padding: 0 1.5rem;
   position: relative; }
 
 .section {
@@ -579,7 +579,7 @@ img {
 
 .divider {
   border: none;
-  border-top: 4px solid #5253A8; }
+  border-top: 4px solid #809fff; }
   .divider--margin {
     margin: 6rem 0; }
   .divider--margin-bottom {
@@ -629,7 +629,7 @@ img {
 
 ::selection {
   background: var(--color-accent);
-  color: #fff;
+  color: white;
   text-shadow: none; }
 
 .blog-content {
@@ -666,7 +666,7 @@ blockquote {
     blockquote {
       width: 100%; } }
   blockquote q {
-    color: #161669;
+    color: #260a8a;
     display: block;
     font-family: "Larsseit-Light", sans-serif;
     font-size: 1.875rem;
@@ -674,7 +674,7 @@ blockquote {
     margin-bottom: 0.5rem;
     width: 100%; }
     blockquote q::before {
-      color: rgba(22, 22, 105, 0.1);
+      color: rgba(38, 10, 138, 0.1);
       content: open-quote;
       font-size: 10rem;
       font-weight: bold;
@@ -687,7 +687,7 @@ blockquote {
       content: close-quote;
       visibility: hidden; }
   blockquote cite {
-    color: #4c4cde;
+    color: #4a4ade;
     font-size: 0.9rem; }
 
 .grid {
@@ -845,7 +845,7 @@ blockquote {
       display: block;
       margin-top: .5rem; }
   .banner__close {
-    background-color: #ebebff;
+    background-color: #e9e6f9;
     border-radius: 100%;
     padding: 1rem; }
     .banner__close:focus {
@@ -873,7 +873,7 @@ blockquote {
   margin-bottom: 0.75rem; }
 
 .blog-post__image {
-  border: 3px solid #fff; }
+  border: 3px solid white; }
 
 .blog-post a:focus {
   background-color: var(--color-focus-bg);
@@ -882,10 +882,10 @@ blockquote {
   outline: none; }
 
 .button {
-  background-color: #161669;
+  background-color: #260a8a;
   border: none;
   border-radius: 0.25rem;
-  color: #fff;
+  color: white;
   cursor: pointer;
   display: inline-block;
   font-size: .8rem;
@@ -902,7 +902,7 @@ blockquote {
     display: block;
     margin-top: .125rem; }
   .button:hover {
-    background-color: #13135c;
+    background-color: #22097b;
     text-decoration: none; }
   .button--small {
     font-size: 0.8rem;
@@ -913,37 +913,6 @@ blockquote {
 
 .bullet__text strong {
   color: #2b363b; }
-
-.card {
-  display: block; }
-  .card__media {
-    display: block; }
-  .card__image {
-    display: block;
-    transition: opacity 300ms ease;
-    width: 100%; }
-  .card__content {
-    margin-top: 2rem; }
-  .card__heading {
-    color: #2b363b;
-    transition: color 300ms ease; }
-  .card__text {
-    color: initial;
-    font-size: 0.9rem;
-    margin-bottom: 0; }
-  .card__link {
-    color: #f77c6b;
-    display: block;
-    font-family: "Larsseit-Medium", sans-serif;
-    font-size: 0.9rem;
-    margin-top: 0.125rem; }
-
-a.card:hover {
-  text-decoration: none; }
-  a.card:hover .card__image {
-    opacity: 0.75; }
-  a.card:hover .card__image {
-    opacity: 0.75; }
 
 .company-logos {
   margin-bottom: 4rem; }
@@ -964,10 +933,7 @@ a.card:hover {
   display: grid;
   grid-template-columns: 1fr;
   grid-gap: 3rem;
-  padding: 0.75rem 3rem; }
-  @media screen and (min-width: 34em) {
-    .contact__content {
-      padding: 3rem; } }
+  padding: 3rem; }
   @media screen and (min-width: 48em) {
     .contact__content {
       grid-template-columns: 1fr 1fr; } }
@@ -986,7 +952,7 @@ a.card:hover {
   padding: 1.5rem 3rem; }
   @media screen and (min-width: 34em) {
     .contact__footer {
-      background-color: #3e18c2; } }
+      background-color: #3d18c3; } }
   @media screen and (min-width: 48em) {
     .contact__footer {
       padding: 2rem; } }
@@ -1246,7 +1212,7 @@ a.card:hover {
 
 .form__fieldset {
   border: none;
-  border-top: 3px solid #fff;
+  border-top: 3px solid white;
   margin: 0 0 2rem 0;
   padding: 0; }
   @media screen and (min-width: 48em) {
@@ -1254,7 +1220,7 @@ a.card:hover {
       margin: 0 0 3rem 0; } }
 
 .form__legend {
-  background-color: #fff;
+  background-color: white;
   color: #2b363b;
   font-size: 1.1rem;
   font-weight: 700;
@@ -1310,14 +1276,14 @@ a.card:hover {
   font-family: "Larsseit-Medium", sans-serif;
   margin-bottom: .1em; }
   .form__label--checkbox {
-    color: #6f7075;
+    color: #6f7076;
     font-size: 0.9rem;
     margin: 0; }
     .form__label--checkbox::before, .form__label--checkbox::after {
       content: '';
       position: absolute; }
     .form__label--checkbox::before {
-      background: #f5f5f5;
+      background: whitesmoke;
       border-radius: .125rem;
       height: 0.25rem;
       left: 0;
@@ -1332,7 +1298,7 @@ a.card:hover {
           transform: translateY(-60%); } }
     .form__label--checkbox::after {
       border: solid;
-      border-color: #fff;
+      border-color: white;
       border-top-color: transparent;
       border-width: 0 0 2px 2px;
       height: 6px;
@@ -1351,8 +1317,8 @@ a.card:hover {
 
 .form__input {
   appearance: none;
-  background-color: #f5f5f5;
-  border: 1px solid #f5f5f5;
+  background-color: whitesmoke;
+  border: 1px solid whitesmoke;
   border-radius: 0.25rem;
   color: #2b363b;
   display: block;
@@ -1367,7 +1333,7 @@ a.card:hover {
     min-height: 10em;
     resize: vertical; }
   .form__input.erroneous {
-    border: 1px solid #f77c6b; }
+    border: 1px solid #f77969; }
 
 .form__checkboxes {
   margin-top: 1rem; }
@@ -1391,11 +1357,11 @@ a.card:hover {
     opacity: 1; }
 
 .form .error {
-  color: #f77c6b;
+  color: #f77969;
   font-size: 0.8rem; }
 
 .header {
-  background-color: #4721CE; }
+  background-color: #4722ce; }
   @media screen and (min-width: 34em) {
     .header {
       background-color: transparent; } }
@@ -1474,7 +1440,7 @@ a.card:hover {
   .hero__container {
     margin: 0 auto;
     max-width: 66.5rem;
-    padding: 0 1.25rem; }
+    padding: 0 1.5rem; }
   .hero__heading {
     font-size: 2rem;
     left: .4rem;
@@ -1518,6 +1484,7 @@ a.card:hover {
       .intro__image {
         margin-bottom: 0 0.75rem 0 0; } }
     .intro__image img {
+      display: block;
       height: 4.5rem;
       max-width: 12rem; }
   .intro__text {
@@ -1543,29 +1510,26 @@ a.card:hover {
   .modal.is-open {
     display: block; }
   .modal__overlay {
-    align-items: center;
     background-color: rgba(13, 13, 38, 0.92);
     bottom: 0;
-    display: flex;
-    justify-content: center;
     left: 0;
     position: fixed;
     right: 0;
     top: 0;
     will-change: opacity;
     z-index: 1001; }
+    @media screen and (min-width: 34em) {
+      .modal__overlay {
+        align-items: center;
+        display: flex;
+        justify-content: center; } }
     .modal[aria-hidden='false'] .modal__overlay {
       animation: mmfadeIn 250ms ease; }
     .modal[aria-hidden='true'] .modal__overlay {
       animation: mmfadeOut 250ms ease; }
   .modal__container {
-    align-items: flex-end;
-    background-color: #4721CE;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+    background-color: #4722ce;
     height: 100vh;
-    max-height: 100vh;
     position: relative;
     overflow-y: auto;
     width: 100%;
@@ -1590,21 +1554,15 @@ a.card:hover {
     font-size: 1.5rem;
     line-height: 1;
     outline: none;
-    margin-right: 1.25rem; }
+    margin-right: 0;
+    position: absolute;
+    right: 1.5rem;
+    top: 1.5rem; }
     .modal__close:focus {
       box-shadow: 0 0 0 0.2rem var(--color-focus-bg);
       outline: none; }
     .modal__close::before {
       content: url("/assets/images/icons/close.svg"); }
-    @media screen and (min-width: 34em) {
-      .modal__close {
-        margin-right: 0;
-        position: absolute;
-        right: 1.5rem;
-        top: 1.5rem; } }
-    @media screen and (min-width: 75em) {
-      .modal__close {
-        top: 1.25rem; } }
 
 @keyframes mmfadeIn {
   from {
@@ -1710,7 +1668,7 @@ a.card:hover {
       .nav__link[data-mobile-only] {
         display: none; } }
     .nav__link--active {
-      color: #e7e4f9;
+      color: #e9e6f9;
       pointer-events: none; }
       .nav__link--active::before {
         background: var(--color-accent);
@@ -1872,7 +1830,7 @@ a.card:hover {
   border-radius: 0.4rem; }
 
 .profile__heading {
-  color: #fff;
+  color: white;
   margin-bottom: 0; }
   @media screen and (min-width: 34em) {
     .profile__heading {
@@ -1888,7 +1846,7 @@ a.card:hover {
       text-align: center; } }
 
 .project__subheading {
-  color: #fff;
+  color: white;
   font-family: "Larsseit-ExtraBold", sans-serif;
   font-size: .6rem;
   font-weight: 400;
@@ -1903,7 +1861,7 @@ a.card:hover {
       margin-bottom: 1.5rem; } }
 
 .resource {
-  background-color: #4721CE;
+  background-color: #4722ce;
   border-radius: 0.4rem;
   font-size: 1.875rem;
   height: 100%; }
@@ -1945,7 +1903,7 @@ a.card:hover {
   .resource__placeholder {
     padding-bottom: 128.75%;
     position: relative;
-    background: #161669;
+    background: #260a8a;
     border-radius: 0.2rem;
     margin: 0.75rem;
     width: 8rem; }
@@ -1962,7 +1920,7 @@ a.card:hover {
         padding: 1rem 1.5rem 1rem 0.75rem; } }
   .resource__meta {
     align-items: center;
-    color: #fff;
+    color: white;
     display: flex;
     font-family: "Larsseit-ExtraBold", sans-serif;
     font-size: .55rem;
@@ -2022,7 +1980,7 @@ a.card:hover {
     margin-bottom: 2rem; } }
 
 .sidebar {
-  background-color: #eaeaf4;
+  background-color: #f5f6fa;
   padding: 2rem; }
 
 .social__list {
@@ -2098,7 +2056,7 @@ a.card:hover {
     .social-tile {
       display: flex; } }
   .social-tile__icon {
-    background-color: #4721CE;
+    background-color: #4722ce;
     border-radius: 100%;
     position: relative;
     text-align: center;
@@ -2124,7 +2082,7 @@ a.card:hover {
   .social-tile__heading, .social-tile__handle {
     display: block; }
   .social-tile__heading {
-    color: #fff;
+    color: white;
     font-size: .6rem;
     font-weight: 700;
     letter-spacing: .05rem;
@@ -2214,7 +2172,7 @@ a.card:hover {
 
 .statement__img {
   align-items: center;
-  background-color: #4721CE;
+  background-color: #4722ce;
   border-radius: 100%;
   display: flex;
   height: 3.8rem;
@@ -2262,36 +2220,6 @@ a.card:hover {
       transform: scaleX(1);
       transform-origin: center left; } }
 
-.study {
-  display: block;
-  position: relative; }
-  .study__media {
-    display: block; }
-  .study__image {
-    display: block;
-    transition: opacity 300ms ease;
-    width: 100%; }
-  .study__content {
-    background-color: #fff;
-    bottom: 0;
-    left: 0;
-    padding: 1.5rem 1.5rem 0 0;
-    position: absolute;
-    width: 50%; }
-  .study__heading {
-    color: #2b363b;
-    transition: color 300ms ease; }
-  .study__text {
-    color: initial;
-    font-size: 0.9rem;
-    margin-bottom: 0; }
-  .study__link {
-    color: #f77c6b;
-    display: block;
-    font-family: "Larsseit-Medium", sans-serif;
-    font-size: 0.9rem;
-    margin-top: 0.5rem; }
-
 .summary__heading {
   font-size: 0.8rem; }
 
@@ -2304,7 +2232,7 @@ a.card:hover {
   display: block;
   transition: box-shadow 500ms ease, transform 200ms ease;
   align-items: center;
-  background-color: #4721CE;
+  background-color: #4722ce;
   border-radius: 0.4rem;
   display: -ms-grid;
   display: grid;
