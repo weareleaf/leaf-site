@@ -85,7 +85,7 @@ $image-height: $size-11;
         .presentation--reverse & {
 
           @media screen and (min-width: map-get($breakpoints, 'breakpoint-1')) {
-            right: -7rem;
+            right: -6rem;
           }
         }
       }

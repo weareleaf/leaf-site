@@ -45,5 +45,8 @@
     "semi": false,
     "tabWidth": 2,
     "singleQuote": true
+  },
+  "dependencies": {
+    "jimp": "^0.10.2"
   }
 }
