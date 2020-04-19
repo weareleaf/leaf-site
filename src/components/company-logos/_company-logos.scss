@@ -14,5 +14,9 @@
     @media screen and (min-width: map-get($breakpoints, 'breakpoint-1')) {
       @include padding-horizontal($spacing-6);
     }
+
+    svg {
+      width: 100%
+    }
   }
 }
