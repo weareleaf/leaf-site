@@ -1816,7 +1816,7 @@ blockquote {
         top: 8rem; } }
     @media screen and (min-width: 34em) and (min-width: 34em) {
       .presentation--reverse .presentation__image--laced {
-        right: -7rem; } }
+        right: -6rem; } }
   @media screen and (min-width: 34em) {
       .presentation__image--90 {
         height: 90%; }
