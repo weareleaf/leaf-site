@@ -928,6 +928,8 @@ blockquote {
       .company-logos__item {
         padding-left: 1.5rem;
         padding-right: 1.5rem; } }
+    .company-logos__item svg {
+      width: 100%; }
 
 .contact__content {
   display: grid;
@@ -1789,7 +1791,8 @@ blockquote {
   .presentation__media {
     margin: auto;
     position: relative;
-    width: 75%; }
+    width: 75%;
+    z-index: -1; }
     @media screen and (min-width: 34em) {
       .presentation__media {
         margin: unset;
@@ -1816,7 +1819,7 @@ blockquote {
         top: 8rem; } }
     @media screen and (min-width: 34em) and (min-width: 34em) {
       .presentation--reverse .presentation__image--laced {
-        right: -6rem; } }
+        right: -7rem; } }
   @media screen and (min-width: 34em) {
       .presentation__image--90 {
         height: 90%; }
