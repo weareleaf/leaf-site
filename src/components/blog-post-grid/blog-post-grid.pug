@@ -1,0 +1,139 @@
+-
+  var blogPosts = [
+    {
+      href: '/blog/developing-software-with-organisational-indecision',
+      category: 'Productivity',
+      heading: 'Developing software with organisational indecision',
+      duration: "5 minutes",
+      text: 'Developing software in complex organisations is tough, but working through organisational indecision is a trait of highly effective teams. Here are a few ways we get decisions made and work done when the World is working against us.'
+    },
+    {
+      href: '/blog/putting-amazon-textract-to-the-test',
+      category: 'Tech',
+      heading: 'Putting Amazon Textract to the test',
+      duration: "6 minutes",
+      text: 'Amazon Textract extracts text and structured data from scanned or photographed documents, but how reliably can it be used for business process automation? We put it to the test.'
+    },
+    {
+      href: '/blog/how-to-thrive-in-an-automated-business-world',
+      category: 'Design',
+      heading: 'How to thrive in an automated business world',
+      duration: "3 minutes",
+      text: "How can your business thrive when you're constantly being disrupted by leaner, faster, more automated competition on a global scale?"
+    },
+    {
+      href: '/blog/automate-where-it-matters-with-process-maps',
+      category: 'Business',
+      heading: 'Automate where it matters with process maps',
+      duration: "6 minutes",
+      text: "We've experienced how competing stakeholders, unclear ROIs, and uncertainty can make committing to business automation difficult. Process maps provide a powerful way to clear the fog."
+    },
+    {
+      href: '/blog/my-advice-as-a-junior-designer',
+      category: 'Design',
+      heading: 'My advice as a junior designer',
+      duration: "4 minutes",
+      text: 'Over the past couple of months, I’ve had the privilege of working remotely at Leaf, helping them design and build digital products.'
+    },
+    {
+      href: '/blog/goals-matter',
+      category: 'Business',
+      heading: 'Goals matter',
+      duration: "5 minutes",
+      text: "Without a clear definition of success, it's hard to know which direction to take, or whether you're making any progress. Goals provide direction and clarity for your teams."
+    },
+    {
+      href: '/blog/the-power-of-small-development-phases',
+      category: 'Business',
+      heading: 'The power of small development phases',
+      duration: "5 minutes",
+      text: 'Imagine this scenario — someone in your company proposes a new software feature with the potential to save the business …'
+    },
+    {
+      href: '/blog/a-home-office-for-productivity',
+      category: 'Productivity',
+      heading: 'A home office for productivity',
+      duration: "3 minutes",
+      text: 'At Leaf, we embrace remote work to get a productive edge. However, it’s easy for a remote environment to work against you.'
+    },
+    {
+      href: '/blog/behavioural-traps-in-software-teams',
+      category: 'Business',
+      heading: 'Behavioural traps in software teams',
+      duration: "3 minutes",
+      text: 'In my experience of software teams, there are a few behavioural traps that leaders (senior stakeholders …'
+    },
+    {
+      href: '/blog/working-too-much-please-stop',
+      category: 'Productivity',
+      heading: 'Working too much? Please stop',
+      duration: "4 minutes",
+      text: 'These days, people in most organisations are encouraged to work in their personal time …'
+    },
+    {
+      href: '/blog/leaf-is-two-years-old',
+      category: 'Agency life',
+      heading: 'Leaf is two years old - A few words to celebrate',
+      duration: "4 minutes",
+      text: 'By the age of two, many toddlers will have gained significant new skills; from improvements in their ability to …'
+    },
+    {
+      href: '/blog/how-to-write-better-work-enquiries',
+      category: 'Business',
+      heading: 'How to write better work enquiries',
+      duration: "3 minutes",
+      text: 'Five steps to start off on the right foot. As somebody with little-to-no experience of the web, the idea of enquiring …'
+    },
+    {
+      href: '/blog/5-tips-for-actually-shipping-a-side-project',
+      category: 'Productivity',
+      heading: '5 tips for actually shipping a side project',
+      duration: "4 minutes",
+      text: 'We took Howdy, our own little app, from an idea to a fully published SaaS application entirely in our spare time. During its development…'
+    },
+    {
+      href: '/blog/your-users-are-humans-too',
+      category: 'Design',
+      heading: 'Your users are humans too',
+      duration: "2 minutes",
+      text: 'You’ve been charged with redesigning the company website, and you’re stoked. You’ve met with stakeholders, created a tonne of user…'
+    },
+    {
+      href: '/blog/there-are-no-excuses-for-poor-engineering-in-2017',
+      category: 'Development',
+      heading: 'There are no excuses for poor engineering in 2017',
+      duration: "3 minutes",
+      text: 'Writing great code is easier than ever, and yet we act like it doesn’t matter'
+    },
+    {
+      href: '/blog/for-the-love-of-winning-work',
+      category: 'Business',
+      heading: 'For the love of winning work',
+      duration: "5 minutes",
+      text: 'My wife recently turned to me during an episode of First Dates and remarked how lucky we were that we’d, “never have to do that again”. She…'
+    },
+    {
+      href: '/blog/burnout-in-tech-and-why-you-could-be-part-of-the-problem',
+      category: 'Productivity',
+      heading: 'Burnout in tech, and why you could be part of the problem',
+      duration: "2 minutes",
+      text: 'We all feel overwhelmed from time to time, and in a psychologically exhausting World of 24-hour iOS notifications and 15-man group chats…'
+    },
+    {
+      href: '/blog/the-importance-of-designing-with-empathy',
+      category: 'Design',
+      heading: 'The importance of designing with empathy',
+      duration: "2 minutes",
+      text: 'Humans are hardwired to act emphatically, and yet it’s a skill we’re rapidly losing'
+    }
+  ]
+
+mixin blog-post-grid(preview=true)
+ .grid.grid--blog()
+    if preview
+      each index in [0,1,2]
+        +blog-post-grid-item(blogPosts[index])
+    else
+      each post in blogPosts
+        +blog-post-grid-item(post)
+

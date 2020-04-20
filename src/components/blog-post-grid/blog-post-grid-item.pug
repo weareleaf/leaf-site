@@ -1,0 +1,10 @@
+mixin blog-post-grid-item(c)
+  .grid__item
+    a.post(href=c.href)
+      .post__content
+        .post__meta
+          span.post__category= c.category
+          span.post__middle-dot &middot;
+          span.post__mins #{c.duration} min read
+        h3.post__heading= c.heading
+        p.post__text= c.text
