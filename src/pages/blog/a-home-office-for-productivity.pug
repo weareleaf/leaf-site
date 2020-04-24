@@ -4,7 +4,7 @@ block prepend vars
   -var pageTitle = "A home office for productivity - Leaf"
   -var metaUrl = "https://weareleaf.com/blog/a-home-office-for-productivity"
   -var metaTitle = "A home office for productivity"
-  -var metaDescription = "Compared to the average office, where people are constantly walking around in the background or making sporadic eye contact, my home environment is much less disruptive."
+  -var metaDescription = "In the average office, people are constantly walking around in the background or making sporadic eye contact. My home environment is much less disruptive."
 
   -var heroHeading = "A home office for productivity"
   -var heroSubheading = "(by Mike Carter)"
@@ -68,4 +68,4 @@ block pageComponents
       .container
         .blog-content
           h3.blog-content__heading Keep reading
-          .grid.grid--blog.grid--blog-preview
+          +blog-post-grid
