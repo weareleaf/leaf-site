@@ -1789,7 +1789,8 @@ blockquote {
   .presentation__media {
     margin: auto;
     position: relative;
-    width: 75%; }
+    width: 75%;
+    z-index: -1; }
     @media screen and (min-width: 34em) {
       .presentation__media {
         margin: unset;
