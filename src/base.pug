@@ -14,12 +14,16 @@ html.no-js(lang="en-GB")
 
     meta(charset="utf-8")
     meta(http-equiv="x-ua-compatible", content="ie=edge")
-    title= pageTitle
+
+    if pageTitle
+      title= pageTitle
+    else
+      title="Data Capture Experts | Web, iOS, & Android Developers | Leaf"
 
     if metaDescription
       meta(name="description", content=metaDescription)
     else
-      meta(name="description", content="We're specialists in planning, designing and building performant, scalable web products.")
+      meta(name="description", content="We help organisations excel online by making it easy for their users to provide them with high quality information. Specialist web design & development.")
 
     meta(name="viewport", content="width=device-width, initial-scale=1, shrink-to-fit=no")
 
