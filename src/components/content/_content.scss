@@ -1,0 +1,18 @@
+.content {
+  &__heading-2 {
+    font-size: 2rem;
+  }
+
+  &__heading-3 {
+    color: $color-coal;
+  }
+
+  &__intro {
+    font-size: $root-font-size-xl;
+    margin-bottom: $spacing-5;
+  }
+
+  &__text {
+    margin-bottom: 0;
+  }
+}

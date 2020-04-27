@@ -1,11 +1,11 @@
 mixin content(c)
   .content
     if c.contentHeading2 === true
-      h2.content__heading= c.contentHeading
+      h1.content__heading-2= c.contentHeading
       p.content__intro= c.contentIntro
       p.content__text= c.contentText
     else
-      h3.content__heading= c.contentHeading
+      h2.content__heading-3= c.contentHeading
       p.content__intro= c.contentIntro
       p.content__text= c.contentText
   

@@ -1,0 +1,12 @@
+mixin content-block(c)
+  .content-block(class= c.contentBlockModifier ? "content-block--" + c.contentBlockModifier : "")
+    ul.content-block-list__items.unstyled-list
+      each item in c.contentBlockItems
+        li.content-block-list__item
+          +content(item)
+    +image({
+      context: "content-block",
+      modifier: c.contentBlockImageModifier,
+      src: c.contentBlockImage.src,
+      alt: c.contentBlockImage.alt
+    })
