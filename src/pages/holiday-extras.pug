@@ -27,45 +27,37 @@ block pageComponents
   .section
     .container
       figure
-        img(src="/assets/images/case-studies/hx/image-1.webp" alt="Holiday Extras Travel Insurance wireframes" onerror="this.onerror=null; this.src='/assets/images/case-studies/hx/image-1.jpg'")
+        img.case-study-image(src="/assets/images/case-studies/hx/image-1.webp" alt="Holiday Extras Travel Insurance wireframes" onerror="this.onerror=null; this.src='/assets/images/case-studies/hx/image-1.jpg'")
 
       +content-block({
         contentBlockItems: [
           {
             contentHeading2: true,
-            contentHeading: "test",
-            contentIntro: 'test 1',
-            contentText: "test 2"
+            contentHeading: "The challenge",
+            contentIntro: "Having worked together previously, Holiday Extras asked us to help them improve their travel insurance booking flow.",
+            contentText: "We were tasked with creating an experience comparable to their award-winning call centre. Their staff are friendly, helpful, and able to shield the customer from the inherent complexity of insurance, and they wanted an online booking flow that was equally unintimidating."
           }
         ],
         contentBlockImage: {
           src: "/assets/images/expertise/forms.png",
           alt: "test"
-        }
-      })
-
-      +content-block({
-        contentBlockItems: [
-          {
-            contentHeading: "test",
-            contentIntro: 'test 1',
-            contentText: "test 2"
-          }
-        ],
-        contentBlockImage: {
-          src: "/assets/images/expertise/forms.png",
-          alt: "test"
-        }
+        },
+        contentBlockModifier: "reverse"
       })
 
       +content-block({
         introHeading: true,
-        contentBlockHeading: "header",
+        contentBlockHeading: "Our approach",
         contentBlockItems: [
           {
-            contentHeading: "test",
-            contentIntro: 'test 1',
-            contentText: "test 2"
+            contentHeading: "Improve iteratively",
+            contentIntro: 'Although this was a "reimagination", changes would be made iteratively by building on the existing online booking process.',
+            contentText: "Any recommendations we made would need to work both in isolation, and as part of the current system. Where possible, we reused existing elements, minimising the friction as sections of our work were introduced."
+          },
+          {
+            contentHeading: "Be guided by the numbers",
+            contentIntro: "While reviewing the previous 12 months of policies, we found that most people were going to the same handul of places",
+            contentText: "By suggesting these popular destinations, 4 out of 5 travellers would be able to select a location in a single interaction, with the remaining destinations available through the autocompleting search field."
           }
         ],
         contentBlockImage: {

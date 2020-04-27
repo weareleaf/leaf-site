@@ -3,15 +3,15 @@ mixin content-block(c)
     if c.introHeading === true
       .content-block__content
         h2.content-block__heading= c.contentBlockHeading
-        ul.content-block-list__items.unstyled-list
+        ul.content-block__list-items.unstyled-list
           each item in c.contentBlockItems
-            li.content-block-list__item
+            li.content-block__list-item
               +content(item)
     else
       .content-block__content
-        ul.content-block-list__items.unstyled-list
+        ul.content-block__list-items.unstyled-list
           each item in c.contentBlockItems
-            li.content-block-list__item
+            li.content-block__list-item
               +content(item)
     +image({
       context: "content-block",

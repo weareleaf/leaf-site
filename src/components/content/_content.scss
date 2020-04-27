@@ -1,18 +1,23 @@
 .content {
   &__heading-2 {
-    font-size: 2rem;
+    font-size: 2.2rem;
   }
 
   &__heading-3 {
     color: $color-coal;
+    font-size: 1.5rem;
+    margin-bottom: $spacing-3;
   }
 
   &__intro {
-    font-size: $root-font-size-xl;
+    font-size: $root-font-size;
+    font-family: $font-family-sans-serif-medium;
+    line-height: 1.6;
     margin-bottom: $spacing-5;
   }
 
   &__text {
+    color: lighten($color-coal, 8%);
     margin-bottom: 0;
   }
 }
