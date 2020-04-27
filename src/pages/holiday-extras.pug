@@ -28,12 +28,20 @@ block pageComponents
     .container
       figure
         img(src="/assets/images/case-studies/hx/image-1.webp" alt="Holiday Extras Travel Insurance wireframes" onerror="this.onerror=null; this.src='/assets/images/case-studies/hx/image-1.jpg'")
-    
-      +content({
-        contentHeading2: true,
-        contentHeading: "The challenge",
-        contentIntro: "test",
-        contentText: "test"
+
+      +content-block({
+        contentBlockItems: [
+          {
+            contentHeading2: true,
+            contentHeading: "test",
+            contentIntro: 'test 1',
+            contentText: "test 2"
+          }
+        ],
+        contentBlockImage: {
+          src: "/assets/images/expertise/forms.png",
+          alt: "test"
+        }
       })
 
       +content-block({
