@@ -1,0 +1,8 @@
+.metrics {
+  &__grid {
+    background-color: $color-white;
+    display: grid;
+    grid-gap: 2rem;
+    grid-template-columns: repeat(2, 1fr);
+  }
+}

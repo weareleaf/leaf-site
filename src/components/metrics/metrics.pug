@@ -1,0 +1,8 @@
+mixin metrics(c)
+  .metrics
+    h4.metrics__heading= c.metricsHeading
+    .metrics__grid
+      each item in c.metricItems
+        .metrics__item
+          p.details__unit= item.metricsUnit
+          p.details__text= item.metricsText
