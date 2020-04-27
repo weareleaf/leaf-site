@@ -1,16 +1,18 @@
 mixin content-block(c)
   .content-block(class= c.contentBlockModifier ? "content-block--" + c.contentBlockModifier : "")
     if c.introHeading === true
-      h2.content-block__heading= c.contentBlockHeading
+      .content-block__content
+        h2.content-block__heading= c.contentBlockHeading
         ul.content-block-list__items.unstyled-list
           each item in c.contentBlockItems
             li.content-block-list__item
               +content(item)
     else
-      ul.content-block-list__items.unstyled-list
-        each item in c.contentBlockItems
-          li.content-block-list__item
-            +content(item)
+      .content-block__content
+        ul.content-block-list__items.unstyled-list
+          each item in c.contentBlockItems
+            li.content-block-list__item
+              +content(item)
     +image({
       context: "content-block",
       modifier: c.contentBlockImageModifier,
