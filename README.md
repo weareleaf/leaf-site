@@ -13,7 +13,7 @@ brew install nvm
 Then, install the required version of node and install the dependencies for the project:
 
 ```
-nvm install 8.12.0
+nvm install 10.20.1
 nvm use
 npm install
 ```
