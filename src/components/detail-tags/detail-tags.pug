@@ -1,5 +1,6 @@
 mixin detail-tags(c)
   .detail-tags
+    h4.detail-tags__heading= c.detailTagHeading
     each detail in c.detailTags
       .detail-tags__item
         .detail-tags__icon

@@ -99,7 +99,6 @@ main {
   margin-top: -6rem;
 
   &__tags {
-    align-self: end;
-    justify-self: end;
+    position: relative;
   }
 }

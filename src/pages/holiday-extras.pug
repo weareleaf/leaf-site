@@ -49,14 +49,40 @@ block pageComponents
           })
 
           .hx-details
-            +detail-tags({
-              detailTags: [
-                {
-                  detailTagIcon: "assets/images/icons/leaves.svg",
-                  detailTagText: "yes mate"
-                }
-              ]
-            })
+            .hx-details__tags
+              +detail-tags({
+                detailTagHeading: "What we did",
+                detailTags: [
+                  {
+                    detailTagIcon: "assets/images/icons/leaves.svg",
+                    detailTagText: "Content writing"
+                  },
+                  {
+                    detailTagIcon: "assets/images/icons/leaves.svg",
+                    detailTagText: "Data analysis"
+                  },
+                  {
+                    detailTagIcon: "assets/images/icons/leaves.svg",
+                    detailTagText: "Form design"
+                  },
+                  {
+                    detailTagIcon: "assets/images/icons/leaves.svg",
+                    detailTagText: "Journey mapping"
+                  },
+                  {
+                    detailTagIcon: "assets/images/icons/leaves.svg",
+                    detailTagText: "Prototypes"
+                  },
+                  {
+                    detailTagIcon: "assets/images/icons/leaves.svg",
+                    detailTagText: "Stakeholder interviews"
+                  },
+                  {
+                    detailTagIcon: "assets/images/icons/leaves.svg",
+                    detailTagText: "Wireframes"
+                  }
+                ]
+              })
             .hx-details__image
               img(src="/assets/images/case-studies/hx/image-3.png" alt="Customer Service Rep")
 
