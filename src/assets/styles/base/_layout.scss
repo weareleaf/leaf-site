@@ -82,13 +82,20 @@ main {
 }
 
 .content-group {
+  align-items: center;
+  display: flex;
+  justify-content: center;
   margin-bottom: $spacing-13;
-  max-width: 60rem;
+
+  &__items {
+    margin-left: -8rem;
+    max-width: 62rem;
+  }
 }
 
 .hx-details {
   display: grid;
-  grid-template-columns: 1fr 2fr;
+  grid-template-columns: 1fr 38rem;
   margin-top: -6rem;
 
   &__tags {

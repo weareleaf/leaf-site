@@ -1,6 +1,6 @@
 .content-block {
   display: grid;
-  grid-gap: $spacing-10;
+  grid-gap: 5rem;
   grid-template-columns: repeat(2, 1fr);
 
   &:not(:last-child) {
@@ -22,8 +22,8 @@
 
     &--image-2 {
       box-shadow: 0px 0px 0px .6rem var(--color-background);
-      right: 0;
-      top: -2rem;
+      right: 1rem;
+      top: -2.5rem;
       width: 70%;
     }
   }
