@@ -75,6 +75,24 @@ main {
   }
 }
 
+// case study styles
+
 .case-study-image {
   margin-bottom: $spacing-10;
+}
+
+.content-group {
+  margin-bottom: $spacing-13;
+  max-width: 60rem;
+}
+
+.hx-details {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  margin-top: -6rem;
+
+  &__tags {
+    align-self: end;
+    justify-self: end;
+  }
 }

@@ -28,22 +28,29 @@ block pageComponents
     .container
       figure
         img.case-study-image(src="/assets/images/case-studies/hx/image-1.png" alt="Holiday Extras Travel Insurance wireframes" onerror="this.onerror=null; this.src='/assets/images/case-studies/hx/image-1.jpg'")
+    
+      .content-group
+        +content-block({
+          contentBlockItems: [
+            {
+              contentHeading2: true,
+              contentHeading: "The challenge",
+              contentIntro: "Having worked together previously, Holiday Extras asked us to help them improve their travel insurance booking flow.",
+              contentText: "We were tasked with creating an experience comparable to their award-winning call centre. Their staff are friendly, helpful, and able to shield the customer from the inherent complexity of insurance, and they wanted an online booking flow that was equally unintimidating."
+            }
+          ],
+          contentBlockImage: {
+            src: "/assets/images/case-studies/hx/image-2.png",
+            alt: "Customer Service Rep"
+          },
+          contentBlockModifier: "reverse",
+          contentBlockImageModifier: "image-2"
+        })
 
-      +content-block({
-        contentBlockItems: [
-          {
-            contentHeading2: true,
-            contentHeading: "The challenge",
-            contentIntro: "Having worked together previously, Holiday Extras asked us to help them improve their travel insurance booking flow.",
-            contentText: "We were tasked with creating an experience comparable to their award-winning call centre. Their staff are friendly, helpful, and able to shield the customer from the inherent complexity of insurance, and they wanted an online booking flow that was equally unintimidating."
-          }
-        ],
-        contentBlockImage: {
-          src: "/assets/images/case-studies/hx/image-2.png",
-          alt: "Customer Service Rep"
-        },
-        contentBlockModifier: "reverse"
-      })
+        .hx-details
+          .hx-details__tags details
+          .hx-details__image
+            img(src="/assets/images/case-studies/hx/image-3.png" alt="Customer Service Rep")
 
       +content-block({
         introHeading: true,

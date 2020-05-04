@@ -1,5 +1,4 @@
 .content-block {
-  align-items: center;
   display: grid;
   grid-gap: $spacing-10;
   grid-template-columns: repeat(2, 1fr);
@@ -11,6 +10,21 @@
   &__list-item {
     &:not(:last-child) {
       margin-bottom: $spacing-8;
+    }
+  }
+
+  &__media {
+    position: relative;
+  }
+
+  &__image {
+    position: absolute;
+
+    &--image-2 {
+      box-shadow: 0px 0px 0px .6rem var(--color-background);
+      right: 0;
+      top: -2rem;
+      width: 70%;
     }
   }
 
