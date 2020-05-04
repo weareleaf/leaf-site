@@ -4,6 +4,12 @@
     text-align: center;
   }
 
+  &__heading {
+    font-weight: bolder;
+    letter-spacing: .15rem;
+    text-transform: uppercase;
+  }
+
   &__item {
     align-items: center;
     display: flex;
@@ -13,22 +19,25 @@
     position: relative;
 
     &:first-child {
-      border-right: solid .1rem var(--color-metric-border);
+      border-right: $border-style $border-width-base var(--color-metric-border);
     }
   }
 
   &__grid {
     background-color: var(--color-metric-background);
-    border: solid .1rem var(--color-metric-border);
+    border: $border-style $border-width-base var(--color-metric-border);
     border-radius: $border-radius-lg;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
   }
 
   &__icon {
-    background-color: grey;
+    align-items: center;
+    background-color: var(--color-container);
     border-radius: $border-radius-full;
+    display: flex;
     height: $size-3;
+    justify-content: center;
     left: 1rem;
     position: absolute;
     top: 1rem;
@@ -37,15 +46,17 @@
 
   &__unit {
     color: var(--color-metric-unit);
-    font-size: 3.5rem;
+    font-size: 2.8rem;
   }
 
   &__sub-text {
     color: var(--color-metric-unit);
     font-weight: bold;
+    margin-top: -1rem;
   }
 
   &__text {
     color: var(--color-text);
+    margin-top: $spacing-5;
   }
 }

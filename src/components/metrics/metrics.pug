@@ -5,6 +5,7 @@ mixin metrics(c)
       each item in c.metricItems
         .metrics__item
           .metrics__icon
+            img(src="assets/images/icons/arrow.svg", alt="Arrow")
           p.metrics__unit= item.metricsUnit
           p.metrics__sub-text= item.metricsSubText
           p.metrics__text= item.metricsText
