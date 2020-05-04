@@ -1,0 +1,7 @@
+mixin detail-tags(c)
+  .detail-tags
+    each detail in c.detailTags
+      .detail-tags__item
+        .detail-tags__icon
+            img(src= detail.detailTagIcon alt="")
+        p.detail-tags__text= detail.detailTagText
