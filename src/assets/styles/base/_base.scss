@@ -38,6 +38,29 @@ html {
   --color-close: #{$color-cerulean};
 }
 
+.page--holiday-extras {
+  --color-accent: #{$holiday-extras-gold};
+  --color-background: #{$holiday-extras-purple-3};
+  --color-heading-2: #{$color-smoke};
+  --color-heading-3: #{$holiday-extras-gold};
+  --color-intro-text: #{$color-smoke};
+  --color-text: #{$holiday-extras-purple-1};
+  --color-container: #{$holiday-extras-purple-1};
+  --color-focus-bg: #{$color-ice};
+  --color-footer-contact: #{$color-smoke};
+  --color-footer-divider: #{$holiday-extras-purple-4};
+  --color-heading: #{$color-smoke};
+  --color-hero-subheading: #{$holiday-extras-purple-1};
+  --color-nav: #{$color-smoke};
+  --color-footer-text: #{$holiday-extras-purple-1};
+  --color-logo: #{$holiday-extras-purple-1};
+  --color-social-icons: #{$color-smoke};
+  --color-close: #{$holiday-extras-purple-3};
+  --color-metric-background: #{$holiday-extras-purple-2};
+  --color-metric-border: #{$holiday-extras-purple-4};
+  --color-metric-unit: #{$color-smoke};
+}
+
 body {
   font-family: $font-family-sans-serif-regular;
   -webkit-font-smoothing: antialiased;

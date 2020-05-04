@@ -4,5 +4,7 @@ mixin metrics(c)
     .metrics__grid
       each item in c.metricItems
         .metrics__item
-          p.details__unit= item.metricsUnit
-          p.details__text= item.metricsText
+          .metrics__icon
+          p.metrics__unit= item.metricsUnit
+          p.metrics__sub-text= item.metricsSubText
+          p.metrics__text= item.metricsText

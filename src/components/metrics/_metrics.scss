@@ -1,8 +1,51 @@
 .metrics {
+  p {
+    margin-bottom: 0;
+    text-align: center;
+  }
+
+  &__item {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: $spacing-6;
+    position: relative;
+
+    &:first-child {
+      border-right: solid .1rem var(--color-metric-border);
+    }
+  }
+
   &__grid {
-    background-color: $color-white;
+    background-color: var(--color-metric-background);
+    border: solid .1rem var(--color-metric-border);
+    border-radius: $border-radius-lg;
     display: grid;
-    grid-gap: 2rem;
     grid-template-columns: repeat(2, 1fr);
+  }
+
+  &__icon {
+    background-color: grey;
+    border-radius: $border-radius-full;
+    height: $size-3;
+    left: 1rem;
+    position: absolute;
+    top: 1rem;
+    width: $size-3;
+  }
+
+  &__unit {
+    color: var(--color-metric-unit);
+    font-size: 3.5rem;
+  }
+
+  &__sub-text {
+    color: var(--color-metric-unit);
+    font-weight: bold;
+  }
+
+  &__text {
+    color: var(--color-text);
   }
 }
