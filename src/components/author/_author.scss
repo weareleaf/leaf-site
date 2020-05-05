@@ -1,0 +1,32 @@
+.author {
+  align-items: center;
+  display: flex;
+
+  &__media {
+    display: block;
+
+    img {
+      border-radius: $border-radius-full;
+      display: block;
+      height: $size-4;
+      width: $size-4;
+    }
+  }
+
+  &__content {
+    margin-left: $spacing-2;
+  }
+
+  &__name {
+    color: grey;
+    font-size: $font-size-sm;
+    margin-bottom: 0;
+  }
+
+  &__details {
+    color: grey;
+    font-size: $font-size-xs;
+    line-height: 1;
+    margin: $spacing-1 0 0;
+  }
+}
