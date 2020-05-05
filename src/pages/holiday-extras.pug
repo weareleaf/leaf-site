@@ -21,7 +21,7 @@ block pageComponents
     heroSubheading: heroSubheading,
   })
 
-  .section
+  section.section
     .container
       figure.case-study-intro-image
         img(src="/assets/images/case-studies/hx/image-1.png" alt="Holiday Extras Travel Insurance wireframes" onerror="this.onerror=null; this.src='/assets/images/case-studies/hx/image-1.jpg'")
@@ -194,41 +194,57 @@ block pageComponents
 
         figure.hx-image-8
           img(src="/assets/images/case-studies/hx/image-8.png" alt="Personalised Icons")
-  .section
+
+  section.section
     .container
       +content-block({
         contentBlockItems: [
           {
-            contentHeading: "Show a price as early as possible ",
-            contentIntro: "With so many insurance providers to choose from, you’d better make sure you give your users a reason to hang about.",
+            contentHeading: "Not everybody needs to see everything",
+            contentIntro: "Your booking flow shouldn't feel intimidating to all of your customers to meet the needs of a small minority.",
             contentParagraphs: [
               {
-                contentText: "In the very first step, a range of personal information was previously being asked for each traveller, even though date-of-births were the only details needed to calculate a price. Other than first-names, which made it easier to gather the remaining details later, we deferred the remaining questions until later on, radically reducing the time required to see a price."
+                contentText: "Previously, every customer was offered every upgrade, although our research showed that just four of the options were commonly asked about through the Call Centre. We radically simplified the comparison of available tiers by including only these four benefits, but made the full breakdown available for those who wanted to see more."
+              }
+            ]
+          },
+          {
+            contentHeading: "Write inclusively by cutting the jargon",
+            contentIntro: "It shouldn’t take a law degree for your potential customers to understand whether or not the policy is a good fit for them.",
+            contentParagraphs: [
+              {
+                contentText: "We worked closely with the Holiday Extras compliance team to simplify their explanation of a pre-existing medical condition, while still meeting their legal requirements. A full description remained available, but the majority benefitted from a jargon-free list of illnesses and ailments."
               }
             ]
           }
         ],
         contentBlockImage: {
-          src: "/assets/images/case-studies/hx/image-7.png",
+          src: "/assets/images/case-studies/hx/image-9.png",
           alt: "Personal Details"
         },
-        contentBlockModifier: "reverse"
+        contentBlockModifier: "reverse",
+        contentBlockImageModifier: "hx-image-9"
       })
 
-      //-
-        +metrics({
-          metricsHeading: "user testing",
-          metricItems: [
-            {
-              metricsUnit: "233%",
-              metricsSubText: "quicker to see a price",
-              metricsText: "It took users an average of 1 min and 24 secs to see their price, compared to 3 mins and 16 secs in the previous version."
-            },
-            {
-              metricsUnit: "74",
-              metricsSubText: "few interactions to see a price",
-              metricsText: "Users tapped their screen an average of 68 times before they saw their price, compared to 142 times in the previous version."
-            },
-          ]
+  section.section
+    .container
+      .hx-outcome
+        .hx-outcome__content
+          +metrics({
+            metricsHeading: "user testing",
+            metricItems: [
+              {
+                metricsUnit: "233%",
+                metricsSubText: "quicker to see a price",
+                metricsText: "It took users an average of 1 min and 24 secs to see their price, compared to 3 mins and 16 secs in the previous version."
+              },
+              {
+                metricsUnit: "74",
+                metricsSubText: "few interactions to see a price",
+                metricsText: "Users tapped their screen an average of 68 times before they saw their price, compared to 142 times in the previous version."
+              },
+            ]
         })
+        .hx-outcome__prototype
+          iframe(src='https://marvelapp.com/c41974?emb=1', width='330', height='640', frameborder='0', allowtransparency='true') 
 

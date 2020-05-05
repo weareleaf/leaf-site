@@ -108,7 +108,8 @@ main {
 .section {
   &--centered-content {
     background-color: #6F43B9;
-    margin-bottom: $spacing-14;
+    margin-bottom: $spacing-15;
+    margin-top: -12rem;
     padding: 8rem 0;
     position: relative;
     z-index: -1;
@@ -120,9 +121,18 @@ main {
 }
 
 .hx-image-8 {
+  bottom: -14rem;
   left: 0;
   margin: 12rem auto 0 auto;
-  max-width: 60%;
+  max-width: 34rem;
   position: absolute;
   right: 0;
+}
+
+.hx-outcome {
+  display: grid;
+
+  @media screen and (min-width: map-get($breakpoints, 'breakpoint-3')) {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
