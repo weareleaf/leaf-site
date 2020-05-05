@@ -191,7 +191,6 @@ block pageComponents
                 }
               ]
             })
-
         figure.hx-image-8
           img(src="/assets/images/case-studies/hx/image-8.png" alt="Personalised Icons")
 
@@ -230,6 +229,16 @@ block pageComponents
     .container
       .hx-outcome
         .hx-outcome__content
+          h2.content-block__heading The outcome
+          +content({
+              contentHeading: "Radically faster quotes",
+              contentIntro: "The changes made meant we were able to provide an insurance quote in a fraction of time it had taken previously.",
+              contentParagraphs: [
+                {
+                  contentText: "Changes to how a pre-existing medical condition was described meant test users were able to understand and answer whether or not they had one more than a minutw quicker than had been the case before."
+                }
+              ]
+            })
           +metrics({
             metricsHeading: "user testing",
             metricItems: [
@@ -244,7 +253,17 @@ block pageComponents
                 metricsText: "Users tapped their screen an average of 68 times before they saw their price, compared to 142 times in the previous version."
               },
             ]
-        })
+          })
+          +content({
+            contentHeading: "Small and continuous improvements",
+            contentIntro: "As was the intention, the new content and structure of the process will gradually be integrated into the booking flow.",
+            contentParagraphs: [
+              {
+                contentText: "The engineering team at Holiday Extras have started introducing a number of elements of our prototype into the live booking flow, and we look forward to seeing further progress over the coming months."
+              }
+            ]
+          })
         .hx-outcome__prototype
-          iframe(src='https://marvelapp.com/c41974?emb=1', width='330', height='640', frameborder='0', allowtransparency='true') 
+          .hx-outcome__main-prototype
+            iframe(src='https://marvelapp.com/c41974?emb=1', width='427', height='883', frameborder='0', allowtransparency='true') 
 

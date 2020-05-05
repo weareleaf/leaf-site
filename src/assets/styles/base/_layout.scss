@@ -131,8 +131,18 @@ main {
 
 .hx-outcome {
   display: grid;
+  margin-top: $spacing-14;
 
   @media screen and (min-width: map-get($breakpoints, 'breakpoint-3')) {
     grid-template-columns: repeat(2, 1fr);
+  }
+
+  &__prototype {
+    position: relative;
+  }
+
+  &__main-prototype {
+    right: 0;
+    position: absolute;
   }
 }
