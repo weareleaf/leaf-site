@@ -93,6 +93,8 @@ main {
   }
 }
 
+// Holiday Extras
+
 .hx-details {
   display: grid;
   grid-template-columns: 1fr 38rem;
@@ -106,8 +108,21 @@ main {
 .section {
   &--centered-content {
     background-color: #6F43B9;
-    padding: 12rem;
+    margin-bottom: $spacing-14;
+    padding: 8rem 0;
     position: relative;
     z-index: -1;
+
+    @media screen and (min-width: map-get($breakpoints, 'breakpoint-4')) {
+      padding: 12rem;
+    }
   }
+}
+
+.hx-image-8 {
+  left: 0;
+  margin: 12rem auto 0 auto;
+  max-width: 60%;
+  position: absolute;
+  right: 0;
 }

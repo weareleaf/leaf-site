@@ -2,11 +2,8 @@
   display: grid;
   grid-gap: 5rem;
   grid-template-columns: repeat(2, 1fr);
+  margin-bottom: $spacing-13;
   min-height: $size-11;
-
-  &:not(:last-child) {
-    margin-bottom: $spacing-13;
-  }
 
   &__list-item {
     &:not(:last-child) {

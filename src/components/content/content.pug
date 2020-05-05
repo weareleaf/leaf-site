@@ -4,7 +4,7 @@ mixin content(c)
       h2.content__heading-2= c.contentHeading
       p.content__intro= c.contentIntro
       each item in c.contentParagraphs
-        p.content__text= item.contentParagraphs
+        p.content__text= item.contentText
     else
       h3.content__heading-3= c.contentHeading
       p.content__intro= c.contentIntro

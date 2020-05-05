@@ -21,9 +21,6 @@ block pageComponents
     heroSubheading: heroSubheading,
   })
 
-  .section.section--sm-spacing
-    .container
-
   .section
     .container
       figure.case-study-intro-image
@@ -194,6 +191,29 @@ block pageComponents
                 }
               ]
             })
+
+        figure.hx-image-8
+          img(src="/assets/images/case-studies/hx/image-8.png" alt="Personalised Icons")
+  .section
+    .container
+      +content-block({
+        contentBlockItems: [
+          {
+            contentHeading: "Show a price as early as possible ",
+            contentIntro: "With so many insurance providers to choose from, you’d better make sure you give your users a reason to hang about.",
+            contentParagraphs: [
+              {
+                contentText: "In the very first step, a range of personal information was previously being asked for each traveller, even though date-of-births were the only details needed to calculate a price. Other than first-names, which made it easier to gather the remaining details later, we deferred the remaining questions until later on, radically reducing the time required to see a price."
+              }
+            ]
+          }
+        ],
+        contentBlockImage: {
+          src: "/assets/images/case-studies/hx/image-7.png",
+          alt: "Personal Details"
+        },
+        contentBlockModifier: "reverse"
+      })
 
       //-
         +metrics({
