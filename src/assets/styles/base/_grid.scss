@@ -107,4 +107,9 @@
       grid-template-columns: 1fr 1fr 1fr;
     }
   }
+
+  &--center-text {
+    max-width: 29rem;
+    margin: 0 auto;
+  }
 }

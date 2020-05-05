@@ -178,23 +178,22 @@ block pageComponents
         contentBlockModifier: "reverse"
       })
 
-      section.section.section--longform
-    .container
-      .grid.grid--center
-        .grid__item
-
-          +content({
-            contentHeading: "Personalise the experience",
-            contentIntro: "It’s no longer enough to create one-size fits all products, and the entire experience should be tailored for each individual.",
-            contentParagraphs: [
-              {
-                contentText: "We were able to offer users highly relevant upgrades by allowing them to tell us more about their trip. By making this step optional, the majority can continue without interacting at all, and those that do have additional requirements will only see upgrades that meet their needs."
-              },
-              {
-                contentText: "When a couple are travelling, and both have Mr and Mrs selected as their titles, the second traveller will be asked whether they share a surname (we apply the same logic to families too). By asking the user if this is the case, rather than assuming it to be so, the action feels useful and thoughtful rather than rude and presumptuous."
-              }
-            ]
-          })
+    .section.section--centered-content
+      .container
+        .grid.grid--center-text
+          .grid__item
+            +content({
+              contentHeading: "Personalise the experience",
+              contentIntro: "It’s no longer enough to create one-size fits all products, and the entire experience should be tailored for each individual.",
+              contentParagraphs: [
+                {
+                  contentText: "We were able to offer users highly relevant upgrades by allowing them to tell us more about their trip. By making this step optional, the majority can continue without interacting at all, and those that do have additional requirements will only see upgrades that meet their needs."
+                },
+                {
+                  contentText: "When a couple are travelling, and both have Mr and Mrs selected as their titles, the second traveller will be asked whether they share a surname (we apply the same logic to families too). By asking the user if this is the case, rather than assuming it to be so, the action feels useful and thoughtful rather than rude and presumptuous."
+                }
+              ]
+            })
 
       //-
         +metrics({

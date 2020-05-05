@@ -102,3 +102,12 @@ main {
     position: relative;
   }
 }
+
+.section {
+  &--centered-content {
+    background-color: #6F43B9;
+    padding: 12rem;
+    position: relative;
+    z-index: -1;
+  }
+}
