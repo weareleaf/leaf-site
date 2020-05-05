@@ -2,6 +2,7 @@
   display: grid;
   grid-gap: 5rem;
   grid-template-columns: repeat(2, 1fr);
+  min-height: 30rem;
 
   &:not(:last-child) {
     margin-bottom: $spacing-13;
@@ -13,18 +14,29 @@
     }
   }
 
+  &__content {
+    align-self: center;
+  }
+
   &__media {
     position: relative;
   }
 
   &__image {
+    bottom: 0;
+    margin: auto;
     position: absolute;
+    top: 0;
 
     &--image-2 {
       box-shadow: 0px 0px 0px .6rem var(--color-background);
       right: 1.25rem;
-      top: -2.5rem;
+      top: 14rem;
       width: 70%;
+    }
+
+    &--image-4 {
+      max-width: 125%;
     }
   }
 
