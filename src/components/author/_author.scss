@@ -8,8 +8,9 @@
     img {
       border-radius: $border-radius-full;
       display: block;
-      height: $size-4;
-      width: $size-4;
+      height: $size-5;
+      object-fit: cover;
+      width: $size-5;
     }
   }
 
@@ -18,13 +19,13 @@
   }
 
   &__name {
-    color: grey;
+    color: var(--color-author-name);
     font-size: $font-size-sm;
     margin-bottom: 0;
   }
 
   &__details {
-    color: grey;
+    color: var(--color-author-details);
     font-size: $font-size-xs;
     line-height: 1;
     margin: $spacing-1 0 0;

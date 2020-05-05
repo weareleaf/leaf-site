@@ -61,6 +61,10 @@ html {
   --color-metric-unit: #{$color-smoke};
   --detail-heading: #{$holiday-extras-gold};
   --color-detail-text: #{$color-white};
+  --color-testimonial-q: hsl(263, 47, 29);
+  --color-testimonial-blockquote: #{$color-smoke};
+  --color-author-name: #{$color-smoke};
+  --color-author-details: #{$holiday-extras-purple-1};
 }
 
 body {

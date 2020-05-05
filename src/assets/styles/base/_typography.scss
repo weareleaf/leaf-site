@@ -239,7 +239,7 @@ img {
   }
 }
 
-blockquote {
+blockquote.blog-blockquote {
   margin: $spacing-7 auto;
   padding: $spacing-3 0 $spacing-3 $spacing-7;
   position: relative;
@@ -255,7 +255,7 @@ blockquote {
     width: 100%;
   }
 
-  q {
+  q.main-blockquote {
     color: $color-eggplant;
     display: block;
     font-family: $font-family-sans-serif-light;

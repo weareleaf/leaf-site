@@ -1,8 +1,7 @@
 mixin testimonial(c)
   .testimonial
-    .testimionial__quote
-      blockquote
-        q= c.testimonialBlockQuote
+    blockquote
+      q= c.testimonialBlockQuote
     +author({
       class: c.author.class,
       authorName: c.author.authorName,
