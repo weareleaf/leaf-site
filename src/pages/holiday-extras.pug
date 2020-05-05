@@ -26,8 +26,8 @@ block pageComponents
 
   .section
     .container
-      figure
-        img.case-study-image(src="/assets/images/case-studies/hx/image-1.png" alt="Holiday Extras Travel Insurance wireframes" onerror="this.onerror=null; this.src='/assets/images/case-studies/hx/image-1.jpg'")
+      figure.case-study-intro-image
+        img(src="/assets/images/case-studies/hx/image-1.png" alt="Holiday Extras Travel Insurance wireframes" onerror="this.onerror=null; this.src='/assets/images/case-studies/hx/image-1.jpg'")
     
       .content-group
         .content-group__items
@@ -45,7 +45,7 @@ block pageComponents
               alt: "Customer Service Rep"
             },
             contentBlockModifier: "reverse",
-            contentBlockImageModifier: "image-2"
+            contentBlockImageModifier: "hx-image-2"
           })
 
           .hx-details
@@ -105,7 +105,7 @@ block pageComponents
           src: "/assets/images/case-studies/hx/image-4.png",
           alt: "Choose A Destination"
         },
-        contentBlockImageModifier: "image-4"
+        contentBlockImageModifier: "hx-image-4"
       })
 
       +content-block({
@@ -120,7 +120,8 @@ block pageComponents
           src: "/assets/images/case-studies/hx/image-5.png",
           alt: "Progress Tracker"
         },
-        contentBlockModifier: "reverse"
+        contentBlockModifier: "reverse",
+        contentBlockImageModifier: "hx-image-5"
       })
 
       +content-block({
@@ -134,7 +135,8 @@ block pageComponents
         contentBlockImage: {
           src: "/assets/images/case-studies/hx/image-6.png",
           alt: "Iconography"
-        }
+        },
+        contentBlockImageModifier: "hx-image-6"
       })
 
       +content-block({

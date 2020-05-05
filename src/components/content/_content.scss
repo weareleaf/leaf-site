@@ -6,20 +6,21 @@
 
   &__heading-3 {
     color: var(--color-heading-3);
-    font-size: 1.5rem;
+    font-size: 1.6rem;
     margin-bottom: $spacing-3;
   }
 
   &__intro {
     color: var(--color-intro-text);
-    font-size: $root-font-size;
-    font-family: $font-family-sans-serif-medium;
+    font-size: 1.1rem;
+    font-family: $font-family-sans-serif-regular;
     line-height: 1.6;
-    margin-bottom: $spacing-5;
+    margin-bottom: $spacing-6;
   }
 
   &__text {
     color: var(--color-text);
+    line-height: 1.7;
     margin-bottom: 0;
   }
 }
