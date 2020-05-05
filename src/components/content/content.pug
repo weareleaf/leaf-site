@@ -3,9 +3,11 @@ mixin content(c)
     if c.contentHeading2 === true
       h2.content__heading-2= c.contentHeading
       p.content__intro= c.contentIntro
-      p.content__text= c.contentText
+      each item in c.contentParagraphs
+        p.content__text= item.contentParagraphs
     else
       h3.content__heading-3= c.contentHeading
       p.content__intro= c.contentIntro
-      p.content__text= c.contentText
+      each item in c.contentParagraphs
+        p.content__text= item.contentText
   

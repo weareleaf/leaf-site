@@ -37,7 +37,11 @@ block pageComponents
                 contentHeading2: true,
                 contentHeading: "The challenge",
                 contentIntro: "Having worked together previously, Holiday Extras asked us to help them improve their travel insurance booking flow.",
-                contentText: "We were tasked with creating an experience comparable to their award-winning call centre. Their staff are friendly, helpful, and able to shield the customer from the inherent complexity of insurance, and they wanted an online booking flow that was equally unintimidating."
+                contentParagraphs: [
+                  {
+                    contentText: "We were tasked with creating an experience comparable to their award-winning call centre. Their staff are friendly, helpful, and able to shield the customer from the inherent complexity of insurance, and they wanted an online booking flow that was equally unintimidating."
+                  }
+                ]
               }
             ],
             contentBlockImage: {
@@ -93,12 +97,20 @@ block pageComponents
           {
             contentHeading: "Improve iteratively",
             contentIntro: 'Although this was a "reimagination", changes would be made iteratively by building on the existing online booking process.',
-            contentText: "Any recommendations we made would need to be work both in isolation and as part of the current system. Where possible, we reused existing elements, minimising the friction as sections of our work were introduced."
+            contentParagraphs: [
+              {
+                contentText: "Any recommendations we made would need to be work both in isolation and as part of the current system. Where possible, we reused existing elements, minimising the friction as sections of our work were introduced."
+              }
+            ]
           },
           {
             contentHeading: "Be guided by the numbers",
             contentIntro: "While reviewing the previous 12 months of policies, we found that most people were going to the same handful of places.",
-            contentText: "By suggesting these popular destinations, 4 out of 5 travellers would be able to select a location in a single interaction, with the remaining destinations available through an autocompleting search field."
+            contentParagraphs: [
+              {
+                contentText: "By suggesting these popular destinations, 4 out of 5 travellers would be able to select a location in a single interaction, with the remaining destinations available through an autocompleting search field."
+              }
+            ]
           }
         ],
         contentBlockImage: {
@@ -113,7 +125,11 @@ block pageComponents
           {
             contentHeading: "Be clear about effort and progress",
             contentIntro: "People are more likely to give up on a task when they’re unsure how far away they are from completing it.",
-            contentText: "We intoduced a progress tracker to help set expections, showing users how much effort is needed as they move through the process. The tracker also makes it simple to navigate between sections, removing an existing pain-point for those who need to go back to a previous step."
+            contentParagraphs: [
+              {
+                contentText: "We intoduced a progress tracker to help set expections, showing users how much effort is needed as they move through the process. The tracker also makes it simple to navigate between sections, removing an existing pain-point for those who need to go back to a previous step."
+              }
+            ]
           }
         ],
         contentBlockImage: {
@@ -129,7 +145,11 @@ block pageComponents
           {
             contentHeading: "Help people progress quickly",
             contentIntro: "Truly great online experiences accommodate inherent human behaviours, rather than forcing new ones.",
-            contentText: "We used iconography throughout the process to help users to more easily distinguish between various choices. People tend to scan Web pages rather than read them word-for-word, and can interpret images much faster than words, making icons the ideal visual parter to a text description. "
+            contentParagraphs: [
+              {
+                contentText: "We used iconography throughout the process to help users to more easily distinguish between various choices. People tend to scan Web pages rather than read them word-for-word, and can interpret images much faster than words, making icons the ideal visual parter to a text description."
+              }
+            ]
           }
         ],
         contentBlockImage: {
@@ -144,7 +164,11 @@ block pageComponents
           {
             contentHeading: "Show a price as early as possible ",
             contentIntro: "With so many insurance providers to choose from, you’d better make sure you give your users a reason to hang about.",
-            contentText: "In the very first step, a range of personal information was previously being asked for each traveller, even though date-of-births were the only details needed to calculate a price. Other than first-names, which made it easier to gather the remaining details later, we deferred the remaining questions until later on, radically reducing the time required to see a price."
+            contentParagraphs: [
+              {
+                contentText: "In the very first step, a range of personal information was previously being asked for each traveller, even though date-of-births were the only details needed to calculate a price. Other than first-names, which made it easier to gather the remaining details later, we deferred the remaining questions until later on, radically reducing the time required to see a price."
+              }
+            ]
           }
         ],
         contentBlockImage: {
@@ -154,19 +178,38 @@ block pageComponents
         contentBlockModifier: "reverse"
       })
 
-      +metrics({
-        metricsHeading: "user testing",
-        metricItems: [
-          {
-            metricsUnit: "233%",
-            metricsSubText: "quicker to see a price",
-            metricsText: "It took users an average of 1 min and 24 secs to see their price, compared to 3 mins and 16 secs in the previous version."
-          },
-          {
-            metricsUnit: "74",
-            metricsSubText: "few interactions to see a price",
-            metricsText: "Users tapped their screen an average of 68 times before they saw their price, compared to 142 times in the previous version."
-          },
-        ]
-      })
+      section.section.section--longform
+    .container
+      .grid.grid--center
+        .grid__item
+
+          +content({
+            contentHeading: "Personalise the experience",
+            contentIntro: "It’s no longer enough to create one-size fits all products, and the entire experience should be tailored for each individual.",
+            contentParagraphs: [
+              {
+                contentText: "We were able to offer users highly relevant upgrades by allowing them to tell us more about their trip. By making this step optional, the majority can continue without interacting at all, and those that do have additional requirements will only see upgrades that meet their needs."
+              },
+              {
+                contentText: "When a couple are travelling, and both have Mr and Mrs selected as their titles, the second traveller will be asked whether they share a surname (we apply the same logic to families too). By asking the user if this is the case, rather than assuming it to be so, the action feels useful and thoughtful rather than rude and presumptuous."
+              }
+            ]
+          })
+
+      //-
+        +metrics({
+          metricsHeading: "user testing",
+          metricItems: [
+            {
+              metricsUnit: "233%",
+              metricsSubText: "quicker to see a price",
+              metricsText: "It took users an average of 1 min and 24 secs to see their price, compared to 3 mins and 16 secs in the previous version."
+            },
+            {
+              metricsUnit: "74",
+              metricsSubText: "few interactions to see a price",
+              metricsText: "Users tapped their screen an average of 68 times before they saw their price, compared to 142 times in the previous version."
+            },
+          ]
+        })
 

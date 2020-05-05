@@ -22,5 +22,9 @@
     color: var(--color-text);
     line-height: 1.7;
     margin-bottom: 0;
+
+    &:last-of-type {
+      margin-top: $spacing-6;
+    }
   }
 }
