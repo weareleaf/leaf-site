@@ -89,7 +89,7 @@ main {
   align-items: center;
   display: flex;
   justify-content: center;
-  margin-bottom: $spacing-9;
+  margin-bottom: $spacing-8;
 
   &__items {
     @media screen and (min-width: map-get($breakpoints, 'breakpoint-4')) {
@@ -141,6 +141,22 @@ main {
       margin-top: -12rem;
       padding: 12rem;
     }
+
+    .bg-shape {
+      max-width: 75%;
+      position: absolute;
+
+      &--1 {
+        right: -20rem;
+        top: -30rem;
+      }
+
+      &--2 {
+        left: -20rem;
+        top: 10rem;
+        transform: rotate(180deg);
+      }
+    }
   }
 }
 
@@ -179,7 +195,12 @@ main {
   }
 
   &__prototype {
-    position: relative;
+    display: none;
+
+    @media screen and (min-width: map-get($breakpoints, 'breakpoint-4')) {
+      display: block;
+      position: relative;
+    }
   }
 
   &__main-prototype {
