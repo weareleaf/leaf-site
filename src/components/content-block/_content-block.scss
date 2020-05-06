@@ -3,8 +3,8 @@
   margin-bottom: $spacing-9;
   width: 100%;
 
-  @media screen and (min-width: map-get($breakpoints, 'breakpoint-2')) {
-    width: 40rem;
+  @media screen and (min-width: map-get($breakpoints, 'breakpoint-3')) {
+    padding: 0 6rem;
   }
 
   @media screen and (min-width: map-get($breakpoints, 'breakpoint-4')) {
@@ -13,6 +13,7 @@
     grid-template-columns: repeat(2, 1fr);
     margin-bottom: $spacing-13;
     min-height: $size-11;
+    padding: 0;
     width: 100%;
   }
 
@@ -31,10 +32,14 @@
   }
 
   &__image {
-    bottom: 0;
-    margin: auto;
-    position: absolute;
-    top: 0;
+    position: relative;
+
+    @media screen and (min-width: map-get($breakpoints, 'breakpoint-4')) {
+      bottom: 0;
+      margin: auto;
+      position: absolute;
+      top: 0;
+    }
 
     // Holiday Extras
 
@@ -85,6 +90,10 @@
   &__heading {
     color: var(--color-heading-2);
     font-size: 2.2rem;
-    margin-bottom: $spacing-8;
+    margin-bottom: $spacing-6;
+
+    @media screen and (min-width: map-get($breakpoints, 'breakpoint-4')) {
+      margin-bottom: $spacing-8;
+    }
   }
 }

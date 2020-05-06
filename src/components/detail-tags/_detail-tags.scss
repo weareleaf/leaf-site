@@ -4,10 +4,6 @@
   position: relative;
   width: 100%;
 
-  @media screen and (min-width: map-get($breakpoints, 'breakpoint-2')) {
-    width: 30rem;
-  }
-
   @media screen and (min-width: map-get($breakpoints, 'breakpoint-4')) {
     bottom: $spacing-8;
     position: absolute;

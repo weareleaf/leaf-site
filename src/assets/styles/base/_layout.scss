@@ -106,10 +106,15 @@ main {
   display: grid;
   grid-row-gap: $spacing-6;
 
+  @media screen and (min-width: map-get($breakpoints, 'breakpoint-3')) {
+    padding: 0 6rem;
+  }
+
   @media screen and (min-width: map-get($breakpoints, 'breakpoint-4')) {
     grid-gap: 0;
     grid-template-columns: 1fr 38rem;
     margin-top: -14.5rem;
+    padding: 0;
   }
 
   &__tags {
