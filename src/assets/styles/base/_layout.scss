@@ -125,25 +125,41 @@ main {
 .section {
   &--centered-content {
     background-color: #6F43B9;
-    margin-bottom: $spacing-15;
-    margin-top: -12rem;
-    padding: 8rem 0;
+    margin-bottom: $spacing-6;
+    margin-top: -8rem;
+    padding: $spacing-10 0;
     position: relative;
     z-index: -1;
 
+    @media screen and (min-width: map-get($breakpoints, 'breakpoint-2')) {
+      margin-bottom: $spacing-9;
+      padding: $spacing-11 $spacing-10;
+    }
+
     @media screen and (min-width: map-get($breakpoints, 'breakpoint-4')) {
+      margin-bottom: $spacing-15;
+      margin-top: -12rem;
       padding: 12rem;
     }
   }
 }
 
 .hx-image-8 {
-  bottom: -14rem;
+  bottom: -6.5rem;
   left: 0;
-  margin: 12rem auto 0 auto;
-  max-width: 34rem;
+  margin: 12rem $spacing-6 0 $spacing-6;
   position: absolute;
   right: 0;
+
+  @media screen and (min-width: map-get($breakpoints, 'breakpoint-2')) {
+    bottom: -9rem;
+    margin: 12rem auto 0 auto;
+    max-width: 34rem;
+  }
+
+  @media screen and (min-width: map-get($breakpoints, 'breakpoint-4')) {
+    bottom: -14rem;
+  }
 }
 
 .hx-outcome {

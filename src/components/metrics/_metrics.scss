@@ -15,6 +15,7 @@
 
   &__item {
     align-items: center;
+    border-bottom: $border-style $border-width-base var(--color-metric-border);
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -22,7 +23,11 @@
     position: relative;
 
     &:first-child {
-      border-right: $border-style $border-width-base var(--color-metric-border);
+
+      @media screen and (min-width: map-get($breakpoints, 'breakpoint-2')) {
+        border-bottom: none;
+        border-right: $border-style $border-width-base var(--color-metric-border);
+      }
     }
   }
 
@@ -31,7 +36,10 @@
     border: $border-style $border-width-base var(--color-metric-border);
     border-radius: $border-radius-lg;
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+
+    @media screen and (min-width: map-get($breakpoints, 'breakpoint-2')) {
+      grid-template-columns: repeat(2, 1fr);
+    }
   }
 
   &__icon {
@@ -55,6 +63,7 @@
 
   &__sub-text {
     color: var(--color-metric-unit);
+    font-size: $font-size-xs;
     font-weight: bold;
     margin-top: -1rem;
   }

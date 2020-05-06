@@ -109,7 +109,10 @@
   }
 
   &--center-text {
-    max-width: 29rem;
-    margin: 0 auto;
+
+    @media screen and (min-width: map-get($breakpoints, 'breakpoint-4')) {
+      max-width: 29rem;
+      margin: 0 auto;
+    }
   }
 }
