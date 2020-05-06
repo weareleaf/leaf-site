@@ -1,28 +1,32 @@
-blockquote {
-  background: #f9f9f9;
-  border-left: 10px solid #ccc;
-  margin: 1.5em 10px;
-  padding: 0.5em 10px;
-  quotes: "\201C""\201D""\2018""\2019";
+.testimonial {
+  position: relative;
 
-  q {
-    color: red;
-    display: block;
-    font-family: $font-family-sans-serif-light;
-    font-size: $font-size-lg;
-    line-height: $quote-line-height;
-    margin-bottom: $spacing-3;
-    width: 100%;
+  &__quote {
+    margin: $spacing-8 0 $spacing-6 0;
+
+    &::before {
+      color: var(--color-testimonial-quotation);
+      content: "\201c";
+      font-family: $font-family-sans-serif-extrabold;
+      font-size: 14rem;
+      left: -2rem;
+      position: absolute;
+      top: -5rem;
+      z-index: -1;
+    }
   }
-}
-blockquote:before {
-  color: #ccc;
-  content: open-quote;
-  font-size: 4em;
-  line-height: 0.1em;
-  margin-right: 0.25em;
-  vertical-align: -0.4em;
-}
-blockquote p {
-  display: inline;
+  
+  &__quote-main {
+    color: var(--color-testimonial-blockquote);
+    display: block;
+    font-family: $font-family-sans-serif-regular;
+    font-size: 1.2rem;
+    line-height: $quote-line-height;
+    width: 100%;
+
+    &::before,
+    &::after {
+      content: none;
+    }
+  }
 }

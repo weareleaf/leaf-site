@@ -15,18 +15,18 @@
   }
 
   &__content {
-    margin-left: $spacing-2;
+    margin-left: $spacing-5;
   }
 
   &__name {
     color: var(--color-author-name);
-    font-size: $font-size-sm;
-    margin-bottom: 0;
+    font-size: $font-size-xs;
+    margin-bottom: .2rem;
   }
 
   &__details {
     color: var(--color-author-details);
-    font-size: $font-size-xs;
+    font-size: .7rem;
     line-height: 1;
     margin: $spacing-1 0 0;
   }

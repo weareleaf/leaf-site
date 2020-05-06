@@ -78,7 +78,7 @@ main {
 // case study styles
 
 .case-study-intro-image {
-  margin-bottom: 0;
+  margin-bottom: $spacing-6;
 }
 
 .content-group {
@@ -98,7 +98,7 @@ main {
 .hx-details {
   display: grid;
   grid-template-columns: 1fr 38rem;
-  margin-top: -14rem;
+  margin-top: -14.5rem;
 
   &__tags {
     position: relative;
@@ -134,6 +134,7 @@ main {
   margin-top: $spacing-14;
 
   @media screen and (min-width: map-get($breakpoints, 'breakpoint-3')) {
+    grid-gap: 4rem;
     grid-template-columns: repeat(2, 1fr);
   }
 
@@ -144,5 +145,6 @@ main {
   &__main-prototype {
     right: 0;
     position: absolute;
+    top: 3rem;
   }
 }

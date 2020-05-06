@@ -25,24 +25,31 @@
     position: absolute;
     top: 0;
 
+    // Holiday Extras
+
     &--hx-image-2 {
       box-shadow: 0px 0px 0px .6rem var(--color-background);
       right: 1.25rem;
-      top: 14rem;
+      top: 12rem;
       max-width: 70%;
     }
 
     &--hx-image-4 {
+      left: 3.4rem;
       max-width: 125%;
     }
 
     &--hx-image-5 {
       max-width: 115%;
-      right: 1rem;
+      right: $spacing-7;
     }
 
     &--hx-image-6 {
       max-width: 120%;
+    }
+
+    &--hx-image-7 {
+      right: $spacing-5;
     }
 
     &--hx-image-9 {
