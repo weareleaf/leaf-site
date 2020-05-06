@@ -164,11 +164,18 @@ main {
 
 .hx-outcome {
   display: grid;
-  margin-top: $spacing-14;
+  margin-top: -1rem;
+
+  @media screen and (min-width: map-get($breakpoints, 'breakpoint-3')) {
+    margin-top: -2rem;
+    padding: 0 $spacing-10;
+  }
 
   @media screen and (min-width: map-get($breakpoints, 'breakpoint-4')) {
     grid-gap: 4rem;
     grid-template-columns: repeat(2, 1fr);
+    margin-top: $spacing-14;
+    padding: 0;
   }
 
   &__prototype {

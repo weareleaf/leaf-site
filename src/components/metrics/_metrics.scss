@@ -15,7 +15,6 @@
 
   &__item {
     align-items: center;
-    border-bottom: $border-style $border-width-base var(--color-metric-border);
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -23,8 +22,9 @@
     position: relative;
 
     &:first-child {
+      border-bottom: $border-style $border-width-base var(--color-metric-border);
 
-      @media screen and (min-width: map-get($breakpoints, 'breakpoint-2')) {
+      @media screen and (min-width: map-get($breakpoints, 'breakpoint-1')) {
         border-bottom: none;
         border-right: $border-style $border-width-base var(--color-metric-border);
       }
@@ -37,7 +37,7 @@
     border-radius: $border-radius-lg;
     display: grid;
 
-    @media screen and (min-width: map-get($breakpoints, 'breakpoint-2')) {
+    @media screen and (min-width: map-get($breakpoints, 'breakpoint-1')) {
       grid-template-columns: repeat(2, 1fr);
     }
   }
@@ -57,21 +57,34 @@
 
   &__unit {
     color: var(--color-metric-unit);
-    font-size: 2.8rem;
+    font-size: 2.2rem;
     letter-spacing: -.1rem;
+
+    @media screen and (min-width: map-get($breakpoints, 'breakpoint-5')) {
+      font-size: 2.8rem;
+    }
   }
 
   &__sub-text {
     color: var(--color-metric-unit);
     font-size: $font-size-xs;
     font-weight: bold;
-    margin-top: -1rem;
+    margin-top: -.75rem;
+
+    @media screen and (min-width: map-get($breakpoints, 'breakpoint-5')) {
+      margin-top: -1rem;
+    }
   }
 
   &__text {
     color: var(--color-text);
-    font-size: .6rem;
+    font-size: $font-size-xs;
     line-height: 1.3;
     margin-top: $spacing-3;
+    max-width: 100%;
+
+    @media screen and (min-width: map-get($breakpoints, 'breakpoint-5')) {
+      font-size: .6rem;
+    }
   }
 }

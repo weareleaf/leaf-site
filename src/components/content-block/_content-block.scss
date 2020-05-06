@@ -103,8 +103,17 @@
     }
 
     &--hx-image-9 {
-      max-width: 96%;
-      top: -5rem;
+      right: $spacing-5;
+
+      @media screen and (min-width: map-get($breakpoints, 'breakpoint-1')) {
+        right: $spacing-6;
+      } 
+      
+      @media screen and (min-width: map-get($breakpoints, 'breakpoint-4')) {
+        max-width: 96%;
+        right: 0;
+        top: -5rem;
+      } 
     }
   }
 

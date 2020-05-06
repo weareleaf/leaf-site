@@ -2,17 +2,27 @@
   position: relative;
 
   &__quote {
-    margin: $spacing-8 0 $spacing-6 0;
+    margin: $spacing-7 0 $spacing-5 0;
+
+    @media screen and (min-width: map-get($breakpoints, 'breakpoint-2')) {
+      margin: $spacing-8 0 $spacing-6 0;
+    }
 
     &::before {
       color: var(--color-testimonial-quotation);
       content: "\201c";
       font-family: $font-family-sans-serif-extrabold;
-      font-size: 14rem;
-      left: -2rem;
+      font-size: 12rem;
+      left: -.75rem;
       position: absolute;
-      top: -5rem;
+      top: -4.5rem;
       z-index: -1;
+
+      @media screen and (min-width: map-get($breakpoints, 'breakpoint-2')) {
+        font-size: 14rem;
+        left: -2rem;
+        top: -5rem;
+      }
     }
   }
   
@@ -20,9 +30,14 @@
     color: var(--color-testimonial-blockquote);
     display: block;
     font-family: $font-family-sans-serif-regular;
-    font-size: 1.2rem;
+    font-size: $root-font-size;
     line-height: $quote-line-height;
     width: 100%;
+
+    @media screen and (min-width: map-get($breakpoints, 'breakpoint-2')) {
+      font-size: 1.2rem;
+      line-height: 1.4;
+    }
 
     &::before,
     &::after {
