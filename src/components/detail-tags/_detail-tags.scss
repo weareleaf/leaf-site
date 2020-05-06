@@ -1,11 +1,20 @@
 .detail-tags {
-  bottom: $spacing-8;
   display: flex;
   flex-wrap: wrap;
-  justify-content: flex-end;
-  position: absolute;
-  right: $spacing-8;
-  width: 18rem;
+  position: relative;
+  width: 100%;
+
+  @media screen and (min-width: map-get($breakpoints, 'breakpoint-2')) {
+    width: 30rem;
+  }
+
+  @media screen and (min-width: map-get($breakpoints, 'breakpoint-4')) {
+    bottom: $spacing-8;
+    position: absolute;
+    justify-content: flex-end;
+    right: $spacing-8;
+    width: 18rem;
+  }
 
   &__heading {
     color: var(--detail-heading);

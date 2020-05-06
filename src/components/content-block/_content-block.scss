@@ -1,9 +1,20 @@
 .content-block {
-  display: grid;
-  grid-gap: 5rem;
-  grid-template-columns: repeat(2, 1fr);
-  margin-bottom: $spacing-13;
-  min-height: $size-11;
+  display: block;
+  margin-bottom: $spacing-9;
+  width: 100%;
+
+  @media screen and (min-width: map-get($breakpoints, 'breakpoint-2')) {
+    width: 40rem;
+  }
+
+  @media screen and (min-width: map-get($breakpoints, 'breakpoint-4')) {
+    display: grid;
+    grid-gap: 5rem;
+    grid-template-columns: repeat(2, 1fr);
+    margin-bottom: $spacing-13;
+    min-height: $size-11;
+    width: 100%;
+  }
 
   &__list-item {
     &:not(:last-child) {
@@ -28,10 +39,15 @@
     // Holiday Extras
 
     &--hx-image-2 {
-      box-shadow: 0px 0px 0px .6rem var(--color-background);
-      right: 1.25rem;
-      top: 12rem;
-      max-width: 70%;
+      display: none;
+
+      @media screen and (min-width: map-get($breakpoints, 'breakpoint-4')) {
+        box-shadow: 0px 0px 0px .6rem var(--color-background);
+        display: block;
+        right: 1.25rem;
+        top: 12rem;
+        max-width: 70%;
+      }
     }
 
     &--hx-image-4 {

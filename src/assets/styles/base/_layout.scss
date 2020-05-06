@@ -78,18 +78,25 @@ main {
 // case study styles
 
 .case-study-intro-image {
-  margin-bottom: $spacing-6;
+  margin-bottom: $spacing-10;
+
+  @media screen and (min-width: map-get($breakpoints, 'breakpoint-4')) {
+    margin-bottom: $spacing-6;
+  }
 }
 
 .content-group {
   align-items: center;
   display: flex;
   justify-content: center;
-  margin-bottom: $spacing-13;
+  margin-bottom: $spacing-9;
 
   &__items {
-    margin-left: -7.35rem;
-    max-width: 62rem;
+    @media screen and (min-width: map-get($breakpoints, 'breakpoint-4')) {
+      margin-bottom: $spacing-13;
+      margin-left: -7.35rem;
+      max-width: 62rem;
+    }
   }
 }
 
@@ -97,8 +104,13 @@ main {
 
 .hx-details {
   display: grid;
-  grid-template-columns: 1fr 38rem;
-  margin-top: -14.5rem;
+  grid-row-gap: $spacing-6;
+
+  @media screen and (min-width: map-get($breakpoints, 'breakpoint-4')) {
+    grid-gap: 0;
+    grid-template-columns: 1fr 38rem;
+    margin-top: -14.5rem;
+  }
 
   &__tags {
     position: relative;
@@ -133,7 +145,7 @@ main {
   display: grid;
   margin-top: $spacing-14;
 
-  @media screen and (min-width: map-get($breakpoints, 'breakpoint-3')) {
+  @media screen and (min-width: map-get($breakpoints, 'breakpoint-4')) {
     grid-gap: 4rem;
     grid-template-columns: repeat(2, 1fr);
   }
