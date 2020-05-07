@@ -1,4 +1,4 @@
-extends ../layouts/content.pug
+extends ../layouts/myrift.pug
 
 block prepend vars
   -var pageTitle = "RIFT Case Study | Specialist Data Capture Experts | Leaf"
@@ -6,89 +6,62 @@ block prepend vars
   -var metaTitle = "RIFT Case Study"
   -var metaDescription = "RIFT have helped win £153 million in tax refunds for their customers. We rethought their web platform, allowing users to submit and track their claims online."
 
+  -var heroHeading = "Making tax simple"
+  -var heroSubheading = "RIFT have helped Brits recoup more than £150m in tax refunds, and approached us to help simplify their online claim process."
+
 block pageComponents
   +banner({
     href: '/case-studies'
   })
 
-  .section.section--sm-spacing
-    .container
-      +intro({
-        introImage: {
-          src: "/assets/images/case-studies/rift/logo.svg",
-          alt: "MyRIFT",
-        },
-        introText: "RIFT have helped the public claim back £153,000,000 in tax refunds, and we were tasked with rethinking MyRIFT, a web-based platform allowing users to submit their claim online."
-      })
+  .banner-spacer
 
-      +details({
-        details: [
+  +hero({
+    heroHeading: heroHeading,
+    heroSubheading: heroSubheading,
+  })
+
+  section.section
+    figure.intro-image.intro-image--rift
+      img(src="/assets/images/case-studies/rift/image-1.png" alt="RIFT Components")
+
+    .container
+      +content-block({
+        introHeading: true,
+        contentBlockHeading: "Our approach",
+        contentBlockItems: [
           {
-            detailHeading: "Themes",
-            detailText: "Consultancy, product design"
+            contentHeading: "Uncover existing pain-points",
+            contentIntro: "Analytical software helps answer a range of questions, from how well an app is performing, to where users are struggling.",
+            contentParagraphs: [
+              {
+                contentText: "We added Mixpanel to both the RIFT website and MyRIFT application, helping us to understand existing user behaviours, and to establish a baseline conversion rates for qualifying and converting new leads."
+              }
+            ]
           },
           {
-            detailHeading: "Deliverables",
-            detailText: "Wireframes, prototypes, app"
-          },
-          {
-            detailHeading: "Technology",
-            detailText: "Ruby on Rails, JavaScript"
-          },
-          {
-            detailHeading: "Platform",
-            detailText: "Web"
+            contentHeading: "Understand the audience",
+            contentIntro: "Many of RIFT's customers were in the Armed Forces, where Internet speeds are often slow and mobile usage is common.",
+            contentParagraphs: [
+              {
+                contentText: "For MyRIFT to be considered a viable alternative to claiming through the RIFT Call Centre, we'd need the application to be optimised for small screens, and be reliable on even the slowest of network connections."
+              }
+            ]
           }
-        ]
+        ],
+        contentBlockImage: {
+          src: "/assets/images/case-studies/rift/image-3.png",
+          alt: "Analytical Sofware"
+        }
       })
-
-  .section
-    .container
-      figure
-        img(src="/assets/images/case-studies/rift/image-1.jpg" alt="MyRIFT wireframes showing how we proposed vehicle and workplace information capture, and presentation of a customers refund.")
-        figcaption Various mobile-first wireframes from the application
-
-      .grid.grid--two-thirds-reverse
+      .grid.grid--center-text
         .grid__item
-          +summary({
-            summaryHeading: "What is it?",
-            summaryText: "MyRIFT allows people in various industries to submit tax claims, allowing RIFT to claim on their behalf to HMRC."
+          +content({
+            contentHeading: "Move quickly and effectively",
+            contentIntro: "A combination of quick-fire sketches and wireframing help facilitate ideation and conversation in the most efficient way.",
+            contentParagraphs: [
+              {
+                contentText: "We relied heavily on low-fidelity prototypes in the early stages of our design exploration, helping us to quickly validate or discredit concepts, gain stakeholder buy-in, and ensure a single, shared vision."
+              }
+            ]
           })
-
-        .grid__item
-          h2 The challenge
-          p A confusing sign-up process and a lack of guidance through an unnecessarily complicated claim process meant MyRIFT was doing a poor job of converting leads into successful claims.
-          p We were brought in to help eligible claimants sign-up for the MyRIFT, lead them through the claims process itself, and increasing the quality of the information being captured.
-
-          h2 Our approach
-
-          h3 Uncover existing pain-points
-          p To supplement our stakeholder research, we added Mixpanel analytics to both the RIFT website and MyRIFT itself, helping us to both understand user behaviour and establish a baseline conversion rate for new leads.
-
-          h3 Understand the audience
-          p A large portion of RIFT's customer base work in the Armed Forces, where fast Internet speeds are poor and mobile usage high. For MyRIFT to be considered a viable alternative to a phone-based claim, we'd need the application be reliable even on the slowest of connections.
-
-          h3 Move quickly and effectively
-          p We relied heavily on prototypes in the early stages of our design exploration, helping us to quickly validate ideas, gain stakeholder buy-in, and ensure a single, shared vision.
-
-      figure
-        img(src="/assets/images/case-studies/rift/image-2.jpg" alt="The MyRIFT application dashboard shown on a desktop device, tablet device, and mobile device.")
-
-      .grid.grid--two-thirds
-        .grid__item
-
-          h3 Focus on the lowest hanging fruit
-          p We completely rebuilt the pre-registration process; a key failure point for users. An eligibility questionnaire, helping RIFT to pre-quality leads without human intervention, was greatly simplified, and an enquiry process replaced with a registration form, removing further manual involvement from RIFT's staff.
-
-          h3 Multi-document uploads
-          p To make a tax claim, customers have to upload a large number of documents, such as wage slips to prove their income and receipts to verify purchases. We created a multi-document upload system, allowing customers to upload any number of documents at once.
-
-          h3 Improve the quality of data captured
-          p Entering complicated or detailed information is inherently difficult on a handheld device, and small changes can make a big difference to both the quality and quantity of data captured.
-
-          p In MyRIFT, we made extensive use of powerful third-party <abbr title="Application Programming Interface">API</abbr> lookups to automatically make real-time suggestions as the user types. Along with the Google Maps <abbr title="Application Programming Interface">API</abbr> for capturing exact longitude and latitude values of a work location, we used further <abbr title="Application Programming Interface">API</abbr>s to look-up home addresses, employers, and vehicle details.
-
-          p We created a small database of banks to help customers tell us which account they’d like their refund paid into. As the user starts to type their bank name, MyRIFT makes real-time suggestions; for example, ‘The Co-operative Bank’ will be offered if a user starts typing ‘The Co-operative Bank', 'Co-op bank’, or even 'Britannia’, who they merged with in 2009.
-
-          h2 The outcome
-          p The pre-registation questionnaire and amended processes significantly improved conversion to registration, getting more and better qualified leads into the app. Such was the success our initial work with RIFT, we're continuing to work together well into 2020.

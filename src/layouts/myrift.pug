@@ -1,0 +1,12 @@
+extends ../base.pug
+
+block prepend vars
+  -var pageClass = "myrift"
+
+block pageContent
+  main(role="main")
+    block pageComponents
+
+  +footer({
+    footerNav: true
+  })

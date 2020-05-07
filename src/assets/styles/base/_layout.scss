@@ -77,13 +77,29 @@ main {
 
 // case study styles
 
-.case-study-intro-image {
-  margin-bottom: $spacing-10;
+.intro-image {
+  margin-bottom: $spacing-9;
 
   @media screen and (min-width: map-get($breakpoints, 'breakpoint-4')) {
     margin-bottom: $spacing-6;
   }
+
+  &--hx {
+    padding: 0 $spacing-6;
+
+    @media screen and (min-width: map-get($breakpoints, 'breakpoint-5')) {
+      margin-top: -2rem !important;
+      padding: 0 $spacing-11;
+    }
+  }
+
+  &--rift {
+    margin-top: -10rem !important;
+    padding: $spacing-8;
+  }
 }
+
+// Holiday Extras
 
 .content-group {
   align-items: center;
@@ -99,8 +115,6 @@ main {
     }
   }
 }
-
-// Holiday Extras
 
 .hx-details {
   display: grid;
