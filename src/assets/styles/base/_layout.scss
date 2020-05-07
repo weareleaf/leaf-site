@@ -109,16 +109,22 @@ main {
   }
 
   &--rift-5 {
-    max-width: 35%;
+    max-width: 34%;
     position: absolute;
     top: 54%;
     left: 22%;
 	  transform: translate(-50%, -50%);
   }
+
+  &--rift-6 {
+    position: absolute;
+    right: -18rem;
+    transform: scale(.9);
+  }
 }
 
 // Holiday Extras
-.content-group {
+.hx-challenge-section {
   align-items: center;
   display: flex;
   justify-content: center;
@@ -153,7 +159,7 @@ main {
   }
 }
 
-.centered-content {
+.hx-centered-content {
   background-color: #6F43B9;
   margin-bottom: $spacing-6;
   margin-top: -8rem;
@@ -240,7 +246,7 @@ main {
 }
 
 // RIFT
-.challenge-group {
+.rift-challenge {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
 
@@ -249,7 +255,7 @@ main {
     padding-right: 2.5rem;
   }
 }
-.metric-block {
+.rift-metrics {
   background-color: var(--color-metric-background);
   margin-bottom: $spacing-13;
   padding: $spacing-10 0;
@@ -264,4 +270,11 @@ main {
   &__content {
     align-self: center;
   }
+}
+
+.rift-documents-upload {
+  display: grid;
+  grid-column-gap: 4rem;
+  grid-template-columns: repeat(2, 1fr);
+  margin: $spacing-14 0;
 }

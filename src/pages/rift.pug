@@ -26,11 +26,11 @@ block pageComponents
       img(src="/assets/images/case-studies/rift/image-1.png" alt="RIFT Components")
 
     .container
-      .challenge-group
-        .challenge-group__image
+      .rift-challenge
+        .rift-challenge__image
           figure.image.image--rift-2
             img(src="/assets/images/case-studies/rift/image-2.png" alt="Happy Customers Showing Tax Returns")
-        .challenge-group__content
+        .rift-challenge__content
           +content({
             contentHeading2: true,
             contentHeading: "The challenge",
@@ -140,10 +140,10 @@ block pageComponents
       img(src="/assets/images/case-studies/rift/image-4.png" alt="Wireframe Prototypes")
   
   section.section
-    .metric-block
+    .rift-metrics
       .container
-        .metric-block__grid
-          .metric-block__image
+        .rift-metrics__grid
+          .rift-metrics__image
             figure.image.image--rift-5
               img(src="/assets/images/case-studies/rift/image-5.png" alt="Eligibility Questionaire")
           .metric-block__content
@@ -162,3 +162,26 @@ block pageComponents
               metricsText: "people checked their eligibility in Apirl 2020.",
               metricsModifier: "margin"
             })
+
+  section.section
+  .container
+    .rift-documents-upload
+      .rift-documents-upload__content
+        +content({
+          contentHeading: "Painless document uploads",
+          contentIntro: "To prove their income and outgoings, users have to provide a range of documents as part of their claim.",
+          contentParagraphs: [
+            {
+              contentText: "Claimants previously sent their files to a dedicated email address, meaning documents turned up in all sizes and formats, and the RIFT staff had to routinely manage the Inbox. We created a document upload system, allowing claimants to upload any number of wage slips or bank statements in a single action, and without any involvement from the RIFT team."
+            }
+          ]
+        })
+        +metrics({
+          metricsSimplified: true,
+          metricsTextBold: "1,000+",
+          metricsText: "files are now uploaded in MyRIFT each month.",
+          metricsModifier: "margin"
+        })
+      .rift-documents-upload__image
+        figure.image.image--rift-6
+          img(src="/assets/images/case-studies/rift/image-6.png" alt="Document Uploads")
