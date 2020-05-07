@@ -1,5 +1,5 @@
 mixin metrics(c)
-  .metrics
+  .metrics(class= c.metricsModifier ? "metrics--" + c.metricsModifier : "")
     if c.metricsSimplified === true
       .metrics__container
         .metrics__icon

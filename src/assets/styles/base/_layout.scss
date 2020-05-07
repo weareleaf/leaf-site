@@ -77,14 +77,14 @@ main {
 
 // case study styles
 
-.intro-image {
+.image {
   margin-bottom: $spacing-9;
 
   @media screen and (min-width: map-get($breakpoints, 'breakpoint-4')) {
     margin-bottom: $spacing-6;
   }
 
-  &--hx {
+  &--hx-1 {
     padding: 0 $spacing-6;
 
     @media screen and (min-width: map-get($breakpoints, 'breakpoint-5')) {
@@ -93,14 +93,26 @@ main {
     }
   }
 
-  &--rift {
+  &--rift-1 {
     margin-top: -10rem !important;
     padding: $spacing-8;
+  }
+
+  &--rift-2 {
+    margin-bottom: $spacing-15;
+    transform:scale(1.25);
+  }
+
+  &--rift-3 {
+    max-width: 35%;
+    position: absolute;
+    top: 54%;
+    left: 22%;
+	  transform: translate(-50%, -50%);
   }
 }
 
 // Holiday Extras
-
 .content-group {
   align-items: center;
   display: flex;
@@ -136,40 +148,38 @@ main {
   }
 }
 
-.section {
-  &--centered-content {
-    background-color: #6F43B9;
-    margin-bottom: $spacing-6;
-    margin-top: -8rem;
-    padding: $spacing-10 0;
-    position: relative;
-    z-index: -1;
+.centered-content {
+  background-color: #6F43B9;
+  margin-bottom: $spacing-6;
+  margin-top: -8rem;
+  padding: $spacing-10 0;
+  position: relative;
+  z-index: -1;
 
-    @media screen and (min-width: map-get($breakpoints, 'breakpoint-2')) {
-      margin-bottom: $spacing-9;
-      padding: $spacing-11 $spacing-10;
+  @media screen and (min-width: map-get($breakpoints, 'breakpoint-2')) {
+    margin-bottom: $spacing-9;
+    padding: $spacing-11 $spacing-10;
+  }
+
+  @media screen and (min-width: map-get($breakpoints, 'breakpoint-4')) {
+    margin-bottom: $spacing-15;
+    margin-top: -12rem;
+    padding: 12rem;
+  }
+
+  .bg-shape {
+    max-width: 75%;
+    position: absolute;
+
+    &--1 {
+      right: -20rem;
+      top: -30rem;
     }
 
-    @media screen and (min-width: map-get($breakpoints, 'breakpoint-4')) {
-      margin-bottom: $spacing-15;
-      margin-top: -12rem;
-      padding: 12rem;
-    }
-
-    .bg-shape {
-      max-width: 75%;
-      position: absolute;
-
-      &--1 {
-        right: -20rem;
-        top: -30rem;
-      }
-
-      &--2 {
-        left: -20rem;
-        top: 10rem;
-        transform: rotate(180deg);
-      }
+    &--2 {
+      left: -20rem;
+      top: 10rem;
+      transform: rotate(180deg);
     }
   }
 }
@@ -221,5 +231,23 @@ main {
     right: 0;
     position: absolute;
     top: 3rem;
+  }
+}
+
+// RIFT
+.metric-block {
+  background-color: var(--color-metric-background);
+  margin-bottom: $spacing-13;
+  padding: $spacing-10 0;
+  position: relative;
+
+  &__grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    padding: 0 $spacing-7;
+  }
+
+  &__content {
+    align-self: center;
   }
 }

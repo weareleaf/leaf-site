@@ -1,6 +1,11 @@
 .metrics {
   margin: $spacing-8 0;
 
+  &--margin {
+    margin-bottom: 0;
+    margin-top: $spacing-5;
+  }
+
   p {
     margin-bottom: 0;
   }

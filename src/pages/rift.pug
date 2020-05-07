@@ -22,7 +22,7 @@ block pageComponents
   })
 
   section.section
-    figure.intro-image.intro-image--rift
+    figure.image.image--rift-1
       img(src="/assets/images/case-studies/rift/image-1.png" alt="RIFT Components")
 
     .container
@@ -65,9 +65,30 @@ block pageComponents
               }
             ]
           })
-      
-      +metrics({
-        metricsSimplified: true,
-        metricsTextBold: "14,600",
-        metricsText: "people checked their eligibility in Apirl 2020."
-      })
+
+    figure.image.image--rift-2
+      img(src="/assets/images/case-studies/rift/image-4.png" alt="Wireframe Prototypes")
+  
+  section.section
+    .metric-block
+      .container
+        .metric-block__grid
+          .metric-block__image
+            figure.image.image--rift-3
+              img(src="/assets/images/case-studies/rift/image-5.png" alt="Eligibility Questionaire")
+          .metric-block__content
+            +content({
+              contentHeading: "Focus on the lowest hanging fruit",
+              contentIntro: "Historical data highlighted the registration processes as a key point of failure in converting prospective claimants.",
+              contentParagraphs: [
+                {
+                  contentText: "A simple questionnaire helped us to quality leads without any form of human intervention, which had been a feature of the previous eligibility process. We also replaced an existing enquiry system with a more conventional registration form, creating a more conventional sign-up process, and further removing manual involvement from the RIFT team."
+                }
+              ]
+            })
+            +metrics({
+              metricsSimplified: true,
+              metricsTextBold: "14,600",
+              metricsText: "people checked their eligibility in Apirl 2020.",
+              metricsModifier: "margin"
+            })
