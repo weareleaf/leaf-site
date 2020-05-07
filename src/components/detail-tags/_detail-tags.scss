@@ -4,12 +4,14 @@
   position: relative;
   width: 100%;
 
-  @media screen and (min-width: map-get($breakpoints, 'breakpoint-4')) {
-    bottom: $spacing-8;
-    position: absolute;
-    justify-content: flex-end;
-    right: $spacing-8;
-    width: 18rem;
+  &--hx {
+    @media screen and (min-width: map-get($breakpoints, 'breakpoint-4')) {
+      bottom: $spacing-8;
+      position: absolute;
+      justify-content: flex-end;
+      right: $spacing-8;
+      width: 18rem;
+    }
   }
 
   &__heading {

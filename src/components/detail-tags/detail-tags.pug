@@ -1,5 +1,5 @@
 mixin detail-tags(c)
-  .detail-tags
+  .detail-tags(class= c.detailTagModifier ? "detail-tags--" + c.detailTagModifier : "")
     h4.detail-tags__heading= c.detailTagHeading
     each detail in c.detailTags
       .detail-tags__item

@@ -26,6 +26,51 @@ block pageComponents
       img(src="/assets/images/case-studies/rift/image-1.png" alt="RIFT Components")
 
     .container
+      .challenge-group
+        .challenge-group__image
+        .challenge-group__content
+          +content({
+            contentHeading: "Radically faster quotes",
+            contentIntro: "The changes made meant we were able to provide an insurance quote in a fraction of time it had taken previously.",
+            contentParagraphs: [
+              {
+                contentText: "Changes to how a pre-existing medical condition was described meant test users were able to understand and answer whether or not they had one more than a minutw quicker than had been the case before."
+              }
+            ]
+          })
+          +detail-tags({
+          detailTagHeading: "What we did",
+          detailTags: [
+            {
+              detailTagIcon: "assets/images/case-studies/icons/pen.svg",
+              detailTagText: "Content writing"
+            },
+            {
+              detailTagIcon: "assets/images/case-studies/icons/data.svg",
+              detailTagText: "Data analysis"
+            },
+            {
+              detailTagIcon: "assets/images/case-studies/icons/switch.svg",
+              detailTagText: "Form design"
+            },
+            {
+              detailTagIcon: "assets/images/case-studies/icons/journey.svg",
+              detailTagText: "Journey mapping"
+            },
+            {
+              detailTagIcon: "assets/images/case-studies/icons/prototype.svg",
+              detailTagText: "Prototypes"
+            },
+            {
+              detailTagIcon: "assets/images/case-studies/icons/ear.svg",
+              detailTagText: "Stakeholder interviews"
+            },
+            {
+              detailTagIcon: "assets/images/case-studies/icons/wireframe.svg",
+              detailTagText: "Wireframes"
+            }
+          ]
+        })
       +content-block({
         introHeading: true,
         contentBlockHeading: "Our approach",
