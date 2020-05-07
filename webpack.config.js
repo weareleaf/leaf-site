@@ -12,6 +12,7 @@ const pagePlugins = pages.map(page => {
     filename: page.replace('.pug', '.html')
   })
 })
+
 const filePlugins = new CopyPlugin([
   { from: './src/assets/fonts/', to: './assets/fonts' },
   { from: './src/assets/images/', to: './assets/images/' },
@@ -19,13 +20,28 @@ const filePlugins = new CopyPlugin([
   { from: './src/robots.txt', to: './robots.txt' }
 ])
 
+const statsConfig = {
+  children: false,
+  chunks: false,
+  assets: false,
+  builtAt: false,
+  hash: false,
+  // timings: false,
+  entrypoints: false,
+  modules: false,
+  version: false,
+  warnings: false,
+}
+
 const config = {
+  stats: statsConfig,
   entry: {
-    app: './src/assets/scripts/main.js'
+    app: './src/assets/scripts/main.js',
+    css: './src/assets/styles/main.scss'
   },
   output: {
     path: path.resolve(__dirname, 'dist'),
-    filename: 'main.js',
+    filename: '[name].js',
     publicPath: '/'
   },
   devServer: {
@@ -45,17 +61,7 @@ const config = {
         }
       ]
     },
-    stats: {
-      children: false,
-      chunks: false,
-      assets: false,
-      builtAt: false,
-      hash: false,
-      // timings: false,
-      entrypoints: false,
-      modules: false,
-      version: false,
-    },
+    stats: statsConfig,
   },
   plugins: [].concat(pagePlugins, filePlugins),
   module: {
@@ -74,6 +80,21 @@ const config = {
             plugins: ['@babel/plugin-proposal-object-rest-spread']
           }
         }
+      },
+      {
+        test: /\.scss$/,
+        use: [
+          {
+            loader: 'file-loader',
+            options: {
+              name: 'assets/styles/[name].css',
+            }
+          },
+          { loader: 'extract-loader' },
+          { loader: 'css-loader?-url' },
+          { loader: 'postcss-loader' },
+          { loader: 'sass-loader' }
+        ]
       }
     ]
   }
