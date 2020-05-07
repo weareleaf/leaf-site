@@ -1,7 +1,7 @@
 extends ../../layouts/content.pug
 
 block prepend vars
-  -var pageTitle = "5 tips for actually shipping a side project - Leaf"
+  -var pageTitle = "5 tips for actually shipping a side project | Leaf"
   -var metaUrl = "https://weareleaf.com/blog/5-tips-for-actually-shipping-a-side-project"
   -var metaTitle = "5 tips for actually shipping a side project"
   -var metaDescription = "How to ensure your side project actually ships, and gets worked on consistently."
@@ -84,4 +84,4 @@ block pageComponents
       .container
         .blog-content
           h3.blog-content__heading Keep reading
-          .grid.grid--blog.grid--blog-preview
+          +blog-post-grid

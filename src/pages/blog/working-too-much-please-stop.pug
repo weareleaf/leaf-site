@@ -1,7 +1,7 @@
 extends ../../layouts/content.pug
 
 block prepend vars
-  -var pageTitle = "Working too much? Please stop - Leaf"
+  -var pageTitle = "Working too much? Please stop | Leaf"
   -var metaUrl = "https://weareleaf.com/blog/working-too-much-please-stop"
   -var metaTitle = "Working too much? Please stop"
   -var metaDescription = "Why you should resist the pressure to work out of hours, and how you can change your work habits for the better."
@@ -81,4 +81,4 @@ block pageComponents
       .container
         .blog-content
           h3.blog-content__heading Keep reading
-          .grid.grid--blog.grid--blog-preview
+          +blog-post-grid

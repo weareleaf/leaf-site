@@ -1,10 +1,10 @@
 extends ../../layouts/content.pug
 
 block prepend vars
-  -var pageTitle = "There are no excuses for poor engineering in 2017 - Leaf"
+  -var pageTitle = "There are no excuses for poor engineering in 2017 | Leaf"
   -var metaUrl = "https://weareleaf.com/blog/there-are-no-excuses-for-poor-engineering-in-2017"
   -var metaTitle = "There are no excuses for poor engineering in 2017"
-  -var metaDescription = "Poor engineering is false economy. Quick product iteration cycles are largely facilitated by software, great data, and great automation, and all of these come about with great engineering."
+  -var metaDescription = "Quick product iteration cycles are largely facilitated by software, great data, and great automation, and all of these come about with great engineering."
 
   -var heroHeading = "There are no excuses for poor engineering in 2017"
   -var heroSubheading = "(by Mike Carter)"
@@ -52,4 +52,4 @@ block pageComponents
       .container
         .blog-content
           h3.blog-content__heading Keep reading
-          .grid.grid--blog.grid--blog-preview
+          +blog-post-grid

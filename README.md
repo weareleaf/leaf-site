@@ -13,7 +13,7 @@ brew install nvm
 Then, install the required version of node and install the dependencies for the project:
 
 ```
-nvm install 8.12.0
+nvm install 10.20.1
 nvm use
 npm install
 ```
@@ -21,6 +21,7 @@ npm install
 ## Usage
 
 - Run `npm run start` run the development server
+- Run `npm run build:jpgs` to create jpg copies of all png images on the site with a `#3d18c3` background colour.
 - Run `npm run deploy` to build a production ready version of the site and deploy it to https://weareleaf.com
 
 ## Development Notes
@@ -29,6 +30,7 @@ npm install
 - Changes to Pug and JavaScript files should automatically reload the page.
 - Changes to SCSS will not automatically reload the page.
 - When you add new files, you'll need to restart the development server for them to be picked up.
+- If you want to change the background colour of generated jpg images, update the value in `scripts/png-convert.js`.
 
 ## Adding blog posts
 

@@ -44,7 +44,18 @@ const config = {
           }
         }
       ]
-    }
+    },
+    stats: {
+      children: false,
+      chunks: false,
+      assets: false,
+      builtAt: false,
+      hash: false,
+      // timings: false,
+      entrypoints: false,
+      modules: false,
+      version: false,
+    },
   },
   plugins: [].concat(pagePlugins, filePlugins),
   module: {
