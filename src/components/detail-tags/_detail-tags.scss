@@ -26,7 +26,7 @@
   
   &__item {
     align-items: center;
-    background-color: #6F43B9;
+    background-color: var(--color-detail-bg);
     border-radius: $border-radius-sm;
     display: flex;
     margin: .25rem;
