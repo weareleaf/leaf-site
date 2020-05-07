@@ -164,24 +164,101 @@ block pageComponents
             })
 
   section.section
-  .container
-    .rift-documents-upload
-      .rift-documents-upload__content
-        +content({
-          contentHeading: "Painless document uploads",
-          contentIntro: "To prove their income and outgoings, users have to provide a range of documents as part of their claim.",
-          contentParagraphs: [
-            {
-              contentText: "Claimants previously sent their files to a dedicated email address, meaning documents turned up in all sizes and formats, and the RIFT staff had to routinely manage the Inbox. We created a document upload system, allowing claimants to upload any number of wage slips or bank statements in a single action, and without any involvement from the RIFT team."
+    .container
+      .rift-documents-upload
+        .rift-documents-upload__content
+          +content({
+            contentHeading: "Painless document uploads",
+            contentIntro: "To prove their income and outgoings, users have to provide a range of documents as part of their claim.",
+            contentParagraphs: [
+              {
+                contentText: "Claimants previously sent their files to a dedicated email address, meaning documents turned up in all sizes and formats, and the RIFT staff had to routinely manage the Inbox. We created a document upload system, allowing claimants to upload any number of wage slips or bank statements in a single action, and without any involvement from the RIFT team."
+              }
+            ]
+          })
+          +metrics({
+            metricsSimplified: true,
+            metricsTextBold: "1,000+",
+            metricsText: "files are now uploaded in MyRIFT each month.",
+            metricsModifier: "margin"
+          })
+        .rift-documents-upload__image
+          figure.image.image--rift-6
+            img(src="/assets/images/case-studies/rift/image-6.png" alt="Document Uploads")
+
+  section.section
+    .container
+      .rift-details-lookup
+        .rift-details-lookup__image
+          figure.image.image--rift-7
+            img(src="/assets/images/case-studies/rift/image-7.png" alt="Bank Lookup")
+        .rift-details-lookup__content
+          +content({
+            contentHeading: "Make it easy to give high-quality data",
+            contentIntro: "Small improvements to a booking flow can have a big impact on the quality and quantity of data you’re able to capture.",
+            contentParagraphs: [
+              {
+                contentText: "Rather than asking the user to enter every detail themselves, we used unique details like postcodes and registration numbers to lookup entire home addresses, employers, and vehicle details. To help customers select the bank account their refund was paid into, we also created a lookup that offered real-time suggestions; for example, ‘The Co-operative Bank’ will be recommended even if a user types 'Co-op bank’, or even 'Britannia’, who they merged with in 2009."
+              }
+            ]
+          })
+          +metrics({
+            metricsModifier: "margin",
+            metricItems: [
+              {
+                metricsUnit: "99.8%",
+                metricsSubText: "address accuracy.",
+                metricsText: "The 20,000 addresses captured in April 2020 were precise enough to successfully plot coordinates on a map in all but 50 cases."
+              },
+              {
+                metricsUnit: "99%",
+                metricsSubText: "vehicle accuracy",
+                metricsText: "The 5,000 vehicles captured in April 2020 had a valid registration number, make, and model, in all but 50 cases."
+              }
+            ]
+          })
+  
+  section.section
+    .container
+      .rift-outcome
+        .rift-outcome__content
+          h2.content-block__heading The outcome
+          +content({
+            contentHeading: "Happy customers. Happy client",
+            contentIntro: "Such was the success our initial work with RIFT, we're continuing to work together well into 2020.",
+            contentParagraphs: [
+              {
+                contentText: "The pre-registation questionnaire and amended processes significantly improved conversion to registration, getting more and better qualified leads into the app, and increasing the number of claims submitted online."
+              }
+            ]
+          })
+          +metrics({
+            metricsModifier: "margin",
+            metricItems: [
+              {
+                metricsUnit: "192%",
+                metricsSubText: "increase in claim submissions.",
+                metricsText: "Claim submissions have almost quadrupled in the past 2 years, with more than 5,000 claims submitted in April 2020 alone."
+              },
+              {
+                metricsUnit: "84%",
+                metricsSubText: "increase in unqiue sign-ins.",
+                metricsText: "The number of people using MyRIFT each month has increased significantly, with over 8,000 active users in March and April 2020."
+              }
+            ]
+          })
+        .rift-outcome__testimonial
+          +testimonial({
+            testimonialBlockQuote: "Leaf were a pleasure to work with – always available and willing to offer advice, or to put forward constructive suggestions. The decision to work with them is one we haven’t regretted, and I’d gladly recommend them to anyone looking to improve their own booking flow.",
+            author: {
+              authorName: "Bradley Post",
+              authorDetails: "Managing Director — RIFT Group",
+              authorThumbnail: {
+                src: "assets/images/case-studies/rift/bradley.png",
+                alt: "Bradley Post"
+              }
             }
-          ]
-        })
-        +metrics({
-          metricsSimplified: true,
-          metricsTextBold: "1,000+",
-          metricsText: "files are now uploaded in MyRIFT each month.",
-          metricsModifier: "margin"
-        })
-      .rift-documents-upload__image
-        figure.image.image--rift-6
-          img(src="/assets/images/case-studies/rift/image-6.png" alt="Document Uploads")
+          })
+
+    figure.image.image--rift-8
+      img(src="/assets/images/case-studies/rift/image-8.png" alt="Trustpilot Reviews")
