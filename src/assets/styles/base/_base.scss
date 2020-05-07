@@ -68,32 +68,32 @@ html {
 }
 
 .page--myrift {
-  --color-accent: #{$holiday-extras-gold};
+  --color-accent: #{$rift-red};
   --color-background: #{$rift-grey-background};
   --color-heading-2: #{$color-smoke};
-  --color-heading-3: #{$holiday-extras-gold};
+  --color-heading-3: #{$rift-red};
   --color-intro-text: #{$color-smoke};
-  --color-text: #{$holiday-extras-purple-1};
-  --color-container: #{$holiday-extras-purple-4};
-  --color-focus-bg: #{$holiday-extras-gold};
+  --color-text: #{$rift-grey-text};
+  --color-container: #{$rift-grey-metric-container};
+  --color-focus-bg: #{$rift-red};
   --color-footer-contact: #{$color-smoke};
-  --color-footer-divider: #{$holiday-extras-purple-4};
+  --color-footer-divider: #{$rift-grey-metric-border};
   --color-heading: #{$color-smoke};
-  --color-hero-subheading: #{$holiday-extras-purple-1};
+  --color-hero-subheading: #{$rift-grey-text};
   --color-nav: #{$color-smoke};
-  --color-footer-text: #{$holiday-extras-purple-1};
-  --color-logo: #{$holiday-extras-purple-1};
+  --color-footer-text: #{$rift-grey-text};
+  --color-logo: #{$rift-grey-text};
   --color-social-icons: #{$color-smoke};
-  --color-close: #{$holiday-extras-purple-1};
-  --color-metric-background: #{$holiday-extras-purple-2};
-  --color-metric-border: #{$holiday-extras-purple-4};
-  --color-metric-unit: #{$color-smoke};
-  --detail-heading: #{$holiday-extras-gold};
+  --color-close: #{$rift-grey-text};
+  --color-metric-background: #{$rift-grey-metric-bg};
+  --color-metric-border: #{$rift-grey-metric-border};
+  --color-metric-unit: #{$rift-grey-text-1};
+  --detail-heading: #{$rift-red};
   --color-detail-text: #{$color-white};
-  --color-testimonial-quotation: #{$holiday-extras-purple-5};
+  --color-testimonial-quotation: #{$rift-grey-metric-bg};
   --color-testimonial-blockquote: #{$color-smoke};
   --color-author-name: #{$color-smoke};
-  --color-author-details: #{$holiday-extras-purple-1};
+  --color-author-details: #{$rift-grey-text};
 }
 
 body {
