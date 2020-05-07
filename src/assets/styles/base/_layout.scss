@@ -95,15 +95,20 @@ main {
 
   &--rift-1 {
     margin-top: -10rem !important;
-    padding: $spacing-8;
+    padding: $spacing-8 $spacing-8 0 $spacing-8;
   }
 
   &--rift-2 {
+   margin-left: -10rem;
+   transform:scale(.7);
+  }
+
+  &--rift-4 {
     margin-bottom: $spacing-15;
     transform:scale(1.25);
   }
 
-  &--rift-3 {
+  &--rift-5 {
     max-width: 35%;
     position: absolute;
     top: 54%;
@@ -235,6 +240,15 @@ main {
 }
 
 // RIFT
+.challenge-group {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+
+  &__content {
+    align-self: center;
+    padding-right: 2.5rem;
+  }
+}
 .metric-block {
   background-color: var(--color-metric-background);
   margin-bottom: $spacing-13;

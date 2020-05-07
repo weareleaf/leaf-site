@@ -115,6 +115,14 @@
         top: -5rem;
       } 
     }
+
+    // RIFT Images
+
+    &--rift-3 {
+      left: 2rem;
+      top: $spacing-8;
+      transform:scale(1.1);
+     }
   }
 
   &__content {

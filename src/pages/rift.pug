@@ -28,18 +28,22 @@ block pageComponents
     .container
       .challenge-group
         .challenge-group__image
+          figure.image.image--rift-2
+            img(src="/assets/images/case-studies/rift/image-2.png" alt="Happy Customers Showing Tax Returns")
         .challenge-group__content
           +content({
-            contentHeading: "Radically faster quotes",
-            contentIntro: "The changes made meant we were able to provide an insurance quote in a fraction of time it had taken previously.",
+            contentHeading2: true,
+            contentHeading: "The challenge",
+            contentIntro: "RIFT’s customer-facing claim tool, MyRIFT, wasn’t effectively converting their online leads into successful claims.",
             contentParagraphs: [
               {
-                contentText: "Changes to how a pre-existing medical condition was described meant test users were able to understand and answer whether or not they had one more than a minutw quicker than had been the case before."
+                contentText: "We were tasked with more effectively qualifying leads before they signed-up to MyRIFT, and to help eligible claimants submit their claim information, all the while increasing the quality of any information being captured."
               }
             ]
           })
           +detail-tags({
           detailTagHeading: "What we did",
+          detailTagModifier: "rift",
           detailTags: [
             {
               detailTagIcon: "assets/images/case-studies/icons/api.svg",
@@ -117,7 +121,8 @@ block pageComponents
         contentBlockImage: {
           src: "/assets/images/case-studies/rift/image-3.png",
           alt: "Analytical Sofware"
-        }
+        },
+        contentBlockImageModifier: "rift-3"
       })
       .grid.grid--center-text
         .grid__item
@@ -131,7 +136,7 @@ block pageComponents
             ]
           })
 
-    figure.image.image--rift-2
+    figure.image.image--rift-4
       img(src="/assets/images/case-studies/rift/image-4.png" alt="Wireframe Prototypes")
   
   section.section
@@ -139,7 +144,7 @@ block pageComponents
       .container
         .metric-block__grid
           .metric-block__image
-            figure.image.image--rift-3
+            figure.image.image--rift-5
               img(src="/assets/images/case-studies/rift/image-5.png" alt="Eligibility Questionaire")
           .metric-block__content
             +content({
