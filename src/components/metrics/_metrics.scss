@@ -16,11 +16,23 @@
     border-radius: $border-radius-lg;
     padding: 1.1rem;
     position: relative;
+
+    @media screen and (min-width: map-get($breakpoints, 'breakpoint-6')) {
+      padding: .95rem;
+    }
   }
 
   &__content {
     align-items: end;
     display: flex;
+    justify-content: center;
+    margin-top: .75rem;
+
+    @media screen and (min-width: map-get($breakpoints, 'breakpoint-4')) {
+      justify-content: start;
+      margin-left: 2.5rem;
+      margin-top: .3rem;
+    }
   }
 
   &__heading {
@@ -70,6 +82,20 @@
     position: absolute;
     top: $spacing-4;
     width: $size-3;
+
+    &--mobile {
+      left: 0;
+      margin: 0 auto;
+      position: relative;
+      top: 0;
+
+      @media screen and (min-width: map-get($breakpoints, 'breakpoint-4')) {
+        left: $spacing-4;
+        margin: 0;
+        position: absolute;
+        top: $spacing-4;;
+      }
+    }
   }
 
   &__unit {
@@ -113,18 +139,26 @@
 
     &--bold {
       color: var(--color-metric-unit);
-      font-size: $root-font-size;
-      margin-left: 2.5rem;
+      font-size: .75rem;
+      margin-left: 0;
       margin-top: 0;
+
+      @media screen and (min-width: map-get($breakpoints, 'breakpoint-7')) {
+        font-size: $root-font-size;
+      }
     }
 
     &--lg {
       color: var(--color-metric-unit);
       font-family: $font-family-sans-serif-medium;
-      font-size: $root-font-size;
+      font-size: .75rem;
       margin-left: $spacing-2;
       margin-top: 0;
       text-align: left;
+
+      @media screen and (min-width: map-get($breakpoints, 'breakpoint-7')) {
+        font-size: $root-font-size;
+      }
     }
   }
 }

@@ -2,7 +2,7 @@ mixin metrics(c)
   .metrics(class= c.metricsModifier ? "metrics--" + c.metricsModifier : "")
     if c.metricsSimplified === true
       .metrics__container
-        .metrics__icon
+        .metrics__icon(class= c.metricsIconModifier ? "metrics__icon--" + c.metricsIconModifier : "")
           img(src="assets/images/icons/arrow.svg", alt="Arrow")
         .metrics__content
           strong.metrics__text.metrics__text--bold= c.metricsTextBold
