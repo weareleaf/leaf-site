@@ -47,7 +47,6 @@
     }
 
     // Holiday Extras Images
-
     &--hx-image-2 {
       display: none;
 
@@ -55,7 +54,7 @@
         box-shadow: 0px 0px 0px .6rem var(--color-background);
         display: block;
         right: 1.25rem;
-        top: 12rem;
+        top: $spacing-13;
         max-width: 70%;
       }
     }
@@ -117,11 +116,10 @@
     }
 
     // RIFT Images
-
     &--rift-3 {
-      left: 2rem;
-      top: $spacing-8;
-      transform:scale(1.1);
+      left: $spacing-5;
+      top: $spacing-9;
+      max-width: 110%;
      }
   }
 
