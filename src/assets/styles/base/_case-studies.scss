@@ -95,13 +95,9 @@
   }
 }
 
-.hx-centered-content {
-  background-color: #6F43B9;
-  margin-bottom: $spacing-6;
-  margin-top: -8rem;
+.centered-content {
   padding: $spacing-10 0;
   position: relative;
-  z-index: -1;
 
   @media screen and (min-width: map-get($breakpoints, 'breakpoint-2')) {
     margin-bottom: $spacing-9;
@@ -109,12 +105,26 @@
   }
 
   @media screen and (min-width: map-get($breakpoints, 'breakpoint-4')) {
-    margin-bottom: $spacing-15;
-    margin-top: -12rem;
     padding: $spacing-13;
   }
 
-  .bg-shape {
+  &--hx {
+    background-color: #6F43B9;
+    margin-bottom: $spacing-6;
+    margin-top: -8rem;
+    z-index: -1;
+
+    @media screen and (min-width: map-get($breakpoints, 'breakpoint-4')) {
+      margin-bottom: $spacing-15;
+      margin-top: -12rem;
+    }
+  }
+
+  &--rift {
+    padding-bottom: 0;
+  }
+
+  /*.bg-shape {
     max-width: 75%;
     position: absolute;
 
@@ -128,7 +138,7 @@
       top: $spacing-12;
       transform: rotate(180deg);
     }
-  }
+  }*/
 }
 
 .hx-image-8 {
@@ -183,8 +193,7 @@
 
 // RIFT layouts
 .rift-challenge {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  @include two-col-grid;
   margin: $spacing-11 0;
 
   &__content {
@@ -199,8 +208,7 @@
   position: relative;
 
   &__grid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    @include two-col-grid;
     padding: 0 $spacing-7;
   }
 
@@ -210,15 +218,13 @@
 }
 
 .rift-documents-upload {
-  display: grid;
+  @include two-col-grid;
   grid-column-gap: $spacing-9;
-  grid-template-columns: repeat(2, 1fr);
   margin: $spacing-14 0;
 }
 
 .rift-details-lookup {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  @include two-col-grid;
   margin-bottom: $spacing-13;
   margin-top: $spacing-15;
   padding-top: $spacing-13;
@@ -229,8 +235,7 @@
 }
 
 .rift-outcome {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  @include two-col-grid;
 
   &__content {
     padding-right: $spacing-7;

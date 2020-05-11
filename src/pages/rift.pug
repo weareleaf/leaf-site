@@ -125,17 +125,19 @@ block pageComponents
         },
         contentBlockImageModifier: "rift-3"
       })
-      .grid.grid--center-text
-        .grid__item
-          +content({
-            contentHeading: "Move quickly and effectively",
-            contentIntro: "A combination of quick-fire sketches and wireframing help facilitate ideation and conversation in the most efficient way.",
-            contentParagraphs: [
-              {
-                contentText: "We relied heavily on low-fidelity prototypes in the early stages of our design exploration, helping us to quickly validate or discredit concepts, gain stakeholder buy-in, and ensure a single, shared vision."
-              }
-            ]
-          })
+
+      .centered-content.centered-content--rift
+        .grid.grid--center-text
+          .grid__item
+            +content({
+              contentHeading: "Move quickly and effectively",
+              contentIntro: "A combination of quick-fire sketches and wireframing help facilitate ideation and conversation in the most efficient way.",
+              contentParagraphs: [
+                {
+                  contentText: "We relied heavily on low-fidelity prototypes in the early stages of our design exploration, helping us to quickly validate or discredit concepts, gain stakeholder buy-in, and ensure a single, shared vision."
+                }
+              ]
+            })
 
     figure.case-study-image.case-study-image--rift-4
       img(src="/assets/images/case-studies/rift/image-4.png" alt="Wireframe Prototypes")
