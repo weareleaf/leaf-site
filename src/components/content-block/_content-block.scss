@@ -23,11 +23,10 @@
   }
 
   &__content {
-    margin-bottom: $spacing-7;
+    margin: 0;
 
     @media screen and (min-width: map-get($breakpoints, 'breakpoint-4')) {
       align-self: center;
-      margin: 0;
     }
   }
 
@@ -116,10 +115,14 @@
 
     // RIFT Images
     &--rift-3 {
-      left: $spacing-5;
+      left: $spacing-4;
       top: $spacing-9;
       max-width: 110%;
-     }
+
+      @media screen and (min-width: map-get($breakpoints, 'breakpoint-3')) {
+        left: $spacing-5;
+      }
+    }
   }
 
   &__content {
@@ -132,10 +135,11 @@
 
   &__heading {
     color: var(--color-heading-2);
-    font-size: 2.2rem;
+    font-size: $font-size-h2;
     margin-bottom: $spacing-6;
 
-    @media screen and (min-width: map-get($breakpoints, 'breakpoint-4')) {
+    @media screen and (min-width: map-get($breakpoints, 'breakpoint-3')) {
+      font-size: 2.2rem;
       margin-bottom: $spacing-8;
     }
   }
