@@ -173,21 +173,35 @@
     }
   }
 
-  /*.bg-shape {
-    max-width: 75%;
-    position: absolute;
+  .bg-shapes {
+    display: none;
 
-    &--1 {
-      right: -20rem;
-      top: -30rem;
+    @media screen and (min-width: map-get($breakpoints, 'breakpoint-4')) {
+      display: block;
+      height: 100%;
+      left: 0;
+      position: absolute;
+      overflow: hidden;
+      top: 0;
+      width: 100%;
     }
 
-    &--2 {
-      left: -20rem;
-      top: $spacing-12;
-      transform: rotate(180deg);
+    .bg-shape {
+      max-width: 47%;
+      position: absolute;
+  
+      &--1 {
+        right: -5rem;
+        top: -15rem;
+      }
+
+      &--2 {
+        bottom: -15rem;
+        left: -5rem;
+        transform: rotate(180deg);
+      }
     }
-  }*/
+  }
 }
 
 // HX layouts
