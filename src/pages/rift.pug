@@ -95,7 +95,9 @@ block pageComponents
             }
           ]
         })
-        
+
+  section.section      
+    .container
       +content-block({
         introHeading: true,
         contentBlockHeading: "Our approach",
@@ -149,7 +151,7 @@ block pageComponents
           .rift-metrics__image
             figure.case-study-image.case-study-image--rift-5
               img(src="/assets/images/case-studies/rift/image-5.png" alt="Eligibility Questionaire")
-          .metric-block__content
+          .rift-metrics__content
             +content({
               contentHeading: "Focus on the lowest hanging fruit",
               contentIntro: "Historical data highlighted the registration processes as a key point of failure in converting prospective claimants.",

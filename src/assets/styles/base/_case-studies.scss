@@ -32,9 +32,13 @@
   &--rift-2 {
     margin-bottom: 0;
 
-    @media screen and (min-width: map-get($breakpoints, 'breakpoint-4')) {
-      margin-left: -4rem;
+    @media screen and (min-width: map-get($breakpoints, 'breakpoint-2')) {
+      margin-left: -.25rem;
       max-width: 93%;
+    }
+
+    @media screen and (min-width: map-get($breakpoints, 'breakpoint-10')) {
+      margin-left: -4rem;
     }
   }
 
@@ -48,16 +52,26 @@
     }
 
     @media screen and (min-width: map-get($breakpoints, 'breakpoint-4')) {
+      margin-bottom: $spacing-14;
+    }
+
+    @media screen and (min-width: map-get($breakpoints, 'breakpoint-11')) {
       margin-bottom: $spacing-15;
     }
   }
 
   &--rift-5 {
+    margin: auto;
     margin-bottom: $spacing-7;
     margin-top: -5rem !important; // Needed to override the figure styling
+    max-width: 50%;
     position: relative;
 
     @media screen and (min-width: map-get($breakpoints, 'breakpoint-3')) {
+      max-width: 40%;
+    }
+
+    @media screen and (min-width: map-get($breakpoints, 'breakpoint-4')) {
       margin-bottom: 0;
       margin-top: 0 !important;
       max-width: 34%;
@@ -88,7 +102,7 @@
   &--rift-7 {
     margin-bottom: 0;
     padding-left: .5rem;
-    padding-top: 1.5rem;
+    padding-top: $spacing-6;
     position: relative;
 
     @media screen and (min-width: map-get($breakpoints, 'breakpoint-4')) {
@@ -103,46 +117,14 @@
     margin: $spacing-11 0 $spacing-10 0;
     transform: scale(1.75);
 
-    @media screen and (min-width: map-get($breakpoints, 'breakpoint-4')) {
-      margin: $spacing-11 0;
+    @media screen and (min-width: map-get($breakpoints, 'breakpoint-3')) {
+      margin: $spacing-11 0 0 0;
       transform: scale(1.1);
     }
-  }
-}
 
-// HX layouts
-.hx-challenge {
-  align-items: center;
-  display: flex;
-  justify-content: center;
-  margin-bottom: $spacing-9;
-
-  &__items {
-    @media screen and (min-width: map-get($breakpoints, 'breakpoint-4')) {
-      margin-bottom: $spacing-13;
-      margin-left: -7.35rem;
-      max-width: 62rem;
+    @media screen and (min-width: map-get($breakpoints, 'breakpoint-11')) {
+      margin: $spacing-11 0;
     }
-  }
-}
-
-.hx-details {
-  display: grid;
-  grid-row-gap: $spacing-6;
-
-  @media screen and (min-width: map-get($breakpoints, 'breakpoint-3')) {
-    padding: 0 $spacing-10;
-  }
-
-  @media screen and (min-width: map-get($breakpoints, 'breakpoint-4')) {
-    grid-gap: 0;
-    grid-template-columns: 1fr 38rem;
-    margin-top: -14.5rem;
-    padding: 0;
-  }
-
-  &__tags {
-    position: relative;
   }
 }
 
@@ -166,6 +148,11 @@
     z-index: -1;
 
     @media screen and (min-width: map-get($breakpoints, 'breakpoint-4')) {
+      margin-bottom: $spacing-14;
+      margin-top: -9rem;
+    }
+
+    @media screen and (min-width: map-get($breakpoints, 'breakpoint-11')) {
       margin-bottom: $spacing-15;
       margin-top: -12rem;
     }
@@ -203,10 +190,51 @@
   }*/
 }
 
+// HX layouts
+.hx-challenge {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  margin-bottom: -2rem;
+
+  &__items {
+    @media screen and (min-width: map-get($breakpoints, 'breakpoint-4')) {
+      margin-bottom: $spacing-13;
+      margin-left: -7.35rem;
+      max-width: 62rem;
+    }
+  }
+}
+
+.hx-details {
+  display: grid;
+  grid-row-gap: $spacing-6;
+
+  @media screen and (min-width: map-get($breakpoints, 'breakpoint-3')) {
+    padding: 0 $spacing-10;
+  }
+
+  @media screen and (min-width: map-get($breakpoints, 'breakpoint-4')) {
+    grid-gap: 0;
+    grid-template-columns: 1fr 38rem;
+    margin: -9rem 0;
+    padding: 0;
+  }
+
+  @media screen and (min-width: map-get($breakpoints, 'breakpoint-11')) {
+    margin-bottom: 0;
+    margin-top: -14.5rem;
+  }
+
+  &__tags {
+    position: relative;
+  }
+}
+
 .hx-image-8 {
   bottom: -6.5rem;
   left: 0;
-  margin: 12rem $spacing-6 0 $spacing-6;
+  margin: $spacing-13 $spacing-6 0 $spacing-6;
   position: absolute;
   right: 0;
 
@@ -233,8 +261,12 @@
   @media screen and (min-width: map-get($breakpoints, 'breakpoint-4')) {
     grid-gap: $spacing-9;
     grid-template-columns: repeat(2, 1fr);
-    margin-top: $spacing-14;
+    margin-top: $spacing-12;
     padding: 0;
+  }
+
+  @media screen and (min-width: map-get($breakpoints, 'breakpoint-11')) {
+    margin-top: $spacing-14;
   }
 
   &__prototype {
@@ -271,12 +303,16 @@
 
   @media screen and (min-width: map-get($breakpoints, 'breakpoint-4')) {
     @include two-col-grid;
-    margin: $spacing-11 0;
+    margin: $spacing-10 0;
     padding: 0;
   }
 
+  @media screen and (min-width: map-get($breakpoints, 'breakpoint-6')) {
+    margin: $spacing-11 0;
+  }
+
   &__content {
-    margin-bottom: 2rem;
+    margin-bottom: $spacing-7;
     order: -1;
     padding-right: 0;
 
@@ -298,7 +334,7 @@
   position: relative;
 
   @media screen and (min-width: map-get($breakpoints, 'breakpoint-3')) {
-    margin-bottom: $spacing-9;
+    margin-bottom: $spacing-12;
     padding: $spacing-8 0;
   }
 
@@ -310,7 +346,7 @@
   &__grid {
     padding: 0;
 
-    @media screen and (min-width: map-get($breakpoints, 'breakpoint-3')) {
+    @media screen and (min-width: map-get($breakpoints, 'breakpoint-4')) {
       @include two-col-grid;
       padding: 0 $spacing-7;
     }
@@ -318,6 +354,14 @@
 
   &__content {
     align-self: center;
+
+    @media screen and (min-width: map-get($breakpoints, 'breakpoint-3')) {
+      padding: 0 $spacing-10;
+    }
+
+    @media screen and (min-width: map-get($breakpoints, 'breakpoint-4')) {
+      padding: 0;
+    }
   }
 }
 
@@ -331,8 +375,12 @@
 
   @media screen and (min-width: map-get($breakpoints, 'breakpoint-4')) {
     @include two-col-grid;
-    margin: $spacing-14 0;
+    margin: $spacing-12 0 $spacing-14 0;
     padding: 0;
+  }
+
+  @media screen and (min-width: map-get($breakpoints, 'breakpoint-11')) {
+    margin: $spacing-14 0;
   }
 }
 
@@ -348,9 +396,12 @@
 
   @media screen and (min-width: map-get($breakpoints, 'breakpoint-4')) {
     @include two-col-grid;
-    margin-bottom: $spacing-11;
+    padding: $spacing-12 0 0 0;
+  }
+
+  @media screen and (min-width: map-get($breakpoints, 'breakpoint-11')) {
     margin-top: $spacing-15;
-    padding: $spacing-13 0 0 0;
+    margin-bottom: $spacing-11;
   }
 
   &__content {
