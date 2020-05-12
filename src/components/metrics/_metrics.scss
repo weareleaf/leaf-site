@@ -23,10 +23,17 @@
   }
 
   &__content {
-    align-items: end;
+    align-items: center;
     display: flex;
+    flex-direction: column;
     justify-content: center;
-    margin-top: .75rem;
+    margin-top: 1rem;
+
+    @media screen and (min-width: map-get($breakpoints, 'breakpoint-1')) {
+      display: flex;
+      flex-direction: row;
+      margin-top: .75rem;
+    }
 
     @media screen and (min-width: map-get($breakpoints, 'breakpoint-4')) {
       justify-content: start;
@@ -139,9 +146,13 @@
 
     &--bold {
       color: var(--color-metric-unit);
-      font-size: .75rem;
+      font-size: $root-font-size-xl;
       margin-left: 0;
       margin-top: 0;
+
+      @media screen and (min-width: map-get($breakpoints, 'breakpoint-1')) {
+        font-size: .75rem;
+      }
 
       @media screen and (min-width: map-get($breakpoints, 'breakpoint-7')) {
         font-size: $root-font-size;
@@ -151,13 +162,16 @@
     &--lg {
       color: var(--color-metric-unit);
       font-family: $font-family-sans-serif-medium;
-      font-size: .75rem;
-      margin-left: $spacing-1;
+      font-size: $font-size-xs;
       margin-top: 0;
-      text-align: left;
+      text-align: center;
+
+      @media screen and (min-width: map-get($breakpoints, 'breakpoint-1')) {
+        margin-left: $spacing-1;
+        text-align: left;
+      }
 
       @media screen and (min-width: map-get($breakpoints, 'breakpoint-7')) {
-        font-size: $root-font-size;
         margin-left: $spacing-2;
       }
     }
