@@ -268,7 +268,6 @@
 }
 
 .hx-outcome {
-  display: grid;
   margin-top: -1rem;
 
   @media screen and (min-width: map-get($breakpoints, 'breakpoint-3')) {
@@ -277,8 +276,8 @@
   }
 
   @media screen and (min-width: map-get($breakpoints, 'breakpoint-4')) {
+    @include two-col-grid;
     grid-gap: $spacing-9;
-    grid-template-columns: repeat(2, 1fr);
     margin-top: $spacing-12;
     padding: 0;
   }
