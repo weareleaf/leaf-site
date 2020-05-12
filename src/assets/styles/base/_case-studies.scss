@@ -249,7 +249,13 @@
   &__main-prototype {
     right: 0;
     position: absolute;
-    top: $spacing-8;
+    top: -5rem;
+    transform: scale(.8);
+
+    @media screen and (min-width: map-get($breakpoints, 'breakpoint-6')) {
+      top: $spacing-8;
+      transform: scale(1);
+    }
   }
 }
 

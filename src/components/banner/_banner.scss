@@ -31,13 +31,9 @@
 
   &__close {
     @include focus-ring;
-    background-color: $color-snow;
+    background-color: var(--color-close-bg);
     border-radius: $border-radius-full;
     padding: $spacing-5;
-
-    @media screen and (min-width: map-get($breakpoints, 'breakpoint-11')) {
-      background-color: var(--color-container);
-    }
   }
 
   &__icon {
