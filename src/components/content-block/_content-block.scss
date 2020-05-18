@@ -53,7 +53,7 @@
       display: none;
 
       @media screen and (min-width: map-get($breakpoints, 'breakpoint-4')) {
-        box-shadow: 0px 0px 0px .6rem var(--color-background);
+        box-shadow: 0 0 0 .6rem var(--color-background);
         display: block;
         right: 1.25rem;
         top: $spacing-13;
@@ -78,10 +78,10 @@
       }
 
       @media screen and (min-width: map-get($breakpoints, 'breakpoint-4')) {
-        padding: 0;
         max-width: 110%;
+        padding: 0;
         right: $spacing-7;
-        top: -1rem;
+        top: -$spacing-5;
       }
     }
 
@@ -126,8 +126,8 @@
     // RIFT Images
     &--rift-3 {
       left: $spacing-4;
-      top: $spacing-9;
       max-width: 110%;
+      top: $spacing-9;
 
       @media screen and (min-width: map-get($breakpoints, 'breakpoint-3')) {
         left: $spacing-5;

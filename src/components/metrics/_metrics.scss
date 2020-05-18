@@ -14,12 +14,8 @@
     background-color: var(--color-metric-background);
     border: $border-style $border-width-base var(--color-metric-border);
     border-radius: $border-radius-lg;
-    padding: 1.1rem;
+    padding: $spacing-5;
     position: relative;
-
-    @media screen and (min-width: map-get($breakpoints, 'breakpoint-6')) {
-      padding: .95rem;
-    }
   }
 
   &__content {
@@ -27,24 +23,24 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-    margin-top: 1rem;
+    margin-top: $spacing-5;
 
     @media screen and (min-width: map-get($breakpoints, 'breakpoint-1')) {
       display: flex;
       flex-direction: row;
-      margin-top: .75rem;
+      margin-top: $spacing-4;
     }
 
     @media screen and (min-width: map-get($breakpoints, 'breakpoint-4')) {
       justify-content: start;
       margin-left: 2.5rem;
-      margin-top: .3rem;
+      margin-top: $spacing-2;
     }
   }
 
   &__heading {
     font-family: $font-family-sans-serif-extrabold;
-    font-size: .75rem;
+    font-size: $font-size-xxs;
     letter-spacing: .1rem;
     text-transform: uppercase;
   }
@@ -71,10 +67,9 @@
     background-color: var(--color-metric-background);
     border: $border-style $border-width-base var(--color-metric-border);
     border-radius: $border-radius-lg;
-    display: grid;
 
     @media screen and (min-width: map-get($breakpoints, 'breakpoint-1')) {
-      grid-template-columns: repeat(2, 1fr);
+      @include two-col-grid;
     }
   }
 
@@ -100,14 +95,14 @@
         left: $spacing-4;
         margin: 0;
         position: absolute;
-        top: $spacing-4;;
+        top: $spacing-4;
       }
     }
   }
 
   &__unit {
     color: var(--color-metric-unit);
-    font-size: 2.2rem;
+    font-size: $font-size-xl;
     letter-spacing: -.1rem;
     text-align: center;
 
@@ -119,12 +114,12 @@
   &__sub-text {
     color: var(--color-metric-unit);
     font-size: $font-size-xs;
-    font-weight: bold;
-    margin-top: -.75rem;
+    font-weight: 700;
+    margin-top: -$spacing-4;
     text-align: center;
 
     @media screen and (min-width: map-get($breakpoints, 'breakpoint-5')) {
-      margin-top: -1rem;
+      margin-top: -$spacing-5;
     }
   }
 
@@ -149,13 +144,16 @@
       font-size: $root-font-size-xl;
       margin-left: 0;
       margin-top: 0;
+      padding-bottom: .2rem;
 
       @media screen and (min-width: map-get($breakpoints, 'breakpoint-1')) {
-        font-size: .75rem;
+        font-size: $font-size-xxs;
       }
 
       @media screen and (min-width: map-get($breakpoints, 'breakpoint-7')) {
         font-size: $root-font-size;
+        margin-top: -.1rem;
+        padding-bottom: 0;
       }
     }
 
@@ -164,6 +162,7 @@
       font-family: $font-family-sans-serif-medium;
       font-size: $font-size-xs;
       margin-top: 0;
+      padding-bottom: .2rem;
       text-align: center;
 
       @media screen and (min-width: map-get($breakpoints, 'breakpoint-1')) {
@@ -173,6 +172,8 @@
 
       @media screen and (min-width: map-get($breakpoints, 'breakpoint-7')) {
         margin-left: $spacing-2;
+        margin-top: -.1rem;
+        padding-bottom: 0;
       }
     }
   }

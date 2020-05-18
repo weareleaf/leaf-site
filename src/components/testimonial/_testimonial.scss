@@ -10,17 +10,17 @@
 
     &::before {
       color: var(--color-testimonial-quotation);
-      content: "\201c";
+      content: '\201c';
       font-family: $font-family-sans-serif-extrabold;
       font-size: 12rem;
-      left: -.75rem;
+      left: -$spacing-4;
       position: absolute;
       top: -4.5rem;
       z-index: -1;
 
       @media screen and (min-width: map-get($breakpoints, 'breakpoint-2')) {
         font-size: 14rem;
-        left: -2rem;
+        left: -$spacing-7;
         top: -5rem;
       }
     }

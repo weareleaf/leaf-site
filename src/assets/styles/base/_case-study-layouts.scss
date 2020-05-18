@@ -11,11 +11,11 @@
     transform:scale(1.2);
 
     @media screen and (min-width: map-get($breakpoints, 'breakpoint-1')) {
-      margin-top: -6rem !important; // Needed to override the figure styling
+      margin-top: -$spacing-10 !important; // Needed to override the figure styling
     }
 
     @media screen and (min-width: map-get($breakpoints, 'breakpoint-4')) {
-      margin-top: -2rem !important; // Needed to override the figure styling
+      margin-top: -$spacing-7 !important; // Needed to override the figure styling
       padding: 0 $spacing-11;
       transform:scale(1);
     }
@@ -27,12 +27,12 @@
     transform:scale(1.2);
 
     @media screen and (min-width: map-get($breakpoints, 'breakpoint-1')) {
-      margin-top: -6rem !important; // Needed to override the figure styling
+      margin-top: -$spacing-10 !important; // Needed to override the figure styling
     }
 
     @media screen and (min-width: map-get($breakpoints, 'breakpoint-4')) {
       padding: $spacing-8 $spacing-8 0 $spacing-8;
-      margin-top: -10rem !important; // Needed to override the figure styling
+      margin-top: -$spacing-12 !important; // Needed to override the figure styling
       transform:scale(1);
     }
   }
@@ -46,11 +46,11 @@
     }
 
     @media screen and (min-width: map-get($breakpoints, 'breakpoint-4')) {
-      margin-left: -.25rem;
+      margin-left: -$spacing-2;
     }
 
     @media screen and (min-width: map-get($breakpoints, 'breakpoint-10')) {
-      margin-left: -4rem;
+      margin-left: -$spacing-9;
     }
   }
 
@@ -156,7 +156,7 @@
   &--hx {
     background-color: #6F43B9;
     margin-bottom: $spacing-6;
-    margin-top: -8rem;
+    margin-top: -$spacing-11;
     z-index: -1;
 
     @media screen and (min-width: map-get($breakpoints, 'breakpoint-4')) {
@@ -166,7 +166,7 @@
 
     @media screen and (min-width: map-get($breakpoints, 'breakpoint-11')) {
       margin-bottom: $spacing-15;
-      margin-top: -12rem;
+      margin-top: -$spacing-13;
     }
   }
 
@@ -221,7 +221,7 @@
   align-items: center;
   display: flex;
   justify-content: center;
-  margin-bottom: -2rem;
+  margin-bottom: -$spacing-7;
 
   &__items {
     @media screen and (min-width: map-get($breakpoints, 'breakpoint-4')) {
@@ -276,10 +276,10 @@
 }
 
 .hx-outcome {
-  margin-top: -1rem;
+  margin-top: -$spacing-5;
 
   @media screen and (min-width: map-get($breakpoints, 'breakpoint-3')) {
-    margin-top: -2rem;
+    margin-top: -$spacing-7;
     padding: 0 $spacing-10;
   }
 

@@ -1,3 +1,8 @@
+/* need to fix the reponsiveness here as
+it seems to have broke for some reason */
+
+$icon-size: .8rem;
+
 .detail-tags {
   display: flex;
   flex-wrap: wrap;
@@ -7,9 +12,9 @@
   &--hx {
     @media screen and (min-width: map-get($breakpoints, 'breakpoint-4')) {
       bottom: $spacing-8;
-      position: absolute;
       justify-content: flex-end;
-      right: $spacing-8;
+      position: absolute;
+      right: 2.5rem;
       width: 18rem;
     }
   }
@@ -21,11 +26,11 @@
   &__heading {
     color: var(--detail-heading);
     font-family: $font-family-sans-serif-extrabold;
-    font-size: .75rem;
+    font-size: $font-size-xxs;
     letter-spacing: .1rem;
     position: absolute;
     text-transform: uppercase;
-    top: -1.5rem;
+    top: -$spacing-6;
   }
   
   &__item {
@@ -33,22 +38,22 @@
     background-color: var(--color-detail-bg);
     border-radius: $border-radius-sm;
     display: flex;
-    margin: .25rem;
-    padding: .4rem;
+    margin: $spacing-2;
+    padding: $spacing-3;
   }
 
   &__icon {
     align-items: center;
     display: flex;
+    height: $icon-size;
     justify-content: center;
-    height: .8rem;
-    margin-right: .3rem;
-    width: .8rem;
+    margin-right: $spacing-2;
+    width: $icon-size;
   }
 
   &__text {
     color: var(--color-detail-text);
     font-size: $font-size-xs;
-    margin-bottom: -.2rem;
+    margin-bottom: -$spacing-2;
   }
 }

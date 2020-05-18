@@ -3,4 +3,5 @@ mixin hero(c)
     .hero__container
       .hero__content
         h1.hero__heading !{c.heroHeading}#[span.hero__heading__period .]
-        p.hero__subheading= c.heroSubheading
+        p.hero__subheading(
+          class= c.heroSubheadingModifier ? "hero__subheading--" + c.heroSubheadingModifier : "") !{c.heroSubheading}

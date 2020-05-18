@@ -44,73 +44,73 @@ html {
 }
 
 .page--holiday-extras {
-  --color-accent: #{$holiday-extras-gold};
-  --color-background: #{$holiday-extras-purple-3};
+  --color-accent: #{$hx-gold};
+  --color-background: #{$hx-minsk};
   --color-heading-2: #{$color-smoke};
-  --color-heading-3: #{$holiday-extras-gold};
+  --color-heading-3: #{$hx-gold};
   --color-intro-text: #{$color-smoke};
-  --color-text: #{$holiday-extras-purple-1};
-  --color-container: #{$holiday-extras-purple-4};
-  --color-focus-bg: #{$holiday-extras-gold};
+  --color-text: #{$hx-melrose};
+  --color-container: #{$hx-gigas};
+  --color-focus-bg: #{$hx-gold};
   --color-footer-contact: #{$color-smoke};
-  --color-footer-divider: #{$holiday-extras-purple-4};
+  --color-footer-divider: #{$hx-gigas};
   --color-heading: #{$color-smoke};
-  --color-hero-subheading: #{$holiday-extras-purple-1};
+  --color-hero-subheading: #{$hx-melrose};
   --color-nav: #{$color-smoke};
-  --color-footer-text: #{$holiday-extras-purple-1};
+  --color-footer-text: #{$hx-melrose};
   --color-logo: #{$color-smoke};
   --color-social-icons: #{$color-smoke};
   --color-close-bg: #{$color-smoke};
-  --color-close: #{$holiday-extras-purple-5};
-  --color-metric-background: #{$holiday-extras-purple-2};
-  --color-metric-border: #{$holiday-extras-purple-4};
+  --color-close: #{$hx-daisy};
+  --color-metric-background: #{$hx-royal};
+  --color-metric-border: #{$hx-gigas};
   --color-metric-unit: #{$color-smoke};
-  --detail-heading: #{$holiday-extras-gold};
+  --detail-heading: #{$hx-gold};
   --color-detail-text: #{$color-white};
-  --color-detail-bg: #6F43B9;
-  --color-testimonial-quotation: #{$holiday-extras-purple-5};
+  --color-detail-bg: #{$hx-studio};
+  --color-testimonial-quotation: #{$hx-daisy};
   --color-testimonial-blockquote: #{$color-smoke};
   --color-author-name: #{$color-smoke};
-  --color-author-details: #{$holiday-extras-purple-1};
+  --color-author-details: #{$hx-melrose};
 
   @media screen and (min-width: map-get($breakpoints, 'breakpoint-11')) {
-    --color-close-bg: #{$holiday-extras-purple-5};
+    --color-close-bg: #{$hx-daisy};
     --color-close: #{$color-smoke};
   }
 }
 
 .page--myrift {
   --color-accent: #{$rift-red};
-  --color-background: #{$rift-grey-4};
+  --color-background: #{$rift-gun};
   --color-heading-2: #{$color-smoke};
   --color-heading-3: #{$rift-red};
   --color-intro-text: #{$color-smoke};
-  --color-text: #{$rift-grey-2};
-  --color-container: #{$rift-grey-6};
+  --color-text: #{$rift-pearl};
+  --color-container: #{$rift-baltic};
   --color-focus-bg: #{$rift-red};
   --color-footer-contact: #{$color-smoke};
-  --color-footer-divider: #{$rift-grey-5};
+  --color-footer-divider: #{$rift-charada};
   --color-heading: #{$color-smoke};
-  --color-hero-subheading: #{$rift-grey-2};
+  --color-hero-subheading: #{$rift-pearl};
   --color-nav: #{$color-smoke};
-  --color-footer-text: #{$rift-grey-2};
+  --color-footer-text: #{$rift-pearl};
   --color-logo: #{$color-smoke};
   --color-social-icons: #{$color-smoke};
   --color-close-bg: #{$color-smoke};
-  --color-close: #{$rift-grey-6};
-  --color-metric-background: #{$rift-grey-3};
-  --color-metric-border: #{$rift-grey-5};
-  --color-metric-unit: #{$rift-grey-1};
+  --color-close: #{$rift-baltic};
+  --color-metric-background: #{$rift-trout};
+  --color-metric-border: #{$rift-charada};
+  --color-metric-unit: #{$rift-iron};
   --detail-heading: #{$rift-red};
   --color-detail-text: #{$color-white};
-  --color-detail-bg: #414158;
-  --color-testimonial-quotation: #{$rift-grey-3};
+  --color-detail-bg: #{$rift-gun};
+  --color-testimonial-quotation: #{$rift-trout};
   --color-testimonial-blockquote: #{$color-smoke};
   --color-author-name: #{$color-smoke};
-  --color-author-details: #{$rift-grey-2};
+  --color-author-details: #{$rift-pearl};
 
   @media screen and (min-width: map-get($breakpoints, 'breakpoint-11')) {
-    --color-close-bg: #{$rift-grey-6};
+    --color-close-bg: #{$rift-baltic};
     --color-close: #{$color-smoke}
   }
 }

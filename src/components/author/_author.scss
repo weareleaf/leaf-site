@@ -4,18 +4,18 @@
 
   &__media {
     display: block;
+  }
 
-    img {
-      border-radius: $border-radius-full;
-      display: block;
-      height: $size-4;
-      object-fit: cover;
-      width: $size-4;
+  &__image {
+    border-radius: $border-radius-full;
+    display: block;
+    height: $size-4;
+    object-fit: cover;
+    width: $size-4;
 
-      @media screen and (min-width: map-get($breakpoints, 'breakpoint-2')) {
-        height: $size-5;
-        width: $size-5;
-      }
+    @media screen and (min-width: map-get($breakpoints, 'breakpoint-2')) {
+      height: $size-5;
+      width: $size-5;
     }
   }
 
