@@ -55,17 +55,31 @@
   &__media {
     display: flex;
     justify-content: center;
-    margin-top: $spacing-8;
-
-    @media screen and (min-width: map-get($breakpoints, 'breakpoint-6')) {
-      margin-top: $spacing-10;
-    }
   }
 
   &__image {
     &--hx {
+      margin-top: $spacing-8;
+
       @media screen and (min-width: map-get($breakpoints, 'breakpoint-11')) {
+        margin-top: $spacing-10;
         max-width: 68rem;
+      }
+    }
+    &--rift {
+      margin-top: $spacing-8;
+
+      @media screen and (min-width: map-get($breakpoints, 'breakpoint-1')) {
+        margin-bottom: -4rem;
+      }
+
+      @media screen and (min-width: map-get($breakpoints, 'breakpoint-6')) {
+        margin-bottom: 0;
+        margin-top: $spacing-4;
+      }
+
+      @media screen and (min-width: map-get($breakpoints, 'breakpoint-11')) {
+        max-width: 78rem;
       }
     }
   }

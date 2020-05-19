@@ -6,21 +6,6 @@
   }
 
   // RIFT images
-  &--rift-1 {
-    padding: $spacing-4 $spacing-5 0 $spacing-5;
-    transform:scale(1.2);
-
-    @media screen and (min-width: map-get($breakpoints, 'breakpoint-1')) {
-      margin-top: -$spacing-10 !important; // Needed to override the figure styling
-    }
-
-    @media screen and (min-width: map-get($breakpoints, 'breakpoint-4')) {
-      padding: $spacing-8 $spacing-8 0 $spacing-8;
-      margin-top: -$spacing-12 !important; // Needed to override the figure styling
-      transform:scale(1);
-    }
-  }
-
   &--rift-2 {
     margin-bottom: 0;
 

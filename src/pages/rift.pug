@@ -19,12 +19,15 @@ block pageComponents
   +hero({
     heroHeading: heroHeading,
     heroSubheading: heroSubheading,
+    heroIntroImage: true,
+    heroImage: {
+      src: "/assets/images/case-studies/rift/image-1.png",
+      alt: "Components"
+    },
+    heroImageModifier: "rift"
   })
-
+  
   section.section
-    figure.case-study-image.case-study-image--rift-1
-      img(src="/assets/images/case-studies/rift/image-1.png" alt="RIFT Components")
-
     .container
       .rift-challenge
         .rift-challenge__image
