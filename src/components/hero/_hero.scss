@@ -51,4 +51,22 @@
       max-width: 32rem;
     }
   }
+
+  &__media {
+    display: flex;
+    justify-content: center;
+    margin-top: $spacing-8;
+
+    @media screen and (min-width: map-get($breakpoints, 'breakpoint-6')) {
+      margin-top: $spacing-10;
+    }
+  }
+
+  &__image {
+    &--hx {
+      @media screen and (min-width: map-get($breakpoints, 'breakpoint-11')) {
+        max-width: 68rem;
+      }
+    }
+  }
 }

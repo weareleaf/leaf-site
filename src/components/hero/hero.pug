@@ -1,7 +1,17 @@
 mixin hero(c)
   section.hero
     .hero__container
-      .hero__content
-        h1.hero__heading !{c.heroHeading}#[span.hero__heading__period .]
-        p.hero__subheading(
-          class= c.heroSubheadingModifier ? "hero__subheading--" + c.heroSubheadingModifier : "") !{c.heroSubheading}
+      if c.heroIntroImage === true
+        .hero__content
+          h1.hero__heading !{c.heroHeading}#[span.hero__heading__period .]
+          p.hero__subheading(class= c.heroSubheadingModifier ? "hero__subheading--" + c.heroSubheadingModifier : "") !{c.heroSubheading}
+          +image({
+            context: "hero",
+            modifier: c.heroImageModifier,
+            src: c.heroImage.src,
+            alt: c.heroImage.alt
+          })
+      else
+        .hero__content
+          h1.hero__heading !{c.heroHeading}#[span.hero__heading__period .]
+          p.hero__subheading(class= c.heroSubheadingModifier ? "hero__subheading--" + c.heroSubheadingModifier : "") !{c.heroSubheading}

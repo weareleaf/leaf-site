@@ -5,22 +5,6 @@
     margin-bottom: $spacing-6;
   }
 
-  // HX images
-  &--hx-1 {
-    padding: $spacing-8 0;
-    transform:scale(1.2);
-
-    @media screen and (min-width: map-get($breakpoints, 'breakpoint-1')) {
-      margin-top: -$spacing-10 !important; // Needed to override the figure styling
-    }
-
-    @media screen and (min-width: map-get($breakpoints, 'breakpoint-4')) {
-      margin-top: -$spacing-7 !important; // Needed to override the figure styling
-      padding: 0 $spacing-11;
-      transform:scale(1);
-    }
-  }
-
   // RIFT images
   &--rift-1 {
     padding: $spacing-4 $spacing-5 0 $spacing-5;
@@ -221,7 +205,19 @@
   align-items: center;
   display: flex;
   justify-content: center;
-  margin-bottom: -$spacing-7;
+
+  @media screen and (min-width: map-get($breakpoints, 'breakpoint-1')) {
+    margin-top: -$spacing-7;
+  }
+
+  @media screen and (min-width: map-get($breakpoints, 'breakpoint-4')) {
+    margin-top: -$spacing-10;
+  }
+
+  @media screen and (min-width: map-get($breakpoints, 'breakpoint-11')) {
+    margin-bottom: -7rem;
+    margin-top: -7rem;
+  }
 
   &__items {
     @media screen and (min-width: map-get($breakpoints, 'breakpoint-4')) {

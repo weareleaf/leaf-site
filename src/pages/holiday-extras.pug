@@ -19,12 +19,16 @@ block pageComponents
   +hero({
     heroHeading: heroHeading,
     heroSubheading: heroSubheading,
-    heroSubheadingModifier: "narrow"
+    heroSubheadingModifier: "narrow",
+    heroIntroImage: true,
+    heroImage: {
+      src: "/assets/images/case-studies/hx/image-1.png",
+      alt: "Wireframes"
+    },
+    heroImageModifier: "hx"
   })
 
   section.section
-    figure.case-study-image.case-study-image--hx-1
-      img(src="/assets/images/case-studies/hx/image-1.png" alt="Holiday Extras Travel Insurance wireframes")
     .container
       .hx-challenge
         .hx-challenge__items
