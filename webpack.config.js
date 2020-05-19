@@ -1,7 +1,10 @@
+const { generateSitemapConfig } = require('./scripts/sitemap')
 const path = require('path')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 const CopyPlugin = require('copy-webpack-plugin')
+const SitemapPlugin = require('sitemap-webpack-plugin').default
 const glob = require('glob')
+
 const pages = glob.sync('**/*.pug', {
   cwd: path.resolve(__dirname, 'src/pages')
 })
@@ -19,6 +22,13 @@ const filePlugins = new CopyPlugin([
   { from: './src/resources/', to: './resources/' },
   { from: './src/robots.txt', to: './robots.txt' }
 ])
+
+const sitemapPlugin = new SitemapPlugin(
+  'https://weareleaf.com',
+  generateSitemapConfig(), {
+    filename: 'sitemap.xml'
+  }
+)
 
 const statsConfig = {
   children: false,
@@ -63,7 +73,7 @@ const config = {
     },
     stats: statsConfig,
   },
-  plugins: [].concat(pagePlugins, filePlugins),
+  plugins: [].concat(pagePlugins, filePlugins, sitemapPlugin),
   module: {
     rules: [
       {
