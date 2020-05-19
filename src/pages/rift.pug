@@ -131,21 +131,27 @@ block pageComponents
         contentBlockImageModifier: "rift-3"
       })
 
-      .centered-content.centered-content--rift
-        .grid.grid--center-text
-          .grid__item
-            +content({
-              contentHeading: "Move quickly and effectively",
-              contentIntro: "A combination of quick-fire sketches and wireframing help facilitate ideation and conversation in the most efficient way.",
-              contentParagraphs: [
-                {
-                  contentText: "We relied heavily on low-fidelity prototypes in the early stages of our design exploration, helping us to quickly validate or discredit concepts, gain stakeholder buy-in, and ensure a single, shared vision."
-                }
-              ]
-            })
-
-    figure.case-study-image.case-study-image--rift-4
-      img(src="/assets/images/case-studies/rift/image-4.png" alt="Wireframe Prototypes")
+  section.section      
+      .container
+        .centered-content.centered-content--rift
+          .grid.grid--center-text
+            .grid__item
+              +content({
+                contentHeading: "Move quickly and effectively",
+                contentIntro: "A combination of quick-fire sketches and wireframing help facilitate ideation and conversation in the most efficient way.",
+                contentParagraphs: [
+                  {
+                    contentText: "We relied heavily on low-fidelity prototypes in the early stages of our design exploration, helping us to quickly validate or discredit concepts, gain stakeholder buy-in, and ensure a single, shared vision."
+                  }
+                ]
+              })
+        .full-width
+          +image({
+            context: "full-width",
+            src: "/assets/images/case-studies/rift/image-4.png",
+            alt: "Wireframe Prototypes",
+            modifier: "rift-4"
+          })
   
   section.section
     .rift-metrics
@@ -272,6 +278,10 @@ block pageComponents
               }
             }
           })
-
-    figure.case-study-image.case-study-image--rift-8
-      img(src="/assets/images/case-studies/rift/image-8.png" alt="Trustpilot Reviews")
+      .full-width
+        +image({
+          context: "full-width",
+          src: "/assets/images/case-studies/rift/image-8.png",
+          alt: "Trustpilot Reviews",
+          modifier: "rift-8"
+        })

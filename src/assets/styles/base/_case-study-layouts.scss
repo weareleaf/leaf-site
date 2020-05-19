@@ -23,24 +23,6 @@
     }
   }
 
-  &--rift-4 {
-    margin-bottom: $spacing-12;
-    transform:scale(1.4);
-
-    @media screen and (min-width: map-get($breakpoints, 'breakpoint-3')) {
-      margin-bottom: $spacing-13;
-      transform:scale(1.25);
-    }
-
-    @media screen and (min-width: map-get($breakpoints, 'breakpoint-4')) {
-      margin-bottom: $spacing-14;
-    }
-
-    @media screen and (min-width: map-get($breakpoints, 'breakpoint-11')) {
-      margin-bottom: $spacing-15;
-    }
-  }
-
   &--rift-5 {
     margin: auto;
     margin-bottom: $spacing-7;
@@ -93,28 +75,46 @@
       position: absolute;
     }
   }
+}
 
-  &--rift-8 {
-    margin: $spacing-11 0 $spacing-10 0;
-    transform: scale(1.75);
+// Full width images
 
-    @media screen and (min-width: map-get($breakpoints, 'breakpoint-3')) {
-      margin: $spacing-11 0 0 0;
-      transform: scale(1.1);
+.full-width {
+  display: flex;
+  justify-content: center;
+
+  &__image {
+    &--rift-4 {
+      margin-bottom: $spacing-10;
+      max-width: $size-12;
+
+      @media screen and (min-width: map-get($breakpoints, 'breakpoint-3')) {
+        margin-bottom: $spacing-12;
+        margin-top: -$spacing-7;
+        max-width: 105rem;
+      }
     }
 
-    @media screen and (min-width: map-get($breakpoints, 'breakpoint-11')) {
-      margin: $spacing-11 0;
+    &--rift-8 {
+      margin-bottom: -$spacing-5;
+      margin-top: $spacing-9;
+      max-width: 65rem;
+
+      @media screen and (min-width: map-get($breakpoints, 'breakpoint-4')) {
+        margin-top: $spacing-10;
+        max-width: 93.5rem;
+      }
     }
   }
 }
+
+// Centred sections
 
 .centered-content {
   padding: $spacing-10 0;
   position: relative;
 
   @media screen and (min-width: map-get($breakpoints, 'breakpoint-3')) {
-    margin-bottom: $spacing-9;
     padding: $spacing-11 $spacing-10;
   }
 
@@ -123,10 +123,15 @@
   }
 
   &--hx {
-    background-color: #6F43B9;
+    background-color: $hx-studio;
     margin-bottom: $spacing-6;
     margin-top: -$spacing-11;
     z-index: -1;
+
+    @media screen and (min-width: map-get($breakpoints, 'breakpoint-2')) {
+      margin-bottom: $spacing-11;
+      margin-top: -9rem;
+    }
 
     @media screen and (min-width: map-get($breakpoints, 'breakpoint-4')) {
       margin-bottom: $spacing-14;
@@ -138,22 +143,6 @@
       margin-top: -$spacing-13;
     }
   }
-
-  &--rift {
-    margin-top: $spacing-11;
-    padding-bottom: 0;
-    padding: 0;
-
-    @media screen and (min-width: map-get($breakpoints, 'breakpoint-3')) {
-      padding: 0 $spacing-10;
-    }
-
-    @media screen and (min-width: map-get($breakpoints, 'breakpoint-4')) {
-      margin-top: 0;
-      padding: 0;
-    }
-  }
-
   .bg-shapes {
     display: none;
 
@@ -183,9 +172,27 @@
       }
     }
   }
+
+  &--rift {
+    margin-bottom: $spacing-3;
+    margin-top: $spacing-11;
+    padding-bottom: 0;
+    padding: 0;
+
+    @media screen and (min-width: map-get($breakpoints, 'breakpoint-3')) {
+      padding: 0 $spacing-10;
+    }
+
+    @media screen and (min-width: map-get($breakpoints, 'breakpoint-4')) {
+      margin-bottom: 0;
+      margin-top: 0;
+      padding: 0;
+    }
+  }
 }
 
 // HX layouts
+
 .hx-challenge {
   align-items: center;
   display: flex;
@@ -298,6 +305,7 @@
 }
 
 // RIFT layouts
+
 .rift-challenge {
   display: flex;
   flex-direction: column;
