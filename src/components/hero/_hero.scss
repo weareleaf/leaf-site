@@ -1,5 +1,5 @@
 .hero {
-  margin: $spacing-8 0;
+  margin: $spacing-9 0;
   position: relative;
 
   @media screen and (min-width: map-get($breakpoints, 'breakpoint-1')) {
@@ -63,14 +63,18 @@
 
       @media screen and (min-width: map-get($breakpoints, 'breakpoint-11')) {
         margin-top: $spacing-10;
-        max-width: 68rem;
+        min-width: 68rem;
       }
     }
     &--rift {
-      margin-top: $spacing-8;
+      margin-left: -$spacing-5;
+      margin-bottom: -$spacing-7;
+      margin-top: -1rem;
+      max-width: 66rem;
 
       @media screen and (min-width: map-get($breakpoints, 'breakpoint-1')) {
-        margin-bottom: -4rem;
+        margin-bottom: -$spacing-9;
+        margin-left: 0;
       }
 
       @media screen and (min-width: map-get($breakpoints, 'breakpoint-6')) {

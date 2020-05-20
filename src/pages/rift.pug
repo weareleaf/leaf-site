@@ -206,8 +206,13 @@ block pageComponents
         .rift-documents-upload__image
           figure.case-study-image.case-study-image--rift-6
             img(src="/assets/images/case-studies/rift/image-6.png" alt="Document Uploads")
-          figure.case-study-image.case-study-image--rift-10
-            img(src="/assets/images/case-studies/rift/image-10.png" alt="Document Uploads")
+          .full-width
+            +image({
+              context: "full-width",
+              src: "/assets/images/case-studies/rift/image-10.png",
+              alt: "Document Uploads",
+              modifier: "rift-10"
+            })
 
   section.section
     .container
@@ -227,6 +232,7 @@ block pageComponents
           })
           +metrics({
             metricsModifier: "margin",
+            metricsIconModifier: "rotate",
             metricItems: [
               {
                 metricsUnit: "99.8%",
@@ -257,6 +263,7 @@ block pageComponents
           })
           +metrics({
             metricsModifier: "margin",
+            metricsIconModifier: "rotate",
             metricItems: [
               {
                 metricsUnit: "192%",

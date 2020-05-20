@@ -3,7 +3,7 @@
   margin-bottom: $spacing-9;
   width: 100%;
 
-  @media screen and (min-width: map-get($breakpoints, 'breakpoint-2')) {
+  @media screen and (min-width: map-get($breakpoints, 'breakpoint-1')) {
     padding: 0 $spacing-9;
   }
 
@@ -131,10 +131,11 @@
     &--rift-3 {
       left: $spacing-4;
       max-width: 110%;
-      top: $spacing-9;
+      top: $spacing-6;
 
       @media screen and (min-width: map-get($breakpoints, 'breakpoint-3')) {
         left: $spacing-5;
+        top: $spacing-9;
       }
     }
   }

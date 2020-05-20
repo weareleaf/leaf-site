@@ -53,9 +53,13 @@
 
   &--rift-7 {
     margin-bottom: 0;
-    padding-left: .5rem;
+    padding-left: $spacing-3;
     padding-top: $spacing-6;
     position: relative;
+
+    @media screen and (min-width: map-get($breakpoints, 'breakpoint-2')) {
+      padding-left: $spacing-5;
+    }
 
     @media screen and (min-width: map-get($breakpoints, 'breakpoint-4')) {
       left: $spacing-7;
@@ -69,16 +73,8 @@
     margin: 0;
 
     @media screen and (min-width: map-get($breakpoints, 'breakpoint-2')) {
-      margin-top: 2rem;
+      margin-top: 1rem;
     }
-
-    @media screen and (min-width: map-get($breakpoints, 'breakpoint-4')) {
-      display: none;
-    }
-  }
-
-  &--rift-10 {
-    margin-bottom: 0;
 
     @media screen and (min-width: map-get($breakpoints, 'breakpoint-4')) {
       display: none;
@@ -94,7 +90,7 @@
 
   &__image {
     &--rift-4 {
-      max-width: $size-12;
+      max-width: 80rem;
 
       @media screen and (min-width: map-get($breakpoints, 'breakpoint-4')) {
         margin-bottom: $spacing-9;
@@ -110,11 +106,25 @@
     &--rift-8 {
       margin-bottom: -$spacing-5;
       margin-top: $spacing-9;
-      max-width: 65rem;
+      max-width: 86.5rem;
 
       @media screen and (min-width: map-get($breakpoints, 'breakpoint-4')) {
         margin-top: $spacing-10;
         max-width: 93.5rem;
+      }
+    }
+
+    &--rift-10 {
+      margin-bottom: -$spacing-7;
+      margin-top: $spacing-8;
+      min-width: 50rem;
+
+      @media screen and (min-width: map-get($breakpoints, 'breakpoint-3')) {
+        min-width: 40rem;
+      }
+  
+      @media screen and (min-width: map-get($breakpoints, 'breakpoint-4')) {
+        display: none;
       }
     }
   }
@@ -187,8 +197,13 @@
 
   &--rift {
     margin-bottom: $spacing-3;
-    margin-top: $spacing-11;
+    margin-top: $spacing-9;
     padding: 0;
+
+    @media screen and (min-width: map-get($breakpoints, 'breakpoint-1')) {
+      margin-top: $spacing-10;
+      padding: 0 $spacing-9;
+    }
 
     @media screen and (min-width: map-get($breakpoints, 'breakpoint-3')) {
       padding: 0 $spacing-11;
@@ -322,7 +337,7 @@
   flex-direction: column;
   margin: $spacing-9 0;
 
-  @media screen and (min-width: map-get($breakpoints, 'breakpoint-2')) {
+  @media screen and (min-width: map-get($breakpoints, 'breakpoint-1')) {
     padding: 0 $spacing-9;
   }
 
@@ -363,8 +378,8 @@
   padding: $spacing-8 0 $spacing-6 0;
   position: relative;
 
-  @media screen and (min-width: map-get($breakpoints, 'breakpoint-2')) {
-    margin-bottom: $spacing-12;
+  @media screen and (min-width: map-get($breakpoints, 'breakpoint-1')) {
+    margin-bottom: $spacing-9;
     padding: $spacing-9;
   }
 
@@ -424,7 +439,7 @@
   grid-column-gap: $spacing-9;
   margin: 0;
 
-  @media screen and (min-width: map-get($breakpoints, 'breakpoint-2')) {
+  @media screen and (min-width: map-get($breakpoints, 'breakpoint-1')) {
     padding: 0 $spacing-9;
   }
 
@@ -449,8 +464,12 @@
   margin-top: $spacing-10;
   padding-top: 0;
 
+  @media screen and (min-width: map-get($breakpoints, 'breakpoint-1')) {
+    padding: 0 $spacing-9;
+  }
+
   @media screen and (min-width: map-get($breakpoints, 'breakpoint-3')) {
-    padding: 0 $spacing-10;
+    padding: 0 $spacing-11;
   }
 
   @media screen and (min-width: map-get($breakpoints, 'breakpoint-4')) {
@@ -475,8 +494,12 @@
 }
 
 .rift-outcome {
+  @media screen and (min-width: map-get($breakpoints, 'breakpoint-1')) {
+    padding: 0 $spacing-9;
+  }
+
   @media screen and (min-width: map-get($breakpoints, 'breakpoint-3')) {
-    padding: 0 $spacing-10;
+    padding: 0 $spacing-11;
   }
 
   @media screen and (min-width: map-get($breakpoints, 'breakpoint-4')) {

@@ -52,7 +52,7 @@
     &:first-child {
       border-bottom: $border-style $border-width-base var(--color-metric-border);
 
-      @media screen and (min-width: map-get($breakpoints, 'breakpoint-1')) {
+      @media screen and (min-width: map-get($breakpoints, 'breakpoint-2')) {
         border-bottom: none;
         border-right: $border-style $border-width-base var(--color-metric-border);
       }
@@ -64,7 +64,7 @@
     border: $border-style $border-width-base var(--color-metric-border);
     border-radius: $border-radius-lg;
 
-    @media screen and (min-width: map-get($breakpoints, 'breakpoint-1')) {
+    @media screen and (min-width: map-get($breakpoints, 'breakpoint-2')) {
       @include two-col-grid;
     }
   }
@@ -86,6 +86,7 @@
       margin: 0 auto;
       position: relative;
       top: 0;
+      transform: rotate(180deg);
 
       @media screen and (min-width: map-get($breakpoints, 'breakpoint-4')) {
         left: $spacing-4;
@@ -93,6 +94,10 @@
         position: absolute;
         top: $spacing-4;
       }
+    }
+
+    &--rotate {
+      transform: rotate(180deg);
     }
   }
 
