@@ -136,8 +136,13 @@
   padding: $spacing-10 0;
   position: relative;
 
+  @media screen and (min-width: map-get($breakpoints, 'breakpoint-1')) {
+    padding: $spacing-11 $spacing-9;
+  }
+  
+
   @media screen and (min-width: map-get($breakpoints, 'breakpoint-3')) {
-    padding: $spacing-11 $spacing-10;
+    padding: $spacing-11;
   }
 
   @media screen and (min-width: map-get($breakpoints, 'breakpoint-4')) {
@@ -278,7 +283,7 @@
   position: absolute;
   right: 0;
 
-  @media screen and (min-width: map-get($breakpoints, 'breakpoint-2')) {
+  @media screen and (min-width: map-get($breakpoints, 'breakpoint-1')) {
     bottom: -9rem;
     margin: $spacing-13 auto 0 auto;
     max-width: 34rem;
@@ -292,9 +297,13 @@
 .hx-outcome {
   margin-top: -$spacing-5;
 
+  @media screen and (min-width: map-get($breakpoints, 'breakpoint-1')) {
+    padding: 0 $spacing-9;
+  }
+
   @media screen and (min-width: map-get($breakpoints, 'breakpoint-3')) {
     margin-top: -$spacing-7;
-    padding: 0 $spacing-10;
+    padding: 0 $spacing-11;
   }
 
   @media screen and (min-width: map-get($breakpoints, 'breakpoint-4')) {

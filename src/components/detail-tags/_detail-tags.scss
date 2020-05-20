@@ -7,9 +7,18 @@ $icon-size: .8rem;
   width: 100%;
 
   &--hx {
+    @media screen and (min-width: map-get($breakpoints, 'breakpoint-1')) {
+      padding: 0 $spacing-9;
+    }
+
+    @media screen and (min-width: map-get($breakpoints, 'breakpoint-3')) {
+      padding: 0 $spacing-7;
+    }
+
     @media screen and (min-width: map-get($breakpoints, 'breakpoint-4')) {
       bottom: $spacing-8;
       justify-content: flex-end;
+      padding: 0;
       position: absolute;
       right: 2rem;
       width: 18rem;
@@ -26,9 +35,9 @@ $icon-size: .8rem;
 
   &__heading {
     color: var(--detail-heading);
-    font-family: $font-family-sans-serif-extrabold;
     font-size: $font-size-xxs;
-    letter-spacing: .1rem;
+    font-weight: $font-weight-heading;
+    letter-spacing: .05rem;
     position: absolute;
     text-transform: uppercase;
     top: -$spacing-6;

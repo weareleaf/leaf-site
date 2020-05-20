@@ -35,9 +35,9 @@
   }
 
   &__heading {
-    font-family: $font-family-sans-serif-extrabold;
     font-size: $font-size-xxs;
-    letter-spacing: .1rem;
+    font-weight: $font-weight-heading;
+    letter-spacing: .05rem;
     text-transform: uppercase;
   }
 

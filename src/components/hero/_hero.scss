@@ -60,10 +60,14 @@
   &__image {
     &--hx {
       margin-top: $spacing-8;
+      max-width: 40rem;
+
+      @media screen and (min-width: map-get($breakpoints, 'breakpoint-3')) {
+        max-width: 68rem;
+      }
 
       @media screen and (min-width: map-get($breakpoints, 'breakpoint-11')) {
         margin-top: $spacing-10;
-        min-width: 68rem;
       }
     }
     &--rift {
