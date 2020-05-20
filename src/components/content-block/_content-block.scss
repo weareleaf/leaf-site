@@ -3,8 +3,12 @@
   margin-bottom: $spacing-9;
   width: 100%;
 
+  @media screen and (min-width: map-get($breakpoints, 'breakpoint-2')) {
+    padding: 0 $spacing-9;
+  }
+
   @media screen and (min-width: map-get($breakpoints, 'breakpoint-3')) {
-    padding: 0 $spacing-10;
+    padding: 0 $spacing-11;
   }
 
   @media screen and (min-width: map-get($breakpoints, 'breakpoint-4')) {
