@@ -53,6 +53,7 @@
   }
 
   &__media {
+    align-items: flex-start; // Fixes Safari jank
     display: flex;
     justify-content: center;
   }
@@ -60,10 +61,10 @@
   &__image {
     &--hx {
       margin-top: $spacing-8;
-      max-width: 40rem;
+      min-width: 40rem; // Min fixes Firefox width issue
 
       @media screen and (min-width: map-get($breakpoints, 'breakpoint-3')) {
-        max-width: 68rem;
+        min-width: 68rem;
       }
 
       @media screen and (min-width: map-get($breakpoints, 'breakpoint-11')) {
@@ -72,9 +73,9 @@
     }
     &--rift {
       margin-left: -$spacing-5;
-      margin-bottom: -$spacing-7;
-      margin-top: -1rem;
-      max-width: 66rem;
+      margin-bottom: -$spacing-8;
+      margin-top: -$spacing-6;
+      min-width: 66rem;
 
       @media screen and (min-width: map-get($breakpoints, 'breakpoint-1')) {
         margin-bottom: -$spacing-9;
@@ -87,7 +88,7 @@
       }
 
       @media screen and (min-width: map-get($breakpoints, 'breakpoint-11')) {
-        max-width: 78rem;
+        min-width: 78rem;
       }
     }
   }

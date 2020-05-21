@@ -66,22 +66,20 @@
     }
 
     &--hx-image-4 {
-      max-width: 139%;
+      display: none;
 
       @media screen and (min-width: map-get($breakpoints, 'breakpoint-4')) {
+        display: block;
         left: 3.4rem;
         max-width: 125%;
       }
     }
 
     &--hx-image-5 {
-      padding-right: $spacing-8;
-
-      @media screen and (min-width: map-get($breakpoints, 'breakpoint-1')) {
-        padding-right: $spacing-10;
-      }
+      display: none;
 
       @media screen and (min-width: map-get($breakpoints, 'breakpoint-4')) {
+        display: block;
         max-width: 110%;
         padding: 0;
         right: $spacing-7;
@@ -90,15 +88,19 @@
     }
 
     &--hx-image-6 {
+      display: none;
+
       @media screen and (min-width: map-get($breakpoints, 'breakpoint-4')) {
+        display: block;
         max-width: 120%;
       }
     }
 
     &--hx-image-7 {
-      right: $spacing-6;
+      margin: 0 auto 0 -1.25rem;
 
-      @media screen and (min-width: map-get($breakpoints, 'breakpoint-2')) {
+      @media screen and (min-width: map-get($breakpoints, 'breakpoint-1')) {
+        margin: 0;
         right: 1.75rem;
       }
 
@@ -110,32 +112,98 @@
       @media screen and (min-width: map-get($breakpoints, 'breakpoint-11')) {
         max-width: 100%;
         right: $spacing-5;
+        top: -5.5rem;
       }  
     }
 
     &--hx-image-9 {
-      right: $spacing-5;
-
-      @media screen and (min-width: map-get($breakpoints, 'breakpoint-1')) {
-        right: $spacing-6;
-      } 
+      display: none; 
       
       @media screen and (min-width: map-get($breakpoints, 'breakpoint-4')) {
+        display: block;
         max-width: 96%;
         right: 0;
         top: -5rem;
       } 
     }
 
+    &--hx-image-10 {
+      display: block;
+      margin: -$spacing-6 auto -1rem auto;
+
+      @media screen and (min-width: map-get($breakpoints, 'breakpoint-1')) {
+        max-width: 51.5%;
+      }
+
+      @media screen and (min-width: map-get($breakpoints, 'breakpoint-4')) {
+        display: none;
+      }
+    }
+
+    &--hx-image-11 {
+      display: block;
+      margin: -$spacing-6 auto 0 auto;
+
+      @media screen and (min-width: map-get($breakpoints, 'breakpoint-1')) {
+        max-width: 50%;
+      }
+
+      @media screen and (min-width: map-get($breakpoints, 'breakpoint-4')) {
+        display: none;
+      }
+    }
+
+    &--hx-image-12 {
+      display: block;
+      margin: -$spacing-6 auto 0 auto;
+
+      @media screen and (min-width: map-get($breakpoints, 'breakpoint-1')) {
+        max-width: 50%;
+      }
+
+      @media screen and (min-width: map-get($breakpoints, 'breakpoint-4')) {
+        display: none;
+      }
+    }
+
+    &--hx-image-13 {
+      display: block;
+      margin: -$spacing-6 auto 5rem auto;
+      max-width: 80%;
+
+      @media screen and (min-width: map-get($breakpoints, 'breakpoint-1')) {
+        margin: -$spacing-6 auto 7rem auto;
+        max-width: 40%;
+      }
+
+      @media screen and (min-width: map-get($breakpoints, 'breakpoint-4')) {
+        display: none;
+      }
+    }
+
     // RIFT Images
     &--rift-3 {
-      left: $spacing-4;
-      max-width: 110%;
-      top: $spacing-6;
+      display: none;
 
-      @media screen and (min-width: map-get($breakpoints, 'breakpoint-3')) {
+      @media screen and (min-width: map-get($breakpoints, 'breakpoint-4')) {
+        display: block;
         left: $spacing-5;
+        max-width: 110%;
         top: $spacing-9;
+      }
+    }
+
+    &--rift-11 {
+      display: block;
+      margin-top: -$spacing-7;
+
+      @media screen and (min-width: map-get($breakpoints, 'breakpoint-1')) {
+        margin: -$spacing-5 auto 0 auto;
+        max-width: 60%;
+      }
+
+      @media screen and (min-width: map-get($breakpoints, 'breakpoint-4')) {
+        display: none;
       }
     }
   }
@@ -154,7 +222,7 @@
     margin-bottom: $spacing-6;
 
     @media screen and (min-width: map-get($breakpoints, 'breakpoint-3')) {
-      font-size: 2.2rem;
+      font-size: $font-size-xl;
     }
 
     @media screen and (min-width: map-get($breakpoints, 'breakpoint-4')) {
