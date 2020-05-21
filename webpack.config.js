@@ -78,10 +78,12 @@ const config = {
     rules: [
       {
         test: /\.pug$/,
+        include: path.resolve(__dirname, 'src'),
         use: ['html-loader?attrs=false', 'pug-html-loader']
       },
       {
         test: /\.js$/,
+        include: path.resolve(__dirname, 'src/assets/scripts'),
         exclude: /(node_modules|dist)/,
         use: {
           loader: 'babel-loader',
@@ -93,6 +95,7 @@ const config = {
       },
       {
         test: /\.scss$/,
+        include: path.resolve(__dirname, 'src/assets/styles'),
         use: [
           {
             loader: 'file-loader',
