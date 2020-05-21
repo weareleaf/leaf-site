@@ -25,7 +25,11 @@
 
   &__list-item {
     &:not(:last-child) {
-      margin-bottom: $spacing-8;
+      margin-bottom: $spacing-7;
+
+      @media screen and (min-width: map-get($breakpoints, 'breakpoint-2')) {
+        margin-bottom: $spacing-8;
+      }
     }
   }
 
