@@ -167,6 +167,7 @@ img {
   padding: 0;
 
   &__item {
+    font-size: $font-size-sm;
     position: relative;
 
     &:not(:last-child) {
@@ -184,7 +185,7 @@ img {
     }
 
     .styled-list--inside & {
-      margin-left: $spacing-6;
+      margin-left: $spacing-5;
     }
 
     .styled-list--inside-sm & {
@@ -199,11 +200,11 @@ img {
       background-color: var(--color-accent);
       content: '';
       display: block;
-      height: .4rem;
-      left: -1.4rem;
+      height: .3rem;
+      left: -1rem;
       position: absolute;
-      top: .4rem;
-      width: .4rem;
+      top: .5rem;
+      width: .3rem;
     }
   }
 }

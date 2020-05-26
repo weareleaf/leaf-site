@@ -1,4 +1,11 @@
 mixin bullet(c)
- .bullet__content(class= c.class)
-  .bullet__text!= c.bulletContent
- 
+  .bullet
+    if c.listHeading === true
+      h5.bullet__heading= c.bulletHeading
+      ul.bullet.styled-list(class= c.styledListModifier ? "styled-list--" + c.styledListModifier : "")
+        each item in c.styledListItems 
+          li.bullet.styled-list__item= item.styledListItem
+    else
+      ul.bullet.styled-list(class= c.styledListModifier ? "styled-list--" + c.styledListModifier : "")
+        each item in c.styledListItems 
+          li.bullet.styled-list__item= item.styledListItem

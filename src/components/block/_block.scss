@@ -1,3 +1,8 @@
 .block {
-
+  &__heading {
+    margin-bottom: $spacing-3;
+  }
+  &__text {
+    line-height: 1.5rem;
+  }
 }
