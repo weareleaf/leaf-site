@@ -1,0 +1,92 @@
+extends ../../layouts/content.pug
+
+block prepend vars
+  -var pageTitle = "Front-end Developer Position | Leaf"
+  -var metaUrl = "https://weareleaf.com/careers/front-end-developer"
+  -var metaTitle = "Front-end Developer Position"
+  -var metaDescription = "We're looking for a brilliant front-end developer to build world-class web applications at Leaf. Sound like your thing? Read on, and get in touch."
+
+block pageComponents
+
+  +banner({})
+
+  .banner-spacer
+
+  +hero({
+    heroHeading: metaTitle,
+    heroSubheading: metaDescription,
+  })
+
+  .section
+    .container
+      figure
+        img(src="/assets/images/careers/image-1.jpg" alt="Mike, hard at work on his Macbook")
+
+      .grid.grid--two-thirds-reverse
+        .grid__item
+          +summary({
+            summaryHeading: "Who are we?",
+            summaryText: "Leaf are a remote agency based in the UK. We specialise in complex information capture, helping organisations excel online by making it easy for their users to provide them with high quality information."
+          })
+
+        .grid__item
+          h4 About the role
+          p We're working hard to build a strong core of expertise around complex information capture on the web. To get there, we need help from a brilliant front-end developer who loves to build fast, accessible, progressively enhanced web applications that deliver tremendous value.
+
+          p In this role you'll be working remotely and choosing your own hours, but within that flexibility you'll be expected to deliver features and improvements in an efficient, timely manner. The role is ideal for someone who likes stability and routine, as you'll spend most of your time problem solving, writing code, and shipping value.
+
+      figure
+        img(src="/assets/images/careers/image-2.jpg" alt="Chris and Mike on a face-to-face team catch-up day")
+        figcaption Chris and Mike on a face-to-face team catch-up day
+
+      .grid.grid--two-thirds
+        .grid__item
+          h4 Primary responsibilities
+          ul.styled-list.styled-list--inside-lg
+            li.styled-list__item Efficient delivery of high quality features and improvements to our clients web applications.
+            li.styled-list__item Collaborating effectively with your coworkers to come to the best solution for given constraints.
+            li.styled-list__item Communicating clear, concise updates to clients in a way that anticipates their needs.
+            li.styled-list__item Driving the technical quality of our work, and knowledge around complex data capture forward.
+
+          h4 You will need
+          ul.styled-list.styled-list--inside-lg
+            li.styled-list__item Excellent written and verbal communication skills.
+            li.styled-list__item An excellent understanding of modern HTML, CSS, and JavaScript.
+            li.styled-list__item A good high level understanding how web browsers work (HTTP, the DOM, etc.).
+            li.styled-list__item A good understanding of how to use your browser's development tools.
+            li.styled-list__item A good understanding of issues related to user experience, performance, accessibility, progressive enhancement, and cross-browser compatibility.
+            li.styled-list__item A willingness to learn new technologies and programming languages.
+
+          h4 Bonus points if…
+          ul.styled-list.styled-list--inside-lg
+            li.styled-list__item You have some experience with <a href="https://reactjs.org">React</a>.
+            li.styled-list__item You're happy enough figuring things out in your terminal.
+            li.styled-list__item You're not afraid to voice your opinion.
+            li.styled-list__item You have experience working in a client-focussed business.
+            li.styled-list__item You have experience with another programming language.
+
+          h4 Location
+          p This is a remote position. However, when we're not quarantined, a few times a year we like everyone to drop into Canterbury - famous for its cathedrals, cobbles and tales - for a bit of face-time with the rest of the team.
+
+          h4 How to apply
+          p Email your CV to <a href="mailto:hello@weareleaf.com">hello@weareleaf.com</a>, along with a little about yourself, some examples of your work, and why you think you'd be a good fit.
+
+          h4 After you apply
+          p If we're interested in moving forward with your application, we'll arrange a remote interview with you to further establish our suitability for you as employers, and your suitability for this role.
+
+          p Following your interview, if we're thinking about making an offer we'll give you some real work to do to assess your technical suitability for the role. We'll pay you for this, and arrange something with you that works around your other commitments.
+
+          p We look forward to hearing from you!
+
+        .grid__item
+          +sidebar([{
+            item: "We're expecting to make an offer between <strong>£40,000 to £60,000</strong> per annum for this role."
+          },{
+            item: "We'll provide you with all the equipment you need for your work, including a <strong>16\" Macbook Pro</strong>."
+          },{
+            item: "We're a <strong>remote-first</strong> company, offering <strong>flexible working hours</strong>."
+          },{
+            item: "You'll get <strong>20 days holiday</strong>, and well as <strong>your birthday</strong>, off each year (birthdays are for cake, and cake only)."
+          },{
+            item: "We'll keep your personal progression a priority with <strong>fortnightly one-on-ones</strong> and <strong>6-monthly performance reviews</strong>."
+          }])
