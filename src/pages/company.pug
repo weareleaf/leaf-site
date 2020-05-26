@@ -18,46 +18,49 @@ block pageComponents
 
   section.section
     .container
-      +block({
-        blockHeading: "Where are you based?",
-        blockText: "We’re a remote company, and have shunned the traditional office in favour of the many collective benefits brought about by distributed working:"
-      })
-      .grid.grid--bullet-points
-        +bullet({
-          styledListModifier: "inside",
-          styledListItems: [
-            {
-              styledListItem: "More time for loved ones."
-            },
-            {
-              styledListItem: "No daily commute."
-            },
-            {
-              styledListItem: "Access to the best talent."
-            },
-            {
-              styledListItem: "Freedom to live anywhere."
-            }
-          ]
-        })
-        +bullet({
-          styledListModifier: "inside",
-          styledListItems: [
-            {
-              styledListItem: "Increased productivety."
-            },
-            {
-              styledListItem: "Less distractions."
-            },
-            {
-              styledListItem: "Reduced overheads."
-            },
-            {
-              styledListItem: "Lower carbon footprint."
-            }
-          ]
-        })
-      +block({
-        blockHeading: "What makes you different?",
-        blockText: "We look after our team so that they can better look after you. We strive to work smarter, not harder, and believe a good work/life balance and a calm working environment are key to producing happier, more effective teams. An engaged and highly-skilled individual is infinitely better prepared to do great work than someone working all hours to meet an unrealistic deadline."
-      })
+      .company-overview
+        .company-overview__content
+          +block({
+            blockHeading: "Where are you based?",
+            blockText: "We’re a remote company, and have shunned the traditional office in favour of the many collective benefits brought about by distributed working:"
+          })
+          .grid.grid--bullet-points
+            +bullet({
+              styledListModifier: "inside",
+              styledListItems: [
+                {
+                  styledListItem: "More time for loved ones."
+                },
+                {
+                  styledListItem: "No daily commute."
+                },
+                {
+                  styledListItem: "Access to the best talent."
+                },
+                {
+                  styledListItem: "Freedom to live anywhere."
+                }
+              ]
+            })
+            +bullet({
+              styledListModifier: "inside",
+              styledListItems: [
+                {
+                  styledListItem: "Increased productivety."
+                },
+                {
+                  styledListItem: "Less distractions."
+                },
+                {
+                  styledListItem: "Reduced overheads."
+                },
+                {
+                  styledListItem: "Lower carbon footprint."
+                }
+              ]
+            })
+          +block({
+            blockHeading: "What makes you different?",
+            blockText: "We look after our team so that they can better look after you. We strive to work smarter, not harder, and believe a good work/life balance and a calm working environment are key to producing happier, more effective teams. An engaged and highly-skilled individual is infinitely better prepared to do great work than someone working all hours to meet an unrealistic deadline."
+          })
+        .company-overview__map
