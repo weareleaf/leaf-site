@@ -1,11 +1,8 @@
 .bullet {
-  &--margin {
-    margin: $spacing-7 0;
-  }
-
-  &__text {
-    strong {
-      color: $color-slate;
+  .styled-list {
+    &__item {
+      height: $size-2;
+      margin-bottom: 0;
     }
   }
 }

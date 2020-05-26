@@ -107,4 +107,9 @@
       grid-template-columns: 1fr 1fr 1fr;
     }
   }
+
+  &--bullet-points {
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 0;
+  }
 }

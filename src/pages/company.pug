@@ -7,7 +7,7 @@ block prepend vars
   -var metaTitle = "The Company"
   -var metaDescription = "Five web experts working hard to help organisations capture higher quality information from happier users. Specialist web design & development."
 
-  -var heroHeading = "We're good eggs"
+  -var heroHeading = "We know our onions"
   -var heroSubheading = "What started as a side-hustle in summer 2015 is now an established team of five designers and engineers, focused solely on creating software that benefits not only the organisations we work with, but their users too."
 
 block pageComponents
@@ -18,92 +18,46 @@ block pageComponents
 
   section.section
     .container
-      .grid.grid--statements
-        .grid__item
-          +statement({
-            statementIcon: "/assets/images/icons/leaves.svg",
-            statementIconAlt: "A small plant sprouting from the ground.",
-            statementHeading: "We nurture relationships",
-            statementText: "As a remote organisation, we work with clients from all across the world. Our focus on cultivating relationships puts your success first."
-          })
-
-        .grid__item
-          +statement({
-            statementIcon: "/assets/images/icons/scales.svg",
-            statementIconAlt: "A pair of traditional scales in perfect balance.",
-            statementHeading: "Intentionally lean",
-            statementText: "We hate the faceless conveyor belt model of larger agencies. Keeping our overheads low and our core team small means you'll always be a priority."
-          })
-
-        .grid__item
-          +statement({
-            statementIcon: "/assets/images/icons/communicate.svg",
-            statementIconAlt: "A smiling face inside a speech bubble.",
-            statementHeading: "We talk honestly, and often",
-            statementText: "The most honest advice can sometimes be the most difficult to give. We’ll always be completely open and tell you the truth, even when it hurts."
-          })
-
-        .grid__item
-          +statement({
-            statementIcon: "/assets/images/icons/lego.svg",
-            statementIconAlt: "A single lego brick.",
-            statementHeading: "Evolution, not revolution",
-            statementText: "With existing products, we focus on continual improvement, delivering low-risk and fast results, one considered piece at a time."
-          })
-
-  section.section
-    .container
-      .grid.grid--profiles
-        .grid__item
-          +profile({
-            profileImage: {
-              context: "profile",
-              src: "/assets/images/team/chris.jpg",
-              alt: "Chris Annetts looking serious in front of a brick wall."
+      +block({
+        blockHeading: "Where are you based?",
+        blockText: "We’re a remote company, and have shunned the traditional office in favour of the many collective benefits brought about by distributed working:"
+      })
+      .grid.grid--bullet-points
+        +bullet({
+          styledListModifier: "inside",
+          styledListItems: [
+            {
+              styledListItem: "More time for loved ones."
             },
-            profileHeading: "Chris Annetts",
-            profileText: "Design Director"
-          })
-
-        .grid__item
-          +profile({
-            profileImage: {
-              context: "profile",
-              src: "/assets/images/team/mike.jpg",
-              alt: "Mike Carter looking mildly amused in front of a brick wall."
+            {
+              styledListItem: "No daily commute."
             },
-            profileHeading: "Mike Carter",
-            profileText: "Engineering Director"
-          })
-
-        .grid__item
-          +profile({
-            profileImage: {
-              context: "profile",
-              src: "/assets/images/team/oj.jpg",
-              alt: "OJ looking relaxed in front of a brick wall."
+            {
+              styledListItem: "Access to the best talent."
             },
-            profileHeading: "Oliver Standeven (OJ)",
-            profileText: "Software Engineer"
-          })
-
-        .grid__item
-          +profile({
-            profileImage: {
-              context: "profile",
-              src: "/assets/images/team/tina.jpg",
-              alt: "Tina van Schelt looking pleased in front of a brick wall."
+            {
+              styledListItem: "Freedom to live anywhere."
+            }
+          ]
+        })
+        +bullet({
+          styledListModifier: "inside",
+          styledListItems: [
+            {
+              styledListItem: "Increased productivety."
             },
-            profileHeading: "Tina van Schelt",
-            profileText: "Software Engineer"
-          })
-
-        .grid__item
-          +profile({
-            profileImage: {
-              src: "/assets/images/team/curt.jpg",
-              alt: "Curtis Lee looking very happy in front of a tree."
+            {
+              styledListItem: "Less distractions."
             },
-            profileHeading: "Curtis Lee",
-            profileText: "Product Designer"
-          })
+            {
+              styledListItem: "Reduced overheads."
+            },
+            {
+              styledListItem: "Lower carbon footprint."
+            }
+          ]
+        })
+      +block({
+        blockHeading: "What makes you different?",
+        blockText: "We look after our team so that they can better look after you. We strive to work smarter, not harder, and believe a good work/life balance and a calm working environment are key to producing happier, more effective teams. An engaged and highly-skilled individual is infinitely better prepared to do great work than someone working all hours to meet an unrealistic deadline."
+      })
