@@ -2,8 +2,8 @@ mixin explanation(c)
   .explanation
     if c.explanationExample === true
       img.explanation__icon(src="/assets/images/icons/ui/info.svg")
-      h3.explanation__heading For example
+      h3.explanation__heading !{c.explanationHeading}
     else
       img.explanation__icon(src="/assets/images/icons/ui/question.svg")
-      h3.explanation__heading How this helps me
+      h3.explanation__heading !{c.explanationHeading}
     p.explanation__text !{c.explanationText}
