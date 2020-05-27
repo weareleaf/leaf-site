@@ -177,6 +177,17 @@ $timing-ease-in-out: ease-in-out;
 $timing-ease-in: ease-in;
 $timing-elastic: cubic-bezier(.55, 0, .1, 1);
 
+// Z-index map
+$z-index: (  
+  'default': 1,  
+  'below': -1
+);
+
+// Z-index function
+@function z($key) {
+  @return map-get($z-index, $key);
+}
+
 :root {
   --color-accent: #{$color-powder};
   --color-background: #{$color-majorelle};

@@ -225,7 +225,7 @@ img {
     margin-bottom: -1rem; // Custom margin, unrelated to global spacing system
     pointer-events: none;
     text-align: center;
-    z-index: -1;
+    z-index: z('below');
 
     @media screen and (min-width: map-get($breakpoints, 'breakpoint-1')) {
       font-size: 5rem; // Custom font-size, unrelated to global spacing system
@@ -273,7 +273,7 @@ blockquote.blog-blockquote {
       left: 0;
       position: absolute;
       top: 0;
-      z-index: -1;
+      z-index: z('below');
     }
 
     &::after {

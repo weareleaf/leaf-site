@@ -154,7 +154,7 @@
     background-color: $hx-studio;
     margin-bottom: 5rem;
     margin-top: -7rem;
-    z-index: -1;
+    z-index: z('below');
 
     @media screen and (min-width: map-get($breakpoints, 'breakpoint-1')) {
       margin-bottom: $spacing-10;

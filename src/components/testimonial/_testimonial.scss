@@ -16,7 +16,7 @@
       left: -$spacing-4;
       position: absolute;
       top: -4.5rem;
-      z-index: -1;
+      z-index: z('below');
 
       @media screen and (min-width: map-get($breakpoints, 'breakpoint-2')) {
         font-size: 14rem;
