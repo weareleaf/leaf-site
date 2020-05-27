@@ -1,4 +1,8 @@
 .block {
+  &:not(:first-child) {
+    margin-top: $spacing-7;
+  }
+
   &__heading {
     margin-bottom: $spacing-3;
   }

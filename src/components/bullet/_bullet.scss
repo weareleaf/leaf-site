@@ -1,5 +1,7 @@
 .bullet {
   .styled-list {
+    margin-top: -$spacing-3;
+
     &__item {
       height: $size-2;
       margin-bottom: 0;
