@@ -1,20 +1,16 @@
-extends ../layouts/hx.pug
+extends ../layouts/page.pug
 
 block prepend vars
   -var pageTitle = "Holiday Extras Travel Insurance Case Study | Leaf"
   -var metaUrl = "https://weareleaf.com/holiday-extras"
   -var metaTitle = "Holiday Extras Travel Insurance Case Study"
   -var metaDescription = "Having successfully reimagined their mobile booking process, Holiday Extras asked us to explore a customer-first approach to selling travel insurance online."
+  -var pageClass = "holiday-extras"
 
   -var heroHeading = "Painless insurance quotes"
   -var heroSubheading = "Holiday Extras wanted the experience of buying travel insurance online to match that of their award-winning cell-centre."
 
 block pageComponents
-  +banner({
-    href: '/case-studies'
-  })
-
-  .banner-spacer
 
   +hero({
     heroHeading: heroHeading,

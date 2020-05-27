@@ -44,6 +44,8 @@ html {
 }
 
 .page--holiday-extras {
+  --color-header: #{$hx-minsk};
+  --color-header-nav: #{$hx-daisy};
   --color-accent: #{$hx-gold};
   --color-background: #{$hx-minsk};
   --color-heading-2: #{$color-smoke};
@@ -60,8 +62,6 @@ html {
   --color-footer-text: #{$hx-melrose};
   --color-logo: #{$color-smoke};
   --color-social-icons: #{$color-smoke};
-  --color-close-bg: #{$color-smoke};
-  --color-close: #{$hx-daisy};
   --color-metric-background: #{$hx-royal};
   --color-metric-border: #{$hx-gigas};
   --color-metric-unit: #{$color-smoke};
@@ -80,6 +80,8 @@ html {
 }
 
 .page--myrift {
+  --color-header: #{$rift-gun};
+  --color-header-nav: #{$rift-charada};
   --color-accent: #{$rift-red};
   --color-background: #{$rift-gun};
   --color-heading-2: #{$color-smoke};
@@ -96,8 +98,6 @@ html {
   --color-footer-text: #{$rift-pearl};
   --color-logo: #{$color-smoke};
   --color-social-icons: #{$color-smoke};
-  --color-close-bg: #{$color-smoke};
-  --color-close: #{$rift-baltic};
   --color-metric-background: #{$rift-trout};
   --color-metric-border: #{$rift-charada};
   --color-metric-unit: #{$rift-iron};

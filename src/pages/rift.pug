@@ -1,20 +1,16 @@
-extends ../layouts/myrift.pug
+extends ../layouts/page.pug
 
 block prepend vars
   -var pageTitle = "RIFT Case Study | Specialist Data Capture Experts | Leaf"
   -var metaUrl = "https://weareleaf.com/rift"
   -var metaTitle = "RIFT Case Study"
   -var metaDescription = "RIFT have helped win £153 million in tax refunds for their customers. We rethought their web platform, allowing users to submit and track their claims online."
+  -var pageClass = "myrift"
 
   -var heroHeading = "Making tax simple"
   -var heroSubheading = "RIFT have helped Brits recoup more than £150m in tax refunds, and approached us to help simplify their online claim process."
 
 block pageComponents
-  +banner({
-    href: '/case-studies'
-  })
-
-  .banner-spacer
 
   +hero({
     heroHeading: heroHeading,

@@ -6,6 +6,7 @@ $color-majorelle: hsl(253, 78%, 43%);
 $color-indigo: hsl(253, 72%, 47%);
 $color-violet:	hsl(253, 75%, 52%);
 $color-cerulean: hsl(240, 69%, 58%);
+$color-astronaut: hsl(240, 53%, 31%);
 $color-sapphire: hsl(240, 44%, 49%);
 $color-amethyst: hsl(238, 28%, 51%);
 $color-lavender: hsl(236, 100%, 77%);
@@ -189,6 +190,8 @@ $z-index: (
 }
 
 :root {
+  --color-header: #{$color-indigo};
+  --color-header-nav: #{$color-astronaut};
   --color-accent: #{$color-powder};
   --color-background: #{$color-majorelle};
   --color-blog-heading: #{$color-iris};
@@ -207,6 +210,4 @@ $z-index: (
   --color-paragraph: #{$color-ice};
   --color-share-icons: #{$color-white};
   --color-social-icons: #{$color-white};
-  --color-close-bg: #{$color-indigo};
-  --color-close: #{$color-white};
 }
