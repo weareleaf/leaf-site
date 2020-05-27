@@ -19,18 +19,16 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-    margin-top: $spacing-5;
 
     @media screen and (min-width: map-get($breakpoints, 'breakpoint-1')) {
-      display: flex;
       flex-direction: row;
-      margin-top: $spacing-4;
+      margin-top: $spacing-1;
     }
 
-    @media screen and (min-width: map-get($breakpoints, 'breakpoint-4')) {
+    @media screen and (min-width: map-get($breakpoints, 'breakpoint-7')) {
       justify-content: start;
       margin-left: 2.5rem;
-      margin-top: $spacing-2;
+      margin-top: .6rem;
     }
   }
 
@@ -83,12 +81,12 @@
 
     &--mobile {
       left: 0;
-      margin: 0 auto -.5rem auto;
+      margin: 0 auto $spacing-3 auto;
       position: relative;
       top: 0;
       transform: rotate(180deg);
 
-      @media screen and (min-width: map-get($breakpoints, 'breakpoint-4')) {
+      @media screen and (min-width: map-get($breakpoints, 'breakpoint-2')) {
         left: $spacing-4;
         margin: 0;
         position: absolute;
@@ -148,15 +146,15 @@
       font-size: $root-font-size-xl;
       margin-left: 0;
       margin-top: 0;
-      padding-bottom: .2rem;
 
       @media screen and (min-width: map-get($breakpoints, 'breakpoint-1')) {
-        font-size: $font-size-xxs;
+        font-size: $font-size-sm;
+        margin-top: .1rem;
+        padding-bottom: .2rem;
       }
 
       @media screen and (min-width: map-get($breakpoints, 'breakpoint-7')) {
-        font-size: $root-font-size;
-        margin-top: -.1rem;
+        margin-top: -.2rem;
         padding-bottom: 0;
       }
     }
@@ -166,18 +164,18 @@
       font-family: $font-family-sans-serif-regular;
       font-size: $font-size-xs;
       margin-top: 0;
-      padding-bottom: .2rem;
       text-align: center;
 
       @media screen and (min-width: map-get($breakpoints, 'breakpoint-1')) {
-        margin-left: $spacing-1;
+        font-size: $font-size-sm;
+        margin-left: $spacing-2;
+        margin-top: .1rem;
+        padding-bottom: .2rem;
         text-align: left;
       }
 
       @media screen and (min-width: map-get($breakpoints, 'breakpoint-7')) {
-        font-size: $root-font-size;
-        margin-left: $spacing-2;
-        margin-top: -.1rem;
+        margin-top: -.2rem;
         padding-bottom: 0;
       }
     }
