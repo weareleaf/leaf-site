@@ -23,9 +23,9 @@
     font-size: $font-size-md;
     font-family: $font-family-sans-serif-regular;
     line-height: 1.6;
-    margin-bottom: 0;
+    margin-bottom: $spacing-5;
 
-    @media screen and (min-width: map-get($breakpoints, 'breakpoint-3')) {
+    @media screen and (min-width: map-get($breakpoints, 'breakpoint-11')) {
       margin-bottom: $spacing-6;
     }
   }
@@ -33,14 +33,10 @@
   &__text {
     color: var(--color-text);
     line-height: 1.7;
-    margin-bottom: 0;
+    margin-bottom: $spacing-5;
 
-    &:last-of-type {
-      margin-top: $spacing-5;
-
-      @media screen and (min-width: map-get($breakpoints, 'breakpoint-3')) {
-        margin-bottom: $spacing-6;
-      }
+    @media screen and (min-width: map-get($breakpoints, 'breakpoint-11')) {
+      margin-bottom: $spacing-6;
     }
   }
 }
