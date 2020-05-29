@@ -1,4 +1,13 @@
 .bullet {
+  &__heading {
+    color: var(--color-heading);
+    font-size: $font-size-xxs;
+    font-weight: $font-weight-heading;
+    letter-spacing: .05rem;
+    margin-bottom: $spacing-5;
+    text-transform: uppercase;
+  }
+
   .styled-list {
     margin-top: -$spacing-3;
 

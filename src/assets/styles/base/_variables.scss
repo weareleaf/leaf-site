@@ -6,6 +6,7 @@ $color-majorelle: hsl(253, 78%, 43%);
 $color-indigo: hsl(253, 72%, 47%);
 $color-violet:	hsl(253, 75%, 52%);
 $color-cerulean: hsl(240, 69%, 58%);
+$color-astronaut: hsl(240, 53%, 31%);
 $color-sapphire: hsl(240, 44%, 49%);
 $color-amethyst: hsl(238, 28%, 51%);
 $color-lavender: hsl(236, 100%, 77%);
@@ -25,6 +26,24 @@ $color-snow: hsl(250, 64%, 94%);
 $color-ivory: hsl(225, 29%, 97%);
 $color-smoke: hsl(0, 0%, 96%);
 $color-white:	hsl(0, 0%, 100%);
+
+// Brand colors
+$hx-melrose: hsl(254, 100%, 88%);
+$hx-royal: hsl(262, 46%, 45%);
+$hx-studio: hsl(262, 47%, 49%);
+$hx-minsk: hsl(262, 48%, 43%);
+$hx-gigas: hsl(262, 49%, 38%);
+$hx-daisy: hsl(263, 53%, 38%);
+$hx-gold: hsl(46, 93%, 65%);
+
+$rift-iron: hsl(240, 4%, 89%);
+$rift-pearl: hsl(240, 8%, 71%);
+$rift-trout: hsl(240, 14%, 27%);
+$rift-mako: hsl(240, 15%, 30%);
+$rift-gun: hsl(240, 15%, 25%);
+$rift-charada: hsl(240, 16%, 20%);
+$rift-baltic: hsl(244, 15%, 18%);
+$rift-red: hsl(0, 96%, 69%);
 
 // Background
 $background-color: var(--color-background);
@@ -98,10 +117,12 @@ $focus-width: var(--color-focus-width);
 // Font sizes
 $root-font-size: 1rem;
 $root-font-size-xl: 1.25rem;
+$font-size-xxs: .75rem;
 $font-size-xs: .8rem !default;
 $font-size-sm: .9rem !default;
 $font-size-md: 1.1rem !default;
 $font-size-lg: 1.875rem !default;
+$font-size-xl: 2.2rem !default;
 
 // Font colours
 $heading-color: var(--color-accent);
@@ -135,6 +156,7 @@ $spacing-11: 8rem;
 $spacing-12: 10rem;
 $spacing-13: 12rem;
 $spacing-14: 16rem;
+$spacing-15: 20rem;
 
 // Sizing
 $size-1: 1rem;
@@ -148,7 +170,7 @@ $size-8: 10rem;
 $size-9: 12rem;
 $size-10: 20rem;
 $size-11: 30rem;
-$size-12: 62.5rem;
+$size-12: 62rem;
 
 // Timings
 $timing-ease: ease;
@@ -156,7 +178,20 @@ $timing-ease-in-out: ease-in-out;
 $timing-ease-in: ease-in;
 $timing-elastic: cubic-bezier(.55, 0, .1, 1);
 
+// Z-index map
+$z-index: (  
+  'default': 1,  
+  'below': -1
+);
+
+// Z-index function
+@function z($key) {
+  @return map-get($z-index, $key);
+}
+
 :root {
+  --color-header: #{$color-indigo};
+  --color-header-nav: #{$color-astronaut};
   --color-accent: #{$color-powder};
   --color-background: #{$color-majorelle};
   --color-blog-heading: #{$color-iris};
@@ -175,5 +210,4 @@ $timing-elastic: cubic-bezier(.55, 0, .1, 1);
   --color-paragraph: #{$color-ice};
   --color-share-icons: #{$color-white};
   --color-social-icons: #{$color-white};
-  --color-close: #{$color-white};
 }

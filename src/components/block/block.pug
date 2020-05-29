@@ -6,4 +6,4 @@ mixin block(c)
       p.block__text= c.blockText
     else
       h2.block__heading= c.blockHeading
-      p.block__text= c.blockText
+      p.block__text(class= c.blockTextModifier ? "block__text--" + c.blockTextModifier : "")= c.blockText

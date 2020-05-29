@@ -82,7 +82,7 @@ main {
   position: relative;
 
   &__map {
-    z-index: -1; // use Sass map when case studies are merged
+    z-index: z('below');
   }
 
   &__explanation {
@@ -106,6 +106,22 @@ main {
   }
 }
 
-.company-pets__image {
-  max-width: $size-11;
+.company-image {
+  &__media {
+    align-items: center;
+    display: flex;
+    min-height: 100%;
+    position: relative;
+  }
+
+  &__image {
+    &--pets {
+      max-width: $size-11;
+      position: absolute;
+    }
+
+    &--holiday {
+      max-width: 28.5rem;
+    }
+  }
 }
