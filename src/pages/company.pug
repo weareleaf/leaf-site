@@ -18,9 +18,9 @@ block pageComponents
 
   section.section
     .container
-      .company
+      .company.grid.grid--company
         .grid__item
-          .company__overview-content
+          .company__overview
             +block({
               blockHeading: "Where are you based?",
               blockText: "We’re a remote company, and have shunned the traditional office in favour of the many collective benefits brought about by distributed working:"
@@ -67,7 +67,7 @@ block pageComponents
         .grid__item
           .company__map
             +image({
-              context: "company",
+              context: "company-map",
               src: "/assets/images/company/british-isles.svg",
               alt: "Map of Great Britain and Ireland"
             })
@@ -75,5 +75,63 @@ block pageComponents
             +explanation({
               explanationExample: true,
               explanationHeading: "Did you know",
-              explanationText: "Our team are based in various parts of England and Ireland. We have an entirely remote workforce, and all work from the comfort of our own home offices."
+              explanationText: "Our team are based in various parts of England and Ireland. We have an entirely remote workforce, and all work from the comfort of our own home offices.",
+              explanationModifier: "rounded"
             })
+
+  section.section
+    .container
+      .company.grid.grid--company
+        .grid__item
+          .company__pets
+            +image({
+              context: "company-pets",
+              src: "/assets/images/company/pets.png",
+              alt: "Cute pet pics",
+              modifier: "pets"
+            })
+        .grid__item
+          .company__ethos
+            +block({
+              blockHeading: "What is important to you?",
+              blockText: "We believe that work should be something that doesn't fill you with dread, that you should be passionate about your craft, but that work comes second to family. We also believe the key to good software is simple; understand the problem, refine your product, and repeat the process."
+            })
+            .grid.grid--bullet-points
+              +bullet({
+                listHeading: true,
+                styledListHeading: "Things we do",
+                styledListModifier: "inside",
+                styledListItems: [
+                  {
+                    styledListItem: "More time for loved ones."
+                  },
+                  {
+                    styledListItem: "No daily commute."
+                  },
+                  {
+                    styledListItem: "Access to the best talent."
+                  },
+                  {
+                    styledListItem: "Freedom to live anywhere."
+                  }
+                ]
+              })
+              +bullet({
+                listHeading: true,
+                styledListHeading: "Things we don't do",
+                styledListModifier: "inside",
+                styledListItems: [
+                  {
+                    styledListItem: "Increased productivety."
+                  },
+                  {
+                    styledListItem: "Less distractions."
+                  },
+                  {
+                    styledListItem: "Reduced overheads."
+                  },
+                  {
+                    styledListItem: "Lower carbon footprint."
+                  }
+                ]
+              })

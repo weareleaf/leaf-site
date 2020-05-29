@@ -75,17 +75,37 @@ main {
   }
 }
 
+// Company page layouts
+
 .company {
-  align-items: center;
-  display: grid;
-  grid-gap: $spacing-9;
-  grid-template-columns: repeat(2, 1fr);
+  margin: $spacing-13 0;
   position: relative;
 
   &__map {
+    z-index: -1; // use Sass map when case studies are merged
   }
 
+  &__explanation {
+    max-width: 29rem;
+    position: absolute;
+    right: -$spacing-7;
+    top: $spacing-11;
+  }
+}
+
+// Company page images
+
+.company-map {
+  &__media {
+    display: flex;
+    justify-content: flex-end;
+  }
+  
   &__image {
     margin-top: -$spacing-6;
   }
+}
+
+.company-pets__image {
+  max-width: $size-11;
 }

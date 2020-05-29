@@ -1,5 +1,5 @@
 mixin explanation(c)
-  .explanation
+  .explanation(class= c.explanationModifier ? "explanation--" + c.explanationModifier : "")
     if c.explanationExample === true
       img.explanation__icon(src="/assets/images/icons/ui/info.svg")
       h3.explanation__heading !{c.explanationHeading}
