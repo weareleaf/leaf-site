@@ -1,5 +1,5 @@
 mixin block(c)
-  .block
+  .block(class= c.blockModifier ? "block--" + c.blockModifier : "")
     if c.subHeading === true
       h6.block__subheading= c.blockSubHeading
       h2.block__heading= c.blockHeading

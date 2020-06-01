@@ -3,6 +3,10 @@
     margin-top: $spacing-7;
   }
 
+  &--width {
+    width: 29.15rem; // To achieve correct line break
+  }
+
   &__heading {
     margin-bottom: $spacing-3;
   }

@@ -90,7 +90,7 @@ main {
     max-width: 29rem;
     position: absolute;
     right: -$spacing-7;
-    top: $spacing-11;
+    top: 8.2rem;
   }
 
   &__logos {
@@ -130,6 +130,32 @@ main {
       border-top: $border-width-base $border-style $color-iris;
     }
   }
+
+  &__caption {
+    bottom: 0;
+    color: $color-ice;
+    display: none;
+    font-size: .65rem;
+    line-height: 1.4;
+    position: absolute;
+
+    @media screen and (min-width: map-get($breakpoints, 'breakpoint-6')) {
+      display: block;
+    }
+
+    &--pets {
+      left: 0;
+      margin-bottom: -$spacing-5;
+      max-width: 8.5rem;
+    }
+
+    &--holiday {
+      margin-bottom: -$spacing-2;
+      padding-left: $spacing-3;
+      max-width: $size-9;
+      right: 0;
+    }
+  }
 }
 
 // Company page images
@@ -154,13 +180,20 @@ main {
   }
 
   &__image {
+    position: absolute;
     &--pets {
+      left: -$spacing-3;
       max-width: $size-11;
-      position: absolute;
     }
 
     &--holiday {
       max-width: 28.5rem;
+      right: -$spacing-3;
+    }
+
+    &--culture {
+      max-width: 28rem;
+      left: -$spacing-3;
     }
   }
 }

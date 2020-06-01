@@ -90,6 +90,7 @@ block pageComponents
           alt: "Cute pet pics",
           modifier: "pets"
         })
+        p.company__caption.company__caption--pets When work isn’t crazy, there’s more time in the day to enjoy the things that really matter.
         .company__ethos
           +block({
             blockTextModifier: "margin-bottom",
@@ -178,13 +179,39 @@ block pageComponents
             .company__logo.li.company__logo--border
               img(src="/assets/images/company/snowplow-logo.svg", alt="SnowPlow")
           +block({
+            blockModifier: "width",
             blockHeading: "What sectors do you specialise in?",
             blockText: "There’s no single sector we consider ourselves experts in, although previous work on various booking flows, online applications, and tax claims have given us considerable experience in the financial, insurance, and travel industries. We do, however, consider ourselves experts in gathering high-quality information from your customers, whatever sector you’re in."
           })
-        .company__holiday
-          +image({
-            context: "company-image",
-            src: "/assets/images/company/holiday-snaps.png",
-            alt: "Holiday photos",
-            modifier: "holiday"
+        +image({
+          context: "company-image",
+          src: "/assets/images/company/holiday-snaps.png",
+          alt: "Holiday photos",
+          modifier: "holiday"
+        })
+        p.company__caption.company__caption--holiday We helped Holiday Extras make a travel-planning app, so naturally we tested it by planning (and taking) a trip to Rome.
+
+  section.section
+    .container
+      .company.grid.grid--company
+        +image({
+          context: "company-image",
+          src: "/assets/images/company/culture.png",
+          alt: "Cool Leaf branded shirt and Chris deep in thought",
+          modifier: "culture"
+        })
+        .company__story
+          +block({
+            blockHeading: "How long have you been around?",
+            blockText: "We started Leaf in June 2015, initially as a part-time venture, and it has been our full-time focus since December 2016."
+          })
+          +explanation({
+            explanationExample: true,
+            explanationHeading: "Did you know",
+            explanationText: "Apple Music launched in the UK on the same day we registered Leaf Software Ltd, with both announcements attracting similar levels of fanfare.",
+            explanationModifier: "rounded"
+          })
+          +block({
+            blockHeading: "Why should I choose you?",
+            blockText: "Capturing information from your customers is difficult, and we've built our entire company around specialising it just that. Most agencies offer a range of services, some of which they are better at than others. For us, every ounce of energy goes into making sure we're the best at just one thing."
           })
