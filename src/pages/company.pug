@@ -179,7 +179,7 @@ block pageComponents
             .company__logo.li.company__logo--border
               img(src="/assets/images/company/snowplow-logo.svg", alt="SnowPlow")
           +block({
-            blockModifier: "width",
+            blockModifier: "holiday-section",
             blockHeading: "What sectors do you specialise in?",
             blockText: "There’s no single sector we consider ourselves experts in, although previous work on various booking flows, online applications, and tax claims have given us considerable experience in the financial, insurance, and travel industries. We do, however, consider ourselves experts in gathering high-quality information from your customers, whatever sector you’re in."
           })
@@ -215,3 +215,145 @@ block pageComponents
             blockHeading: "Why should I choose you?",
             blockText: "Capturing information from your customers is difficult, and we've built our entire company around specialising it just that. Most agencies offer a range of services, some of which they are better at than others. For us, every ounce of energy goes into making sure we're the best at just one thing."
           })
+
+  section.section
+    .container
+      .team
+        h1.team__heading Meet the team
+        .grid.grid--the-team
+          .team__first-team
+            +block({
+              blockModifier: "team-section",
+              blockHeading: "The first team",
+              blockText: "We’ve assembled a small and reliable team who have repeatedly shown that you don’t need huge numbers or even an office to add genuine value. These are the names and faces you’ll get to know throughout your project."
+            })
+            .grid.grid--profiles
+              .grid__item
+                +profile({
+                  profileImage: {
+                    context: "profile",
+                    src: "/assets/images/team/chris.jpg",
+                    alt: "Chris Annetts looking serious in front of a brick wall."
+                  },
+                  profileHeading: "Chris Annetts",
+                  profileText: "Design Director"
+                })
+              .grid__item
+                +profile({
+                  profileImage: {
+                    context: "profile",
+                    src: "/assets/images/team/mike.jpg",
+                    alt: "Mike Carter looking mildly amused in front of a brick wall."
+                  },
+                  profileHeading: "Mike Carter",
+                  profileText: "Engineering Director"
+                })
+              .grid__item
+                +profile({
+                  profileImage: {
+                    src: "/assets/images/team/curt.jpg",
+                    alt: "Curtis Lee looking very happy in front of a tree."
+                  },
+                  profileHeading: "Curtis Lee",
+                  profileText: "Product Designer"
+                })
+              .grid__item
+                +profile({
+                  profileImage: {
+                    context: "profile",
+                    src: "/assets/images/team/tina.jpg",
+                    alt: "Tina van Schelt looking pleased in front of a brick wall."
+                  },
+                  profileHeading: "Tina van Schelt",
+                  profileText: "Software Engineer"
+                })
+              .grid__item
+                +profile({
+                  profileImage: {
+                    context: "profile",
+                    src: "/assets/images/team/oj.jpg",
+                    alt: "OJ looking relaxed in front of a brick wall."
+                  },
+                  profileHeading: "Oliver Standeven (OJ)",
+                  profileText: "Software Engineer"
+                })
+              .grid__item
+                +profile({
+                  profileImage: {
+                    src: "/assets/images/team/placeholder.jpg",
+                    alt: "We're hiring a Software Engineer."
+                  },
+                  profileHeading: "We’re hiring",
+                  profileText: "Software Engineer"
+                })
+          .team__our-bench
+            +block({
+              blockHeading: "Our bench",
+              blockText: "When needed, we have a trusted group talented external designers and developers we can call upon."
+            })
+            +profile({
+              profileModifier: "row",
+              profileContentModifier: "left-aligned",
+              imageModifier: "small",
+              profileImage: {
+                src: "/assets/images/company/chris-arnold.jpg",
+                alt: "Chris Arnold who is a Frontend Engineer."
+              },
+              profileHeading: "Chris Arnold",
+              profileText: "Frontend Engineer"
+            })
+            +profile({
+              profileModifier: "row",
+              profileContentModifier: "left-aligned",
+              imageModifier: "small",
+              profileImage: {
+                src: "/assets/images/company/jack-clark.jpg",
+                alt: "Jack Clark who is a Frontend Engineer."
+              },
+              profileHeading: "Jack Clark",
+              profileText: "Frontend Engineer"
+            })
+            +profile({
+              profileModifier: "row",
+              profileContentModifier: "left-aligned",
+              imageModifier: "small",
+              profileImage: {
+                src: "/assets/images/company/matthew-spence.jpg",
+                alt: "Matthew Spence who is a Software Engineer."
+              },
+              profileHeading: "Matthew Spence",
+              profileText: "Software Engineer"
+            })
+            +profile({
+              profileModifier: "row",
+              profileContentModifier: "left-aligned",
+              imageModifier: "small",
+              profileImage: {
+                src: "/assets/images/company/elliot-stokes.jpg",
+                alt: "Elliot Stokes who is a Software Engineer."
+              },
+              profileHeading: "Elliot Stokes",
+              profileText: "Software Engineer"
+            })
+            +profile({
+              profileModifier: "row",
+              profileContentModifier: "left-aligned",
+              imageModifier: "small",
+              profileImage: {
+                src: "/assets/images/company/liam-tucker.jpg",
+                alt: "Liam Tucker who is an eCommerce Specialist."
+              },
+              profileHeading: "Liam Tucker",
+              profileText: "eCommerce Specialist"
+            })
+            +profile({
+              profileModifier: "row",
+              profileContentModifier: "left-aligned",
+              imageModifier: "small",
+              profileImage: {
+                src: "/assets/images/company/colin-young.jpg",
+                alt: "Colin Young who is a Software Engineer."
+              },
+              profileHeading: "Colin Young",
+              profileText: "Software Engineer"
+            })

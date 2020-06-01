@@ -62,20 +62,8 @@
   }
 
   &--profiles {
-    grid-column-gap: $spacing-6;
-    grid-row-gap: $spacing-7;
-    grid-template-columns: repeat(2, 1fr);
-    @media screen and (min-width: map-get($breakpoints, 'breakpoint-1')) {
-      grid-template-columns: repeat(3, 1fr);
-    }
-
-    @media screen and (min-width: map-get($breakpoints, 'breakpoint-3')) {
-      grid-template-columns: repeat(5, 1fr);
-    }
-
-    @media screen and (min-width: map-get($breakpoints, 'breakpoint-6')) {
-      grid-column-gap: $spacing-7;
-    }
+    grid-gap: $spacing-7;
+    grid-template-columns: repeat(3, max-content);
   }
 
   &--tile {
@@ -97,9 +85,13 @@
 
   &--company {
     align-items: center;
-    display: grid;
     grid-gap: 5.5rem;
     grid-template-columns: repeat(2, 1fr);
+  }
+
+  &--the-team {
+    grid-gap: $spacing-10;
+    grid-template-columns: auto 1fr;
   }
 
   &--blog {

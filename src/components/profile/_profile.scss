@@ -1,11 +1,23 @@
 .profile {
+  &--row {
+    align-items: center;
+    display: flex;
+    margin-bottom: $spacing-3;
+  }
 
   &__media {
-    margin-bottom: $spacing-3;
+    height: auto;
   }
 
   &__image {
     border-radius: $border-radius-lg;
+    margin-bottom: $spacing-3;
+    max-width: $size-9;
+
+    &--small {
+      margin-bottom: 0;
+      max-width: $size-5;
+    }
   }
 
   &__heading {
@@ -15,16 +27,27 @@
     @media screen and (min-width: map-get($breakpoints, 'breakpoint-1')) {
       text-align: center;
     }
+
+    &--left-aligned {
+      margin-left: $spacing-5;
+      text-align: left;
+    }
   }
 
   &__text {
-    color: var(--color-accent);
-    font-family: $font-family-sans-serif-regular;
+    color: var(--color-paragraph);
+    font-family: $font-family-sans-serif-medium;
     font-size: $font-size-xs;
     margin-bottom: 0;
 
     @media screen and (min-width: map-get($breakpoints, 'breakpoint-1')) {
       text-align: center;
+    }
+
+    &--left-aligned {
+      margin-bottom: $spacing-2;
+      margin-left: $spacing-5;
+      text-align: left;
     }
   }
 }

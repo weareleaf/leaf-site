@@ -3,8 +3,12 @@
     margin-top: $spacing-7;
   }
 
-  &--width {
+  &--holiday-section {
     width: 29.15rem; // To achieve correct line break
+  }
+
+  &--team-section {
+    max-width: 29rem;
   }
 
   &__heading {

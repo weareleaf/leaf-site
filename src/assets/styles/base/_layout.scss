@@ -78,7 +78,7 @@ main {
 // Company page layouts
 
 .company {
-  margin: $spacing-13 0;
+  margin: 0 0 $spacing-13 0;
   min-height: $size-11;
   position: relative;
 
@@ -196,4 +196,9 @@ main {
       left: -$spacing-3;
     }
   }
+}
+
+// Team section
+.team {
+  
 }
