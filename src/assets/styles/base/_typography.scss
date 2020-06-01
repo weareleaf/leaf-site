@@ -167,7 +167,6 @@ img {
   padding: 0;
 
   &__item {
-    font-size: $font-size-sm;
     position: relative;
 
     &:not(:last-child) {
@@ -180,12 +179,32 @@ img {
       }
     }
 
+    // The company bullet is smaller on the design (which looks better too)
+
+    &--small {
+      @media screen and (min-width: map-get($breakpoints, 'breakpoint-6')) {
+        font-size: $font-size-sm;
+        margin-left: $spacing-5 !important;
+
+        &::before {
+          background-color: var(--color-accent);
+          content: '';
+          display: block;
+          height: .3rem !important; // Override the default pseudo after a certain size
+          left: -1rem !important;
+          position: absolute;
+          top: .5rem !important;
+          width: .3rem !important;
+        }
+      }
+    }
+
     .styled-list--inside-lg & {
       margin-left: $spacing-7;
     }
 
     .styled-list--inside & {
-      margin-left: $spacing-5;
+      margin-left: $spacing-6;
     }
 
     .styled-list--inside-sm & {
@@ -200,11 +219,11 @@ img {
       background-color: var(--color-accent);
       content: '';
       display: block;
-      height: .3rem;
-      left: -1rem;
+      height: .4rem;
+      left: -1.4rem;
       position: absolute;
-      top: .5rem;
-      width: .3rem;
+      top: .4rem;
+      width: .4rem;
     }
   }
 }

@@ -28,6 +28,7 @@ block pageComponents
             .grid.grid--bullet-points
               +bullet({
                 styledListModifier: "inside",
+                styledListItemModifier: "small",
                 styledListItems: [
                   {
                     styledListItem: "More time for loved ones."
@@ -45,6 +46,7 @@ block pageComponents
               })
               +bullet({
                 styledListModifier: "inside",
+                styledListItemModifier: "small",
                 styledListItems: [
                   {
                     styledListItem: "Increased productivety."
@@ -99,6 +101,7 @@ block pageComponents
               listHeading: true,
               styledListHeading: "Things we do",
               styledListModifier: "inside",
+              styledListItemModifier: "small",
               styledListItems: [
                 {
                   styledListItem: "Clear and measurable KPIs."
@@ -120,25 +123,35 @@ block pageComponents
                 },
                 {
                   styledListItem: "Prioritise effectiveness."
-                },
+                }
               ]
             })
             +bullet({
               listHeading: true,
               styledListHeading: "Things we don't do",
               styledListModifier: "inside",
+              styledListItemModifier: "small",
               styledListItems: [
                 {
-                  styledListItem: "Increased productivety."
+                  styledListItem: "Big reveals."
                 },
                 {
-                  styledListItem: "Less distractions."
+                  styledListItem: "Work to unrealisric deadlines."
                 },
                 {
-                  styledListItem: "Reduced overheads."
+                  styledListItem: "Pull all nighters."
                 },
                 {
-                  styledListItem: "Lower carbon footprint."
+                  styledListItem: "Work 40+ hour weeks."
+                },
+                {
+                  styledListItem: "Long-term planning guessing.",
+                },
+                {
+                  styledListItem: "Hold unnecessary meetings."
+                },
+                {
+                  styledListItem: "Knee-jerk reactions."
                 }
               ]
             })
@@ -146,54 +159,32 @@ block pageComponents
   section.section
     .container
       .company.grid.grid--company
-        .company__ethos
+        .company__clients
           +block({
-            blockTextModifier: "margin-bottom",
-            blockHeading: "What is important to you?",
-            blockText: "We believe that work should be something that doesn't fill you with dread, that you should be passionate about your craft, but that work comes second to family. We also believe the key to good software is simple; understand the problem, refine your product, and repeat the process."
+            blockHeading: "Who have you worked for?",
+            blockText: "We've delivered various projects for the likes of RIFT and Holiday Extras, and have long-term relationships with well established digital companies like Laced and Isode. Along the way, we've worked with a variety of clients on smaller projects, such as Majestic Casual, Snowplow, and Zendesk."
           })
-          .grid.grid--bullet-points
-            +bullet({
-              listHeading: true,
-              styledListHeading: "Things we do",
-              styledListModifier: "inside",
-              styledListItems: [
-                {
-                  styledListItem: "More time for loved ones."
-                },
-                {
-                  styledListItem: "No daily commute."
-                },
-                {
-                  styledListItem: "Access to the best talent."
-                },
-                {
-                  styledListItem: "Freedom to live anywhere."
-                }
-              ]
-            })
-            +bullet({
-              listHeading: true,
-              styledListHeading: "Things we don't do",
-              styledListModifier: "inside",
-              styledListItems: [
-                {
-                  styledListItem: "Increased productivety."
-                },
-                {
-                  styledListItem: "Less distractions."
-                },
-                {
-                  styledListItem: "Reduced overheads."
-                },
-                {
-                  styledListItem: "Lower carbon footprint."
-                }
-              ]
-            })
-        +image({
-          context: "company-image",
-          src: "/assets/images/company/holiday-snaps.png",
-          alt: "Holiday photos",
-          modifier: "holiday"
-        })
+          .company__logos
+            .company__logo
+              img(src="/assets/images/company/rift-logo.svg", alt="Rift")
+            .company__logo
+              img(src="/assets/images/company/laced-logo.svg", alt="Laced")
+            .company__logo
+              img(src="/assets/images/company/majestic-logo.svg", alt="Majestic")
+            .company__logo.li.company__logo--border
+              img(src="/assets/images/company/zendesk-logo.svg", alt="Zendesk")
+            .company__logo.li.company__logo--border
+              img(src="/assets/images/company/holiday-extras-logo.svg", alt="Holiday Extras")
+            .company__logo.li.company__logo--border
+              img(src="/assets/images/company/snowplow-logo.svg", alt="SnowPlow")
+          +block({
+            blockHeading: "What sectors do you specialise in?",
+            blockText: "There’s no single sector we consider ourselves experts in, although previous work on various booking flows, online applications, and tax claims have given us considerable experience in the financial, insurance, and travel industries. We do, however, consider ourselves experts in gathering high-quality information from your customers, whatever sector you’re in."
+          })
+        .company__holiday
+          +image({
+            context: "company-image",
+            src: "/assets/images/company/holiday-snaps.png",
+            alt: "Holiday photos",
+            modifier: "holiday"
+          })

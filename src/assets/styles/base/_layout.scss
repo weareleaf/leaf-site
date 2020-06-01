@@ -79,6 +79,7 @@ main {
 
 .company {
   margin: $spacing-13 0;
+  min-height: $size-11;
   position: relative;
 
   &__map {
@@ -90,6 +91,44 @@ main {
     position: absolute;
     right: -$spacing-7;
     top: $spacing-11;
+  }
+
+  &__logos {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    margin-bottom: $spacing-8;
+  }
+
+  &__logo {
+    align-items: center;
+    background-color: $color-indigo;
+    display: flex;
+    justify-content: center;
+    padding: 1.3rem 0;
+
+    &:nth-child(1) {
+      border-right: $border-width-base $border-style $color-iris;
+      border-top-left-radius: 6px;
+    }
+
+    &:nth-child(3) {
+      border-left: $border-width-base $border-style $color-iris;
+      border-top-right-radius: 6px;
+    }
+
+    &:nth-child(4) {
+      border-right: $border-width-base $border-style $color-iris;
+      border-bottom-left-radius: 6px;
+    }
+
+    &:nth-child(6) {
+      border-left: $border-width-base $border-style $color-iris;
+      border-bottom-right-radius: 6px;
+    }
+
+    &--border {
+      border-top: $border-width-base $border-style $color-iris;
+    }
   }
 }
 
