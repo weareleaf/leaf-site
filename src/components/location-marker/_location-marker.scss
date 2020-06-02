@@ -1,7 +1,11 @@
 .location-marker {
-  align-items: center;
-  display: flex;
-  position: absolute;
+  display: none; // The breakpoints would get messy quickly
+
+  @media screen and (min-width: map-get($breakpoints, 'breakpoint-10')) {
+    align-items: center;
+    display: flex;
+    position: absolute;
+  }
 
   &::before {
     background-color: hsl(225, 100%, 75%);

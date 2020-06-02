@@ -88,10 +88,16 @@ main {
   }
 
   &__explanation {
-    max-width: 29rem;
+    max-width: 25rem;
     position: absolute;
-    right: -$spacing-7;
-    top: 8.2rem;
+    right: 0;
+    top: $spacing-12;
+
+    @media screen and (min-width: map-get($breakpoints, 'breakpoint-10')) {
+      max-width: 29rem;
+      right: -$spacing-7;
+      top: 8.2rem;
+    }
   }
 
   &__logos {
