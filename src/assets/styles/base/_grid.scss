@@ -84,9 +84,14 @@
   }
 
   &--company {
-    align-items: center;
-    grid-gap: 5.5rem;
-    grid-template-columns: repeat(2, 1fr);
+    @media screen and (min-width: map-get($breakpoints, 'breakpoint-4')) {
+      align-items: center;
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    @media screen and (min-width: map-get($breakpoints, 'breakpoint-6')) {
+      grid-gap: 5.5rem;
+    }
   }
 
   &--the-team {
@@ -108,7 +113,11 @@
   }
 
   &--bullet-points {
-    grid-template-columns: repeat(2, 1fr);
     grid-gap: 0;
+
+    @media screen and (min-width: map-get($breakpoints, 'breakpoint-4')) {
+      grid-gap: $spacing-3;
+      grid-template-columns: repeat(2, 1fr);
+    }
   }
 }

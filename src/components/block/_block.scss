@@ -4,7 +4,9 @@
   }
 
   &--holiday-section {
-    width: 29.15rem; // To achieve correct line break
+    @media screen and (min-width: map-get($breakpoints, 'breakpoint-4')) {
+      width: 29.15rem; // To achieve correct line break
+    }
   }
 
   &--team-section {

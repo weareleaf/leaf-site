@@ -82,16 +82,39 @@ main {
   min-height: $size-11;
   position: relative;
 
+  @media screen and (min-width: map-get($breakpoints, 'breakpoint-1')) {
+    padding: 0 $spacing-6;
+  }
+
+  @media screen and (min-width: map-get($breakpoints, 'breakpoint-2')) {
+    padding: 0 $spacing-10;
+  }
+
+  @media screen and (min-width: map-get($breakpoints, 'breakpoint-3')) {
+    padding: 0 $spacing-12;
+  }
+
+  @media screen and (min-width: map-get($breakpoints, 'breakpoint-4')) {
+    padding: 0;
+  }
+
   &__map {
-    position: relative;
-    z-index: z('below');
+    display: none;
+
+    @media screen and (min-width: map-get($breakpoints, 'breakpoint-4')) {
+      display: block;
+      position: relative;
+      z-index: z('below');
+    }
   }
 
   &__explanation {
-    max-width: 25rem;
-    position: absolute;
-    right: 0;
-    top: $spacing-12;
+    @media screen and (min-width: map-get($breakpoints, 'breakpoint-4')) {
+      max-width: 25rem;
+      position: absolute;
+      right: 0;
+      top: $spacing-12;
+    }
 
     @media screen and (min-width: map-get($breakpoints, 'breakpoint-10')) {
       max-width: 29rem;
@@ -204,9 +227,4 @@ main {
       left: -$spacing-3;
     }
   }
-}
-
-// Team section
-.team {
-  
 }
