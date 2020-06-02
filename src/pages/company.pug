@@ -98,64 +98,72 @@ block pageComponents
             blockText: "We believe that work should be something that doesn't fill you with dread, that you should be passionate about your craft, but that work comes second to family. We also believe the key to good software is simple; understand the problem, refine your product, and repeat the process."
           })
           .grid.grid--bullet-points
-            +bullet({
-              listHeading: true,
-              styledListHeading: "Things we do",
-              styledListModifier: "inside",
-              styledListItemModifier: "small",
-              styledListItems: [
-                {
-                  styledListItem: "Clear and measurable KPIs."
-                },
-                {
-                  styledListItem: "Iterative improvements."
-                },
-                {
-                  styledListItem: "Long-term relationships."
-                },
-                {
-                  styledListItem: "Talk often and honestly."
-                },
-                {
-                  styledListItem: "Design inclusively."
-                },
-                {
-                  styledListItem: "Think deeply and ponder."
-                },
-                {
-                  styledListItem: "Prioritise effectiveness."
-                }
-              ]
-            })
-            +bullet({
-              listHeading: true,
-              styledListHeading: "Things we don't do",
-              styledListModifier: "inside",
-              styledListItemModifier: "small",
-              styledListItems: [
-                {
-                  styledListItem: "Big reveals."
-                },
-                {
-                  styledListItem: "Work to unrealisric deadlines."
-                },
-                {
-                  styledListItem: "Pull all nighters."
-                },
-                {
-                  styledListItem: "Work 40+ hour weeks."
-                },
-                {
-                  styledListItem: "Long-term planning guessing.",
-                },
-                {
-                  styledListItem: "Hold unnecessary meetings."
-                },
-                {
-                  styledListItem: "Knee-jerk reactions."
-                }
-              ]
-            })
+            .grid__item
+              +bullet({
+                listHeading: true,
+                styledListHeading: "Things we do",
+                styledListModifier: "inside",
+                styledListItemModifier: "small",
+                styledListItems: [
+                  {
+                    styledListItem: "Clear and measurable KPIs."
+                  },
+                  {
+                    styledListItem: "Iterative improvements."
+                  },
+                  {
+                    styledListItem: "Long-term relationships."
+                  },
+                  {
+                    styledListItem: "Talk often and honestly."
+                  },
+                  {
+                    styledListItem: "Design inclusively."
+                  },
+                  {
+                    styledListItem: "Think deeply and ponder."
+                  },
+                  {
+                    styledListItem: "Prioritise effectiveness."
+                  }
+                ]
+              })
+            .grid__item
+              +bullet({
+                listHeading: true,
+                styledListHeading: "Things we don't do",
+                styledListModifier: "inside",
+                styledListItemModifier: "small",
+                styledListItems: [
+                  {
+                    styledListItem: "Big reveals."
+                  },
+                  {
+                    styledListItem: "Work to unrealistic deadlines."
+                  },
+                  {
+                    styledListItem: "Pull all nighters."
+                  },
+                  {
+                    styledListItem: "Work 40+ hour weeks."
+                  }
+                ]
+              })
+              .bullet.bullet--strike-through
+                ul.bullet.styled-list
+                  li.bullet.styled-list__item.bullet.styled-list__item--small Long-term <strike>planning</strike> guessing.
+              +bullet({
+                styledListModifier: "inside",
+                styledListItemModifier: "small",
+                styledListItems: [
+                  {
+                    styledListItem: "Hold unnecessary meetings."
+                  },
+                  {
+                    styledListItem: "Knee-jerk reactions."
+                  }
+                ]
+              })
 
   section.section
     .container
@@ -289,7 +297,7 @@ block pageComponents
           .team__our-bench
             +block({
               blockHeading: "Our bench",
-              blockText: "When needed, we have a trusted group talented external designers and developers we can call upon."
+              blockText: "When needed, we have a trusted group of talented, external designers and developers we can call upon."
             })
             +profile({
               profileModifier: "row",

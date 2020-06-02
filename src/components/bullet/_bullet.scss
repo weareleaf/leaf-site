@@ -1,4 +1,13 @@
 .bullet {
+  &--strike-through {
+    margin: -$spacing-4 0;
+    margin-left: $spacing-6;
+
+    @media screen and (min-width: map-get($breakpoints, 'breakpoint-6')) {
+      margin-left: 0;
+    }
+  }
+
   &__heading {
     color: var(--color-heading);
     font-size: $font-size-xxs;
@@ -12,8 +21,7 @@
     margin-top: -$spacing-3;
 
     &__item {
-      height: $size-2;
-      margin-bottom: 0;
+      margin-bottom: .25rem;
     }
   }
 }
