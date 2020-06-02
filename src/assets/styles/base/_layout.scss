@@ -83,6 +83,7 @@ main {
   position: relative;
 
   &__map {
+    position: relative;
     z-index: z('below');
   }
 
