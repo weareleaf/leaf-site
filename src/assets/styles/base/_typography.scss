@@ -309,6 +309,10 @@ blockquote {
 }
 
 .team__heading {
-  margin-bottom: $spacing-8;
+  margin-bottom: $spacing-6;
   font-size: $font-size-xl;
+
+  @media screen and (min-width: map-get($breakpoints, 'breakpoint-4')) {
+    margin-bottom: $spacing-8;
+  }
 }

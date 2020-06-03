@@ -62,6 +62,12 @@ block pageComponents
                   }
                 ]
               })
+            +image({
+              context: "company-mobile",
+              src: "/assets/images/company/british-isles.svg",
+              alt: "Map of Great Britain and Ireland",
+              modifier: "map-mobile"
+            })
             +block({
               blockHeading: "What makes you different?",
               blockText: "We look after our team so that they can better look after you. We strive to work smarter, not harder, and believe a good work/life balance and a calm working environment are key to producing happier, more effective teams. An engaged and highly-skilled individual is infinitely better prepared to do great work than someone working all hours to meet an unrealistic deadline."
@@ -75,7 +81,6 @@ block pageComponents
             })
             +location-marker({
               locationMarkerModifier: "tina",
-              locationMarkerContentModifier: "tina",
               locationMarkerHeading: "Tina van Schelt",
               locationMarkerText: "Limerick (moved)"
             })
@@ -107,7 +112,7 @@ block pageComponents
               explanationExample: true,
               explanationHeading: "Did you know",
               explanationText: "Our team are based in various parts of England and Ireland. We have an entirely remote workforce, and all work from the comfort of our own home offices.",
-              explanationModifier: "rounded"
+              explanationModifier: "single"
             })
 
   section.section
@@ -116,11 +121,17 @@ block pageComponents
         +image({
           context: "company-image",
           src: "/assets/images/company/pets.png",
-          alt: "Cute pet pics",
+          alt: "When work isn’t crazy, there’s more time in the day to enjoy the things that really matter.",
           modifier: "pets"
         })
         p.company__caption.company__caption--pets When work isn’t crazy, there’s more time in the day to enjoy the things that really matter.
         .company__ethos
+          +image({
+            context: "company-mobile",
+            src: "/assets/images/company/pets-mobile.png",
+            alt: "When work isn’t crazy, there’s more time in the day to enjoy the things that really matter.",
+            modifier: "pets"
+          })
           +block({
             blockTextModifier: "margin-bottom",
             blockHeading: "What is important to you?",
@@ -198,6 +209,12 @@ block pageComponents
     .container
       .company.grid.grid--company
         .company__clients
+          +image({
+            context: "company-mobile",
+            src: "/assets/images/company/holiday-mobile.png",
+            alt: "We helped Holiday Extras make a travel-planning app, so naturally we tested it by planning (and taking) a trip to Rome.",
+            modifier: "holiday"
+          })
           +block({
             blockHeading: "Who have you worked for?",
             blockText: "We've delivered various projects for the likes of RIFT and Holiday Extras, and have long-term relationships with well established digital companies like Laced and Isode. Along the way, we've worked with a variety of clients on smaller projects, such as Majestic Casual, Snowplow, and Zendesk."
@@ -223,7 +240,7 @@ block pageComponents
         +image({
           context: "company-image",
           src: "/assets/images/company/holiday-snaps.png",
-          alt: "Holiday photos",
+          alt: "We helped Holiday Extras make a travel-planning app, so naturally we tested it by planning (and taking) a trip to Rome.",
           modifier: "holiday"
         })
         p.company__caption.company__caption--holiday We helped Holiday Extras make a travel-planning app, so naturally we tested it by planning (and taking) a trip to Rome.
@@ -234,10 +251,16 @@ block pageComponents
         +image({
           context: "company-image",
           src: "/assets/images/company/culture.png",
-          alt: "Cool Leaf branded shirt and Chris deep in thought",
+          alt: "We can often be found rocking our Leaf branded shirts while deep in thought.",
           modifier: "culture"
         })
         .company__story
+          +image({
+            context: "company-mobile",
+            src: "/assets/images/company/culture-mobile.png",
+            alt: "We can often be found rocking our Leaf branded shirts while deep in thought.",
+            modifier: "culture"
+          })
           +block({
             blockHeading: "How long have you been around?",
             blockText: "We started Leaf in June 2015, initially as a part-time venture, and it has been our full-time focus since December 2016."
@@ -246,7 +269,7 @@ block pageComponents
             explanationExample: true,
             explanationHeading: "Did you know",
             explanationText: "Apple Music launched in the UK on the same day we registered Leaf Software Ltd, with both announcements attracting similar levels of fanfare.",
-            explanationModifier: "rounded"
+            explanationModifier: "single"
           })
           +block({
             blockHeading: "Why should I choose you?",
@@ -270,7 +293,7 @@ block pageComponents
                   profileImage: {
                     context: "profile",
                     src: "/assets/images/team/chris.jpg",
-                    alt: "Chris Annetts looking serious in front of a brick wall."
+                    alt: "Chris Annetts looking happy while standing in a doorway."
                   },
                   profileHeading: "Chris Annetts",
                   profileText: "Design Director"
@@ -280,7 +303,7 @@ block pageComponents
                   profileImage: {
                     context: "profile",
                     src: "/assets/images/team/mike.jpg",
-                    alt: "Mike Carter looking mildly amused in front of a brick wall."
+                    alt: "Mike Carter looking happy in front of a bunch of trees."
                   },
                   profileHeading: "Mike Carter",
                   profileText: "Engineering Director"
@@ -299,7 +322,7 @@ block pageComponents
                   profileImage: {
                     context: "profile",
                     src: "/assets/images/team/tina.jpg",
-                    alt: "Tina van Schelt looking pleased in front of a brick wall."
+                    alt: "Tina van Schelt looking happy while facing slightly away from the camera."
                   },
                   profileHeading: "Tina van Schelt",
                   profileText: "Software Engineer"
@@ -309,7 +332,7 @@ block pageComponents
                   profileImage: {
                     context: "profile",
                     src: "/assets/images/team/oj.jpg",
-                    alt: "OJ looking relaxed in front of a brick wall."
+                    alt: "OJ looking very happy on a beach with a cliff behind."
                   },
                   profileHeading: "Oliver Standeven (OJ)",
                   profileText: "Software Engineer"
@@ -328,69 +351,70 @@ block pageComponents
               blockHeading: "Our bench",
               blockText: "When needed, we have a trusted group of talented, external designers and developers we can call upon."
             })
-            +profile({
-              profileModifier: "row",
-              profileContentModifier: "left-aligned",
-              imageModifier: "small",
-              profileImage: {
-                src: "/assets/images/company/chris-arnold.jpg",
-                alt: "Chris Arnold who is a Frontend Engineer."
-              },
-              profileHeading: "Chris Arnold",
-              profileText: "Frontend Engineer"
-            })
-            +profile({
-              profileModifier: "row",
-              profileContentModifier: "left-aligned",
-              imageModifier: "small",
-              profileImage: {
-                src: "/assets/images/company/jack-clark.jpg",
-                alt: "Jack Clark who is a Frontend Engineer."
-              },
-              profileHeading: "Jack Clark",
-              profileText: "Frontend Engineer"
-            })
-            +profile({
-              profileModifier: "row",
-              profileContentModifier: "left-aligned",
-              imageModifier: "small",
-              profileImage: {
-                src: "/assets/images/company/matthew-spence.jpg",
-                alt: "Matthew Spence who is a Software Engineer."
-              },
-              profileHeading: "Matthew Spence",
-              profileText: "Software Engineer"
-            })
-            +profile({
-              profileModifier: "row",
-              profileContentModifier: "left-aligned",
-              imageModifier: "small",
-              profileImage: {
-                src: "/assets/images/company/elliot-stokes.jpg",
-                alt: "Elliot Stokes who is a Software Engineer."
-              },
-              profileHeading: "Elliot Stokes",
-              profileText: "Software Engineer"
-            })
-            +profile({
-              profileModifier: "row",
-              profileContentModifier: "left-aligned",
-              imageModifier: "small",
-              profileImage: {
-                src: "/assets/images/company/liam-tucker.jpg",
-                alt: "Liam Tucker who is an eCommerce Specialist."
-              },
-              profileHeading: "Liam Tucker",
-              profileText: "eCommerce Specialist"
-            })
-            +profile({
-              profileModifier: "row",
-              profileContentModifier: "left-aligned",
-              imageModifier: "small",
-              profileImage: {
-                src: "/assets/images/company/colin-young.jpg",
-                alt: "Colin Young who is a Software Engineer."
-              },
-              profileHeading: "Colin Young",
-              profileText: "Software Engineer"
-            })
+            .team__bench-profiles
+              +profile({
+                profileModifier: "row",
+                profileContentModifier: "left-aligned",
+                imageModifier: "small",
+                profileImage: {
+                  src: "/assets/images/company/chris-arnold.jpg",
+                  alt: "Chris Arnold who is a Frontend Engineer."
+                },
+                profileHeading: "Chris Arnold",
+                profileText: "Frontend Engineer"
+              })
+              +profile({
+                profileModifier: "row",
+                profileContentModifier: "left-aligned",
+                imageModifier: "small",
+                profileImage: {
+                  src: "/assets/images/company/jack-clark.jpg",
+                  alt: "Jack Clark who is a Frontend Engineer."
+                },
+                profileHeading: "Jack Clark",
+                profileText: "Frontend Engineer"
+              })
+              +profile({
+                profileModifier: "row",
+                profileContentModifier: "left-aligned",
+                imageModifier: "small",
+                profileImage: {
+                  src: "/assets/images/company/matthew-spence.jpg",
+                  alt: "Matthew Spence who is a Software Engineer."
+                },
+                profileHeading: "Matthew Spence",
+                profileText: "Software Engineer"
+              })
+              +profile({
+                profileModifier: "row",
+                profileContentModifier: "left-aligned",
+                imageModifier: "small",
+                profileImage: {
+                  src: "/assets/images/company/elliot-stokes.jpg",
+                  alt: "Elliot Stokes who is a Software Engineer."
+                },
+                profileHeading: "Elliot Stokes",
+                profileText: "Software Engineer"
+              })
+              +profile({
+                profileModifier: "row",
+                profileContentModifier: "left-aligned",
+                imageModifier: "small",
+                profileImage: {
+                  src: "/assets/images/company/liam-tucker.jpg",
+                  alt: "Liam Tucker who is an eCommerce Specialist."
+                },
+                profileHeading: "Liam Tucker",
+                profileText: "eCommerce Specialist"
+              })
+              +profile({
+                profileModifier: "row",
+                profileContentModifier: "left-aligned",
+                imageModifier: "small",
+                profileImage: {
+                  src: "/assets/images/company/colin-young.jpg",
+                  alt: "Colin Young who is a Software Engineer."
+                },
+                profileHeading: "Colin Young",
+                profileText: "Software Engineer"
+              })

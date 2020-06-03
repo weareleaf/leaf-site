@@ -79,7 +79,7 @@ main {
 
 .company {
   min-height: $size-11;
-  margin: 0 auto $spacing-13 auto;
+  margin: 0 auto 0 auto;
   position: relative;
   max-width: 40rem;
 
@@ -99,7 +99,7 @@ main {
   }
 
   &__explanation {
-    margin-top: -$spacing-7;
+    margin-top: -$spacing-8;
 
     @media screen and (min-width: map-get($breakpoints, 'breakpoint-4')) {
       margin-top: 0;
@@ -119,7 +119,13 @@ main {
   &__logos {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    margin-bottom: $spacing-8;
+    margin-bottom: $spacing-7;
+    margin-top: -$spacing-4;
+
+    @media screen and (min-width: map-get($breakpoints, 'breakpoint-4')) {
+      margin-bottom: $spacing-8;
+      margin-top: 0;
+    }
   }
 
   &__logo {
@@ -178,7 +184,7 @@ main {
     }
 
     &--holiday {
-      margin-bottom: -$spacing-2;
+      margin-bottom: $spacing-5;
       padding-left: $spacing-3;
       max-width: $size-9;
       right: 0;
@@ -232,6 +238,56 @@ main {
     &--culture {
       max-width: 28rem;
       left: -$spacing-3;
+    }
+  }
+}
+
+.company-mobile {
+  &__media {
+    align-items: start;
+    display: flex;
+    justify-content: center;
+
+    @media screen and (min-width: map-get($breakpoints, 'breakpoint-4')) {
+      display: none;
+    }
+  }
+
+  &__image {
+    &--map-mobile {
+      margin: -$spacing-15 0;
+      opacity: .5;
+      position: relative;
+      z-index: z('below');
+    }
+  }
+}
+
+.team {
+  margin-top: -$spacing-5;
+
+  @media screen and (min-width: map-get($breakpoints, 'breakpoint-1')) {
+    margin-top: -$spacing-7;
+  }
+
+  @media screen and (min-width: map-get($breakpoints, 'breakpoint-4')) {
+    margin-top: 0;
+  }
+
+  &__bench-profiles {
+
+    @media screen and (min-width: map-get($breakpoints, 'breakpoint-1')) {
+      display: grid;
+      grid-gap: $spacing-2;
+      grid-template-columns: repeat(2, 1fr);
+    }
+    @media screen and (min-width: map-get($breakpoints, 'breakpoint-3')) {
+      grid-gap: $spacing-2;
+      grid-template-columns: repeat(3, 1fr);
+    }
+
+    @media screen and (min-width: map-get($breakpoints, 'breakpoint-4')) {
+      display: block;
     }
   }
 }
