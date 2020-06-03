@@ -260,22 +260,35 @@ main {
       position: relative;
       z-index: z('below');
     }
+
+    &--pets {
+      @media screen and (min-width: map-get($breakpoints, 'breakpoint-1')) {
+        margin-top: $spacing-5;
+      }
+    }
+
+    &--holiday {
+      margin-top: -$spacing-6;
+
+      @media screen and (min-width: map-get($breakpoints, 'breakpoint-1')) {
+        margin-top: 0;
+      }
+    }
+
+    &--culture {
+      margin-top: -$spacing-7;
+    }
   }
 }
 
 .team {
-  margin-top: -$spacing-5;
-
-  @media screen and (min-width: map-get($breakpoints, 'breakpoint-1')) {
-    margin-top: -$spacing-7;
-  }
+  margin-top: -$spacing-8;
 
   @media screen and (min-width: map-get($breakpoints, 'breakpoint-4')) {
     margin-top: 0;
   }
 
   &__bench-profiles {
-
     @media screen and (min-width: map-get($breakpoints, 'breakpoint-1')) {
       display: grid;
       grid-gap: $spacing-2;
