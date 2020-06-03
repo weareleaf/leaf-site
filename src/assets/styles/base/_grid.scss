@@ -126,7 +126,7 @@
   &--bullet-points {
     grid-gap: 0;
 
-    @media screen and (min-width: map-get($breakpoints, 'breakpoint-4')) {
+    @media screen and (min-width: map-get($breakpoints, 'breakpoint-3')) {
       grid-gap: $spacing-3;
       grid-template-columns: repeat(2, 1fr);
     }
