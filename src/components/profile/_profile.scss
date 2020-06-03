@@ -10,7 +10,10 @@
 
   &__image {
     border-radius: $border-radius-lg;
-    max-width: $size-9;
+
+    @media screen and (min-width: map-get($breakpoints, 'breakpoint-4')) {
+      max-width: $size-9;
+    }
 
     &--small {
       margin-bottom: 0;

@@ -87,7 +87,7 @@ main {
   }
 
   @media screen and (min-width: map-get($breakpoints, 'breakpoint-2')) {
-    padding: 0 $spacing-10;
+    padding: 0 $spacing-9;
   }
 
   @media screen and (min-width: map-get($breakpoints, 'breakpoint-3')) {
@@ -109,7 +109,10 @@ main {
   }
 
   &__explanation {
+    margin-top: -$spacing-7;
+
     @media screen and (min-width: map-get($breakpoints, 'breakpoint-4')) {
+      margin-top: 0;
       max-width: 25rem;
       position: absolute;
       right: 0;
@@ -134,7 +137,11 @@ main {
     background-color: $color-indigo;
     display: flex;
     justify-content: center;
-    padding: 1.3rem 0;
+    padding: $spacing-5;
+
+    @media screen and (min-width: map-get($breakpoints, 'breakpoint-1')) {
+      padding: 1.3rem 0;
+    }
 
     &:nth-child(1) {
       border-right: $border-width-base $border-style $color-iris;
@@ -204,15 +211,25 @@ main {
 
 .company-image {
   &__media {
-    align-items: center;
-    display: flex;
-    min-height: 100%;
-    position: relative;
+    display: none;
+
+    @media screen and (min-width: map-get($breakpoints, 'breakpoint-4')) {
+      align-items: center;
+      display: flex;
+      min-height: 100%;
+      position: relative;
+    }
   }
 
   &__image {
-    position: absolute;
+    position: relative;
+
+    @media screen and (min-width: map-get($breakpoints, 'breakpoint-4')) {
+      position: absolute;
+    }
+
     &--pets {
+      display: block;
       left: -$spacing-3;
       max-width: $size-11;
     }

@@ -62,8 +62,17 @@
   }
 
   &--profiles {
-    grid-gap: $spacing-7;
-    grid-template-columns: repeat(3, max-content);
+    grid-gap: $spacing-6;
+    grid-template-columns: repeat(2, 1fr);
+
+    @media screen and (min-width: map-get($breakpoints, 'breakpoint-1')) {
+      grid-template-columns: repeat(3, 1fr);
+    }
+
+    @media screen and (min-width: map-get($breakpoints, 'breakpoint-4')) {
+      grid-gap: $spacing-7;
+      grid-template-columns: repeat(3, max-content);
+    }
   }
 
   &--tile {
@@ -95,8 +104,10 @@
   }
 
   &--the-team {
-    grid-gap: $spacing-10;
-    grid-template-columns: auto 1fr;
+    @media screen and (min-width: map-get($breakpoints, 'breakpoint-4')) {
+      grid-gap: $spacing-10;
+      grid-template-columns: auto 1fr;
+    }
   }
 
   &--blog {
