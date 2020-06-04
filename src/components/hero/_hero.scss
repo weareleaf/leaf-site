@@ -10,6 +10,18 @@
     @include container;
   }
 
+  &__content {
+    @media screen and (min-width: map-get($breakpoints, 'breakpoint-2')) {
+      margin: 0 auto;
+      max-width: 40rem;
+    }
+
+    @media screen and (min-width: map-get($breakpoints, 'breakpoint-11')) {
+      margin: 0;
+      max-width: 100%;
+    }
+  }
+
   &__heading {
     font-size: $font-size-h1;
     left: .4rem;
@@ -22,7 +34,7 @@
     }
 
     @media screen and (min-width: map-get($breakpoints, 'breakpoint-6')) {
-      font-size: 3.25rem;
+      font-size: 3.5rem;
       max-width: $size-12;
     }
 
@@ -34,7 +46,7 @@
   &__subheading {
     color: var(--color-hero-subheading);
     font-size: 1rem;
-    line-height: 1.6;
+    line-height: 1.73;
     margin: 0 auto;
     text-align: center;
 

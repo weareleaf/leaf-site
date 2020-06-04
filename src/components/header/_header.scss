@@ -26,9 +26,7 @@
   &__logo {
     @include margin-horizontal(auto);
     padding: $spacing-4;
-    //position: relative;
-    //top: .2rem;
-    width: 4rem;
+    width: $spacing-9;
 
     .page--landing & {
       @include margin-horizontal(unset);
