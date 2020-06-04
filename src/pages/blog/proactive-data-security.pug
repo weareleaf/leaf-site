@@ -1,0 +1,107 @@
+extends ../../layouts/content.pug
+
+block prepend vars
+  -var pageTitle = "A proactive approach to data security | Leaf"
+  -var metaUrl = "https://weareleaf.com/blog/proactive-data-security"
+  -var metaTitle = "A proactive approach to data security"
+  -var metaDescription = "Learn how focusing on data security can benefit both your development cycle and your business."
+
+  -var heroHeading = "A proactive approach to data security"
+  -var heroSubheading = "(by Tina van Schelt)"
+
+block pageComponents
+
+  +banner({
+  })
+
+  .banner-spacer
+
+  +hero({
+    heroHeading: heroHeading,
+    heroSubheading: heroSubheading,
+  })
+
+  .section
+    .container
+
+      .grid.grid--center
+
+        +share-icons({
+          socialModifier: "inline"
+        })
+
+        .blog-post
+
+          p.blog-post__intro If you take a look at the general trend of the current online dialogue surrounding software development you’ll, rightfully, find a big emphasis on performance and accessibility, but not so much on their less trendy cousin, security.
+
+          p.blog-post__text According to a <a href="https://about.gitlab.com/blog/2019/07/15/global-developer-report/" target="_blank">2019 Global Developer Report</a> in which GitLab surveyed 4,071 individuals, <i>69% of developers indicate they’re expected to write secure code, nearly half of security professional surveyed (49%) said they struggle to get developers to make remediation of vulnerabilities a priority and </i>
+
+          blockquote
+            q
+              | 68% of security professionals feel that fewer than half of developers are able to spot security vulnerabilities later in the life cycle.
+
+          p.blog-post__text Those are pretty alarming statistics. Security might not be the sexiest topic in the development sphere, but that doesn’t make it any less important. If your application isn’t secure, the speed and usability thereof becomes much less significant, even more so if you’re collecting or dealing with sensitive user data.
+
+          p.blog-post__text The days of slapping <i>https</i> on a website and thinking you’re in the clear are long gone. This post explores six strategies for improving your development cycle and minimising your risk of being exploited.
+
+          h3.blog-post__h3 Security should be baked into the development process
+
+          p.blog-post__text One of the most alarming trends I’ve seen when it comes to security is treating it like an after thought. Much like testing, performance and accessibility, security should be baked into the development process. Securing your application isn’t a one-off task you get to tick off a to-do list.
+
+          p.blog-post__text A seemingly small, but serious slip-up - like committing sensitive data to a GitHub repo, can have far reaching consequences. <a href="https://phys.org/news/2017-11-uber-breach.html" target="_blank">Uber learnt this the hard way.</a>
+
+          p.blog-post__text In 2017, Uber revealed that the personal information of 57 million users and 600,000 drivers were exposed. We later learnt that the data breach occurred due to sensitive data exposure. The hackers gained access to Uber’s GitHub account, where they found credentials that gave them access to AWS.
+
+          p.blog-post__text To make matters worse, Uber kept the breach under wraps for a year and only revealed it after paying the hackers $100,00 to destroy the data without any evidence proving that they did. After the breach and Uber’s handling thereof surfaced, Uber’s valuation dropped by 40%. 
+
+          p.blog-post__text Not prioritising security can be costly and the reputational damage could result in harsher financial damage than the actual breach. 
+
+          blockquote
+            q
+              | If your business were a house, proper, proactive security measures would be both your alarm system and your insurance.
+
+          p.blog-post__text Though out of the scope of this article, it’s important to highlight that these measures should include an effective disaster management strategy.
+
+          h3.blog-post__h3 Make use of modern frameworks
+
+          p.blog-post__text At Leaf we’re primarily using Ruby on Rails and React, both well established solutions with experienced core teams that are working hard to limit possible vulnerabilities and increase developer awareness. One strategy use by React is giving risky operations, that could potentially open you up for cyber attacks (like cross-site scripting or SQLinjection) names that give caution, like `dangerouslySetInnerHTML`.
+
+          p.blog-post__text Using modern frameworks is only one part of the equation. Keeping them up to date is the other. Outdated technologies generally come with increased operational costs and a dwindling talent pool, but they almost certainly come with a higher volume of vulnerabilities.
+
+          h3.blog-post__h3 Minimize the use of third-party packages
+
+          p.blog-post__text When it comes to dependencies, third-party packages and external scripts, be selective.
+
+          p.blog-post__text Towards the end of 2018 a stale, but popular <a href="https://github.com/dominictarr/event-stream/issues/116" target="_blank">npm package</a> with roughly 2 million downloads a week was <a href="https://snyk.io/blog/malicious-code-found-in-npm-package-event-stream/" target="_blank">hacked</a>. The hacker gained admin privileges to the repo by disguising himself as a willing maintainer and subsequently injected crypto-coin-stealing malware. The incident was a sobering reminder of just how fragile the ecosystem can be.
+
+          p.blog-post__text A 2017 study found that <a href="https://www.bleepingcomputer.com/news/security/52-percent-of-all-javascript-npm-packages-could-have-been-hacked-via-weak-credentials/" target="_blank">52% of all npm packages could have been hacked via weak credentials</a>. Services like npm are actively working to improve these odds, but we still have a long way to go and the onus is on the developer to do a regular dependency audit.
+
+          h3.blog-post__h3 Don’t dismiss security as a “back-end problem”
+
+          p.blog-post__text Another dangerous notion that is far too common. As the web is evolving front-end developers are sharing an increasing amount of responsibility when it comes to security. A quick scan of the <a href="https://sucuri.net/guides/owasp-top-10-security-vulnerabilities-2020/" target="_blank">OWASP Top 10 Security Vulnerabilities and Risks for 2020</a> highlights this. Exploits that make use of cross-site scripting and injection attacks can be prevented by properly validating and sanitising the data inputs in your application.
+
+          p.blog-post__text When it comes to security, knowing what not to do is equally important. localStorage and sessionStorage should be used sparingly and only for “silly” data, sensitive user data should never be stored client-side. DevTools is a beautiful thing, but it’s important to remember that it doesn’t distinguish between hackers and developers and allows for easy data manipulation.
+
+          p.blog-post__text Taking a considered view towards data value is paramount in the information age. In addition to only collecting essential data, it’s a good idea to evaluate and group data according to their level of sensitivity when starting a new project or building out a new feature. The <a href="http://datatags.org/" target="_blank">Harvard Data-tag Model</a> could be a good starting point.
+
+          h3.blog-post__h3 Empower your users
+
+          p.blog-post__text If history is anything to go by, it’s safe to say that humans are the weakest point in any software system. This includes your staff, your developers and your users. It’s important that your user experience takes a proactive approach towards security.
+
+          p.blog-post__text I’ll use an universal enemy, namely passwords, as an example. Popular applications like Slack and Notion allow users to login by sending a temporary pass code to their inbox, but for the most part progress towards a world without passwords is proving to be slow-moving.
+
+          p.blog-post__text Weak passwords and users that reuse the same password over and over have consistently been one of the biggest risks when it comes to data breaches. You can minimise your risk, by guiding your users to use strong and unique passwords. At the very least you should be ensuring that passwords have a minimum length requirement. Users with high-level or admin access should be encouraged to change their password regularly. 
+
+          h3.blog-post__h3 Keep up to date, stay informed
+
+          p.blog-post__text As a developer you might already be overwhelmed by the sheer volume of information you have to process. You don’t have to be a security professional, but it is your responsibility to ensure that you have a basic understanding and familiarity with current security trends. The Open Web Application Security Project (<a href="https://owasp.org/" target="_blank">OWASP</a>) is a good starting point.
+
+          hr.divider.divider--block-hr
+
+          p.blog-post__text As a business in the digital age, ensuring that your user data is secure should be a top priority. You don’t want to find yourself in the position of playing catch-up.  Security requires a proactive approach, with equal emphasis on preparedness and prevention. 
+
+    section.section.section--lg-spacing
+      .container
+        .blog-content
+          h3.blog-content__heading Keep reading
+          +blog-post-grid
