@@ -133,7 +133,7 @@
 
     &--hx-image-10 {
       display: block;
-      margin: -$spacing-6 auto -1rem auto;
+      margin: -$spacing-6 auto -2rem auto;
 
       @media screen and (min-width: map-get($breakpoints, 'breakpoint-1')) {
         max-width: 51.5%;
@@ -146,9 +146,10 @@
 
     &--hx-image-11 {
       display: block;
-      margin: -$spacing-6 auto -.5rem auto;
+      margin: -$spacing-6 auto -1.5rem auto;
 
       @media screen and (min-width: map-get($breakpoints, 'breakpoint-1')) {
+        margin: -$spacing-6 auto -1rem auto;
         max-width: 50%;
       }
 
