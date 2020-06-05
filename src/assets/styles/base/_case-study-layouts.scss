@@ -52,12 +52,12 @@
   }
 
   &--rift-7 {
-    margin-bottom: -$spacing-3;
+    margin-bottom: $spacing-4;
     padding-left: $spacing-3;
     padding-top: $spacing-6;
     position: relative;
 
-    @media screen and (min-width: map-get($breakpoints, 'breakpoint-2')) {
+    @media screen and (min-width: map-get($breakpoints, 'breakpoint-1')) {
       margin-bottom: 0;
       padding-left: $spacing-5;
     }
@@ -407,12 +407,11 @@
 
 .rift-metrics {
   background-color: var(--color-metric-background);
-  margin-bottom: -$spacing-4;
+  margin-bottom: 5rem;
   padding: $spacing-8 0 $spacing-6 0;
   position: relative;
 
   @media screen and (min-width: map-get($breakpoints, 'breakpoint-1')) {
-    margin-bottom: $spacing-9;
     padding: $spacing-9;
   }
 
