@@ -1,46 +1,75 @@
 .timeline {
+  margin: 0 auto;
   position: relative;
 
+  @media screen and (min-width: map-get($breakpoints, 'breakpoint-4')) {
+    max-width: 60rem;
+  }
+
   &::before {
-    background: #ee4d4d;
+    background: #E4E9F9;
     content: '';
     height: 100%;
-    left: 50%;
+    left: 0;
     position: absolute;
-    top: 6rem;
+    top: 7rem;
     width: .1rem;
+
+    @media screen and (min-width: map-get($breakpoints, 'breakpoint-1')) {
+      top: $spacing-11;
+    }
+
+    @media screen and (min-width: map-get($breakpoints, 'breakpoint-4')) {
+      left: 50%;
+    }
   }
 
   &__item {
-    margin-bottom: 2rem;
-    width: 27rem;
-
-    &:nth-of-type(2n) {
+    &:nth-child(2n) {
       float: right;
     }
 
-    &::before {
+    &::before, &::after {
       clear: both;
       content: '';
       display: block;
-      width: 100%;
-    }
-
-    &::after {
-      clear: both;
-      content: '';
-      display: block;
-      width: 100%;
     }
   }
 
   &__marker {
-    background-color: red;
-    height: 2rem;
-    left: 50%;
-    margin-left: -$spacing-5;
-    margin-top: 1.5rem;
+    left: -.7rem;
+    height: $size-2;
+    margin-top: $spacing-7;
     position: absolute;
-    width: 2rem;
+    width: $size-2;
+
+    @media screen and (min-width: map-get($breakpoints, 'breakpoint-1')) {
+      left: -1rem;
+      height: 100%;
+      width: 100%;
+    }
+
+    @media screen and (min-width: map-get($breakpoints, 'breakpoint-4')) {
+      left: 50%;
+      height: 100%;
+      margin-left: -.9rem;
+      width: 100%;
+    }
+
+    @media screen and (min-width: map-get($breakpoints, 'breakpoint-6')) {
+      left: 50%;
+      margin-left: -$spacing-4;
+    }
+  }
+
+  &__content {
+    @media screen and (min-width: map-get($breakpoints, 'breakpoint-4')) {
+      max-width: 27rem;
+      padding: 0 $spacing-5;
+    }
+
+    @media screen and (min-width: map-get($breakpoints, 'breakpoint-10')) {
+      padding: 0;
+    }
   }
 }
