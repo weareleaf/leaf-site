@@ -20,11 +20,14 @@
     }
 
     @media screen and (min-width: map-get($breakpoints, 'breakpoint-4')) {
+      top: 9rem;
       left: 50%;
     }
   }
 
   &__item {
+    margin-bottom: -2rem;
+
     &:nth-child(2n) {
       float: right;
     }
@@ -34,30 +37,32 @@
       content: '';
       display: block;
     }
+
+    &:last-child {
+      margin-bottom: 6rem;
+    }
   }
 
   &__marker {
-    left: -.7rem;
     height: $size-2;
+    margin-left: -.7rem;
     margin-top: $spacing-7;
     position: absolute;
     width: $size-2;
 
     @media screen and (min-width: map-get($breakpoints, 'breakpoint-1')) {
-      left: -1rem;
       height: 100%;
+      margin-left: -.95rem;
       width: 100%;
     }
 
     @media screen and (min-width: map-get($breakpoints, 'breakpoint-4')) {
       left: 50%;
       height: 100%;
-      margin-left: -.9rem;
       width: 100%;
     }
 
     @media screen and (min-width: map-get($breakpoints, 'breakpoint-6')) {
-      left: 50%;
       margin-left: -$spacing-4;
     }
   }
