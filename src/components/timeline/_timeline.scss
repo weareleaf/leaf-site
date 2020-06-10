@@ -1,38 +1,46 @@
-.tile {
-  @include focus-ring;
-  @include shadow-effect;
-  align-items: center;
-  background-color: $color-indigo;
-  border-radius: $border-radius-lg;
-  display: -ms-grid;
-  display: grid;
-  grid-template-columns: auto 1fr;
-  height: 100%;
+.timeline {
+  position: relative;
 
-  &__media {
-    display: block;
-    padding: $spacing-4;
+  &::before {
+    background: #ee4d4d;
+    content: '';
+    height: 100%;
+    left: 50%;
+    position: absolute;
+    top: 6rem;
+    width: .1rem;
   }
 
-  &__image {
-    border-radius: 4px;
-    display: block;
-    height: 8.5rem;
-    object-fit: cover;
-    width: 8.5rem;
-  }
+  &__item {
+    margin-bottom: 2rem;
+    width: 27rem;
 
-  &__content {
-    align-self: center;
-    padding: $spacing-6;
+    &:nth-of-type(2n) {
+      float: right;
+    }
 
-    @media screen and (min-width: map-get($breakpoints, 'breakpoint-1')) {
-      padding: $spacing-7;
+    &::before {
+      clear: both;
+      content: '';
+      display: block;
+      width: 100%;
+    }
+
+    &::after {
+      clear: both;
+      content: '';
+      display: block;
+      width: 100%;
     }
   }
 
-  &__text {
-    font-size: $font-size-sm;
-    margin-bottom: 0;
+  &__marker {
+    background-color: red;
+    height: 2rem;
+    left: 50%;
+    margin-left: -$spacing-5;
+    margin-top: 1.5rem;
+    position: absolute;
+    width: 2rem;
   }
 }

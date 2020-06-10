@@ -1,15 +1,7 @@
-mixin tile(c)
-  a.tile(
-    href= c.tileUrl
-    rel=(c.newTab ? "noopener" : undefined)
-    target=(c.newTab ? "_blank" : undefined)
-  )
-    if c.tileImage
-      +image({
-        context: "tile",
-        src: c.tileImage.src,
-        alt: c.tileImage.alt
-      })
-    .tile__content
-      h3.tile__heading= c.tileHeading
-      p.tile__text= c.tileText
+mixin timeline(c)
+  .timeline
+    each item in c.timelineItems
+      .timeline__item
+        .timeline__marker
+        .timeline__content
+          +block(item)

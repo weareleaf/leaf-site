@@ -422,4 +422,21 @@ block pageComponents
   section.section
     .container
       .company.timeline
-       h2.large.large--center The Leaf timeline
+        h2.large.large--center The Leaf timeline
+        +timeline({
+          timelineItems: [
+            {
+              subHeading: true,
+              blockSubHeading: "date",
+              blockHeading: "heading",
+              blockText: "text",
+              blockModifier: "right-align"
+            },
+            {
+              subHeading: true,
+              blockSubHeading: "date",
+              blockHeading: "heading",
+              blockText: "text",
+            }
+          ]
+        })
