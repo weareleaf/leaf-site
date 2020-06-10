@@ -84,8 +84,12 @@ main {
   max-width: 40rem;
 
   @media screen and (min-width: map-get($breakpoints, 'breakpoint-4')) {
-    margin: 0 0 $spacing-13 0;
+    margin: 0 0 $spacing-12 0;
     max-width: 100%;
+  }
+
+  @media screen and (min-width: map-get($breakpoints, 'breakpoint-10')) {
+    margin: 0 0 $spacing-13 0;
   }
 
   &__map {
@@ -184,10 +188,14 @@ main {
     }
 
     &--holiday {
-      margin-bottom: $spacing-5;
+      margin-bottom: $spacing-7;
       padding-left: $spacing-3;
       max-width: $size-9;
       right: 0;
+
+      @media screen and (min-width: map-get($breakpoints, 'breakpoint-10')) {
+        margin-bottom: $spacing-5;
+      }
     }
   }
 }
@@ -231,8 +239,12 @@ main {
     }
 
     &--holiday {
-      max-width: 28.5rem;
+      max-width: 27rem;
       right: -$spacing-3;
+
+      @media screen and (min-width: map-get($breakpoints, 'breakpoint-10')) {
+        max-width: 28.5rem;
+      }
     }
 
     &--culture {

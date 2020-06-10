@@ -1,0 +1,38 @@
+.tile {
+  @include focus-ring;
+  @include shadow-effect;
+  align-items: center;
+  background-color: $color-indigo;
+  border-radius: $border-radius-lg;
+  display: -ms-grid;
+  display: grid;
+  grid-template-columns: auto 1fr;
+  height: 100%;
+
+  &__media {
+    display: block;
+    padding: $spacing-4;
+  }
+
+  &__image {
+    border-radius: 4px;
+    display: block;
+    height: 8.5rem;
+    object-fit: cover;
+    width: 8.5rem;
+  }
+
+  &__content {
+    align-self: center;
+    padding: $spacing-6;
+
+    @media screen and (min-width: map-get($breakpoints, 'breakpoint-1')) {
+      padding: $spacing-7;
+    }
+  }
+
+  &__text {
+    font-size: $font-size-sm;
+    margin-bottom: 0;
+  }
+}

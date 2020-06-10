@@ -308,11 +308,15 @@ blockquote {
   }
 }
 
-.team__heading {
+.large {
   margin-bottom: $spacing-6;
   font-size: $font-size-xl;
 
   @media screen and (min-width: map-get($breakpoints, 'breakpoint-4')) {
     margin-bottom: $spacing-8;
+  }
+
+  &--center {
+    text-align: center;
   }
 }
