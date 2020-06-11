@@ -22,11 +22,15 @@
   &__subheading {
     display: inline-block;
     font-family: $font-family-sans-serif-extrabold;
-    font-size: .55rem;
+    font-size: .7rem;
     font-weight: 400;
     letter-spacing: .05rem;
     margin-bottom: $spacing-4;
     text-transform: uppercase;
+
+    @media screen and (min-width: map-get($breakpoints, 'breakpoint-6')) {
+      font-size: .6rem;
+    }
   }
 
   &__text {
