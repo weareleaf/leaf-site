@@ -168,17 +168,12 @@ main {
     }
   }
 
-  &__image-caption {
-    height: 100%;
-  }
-
   &__caption {
     bottom: 0;
     color: $color-ice;
     display: none;
     font-size: .65rem;
     line-height: 1.4;
-    margin-bottom: 0;
     position: absolute;
 
     @media screen and (min-width: map-get($breakpoints, 'breakpoint-6')) {
@@ -193,13 +188,13 @@ main {
     }
 
     &--holiday {
-      margin-bottom: $spacing-5; // Had to make some annoying visual compromises due to Chrome/Firefox margin difference
-      max-width: $size-9;
+      margin-bottom: $spacing-7;
       padding-left: $spacing-3;
+      max-width: $size-9;
       right: 0;
 
       @media screen and (min-width: map-get($breakpoints, 'breakpoint-10')) {
-        margin-bottom: $spacing-2;
+        margin-bottom: $spacing-5;
       }
     }
   }
