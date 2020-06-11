@@ -1,7 +1,7 @@
 $content-width: 27rem; //540px
 
 .timeline {
-  margin: 0 auto;
+  margin: 0 auto $spacing-13 auto;
   position: relative;
 
   @media screen and (min-width: map-get($breakpoints, 'breakpoint-4')) {
@@ -9,20 +9,19 @@ $content-width: 27rem; //540px
   }
 
   &::before {
-    background: #E4E9F9;
+    background: hsl(226, 64%, 94%);
     content: '';
-    height: 93%;
+    height: 94%;
     left: 0;
     position: absolute;
     top: 7rem;
-    width: .1rem;
+    width: $border-width-sm;
 
     @media screen and (min-width: map-get($breakpoints, 'breakpoint-1')) {
       top: $spacing-11;
     }
 
     @media screen and (min-width: map-get($breakpoints, 'breakpoint-4')) {
-      top: 9rem;
       left: 50%;
     }
   }
@@ -52,5 +51,18 @@ $content-width: 27rem; //540px
 
   &__content {
     max-width: $content-width;
+  }
+
+  &__button {
+    background-color: var(--color-background);
+    border: $border-width-sm $border-style hsl(226, 64%, 94%);
+    bottom: -$spacing-8;
+    color: #E3E0F4;
+    font-family: $font-family-sans-serif-medium;
+    font-size: $font-size-xs;
+    left: 50%;
+    padding: $spacing-4 $spacing-5;
+    position: absolute;
+    transform: translate(-50%, 0);
   }
 }
