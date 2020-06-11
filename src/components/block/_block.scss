@@ -46,7 +46,11 @@
     }
   }
 
+  // Company timeline variations: (screens larger than bp-4)
+
   &--right-align {
-    text-align: right;
+    @media screen and (min-width: map-get($breakpoints, 'breakpoint-4')) {
+      text-align: right;
+    }
   }
 }

@@ -1,37 +1,50 @@
 $content-width: 27rem; //540px
 
 .timeline {
-  margin: 0 auto $spacing-13 auto;
+  margin: -$spacing-5 auto $spacing-11 auto;
   position: relative;
 
   @media screen and (min-width: map-get($breakpoints, 'breakpoint-4')) {
+    margin: -$spacing-5 auto $spacing-6 auto;
+  }
+
+  @media screen and (min-width: map-get($breakpoints, 'breakpoint-4')) {
+    margin: 0 auto $spacing-13 auto;
     max-width: 60rem;
   }
 
   &::before {
     background: hsl(226, 64%, 94%);
     content: '';
-    height: 94%;
-    left: 0;
+    height: 97%;
+    left: .7rem;
     position: absolute;
     top: 7rem;
     width: $border-width-sm;
 
     @media screen and (min-width: map-get($breakpoints, 'breakpoint-1')) {
+      height: 95%;
       top: $spacing-11;
     }
 
     @media screen and (min-width: map-get($breakpoints, 'breakpoint-4')) {
       left: 50%;
+      height: 94%;
     }
   }
 
   &__item {
     display: flex;
-    margin-bottom: -$spacing-7;
+    margin-bottom: 0;
+    padding-left: 2.5rem;
 
-    &:nth-child(even) {
-      flex-direction: row-reverse;
+    @media screen and (min-width: map-get($breakpoints, 'breakpoint-4')) {
+      margin-bottom: -$spacing-7;
+      padding: 0;
+
+      &:nth-child(even) {
+        flex-direction: row-reverse;
+      }
     }
   }
 
@@ -40,29 +53,51 @@ $content-width: 27rem; //540px
     margin-top: $spacing-7;
     width: $size-2;
     position: absolute;
-    left: 50%;
-    margin-left: -$spacing-4;
+    left: 0;
 
     @media screen and (min-width: map-get($breakpoints, 'breakpoint-1')) {
       height: 100%;
+      margin-left: -$spacing-2;
       width: 100%;
+    }
+
+    @media screen and (min-width: map-get($breakpoints, 'breakpoint-4')) {
+      left: 50%;
+      margin-left: -.95rem;
+    }
+
+    @media screen and (min-width: map-get($breakpoints, 'breakpoint-6')) {
+      margin-left: -$spacing-4;
     }
   }
 
   &__content {
-    max-width: $content-width;
+    @media screen and (min-width: map-get($breakpoints, 'breakpoint-4')) {
+      max-width: $content-width;
+    }
   }
 
   &__button {
     background-color: var(--color-background);
     border: $border-width-sm $border-style hsl(226, 64%, 94%);
     bottom: -$spacing-8;
-    color: #E3E0F4;
+    color: hsl(249, 48%, 92%);
+    cursor: pointer;
     font-family: $font-family-sans-serif-medium;
     font-size: $font-size-xs;
-    left: 50%;
-    padding: $spacing-4 $spacing-5;
+    padding: $spacing-5;
     position: absolute;
-    transform: translate(-50%, 0);
+    width: 100%;
+
+    @media screen and (min-width: map-get($breakpoints, 'breakpoint-2')) {
+      left: 5rem;
+      padding: $spacing-4 $spacing-5;
+      transform: translate(-50%, 0);
+      width: auto;
+    }
+
+    @media screen and (min-width: map-get($breakpoints, 'breakpoint-4')) {
+      left: 50%;
+    }
   }
 }
