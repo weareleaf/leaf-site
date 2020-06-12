@@ -278,7 +278,7 @@ block pageComponents
 
   section.section
     .container
-      .company.team(id="team")
+      .company.team
         h2.large Meet the team
         .grid.grid--the-team
           .team__first-team
@@ -301,7 +301,7 @@ block pageComponents
                 })
               .grid__item
                 +profile({
-                  profileUrl: "https://dribbble.com/",
+                  profileUrl: "/company/mike",
                   profileImage: {
                     context: "profile",
                     src: "/assets/images/team/mike.jpg",
@@ -312,7 +312,7 @@ block pageComponents
                 })
               .grid__item
                 +profile({
-                  profileUrl: "https://dribbble.com/",
+                  profileUrl: "/company/curt",
                   profileImage: {
                     src: "/assets/images/team/curt.jpg",
                     alt: "Curtis Lee looking very happy in front of a tree."
@@ -322,7 +322,7 @@ block pageComponents
                 })
               .grid__item
                 +profile({
-                  profileUrl: "https://dribbble.com/",
+                  profileUrl: "/company/tina",
                   profileImage: {
                     context: "profile",
                     src: "/assets/images/team/tina.jpg",
@@ -333,7 +333,7 @@ block pageComponents
                 })
               .grid__item
                 +profile({
-                  profileUrl: "https://dribbble.com/",
+                  profileUrl: "/company/oj",
                   profileImage: {
                     context: "profile",
                     src: "/assets/images/team/oj.jpg",
@@ -344,13 +344,14 @@ block pageComponents
                 })
               .grid__item
                 +profile({
-                  profileUrl: "https://dribbble.com/",
+                  profileUrl: "careers/front-end-developer",
                   profileImage: {
                     src: "/assets/images/team/placeholder.jpg",
                     alt: "We're hiring a Software Engineer."
                   },
                   profileHeading: "We’re hiring",
-                  profileText: "Software Engineer"
+                  profileText: "Software Engineer",
+                  profileTarget: "_blank"
                 })
           .team__our-bench
             +block({

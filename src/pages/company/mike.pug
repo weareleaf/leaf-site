@@ -1,0 +1,15 @@
+extends ../../layouts/bio.pug
+
+block prepend vars
+  -var pageTitle = "Mike | Leaf"
+  -var metaUrl = "https://weareleaf.com/company/mike"
+  -var metaTitle = ""
+  -var metaDescription = ""
+
+block pageComponents
+
+  +image({
+    context: "biography",
+    src: "/assets/images/team/mike-bio.jpg",
+    alt: "Chris"
+  })

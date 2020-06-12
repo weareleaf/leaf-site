@@ -1,0 +1,15 @@
+extends ../../layouts/bio.pug
+
+block prepend vars
+  -var pageTitle = "Curt | Leaf"
+  -var metaUrl = "https://weareleaf.com/company/curt"
+  -var metaTitle = ""
+  -var metaDescription = ""
+
+block pageComponents
+
+  +image({
+    context: "biography",
+    src: "/assets/images/team/curt-bio.jpg",
+    alt: "Curtis Lee looking very happy in front of a tree."
+  })
