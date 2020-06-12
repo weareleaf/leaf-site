@@ -317,3 +317,12 @@ main {
     }
   }
 }
+
+// Bio images
+
+.biography {
+  &__media {
+    max-width: 50%;
+    position: fixed;
+  }
+}

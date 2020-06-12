@@ -7,6 +7,12 @@ block pageContent
   main(role="main")
     block pageComponents
 
-  +close({
-    closeUrl: "/company#team"
-  })
+    +close({
+      closeUrl: "/company#team"
+    })
+
+      +image({
+        context: "biography",
+        src: c.biographyImage.src,
+        alt: c.biographyImage.alt
+      })
