@@ -12,20 +12,18 @@ $content-width: 27rem; //540px
   &::before {
     background: hsl(226, 64%, 94%);
     content: '';
-    height: 97%;
+    height: 100%;
     left: .7rem;
     position: absolute;
-    top: 7rem;
+    top: $spacing-7;
     width: $border-width-sm;
 
     @media screen and (min-width: map-get($breakpoints, 'breakpoint-1')) {
-      height: 95%;
-      top: $spacing-11;
+      top: $spacing-7;
     }
 
     @media screen and (min-width: map-get($breakpoints, 'breakpoint-4')) {
       left: 50%;
-      height: 94%;
     }
   }
 
