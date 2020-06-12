@@ -5,6 +5,7 @@ $image-size: $size-1;
   @include focus-ring;
   @include touch-boost;
   display: block;
+  margin-right: $spacing-5;
 
   @include hover {
     text-decoration: none;
@@ -15,17 +16,22 @@ $image-size: $size-1;
   }
 
   @media screen and (min-width: map-get($breakpoints, 'breakpoint-3')) {
+    align-items: center;
     display: flex;
+    margin-bottom: $spacing-5;
+    
+    &:not(:last-of-type) {
+      margin-right: $spacing-5;
+    }
   }
 
   &__icon {
+    @include size($icon-size);
     background-color: var(--color-container);
     border-radius: $border-radius-full;
     position: relative;
     text-align: center;
-    height: $icon-size;
     transition: transform $duration-2 $timing-ease;
-    width: $icon-size;
 
     @media screen and (min-width: map-get($breakpoints, 'breakpoint-3')) {
       margin-right: $spacing-4;
@@ -33,12 +39,11 @@ $image-size: $size-1;
   }
 
   &__image {
-    height: $image-size;
+    @include size($image-size);
     left: 50%;
     position: absolute;
     top: 50%;
     transform: translate(-50%, -50%);
-    width: $image-size;
   }
 
   &__content {
@@ -58,14 +63,14 @@ $image-size: $size-1;
   &__heading {
     color: $color-white;
     font-size: .6rem;
-    font-weight: 700;
+    font-family: $font-family-sans-serif-extrabold;
     letter-spacing: .05rem;
-    margin-bottom: 0;
+    margin-bottom: -.25rem;
     text-transform: uppercase;
   }
 
   &__handle {
     font-family: $font-family-sans-serif-medium;
-    font-size: $font-size-xs;
+    font-size: .7rem;
   }
 }

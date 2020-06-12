@@ -342,11 +342,15 @@ main {
   &__content {
     width: 50%;
     margin-left: auto;
-    padding: $spacing-10;
+    padding: $spacing-8;
+
+    @media screen and (min-width: map-get($breakpoints, 'breakpoint-11')) {
+      padding: $spacing-10;
+    }
   }
 
   &__social {
     display: flex;
-    justify-content: space-between;
+    flex-wrap: wrap;
   }
 }
