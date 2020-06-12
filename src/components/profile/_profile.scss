@@ -1,7 +1,16 @@
 .profile {
+  &:hover {
+    cursor: pointer;
+    text-decoration: none;
+  }
+
   &--row {
     align-items: center;
     display: flex;
+
+    &:hover {
+      cursor: default;
+    }
   }
 
   &__media {
@@ -10,14 +19,27 @@
 
   &__image {
     border-radius: $border-radius-lg;
+    transition:
+      box-shadow $duration-6 $timing-ease,
+      transform $duration-2 $timing-ease;
 
     @media screen and (min-width: map-get($breakpoints, 'breakpoint-4')) {
       max-width: $size-9;
     }
 
+    &:hover {
+      box-shadow: 0 .5rem 1rem 0 rgba($color-black, .075);
+      transform: scale(1.04);
+    }
+
     &--small {
       margin-bottom: 0;
       max-width: $size-5;
+
+      &:hover {
+        box-shadow: none !important; // Prevent higher specificity `__image` from working
+        transform: scale(1) !important;
+      }
     }
   }
 

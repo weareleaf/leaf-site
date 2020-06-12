@@ -1,5 +1,7 @@
 mixin profile(c)
-  .profile(class= c.profileModifier ? "profile--" + c.profileModifier : "")
+  a.profile(
+    class= (c.profileModifier ? "profile--" + c.profileModifier : "")
+    href= c.profileUrl)
     +image({
       context: "profile",
       modifier: c.imageModifier,
