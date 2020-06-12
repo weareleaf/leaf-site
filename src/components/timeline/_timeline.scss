@@ -18,10 +18,6 @@ $content-width: 27rem; //540px
     top: $spacing-7;
     width: $border-width-sm;
 
-    @media screen and (min-width: map-get($breakpoints, 'breakpoint-1')) {
-      top: $spacing-7;
-    }
-
     @media screen and (min-width: map-get($breakpoints, 'breakpoint-4')) {
       left: 50%;
     }
