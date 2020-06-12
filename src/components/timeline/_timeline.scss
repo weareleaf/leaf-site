@@ -5,10 +5,6 @@ $content-width: 27rem; //540px
   position: relative;
 
   @media screen and (min-width: map-get($breakpoints, 'breakpoint-4')) {
-    margin: -$spacing-5 auto $spacing-6 auto;
-  }
-
-  @media screen and (min-width: map-get($breakpoints, 'breakpoint-4')) {
     margin: 0 auto $spacing-13 auto;
     max-width: 60rem;
   }
