@@ -41,6 +41,11 @@
     &__period {
       color: var(--color-accent);
     }
+
+    &--bio {
+      margin-left: -$spacing-3;
+      text-align: left;
+    }
   }
 
   &__subheading {

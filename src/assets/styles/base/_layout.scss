@@ -322,7 +322,31 @@ main {
 
 .biography {
   &__media {
+    left: 0;
+    height: 100%;
     max-width: 50%;
     position: fixed;
+    top: 0;
+  }
+
+  &__image {
+    height: 100%;
+    object-fit: cover;
+    width: 100%;
+
+    @media screen and (min-width: map-get($breakpoints, 'breakpoint-11')) {
+      height: auto;
+    }
+  }
+
+  &__content {
+    width: 50%;
+    margin-left: auto;
+    padding: $spacing-10;
+  }
+
+  &__social {
+    display: flex;
+    justify-content: space-between;
   }
 }

@@ -324,3 +324,14 @@ blockquote {
     }
   }
 }
+
+.biography {
+  &__meta {
+    color: hsl(231, 84%, 83%);
+    font-family: $font-family-sans-serif-extrabold;
+    font-size: .7rem;
+    letter-spacing: .1rem;
+    margin-bottom: $spacing-4;
+    text-transform: uppercase;
+  }
+}
