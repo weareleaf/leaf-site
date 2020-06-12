@@ -1,0 +1,18 @@
+.close {
+  @include focus-ring;
+  background-color: $color-snow;
+  border-radius: $border-radius-full;
+  padding: $spacing-5;
+
+  @media screen and (min-width: map-get($breakpoints, 'breakpoint-11')) {
+    background-color: var(--color-container);
+  }
+  
+  &__icon {
+    align-items: center;
+    display: flex;
+    height: $size-1;
+    justify-content: center;
+    width: $size-1;
+  }
+}

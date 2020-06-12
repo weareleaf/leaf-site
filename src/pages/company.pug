@@ -278,7 +278,7 @@ block pageComponents
 
   section.section
     .container
-      .company.team
+      .company.team(id="team")
         h2.large Meet the team
         .grid.grid--the-team
           .team__first-team
@@ -290,6 +290,7 @@ block pageComponents
             .grid.grid--profiles
               .grid__item
                 +profile({
+                  profileUrl: "/company/chris",
                   profileImage: {
                     context: "profile",
                     src: "/assets/images/team/chris.jpg",
@@ -300,6 +301,7 @@ block pageComponents
                 })
               .grid__item
                 +profile({
+                  profileUrl: "https://dribbble.com/",
                   profileImage: {
                     context: "profile",
                     src: "/assets/images/team/mike.jpg",
@@ -310,6 +312,7 @@ block pageComponents
                 })
               .grid__item
                 +profile({
+                  profileUrl: "https://dribbble.com/",
                   profileImage: {
                     src: "/assets/images/team/curt.jpg",
                     alt: "Curtis Lee looking very happy in front of a tree."
@@ -319,6 +322,7 @@ block pageComponents
                 })
               .grid__item
                 +profile({
+                  profileUrl: "https://dribbble.com/",
                   profileImage: {
                     context: "profile",
                     src: "/assets/images/team/tina.jpg",
@@ -329,6 +333,7 @@ block pageComponents
                 })
               .grid__item
                 +profile({
+                  profileUrl: "https://dribbble.com/",
                   profileImage: {
                     context: "profile",
                     src: "/assets/images/team/oj.jpg",
@@ -339,6 +344,7 @@ block pageComponents
                 })
               .grid__item
                 +profile({
+                  profileUrl: "https://dribbble.com/",
                   profileImage: {
                     src: "/assets/images/team/placeholder.jpg",
                     alt: "We're hiring a Software Engineer."
