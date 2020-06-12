@@ -1,12 +1,12 @@
 .close {
   @include focus-ring;
-  background-color: $color-snow;
+  background-color: var(--color-container);
   border-radius: $border-radius-full;
   padding: $spacing-5;
-
-  @media screen and (min-width: map-get($breakpoints, 'breakpoint-11')) {
-    background-color: var(--color-container);
-  }
+  position: absolute;
+  right: $spacing-7;
+  top: $spacing-7;
+  width: $size-5;
   
   &__icon {
     align-items: center;

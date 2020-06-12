@@ -38,6 +38,11 @@ html {
   --color-close: #{$color-cerulean};
 }
 
+.page--bio {
+  --color-close: #{$color-white};
+  --color-container: #{$color-bluegem};
+}
+
 body {
   font-family: $font-family-sans-serif-regular;
   -webkit-font-smoothing: antialiased;

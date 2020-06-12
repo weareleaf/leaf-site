@@ -1,0 +1,12 @@
+extends ../base.pug
+
+block prepend vars
+  -var pageClass = "bio"
+
+block pageContent
+  main(role="main")
+    block pageComponents
+
+  +close({
+    closeUrl: "/company#team"
+  })
