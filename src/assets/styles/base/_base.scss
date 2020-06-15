@@ -39,8 +39,12 @@ html {
 }
 
 .page--bio {
-  --color-close: #{$color-white};
+  --color-close: #{$color-bluegem};
   --color-container: #{$color-bluegem};
+
+  @media screen and (min-width: map-get($breakpoints, 'breakpoint-3')) {
+    --color-close: #{$color-white};
+  }
 }
 
 body {
