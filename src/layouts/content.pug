@@ -4,7 +4,11 @@ block prepend vars
   -var pageClass = "content"
 
 block pageContent
-  main(role="main")
+  +header({
+    contentPage: true
+  })
+
+  main.site-content(role="main")
     block pageComponents
 
   +footer({

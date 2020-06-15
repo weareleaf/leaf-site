@@ -5,6 +5,8 @@
     list-style: none;
     margin: 0;
     padding: 0;
+    position: sticky;
+    top: 1rem;
   }
 
   &__item {
@@ -21,13 +23,16 @@
   &__link {
     cursor: pointer;
     display: block;
+    transition: transform $duration-1 $timing-ease;
+
+    @include hover {
+      transform: scale(1.05);
+    }
   }
 
   svg {
     display: inline-block;
-    height: $size-2;
     vertical-align: middle;
-    width: $size-2;
   }
 
   &__fill {

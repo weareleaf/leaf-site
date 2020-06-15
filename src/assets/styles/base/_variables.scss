@@ -20,7 +20,7 @@ $color-coal: hsl(240, 19%, 30%);
 $color-slate: hsl(200, 16%, 20%);
 $color-stone: hsl(230, 3%, 45%);
 $color-dust: hsl(240, 31%, 90%);
-$color-silk: hsl(240, 31%, 94%);
+$color-silk: hsl(240, 40%, 98%);
 $color-snow: hsl(250, 64%, 94%);
 $color-ivory: hsl(225, 29%, 97%);
 $color-smoke: hsl(0, 0%, 96%);
@@ -77,9 +77,10 @@ $duration-6: 500ms;
 
 // Fonts
 $font-family-sans-serif-light: 'Larsseit-Light', sans-serif !default;
-$font-family-sans-serif-regular: 'Larsseit', sans-serif !default;
+$font-family-sans-serif: 'Larsseit', sans-serif !default;
 $font-family-sans-serif-medium: 'Larsseit-Medium', sans-serif !default;
 $font-family-sans-serif-extrabold: 'Larsseit-ExtraBold', sans-serif !default;
+$font-family-serif: 'Playfair Display', serif !default;
 
 // Heading sizes
 $font-size-h1: 2rem !default;

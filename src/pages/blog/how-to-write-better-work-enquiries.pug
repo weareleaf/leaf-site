@@ -7,83 +7,88 @@ block prepend vars
   -var metaDescription = "Five steps to start off on the right foot to writing better work enquiries"
 
   -var heroHeading = "How to write better work enquiries"
-  -var heroSubheading = "(by Chris Annetts)"
 
 block pageComponents
 
-  +banner({
-  })
+  article
 
-  .banner-spacer
+    +hero({
+      heroHeading: heroHeading
+    })
 
-  +hero({
-    heroHeading: heroHeading,
-    heroSubheading: heroSubheading,
-  })
-
-  .section
-    .container
-
-      .grid.grid--center
-
-        +share-icons({
-          socialModifier: "inline"
-        })
-
-        .blog-post
-
-          p.blog-post__intro Five steps to start off on the right foot
-
-          p.blog-post__text As somebody with little-to-no experience of the web, the idea of enquiring about a new piece of work can be more than a little daunting.
-
-          blockquote
-            q
-              | What if I say too much? What if I ask too little? What if they’re too busy? Or too expensive?
-
-          p.blog-post__text Throughout my time in the industry, I’ve been lucky enough to receive a relatively frequent flow of work enquiries. Based on my own experiences, one thing has become abundantly clear: nobody is quite sure what to send in that first email.
-
-          p.blog-post__text Here are five tips that, with a bit of luck, should put you in the good books of a prospective web professional:
-
-          h4.blog-post__h4 1. Don’t be lazy
-          p.blog-post__text If you’re expecting more than a few sentences back, you’ll have to put a little effort in yourself too.
-
-          p.blog-post__text Each project has its own set of nuances and constraints. With so much variance in the work we produce, it’s essential that we’re afforded as much information as possible.
-
-          ul.styled-list.styled-list--inside
-            li.styled-list__item Who are the company?
-            li.styled-list__item What’s the product?
-            li.styled-list__item What problem are you trying to solve?
-            li.styled-list__item Who are you audience(s)?
-          br
-
-          p.blog-post__text Every time a web professional receives a work enquiry along the lines of, <i>“Hi. We need an app designed. 8–9 pages. When can you start?”</i>, a kitten dies. Just don’t do it.
-
-          h4.blog-post__h4 2. Explain why it is you’re reaching out
-          p.blog-post__text Knowing what it is that convinced you to send the message can quickly help build a picture of what’s important to the individual or organisation in question.
-
-          p.blog-post__text Was it locality that drew you in? Was it their experience in your field of interest? Or maybe a particular piece of work stood out? Understanding the motivations behind the enquiry allows us to align ourselves closer to your wants and needs; be it face-to-face meetings, industry know-how, or a particular design direction.
-
-          h4.blog-post__h4 3. What are you looking for as a deliverable?
-          p.blog-post__text It may sound obvious, but what are you expecting to be handed at the end of the project? As a designer for example, it could be anything from static mockups created in Sketch, through to front-end templates in your chosen language or framework.
-
-          p.blog-post__text I’ll often receive enquiries that fail to specify what it is that’s being requested. At this stage, it may be that you just don’t know, and that’s fine; a web professional worth their salt will be able to advise you here. But leaving it open for interpretation is never clever.
-
-          h4.blog-post__h4 4. When do you need it by?
-          p.blog-post__text As you may have guessed, freelancers and agencies alike spend an awful lot of energy spinning plates. We have very little influence on the periodicity of work enquiries, and like London buses, they’re rarely comfortably spaced.
-
-          p.blog-post__text Time and time again, the timeframe for the work is given as <i>“ASAP”</i>. Of course you want it as soon as possible; who doesn’t!? Instead, tie your timescales to actual events; in time the new school year, the busy summer months, or your new brand rollout in March.
-
-          h4.blog-post__h4 5. Be open about your budget
-          p.blog-post__text I’ve been involved in projects that cost as little as £2,000, and others that were as much as £100,000+. There’s a massive amount of variance in cost, and knowing how much you have set aside is critical to understanding whether the enquiry has legs.
-
-          p.blog-post__text When a freelancer or agency pick up that first message, they’re making an investment in you. It takes time to read, digest, discuss, and reply; probably more time than you’d expect.
-
-          p.blog-post__text At this point, you may not know your budget yet, and that’s ok. But you’ll have a ballpark figure. Are we talking £100, £1,000 or £10,000? Any indicator is better than none.
-
-          p.blog-post__text Being upfront about your budget allows us to quickly understand whether or not the project is going to be possible, and being able to quickly dismiss an unsuitable enquiry saves both parties time and energy.
-
-    section.section.section--lg-spacing
+    .section
       .container
-        .blog-content
-          h3.blog-content__heading Keep reading
-          +blog-post-grid
+
+        .grid.grid--post
+
+          +share-icons({})
+
+          .blog-post
+
+            p.blog-post__intro For somebody with little-to-no experience of the web, the idea of enquiring about a new piece of work must be more than a little daunting.
+
+            blockquote
+              q
+                | What if I say too much? What if I ask too little? What if they’re too busy? Or too expensive?
+
+            p.blog-post__text Throughout my time in the industry, I’ve been lucky enough to receive a relatively frequent flow of work enquiries. Based on my own experiences, one thing has become abundantly clear: nobody is quite sure what to send in that first email.
+
+            p.blog-post__text Here are five tips that, with a bit of luck, should put you in the good books of a prospective web professional:
+
+            +permalink({
+              permalinkHeading: "1. Don’t be lazy"
+            })
+
+            p.blog-post__text If you’re expecting more than a few sentences back, you’ll have to put a little effort in yourself too.
+
+            p.blog-post__text Each project has its own set of nuances and constraints. With so much variance in the work we produce, it’s essential that we’re afforded as much information as possible.
+
+            ul.styled-list
+              li.styled-list__item Who are the company?
+              li.styled-list__item What’s the product?
+              li.styled-list__item What problem are you trying to solve?
+              li.styled-list__item Who are you audience(s)?
+
+            p.blog-post__text Every time a web professional receives a work enquiry along the lines of, <i>“Hi. We need an app designed. 8–9 pages. When can you start?”</i>, a kitten dies. Just don’t do it.
+
+            +permalink({
+              permalinkHeading: "2. Explain why it is you’re reaching out"
+            })
+
+            p.blog-post__text Knowing what it is that convinced you to send the message can quickly help build a picture of what’s important to the individual or organisation in question.
+
+            p.blog-post__text Was it locality that drew you in? Was it their experience in your field of interest? Or maybe a particular piece of work stood out? Understanding the motivations behind the enquiry allows us to align ourselves closer to your wants and needs; be it face-to-face meetings, industry know-how, or a particular design direction.
+
+            +permalink({
+              permalinkHeading: "3. What are you looking for as a deliverable?"
+            })
+
+            p.blog-post__text It may sound obvious, but what are you expecting to be handed at the end of the project? As a designer for example, it could be anything from static mockups created in Sketch, through to front-end templates in your chosen language or framework.
+
+            p.blog-post__text I’ll often receive enquiries that fail to specify what it is that’s being requested. At this stage, it may be that you just don’t know, and that’s fine; a web professional worth their salt will be able to advise you here. But leaving it open for interpretation is never clever.
+
+            +permalink({
+              permalinkHeading: "4. When do you need it by?"
+            })
+
+            p.blog-post__text As you may have guessed, freelancers and agencies alike spend an awful lot of energy spinning plates. We have very little influence on the periodicity of work enquiries, and like London buses, they’re rarely comfortably spaced.
+
+            p.blog-post__text Time and time again, the timeframe for the work is given as <i>“ASAP”</i>. Of course you want it as soon as possible; who doesn’t!? Instead, tie your timescales to actual events; in time the new school year, the busy summer months, or your new brand rollout in March.
+
+            +permalink({
+              permalinkHeading: "5. Be open about your budget"
+            })
+
+            p.blog-post__text I’ve been involved in projects that cost as little as £2,000, and others that were as much as £100,000+. There’s a massive amount of variance in cost, and knowing how much you have set aside is critical to understanding whether the enquiry has legs.
+
+            p.blog-post__text When a freelancer or agency pick up that first message, they’re making an investment in you. It takes time to read, digest, discuss, and reply; probably more time than you’d expect.
+
+            p.blog-post__text At this point, you may not know your budget yet, and that’s ok. But you’ll have a ballpark figure. Are we talking £100, £1,000 or £10,000? Any indicator is better than none.
+
+            p.blog-post__text Being upfront about your budget allows us to quickly understand whether or not the project is going to be possible, and being able to quickly dismiss an unsuitable enquiry saves both parties time and energy.
+
+  section.section.section--lg-spacing
+    .container
+      .blog-content
+        h3.blog-content__heading Keep reading
+        +blog-post-grid

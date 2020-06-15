@@ -7,7 +7,7 @@
 
   &__main {
 
-    .page--landing & {
+    .page--content & {
       align-items: center;
       display: -ms-grid;
       display: grid;
@@ -26,16 +26,11 @@
   &__logo {
     @include margin-horizontal(auto);
     padding: $spacing-4;
-    //position: relative;
-    //top: .2rem;
     width: 4rem;
 
-    .page--landing & {
-      @include margin-horizontal(unset);
-    }
-
     @media screen and (min-width: map-get($breakpoints, 'breakpoint-1')) {
-      @include margin-horizontal(unset);
+      margin-left: -$spacing-4; // Pull the logo visually inline with the other elements.
+      margin-right: unset;
     }
   }
 
@@ -92,6 +87,42 @@
     @media screen and (min-width: map-get($breakpoints, 'breakpoint-11')) {
       display: block;
       right: $spacing-9;
+    }
+  }
+
+  &__close {
+    position: fixed;
+    left: 0;
+    right: 0;
+    z-index: 999;
+
+    &__inner {
+      max-width: 66.5rem;
+      position: relative;
+      margin: 0 auto;
+      right: 1.5rem;
+    }
+
+    &__link {
+      @include focus-ring;
+      background-color: $color-snow;
+      border-radius: $border-radius-full;
+      margin-left: auto;
+      padding: $spacing-5;
+      right: 0;
+      position: absolute;
+    }
+
+    &__icon {
+      align-items: center;
+      display: flex;
+      height: $size-1;
+      justify-content: center;
+      width: $size-1;
+
+      svg {
+        @include size(.8rem);
+      }
     }
   }
 }

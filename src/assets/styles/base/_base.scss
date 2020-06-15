@@ -27,7 +27,7 @@ html {
   --color-focus-bg: #{$color-ice};
   --color-footer-contact: #{$color-cerulean};
   --color-footer-divider: #{$color-ice};
-  --color-heading: #{$color-sapphire};
+  --color-heading: #{$color-coal};
   --color-hero-subheading: #{$color-violet};
   --color-nav: #{$color-cerulean};
   --color-footer-text: #{$color-amethyst};
@@ -39,7 +39,7 @@ html {
 }
 
 body {
-  font-family: $font-family-sans-serif-regular;
+  font-family: $font-family-sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   line-height: $line-height;
@@ -55,4 +55,16 @@ body {
 
 .site-content {
   flex: 1;
+}
+
+.visually-hidden {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: auto;
+  margin: 0;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+  white-space: nowrap;
 }
