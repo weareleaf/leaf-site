@@ -40,9 +40,10 @@ $image-size: $size-1;
   }
 
   &__icon {
-    @include size($icon-size);
     background-color: var(--color-container);
     border-radius: $border-radius-full;
+    min-height: 2.7rem;
+    min-width: 2.7rem;
     position: relative;
     text-align: center;
     transition: transform $duration-2 $timing-ease;
@@ -86,6 +87,10 @@ $image-size: $size-1;
   &__handle {
     color: hsl(231, 84%, 83%);
     font-family: $font-family-sans-serif-medium;
-    font-size: .7rem;
+    font-size: .6rem;
+
+    @media screen and (min-width: map-get($breakpoints, 'breakpoint-12')) {
+      font-size: .7rem;
+    }
   }
 }

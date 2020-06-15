@@ -367,13 +367,9 @@ main {
       margin-bottom: $spacing-5;
     }
 
-    @media screen and (min-width: map-get($breakpoints, 'breakpoint-8')) {
+    @media screen and (min-width: map-get($breakpoints, 'breakpoint-12')) {
       flex-wrap: nowrap;
       padding-right: $spacing-7;
-    }
-
-    @media screen and (min-width: map-get($breakpoints, 'breakpoint-11')) {
-      padding-right: 0;
     }
   }
 }

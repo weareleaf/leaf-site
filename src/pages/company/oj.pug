@@ -1,15 +1,52 @@
 extends ../../layouts/bio.pug
 
 block prepend vars
-  -var pageTitle = "Tina | Leaf"
-  -var metaUrl = "https://weareleaf.com/company/tina"
-  -var metaTitle = ""
-  -var metaDescription = ""
+  -var pageTitle = "OJ | Leaf"
+  -var metaUrl = "https://weareleaf.com/company/oj"
+  -var metaTitle = "Oliver Standeven is a Software Engineer at Leaf"
+  -var metaDescription = "Oliver, or ‘OJ’ as he’s better known, has incredible problem-solving abilities, and is able to spot issues, opportunities, and edge-cases in any project brief. He's tenacious too, and has a natural determination that allows him to persevere and ultimately solve even the toughest problems."
 
 block pageComponents
 
-  +image({
-    context: "biography",
-    src: "/assets/images/team/oj-bio.jpg",
-    alt: "Chris"
-  })
+  .biography
+    +image({
+      context: "biography",
+      src: "/assets/images/team/oj-bio.jpg",
+      alt: "OJ looking very happy on a beach with a cliff behind."
+    })
+    .biography__content
+      .biography__meta Software Engineer
+      h1.hero__heading.hero__heading--bio Oliver Standeven<span class="hero__heading__period">.</span>
+      .biography__social
+        +social-tile({
+          socialTileIcon: {
+            src: "/assets/images/icons/social/linkedin.svg",
+            alt: "The LinkedIn logo"
+          },
+          socialTileModifier: "bio",
+          socialTileHeading: "LinkedIn",
+          socialTileHandle: "/oliver-standeven-4077a5a1",
+          socialTileLink: "https://www.linkedin.com/in/oliver-standeven-4077a5a1/"
+        })
+        +social-tile({
+          socialTileIcon: {
+            src: "/assets/images/icons/social/github.svg",
+            alt: "The Github logo"
+          },
+          socialTileModifier: "bio",
+          socialTileHeading: "Github",
+          socialTileHandle: "/ojsdude",
+          socialTileLink: "https://github.com//ojsdude"
+        })
+      +block({
+        blockHeading: "What are their superpowers?",
+        blockText: "Oliver, or ‘OJ’ as he’s better known, has incredible problem-solving abilities, and is able to spot issues, opportunities, and edge-cases in any project brief. He's tenacious too, and has a natural determination that allows him to persevere and ultimately solve even the toughest problems."
+      })
+      +block({
+        blockHeading: "What's interesting about them?",
+        blockText: "Quite the performer, OJ has appeared in amateur dramatic productions including Little Shop Of Horrors, My Fair Lady, and South Pacific. Off stage, OJ's weekends are spent playing hockey for Gillingham Anchorians, and he's recently taken up gardening, growing his very own veg patch."
+      })
+      +block({
+        blockHeading: "What are their credentials?",
+        blockText: "OJ joined the company in July 2017 after graduating from the University of Kent, where he received a First Class degree in BSc Computing. As part of his course, he worked full-time as a Student Developer for Plymouth Marine Laboratory, and as a Student Consultant for Kent IT Consultancy."
+      })
