@@ -43,9 +43,13 @@
     }
 
     &--bio {
-      margin-bottom: $spacing-6;
+      margin-bottom: $spacing-4;
       margin-left: -$spacing-3;
       text-align: left;
+
+      @media screen and (min-width: map-get($breakpoints, 'breakpoint-3')) {
+        margin-bottom: $spacing-6;
+      }
     }
   }
 
