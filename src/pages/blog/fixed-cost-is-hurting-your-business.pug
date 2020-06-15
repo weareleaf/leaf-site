@@ -13,7 +13,10 @@ block pageComponents
   article
 
     +hero({
-      heroHeading: heroHeading
+      heroHeading: heroHeading,
+      heroAuthor: "Chris Annetts",
+      heroDate: "9 May 2017",
+      heroMinutesToRead: 3
     })
 
     .section
@@ -31,7 +34,7 @@ block pageComponents
 
             p.blog-post__text The most common, and often favoured way of pricing a website or an application, is to fix a one-time cost against the agreed scope of the work.
 
-            hr.divider.divider--block-hr
+            hr.divider
 
             +permalink({
               permalinkHeading: "The theory"

@@ -87,28 +87,23 @@ a {
   }
 }
 
+
 figure {
   margin: $spacing-7 0;
 
   @media screen and (min-width: map-get($breakpoints, 'breakpoint-3')) {
-    margin: $spacing-7 0 $spacing-8;
+    margin: $spacing-8 0;
   }
+}
 
-  @media screen and (min-width: map-get($breakpoints, 'breakpoint-4')) {
-    margin: $spacing-6 0 $spacing-9;
-  }
+.permalink + figure {
+  margin-top: $spacing-4;
+}
 
-  @media screen and (min-width: map-get($breakpoints, 'breakpoint-6')) {
-    margin: $spacing-7 0 $spacing-9;
-  }
+.figure--wide {
 
-  &:first-child {
-    margin-top: 0;
-  }
-
-  img {
-    display: inline-block;
-    vertical-align: middle;
+  @media screen and (min-width: map-get($breakpoints, 'breakpoint-3')) {
+    @include margin-horizontal (-4rem);
   }
 }
 
@@ -118,41 +113,22 @@ ul {
 
 figcaption {
   color: var(--color-paragraph);
-  font-size: $font-size-sm;
-  padding: $spacing-3 0;
+  font-size: $font-size-xs;
+  margin-top: $spacing-3;
   text-align: center;
 }
 
 img {
+  display: block;
   height: auto;
   max-width: 100%;
 }
 
 .divider {
-  border: none;
-  border-top: $border-width-xl $border-style $color-powder;
-
-  &--margin {
-    margin: $spacing-10 0;
-  }
-
-  &--margin-bottom {
-    margin-bottom: $spacing-10;
-  }
-
-  &--margin-top {
-    margin-top: $spacing-10;
-  }
-
-  &--margin-blog {
-    margin-bottom: $spacing-8;
-  }
-
-  &--block-hr {
-    justify-content: center;
-    margin: $spacing-8 0 $spacing-8 0;
-    width: 3.75rem;
-  }
+  border: 0;
+  border-top: $border-style $border-width-xl var(--color-accent);
+  margin: $spacing-8 0 $spacing-8 0;
+  width: $size-6;
 }
 
 .unstyled-list {
@@ -261,7 +237,11 @@ blockquote {
   }
 
   cite {
-    color: $color-cerulean;
-    font-size: $font-size-sm;
+    color: $color-amethyst;
+    font-size: $font-size-xs;
+
+    &::before {
+      content: '— ';
+    }
   }
 }

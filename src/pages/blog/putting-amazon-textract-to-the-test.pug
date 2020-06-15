@@ -13,7 +13,10 @@ block pageComponents
   article
 
     +hero({
-      heroHeading: heroHeading
+      heroHeading: heroHeading,
+      heroAuthor: "Mike Carter",
+      heroDate: "17 September 2019",
+      heroMinutesToRead: 6
     })
 
     .section
@@ -80,13 +83,13 @@ block pageComponents
 
             p.blog-post__text Despite these failures, Textract coped better than expected with what was essentially a low quality photo of a poorly structured document.
 
-            hr.divider.divider--block-hr
+            hr.divider
 
             +permalink({
               permalinkHeading: "Takeaways"
             })
 
-            h4.blog-post__h4 Data quality
+            h3.blog-post__h3 Data quality
 
             p.blog-post__text Amazon Textract does a excellent job at extracting raw unstructured text from documents. Across all three of our tests, Textract was able to correctly extract the contents for all but the smallest, and blurriest of labels in the passport photo.
 
@@ -96,7 +99,7 @@ block pageComponents
 
             p.blog-post__text A final note on quality - With continued investment from Amazon, Textract is only going to get better over time. Any busines using it will benefit from this for free. So, with a good quality integration, you should expect to increased rates of correctly processed documents over time with no additional effort from you.
 
-            h4.blog-post__h4 Ease of integration
+            h3.blog-post__h3 Ease of integration
 
             p.blog-post__text Amazon's documentation for Textract is extremely thorough, and they provide a wide variety of example code to work from to make it as accessible as possible to developers at different experience levels.
 
@@ -112,7 +115,9 @@ block pageComponents
               li.styled-list__item Extracting text for Natural Language Processing (NLP).
               li.styled-list__item Automated document classification.
 
-            h3.blog-post__h3 Benefits to your business
+            +permalink({
+              permalinkHeading: "Benefits to your business"
+            })
 
             p.blog-post__text If your staff spend a lot of time on manual document processing work, Textract can be used to deliver huge savings, free up your staff to do more valuable work, ensure you're able to process workloads 24/7, and improve the overall efficiency of your business processes.
 
