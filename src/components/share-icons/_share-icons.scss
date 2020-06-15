@@ -1,6 +1,14 @@
 .share {
   text-align: center;
 
+  @media screen and (min-width: map-get($breakpoints, 'breakpoint-1')) {
+    margin-top: -5rem; //- Nasty, nasty quick fix to make the layout work. Needs to be refactored.
+  }
+
+  @media screen and (min-width: map-get($breakpoints, 'breakpoint-4')) {
+    margin-top: 0;
+  }
+
   &__list {
     list-style: none;
     margin: 0;
@@ -10,6 +18,13 @@
   }
 
   &__item {
+    @include margin-horizontal($spacing-2);
+    display: inline-block;
+
+    @media screen and (min-width: map-get($breakpoints, 'breakpoint-5')) {
+      display: block;
+    }
+
     &:not(:last-child) {
       margin-bottom: $spacing-5;
     }

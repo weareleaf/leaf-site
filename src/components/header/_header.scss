@@ -105,7 +105,7 @@
 
     &__link {
       @include focus-ring;
-      background-color: $color-snow;
+      background-color: var(--color-container);
       border-radius: $border-radius-full;
       margin-left: auto;
       padding: $spacing-5;
