@@ -18,10 +18,24 @@ $image-size: $size-1;
   @media screen and (min-width: map-get($breakpoints, 'breakpoint-3')) {
     align-items: center;
     display: flex;
-    margin-bottom: $spacing-5;
     
     &:not(:last-of-type) {
       margin-right: $spacing-5;
+    }
+  }
+
+  &--bio {
+    margin: 0;
+    padding-left: 0;
+
+    &:not(:last-of-type) {
+      @media screen and (min-width: map-get($breakpoints, 'breakpoint-3')) {
+        margin-right: $spacing-3;
+      }
+
+      @media screen and (min-width: map-get($breakpoints, 'breakpoint-11')) {
+        margin-right: $spacing-7;
+      }
     }
   }
 
@@ -70,6 +84,7 @@ $image-size: $size-1;
   }
 
   &__handle {
+    color: hsl(231, 84%, 83%);
     font-family: $font-family-sans-serif-medium;
     font-size: .7rem;
   }
