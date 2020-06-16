@@ -28,7 +28,7 @@
   }
 
   &__nav {
-    @include margin-horizontal(-1.25rem);
+    @include margin-horizontal(-$spacing-6);
     align-self: center;
     background-color: #252577;
     display: flex;
