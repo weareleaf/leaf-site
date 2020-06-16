@@ -64,11 +64,3 @@ main {
     }
   }
 }
-
-.banner-spacer {
-  height: 4rem;
-
-  @media screen and (min-width: map-get($breakpoints, 'breakpoint-2')) {
-    height: 5rem;
-  }
-}
