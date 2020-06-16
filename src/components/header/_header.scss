@@ -87,12 +87,8 @@
     position: fixed;
     left: 0;
     right: 0;
-    top: $spacing-2;
+    top: 0;
     z-index: 999;
-
-    @media screen and (min-width: map-get($breakpoints, 'breakpoint-1')) {
-      top: unset;
-    }
 
     &__inner {
       max-width: 66.5rem;
@@ -113,9 +109,11 @@
       padding: $spacing-4;
       right: 0;
       position: absolute;
+      top: $spacing-2;
 
       @media screen and (min-width: map-get($breakpoints, 'breakpoint-1')) {
         padding: $spacing-5;
+        top: $spacing-5;
       }
     }
 
