@@ -103,7 +103,7 @@ figure {
 .figure--wide {
 
   @media screen and (min-width: map-get($breakpoints, 'breakpoint-3')) {
-    @include margin-horizontal (-4rem);
+    @include margin-horizontal (-$spacing-9);
   }
 }
 
@@ -127,7 +127,7 @@ img {
 .divider {
   border: 0;
   border-top: $border-style $border-width-xl var(--color-accent);
-  margin: $spacing-8 0 $spacing-8 0;
+  margin: $spacing-8 0;
   width: $size-6;
 }
 
