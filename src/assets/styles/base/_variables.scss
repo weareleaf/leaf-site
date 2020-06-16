@@ -7,6 +7,7 @@ $color-indigo: hsl(253, 72%, 47%);
 $color-violet:	hsl(253, 75%, 52%);
 $color-cerulean: hsl(240, 69%, 58%);
 $color-sapphire: hsl(240, 44%, 49%);
+$color-mauve: hsl(240, 20%, 40%);
 $color-amethyst: hsl(238, 28%, 51%);
 $color-lavender: hsl(236, 100%, 77%);
 $color-powder: 	hsl(225, 100%, 75%);
@@ -23,9 +24,12 @@ $color-dust: hsl(240, 30%, 90%);
 $color-ash: hsl(240, 30%, 94%);
 $color-silk: hsl(240, 40%, 98%);
 $color-snow: hsl(250, 64%, 94%);
+$color-cotton: hsl(225, 30%, 85%);
 $color-ivory: hsl(225, 29%, 97%);
 $color-smoke: hsl(0, 0%, 96%);
 $color-white:	hsl(0, 0%, 100%);
+
+
 
 // Background
 $background-color: var(--color-background);
@@ -170,11 +174,13 @@ $timing-elastic: cubic-bezier(.55, 0, .1, 1);
   --color-footer-contact: #{$color-white};
   --color-footer-divider: #{$color-violet};
   --color-footer-text: #{$color-lavender};
+  --color-header-background: #{$color-indigo};
   --color-heading: #{$color-ivory};
   --color-hero-subheading: #{$color-ice};
   --color-logo: #{$color-white};
   --color-nav: #{$color-ice};
   --color-paragraph: #{$color-ice};
+  --color-post-heading: #{$color-ivory};
   --color-share-icons: #{$color-white};
   --color-social-icons: #{$color-white};
   --color-close: #{$color-white};

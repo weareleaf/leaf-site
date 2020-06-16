@@ -1,5 +1,5 @@
 .header {
-  background-color: $color-indigo;
+  background-color: var(--color-header-background);
 
   @media screen and (min-width: map-get($breakpoints, 'breakpoint-1')) {
     background-color: transparent;
@@ -8,10 +8,10 @@
   &__main {
 
     .page--content & {
-      align-items: center;
-      display: -ms-grid;
-      display: grid;
-      grid-template-columns: 1fr 1fr;
+      //align-items: center;
+      //display: -ms-grid;
+      //display: grid;
+      //grid-template-columns: 1fr 1fr;
     }
 
     @media screen and (min-width: map-get($breakpoints, 'breakpoint-1')) {
@@ -94,13 +94,22 @@
     position: fixed;
     left: 0;
     right: 0;
+    top: $spacing-2;
     z-index: 999;
+
+    @media screen and (min-width: map-get($breakpoints, 'breakpoint-1')) {
+      top: unset;
+    }
 
     &__inner {
       max-width: 66.5rem;
       position: relative;
       margin: 0 auto;
-      right: 1.5rem;
+      right: $spacing-2;
+
+      @media screen and (min-width: map-get($breakpoints, 'breakpoint-1')) {
+        right: $spacing-6;
+      }
     }
 
     &__link {
@@ -108,9 +117,13 @@
       background-color: var(--color-container);
       border-radius: $border-radius-full;
       margin-left: auto;
-      padding: $spacing-5;
+      padding: $spacing-4;
       right: 0;
       position: absolute;
+
+      @media screen and (min-width: map-get($breakpoints, 'breakpoint-1')) {
+        padding: $spacing-5;
+      }
     }
 
     &__icon {

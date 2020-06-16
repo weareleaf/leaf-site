@@ -143,11 +143,16 @@ img {
   padding: 0;
 
   &__item {
+    font-size: $font-size-sm;
     margin-left: $spacing-7;
     position: relative;
 
     &:not(:last-child) {
       margin-bottom: $spacing-2;
+    }
+
+    .blog-post & {
+      font-size: 1.05rem;
     }
 
     &--gap-lg {
