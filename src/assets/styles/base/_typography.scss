@@ -142,6 +142,10 @@ img {
   margin: 0 0 $spacing-7;
   padding: 0;
 
+  .sidebar & {
+    margin-bottom: 0; //- Debt here! A quick way to get rid of an accidental margin.
+  }
+
   &__item {
     font-size: $font-size-sm;
     margin-left: $spacing-7;
@@ -152,7 +156,7 @@ img {
     }
 
     .blog-post & {
-      font-size: 1.05rem;
+      font-size: 1.05rem; //- More debt here! A quick matching of larger, customer font-size on blog posts.
     }
 
     &--gap-lg {
