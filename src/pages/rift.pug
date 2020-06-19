@@ -22,7 +22,7 @@ block pageComponents
     },
     heroImageModifier: "rift"
   })
-  
+
   section.section
     .container
       .rift-challenge
@@ -97,7 +97,7 @@ block pageComponents
             ]
           })
 
-  section.section      
+  section.section
     .container
       +content-block({
         introHeading: true,
@@ -135,28 +135,28 @@ block pageComponents
         modifier: "rift-11"
       })
 
-  section.section      
-      .container
-        .centered-content.centered-content--rift
-          .grid.grid--center-text
-            .grid__item
-              +content({
-                contentHeading: "Move quickly and effectively",
-                contentIntro: "A combination of quick-fire sketches and wireframing help facilitate ideation and conversation in the most efficient way.",
-                contentParagraphs: [
-                  {
-                    contentText: "We relied heavily on low-fidelity prototypes in the early stages of our design exploration, helping us to quickly validate or discredit concepts, gain stakeholder buy-in, and ensure a single, shared vision."
-                  }
-                ]
-              })
-        .full-width
-          +image({
-            context: "full-width",
-            src: "/assets/images/case-studies/rift/image-4.png",
-            alt: "A collection of wireframed form elements from the prototyping process. These elements consist of user information such as workplace locations, accomodation details and vehicle lookups.",
-            modifier: "rift-4"
-          })
-  
+  section.section
+    .container
+      .centered-content.centered-content--rift
+        .grid.grid--center-text
+          .grid__item
+            +content({
+              contentHeading: "Move quickly and effectively",
+              contentIntro: "A combination of quick-fire sketches and wireframing help facilitate ideation and conversation in the most efficient way.",
+              contentParagraphs: [
+                {
+                  contentText: "We relied heavily on low-fidelity prototypes in the early stages of our design exploration, helping us to quickly validate or discredit concepts, gain stakeholder buy-in, and ensure a single, shared vision."
+                }
+              ]
+            })
+      .full-width
+        +image({
+          context: "full-width",
+          src: "/assets/images/case-studies/rift/image-4.png",
+          alt: "A collection of wireframed form elements from the prototyping process. These elements consist of user information such as workplace locations, accomodation details and vehicle lookups.",
+          modifier: "rift-4"
+        })
+
   section.section
     .rift-metrics
       .rift-metrics__bg-shapes
@@ -247,50 +247,57 @@ block pageComponents
               }
             ]
           })
-  
-  section.section
+
+  //-section.section
     .container
       .rift-outcome
         .rift-outcome__content
-          h2.content-block__heading The outcome
-          +content({
-            contentHeading: "Happy customers. Happy client",
-            contentIntro: "Such was the success of our initial work with RIFT, we're continuing to work together well into 2020.",
-            contentParagraphs: [
-              {
-                contentText: "The pre-registation questionnaire and amended processes significantly improved conversion to registration, getting more and better qualified leads into the app, and increasing the number of claims submitted online."
+
+  section.section
+    .container
+      .centered-content.centered-content--rift
+        .grid.grid--center-text
+          .grid__item
+
+            h2.content-block__heading The outcome
+            +content({
+              contentHeading: "Happy customers. Happy client",
+              contentIntro: "Such was the success of our initial work with RIFT, we're continuing to work together well into 2020.",
+              contentParagraphs: [
+                {
+                  contentText: "The pre-registation questionnaire and amended processes significantly improved conversion to registration, getting more and better qualified leads into the app, and increasing the number of claims submitted online."
+                }
+              ]
+            })
+            +metrics({
+              heading: true,
+              metricsModifier: "margin",
+              metricsIconModifier: "rotate",
+              metricItems: [
+                {
+                  metricsUnit: "192%",
+                  metricsSubText: "increase in claim submissions.",
+                  metricsText: "Claim submissions have almost quadrupled in the past 2 years, with more than 5,000 claims submitted in April 2020 alone."
+                },
+                {
+                  metricsUnit: "84%",
+                  metricsSubText: "increase in unqiue sign-ins.",
+                  metricsText: "The number of people using MyRIFT each month has increased significantly, with over 8,000 active users in March and April 2020."
+                }
+              ]
+            })
+          //-.rift-outcome__testimonial
+            +testimonial({
+              testimonialBlockQuote: "Leaf were a pleasure to work with – always available and willing to offer advice, or to put forward constructive suggestions. The decision to work with them is one we haven’t regretted, and I’d gladly recommend them to anyone looking to improve their own booking flow.",
+              author: {
+                authorName: "Bradley Post",
+                authorDetails: "Managing Director — RIFT Group",
+                authorThumbnail: {
+                  src: "assets/images/case-studies/rift/bradley.png",
+                  alt: "A picture of Bradley Post with a grey background behind him."
+                }
               }
-            ]
-          })
-          +metrics({
-            heading: true,
-            metricsModifier: "margin",
-            metricsIconModifier: "rotate",
-            metricItems: [
-              {
-                metricsUnit: "192%",
-                metricsSubText: "increase in claim submissions.",
-                metricsText: "Claim submissions have almost quadrupled in the past 2 years, with more than 5,000 claims submitted in April 2020 alone."
-              },
-              {
-                metricsUnit: "84%",
-                metricsSubText: "increase in unqiue sign-ins.",
-                metricsText: "The number of people using MyRIFT each month has increased significantly, with over 8,000 active users in March and April 2020."
-              }
-            ]
-          })
-        .rift-outcome__testimonial
-          +testimonial({
-            testimonialBlockQuote: "Leaf were a pleasure to work with – always available and willing to offer advice, or to put forward constructive suggestions. The decision to work with them is one we haven’t regretted, and I’d gladly recommend them to anyone looking to improve their own booking flow.",
-            author: {
-              authorName: "Bradley Post",
-              authorDetails: "Managing Director — RIFT Group",
-              authorThumbnail: {
-                src: "assets/images/case-studies/rift/bradley.png",
-                alt: "A picture of Bradley Post with a grey background behind him."
-              }
-            }
-          })
+            })
       .full-width
         +image({
           context: "full-width",
