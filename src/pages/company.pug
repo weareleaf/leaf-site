@@ -25,43 +25,37 @@ block pageComponents
               blockHeading: "Where are you based?",
               blockText: "We’re a remote company, and have shunned the traditional office in favour of the many collective benefits brought about by distributed working:"
             })
-            .grid.grid--bullet-points
-              +bullet({
-                styledListModifier: "inside",
-                styledListItemModifier: "small",
-                styledListItems: [
-                  {
-                    styledListItem: "More time for loved ones."
-                  },
-                  {
-                    styledListItem: "No daily commute."
-                  },
-                  {
-                    styledListItem: "Access to the best talent."
-                  },
-                  {
-                    styledListItem: "Freedom to live anywhere."
-                  }
-                ]
-              })
-              +bullet({
-                styledListModifier: "inside",
-                styledListItemModifier: "small",
-                styledListItems: [
-                  {
-                    styledListItem: "Increased productivety."
-                  },
-                  {
-                    styledListItem: "Less distractions."
-                  },
-                  {
-                    styledListItem: "Reduced overheads."
-                  },
-                  {
-                    styledListItem: "Lower carbon footprint."
-                  }
-                ]
-              })
+            +bullet({
+              styledListModifier: "2-col",
+              styledListItemModifier: "small",
+              styledListItems: [
+                {
+                  styledListItem: "More time for loved ones."
+                },
+                {
+                  styledListItem: "No daily commute."
+                },
+                {
+                  styledListItem: "Access to the best talent."
+                },
+                {
+                  styledListItem: "Freedom to live anywhere."
+                },
+                {
+                  styledListItem: "Increased productivety."
+                },
+                {
+                  styledListItem: "Less distractions."
+                },
+                {
+                  styledListItem: "Reduced overheads."
+                },
+                {
+                  styledListItem: "Lower carbon footprint."
+                }
+              ]
+            })
+
             +image({
               context: "company-mobile",
               src: "/assets/images/company/british-isles.svg",
@@ -82,7 +76,7 @@ block pageComponents
             +location-marker({
               locationMarkerModifier: "tina",
               locationMarkerHeading: "Tina van Schelt",
-              locationMarkerText: "Limerick (moved)"
+              locationMarkerText: "Limerick"
             })
             +location-marker({
               locationMarkerModifier: "curt",
@@ -118,13 +112,14 @@ block pageComponents
   section.section
     .container
       .company.grid.grid--company
-        +image({
-          context: "company-image",
-          src: "/assets/images/company/pets.png",
-          alt: "3 images showing some of the team with their pets, including OJ with his cat, Orion, Tina with her dog, Wilko, and a photo of Mikes dog, Bramley.",
-          modifier: "pets"
-        })
-        p.company__caption.company__caption--pets When work isn’t crazy, there’s more time in the day to enjoy the things that really matter.
+        figure.figure-wrapper
+          +image({
+            context: "company-image",
+            src: "/assets/images/company/pets.png",
+            alt: "3 images showing some of the team with their pets, including OJ with his cat, Orion, Tina with her dog, Wilko, and a photo of Mikes dog, Bramley.",
+            modifier: "pets"
+          })
+          figcaption.company__caption.company__caption--pets When work isn’t crazy, there’s more time in the day to enjoy the things that really matter.
         .company__ethos
           +image({
             context: "company-mobile",
@@ -186,16 +181,10 @@ block pageComponents
                   },
                   {
                     styledListItem: "Work 40+ hour weeks."
-                  }
-                ]
-              })
-              .bullet.bullet--strike-through
-                ul.bullet.styled-list
-                  li.bullet.styled-list__item.bullet.styled-list__item--small Long-term <strike>planning</strike> guessing.
-              +bullet({
-                styledListModifier: "inside",
-                styledListItemModifier: "small",
-                styledListItems: [
+                  },
+                  {
+                    styledListItem: "Long-term <strike>planning</strike> guessing."
+                  },
                   {
                     styledListItem: "Hold unnecessary meetings."
                   },
@@ -237,13 +226,14 @@ block pageComponents
             blockHeading: "What sectors do you specialise in?",
             blockText: "There’s no single sector we consider ourselves experts in, although previous work on various booking flows, online applications, and tax claims have given us considerable experience in the financial, insurance, and travel industries. We do, however, consider ourselves experts in gathering high-quality information from your customers, whatever sector you’re in."
           })
-        +image({
-          context: "company-image",
-          src: "/assets/images/company/holiday-snaps.png",
-          alt: "Some pictures from our time in Rome testing the new travel planning app, HEHA!. There's a photo of Mike and a member of the Holiday Extras team, a photo of Mike looking happy in a restaurant, and a close up photo of an ice cream.",
-          modifier: "holiday"
-        })
-        p.company__caption.company__caption--holiday We helped Holiday Extras make a travel-planning app, so naturally we tested it by planning (and taking) a trip to Rome.
+        figure.figure-wrapper
+          +image({
+            context: "company-image",
+            src: "/assets/images/company/holiday-snaps.png",
+            alt: "Some pictures from our time in Rome testing the new travel planning app, HEHA!. There's a photo of Mike and a member of the Holiday Extras team, a photo of Mike looking happy in a restaurant, and a close up photo of an ice cream.",
+            modifier: "holiday"
+          })
+          figcaption.company__caption.company__caption--holiday We helped Holiday Extras make a travel-planning app, so naturally we tested it by planning (and taking) a trip to Rome.
 
   section.section
     .container
@@ -290,7 +280,6 @@ block pageComponents
             .grid.grid--profiles
               .grid__item
                 +profile({
-                  profileUrl: "/company/chris",
                   profileImage: {
                     context: "profile",
                     src: "/assets/images/team/chris.jpg",
@@ -301,7 +290,7 @@ block pageComponents
                 })
               .grid__item
                 +profile({
-                  profileUrl: "/company/mike",
+
                   profileImage: {
                     context: "profile",
                     src: "/assets/images/team/mike.jpg",
@@ -312,7 +301,6 @@ block pageComponents
                 })
               .grid__item
                 +profile({
-                  profileUrl: "/company/curt",
                   profileImage: {
                     src: "/assets/images/team/curt.jpg",
                     alt: "Curtis Lee looking very happy in front of a tree."
@@ -322,7 +310,6 @@ block pageComponents
                 })
               .grid__item
                 +profile({
-                  profileUrl: "/company/tina",
                   profileImage: {
                     context: "profile",
                     src: "/assets/images/team/tina.jpg",
@@ -333,7 +320,6 @@ block pageComponents
                 })
               .grid__item
                 +profile({
-                  profileUrl: "/company/oj",
                   profileImage: {
                     context: "profile",
                     src: "/assets/images/team/oj.jpg",
@@ -365,7 +351,7 @@ block pageComponents
                 imageModifier: "small",
                 profileImage: {
                   src: "/assets/images/company/chris-arnold.jpg",
-                  alt: "Chris Arnold who is a Frontend Engineer."
+                  alt: "A photo of Chris Arnold."
                 },
                 profileHeading: "Chris Arnold",
                 profileText: "Frontend Engineer"
@@ -376,51 +362,51 @@ block pageComponents
                 imageModifier: "small",
                 profileImage: {
                   src: "/assets/images/company/jack-clark.jpg",
-                  alt: "Jack Clark who is a Frontend Engineer."
+                  alt: "A photo of Jack Clark."
                 },
                 profileHeading: "Jack Clark",
-                profileText: "Frontend Engineer"
+                profileText: "Software Engineer"
               })
+              //-+profile({
+                profileModifier: "row",
+                profileContentModifier: "left-aligned",
+                imageModifier: "small",
+                profileImage: {
+                  src: "/assets/images/company/elliot-stokes.jpg",
+                  alt: "A photo of Elliot Stokes."
+                },
+                profileHeading: "Elliot Stokes",
+                profileText: "Software Engineer"
+              //-})
               +profile({
                 profileModifier: "row",
                 profileContentModifier: "left-aligned",
                 imageModifier: "small",
                 profileImage: {
                   src: "/assets/images/company/matthew-spence.jpg",
-                  alt: "Matthew Spence who is a Software Engineer."
+                  alt: "A photo of Matthew Spence."
                 },
                 profileHeading: "Matthew Spence",
                 profileText: "Software Engineer"
               })
-              +profile({
-                profileModifier: "row",
-                profileContentModifier: "left-aligned",
-                imageModifier: "small",
-                profileImage: {
-                  src: "/assets/images/company/elliot-stokes.jpg",
-                  alt: "Elliot Stokes who is a Software Engineer."
-                },
-                profileHeading: "Elliot Stokes",
-                profileText: "Software Engineer"
-              })
-              +profile({
+              //-+profile({
                 profileModifier: "row",
                 profileContentModifier: "left-aligned",
                 imageModifier: "small",
                 profileImage: {
                   src: "/assets/images/company/liam-tucker.jpg",
-                  alt: "Liam Tucker who is an eCommerce Specialist."
+                  alt: "A photo of Liam Tucker."
                 },
                 profileHeading: "Liam Tucker",
                 profileText: "eCommerce Specialist"
-              })
+              //-})
               +profile({
                 profileModifier: "row",
                 profileContentModifier: "left-aligned",
                 imageModifier: "small",
                 profileImage: {
                   src: "/assets/images/company/colin-young.jpg",
-                  alt: "Colin Young who is a Software Engineer."
+                  alt: "A photo of Colin Young."
                 },
                 profileHeading: "Colin Young",
                 profileText: "Software Engineer"
@@ -523,6 +509,5 @@ block pageComponents
               blockHeading: "Continued growth",
               blockText: "Four became five when Curt joined the company, adding extra firepower to our design team. His enthusiasm and lust for knowledge have made him a wonderful addition to the team."
             }
-          ],
-          buttonText: "Show less of the story"
+          ]
         })

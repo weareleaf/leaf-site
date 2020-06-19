@@ -18,7 +18,7 @@ $image-size: $size-1;
   @media screen and (min-width: map-get($breakpoints, 'breakpoint-3')) {
     align-items: center;
     display: flex;
-    
+
     &:not(:last-of-type) {
       margin-right: $spacing-5;
     }
@@ -89,7 +89,7 @@ $image-size: $size-1;
     font-family: $font-family-sans-serif-medium;
     font-size: .6rem;
 
-    @media screen and (min-width: map-get($breakpoints, 'breakpoint-12')) {
+    @media screen and (min-width: map-get($breakpoints, 'breakpoint-13')) {
       font-size: .7rem;
     }
   }
