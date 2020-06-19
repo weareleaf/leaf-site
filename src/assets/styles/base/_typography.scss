@@ -247,7 +247,6 @@ blockquote.blog-blockquote {
   position: relative;
   width: 100%;
 
-<<<<<<< HEAD
   @media screen and (min-width: map-get($breakpoints, 'breakpoint-2')) {
     margin: 0;
     padding: $spacing-4 0 $spacing-5 $spacing-5;
@@ -260,10 +259,10 @@ blockquote.blog-blockquote {
 
   p.main-blockquote {
     color: $color-eggplant;
-=======
+  }
+
   q {
     color: $color-amethyst;
->>>>>>> master
     display: block;
     font-family: $font-family-serif;
     font-size: $font-size-lg;
