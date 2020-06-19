@@ -1,0 +1,19 @@
+mixin metrics(c)
+  .metrics(class= c.metricsModifier ? "metrics--" + c.metricsModifier : "")
+    if c.heading === true
+      h4.metrics__heading= c.metricsHeading
+      .metrics__grid
+        each item in c.metricItems
+          .metrics__item
+            .metrics__icon(class= c.metricsIconModifier ? "metrics__icon--" + c.metricsIconModifier : "")
+              img(src="assets/images/icons/arrow.svg", alt="Arrow")
+            p.metrics__unit= item.metricsUnit
+            p.metrics__sub-text= item.metricsSubText
+            p.metrics__text= item.metricsText
+    else
+      .metrics__container
+        .metrics__icon(class= c.metricsIconModifier ? "metrics__icon--" + c.metricsIconModifier : "")
+          img(src="assets/images/icons/arrow.svg", alt="Arrow")
+        .metrics__content
+          strong.metrics__text.metrics__text--bold= c.metricsTextBold
+          p.metrics__text.metrics__text--lg= c.metricsText

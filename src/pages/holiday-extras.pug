@@ -1,96 +1,320 @@
-extends ../layouts/content.pug
+extends ../layouts/page.pug
 
 block prepend vars
   -var pageTitle = "Holiday Extras Travel Insurance Case Study | Leaf"
   -var metaUrl = "https://weareleaf.com/holiday-extras"
   -var metaTitle = "Holiday Extras Travel Insurance Case Study"
   -var metaDescription = "Having successfully reimagined their mobile booking process, Holiday Extras asked us to explore a customer-first approach to selling travel insurance online."
+  -var pageClass = "holiday-extras"
+
+  -var heroHeading = "Painless insurance quotes"
+  -var heroSubheading = "Holiday Extras wanted the experience of buying travel insurance online to match that of their award-winning cell-centre."
 
 block pageComponents
 
-  .section.section--sm-spacing
+  +hero({
+    heroHeading: heroHeading,
+    heroSubheading: heroSubheading,
+    heroSubheadingModifier: "narrow",
+    heroIntroImage: true,
+    heroImage: {
+      src: "/assets/images/case-studies/hx/image-1.png",
+      alt: "6 wireframed screens showing our process of mapping the users journey."
+    },
+    heroImageModifier: "hx"
+  })
+
+  section.section
     .container
-
-      +intro({
-        introImage: {
-          src: "/assets/images/case-studies/hx/logo.svg",
-          alt: "Holiday Extras",
-        },
-        introText: "Having successfully worked together to reimagine their mobile booking process, Holiday Extras asked us to explore a customer-first approach to selling travel insurance online."
-      })
-
-      +details({
-        details: [
-          {
-            detailHeading: "Themes",
-            detailText: "Consultancy, UX"
-          },
-          {
-            detailHeading: "Deliverables",
-            detailText: "Wireframes, prototype"
-          },
-          {
-            detailHeading: "Technology",
-            detailText: "Sketch, Marvel"
-          },
-          {
-            detailHeading: "Platform",
-            detailText: "Web"
-          }
-        ]
-      })
-
-  .section
-    .container
-      figure
-        img(src="/assets/images/case-studies/hx/image-1.jpg" alt="Holiday Extras Travel Insurance wireframes showing how we proposed trip, traveller and preferred insurance package information be captured.")
-
-      .grid.grid--two-thirds-reverse
-        .grid__item
-          +summary({
-            summaryHeading: "What is it?",
-            summaryText: "Alongside airport parking, hotels, and lounges, Holiday Extras offer travel insurance for holidaymakers with and without pre-existing medical conditions."
+      .hx-challenge
+        .hx-challenge__items
+          +content-block({
+            contentBlockItems: [
+              {
+                contentHeading2: true,
+                contentHeading: "The challenge",
+                contentIntro: "Having worked together previously, Holiday Extras asked us to help them improve their travel insurance booking flow.",
+                contentParagraphs: [
+                  {
+                    contentText: "We were tasked with creating an experience comparable to their award-winning call centre. Their staff are friendly, helpful, and able to shield the customer from the inherent complexity of insurance, and they wanted an online booking flow that was equally unintimidating."
+                  }
+                ]
+              }
+            ],
+            contentBlockImage: {
+              src: "/assets/images/case-studies/hx/image-2.jpg",
+              alt: "A customer service rep smiling while wearing a headset."
+            },
+            contentBlockModifier: "reverse",
+            contentBlockImageModifier: "hx-image-2"
           })
 
-        .grid__item
-          h2 The challenge
-          p Holiday Extras asked us to "redefine how customers buy travel insurance online", creating an experience comparable to their award-winning call centre. Their staff are friendly, helpful, and able to shield the customer from the inherent complexity of insurance, and we needed to create a booking flow that was equally unintimidating.
+          .hx-details
+            .hx-details__tags
+              +detail-tags({
+                detailTagHeading: "What we did",
+                detailTagModifier: "hx",
+                detailTags: [
+                  {
+                    detailTagIcon: "assets/images/case-studies/icons/pen.svg",
+                    detailTagText: "Content writing"
+                  },
+                  {
+                    detailTagIcon: "assets/images/case-studies/icons/data.svg",
+                    detailTagText: "Data analysis"
+                  },
+                  {
+                    detailTagIcon: "assets/images/case-studies/icons/switch.svg",
+                    detailTagText: "Form design"
+                  },
+                  {
+                    detailTagIcon: "assets/images/case-studies/icons/journey.svg",
+                    detailTagText: "Journey mapping"
+                  },
+                  {
+                    detailTagIcon: "assets/images/case-studies/icons/prototype.svg",
+                    detailTagText: "Prototypes"
+                  },
+                  {
+                    detailTagIcon: "assets/images/case-studies/icons/ear.svg",
+                    detailTagText: "Stakeholder interviews"
+                  },
+                  {
+                    detailTagIcon: "assets/images/case-studies/icons/wireframe.svg",
+                    detailTagText: "Wireframes"
+                  }
+                ]
+              })
+            .hx-details__image
+              img(src="/assets/images/case-studies/hx/image-3.jpg" alt="A customer service rep looking very happy while wearing a headset.")
 
-          h2 Our approach
-          p Although this was a "reimagination", our vision would be achieved iteratively by building on the previous online booking process. As such, the recommendations we made would need to be work both in isolation and as part of the current system.
+  section.section
+    .container
+      +content-block({
+        introHeading: true,
+        contentBlockHeading: "Our approach",
+        contentBlockItems: [
+          {
+            contentHeading: "Improve iteratively",
+            contentIntro: 'Although this was a "reimagination", changes would be made iteratively by building on the existing online booking process.',
+            contentParagraphs: [
+              {
+                contentText: "Any recommendations we made would need to work both in isolation and as part of the current system. Where possible, we reused existing elements, minimising the friction as sections of our work were introduced."
+              }
+            ]
+          },
+          {
+            contentHeading: "Be guided by the numbers",
+            contentIntro: "While reviewing the previous 12 months of policies, we found that most people were going to the same handful of places.",
+            contentParagraphs: [
+              {
+                contentText: "By suggesting these popular destinations, 4 out of 5 travellers would be able to select a location in a single interaction, with the remaining destinations available through an autocompleting search field."
+              }
+            ]
+          }
+        ],
+        contentBlockImage: {
+          src: "/assets/images/case-studies/hx/image-4.png",
+          alt: "Suggested destinations based on the most popular choices of 4/5 customers. There is also an autocomplete search field to help customers find their destination."
+        },
+        contentBlockImageModifier: "hx-image-4"
+      })
+      +image({
+        context: "content-block",
+        src: "/assets/images/case-studies/hx/image-10.png",
+        alt: "An autocomplete search field to help customers find their destination faster, and with less typing.",
+        modifier: "hx-image-10"
+      })
 
-          h3 Don't make users think
-          p Particular locations have a higher risk-factor than others, which means cover may cost a little more than it otherwise would. The previous way of asking for a destination inadvertently exposed the customer to the underlying complexity (e.g. one option was 'Europe, not including Spain, Cyprus, Malta, Turkey and Greece'), so we simply asked the user to tell us where they're going.
+  section.section
+    .container
+      +content-block({
+        contentBlockItems: [
+          {
+            contentHeading: "Be clear about effort and progress",
+            contentIntro: "People are more likely to give up on a task when they’re unsure how far away they are from completing it.",
+            contentParagraphs: [
+              {
+                contentText: "We intoduced a progress tracker to help set expections, showing users how much effort is needed as they move through the process. The tracker also makes it simple to navigate between sections, removing an existing pain-point for those who need to go back to a previous step."
+              }
+            ]
+          }
+        ],
+        contentBlockImage: {
+          src: "/assets/images/case-studies/hx/image-5.png",
+          alt: "The six types of trip a customer can choose, including Business trip, cruise, golf trip, hazardous activities, winter sports, and your wedding."
+        },
+        contentBlockModifier: "reverse",
+        contentBlockImageModifier: "hx-image-5"
+      })
+      +image({
+        context: "content-block",
+        src: "/assets/images/case-studies/hx/image-11.png",
+        alt: "The six types of trip a customer can choose, including Business trip, cruise, golf trip, hazardous activities, winter sports, and your wedding.",
+        modifier: "hx-image-11"
+      })
 
-          p After reviewing the previous 12 months of policies, we found that the great number of people were going to the same places. By presenting the most popular destinations, 86% of travellers would be able to select a location via a single click/tap, with the remaining destinations available through an autocompleting search field.
+  section.section
+    .container
+      +content-block({
+        contentBlockItems: [
+          {
+            contentHeading: "Help people progress quickly",
+            contentIntro: "Truly great online experiences accommodate inherent human behaviours, rather than forcing new ones.",
+            contentParagraphs: [
+              {
+                contentText: "We used iconography throughout the process to help users to more easily distinguish between various choices. People tend to scan Web pages rather than read them word-for-word, and can interpret images much faster than words, making icons the ideal visual parter to a text description."
+              }
+            ]
+          }
+        ],
+        contentBlockImage: {
+          src: "/assets/images/case-studies/hx/image-6.png",
+          alt: "The five steps a customer goes through in the quote process: 1. Trip, 2. People, 3. Cover, 4. Details, and 5. Payment."
+        },
+        contentBlockImageModifier: "hx-image-6"
+      })
+      +image({
+        context: "content-block",
+        src: "/assets/images/case-studies/hx/image-12.png",
+        alt: "The five steps a customer goes through in the quote process: 1. Trip, 2. People, 3. Cover, 4. Details, and 5. Payment.",
+        modifier: "hx-image-12"
+      })
 
-          h3 Be upfront about effort and progress
-          p When asking for large amounts of information, it should be clear how much effort is required to complete the task. By intoducing a progress indicator, we would be able to able to set expectations, show how far along in the process somebody was, and even allow them to navigate between steps.
+  section.section
+    .container
+      +content-block({
+        contentBlockItems: [
+          {
+            contentHeading: "Show a price as early as possible ",
+            contentIntro: "With so many insurance providers to choose from, you’d better make sure you give your users a reason to hang about.",
+            contentParagraphs: [
+              {
+                contentText: "In the very first step, a range of personal information was previously being asked for each traveller, even though date-of-births were the only details needed to calculate a price. Other than first-names, which made it easier to gather the remaining details later, we deferred the remaining questions until later on, radically reducing the time required to see a price."
+              }
+            ]
+          }
+        ],
+        contentBlockImage: {
+          src: "/assets/images/case-studies/hx/image-7.png",
+          alt: "A form that requires customers to enter only their first name and date of birth to get a price."
+        },
+        contentBlockImageModifier: "hx-image-7",
+        contentBlockModifier: "reverse"
+      })
 
-          h3 Provide value early
-          p In the highly competitive age of comparison sites, quote engines must offer value as quickly as possible.
-          p In the very first step of the previous process, a range of details were being asked for each traveller, even though date-of-births were the only information needed to calculate a price. Other than the date-of-birth and their first-name, which would help us gather the remaining details more gracefully later, we deferred the remaining questions until later in the process.
+    .centered-content.centered-content--hx
+      .bg-shapes
+        .bg-shape.bg-shape--1
+          img(src="/assets/images/case-studies/hx/shape.png")
+        .bg-shape.bg-shape--2
+          img(src="/assets/images/case-studies/hx/shape.png")
+      .container
+        .grid.grid--center-text
+          .grid__item
+            +content({
+              contentHeading: "Personalise the experience",
+              contentIntro: "It’s no longer enough to create one-size fits all products, and the entire experience should be tailored for each individual.",
+              contentParagraphs: [
+                {
+                  contentText: "We were able to offer users highly relevant upgrades by allowing them to tell us more about their trip. By making this step optional, the majority can continue without interacting at all, and those that do have additional requirements will only see upgrades that meet their needs."
+                },
+                {
+                  contentText: "When a couple are travelling, and both have Mr and Mrs selected as their titles, the second traveller will be asked whether they share a surname (we apply the same logic to families too). By asking the user if this is the case, rather than assuming it to be so, the action feels useful and thoughtful rather than rude and presumptuous."
+                }
+              ]
+            })
+        figure.hx-image-8
+          img(src="/assets/images/case-studies/hx/image-8.png" alt="The five steps a customer goes through in the quote process: 1. Trip, 2. People, 3. Cover, 4. Details, and 5. Payment.")
 
-      figure
-        img(src="/assets/images/case-studies/hx/image-2.jpg" alt="Holiday Extras Travel Insurance wireframes showing how we proposed policy information be relayed back to users.")
+  section.section
+    .container
+      +content-block({
+        contentBlockItems: [
+          {
+            contentHeading: "Not everybody needs to see everything",
+            contentIntro: "Your booking flow shouldn't feel intimidating to all of your customers to meet the needs of a small minority.",
+            contentParagraphs: [
+              {
+                contentText: "Previously, every customer was offered every upgrade, although our research showed that just four of the options were commonly asked about through the Call Centre. We radically simplified the comparison of available tiers by including only these four benefits, but made the full breakdown available for those who wanted to see more."
+              }
+            ]
+          },
+          {
+            contentHeading: "Write inclusively by cutting the jargon",
+            contentIntro: "It shouldn’t take a law degree for your potential customers to understand whether or not the policy is a good fit for them.",
+            contentParagraphs: [
+              {
+                contentText: "We worked closely with the Holiday Extras compliance team to simplify their explanation of a pre-existing medical condition, while still meeting their legal requirements. A full description remained available, but the majority benefitted from a jargon-free list of illnesses and ailments."
+              }
+            ]
+          }
+        ],
+        contentBlockImage: {
+          src: "/assets/images/case-studies/hx/image-9.png",
+          alt: "A full description of jargon-free illnesses that a customer can choose from in order to declare any pre-existing medical conditions."
+        },
+        contentBlockModifier: "reverse",
+        contentBlockImageModifier: "hx-image-9"
+      })
+      +image({
+        context: "content-block",
+        src: "/assets/images/case-studies/hx/image-13.png",
+        alt: "A full description of jargon-free illnesses that a customer can choose from in order to declare any pre-exisiting medical conditions.",
+        modifier: "hx-image-13"
+      })
 
-      .grid.grid--two-thirds
-        .grid__item
-          h3 Accommodate human bahaviours
-          p People tend to scan the Web, rather than read pages word-for-word. In fact, one well-known study showed just 16% of us actually read everything. This, along with the knowledge that humans perceive images much faster that we do words, lead to us making heavy use of icons throughout the process, helping users to distinguish between options more quickly than text alone.
+  section.section
+    .container
+      .hx-outcome
+        .hx-outcome__content
+          h2.content-block__heading The outcome
+          +content({
+              contentHeading: "Radically faster quotes",
+              contentIntro: "The changes made meant we were able to provide an insurance quote in a fraction of time it had taken previously.",
+              contentParagraphs: [
+                {
+                  contentText: "Changes to how a pre-existing medical condition was described meant test users were able to understand and answer whether or not they had one more than a minute quicker than had been the case before."
+                }
+              ]
+            })
+          +metrics({
+            heading: true,
+            metricsHeading: "user testing",
+            metricItems: [
+              {
+                metricsUnit: "233%",
+                metricsSubText: "quicker to see a price",
+                metricsText: "It took users an average of 1 min and 24 secs to see their price, compared to 3 mins and 16 secs in the previous version."
+              },
+              {
+                metricsUnit: "74",
+                metricsSubText: "fewer interactions to see a price",
+                metricsText: "Users tapped their screen an average of 68 times before they saw their price, compared to 142 times in the previous version."
+              },
+            ]
+          })
+          +content({
+            contentHeading: "Small and continuous improvements",
+            contentIntro: "As was the intention, the new content and structure of the process will gradually be integrated into the booking flow.",
+            contentParagraphs: [
+              {
+                contentText: "The engineering team at Holiday Extras have started introducing a number of elements of our prototype into the live booking flow, and we look forward to seeing further progress over the coming months."
+              }
+            ]
+          })
+          +testimonial({
+            testimonialBlockQuote: "Leaf were a pleasure to work with – always available and willing to offer advice or to put forward constructive suggestions. The decision to work with them is one we haven’t regretted, and I’d gladly recommend them to anyone looking to improve their own booking flow.",
+            author: {
+              authorName: "Carl Burdett",
+              authorDetails: "Digital Marketing Manager — Holiday Extras",
+              authorThumbnail: {
+                src: "assets/images/case-studies/hx/carl.png",
+                alt: "A picture of Carl Burdett with a purple background behind him."
+              }
+            }
+          })
+        .hx-outcome__prototype
+          .hx-outcome__main-prototype
+            iframe(src="https://marvelapp.com/1cbg8j3g?emb=1&iosapp=false&frameless=false", width="500", height="1033", frameborder="0", allowtransparency="true")
 
-          h3 Not everybody needs to see everything
-          p An insurance booking flow shouldn't feel like a legal document, and while it's true that that detail should be available, it shouldn't be exposed to everyone.
-
-          p We worked closely with the Holiday Extras compliance team to simplify their explanation of a pre-existing medical condition. The full description was still available for those who needed it, but the majority benefitted from a jargon-free list of illnesses and ailments.
-
-          p The explanation of available cover levels was also excessively complicated, with each tier listing every possible benefit. Our stakeholder research showed that four particular items were by the far most commonly discussed topics in the Call Centre: the policy excess, baggage allowance, cancellation cover, and the medical emergency total. We presented a comparison of the tiers available, including only these four benefits, but made the full breakdown available for those who wanted to see more.
-
-          h3 Personalise the experience
-
-          p Rather than offering every cover upgrade to all travellers, we allowed customers to set a trip type (e.g. golf trip) and limits on popular requirements (e.g. a maximum excess value). By making this step optional, the majority can continue without interacting at all, and those that do have additional requirements will see only cover upgrades that meet their needs.
-
-          p We also introduced real-time suggestions, allowing the customer to importing traveller details with a single click. For example, when a couple are travelling, and both have Mr and Mrs selected as their titles, the second traveller will be asked whether they share a surname. By asking the user if this is the case, rather than guessing that it may be, the action feels useful and thoughtful rather than rude and presumptuous.
-
-          h2 The outcome
-          p The engineering team at Holiday Extras have started introducing a number of elements of our prototype into the live booking flow, and we look forward to seeing further progress over the coming months.

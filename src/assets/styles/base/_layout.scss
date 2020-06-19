@@ -173,20 +173,16 @@ main {
 
     &--pets {
       left: 0;
-      margin-bottom: -$spacing-5;
+      bottom: -.9rem;
       max-width: 8.5rem;
       text-align: right;
     }
 
     &--holiday {
-      margin-bottom: $spacing-5; // Had to make some annoying visual compromises due to Chrome/Firefox margin difference
       max-width: $size-9;
       padding-left: $spacing-3;
       right: 0;
-
-      @media screen and (min-width: map-get($breakpoints, 'breakpoint-10')) {
-        margin-bottom: $spacing-2;
-      }
+      text-align: left;
     }
   }
 }
@@ -198,13 +194,14 @@ main {
     display: flex;
     justify-content: flex-end;
   }
-  
+
   &__image {
     margin-top: -$spacing-6;
   }
 }
 
 .company-image {
+
   &__media {
     display: none;
 
@@ -246,6 +243,7 @@ main {
 }
 
 .company-mobile {
+
   &__media {
     align-items: start;
     display: flex;
@@ -298,8 +296,8 @@ main {
       grid-template-columns: repeat(2, 1fr);
     }
     @media screen and (min-width: map-get($breakpoints, 'breakpoint-3')) {
-      grid-gap: $spacing-2;
-      grid-template-columns: repeat(3, 1fr);
+      //grid-gap: $spacing-2;
+      //grid-template-columns: repeat(3, 1fr);
     }
 
     @media screen and (min-width: map-get($breakpoints, 'breakpoint-4')) {
@@ -357,9 +355,18 @@ main {
       margin-bottom: $spacing-5;
     }
 
-    @media screen and (min-width: map-get($breakpoints, 'breakpoint-12')) {
+    @media screen and (min-width: map-get($breakpoints, 'breakpoint-13')) {
       flex-wrap: nowrap;
       padding-right: $spacing-7;
     }
+  }
+}
+
+//- This is shit. Needs to be changed ASAP
+figure.figure-wrapper {
+  display: none;
+
+  @media screen and (min-width: map-get($breakpoints, 'breakpoint-4')) {
+    display: unset;
   }
 }

@@ -190,7 +190,7 @@ $checkbox-pseudo-size: .25rem;
     margin: 0;
     opacity: 0;
     position: absolute;
-    z-index: 1;
+    z-index: z('default');
 
     &:checked + .form__label--checkbox::before {
       background: var(--color-accent);

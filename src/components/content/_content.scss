@@ -1,0 +1,42 @@
+.content {
+  &__heading-2 {
+    color: var(--color-heading-2);
+    font-size: $font-size-h2;
+
+    @media screen and (min-width: map-get($breakpoints, 'breakpoint-3')) {
+      font-size: $font-size-xl;
+    }
+  }
+
+  &__heading-3 {
+    color: var(--color-heading-3);
+    font-size: $font-size-h3;
+    margin-bottom: $spacing-3;
+
+    @media screen and (min-width: map-get($breakpoints, 'breakpoint-3')) {
+      font-size: 1.6rem;
+    }
+  }
+
+  &__intro {
+    color: var(--color-intro-text);
+    font-size: $font-size-md;
+    font-family: $font-family-sans-serif;
+    line-height: 1.6;
+    margin-bottom: $spacing-5;
+
+    @media screen and (min-width: map-get($breakpoints, 'breakpoint-11')) {
+      margin-bottom: $spacing-6;
+    }
+  }
+
+  &__text {
+    color: var(--color-text);
+    line-height: 1.7;
+    margin-bottom: $spacing-5;
+
+    @media screen and (min-width: map-get($breakpoints, 'breakpoint-11')) {
+      margin-bottom: $spacing-6;
+    }
+  }
+}

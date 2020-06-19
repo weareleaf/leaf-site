@@ -68,5 +68,50 @@
       font-size: 1.1rem;
       max-width: 36rem;
     }
+
+    &--narrow {
+      max-width: 32rem;
+    }
+  }
+
+  &__media {
+    align-items: flex-start; // Fixes Safari jank
+    display: flex;
+    justify-content: center;
+  }
+
+  &__image {
+    &--hx {
+      margin-top: $spacing-8;
+      min-width: 40rem; // Min fixes Firefox width issue
+
+      @media screen and (min-width: map-get($breakpoints, 'breakpoint-3')) {
+        min-width: 68rem;
+      }
+
+      @media screen and (min-width: map-get($breakpoints, 'breakpoint-11')) {
+        margin-top: $spacing-10;
+      }
+    }
+    &--rift {
+      margin-left: -$spacing-5;
+      margin-bottom: -$spacing-8;
+      margin-top: -$spacing-6;
+      min-width: 66rem;
+
+      @media screen and (min-width: map-get($breakpoints, 'breakpoint-1')) {
+        margin-bottom: -$spacing-9;
+        margin-left: 0;
+      }
+
+      @media screen and (min-width: map-get($breakpoints, 'breakpoint-6')) {
+        margin-bottom: 0;
+        margin-top: $spacing-4;
+      }
+
+      @media screen and (min-width: map-get($breakpoints, 'breakpoint-11')) {
+        min-width: 78rem;
+      }
+    }
   }
 }

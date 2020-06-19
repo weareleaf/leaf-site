@@ -1,0 +1,13 @@
+mixin testimonial(c)
+  .testimonial
+    blockquote.testimonial__quote
+      p.testimonial__quote-main= c.testimonialBlockQuote
+    +author({
+      class: c.author.class,
+      authorName: c.author.authorName,
+      authorDetails: c.author.authorDetails,
+      authorThumbnail: {
+        alt: c.author.authorThumbnail.alt,
+        src: c.author.authorThumbnail.src
+      }
+    })

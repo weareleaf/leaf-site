@@ -1,0 +1,42 @@
+.author {
+  align-items: center;
+  display: flex;
+
+  &__media {
+    display: block;
+  }
+
+  &__image {
+    border-radius: $border-radius-full;
+    display: block;
+    height: $size-4;
+    object-fit: cover;
+    width: $size-4;
+
+    @media screen and (min-width: map-get($breakpoints, 'breakpoint-2')) {
+      height: $size-5;
+      width: $size-5;
+    }
+  }
+
+  &__content {
+    margin-left: $spacing-4;
+
+    @media screen and (min-width: map-get($breakpoints, 'breakpoint-2')) {
+      margin-left: $spacing-5;
+    }
+  }
+
+  &__name {
+    color: var(--color-author-name);
+    font-size: $font-size-xs;
+    margin-bottom: .2rem;
+  }
+
+  &__details {
+    color: var(--color-author-details);
+    font-size: .7rem;
+    line-height: 1;
+    margin: $spacing-1 0 0;
+  }
+}

@@ -1,26 +1,12 @@
 .bullet {
-  &--strike-through {
-    line-height: 1.2;
-    margin-left: $spacing-6;
-
-    @media screen and (min-width: map-get($breakpoints, 'breakpoint-4')) {
-      margin-bottom: -$spacing-4;
-      margin-left: 1.5rem;
-      margin-top: -$spacing-4;
-    }
-
-    @media screen and (min-width: map-get($breakpoints, 'breakpoint-6')) {
-      line-height: 1.6;
-      margin: -$spacing-4 0;
-    }
-  }
 
   &__heading {
     color: var(--color-heading);
+    font-family: $font-family-sans-serif-extrabold;
     font-size: $font-size-xxs;
-    font-weight: $font-weight-heading;
+    font-weight: 400;
     letter-spacing: .05rem;
-    margin: $spacing-5 0;
+    margin-bottom: $spacing-4;
     text-transform: uppercase;
 
     @media screen and (min-width: map-get($breakpoints, 'breakpoint-4')) {
@@ -28,8 +14,20 @@
     }
   }
 
+  &__list {
+
+    &--2-col {
+
+      @media screen and (min-width: map-get($breakpoints, 'breakpoint-1')) {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+    }
+  }
+
   .styled-list {
-    margin-top: -$spacing-3;
+    //margin-top: -$spacing-3;
 
     &__item {
       line-height: 1.2;

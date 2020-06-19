@@ -37,7 +37,84 @@ html {
   --color-post-heading: #{$color-cerulean};
   --color-share-icons: #{$color-majorelle};
   --color-social-icons: #{$color-cerulean};
+  --color-close-bg: #{$color-snow};
   --color-close: #{$color-cerulean};
+
+  @media screen and (min-width: map-get($breakpoints, 'breakpoint-11')) {
+    --color-close-bg: #{$color-ivory};
+  }
+}
+
+.page--holiday-extras {
+  --color-header: #{$hx-minsk};
+  --color-header-nav: #{$hx-daisy};
+  --color-accent: #{$hx-gold};
+  --color-background: #{$hx-minsk};
+  --color-heading-2: #{$color-smoke};
+  --color-heading-3: #{$hx-gold};
+  --color-intro-text: #{$color-smoke};
+  --color-text: #{$hx-melrose};
+  --color-container: #{$hx-gigas};
+  --color-focus-bg: #{$hx-gold};
+  --color-footer-contact: #{$color-smoke};
+  --color-footer-divider: #{$hx-gigas};
+  --color-heading: #{$color-smoke};
+  --color-hero-subheading: #{$hx-melrose};
+  --color-nav: #{$color-smoke};
+  --color-footer-text: #{$hx-melrose};
+  --color-logo: #{$color-smoke};
+  --color-social-icons: #{$color-smoke};
+  --color-metric-background: #{$hx-royal};
+  --color-metric-border: #{$hx-gigas};
+  --color-metric-unit: #{$color-smoke};
+  --detail-heading: #{$hx-gold};
+  --color-detail-text: #{$color-white};
+  --color-detail-bg: #{$hx-studio};
+  --color-testimonial-quotation: #{$hx-daisy};
+  --color-testimonial-blockquote: #{$color-smoke};
+  --color-author-name: #{$color-smoke};
+  --color-author-details: #{$hx-melrose};
+
+  @media screen and (min-width: map-get($breakpoints, 'breakpoint-11')) {
+    --color-close-bg: #{$hx-daisy};
+    --color-close: #{$color-smoke};
+  }
+}
+
+.page--myrift {
+  --color-header: #{$rift-gun};
+  --color-header-nav: #{$rift-charada};
+  --color-accent: #{$rift-red};
+  --color-background: #{$rift-gun};
+  --color-heading-2: #{$color-smoke};
+  --color-heading-3: #{$rift-red};
+  --color-intro-text: #{$color-smoke};
+  --color-text: #{$rift-pearl};
+  --color-container: #{$rift-baltic};
+  --color-focus-bg: #{$rift-red};
+  --color-footer-contact: #{$color-smoke};
+  --color-footer-divider: #{$rift-charada};
+  --color-heading: #{$color-smoke};
+  --color-hero-subheading: #{$rift-pearl};
+  --color-nav: #{$color-smoke};
+  --color-footer-text: #{$rift-pearl};
+  --color-logo: #{$color-smoke};
+  --color-social-icons: #{$color-smoke};
+  --color-metric-background: #{$rift-trout};
+  --color-metric-border: #{$rift-charada};
+  --color-metric-unit: #{$rift-iron};
+  --detail-heading: #{$rift-red};
+  --color-detail-text: #{$color-white};
+  --color-detail-bg: #{$rift-mako};
+  --color-testimonial-quotation: #{$rift-trout};
+  --color-testimonial-blockquote: #{$color-smoke};
+  --color-author-name: #{$color-smoke};
+  --color-author-details: #{$rift-pearl};
+
+  @media screen and (min-width: map-get($breakpoints, 'breakpoint-11')) {
+    --color-close-bg: #{$rift-baltic};
+    --color-close: #{$color-smoke}
+  }
 }
 
 .page--bio {

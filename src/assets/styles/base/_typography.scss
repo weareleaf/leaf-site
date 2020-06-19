@@ -227,7 +227,7 @@ img {
     margin-bottom: -1rem; // Custom margin, unrelated to global spacing system
     pointer-events: none;
     text-align: center;
-    z-index: -1;
+    z-index: z('below');
 
     @media screen and (min-width: map-get($breakpoints, 'breakpoint-1')) {
       font-size: 5rem; // Custom font-size, unrelated to global spacing system
@@ -241,11 +241,25 @@ img {
   }
 }
 
-blockquote {
+blockquote.blog-blockquote {
   margin: $spacing-7 auto;
   padding: $spacing-3 0 $spacing-3 $spacing-7;
   position: relative;
   width: 100%;
+
+  @media screen and (min-width: map-get($breakpoints, 'breakpoint-2')) {
+    margin: 0;
+    padding: $spacing-4 0 $spacing-5 $spacing-5;
+    width: 75%;
+  }
+
+  @media screen and (min-width: map-get($breakpoints, 'breakpoint-4')) {
+    width: 100%;
+  }
+
+  p.main-blockquote {
+    color: $color-eggplant;
+  }
 
   q {
     color: $color-amethyst;
@@ -267,7 +281,7 @@ blockquote {
       left: -$spacing-4;
       position: absolute;
       top: $spacing-4;
-      z-index: -1;
+      z-index: z('below');
     }
 
     &::after {

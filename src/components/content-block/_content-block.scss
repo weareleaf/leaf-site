@@ -1,0 +1,253 @@
+.content-block {
+  display: block;
+  margin-bottom: $spacing-9;
+  width: 100%;
+
+  @media screen and (min-width: map-get($breakpoints, 'breakpoint-1')) {
+    padding: 0 $spacing-9;
+  }
+
+  @media screen and (min-width: map-get($breakpoints, 'breakpoint-3')) {
+    padding: 0 $spacing-11;
+  }
+
+  @media screen and (min-width: map-get($breakpoints, 'breakpoint-4')) {
+    @include two-col-grid;
+    grid-gap: 5rem;
+    margin-bottom: $spacing-10;
+    min-height: $size-11;
+    padding: 0;
+  }
+
+  @media screen and (min-width: map-get($breakpoints, 'breakpoint-11')) {
+    margin-bottom: $spacing-13;
+  }
+
+  &__list-item {
+    &:not(:last-child) {
+      margin-bottom: $spacing-7;
+
+      @media screen and (min-width: map-get($breakpoints, 'breakpoint-2')) {
+        margin-bottom: $spacing-8;
+      }
+    }
+  }
+
+  &__content {
+    margin: 0 0 $spacing-6 0;
+
+    @media screen and (min-width: map-get($breakpoints, 'breakpoint-4')) {
+      align-self: center;
+      margin: 0;
+    }
+  }
+
+  &__media {
+    position: relative;
+  }
+
+  &__image {
+    position: relative;
+
+    @media screen and (min-width: map-get($breakpoints, 'breakpoint-4')) {
+      bottom: 0;
+      margin: auto;
+      position: absolute;
+      top: 0;
+    }
+
+    // Holiday Extras Images
+    &--hx-image-2 {
+      display: none;
+
+      @media screen and (min-width: map-get($breakpoints, 'breakpoint-4')) {
+        box-shadow: 0 0 0 .6rem var(--color-background);
+        display: block;
+        right: 1.25rem;
+        top: $spacing-13;
+        max-width: 70%;
+      }
+    }
+
+    &--hx-image-4 {
+      display: none;
+
+      @media screen and (min-width: map-get($breakpoints, 'breakpoint-4')) {
+        display: block;
+        left: 3.4rem;
+        max-width: 125%;
+      }
+    }
+
+    &--hx-image-5 {
+      display: none;
+
+      @media screen and (min-width: map-get($breakpoints, 'breakpoint-4')) {
+        display: block;
+        max-width: 110%;
+        padding: 0;
+        right: $spacing-7;
+        top: -$spacing-5;
+      }
+    }
+
+    &--hx-image-6 {
+      display: none;
+
+      @media screen and (min-width: map-get($breakpoints, 'breakpoint-4')) {
+        display: block;
+        max-width: 120%;
+      }
+    }
+
+    &--hx-image-7 {
+      margin: 0 auto 0 -1.25rem;
+
+      @media screen and (min-width: map-get($breakpoints, 'breakpoint-1')) {
+        margin: 0;
+        right: 1.75rem;
+      }
+
+      @media screen and (min-width: map-get($breakpoints, 'breakpoint-4')) {
+        max-width: 80%;
+        right: $spacing-7;
+      } 
+
+      @media screen and (min-width: map-get($breakpoints, 'breakpoint-11')) {
+        max-width: 100%;
+        right: $spacing-5;
+        top: -5.5rem;
+      }  
+    }
+
+    &--hx-image-9 {
+      display: none; 
+      
+      @media screen and (min-width: map-get($breakpoints, 'breakpoint-4')) {
+        display: block;
+        max-width: 96%;
+        right: 0;
+        top: -5rem;
+      } 
+    }
+
+    &--hx-image-10 {
+      display: block;
+      margin: -$spacing-8 auto -1.5rem auto;
+
+      @media screen and (min-width: map-get($breakpoints, 'breakpoint-1')) {
+        max-width: 60%;
+      }
+
+      @media screen and (min-width: map-get($breakpoints, 'breakpoint-3')) {
+        margin: -$spacing-8 auto -3rem auto;
+      }
+
+      @media screen and (min-width: map-get($breakpoints, 'breakpoint-4')) {
+        display: none;
+      }
+    }
+
+    &--hx-image-11 {
+      display: block;
+      margin: -$spacing-8 auto -1rem auto;
+
+      @media screen and (min-width: map-get($breakpoints, 'breakpoint-1')) {
+        margin: -$spacing-7 auto -1rem auto;
+        max-width: 60%;
+      }
+
+      @media screen and (min-width: map-get($breakpoints, 'breakpoint-3')) {
+        margin: -$spacing-7 auto -2rem auto;
+      }
+
+      @media screen and (min-width: map-get($breakpoints, 'breakpoint-4')) {
+        display: none;
+      }
+    }
+
+    &--hx-image-12 {
+      display: block;
+      margin: -$spacing-8 auto -.5rem auto;
+
+      @media screen and (min-width: map-get($breakpoints, 'breakpoint-1')) {
+        max-width: 60%;
+      }
+
+      @media screen and (min-width: map-get($breakpoints, 'breakpoint-3')) {
+        margin: -$spacing-8 auto -1rem auto;
+      }
+
+      @media screen and (min-width: map-get($breakpoints, 'breakpoint-4')) {
+        display: none;
+      }
+    }
+
+    &--hx-image-13 {
+      display: block;
+      margin: -$spacing-8 auto -1rem auto;
+      max-width: 80%;
+
+      @media screen and (min-width: map-get($breakpoints, 'breakpoint-1')) {
+        max-width: 60%;
+      }
+
+      @media screen and (min-width: map-get($breakpoints, 'breakpoint-3')) {
+        margin: -$spacing-6 auto -.5rem auto;
+      }
+
+      @media screen and (min-width: map-get($breakpoints, 'breakpoint-4')) {
+        display: none;
+        margin: 0;
+      }
+    }
+
+    // RIFT Images
+    &--rift-3 {
+      display: none;
+
+      @media screen and (min-width: map-get($breakpoints, 'breakpoint-4')) {
+        display: block;
+        left: $spacing-5;
+        max-width: 110%;
+        top: $spacing-9;
+      }
+    }
+
+    &--rift-11 {
+      display: block;
+      margin-top: -$spacing-7;
+
+      @media screen and (min-width: map-get($breakpoints, 'breakpoint-1')) {
+        margin: -$spacing-5 auto 0 auto;
+        max-width: 60%;
+      }
+
+      @media screen and (min-width: map-get($breakpoints, 'breakpoint-4')) {
+        display: none;
+      }
+    }
+  }
+
+  &__content {
+    .content-block--reverse & {
+      @media screen and (min-width: map-get($breakpoints, 'breakpoint-1')) {
+        order: 1;
+      }
+    }
+  }
+
+  &__heading {
+    color: var(--color-heading-2);
+    font-size: $font-size-h2;
+    margin-bottom: $spacing-6;
+
+    @media screen and (min-width: map-get($breakpoints, 'breakpoint-3')) {
+      font-size: $font-size-xl;
+    }
+
+    @media screen and (min-width: map-get($breakpoints, 'breakpoint-4')) {
+      margin-bottom: $spacing-8;
+    }
+  }
+}

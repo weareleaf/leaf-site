@@ -1,0 +1,8 @@
+mixin detail-tags(c)
+  .detail-tags(class= c.detailTagModifier ? "detail-tags--" + c.detailTagModifier : "")
+    h4.detail-tags__heading= c.detailTagHeading
+    each detail in c.detailTags
+      .detail-tags__item
+        .detail-tags__icon
+            img(src= detail.detailTagIcon alt="")
+        p.detail-tags__text= detail.detailTagText
