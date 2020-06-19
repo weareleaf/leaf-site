@@ -93,6 +93,7 @@ main {
   }
 
   &__explanation {
+    display: inline-block;
     margin-top: -$spacing-8;
 
     @media screen and (min-width: map-get($breakpoints, 'breakpoint-4')) {
