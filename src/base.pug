@@ -45,7 +45,7 @@ html.no-js(lang="en-GB")
     link(rel="preconnect" href="https://www.googletagmanager.com")
     meta(name="msapplication-TileColor", content="#dbffe7")
     meta(name="msapplication-TileImage", content="/assets/images/favicons/ms-icon-144x144.png")
-    meta(name="theme-color", content="#dbffe7")
+    meta(name="theme-color", content="#3d18c3")
 
     if metaUrl
       meta(property="og:url" content=metaUrl)
@@ -68,6 +68,10 @@ html.no-js(lang="en-GB")
     meta(name="twitter:site" content="@we_are_leaf")
     meta(name="twitter:creator" content="@we_are_leaf")
     link(rel="stylesheet", href="/assets/styles/main.css")
+
+    if playfairDisplay
+      link(href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital@1&display=swap" rel="stylesheet")
+
   body.transition-in
     noscript
       iframe(src='https://www.googletagmanager.com/ns.html?id=GTM-TG99MGS' height='0' width='0' style='display:none;visibility:hidden')

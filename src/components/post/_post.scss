@@ -26,6 +26,7 @@
   }
 
   &__heading {
+    color: var(--color-post-heading);
     font-size: $font-size-h3;
     margin: 0 0 $spacing-4;
   }

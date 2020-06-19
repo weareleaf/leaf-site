@@ -3,6 +3,7 @@
 
 // Mixins
 @import 'base/mixins';
+@import 'base/helpers';
 
 // Base
 @import 'base/variables';
@@ -15,7 +16,6 @@
 
 // Components
 @import '../../components/address/address';
-@import '../../components/banner/banner';
 @import '../../components/blog-post/blog-post';
 @import '../../components/block/block';
 @import '../../components/button/button';
@@ -35,6 +35,7 @@
 @import '../../components/modal/modal';
 @import '../../components/nav/nav';
 @import '../../components/page-header/page-header';
+@import '../../components/permalink/permalink';
 @import '../../components/post/post';
 @import '../../components/presentation/presentation';
 @import '../../components/profile/profile';

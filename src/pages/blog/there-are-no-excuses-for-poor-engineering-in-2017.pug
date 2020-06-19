@@ -7,49 +7,45 @@ block prepend vars
   -var metaDescription = "Quick product iteration cycles are largely facilitated by software, great data, and great automation, and all of these come about with great engineering."
 
   -var heroHeading = "There are no excuses for poor engineering in 2017"
-  -var heroSubheading = "(by Mike Carter)"
 
 block pageComponents
 
-  +banner({
-  })
+  article
 
-  .banner-spacer
+    +hero({
+      heroHeading: heroHeading,
+      heroAuthor: "Mike Carter",
+      heroDate: "2 March 2017",
+      heroMinutesToRead: 3
+    })
 
-  +hero({
-    heroHeading: heroHeading,
-    heroSubheading: heroSubheading,
-  })
-
-  .section
-    .container
-
-      .grid.grid--center
-
-        +share-icons({
-          socialModifier: "inline"
-        })
-
-        .blog-post
-
-          p.blog-post__intro Writing great code is easier than ever, and yet we act like it doesn’t matter
-
-          p.blog-post__text In startup circles, you’ll often hear entrepreneurs boldly claim their customers don’t care about code. Language choices, algorithms and technical debt make no difference to them — all care about is the quality of the product they interact with.
-
-          p.blog-post__text They’re not wrong, after all — Your customers do just want a great product. How that project works is rarely much of a concern to them, in most cases it might as well just be magic. However, what’s strange is how often these same entrepreneurs next logical leap is that product-first thinking should mean their engineering doesn’t matter.
-
-          p.blog-post__text <i>“We’ll rewrite the MVP when we’ve achieved product market fit”</i>, they’ll say. <i>“We’ll refactor this when we get a spare moment”</i>, they’ll promise. Spoiler: It won’t happen, not for a long while and not without a lot of pain. We know this to be true in most cases, and yet naively optimistic founders will run headlong into this tripwire time and time again for the sake of fast product iteration.
-
-          p.blog-post__text This “screw the codebase” approach may have worked 10 years ago, but in 2017 it’s false economy. Quick product iteration cycles are largely facilitated by <strong>great software</strong>, <strong>great data</strong>, and <strong>great automation</strong>, and all of these come about with great engineering. The key difference now is that the development and product tooling available today makes it cost <i>effective</i> to get on board with good code quality.
-
-          p.blog-post__text Think about it — Modern CI services make automated pull request blocking, test-running and production deployments a breeze. Features like automatic review apps mean you can have per pull-request deployments of your application in a matter of minutes. Code linting, automated dependency updating and even limited automated code reviews are all pretty mainstream and take a few minutes to set up. Virtual device labs can be spun up in seconds that allow you to run tests against many devices in parallel. Scaleable metrics, error tracking and logging are all off the shelf products now too.
-
-          p.blog-post__text A lot of the above are even one-off automations that can be reused infinitely for a small cost. Combine these with a <strong>pragmatic product-focussed</strong> approach to maintaining software quality and you’ll be paid back with interest. This payback will come through <strong>lower development spend</strong>, due to the codebase being easier to work with for your engineers; through <strong>lower support spend</strong>, due to you shipping higher quality, bug-free product; and through <strong>lower marketing spend</strong>, as your happy customers evangelise your product on your behalf, not to mention a huge <strong>boost to developer happiness</strong>. Treat your codebase like crap, however, and you can expect these trends to reverse.
-
-          p.blog-post__text I’m not saying we should demand perfection, it’s just that achieving great engineering is easier, and more cost-effective than people seem to think. Give some modern development tooling a try today and encourage your team to improve the codebase with each change they make — you won’t regret it.
-
-    section.section.section--lg-spacing
+    .section
       .container
-        .blog-content
-          h3.blog-content__heading Keep reading
-          +blog-post-grid
+
+        .grid.grid--post
+
+          +share-icons({})
+
+          .blog-post
+
+            p.blog-post__intro Writing great code is easier than ever, and yet we act like it doesn’t matter
+
+            p.blog-post__text In startup circles, you’ll often hear entrepreneurs boldly claim their customers don’t care about code. Language choices, algorithms and technical debt make no difference to them — all care about is the quality of the product they interact with.
+
+            p.blog-post__text They’re not wrong, after all — Your customers do just want a great product. How that project works is rarely much of a concern to them, in most cases it might as well just be magic. However, what’s strange is how often these same entrepreneurs next logical leap is that product-first thinking should mean their engineering doesn’t matter.
+
+            p.blog-post__text <i>“We’ll rewrite the MVP when we’ve achieved product market fit”</i>, they’ll say. <i>“We’ll refactor this when we get a spare moment”</i>, they’ll promise. Spoiler: It won’t happen, not for a long while and not without a lot of pain. We know this to be true in most cases, and yet naively optimistic founders will run headlong into this tripwire time and time again for the sake of fast product iteration.
+
+            p.blog-post__text This “screw the codebase” approach may have worked 10 years ago, but in 2017 it’s false economy. Quick product iteration cycles are largely facilitated by <strong>great software</strong>, <strong>great data</strong>, and <strong>great automation</strong>, and all of these come about with great engineering. The key difference now is that the development and product tooling available today makes it cost <i>effective</i> to get on board with good code quality.
+
+            p.blog-post__text Think about it — Modern CI services make automated pull request blocking, test-running and production deployments a breeze. Features like automatic review apps mean you can have per pull-request deployments of your application in a matter of minutes. Code linting, automated dependency updating and even limited automated code reviews are all pretty mainstream and take a few minutes to set up. Virtual device labs can be spun up in seconds that allow you to run tests against many devices in parallel. Scaleable metrics, error tracking and logging are all off the shelf products now too.
+
+            p.blog-post__text A lot of the above are even one-off automations that can be reused infinitely for a small cost. Combine these with a <strong>pragmatic product-focussed</strong> approach to maintaining software quality and you’ll be paid back with interest. This payback will come through <strong>lower development spend</strong>, due to the codebase being easier to work with for your engineers; through <strong>lower support spend</strong>, due to you shipping higher quality, bug-free product; and through <strong>lower marketing spend</strong>, as your happy customers evangelise your product on your behalf, not to mention a huge <strong>boost to developer happiness</strong>. Treat your codebase like crap, however, and you can expect these trends to reverse.
+
+            p.blog-post__text I’m not saying we should demand perfection, it’s just that achieving great engineering is easier, and more cost-effective than people seem to think. Give some modern development tooling a try today and encourage your team to improve the codebase with each change they make — you won’t regret it.
+
+  section.section.section--lg-spacing
+    .container
+      .blog-content
+        h3.blog-content__heading Keep reading
+        +blog-post-grid

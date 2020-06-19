@@ -1,5 +1,5 @@
 import Barba from 'barba.js'
-import banner from './banner.js'
+import banner from './close.js'
 import modal from './modal.js'
 
 const body = document.body

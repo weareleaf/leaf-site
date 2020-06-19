@@ -7,51 +7,48 @@ block prepend vars
   -var metaDescription = "Instead of creating a idealised set of users, allow your personas to be human. Allow them to experience both the good and the bad that life has in store."
 
   -var heroHeading = "Your users are humans too"
-  -var heroSubheading = "(by Chris Annetts)"
 
 block pageComponents
 
-  +banner({
-  })
+  article
 
-  .banner-spacer
+    +hero({
+      heroHeading: heroHeading,
+      heroAuthor: "Chris Annetts",
+      heroDate: "10 March 2017",
+      heroMinutesToRead: 2
+    })
 
-  +hero({
-    heroHeading: heroHeading,
-    heroSubheading: heroSubheading,
-  })
 
-  .section
-    .container
-
-      .grid.grid--center
-
-        +share-icons({
-          socialModifier: "inline"
-        })
-
-        .blog-post
-
-          p.blog-post__intro You’ve been charged with redesigning the company website, and you’re stoked. You’ve met with stakeholders, created a tonne of user personas, and have even explored a new design direction.
-
-          p.blog-post__text You, young Jedi, are crushing it.
-
-          p.blog-post__text Except, there’s already a blindspot in your thinking; your user personas don’t exist outside of your project. The trouble with this insular line of thinking is that they’re first and foremost humans; they have lives outside of being a ‘user’, and those lives carry stresses, distractions, and at times, downright unhappiness.
-
-          p.blog-post__text When your various audiences interact with your website, product, or service, they bring their real-World emotions with them. We’ve learnt to factor in environmental distractions, but often forget our users exist outside of our own scope.
-
-          p.blog-post__text Instead of creating a superficial idealised set of users, allow your personas to be human. Allow them to experience both the good and the bad that life has in store for us all.
-
-          p.blog-post__text Don’t just create happily married personas; put them through painful divorces too. Have them worry about how they’re going to pay this month’s rent. Expose them to illness or even death.
-
-          p.blog-post__text Such detail may seen unnecessary or even downright morbid, but every word of it serves an important purpose; it reminds us that our users aren’t perfect, and they aren’t living perfect lives.
-
-          p.blog-post__text Accepting your users as entities outside of your product is illuminating. You’ll view microcopy with sympathetic eyes. You’ll prioritise transparency. More than anything, you’ll see the investment you’re asking of them in a different way.
-
-          p.blog-post__text Like it or not, some of your users are having a shitty day, week, or even year; and that isn’t your fault. But by acknowledging the emotional frailties that make them human, you can make sure you’re not making their lives any harder.
-
-    section.section.section--lg-spacing
+    .section
       .container
-        .blog-content
-          h3.blog-content__heading Keep reading
-          +blog-post-grid
+
+        .grid.grid--post
+
+          +share-icons({})
+
+          .blog-post
+
+            p.blog-post__intro You’ve been charged with redesigning the company website, and you’re stoked. You’ve met with stakeholders, created a tonne of user personas, and have even explored a new design direction.
+
+            p.blog-post__text You, young Jedi, are crushing it.
+
+            p.blog-post__text Except, there’s already a blindspot in your thinking; your user personas don’t exist outside of your project. The trouble with this insular line of thinking is that they’re first and foremost humans; they have lives outside of being a ‘user’, and those lives carry stresses, distractions, and at times, downright unhappiness.
+
+            p.blog-post__text When your various audiences interact with your website, product, or service, they bring their real-World emotions with them. We’ve learnt to factor in environmental distractions, but often forget our users exist outside of our own scope.
+
+            p.blog-post__text Instead of creating a superficial idealised set of users, allow your personas to be human. Allow them to experience both the good and the bad that life has in store for us all.
+
+            p.blog-post__text Don’t just create happily married personas; put them through painful divorces too. Have them worry about how they’re going to pay this month’s rent. Expose them to illness or even death.
+
+            p.blog-post__text Such detail may seen unnecessary or even downright morbid, but every word of it serves an important purpose; it reminds us that our users aren’t perfect, and they aren’t living perfect lives.
+
+            p.blog-post__text Accepting your users as entities outside of your product is illuminating. You’ll view microcopy with sympathetic eyes. You’ll prioritise transparency. More than anything, you’ll see the investment you’re asking of them in a different way.
+
+            p.blog-post__text Like it or not, some of your users are having a shitty day, week, or even year; and that isn’t your fault. But by acknowledging the emotional frailties that make them human, you can make sure you’re not making their lives any harder.
+
+  section.section.section--lg-spacing
+    .container
+      .blog-content
+        h3.blog-content__heading Keep reading
+        +blog-post-grid
