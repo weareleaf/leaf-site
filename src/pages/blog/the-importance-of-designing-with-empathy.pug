@@ -7,55 +7,55 @@ block prepend vars
   -var metaDescription = "Real empathy is sometimes not insisting that it will be OK, but acknowledging that it is not"
 
   -var heroHeading = "The importance of designing with empathy"
-  -var heroSubheading = "(by Chris Annetts)"
 
 block pageComponents
 
-  +banner({
-  })
+  article
 
-  .banner-spacer
+    +hero({
+      heroHeading: heroHeading,
+      heroAuthor: "Chris Annetts",
+      heroDate: "31 January 2017",
+      heroMinutesToRead: 2
+    })
 
-  +hero({
-    heroHeading: heroHeading,
-    heroSubheading: heroSubheading,
-  })
-
-  .section
-    .container
-
-      .grid.grid--center
-
-        +share-icons({
-          socialModifier: "inline"
-        })
-
-        .blog-post
-
-          p.blog-post__intro Humans are hardwired to act emphatically, and yet it’s a skill we’re rapidly losing
-
-          p.blog-post__text The University of Michigan studied data provided by 14,000 students, and their research showed that students who enrolled at the college after the year 2000 showed 40% less empathy than those who came before them.
-
-          h4.blog-post__h4 What is empathy
-
-          p.blog-post__text In the words of Sheryl Sandberg, “Real empathy is sometimes not insisting that it will be OK, but acknowledging that it is not”.
-
-          p.blog-post__text It’s the ability to understand someone else’s point of view, and see the World through their eyes. It’s about sharing in their feelings, their motivations, the constraints they’re working within, and even their emotional state.
-
-          h4.blog-post__h4 Invest in people
-
-          p.blog-post__text To create truly meaningful experiences, we have to learn to step back from our own preconceptions. Psychologist Daniel Coleman once said, “A prerequisite to empathy is simply paying attention to the person in pain”.
-
-          p.blog-post__text By connection with people at an emotional level, you create an opportunity to not only humanise their experience, but to drive positive behaviour.
-
-          p.blog-post__text There’s no one quick-fix, and understanding what makes someone tick requires an investment. Talk to people; schedule interviews with as many users as you can. Make time to observe them in their natural environment. Listen to their struggles and study their vulnerabilities.
-
-          p.blog-post__text As designers, our actions have consequences, influencing peoples mood and shaping their entire experience. How well we do affects their lives, for better or worse.
-
-          p.blog-post__text We have a responsibility to those interacting with our websites, products, or services; we have an obligation to do everything we can to walk in their shoes.
-
-    section.section.section--lg-spacing
+    .section
       .container
-        .blog-content
-          h3.blog-content__heading Keep reading
-          +blog-post-grid
+
+        .grid.grid--post
+
+          +share-icons({})
+
+          .blog-post
+
+            p.blog-post__intro Humans are hardwired to act emphatically, and yet it’s a skill we’re rapidly losing
+
+            p.blog-post__text The University of Michigan studied data provided by 14,000 students, and their research showed that students who enrolled at the college after the year 2000 showed 40% less empathy than those who came before them.
+
+            +permalink({
+              permalinkHeading: "What is empathy"
+            })
+
+            p.blog-post__text In the words of Sheryl Sandberg, “Real empathy is sometimes not insisting that it will be OK, but acknowledging that it is not”.
+
+            p.blog-post__text It’s the ability to understand someone else’s point of view, and see the World through their eyes. It’s about sharing in their feelings, their motivations, the constraints they’re working within, and even their emotional state.
+
+            +permalink({
+              permalinkHeading: "Invest in people"
+            })
+
+            p.blog-post__text To create truly meaningful experiences, we have to learn to step back from our own preconceptions. Psychologist Daniel Coleman once said, “A prerequisite to empathy is simply paying attention to the person in pain”.
+
+            p.blog-post__text By connection with people at an emotional level, you create an opportunity to not only humanise their experience, but to drive positive behaviour.
+
+            p.blog-post__text There’s no one quick-fix, and understanding what makes someone tick requires an investment. Talk to people; schedule interviews with as many users as you can. Make time to observe them in their natural environment. Listen to their struggles and study their vulnerabilities.
+
+            p.blog-post__text As designers, our actions have consequences, influencing peoples mood and shaping their entire experience. How well we do affects their lives, for better or worse.
+
+            p.blog-post__text We have a responsibility to those interacting with our websites, products, or services; we have an obligation to do everything we can to walk in their shoes.
+
+  section.section.section--lg-spacing
+    .container
+      .blog-content
+        h3.blog-content__heading Keep reading
+        +blog-post-grid

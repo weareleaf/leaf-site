@@ -1,0 +1,90 @@
+.location-marker {
+  display: none; // The breakpoints would get messy quickly
+
+  @media screen and (min-width: map-get($breakpoints, 'breakpoint-10')) {
+    align-items: center;
+    display: flex;
+    position: absolute;
+  }
+
+  &::before {
+    background-color: hsl(225, 100%, 75%);
+    border: .15rem solid $color-white;
+    border-radius: $border-radius-full;
+    content: '';
+    display: inline-block;
+    height: .9rem;
+    margin-right: $spacing-4;
+    width: .9rem;
+  }
+
+  &__content {
+    margin-top: .3rem;
+
+    &--mike {
+      left: -4.5rem;
+      position: absolute;
+      text-align: right;
+      top: -2rem;
+    }
+
+    &--chris {
+      top: 1.25rem;
+      left: -2.5rem;
+      min-width: 6rem;
+      position: absolute;
+      text-align: center;
+    }
+
+    &--oj {
+      left: 1rem;
+      position: absolute;
+      bottom: 1rem;
+
+      @media screen and (min-width: map-get($breakpoints, 'breakpoint-11')) {
+        position: static;
+      }
+    }
+  }
+
+  &__heading {
+    font-size: $font-size-xs;
+    margin-bottom: -.20rem;
+  }
+
+  &__text {
+    font-family: $font-family-sans-serif-medium;
+    font-size: .7rem;
+    margin-bottom: 0;
+  }
+
+  &--tina {
+    bottom: 7.5rem;
+    left: 7.4rem;
+  }
+
+  &--curt {
+    bottom: 9rem;
+    right: 1rem;
+  }
+
+  &--mike {
+    bottom: 3.75rem;
+    right: .75rem;
+  }
+
+  &--chris {
+    bottom: 3rem;
+    right: 1.5rem;
+  }
+
+  &--oj {
+      bottom: 4rem;
+      right: -.25rem;
+
+    @media screen and (min-width: map-get($breakpoints, 'breakpoint-11')) {
+      bottom: 3.4rem;
+      right: -6.5rem;
+    }
+  }
+}

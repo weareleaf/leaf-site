@@ -87,28 +87,23 @@ a {
   }
 }
 
+
 figure {
   margin: $spacing-7 0;
 
   @media screen and (min-width: map-get($breakpoints, 'breakpoint-3')) {
-    margin: $spacing-7 0 $spacing-8;
+    margin: $spacing-8 0;
   }
+}
 
-  @media screen and (min-width: map-get($breakpoints, 'breakpoint-4')) {
-    margin: $spacing-6 0 $spacing-9;
-  }
+.permalink + figure {
+  margin-top: $spacing-4;
+}
 
-  @media screen and (min-width: map-get($breakpoints, 'breakpoint-6')) {
-    margin: $spacing-7 0 $spacing-9;
-  }
+.figure--wide {
 
-  &:first-child {
-    margin-top: 0;
-  }
-
-  img {
-    display: inline-block;
-    vertical-align: middle;
+  @media screen and (min-width: map-get($breakpoints, 'breakpoint-3')) {
+    @include margin-horizontal (-$spacing-9);
   }
 }
 
@@ -118,41 +113,22 @@ ul {
 
 figcaption {
   color: var(--color-paragraph);
-  font-size: $font-size-sm;
-  padding: $spacing-3 0;
+  font-size: $font-size-xs;
+  margin-top: $spacing-3;
   text-align: center;
 }
 
 img {
+  display: block;
   height: auto;
   max-width: 100%;
 }
 
 .divider {
-  border: none;
-  border-top: $border-width-xl $border-style $color-powder;
-
-  &--margin {
-    margin: $spacing-10 0;
-  }
-
-  &--margin-bottom {
-    margin-bottom: $spacing-10;
-  }
-
-  &--margin-top {
-    margin-top: $spacing-10;
-  }
-
-  &--margin-blog {
-    margin-bottom: $spacing-8;
-  }
-
-  &--block-hr {
-    justify-content: center;
-    margin: $spacing-8 0 $spacing-8 0;
-    width: 3.75rem;
-  }
+  border: 0;
+  border-top: $border-style $border-width-xl var(--color-accent);
+  margin: $spacing-8 0;
+  width: $size-6;
 }
 
 .unstyled-list {
@@ -163,46 +139,72 @@ img {
 
 .styled-list {
   list-style: none;
-  margin: 0 0 $spacing-5;
+  margin: 0 0 $spacing-7;
   padding: 0;
 
+  .sidebar & {
+    margin-bottom: 0; //- Debt here! A quick way to get rid of an accidental margin.
+  }
+
   &__item {
+    font-size: $font-size-sm;
+    margin-left: $spacing-7;
     position: relative;
 
     &:not(:last-child) {
-      margin-bottom: $spacing-3;
+      margin-bottom: $spacing-2;
     }
 
-    &--gap-lg {
-      &:not(:last-child) {
-        margin-bottom: $spacing-6;
+    .blog-post & {
+      font-size: 1.05rem; //- More debt here! A quick matching of larger, customer font-size on blog posts.
+    }
+
+    // The company bullet is smaller on the design (which looks better too)
+
+    &--small {
+
+      @media screen and (min-width: map-get($breakpoints, 'breakpoint-6')) {
+        font-size: $font-size-sm;
+        margin-left: $spacing-5 !important;
+
+        &::before {
+          background-color: var(--color-accent);
+          content: '';
+          display: block;
+          height: .3rem !important; // Override the default pseudo after a certain size
+          left: -1rem !important;
+          position: absolute;
+          top: .5rem !important;
+          width: .3rem !important;
+        }
       }
     }
 
-    .styled-list--inside-lg & {
-      margin-left: $spacing-7;
-    }
+    // .styled-list--inside-lg & {
+    //   margin-left: $spacing-7;
+    // }
 
-    .styled-list--inside & {
-      margin-left: $spacing-6;
-    }
+    // .styled-list--inside & {
+    //   margin-left: $spacing-6;
+    // }
 
-    .styled-list--inside-sm & {
-      margin-left: $spacing-6;
+    // .styled-list--inside-sm & {
+    //   margin-left: $spacing-6;
+    // &--gap-lg {
 
-      @media screen and (min-width: map-get($breakpoints, 'breakpoint-8')) {
-        margin-left: 0;
-      }
-    }
+    //   &:not(:last-child) {
+    //     margin-bottom: $spacing-6;
+    //   }
+    // }
 
     &::before {
       background-color: var(--color-accent);
       content: '';
       display: block;
       height: .4rem;
-      left: -1.4rem;
+      left: -1.3rem;
       position: absolute;
-      top: .4rem;
+      top: .55rem;
       width: .4rem;
     }
   }
@@ -245,6 +247,7 @@ blockquote.blog-blockquote {
   position: relative;
   width: 100%;
 
+<<<<<<< HEAD
   @media screen and (min-width: map-get($breakpoints, 'breakpoint-2')) {
     margin: 0;
     padding: $spacing-4 0 $spacing-5 $spacing-5;
@@ -257,22 +260,28 @@ blockquote.blog-blockquote {
 
   p.main-blockquote {
     color: $color-eggplant;
+=======
+  q {
+    color: $color-amethyst;
+>>>>>>> master
     display: block;
-    font-family: $font-family-sans-serif-light;
+    font-family: $font-family-serif;
     font-size: $font-size-lg;
+    font-style: italic;
     line-height: $quote-line-height;
     margin-bottom: $spacing-3;
     width: 100%;
 
     &::before {
-      color: rgba($color-eggplant, .1);
+      color: rgba($color-amethyst, .1);
       content: open-quote;
+      font-family: $font-family-sans-serif;
       font-size: 10rem;
-      font-weight: bold;
+      font-weight: 700;
       line-height: .9;
-      left: 0;
+      left: -$spacing-4;
       position: absolute;
-      top: 0;
+      top: $spacing-4;
       z-index: z('below');
     }
 
@@ -283,7 +292,39 @@ blockquote.blog-blockquote {
   }
 
   cite {
-    color: $color-cerulean;
-    font-size: $font-size-sm;
+    color: $color-amethyst;
+    font-size: $font-size-xs;
+
+    &::before {
+      content: '— ';
+    }
+  }
+}
+
+.large {
+  margin-bottom: $spacing-6;
+  font-size: $font-size-xl;
+
+  @media screen and (min-width: map-get($breakpoints, 'breakpoint-4')) {
+    margin-bottom: $spacing-8;
+  }
+
+  &--center {
+    margin-bottom: $spacing-8;
+
+    @media screen and (min-width: map-get($breakpoints, 'breakpoint-4')) {
+      text-align: center;
+    }
+  }
+}
+
+.biography {
+  &__meta {
+    color: hsl(231, 84%, 83%);
+    font-family: $font-family-sans-serif-extrabold;
+    font-size: .7rem;
+    letter-spacing: .1rem;
+    margin-bottom: $spacing-2;
+    text-transform: uppercase;
   }
 }

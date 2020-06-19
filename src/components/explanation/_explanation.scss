@@ -1,6 +1,6 @@
 .explanation {
   background-color: #4721ce;
-  padding: $spacing-5;
+  padding: $spacing-3 $spacing-5 $spacing-4;
 
   &__icon {
     margin-right: $spacing-3;
@@ -22,5 +22,15 @@
     color: #BECEFD;
     font-size: .75rem;
     margin-bottom: 0;
+  }
+
+  &--single {
+    border-radius: 6px;
+    margin-top: -$spacing-4;
+
+    @media screen and (min-width: map-get($breakpoints, 'breakpoint-4')) {
+      margin-bottom: $spacing-8;
+      margin-top: 0;
+    }
   }
 }

@@ -1,0 +1,9 @@
+mixin timeline(c)
+  .timeline
+    each item in c.timelineItems
+      .timeline__item
+        .timeline__content
+          +block(item)
+        .timeline__marker
+          img(src="/assets/images/company/marker.svg")
+    button.timeline__button= c.buttonText

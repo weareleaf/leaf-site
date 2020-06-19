@@ -34,8 +34,7 @@
     display: inline-block;
     font-size: .75rem;
     outline: none;
-    margin: $spacing-2 $spacing-1;
-    padding: $spacing-4;
+    padding: $spacing-5 $spacing-4;
     position: relative;
 
     @include hover {
@@ -61,18 +60,14 @@
 
       &::before {
         background: var(--color-accent);
-        bottom: -6px;
+        bottom: 0;
         content: '';
         height: 3px;
         left: 0;
-        margin: .25rem auto;
+        margin: 0 auto;
         position: absolute;
         right:0;
         width: $size-1;
-      }
-
-      @media screen and (min-width: map-get($breakpoints, 'breakpoint-1')) {
-        bottom: 0;
       }
     }
   }

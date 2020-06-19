@@ -1,0 +1,26 @@
+.close {
+  @include focus-ring;
+  background-color: $color-white;
+  border-radius: $border-radius-full;
+  padding: $spacing-5;
+  position: fixed;
+  right: $spacing-5;
+  top: $spacing-5;
+  width: $size-5;
+
+  @media screen and (min-width: map-get($breakpoints, 'breakpoint-3')) {
+    background-color: var(--color-container);
+  }
+
+  @media screen and (min-width: map-get($breakpoints, 'breakpoint-6')) {
+    right: $spacing-7;
+    top: $spacing-7;
+  }
+  
+  &__icon {
+    @include size($size-1);
+    align-items: center;
+    display: flex;
+    justify-content: center;
+  }
+}

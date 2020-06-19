@@ -21,18 +21,20 @@ html {
 
 .page--content {
   --color-accent: #{$color-cerulean};
-  --color-background: #{$color-silk};
+  --color-background: #{$color-ash};
   --color-blog-heading: #{$color-dust};
   --color-container: #{$color-ivory};
   --color-focus-bg: #{$color-ice};
   --color-footer-contact: #{$color-cerulean};
-  --color-footer-divider: #{$color-ice};
-  --color-heading: #{$color-sapphire};
-  --color-hero-subheading: #{$color-violet};
+  --color-footer-divider: #{$color-cotton};
+  --color-heading: #{$color-coal};
+  --color-hero-subheading: #{$color-coal};
   --color-nav: #{$color-cerulean};
-  --color-footer-text: #{$color-amethyst};
+  --color-footer-text: #{$color-mauve};
+  --color-header-background: transparent;
   --color-logo: #{$color-cerulean};
   --color-paragraph: #{$color-coal};
+  --color-post-heading: #{$color-cerulean};
   --color-share-icons: #{$color-majorelle};
   --color-social-icons: #{$color-cerulean};
   --color-close-bg: #{$color-snow};
@@ -115,8 +117,17 @@ html {
   }
 }
 
+.page--bio {
+  --color-close: #{$color-bluegem};
+  --color-container: #{$color-bluegem};
+
+  @media screen and (min-width: map-get($breakpoints, 'breakpoint-3')) {
+    --color-close: #{$color-white};
+  }
+}
+
 body {
-  font-family: $font-family-sans-serif-regular;
+  font-family: $font-family-sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   line-height: $line-height;

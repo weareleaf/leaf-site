@@ -1,6 +1,7 @@
 mixin hero(c)
   section.hero
     .hero__container
+<<<<<<< HEAD
       if c.heroIntroImage === true
         .hero__content
           h1.hero__heading !{c.heroHeading}#[span.hero__heading__period .]
@@ -15,3 +16,11 @@ mixin hero(c)
         .hero__content
           h1.hero__heading !{c.heroHeading}#[span.hero__heading__period .]
           p.hero__subheading(class= c.heroSubheadingModifier ? "hero__subheading--" + c.heroSubheadingModifier : "") !{c.heroSubheading}
+=======
+      .hero__content
+        h1.hero__heading !{c.heroHeading}#[span.hero__heading__period .]
+        if c.heroSubheading
+          p.hero__subheading= c.heroSubheading
+        else
+          p.hero__subheading A #[strong #{c.heroMinutesToRead} minute read], written by #[strong #{c.heroAuthor}] on #[strong #{c.heroDate}].
+>>>>>>> master

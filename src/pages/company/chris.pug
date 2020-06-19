@@ -1,0 +1,62 @@
+extends ../../layouts/bio.pug
+
+block prepend vars
+  -var pageTitle = "Chris | Leaf"
+  -var metaUrl = "https://weareleaf.com/company/chris"
+  -var metaTitle = "Chris Annetts is a Design Director at Leaf"
+  -var metaDescription = "In relentlessly pursuing simplicity, Chris is able to turn inherently complicated processes into straightforward tasks. His proficiency in spotting imperfections in interfaces has even lead to the term 'chrissues' (Chris issues) being coined within the company."
+
+block pageComponents
+
+  .biography
+    +image({
+      context: "biography",
+      src: "/assets/images/team/chris-bio.jpg",
+      alt: "Chris Annetts looking happy while standing in a doorway."
+    })
+    .biography__content
+      .biography__meta Design Director
+      h1.hero__heading.hero__heading--bio Chris Annetts<span class="hero__heading__period">.</span>
+      .biography__social
+        +social-tile({
+          socialTileIcon: {
+            src: "/assets/images/icons/social/twitter.svg",
+            alt: "The Twitter logo"
+          },
+          socialTileModifier: "bio",
+          socialTileHeading: "Twitter",
+          socialTileHandle: "@cm_annetts",
+          socialTileLink: "https://mobile.twitter.com/cm_annetts"
+        })
+        +social-tile({
+          socialTileIcon: {
+            src: "/assets/images/icons/social/linkedin.svg",
+            alt: "The LinkedIn logo"
+          },
+          socialTileModifier: "bio",
+          socialTileHeading: "LinkedIn",
+          socialTileHandle: "/chrisannetts",
+          socialTileLink: "https://www.linkedin.com/in/chrisannetts/"
+        })
+        +social-tile({
+          socialTileIcon: {
+            src: "/assets/images/icons/social/dribbble.svg",
+            alt: "The Dribbble logo"
+          },
+          socialTileModifier: "bio",
+          socialTileHeading: "Dribbble",
+          socialTileHandle: "/chrisannetts",
+          socialTileLink: "https://dribbble.com/chrisannetts"
+        })
+      +block({
+        blockHeading: "What are their superpowers?",
+        blockText: "In relentlessly pursuing simplicity, Chris is able to turn inherently complicated processes into straightforward tasks. His proficiency in spotting imperfections in interfaces has even lead to the term 'chrissues' (Chris issues) being coined within the company."
+      })
+      +block({
+        blockHeading: "What's interesting about them?",
+        blockText: "Chris is season-ticket holder at Tottenham, and a Football Manager veteran, having lead both Sutton United and Oxford City to Premier League glory. Away from football, he's fond of cycling, well poured pints of Guinness, and spending time with Bella, his mini-lop house rabbit."
+      })
+      +block({
+        blockHeading: "What are their credentials?",
+        blockText: "Before starting Leaf, Chris was Lead Designer at Red Bullet, where he oversaw projects for the likes of Admiral, Santander, Expedia, and the NHS. His first design role came in April 2012 as a UI/UX Designer at Fruitbowl Media and, unusually for a designer, he has a BSc Computing degree."
+      })

@@ -1,10 +1,13 @@
 mixin profile(c)
-  .profile
+  a.profile(
+    class= (c.profileModifier ? "profile--" + c.profileModifier : "")
+    href= c.profileUrl target= c.profileTarget)
     +image({
       context: "profile",
+      modifier: c.imageModifier,
       src: c.profileImage.src,
       alt: c.profileImage.alt
     })
     .profile__content
-      h4.profile__heading= c.profileHeading
-      p.profile__text= c.profileText
+      h4.profile__heading(class= c.profileContentModifier ? "profile__heading--" + c.profileContentModifier : "")= c.profileHeading
+      p.profile__text(class= c.profileContentModifier ? "profile__text--" + c.profileContentModifier : "")= c.profileText

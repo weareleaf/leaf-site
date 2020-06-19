@@ -1,0 +1,62 @@
+extends ../../layouts/bio.pug
+
+block prepend vars
+  -var pageTitle = "Mike | Leaf"
+  -var metaUrl = "https://weareleaf.com/company/mike"
+  -var metaTitle = "Mike Carter is an Engineering Director at Leaf"
+  -var metaDescription = "Mike has an uncanny ability to see clarity within chaos, and his pragmatism allows him to make the right call, rather than the obvious or easy one. He's impressively unflappable at all times, and his inquisitive nature helps him to continually refine and broaden his already considerable skillset."
+
+block pageComponents
+
+  .biography
+    +image({
+      context: "biography",
+      src: "/assets/images/team/mike-bio.jpg",
+      alt: "Mike Carter looking happy in front of a bunch of trees."
+    })
+    .biography__content
+      .biography__meta Engineering Director
+      h1.hero__heading.hero__heading--bio Mike Carter<span class="hero__heading__period">.</span>
+      .biography__social
+        +social-tile({
+          socialTileIcon: {
+            src: "/assets/images/icons/social/twitter.svg",
+            alt: "The Twitter logo"
+          },
+          socialTileModifier: "bio",
+          socialTileHeading: "Twitter",
+          socialTileHandle: "@mcarterj",
+          socialTileLink: "https://mobile.twitter.com/mcarterj"
+        })
+        +social-tile({
+          socialTileIcon: {
+            src: "/assets/images/icons/social/linkedin.svg",
+            alt: "The LinkedIn logo"
+          },
+          socialTileModifier: "bio",
+          socialTileHeading: "LinkedIn",
+          socialTileHandle: "/mike-carter-097b9855",
+          socialTileLink: "https://www.linkedin.com/in/mike-carter-097b9855/"
+        })
+        +social-tile({
+          socialTileIcon: {
+            src: "/assets/images/icons/social/github.svg",
+            alt: "The Github logo"
+          },
+          socialTileModifier: "bio",
+          socialTileHeading: "Github",
+          socialTileHandle: "/michaelcarter",
+          socialTileLink: "https://github.com/michaelcarter"
+        })
+      +block({
+        blockHeading: "What are their superpowers?",
+        blockText: "Mike has an uncanny ability to see clarity within chaos, and his pragmatism allows him to make the right call, rather than the obvious or easy one. He's impressively unflappable at all times, and his inquisitive nature helps him to continually refine and broaden his already considerable skillset."
+      })
+      +block({
+        blockHeading: "What's interesting about them?",
+        blockText: "Mike is a qualified RYA day skipper, which means he's capable of safely skippering a small cruising yacht. He spent 3 months in America after University, and is happiest travelling to new places. Mike’s love for camping sees him spending his summer weekends in all corners of Britain."
+      })
+      +block({
+        blockHeading: "What are their credentials?",
+        blockText: "Mike has overseen the strategic and engineering approach for various high-profile projects, and prior to Leaf helped lead a team of more than 100 engineers at Holiday Extras. He’s worked in an established Dotcom, a startup, and an agency, and he even holds a First Class Computing degree."
+      })

@@ -1,0 +1,93 @@
+$content-width: 27rem; //540px
+
+.timeline {
+  margin: -$spacing-5 auto $spacing-11 auto;
+  position: relative;
+
+  @media screen and (min-width: map-get($breakpoints, 'breakpoint-4')) {
+    margin: 0 auto $spacing-13 auto;
+    max-width: 60rem;
+  }
+
+  &::before {
+    background: hsl(226, 64%, 94%);
+    content: '';
+    height: 100%;
+    left: .7rem;
+    position: absolute;
+    top: $spacing-7;
+    width: $border-width-sm;
+
+    @media screen and (min-width: map-get($breakpoints, 'breakpoint-4')) {
+      left: 50%;
+    }
+  }
+
+  &__item {
+    display: flex;
+    margin-bottom: 0;
+    padding-left: 2.5rem;
+
+    @media screen and (min-width: map-get($breakpoints, 'breakpoint-4')) {
+      margin-bottom: -$spacing-7;
+      padding: 0;
+
+      &:nth-child(even) {
+        flex-direction: row-reverse;
+      }
+    }
+  }
+
+  &__marker {
+    height: $size-2;
+    margin-top: $spacing-7;
+    width: $size-2;
+    position: absolute;
+    left: 0;
+
+    @media screen and (min-width: map-get($breakpoints, 'breakpoint-1')) {
+      height: 100%;
+      margin-left: -$spacing-2;
+      width: 100%;
+    }
+
+    @media screen and (min-width: map-get($breakpoints, 'breakpoint-4')) {
+      left: 50%;
+      margin-left: -.95rem;
+    }
+
+    @media screen and (min-width: map-get($breakpoints, 'breakpoint-6')) {
+      margin-left: -$spacing-4;
+    }
+  }
+
+  &__content {
+    @media screen and (min-width: map-get($breakpoints, 'breakpoint-4')) {
+      max-width: $content-width;
+    }
+  }
+
+  &__button {
+    background-color: var(--color-background);
+    border: $border-width-sm $border-style hsl(226, 64%, 94%);
+    bottom: -$spacing-8;
+    color: hsl(249, 48%, 92%);
+    cursor: pointer;
+    font-family: $font-family-sans-serif-medium;
+    font-size: $font-size-xs;
+    padding: $spacing-5;
+    position: absolute;
+    width: 100%;
+
+    @media screen and (min-width: map-get($breakpoints, 'breakpoint-2')) {
+      left: 5rem;
+      padding: $spacing-4 $spacing-5;
+      transform: translate(-50%, 0);
+      width: auto;
+    }
+
+    @media screen and (min-width: map-get($breakpoints, 'breakpoint-4')) {
+      left: 50%;
+    }
+  }
+}

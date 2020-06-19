@@ -7,7 +7,7 @@ block prepend vars
   -var metaTitle = "The Company"
   -var metaDescription = "Five web experts working hard to help organisations capture higher quality information from happier users. Specialist web design & development."
 
-  -var heroHeading = "We're good eggs"
+  -var heroHeading = "We know our onions"
   -var heroSubheading = "What started as a side-hustle in summer 2015 is now an established team of five designers and engineers, focused solely on creating software that benefits not only the organisations we work with, but their users too."
 
 block pageComponents
@@ -18,92 +18,511 @@ block pageComponents
 
   section.section
     .container
-      .grid.grid--statements
+      .company.grid.grid--company
         .grid__item
-          +statement({
-            statementIcon: "/assets/images/icons/leaves.svg",
-            statementIconAlt: "A small plant sprouting from the ground.",
-            statementHeading: "We nurture relationships",
-            statementText: "As a remote organisation, we work with clients from all across the world. Our focus on cultivating relationships puts your success first."
-          })
+          .company__overview
+            +block({
+              blockHeading: "Where are you based?",
+              blockText: "We’re a remote company, and have shunned the traditional office in favour of the many collective benefits brought about by distributed working:"
+            })
+            .grid.grid--bullet-points
+              +bullet({
+                styledListModifier: "inside",
+                styledListItemModifier: "small",
+                styledListItems: [
+                  {
+                    styledListItem: "More time for loved ones."
+                  },
+                  {
+                    styledListItem: "No daily commute."
+                  },
+                  {
+                    styledListItem: "Access to the best talent."
+                  },
+                  {
+                    styledListItem: "Freedom to live anywhere."
+                  }
+                ]
+              })
+              +bullet({
+                styledListModifier: "inside",
+                styledListItemModifier: "small",
+                styledListItems: [
+                  {
+                    styledListItem: "Increased productivety."
+                  },
+                  {
+                    styledListItem: "Less distractions."
+                  },
+                  {
+                    styledListItem: "Reduced overheads."
+                  },
+                  {
+                    styledListItem: "Lower carbon footprint."
+                  }
+                ]
+              })
+            +image({
+              context: "company-mobile",
+              src: "/assets/images/company/british-isles.svg",
+              alt: "A faded background map of Great Britain and Ireland.",
+              modifier: "map-mobile"
+            })
+            +block({
+              blockHeading: "What makes you different?",
+              blockText: "We look after our team so that they can better look after you. We strive to work smarter, not harder, and believe a good work/life balance and a calm working environment are key to producing happier, more effective teams. An engaged and highly-skilled individual is infinitely better prepared to do great work than someone working all hours to meet an unrealistic deadline."
+            })
+        .grid__item
+          .company__map
+            +image({
+              context: "company-map",
+              src: "/assets/images/company/british-isles.svg",
+              alt: "A map of Great Britain and Ireland with little location markers showing where each team member lives."
+            })
+            +location-marker({
+              locationMarkerModifier: "tina",
+              locationMarkerHeading: "Tina van Schelt",
+              locationMarkerText: "Limerick (moved)"
+            })
+            +location-marker({
+              locationMarkerModifier: "curt",
+              locationMarkerHeading: "Curtis Lee",
+              locationMarkerText: "Nottingham"
+            })
+            +location-marker({
+              locationMarkerModifier: "mike",
+              locationMarkerContentModifier: "mike",
+              locationMarkerHeading: "Mike Carter",
+              locationMarkerText: "Canterbury"
+            })
+            +location-marker({
+              locationMarkerModifier: "chris",
+              locationMarkerContentModifier: "chris",
+              locationMarkerHeading: "Chris Annetts",
+              locationMarkerText: "Ashford"
+            })
+            +location-marker({
+              locationMarkerModifier: "oj",
+              locationMarkerContentModifier: "oj",
+              locationMarkerHeading: "Oliver Standeven",
+              locationMarkerText: "Ramsgate"
+            })
+          .company__explanation
+            +explanation({
+              explanationExample: true,
+              explanationHeading: "Did you know",
+              explanationText: "Our team are based in various parts of England and Ireland. We have an entirely remote workforce, and all work from the comfort of our own home offices.",
+              explanationModifier: "single"
+            })
 
-        .grid__item
-          +statement({
-            statementIcon: "/assets/images/icons/scales.svg",
-            statementIconAlt: "A pair of traditional scales in perfect balance.",
-            statementHeading: "Intentionally lean",
-            statementText: "We hate the faceless conveyor belt model of larger agencies. Keeping our overheads low and our core team small means you'll always be a priority."
+  section.section
+    .container
+      .company.grid.grid--company
+        +image({
+          context: "company-image",
+          src: "/assets/images/company/pets.png",
+          alt: "3 images showing some of the team with their pets, including OJ with his cat, Orion, Tina with her dog, Wilko, and a photo of Mikes dog, Bramley.",
+          modifier: "pets"
+        })
+        p.company__caption.company__caption--pets When work isn’t crazy, there’s more time in the day to enjoy the things that really matter.
+        .company__ethos
+          +image({
+            context: "company-mobile",
+            src: "/assets/images/company/pets-mobile.png",
+            alt: "3 images showing some of the team with their pets, including OJ with his cat, Orion, Tina with her dog, Wilko, and a photo of Mikes dog, Bramley.",
+            modifier: "pets"
           })
-
-        .grid__item
-          +statement({
-            statementIcon: "/assets/images/icons/communicate.svg",
-            statementIconAlt: "A smiling face inside a speech bubble.",
-            statementHeading: "We talk honestly, and often",
-            statementText: "The most honest advice can sometimes be the most difficult to give. We’ll always be completely open and tell you the truth, even when it hurts."
+          +block({
+            blockTextModifier: "margin-bottom",
+            blockHeading: "What is important to you?",
+            blockText: "We believe that work should be something that doesn't fill you with dread, that you should be passionate about your craft, but that work comes second to family. We also believe the key to good software is simple; understand the problem, refine your product, and repeat the process."
           })
+          .grid.grid--bullet-points
+            .grid__item
+              +bullet({
+                listHeading: true,
+                styledListHeading: "Things we do",
+                styledListModifier: "inside",
+                styledListItemModifier: "small",
+                styledListItems: [
+                  {
+                    styledListItem: "Clear and measurable KPIs."
+                  },
+                  {
+                    styledListItem: "Iterative improvements."
+                  },
+                  {
+                    styledListItem: "Long-term relationships."
+                  },
+                  {
+                    styledListItem: "Talk often and honestly."
+                  },
+                  {
+                    styledListItem: "Design inclusively."
+                  },
+                  {
+                    styledListItem: "Think deeply and ponder."
+                  },
+                  {
+                    styledListItem: "Prioritise effectiveness."
+                  }
+                ]
+              })
+            .grid__item
+              +bullet({
+                listHeading: true,
+                styledListHeading: "Things we don't do",
+                styledListModifier: "inside",
+                styledListItemModifier: "small",
+                styledListItems: [
+                  {
+                    styledListItem: "Big reveals."
+                  },
+                  {
+                    styledListItem: "Work to unrealistic deadlines."
+                  },
+                  {
+                    styledListItem: "Pull all nighters."
+                  },
+                  {
+                    styledListItem: "Work 40+ hour weeks."
+                  }
+                ]
+              })
+              .bullet.bullet--strike-through
+                ul.bullet.styled-list
+                  li.bullet.styled-list__item.bullet.styled-list__item--small Long-term <strike>planning</strike> guessing.
+              +bullet({
+                styledListModifier: "inside",
+                styledListItemModifier: "small",
+                styledListItems: [
+                  {
+                    styledListItem: "Hold unnecessary meetings."
+                  },
+                  {
+                    styledListItem: "Knee-jerk reactions."
+                  }
+                ]
+              })
 
-        .grid__item
-          +statement({
-            statementIcon: "/assets/images/icons/lego.svg",
-            statementIconAlt: "A single lego brick.",
-            statementHeading: "Evolution, not revolution",
-            statementText: "With existing products, we focus on continual improvement, delivering low-risk and fast results, one considered piece at a time."
+  section.section
+    .container
+      .company.grid.grid--company
+        .company__clients
+          +image({
+            context: "company-mobile",
+            src: "/assets/images/company/holiday-mobile.png",
+            alt: "Some pictures from our time in Rome testing the new travel planning app, HEHA!. There's a photo of Mike looking happy in a restaurant, and a close up photo of an ice cream.",
+            modifier: "holiday"
+          })
+          +block({
+            blockHeading: "Who have you worked for?",
+            blockText: "We've delivered various projects for the likes of RIFT and Holiday Extras, and have long-term relationships with well established digital companies like Laced and Isode. Along the way, we've worked with a variety of clients on smaller projects, such as Majestic Casual, Snowplow, and Zendesk."
+          })
+          .company__logos
+            .company__logo
+              img(src="/assets/images/company/rift-logo.svg", alt="Rift")
+            .company__logo
+              img(src="/assets/images/company/laced-logo.svg", alt="Laced")
+            .company__logo
+              img(src="/assets/images/company/majestic-logo.svg", alt="Majestic")
+            .company__logo.company__logo--border
+              img(src="/assets/images/company/zendesk-logo.svg", alt="Zendesk")
+            .company__logo.company__logo--border
+              img(src="/assets/images/company/holiday-extras-logo.svg", alt="Holiday Extras")
+            .company__logo.company__logo--border
+              img(src="/assets/images/company/snowplow-logo.svg", alt="SnowPlow")
+          +block({
+            blockModifier: "holiday-section",
+            blockHeading: "What sectors do you specialise in?",
+            blockText: "There’s no single sector we consider ourselves experts in, although previous work on various booking flows, online applications, and tax claims have given us considerable experience in the financial, insurance, and travel industries. We do, however, consider ourselves experts in gathering high-quality information from your customers, whatever sector you’re in."
+          })
+        +image({
+          context: "company-image",
+          src: "/assets/images/company/holiday-snaps.png",
+          alt: "Some pictures from our time in Rome testing the new travel planning app, HEHA!. There's a photo of Mike and a member of the Holiday Extras team, a photo of Mike looking happy in a restaurant, and a close up photo of an ice cream.",
+          modifier: "holiday"
+        })
+        p.company__caption.company__caption--holiday We helped Holiday Extras make a travel-planning app, so naturally we tested it by planning (and taking) a trip to Rome.
+
+  section.section
+    .container
+      .company.grid.grid--company
+        +image({
+          context: "company-image",
+          src: "/assets/images/company/culture.png",
+          alt: "There's one photo showing our director, Chris, taking notes whilst sat in front of a laptop, and another photo showing Tina wearing a Leaf branded T-shirt.",
+          modifier: "culture"
+        })
+        .company__story
+          +image({
+            context: "company-mobile",
+            src: "/assets/images/company/culture-mobile.png",
+            alt: "There's one photo showing our director, Chris, taking notes whilst sat in front of a laptop, and another photo showing Tina wearing a Leaf branded T-shirt.",
+            modifier: "culture"
+          })
+          +block({
+            blockHeading: "How long have you been around?",
+            blockText: "We started Leaf in June 2015, initially as a part-time venture, and it has been our full-time focus since December 2016."
+          })
+          +explanation({
+            explanationExample: true,
+            explanationHeading: "Did you know",
+            explanationText: "Apple Music launched in the UK on the same day we registered Leaf Software Ltd, with both announcements attracting similar levels of fanfare.",
+            explanationModifier: "single"
+          })
+          +block({
+            blockHeading: "Why should I choose you?",
+            blockText: "Capturing data from your customers is difficult, and we've built our entire company around specialising in just that. Most agencies offer a range of services, some of which they are better at than others. For us, every ounce of energy goes into making sure we're the best at just one thing."
           })
 
   section.section
     .container
-      .grid.grid--profiles
-        .grid__item
-          +profile({
-            profileImage: {
-              context: "profile",
-              src: "/assets/images/team/chris.jpg",
-              alt: "Chris Annetts looking serious in front of a brick wall."
-            },
-            profileHeading: "Chris Annetts",
-            profileText: "Design Director"
-          })
+      .company.team
+        h2.large Meet the team
+        .grid.grid--the-team
+          .team__first-team
+            +block({
+              blockModifier: "team-section",
+              blockHeading: "The first team",
+              blockText: "We’ve assembled a small and reliable team who have repeatedly shown that you don’t need huge numbers or even an office to add genuine value. These are the names and faces you’ll get to know throughout your project."
+            })
+            .grid.grid--profiles
+              .grid__item
+                +profile({
+                  profileUrl: "/company/chris",
+                  profileImage: {
+                    context: "profile",
+                    src: "/assets/images/team/chris.jpg",
+                    alt: "Chris Annetts looking happy while standing in a doorway."
+                  },
+                  profileHeading: "Chris Annetts",
+                  profileText: "Design Director"
+                })
+              .grid__item
+                +profile({
+                  profileUrl: "/company/mike",
+                  profileImage: {
+                    context: "profile",
+                    src: "/assets/images/team/mike.jpg",
+                    alt: "Mike Carter looking happy in front of a bunch of trees."
+                  },
+                  profileHeading: "Mike Carter",
+                  profileText: "Engineering Director"
+                })
+              .grid__item
+                +profile({
+                  profileUrl: "/company/curt",
+                  profileImage: {
+                    src: "/assets/images/team/curt.jpg",
+                    alt: "Curtis Lee looking very happy in front of a tree."
+                  },
+                  profileHeading: "Curtis Lee",
+                  profileText: "Product Designer"
+                })
+              .grid__item
+                +profile({
+                  profileUrl: "/company/tina",
+                  profileImage: {
+                    context: "profile",
+                    src: "/assets/images/team/tina.jpg",
+                    alt: "Tina van Schelt looking happy while facing slightly away from the camera."
+                  },
+                  profileHeading: "Tina van Schelt",
+                  profileText: "Software Engineer"
+                })
+              .grid__item
+                +profile({
+                  profileUrl: "/company/oj",
+                  profileImage: {
+                    context: "profile",
+                    src: "/assets/images/team/oj.jpg",
+                    alt: "OJ looking very happy on a beach with a cliff behind."
+                  },
+                  profileHeading: "Oliver Standeven (OJ)",
+                  profileText: "Software Engineer"
+                })
+              .grid__item
+                +profile({
+                  profileUrl: "careers/front-end-developer",
+                  profileImage: {
+                    src: "/assets/images/team/placeholder.jpg",
+                    alt: "We're hiring a Software Engineer."
+                  },
+                  profileHeading: "We’re hiring",
+                  profileText: "Software Engineer",
+                  profileTarget: "_blank"
+                })
+          .team__our-bench
+            +block({
+              blockHeading: "Our bench",
+              blockText: "When needed, we have a trusted group of talented, external designers and developers we can call upon."
+            })
+            .team__bench-profiles
+              +profile({
+                profileModifier: "row",
+                profileContentModifier: "left-aligned",
+                imageModifier: "small",
+                profileImage: {
+                  src: "/assets/images/company/chris-arnold.jpg",
+                  alt: "Chris Arnold who is a Frontend Engineer."
+                },
+                profileHeading: "Chris Arnold",
+                profileText: "Frontend Engineer"
+              })
+              +profile({
+                profileModifier: "row",
+                profileContentModifier: "left-aligned",
+                imageModifier: "small",
+                profileImage: {
+                  src: "/assets/images/company/jack-clark.jpg",
+                  alt: "Jack Clark who is a Frontend Engineer."
+                },
+                profileHeading: "Jack Clark",
+                profileText: "Frontend Engineer"
+              })
+              +profile({
+                profileModifier: "row",
+                profileContentModifier: "left-aligned",
+                imageModifier: "small",
+                profileImage: {
+                  src: "/assets/images/company/matthew-spence.jpg",
+                  alt: "Matthew Spence who is a Software Engineer."
+                },
+                profileHeading: "Matthew Spence",
+                profileText: "Software Engineer"
+              })
+              +profile({
+                profileModifier: "row",
+                profileContentModifier: "left-aligned",
+                imageModifier: "small",
+                profileImage: {
+                  src: "/assets/images/company/elliot-stokes.jpg",
+                  alt: "Elliot Stokes who is a Software Engineer."
+                },
+                profileHeading: "Elliot Stokes",
+                profileText: "Software Engineer"
+              })
+              +profile({
+                profileModifier: "row",
+                profileContentModifier: "left-aligned",
+                imageModifier: "small",
+                profileImage: {
+                  src: "/assets/images/company/liam-tucker.jpg",
+                  alt: "Liam Tucker who is an eCommerce Specialist."
+                },
+                profileHeading: "Liam Tucker",
+                profileText: "eCommerce Specialist"
+              })
+              +profile({
+                profileModifier: "row",
+                profileContentModifier: "left-aligned",
+                imageModifier: "small",
+                profileImage: {
+                  src: "/assets/images/company/colin-young.jpg",
+                  alt: "Colin Young who is a Software Engineer."
+                },
+                profileHeading: "Colin Young",
+                profileText: "Software Engineer"
+              })
 
-        .grid__item
-          +profile({
-            profileImage: {
-              context: "profile",
-              src: "/assets/images/team/mike.jpg",
-              alt: "Mike Carter looking mildly amused in front of a brick wall."
+  section.section
+    .container
+      .company.journey
+        h2.large.large--center The Leaf timeline
+        +timeline({
+          timelineItems: [
+            {
+              subHeading: true,
+              blockSubHeading: "June 2012",
+              blockHeading: "A chance meeting",
+              blockText: "Mike and Chris met when the former joined local start-up Virally as a Software Engineer. Chris was already at the company, having joined himself a few months prior on a secondment from Fruitbowl Media.",
+              blockModifier: "right-align"
             },
-            profileHeading: "Mike Carter",
-            profileText: "Engineering Director"
-          })
-
-        .grid__item
-          +profile({
-            profileImage: {
-              context: "profile",
-              src: "/assets/images/team/oj.jpg",
-              alt: "OJ looking relaxed in front of a brick wall."
+            {
+              subHeading: true,
+              blockSubHeading: "May 2013",
+              blockHeading: "New beginnings",
+              blockText: "When Virally closed its doors, Chris joined Red Bullet via Etch, later becoming their Lead Designer, and Mike left for travel specialists Holiday Extras, helping lead a team of more than 100 engineers."
             },
-            profileHeading: "Oliver Standeven (OJ)",
-            profileText: "Software Engineer"
-          })
-
-        .grid__item
-          +profile({
-            profileImage: {
-              context: "profile",
-              src: "/assets/images/team/tina.jpg",
-              alt: "Tina van Schelt looking pleased in front of a brick wall."
+            {
+              subHeading: true,
+              blockSubHeading: "June 2015",
+              blockHeading: "A side project",
+              blockText: "After flirting with the idea of starting their own studio for well over a year, they decided to trial working together in their evenings and weekends. Leaf Software Ltd was registered shortly after.",
+              blockModifier: "right-align"
             },
-            profileHeading: "Tina van Schelt",
-            profileText: "Software Engineer"
-          })
-
-        .grid__item
-          +profile({
-            profileImage: {
-              src: "/assets/images/team/curt.jpg",
-              alt: "Curtis Lee looking very happy in front of a tree."
+            {
+              subHeading: true,
+              blockSubHeading: "July 2015",
+              blockHeading: "A first client",
+              blockText: "Our very first client was Conference In A Box (later BoxedUp), where we redesigned their existing lead generation tool, managing the delivery of brand swag for organisations running online events."
             },
-            profileHeading: "Curtis Lee",
-            profileText: "Product Designer"
-          })
+            {
+              subHeading: true,
+              blockSubHeading: "June 2016",
+              blockHeading: "A full time gig",
+              blockText: "With project enquiries picking up, and the company winning a steady stream of work, Mike was the first founding member to take the plunge, leaving Holiday Extras to make Leaf his full-time focus.",
+              blockModifier: "right-align"
+            },
+            {
+              subHeading: true,
+              blockSubHeading: "December 2016",
+              blockHeading: "All hands on deck",
+              blockText: "Chris soon followed Mike’s lead, leaving Red Bullet to become the second full-time Leafer. What had started as a 'side project' was now starting to feel like a real company all of a sudden."
+            },
+            {
+              subHeading: true,
+              blockSubHeading: "January 2017",
+              blockHeading: "Our first mobile app",
+              blockText: "Having worked with Mike previously, Holiday Extras approached us about helping with a new trip-planning platform HEHA!, which became the first iOS and Android applications we worked on at Leaf.",
+              blockModifier: "right-align"
+            },
+            {
+              subHeading: true,
+              blockSubHeading: "July 2017",
+              blockHeading: "Our first three-way",
+              blockText: "Two years after landing our first client project, we made our first hire, bringing Oliver in to help share some of the engineering workload with Mike. That was probably the last time we called OJ ‘Oliver’ too."
+            },
+            {
+              subHeading: true,
+              blockSubHeading: "April 2017",
+              blockHeading: "Our biggest client yet",
+              blockText: "Following the success of the HEHA! project, Holiday Extras asked us to help simplify their mobile booking flow. They were our most established client to date, and the first of many collaborations since.",
+              blockModifier: "right-align"
+            },
+            {
+              subHeading: true,
+              blockSubHeading: "May 2017",
+              blockHeading: "Another big client",
+              blockText: "In what was a pivotal 4-week period for Leaf, we secured our second established client by landing a project with tax specialists RIFT. The project was a success, and we're still working closely with RIFT today."
+            },
+            {
+              subHeading: true,
+              blockSubHeading: "December 2017",
+              blockHeading: "What happens in Canterbury",
+              blockText: "With OJ onboard, we decided to throw our first ever Leaf Christmas party. Our new developer stole the show, showing the full range of his abilities by excelling in an impromptu mince pie eating contest.",
+              blockModifier: "right-align"
+            },
+            {
+              subHeading: true,
+              blockSubHeading: "May 2018",
+              blockHeading: "Another set of hands",
+              blockText: "Various long-term projects meant we needed another developer, and in Tina we hired our most senior engineer yet. Her experience in leading and managing key projects have proved invaluable."
+            },
+            {
+              subHeading: true,
+              blockSubHeading: "August 2018",
+              blockHeading: "Working with the cool kids",
+              blockText: "Laced were in their infancy when we were introduced, and they wanted our help putting sneaker enthusiasts in touch with sneaker traders. Two years on, we're still working with Laced today.",
+              blockModifier: "right-align"
+            },
+            {
+              subHeading: true,
+              blockSubHeading: "February 2019",
+              blockHeading: "Continued growth",
+              blockText: "Four became five when Curt joined the company, adding extra firepower to our design team. His enthusiasm and lust for knowledge have made him a wonderful addition to the team."
+            }
+          ],
+          buttonText: "Show less of the story"
+        })
