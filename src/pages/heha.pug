@@ -7,9 +7,6 @@ block prepend vars
   -var metaDescription = "We helped Holiday Extras, the UK's market leader for travel extras, build an app for travellers planning and organising trips together."
 
 block pageComponents
-  +banner({
-    href: '/case-studies'
-  })
 
   .section.section--sm-spacing
     .container
@@ -66,12 +63,13 @@ block pageComponents
           p Research conducted with various stakeholders showed that there was an incredible variance in how people planned their trips. Many would start planning with just a date or destination in mind, while others didn't mind where or when they went, but knew what type of holiday they wanted.
 
           p To cater for all types of travellers, we need a trip creation process that allowed the user to:
-          ul
-            li Add a single traveller, multiple travellers, or no traveller at all.
-            li Add a single destination, multiple destinations, or no destination at all.
-            li Add trip dates (optionally).
-            li Add the purpose of the trip (optionally).
-            li Add the type of activities they're interested in (optionally).
+
+          ul.styled-list
+            li.styled-list__item Add a single traveller, multiple travellers, or no traveller at all.
+            li.styled-list__item Add a single destination, multiple destinations, or no destination at all.
+            li.styled-list__item Add trip dates (optionally).
+            li.styled-list__item Add the purpose of the trip (optionally).
+            li.styled-list__item Add the type of activities they're interested in (optionally).
 
           p Each piece of information we gathered would directly impact the suggestions we made to the user. A traveller using HEHA! to plan a hen do, for example, would see a radically different feed of information to someone planning a golf trip.
 

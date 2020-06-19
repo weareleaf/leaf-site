@@ -1,12 +1,15 @@
 .blog-post {
+  margin: 0 auto;
+  max-width: 34rem;
 
   &__intro {
-    font-size: 1.5rem;
-    line-height: $line-height;
+    font-size: 1.6rem;
+    line-height: 1.45;
     margin-bottom: $spacing-7;
   }
 
   &__h3 {
+    font-size: 1.3rem;
     margin-bottom: $spacing-4;
   }
 
@@ -14,11 +17,19 @@
     margin-bottom: $spacing-4;
   }
 
-  &__image {
-    border: $border-default;
+  &__text {
+    font-size: 1.05rem;
   }
 
   a {
-    @include focus-bg;
+    color: inherit;
+    text-decoration: underline;
+    text-decoration-color: var(--color-accent);
+
+    @include hover {
+      color: var(--color-accent);
+      text-decoration-color: var(--color-paragraph);
+    }
   }
 }
+

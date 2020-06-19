@@ -10,6 +10,10 @@ body {
 
 main {
   overflow: hidden;
+
+  .page--content & {
+    overflow: visible;
+  }
 }
 
 *,
@@ -58,20 +62,6 @@ main {
     @media screen and (min-width: map-get($breakpoints, 'breakpoint-3')) {
       margin-bottom: $spacing-10;
     }
-  }
-
-  .blog-post {
-    &__image {
-      width: 100%;
-    }
-  }
-}
-
-.banner-spacer {
-  height: 4rem;
-
-  @media screen and (min-width: map-get($breakpoints, 'breakpoint-2')) {
-    height: 5rem;
   }
 }
 

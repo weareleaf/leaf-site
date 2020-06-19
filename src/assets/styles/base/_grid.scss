@@ -12,8 +12,15 @@
     grid-column-gap: $spacing-10;
   }
 
+  &--post {
+
+    @media screen and (min-width: map-get($breakpoints, 'breakpoint-4')) {
+      grid-template-columns: 2.5rem 1fr 2.5rem;
+    }
+  }
+
   &--center {
-    max-width: 40rem;
+    max-width: 34rem;
     margin: 0 auto;
   }
 

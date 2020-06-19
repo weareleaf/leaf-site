@@ -5,12 +5,13 @@ block vars
 doctype html
 html.no-js(lang="en-GB")
   head
-    script(async='', src='https://www.googletagmanager.com/gtag/js?id=UA-62036216-1')
     script.
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-      gtag('config', 'UA-62036216-1');
+      (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+      new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+      j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+      'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+      })(window,document,'script','dataLayer','GTM-TG99MGS');
+
 
     meta(charset="utf-8")
     meta(http-equiv="x-ua-compatible", content="ie=edge")
@@ -44,7 +45,7 @@ html.no-js(lang="en-GB")
     link(rel="preconnect" href="https://www.googletagmanager.com")
     meta(name="msapplication-TileColor", content="#dbffe7")
     meta(name="msapplication-TileImage", content="/assets/images/favicons/ms-icon-144x144.png")
-    meta(name="theme-color", content="#dbffe7")
+    meta(name="theme-color", content="#3d18c3")
 
     if metaUrl
       meta(property="og:url" content=metaUrl)
@@ -67,7 +68,13 @@ html.no-js(lang="en-GB")
     meta(name="twitter:site" content="@we_are_leaf")
     meta(name="twitter:creator" content="@we_are_leaf")
     link(rel="stylesheet", href="/assets/styles/main.css")
+
+    if playfairDisplay
+      link(href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital@1&display=swap" rel="stylesheet")
+
   body.transition-in
+    noscript
+      iframe(src='https://www.googletagmanager.com/ns.html?id=GTM-TG99MGS' height='0' width='0' style='display:none;visibility:hidden')
     div#barba-wrapper
       .barba-container
         .page(class= pageClass ? "page--" + pageClass : "")
