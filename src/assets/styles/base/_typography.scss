@@ -148,7 +148,7 @@ img {
 
   &__item {
     font-size: $font-size-sm;
-    margin-left: $spacing-7;
+    padding-left: #{$spacing-4 + .3rem};
     position: relative;
 
     &:not(:last-child) {
@@ -157,55 +157,24 @@ img {
 
     .blog-post & {
       font-size: 1.05rem; //- More debt here! A quick matching of larger, customer font-size on blog posts.
+      padding-left: #{$spacing-7 + .4rem};
     }
-
-    // The company bullet is smaller on the design (which looks better too)
-
-    &--small {
-
-      @media screen and (min-width: map-get($breakpoints, 'breakpoint-6')) {
-        font-size: $font-size-sm;
-        margin-left: $spacing-5 !important;
-
-        &::before {
-          background-color: var(--color-accent);
-          content: '';
-          display: block;
-          height: .3rem !important; // Override the default pseudo after a certain size
-          left: -1rem !important;
-          position: absolute;
-          top: .5rem !important;
-          width: .3rem !important;
-        }
-      }
-    }
-
-    // .styled-list--inside-lg & {
-    //   margin-left: $spacing-7;
-    // }
-
-    // .styled-list--inside & {
-    //   margin-left: $spacing-6;
-    // }
-
-    // .styled-list--inside-sm & {
-    //   margin-left: $spacing-6;
-    // &--gap-lg {
-
-    //   &:not(:last-child) {
-    //     margin-bottom: $spacing-6;
-    //   }
-    // }
 
     &::before {
       background-color: var(--color-accent);
       content: '';
       display: block;
-      height: .4rem;
-      left: -1.3rem;
+      height: .3rem;
+      left: 0;
       position: absolute;
       top: .55rem;
-      width: .4rem;
+      width: .3rem;
+
+      .blog-post & {
+        height: .4rem;
+        left: $spacing-5;
+        width: .4rem;
+      }
     }
   }
 }
@@ -301,8 +270,8 @@ blockquote.blog-blockquote {
 }
 
 .large {
-  margin-bottom: $spacing-6;
   font-size: $font-size-xl;
+  margin-bottom: $spacing-6;
 
   @media screen and (min-width: map-get($breakpoints, 'breakpoint-4')) {
     margin-bottom: $spacing-8;
@@ -318,6 +287,7 @@ blockquote.blog-blockquote {
 }
 
 .biography {
+
   &__meta {
     color: hsl(231, 84%, 83%);
     font-family: $font-family-sans-serif-extrabold;

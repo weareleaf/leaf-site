@@ -1,0 +1,50 @@
+.event {
+
+  &:not(:first-child) {
+    margin-top: $spacing-8;
+  }
+
+  &__heading {
+    font-size: 1.6rem;
+    margin-bottom: $spacing-3;
+  }
+
+  &__date {
+    color: var(--color-heading);
+    display: block;
+    font-family: $font-family-sans-serif-extrabold;
+    font-size: .7rem;
+    font-weight: 400;
+    letter-spacing: .05rem;
+    margin-bottom: $spacing-4;
+    text-transform: uppercase;
+
+    @media screen and (min-width: map-get($breakpoints, 'breakpoint-6')) {
+      font-size: .6rem;
+    }
+  }
+
+  &__text {
+    line-height: 1.5;
+    margin-bottom: $spacing-7;
+
+    @media screen and (min-width: map-get($breakpoints, 'breakpoint-4')) {
+      margin-bottom: $spacing-6;
+    }
+
+    &--margin-bottom {
+      margin-bottom: $spacing-5;
+
+      @media screen and (min-width: map-get($breakpoints, 'breakpoint-4')) {
+        margin-bottom: $spacing-8;
+      }
+    }
+  }
+
+  &--mirrored {
+
+    @media screen and (min-width: map-get($breakpoints, 'breakpoint-4')) {
+      text-align: right;
+    }
+  }
+}

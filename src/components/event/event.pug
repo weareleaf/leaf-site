@@ -1,0 +1,9 @@
+mixin event(c)
+  - var months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"]
+  - var month = parseInt(c.date.slice(5), 10)
+  - var year = c.date.slice(0, 4)
+
+  .event(class= c.modifier ? "event--" + c.modifier : "")
+    time.event__date(datetime= c.date)= months[month + -1] + " " + year
+    h3.event__heading= c.heading
+    p.event__text= c.text

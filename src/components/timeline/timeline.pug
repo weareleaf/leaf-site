@@ -3,8 +3,8 @@ mixin timeline(c)
     each item in c.timelineItems
       .timeline__item
         .timeline__content
-          +block(item)
+          +event(item)
         .timeline__marker
-          img(src="/assets/images/company/marker.svg")
+          img(src="/assets/images/company/marker.svg", alt="", role="presentation")
     if c.buttonText
       button.timeline__button= c.buttonText

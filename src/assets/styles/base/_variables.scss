@@ -13,6 +13,7 @@ $color-mauve: hsl(240, 20%, 40%);
 $color-amethyst: hsl(238, 28%, 51%);
 $color-lavender: hsl(236, 100%, 77%);
 $color-powder: 	hsl(225, 100%, 75%);
+$color-blush: 	hsl(225, 100%, 80%);
 $color-ice: hsl(225, 100%, 87%);
 
 $color-sky: hsl(205, 100%, 55%);
@@ -208,7 +209,7 @@ $z-index: (
   --color-focus-width: #{$border-width-sm};
   --color-footer-contact: #{$color-white};
   --color-footer-divider: #{$color-violet};
-  --color-footer-text: #{$color-lavender};
+  --color-footer-text: #{$color-blush};
   --color-header-background: #{$color-indigo};
   --color-heading: #{$color-ivory};
   --color-hero-subheading: #{$color-ice};
