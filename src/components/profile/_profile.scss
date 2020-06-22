@@ -1,8 +1,9 @@
 .profile {
 
-  &--row {
+  &--small {
     align-items: center;
     display: flex;
+    margin-bottom: $spacing-5;
 
     &:hover {
       cursor: default;
@@ -10,7 +11,11 @@
   }
 
   &__media {
-    margin-bottom: $spacing-3;
+    margin-bottom: $spacing-4;
+
+    .profile--small & {
+      margin-bottom: 0;
+    }
   }
 
   &__image {
@@ -37,7 +42,7 @@
       text-align: center;
     }
 
-    &--left-aligned {
+    .profile--small & {
       margin-left: $spacing-5;
       text-align: left;
     }
@@ -46,8 +51,6 @@
   &__text {
     color: var(--color-paragraph);
     font-family: $font-family-sans-serif-medium;
-    // color: var(--color-accent);
-    // font-family: $font-family-sans-serif;
     font-size: $font-size-xs;
     margin-bottom: 0;
 
@@ -55,8 +58,8 @@
       text-align: center;
     }
 
-    &--left-aligned {
-      margin-bottom: $spacing-4;
+    .profile--small & {
+      margin-bottom: -0.4rem;
       margin-left: $spacing-5;
       text-align: left;
     }

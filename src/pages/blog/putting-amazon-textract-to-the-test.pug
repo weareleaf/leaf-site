@@ -13,10 +13,10 @@ block pageComponents
   article
 
     +hero({
-      heroHeading: heroHeading,
-      heroAuthor: "Mike Carter",
-      heroDate: "17 September 2019",
-      heroMinutesToRead: 6
+      heading: heroHeading,
+      author: "Mike Carter",
+      date: "17 September 2019",
+      minutesToRead: 6
     })
 
     .section
@@ -37,7 +37,7 @@ block pageComponents
             p.blog-post__text In the case of the passport, we've also used a photo instead of a scan to see how well Textract handles lower quality documents.
 
             +permalink({
-              permalinkHeading: "The results"
+              heading: "The results"
             })
 
             figure
@@ -49,7 +49,7 @@ block pageComponents
             p.blog-post__text For our test payslip, Textract managed to extract every piece of text correctly. What’s more, Textract was able to identify tables shown in the payslip, and correctly associate all labels with their values, e.g. "Total Pay" with "1,076.23". Textract makes all of this structured data available, giving us a range of convenient different ways to handle the extracted information depending on how we want to use it.
 
             +permalink({
-              permalinkHeading: "Invoice"
+              heading: "Invoice"
             })
 
             figure
@@ -63,7 +63,7 @@ block pageComponents
             p.blog-post__text Although the overall extraction was near perfect, a couple of pieces of text were incorrectly associated with labels. For example, in the bottom right of the invoice, "Amount Enclosed" was incorrectly associated with "Enter the amount you are paying above", when it should actually have been a label <em>without</em> a value.
 
             +permalink({
-              permalinkHeading: "Passport"
+              heading: "Passport"
             })
 
             figure
@@ -86,7 +86,7 @@ block pageComponents
             hr.divider
 
             +permalink({
-              permalinkHeading: "Takeaways"
+              heading: "Takeaways"
             })
 
             h3.blog-post__h3 Data quality
@@ -116,7 +116,7 @@ block pageComponents
               li.styled-list__item Automated document classification.
 
             +permalink({
-              permalinkHeading: "Benefits to your business"
+              heading: "Benefits to your business"
             })
 
             p.blog-post__text If your staff spend a lot of time on manual document processing work, Textract can be used to deliver huge savings, free up your staff to do more valuable work, ensure you're able to process workloads 24/7, and improve the overall efficiency of your business processes.

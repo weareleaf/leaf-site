@@ -11,8 +11,8 @@ block prepend vars
 
 block pageComponents
   +hero({
-    heroHeading: heroHeading,
-    heroSubheading: heroSubheading,
+    heading: heroHeading,
+    subheading: heroSubheading
   })
 
   section.section
@@ -20,16 +20,16 @@ block pageComponents
       .grid.grid--tile
         .grid__item
           +tile({
-            tileUrl: "/careers/front-end-developer",
-            tileHeading: "Front-end developer",
-            tileText: "We're looking for a brilliant front-end developer to build world-class web applications with us."
+            url: "/careers/front-end-developer",
+            heading: "Front-end developer",
+            text: "We're looking for a brilliant front-end developer to build world-class web applications with us."
           })
 
         .grid__item
           +tile({
-            tileUrl: "mailto:hello@weareleaf.com?subject=I'd love to work at Leaf",
-            tileHeading: "Can't see your role?",
-            tileText: "If you think you’d be a good fit, but can’t see anything that matches your skillset, introduce yourself and tell us why.",
+            url: "mailto:hello@weareleaf.com?subject=I'd love to work at Leaf",
+            heading: "Can't see your role?",
+            text: "If you think you’d be a good fit, but can’t see anything that matches your skillset, introduce yourself and tell us why.",
             newTab: true
           })
 
@@ -38,32 +38,32 @@ block pageComponents
       .grid.grid--statements
         .grid__item
           +statement({
-            statementIcon: "/assets/images/icons/game.svg",
-            statementIconAlt: "A video game console controller.",
-            statementHeading: "We'll help you level-up",
-            statementText: "We pride ourselves on continual self-improvement, and we'll make sure you get the every opportunity to do so yourself."
+            icon: "/assets/images/icons/game.svg",
+            iconAlt: "A video game console controller.",
+            heading: "We'll help you level-up",
+            text: "We pride ourselves on continual self-improvement, and we'll make sure you get the every opportunity to do so yourself."
           })
 
         .grid__item
           +statement({
-            statementIcon: "/assets/images/icons/robot.svg",
-            statementIconAlt: "A humanoid robot's head.",
-            statementHeading: "We hire humans, not robots",
-            statementText: "A happer you is a better you. We'll only ever ask you to work your contracted hours, and will leave you to manage your work/life balance."
+            icon: "/assets/images/icons/robot.svg",
+            iconAlt: "A humanoid robot's head.",
+            heading: "We hire humans, not robots",
+            text: "A happer you is a better you. We'll only ever ask you to work your contracted hours, and will leave you to manage your work/life balance."
           })
 
         .grid__item
           +statement({
-            statementIcon: "/assets/images/icons/time.svg",
-            statementIconAlt: "A clock face set to 4pm.",
-            statementHeading: "Flexible working hours",
-            statementText: "With flexible hours and remote working available, you'll ensure you have the foundation needed to do your best work."
+            icon: "/assets/images/icons/time.svg",
+            iconAlt: "A clock face set to 4pm.",
+            heading: "Flexible working hours",
+            text: "With flexible hours and remote working available, you'll ensure you have the foundation needed to do your best work."
           })
 
         .grid__item
           +statement({
-            statementIcon: "/assets/images/icons/cash.svg",
-            statementIconAlt: "Some cash, in note form.",
-            statementHeading: "Personal budgets",
-            statementText: "We invest heavily in our team, with personal growth budgets available for courses and conferences, and home-office budgets for remote workers."
+            icon: "/assets/images/icons/cash.svg",
+            iconAlt: "Some cash, in note form.",
+            heading: "Personal budgets",
+            text: "We invest heavily in our team, with personal growth budgets available for courses and conferences, and home-office budgets for remote workers."
           })

@@ -1,34 +1,34 @@
 mixin resource(c)
-  if c.resourceUrl
-    a.resource(href= c.resourceUrl, rel="noopener", target="_blank")
+  if c.url
+    a.resource(href= c.url, rel="noopener", target="_blank")
       .resource__container
-        if c.resourceImage
+        if c.image
           +image({
             context: "resource",
-            src: c.resourceImage.src,
-            alt: c.resourceImage.alt
+            src: c.image.src,
+            alt: c.image.alt
           })
         else
           .resource__placeholder
         .resource__content
           .resource__meta
-            span.resource__subheading= c.resourceSubheading
-          h3.resource__heading= c.resourceHeading
-          p.resource__text= c.resourceText
+            span.resource__subheading= c.subheading
+          h3.resource__heading= c.heading
+          p.resource__text= c.text
   else
     .resource
       .resource__container
-        if c.resourceImage
+        if c.image
           +image({
             context: "resource",
-            src: c.resourceImage.src,
-            alt: c.resourceImage.alt
+            src: c.image.src,
+            alt: c.image.alt
           })
         else
           .resource__placeholder
         .resource__content
           .resource__meta
-            span.resource__subheading= c.resourceSubheading
+            span.resource__subheading= c.subheading
             span.resource__badge Coming soon
-          h3.resource__heading= c.resourceHeading
-          p.resource__text= c.resourceText
+          h3.resource__heading= c.heading
+          p.resource__text= c.text

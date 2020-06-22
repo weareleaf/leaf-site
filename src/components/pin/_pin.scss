@@ -1,4 +1,4 @@
-.location-marker {
+.pin {
   display: none;
 
   @media screen and (min-width: map-get($breakpoints, 'breakpoint-4')) {
@@ -44,12 +44,12 @@
       }
     }
 
-    &__heading {
+    &__name {
       font-size: $font-size-xs;
       margin-bottom: -.20rem;
     }
 
-    &__text {
+    &__location {
       font-family: $font-family-sans-serif-medium;
       font-size: .7rem;
       margin-bottom: 0;

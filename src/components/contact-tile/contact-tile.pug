@@ -1,7 +1,7 @@
 mixin contact-tile(c)
   .contact-tile
-    h3.contact-tile__heading= c.contactTileHeading
-    p.contact-tile__text!= c.contactTileText
+    h3.contact-tile__heading= c.heading
+    p.contact-tile__text!= c.text
     .contact-tile__ctas
       .contact-tile__button
-        +button(c.contactTileButton)
+        +button(c.button)

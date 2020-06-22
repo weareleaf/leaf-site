@@ -1,6 +1,6 @@
 mixin project(c)
-  .project(class= c.projectModifier ? "project--" + c.projectModifier : "")
-    h6.project__subheading= c.projectSubHeading
-    h2.project__heading= c.projectHeading
-    p.project__text= c.projectText
-    +button(c.projectButton)
+  .project(class= c.modifier ? "project--" + c.modifier : "")
+    h6.project__subheading= c.subheading
+    h2.project__heading= c.heading
+    p.project__text= c.text
+    +button(c.button)

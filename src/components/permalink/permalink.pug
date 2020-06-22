@@ -1,9 +1,9 @@
 mixin permalink(c)
-  - var headingId = `${c.permalinkHeading.replace(/\s+/g, '-').toLowerCase()}`
+  - var headingId = `${c.heading.replace(/\s+/g, '-').toLowerCase()}`
   - var headingLink = `#${headingId}`
 
   .permalink
-    h2.permalink__heading(id=headingId)= c.permalinkHeading
+    h2.permalink__heading(id=headingId)= c.heading
       a.permalink__link(href=headingLink)
         span.visually-hidden Permalink
         svg(aria-hidden='true' width='1.2rem' height='1.2rem' xmlns='http://www.w3.org/2000/svg' viewbox='0 0 24 24' style='fill: var(--color-accent)')

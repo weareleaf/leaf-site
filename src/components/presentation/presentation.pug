@@ -1,23 +1,23 @@
 mixin presentation(c)
-  .presentation(class= c.presentationModifier ? "presentation--" + c.presentationModifier : "")
+  .presentation(class= c.modifier ? "presentation--" + c.modifier : "")
     .presentation__content
       if c.project
         +project({
-          projectSubHeading: c.project.projectSubHeading,
-          projectHeading: c.project.projectHeading,
-          projectText: c.project.projectText,
-          projectButton: {
-            buttonModifier: c.project.projectButton.buttonModifier,
-            buttonText: c.project.projectButton.buttonText,
-            buttonUrl: c.project.projectButton.buttonUrl,
-            triggerModal: c.project.projectButton.triggerModal,
+          subheading: c.project.subheading,
+          heading: c.project.heading,
+          text: c.project.text,
+          button: {
+            modifier: c.project.button.modifier,
+            text: c.project.button.text,
+            url: c.project.button.url,
+            triggerModal: c.project.button.triggerModal,
           }
         })
       else if c.blockList
         +block-list(c.blockList)
     +image({
       context: "presentation",
-      modifier: c.imageModifier,
-      src: c.presentationImage.src,
-      alt: c.presentationImage.alt
+      modifier: c.modifier,
+      src: c.image.src,
+      alt: c.image.alt
     })

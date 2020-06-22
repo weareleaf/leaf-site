@@ -9,8 +9,8 @@ block prepend vars
 block pageComponents
 
   +hero({
-    heroHeading: metaTitle,
-    heroSubheading: metaDescription
+    heading: metaTitle,
+    subheading: metaDescription
   })
 
   .section
@@ -21,8 +21,8 @@ block pageComponents
       .grid.grid--two-thirds-reverse
         .grid__item
           +summary({
-            summaryHeading: "Who are we?",
-            summaryText: "Leaf are a remote agency based in the UK. We specialise in complex information capture, helping organisations excel online by making it easy for their users to provide them with high quality information."
+            heading: "Who are we?",
+            text: "Leaf are a remote agency based in the UK. We specialise in complex information capture, helping organisations excel online by making it easy for their users to provide them with high quality information."
           })
 
         .grid__item

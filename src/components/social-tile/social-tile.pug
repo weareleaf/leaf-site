@@ -1,9 +1,9 @@
 mixin social-tile(c)
   a.social-tile(
-    class=(c.socialTileModifier ? "social-tile--" + c.socialTileModifier : "")
-    href= c.socialTileLink target="_blank" rel="noopener")
+    class=(c.modifier ? "social-tile--" + c.modifier : "")
+    href= c.link target="_blank" rel="noopener")
     .social-tile__icon
-      img.social-tile__image(src= c.socialTileIcon.src alt= c.socialTileIcon.alt)
+      img.social-tile__image(src= c.icon.src alt= c.icon.alt)
     .social-tile__content
-      span.social-tile__heading= c.socialTileHeading
-      span.social-tile__handle= c.socialTileHandle
+      span.social-tile__heading= c.heading
+      span.social-tile__handle= c.handle

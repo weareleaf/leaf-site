@@ -12,8 +12,8 @@ block prepend vars
 
 block pageComponents
   +hero({
-    heroHeading: heroHeading,
-    heroSubheading: heroSubheading,
+    heading: heroHeading,
+    subheading: heroSubheading,
   })
 
   section.section
@@ -22,36 +22,35 @@ block pageComponents
         .grid__item
           .company__overview
             +block({
-              blockHeading: "Where are you based?",
-              blockText: "We’re a remote company, and have shunned the traditional office in favour of the many collective benefits brought about by distributed working:"
+              heading: "Where are you based?",
+              text: "We’re a remote company, and have shunned the traditional office in favour of the many collective benefits brought about by distributed working:"
             })
             +bullet({
-              styledListModifier: "2-col",
-              styledListItemModifier: "small",
-              styledListItems: [
+              modifier: "2-col",
+              items: [
                 {
-                  styledListItem: "More time for loved ones."
+                  item: "More time for loved ones."
                 },
                 {
-                  styledListItem: "No daily commute."
+                  item: "No daily commute."
                 },
                 {
-                  styledListItem: "Access to the best talent."
+                  item: "Access to the best talent."
                 },
                 {
-                  styledListItem: "Freedom to live anywhere."
+                  item: "Freedom to live anywhere."
                 },
                 {
-                  styledListItem: "Increased productivety."
+                  item: "Increased productivety."
                 },
                 {
-                  styledListItem: "Less distractions."
+                  item: "Less distractions."
                 },
                 {
-                  styledListItem: "Reduced overheads."
+                  item: "Reduced overheads."
                 },
                 {
-                  styledListItem: "Lower carbon footprint."
+                  item: "Lower carbon footprint."
                 }
               ]
             })
@@ -63,8 +62,8 @@ block pageComponents
               modifier: "map-mobile"
             })
             +block({
-              blockHeading: "What makes you different?",
-              blockText: "We look after our team so that they can better look after you. We strive to work smarter, not harder, and believe a good work/life balance and a calm working environment are key to producing happier, more effective teams. An engaged and highly-skilled individual is infinitely better prepared to do great work than someone working all hours to meet an unrealistic deadline."
+              heading: "What makes you different?",
+              text: "We look after our team so that they can better look after you. We strive to work smarter, not harder, and believe a good work/life balance and a calm working environment are key to producing happier, more effective teams. An engaged and highly-skilled individual is infinitely better prepared to do great work than someone working all hours to meet an unrealistic deadline."
             })
         .grid__item
           .company__map
@@ -73,40 +72,37 @@ block pageComponents
               src: "/assets/images/company/british-isles.svg",
               alt: "A map of Great Britain and Ireland with little location markers showing where each team member lives."
             })
-            +location-marker({
-              locationMarkerModifier: "tina",
-              locationMarkerHeading: "Tina van Schelt",
-              locationMarkerText: "Limerick"
+            +pin({
+              location: "Limerick",
+              modifier: "tina",
+              name: "Tina van Schelt"
             })
-            +location-marker({
-              locationMarkerModifier: "curt",
-              locationMarkerHeading: "Curtis Lee",
-              locationMarkerText: "Nottingham"
+            +pin({
+              location: "Nottingham",
+              modifier: "curt",
+              name: "Curtis Lee"
             })
-            +location-marker({
-              locationMarkerModifier: "mike",
-              locationMarkerContentModifier: "mike",
-              locationMarkerHeading: "Mike Carter",
-              locationMarkerText: "Canterbury"
+            +pin({
+              location: "Canterbury",
+              modifier: "mike",
+              name: "Mike Carter"
             })
-            +location-marker({
-              locationMarkerModifier: "chris",
-              locationMarkerContentModifier: "chris",
-              locationMarkerHeading: "Chris Annetts",
-              locationMarkerText: "Ashford"
+            +pin({
+              location: "Ashford",
+              modifier: "chris",
+              name: "Chris Annetts"
             })
-            +location-marker({
-              locationMarkerModifier: "oj",
-              locationMarkerContentModifier: "oj",
-              locationMarkerHeading: "Oliver Standeven",
-              locationMarkerText: "Ramsgate"
+            +pin({
+              location: "Ramsgate",
+              modifier: "oj",
+              name: "Oliver Standeven"
             })
           .company__explanation
             +explanation({
-              explanationExample: true,
-              explanationHeading: "Did you know",
-              explanationText: "Our team are based in various parts of England and Ireland. We have an entirely remote workforce, and all work from the comfort of our own home offices.",
-              explanationModifier: "single"
+              example: true,
+              heading: "Did you know",
+              text: "Our team are based in various parts of England and Ireland. We have an entirely remote workforce, and all work from the comfort of our own home offices.",
+              modifier: "single"
             })
 
   section.section
@@ -129,68 +125,64 @@ block pageComponents
             modifier: "pets"
           })
           +block({
-            blockTextModifier: "margin-bottom",
-            blockHeading: "What is important to you?",
-            blockText: "We believe that work should be something that doesn't fill you with dread, that you should be passionate about your craft, but that work comes second to family. We also believe the key to good software is simple; understand the problem, refine your product, and repeat the process."
+            textModifier: "margin-bottom",
+            heading: "What is important to you?",
+            text: "We believe that work should be something that doesn't fill you with dread, that you should be passionate about your craft, but that work comes second to family. We also believe the key to good software is simple; understand the problem, refine your product, and repeat the process."
           })
           .grid.grid--bullet-points
             .grid__item
               +bullet({
-                listHeading: true,
-                styledListHeading: "Things we do",
-                styledListModifier: "inside",
-                styledListItemModifier: "small",
-                styledListItems: [
+                heading: "Things we do",
+                modifier: "inside",
+                items: [
                   {
-                    styledListItem: "Clear and measurable KPIs."
+                    item: "Clear and measurable KPIs."
                   },
                   {
-                    styledListItem: "Iterative improvements."
+                    item: "Iterative improvements."
                   },
                   {
-                    styledListItem: "Long-term relationships."
+                    item: "Long-term relationships."
                   },
                   {
-                    styledListItem: "Talk often and honestly."
+                    item: "Talk often and honestly."
                   },
                   {
-                    styledListItem: "Design inclusively."
+                    item: "Design inclusively."
                   },
                   {
-                    styledListItem: "Think deeply and ponder."
+                    item: "Think deeply and ponder."
                   },
                   {
-                    styledListItem: "Prioritise effectiveness."
+                    item: "Prioritise effectiveness."
                   }
                 ]
               })
             .grid__item
               +bullet({
-                listHeading: true,
-                styledListHeading: "Things we don't do",
-                styledListModifier: "inside",
-                styledListItemModifier: "small",
-                styledListItems: [
+                heading: "Things we don't do",
+                modifier: "inside",
+                items: [
                   {
-                    styledListItem: "Big reveals."
+                    item: "Big reveals."
                   },
                   {
-                    styledListItem: "Work to unrealistic deadlines."
+                    item: "Work to unrealistic deadlines."
                   },
                   {
-                    styledListItem: "Pull all nighters."
+                    item: "Pull all nighters."
                   },
                   {
-                    styledListItem: "Work 40+ hour weeks."
+                    item: "Work 40+ hour weeks."
                   },
                   {
-                    styledListItem: "Long-term <strike>planning</strike> guessing."
+                    item: "Long-term <strike>planning</strike> guessing."
                   },
                   {
-                    styledListItem: "Hold unnecessary meetings."
+                    item: "Hold unnecessary meetings."
                   },
                   {
-                    styledListItem: "Knee-jerk reactions."
+                    item: "Knee-jerk reactions."
                   }
                 ]
               })
@@ -206,8 +198,8 @@ block pageComponents
             modifier: "holiday"
           })
           +block({
-            blockHeading: "Who have you worked for?",
-            blockText: "We've delivered various projects for the likes of RIFT and Holiday Extras, and have long-term relationships with well established digital companies like Laced and Isode. Along the way, we've worked with a variety of clients on smaller projects, such as Majestic Casual, Snowplow, and Zendesk."
+            heading: "Who have you worked for?",
+            text: "We've delivered various projects for the likes of RIFT and Holiday Extras, and have long-term relationships with well established digital companies like Laced and Isode. Along the way, we've worked with a variety of clients on smaller projects, such as Majestic Casual, Snowplow, and Zendesk."
           })
           .company__logos
             .company__logo
@@ -223,9 +215,9 @@ block pageComponents
             .company__logo.company__logo--border
               img(src="/assets/images/company/snowplow-logo.svg", alt="SnowPlow")
           +block({
-            blockModifier: "holiday-section",
-            blockHeading: "What sectors do you specialise in?",
-            blockText: "There’s no single sector we consider ourselves experts in, although previous work on various booking flows, online applications, and tax claims have given us considerable experience in the financial, insurance, and travel industries. We do, however, consider ourselves experts in gathering high-quality information from your customers, whatever sector you’re in."
+            modifier: "holiday-section",
+            heading: "What sectors do you specialise in?",
+            text: "There’s no single sector we consider ourselves experts in, although previous work on various booking flows, online applications, and tax claims have given us considerable experience in the financial, insurance, and travel industries. We do, however, consider ourselves experts in gathering high-quality information from your customers, whatever sector you’re in."
           })
         figure.figure-wrapper
           +image({
@@ -253,18 +245,18 @@ block pageComponents
             modifier: "culture"
           })
           +block({
-            blockHeading: "How long have you been around?",
-            blockText: "We started Leaf in June 2015, initially as a part-time venture, and it has been our full-time focus since December 2016."
+            heading: "How long have you been around?",
+            text: "We started Leaf in June 2015, initially as a part-time venture, and it has been our full-time focus since December 2016."
           })
           +explanation({
-            explanationExample: true,
-            explanationHeading: "Did you know",
-            explanationText: "Apple Music launched in the UK on the same day we registered Leaf Software Ltd, with both announcements attracting similar levels of fanfare.",
-            explanationModifier: "single"
+            example: true,
+            heading: "Did you know",
+            text: "Apple Music launched in the UK on the same day we registered Leaf Software Ltd, with both announcements attracting similar levels of fanfare.",
+            modifier: "single"
           })
           +block({
-            blockHeading: "Why should I choose you?",
-            blockText: "Capturing data from your customers is difficult, and we've built our entire company around specialising in just that. Most agencies offer a range of services, some of which they are better at than others. For us, every ounce of energy goes into making sure we're the best at just one thing."
+            heading: "Why should I choose you?",
+            text: "Capturing data from your customers is difficult, and we've built our entire company around specialising in just that. Most agencies offer a range of services, some of which they are better at than others. For us, every ounce of energy goes into making sure we're the best at just one thing."
           })
 
   section.section
@@ -274,143 +266,136 @@ block pageComponents
         .grid.grid--the-team
           .team__first-team
             +block({
-              blockModifier: "team-section",
-              blockHeading: "The first team",
-              blockText: "We’ve assembled a small and reliable team who have repeatedly shown that you don’t need huge numbers or even an office to add genuine value. These are the names and faces you’ll get to know throughout your project."
+              modifier: "first-team",
+              heading: "The first team",
+              heading3: true,
+              text: "We’ve assembled a small and reliable team who have repeatedly shown that you don’t need huge numbers or even an office to add genuine value. These are the names and faces you’ll get to know throughout your project."
             })
             .grid.grid--profiles
               .grid__item
                 +profile({
-                  profileImage: {
+                  image: {
                     context: "profile",
                     src: "/assets/images/team/chris.jpg",
                     alt: "Chris Annetts looking happy while standing in a doorway."
                   },
-                  profileHeading: "Chris Annetts",
-                  profileText: "Design Director"
+                  heading: "Chris Annetts",
+                  text: "Design Director"
                 })
               .grid__item
                 +profile({
-
-                  profileImage: {
+                  image: {
                     context: "profile",
                     src: "/assets/images/team/mike.jpg",
                     alt: "Mike Carter looking happy in front of a bunch of trees."
                   },
-                  profileHeading: "Mike Carter",
-                  profileText: "Engineering Director"
+                  heading: "Mike Carter",
+                  text: "Engineering Director"
                 })
               .grid__item
                 +profile({
-                  profileImage: {
+                  image: {
                     src: "/assets/images/team/curt.jpg",
                     alt: "Curtis Lee looking very happy in front of a tree."
                   },
-                  profileHeading: "Curtis Lee",
-                  profileText: "Product Designer"
+                  heading: "Curtis Lee",
+                  text: "Product Designer"
                 })
               .grid__item
                 +profile({
-                  profileImage: {
+                  image: {
                     context: "profile",
                     src: "/assets/images/team/tina.jpg",
                     alt: "Tina van Schelt looking happy while facing slightly away from the camera."
                   },
-                  profileHeading: "Tina van Schelt",
-                  profileText: "Software Engineer"
+                  heading: "Tina van Schelt",
+                  text: "Software Engineer"
                 })
               .grid__item
                 +profile({
-                  profileImage: {
+                  image: {
                     context: "profile",
                     src: "/assets/images/team/oj.jpg",
                     alt: "OJ looking very happy on a beach with a cliff behind."
                   },
-                  profileHeading: "Oliver Standeven (OJ)",
-                  profileText: "Software Engineer"
+                  heading: "Oliver Standeven (OJ)",
+                  text: "Software Engineer"
                 })
               .grid__item
                 +profile({
-                  profileUrl: "careers/front-end-developer",
-                  profileImage: {
+                  url: "careers/front-end-developer",
+                  image: {
                     src: "/assets/images/team/placeholder.jpg",
                     alt: "We're hiring a Software Engineer."
                   },
-                  profileHeading: "We’re hiring",
-                  profileText: "Software Engineer",
-                  profileTarget: "_blank"
+                  heading: "We’re hiring",
+                  text: "Software Engineer",
+                  target: "_blank"
                 })
           .team__our-bench
             +block({
-              blockHeading: "Our bench",
-              blockText: "When needed, we have a trusted group of talented, external designers and developers we can call upon."
+              heading: "Our bench",
+              heading3: true,
+              text: "When needed, we have a trusted group of talented, external designers and developers we can call upon."
             })
             .team__bench-profiles
               +profile({
-                profileModifier: "row",
-                profileContentModifier: "left-aligned",
-                imageModifier: "small",
-                profileImage: {
+                modifier: "small",
+                image: {
                   src: "/assets/images/company/chris-arnold.jpg",
                   alt: "A photo of Chris Arnold."
                 },
-                profileHeading: "Chris Arnold",
-                profileText: "Frontend Engineer"
+                heading: "Chris Arnold",
+                text: "Frontend Engineer"
               })
               +profile({
-                profileModifier: "row",
-                profileContentModifier: "left-aligned",
-                imageModifier: "small",
-                profileImage: {
+                modifier: "small",
+                image: {
                   src: "/assets/images/company/jack-clark.jpg",
                   alt: "A photo of Jack Clark."
                 },
-                profileHeading: "Jack Clark",
-                profileText: "Software Engineer"
+                heading: "Jack Clark",
+                text: "Software Engineer"
               })
               //-+profile({
-                profileModifier: "row",
+                modifier: "row",
                 profileContentModifier: "left-aligned",
                 imageModifier: "small",
-                profileImage: {
+                image: {
                   src: "/assets/images/company/elliot-stokes.jpg",
                   alt: "A photo of Elliot Stokes."
                 },
-                profileHeading: "Elliot Stokes",
-                profileText: "Software Engineer"
+                heading: "Elliot Stokes",
+                text: "Software Engineer"
               //-})
               +profile({
-                profileModifier: "row",
-                profileContentModifier: "left-aligned",
-                imageModifier: "small",
-                profileImage: {
+                modifier: "small",
+                image: {
                   src: "/assets/images/company/matthew-spence.jpg",
                   alt: "A photo of Matthew Spence."
                 },
-                profileHeading: "Matthew Spence",
-                profileText: "Software Engineer"
+                heading: "Matthew Spence",
+                text: "Software Engineer"
               })
               //-+profile({
-                profileModifier: "row",
+                modifier: "row",
                 profileContentModifier: "left-aligned",
                 imageModifier: "small",
-                profileImage: {
+                image: {
                   src: "/assets/images/company/liam-tucker.jpg",
                   alt: "A photo of Liam Tucker."
                 },
-                profileHeading: "Liam Tucker",
-                profileText: "eCommerce Specialist"
+                heading: "Liam Tucker",
+                text: "eCommerce Specialist"
               //-})
               +profile({
-                profileModifier: "row",
-                profileContentModifier: "left-aligned",
-                imageModifier: "small",
-                profileImage: {
+                modifier: "small",
+                image: {
                   src: "/assets/images/company/colin-young.jpg",
                   alt: "A photo of Colin Young."
                 },
-                profileHeading: "Colin Young",
-                profileText: "Software Engineer"
+                heading: "Colin Young",
+                text: "Software Engineer"
               })
 
   section.section
@@ -418,7 +403,7 @@ block pageComponents
       .company.journey
         h2.large.large--center The Leaf timeline
         +timeline({
-          timelineItems: [
+          items: [
             {
               date: "2012-06",
               heading: "A chance meeting",
