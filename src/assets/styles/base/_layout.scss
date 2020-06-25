@@ -74,12 +74,28 @@ main {
   max-width: 40rem;
 
   @media screen and (min-width: map-get($breakpoints, 'breakpoint-4')) {
+    background: none;
     margin: 0 0 $spacing-12 0;
     max-width: 100%;
   }
 
   @media screen and (min-width: map-get($breakpoints, 'breakpoint-10')) {
     margin: 0 0 $spacing-13 0;
+  }
+
+  &__overview {
+
+    &::before {
+      @include absolute-fill;
+      background: url('../../assets/images/company/british-isles.svg') no-repeat center center / contain;
+      content: '';
+      opacity: .5;
+      z-index: z('below');
+
+      @media screen and (min-width: map-get($breakpoints, 'breakpoint-4')) {
+        content: unset;
+      }
+    }
   }
 
   &__map {
