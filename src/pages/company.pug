@@ -108,7 +108,7 @@ block pageComponents
   section.section
     .container
       .company.grid.grid--company
-        figure.collage
+        figure.collage.collage--pets
           +image({
             context: "collage",
             src: "/assets/images/company/pets/tina-and-wilco.jpg",
@@ -237,19 +237,21 @@ block pageComponents
   section.section
     .container
       .company.grid.grid--company
-        +image({
-          context: "company-image",
-          src: "/assets/images/company/culture.png",
-          alt: "There's one photo showing our director, Chris, taking notes whilst sat in front of a laptop, and another photo showing Tina wearing a Leaf branded T-shirt.",
-          modifier: "culture"
-        })
-        .company__story
+        figure.collage.collage--team
           +image({
-            context: "company-mobile",
-            src: "/assets/images/company/culture-mobile.png",
-            alt: "There's one photo showing our director, Chris, taking notes whilst sat in front of a laptop, and another photo showing Tina wearing a Leaf branded T-shirt.",
-            modifier: "culture"
+            context: "collage",
+            src: "/assets/images/company/team/leaf-tshirt.jpg",
+            alt: "3 images showing some of the team with their pets, including OJ with his cat, Orion, Tina with her dog, Wilko, and a photo of Mikes dog, Bramley.",
+            modifier: "leaf-tshirt"
           })
+          +image({
+            context: "collage",
+            src: "/assets/images/company/team/chris-working.jpg",
+            alt: "3 images showing some of the team with their pets, including OJ with his cat, Orion, Tina with her dog, Wilko, and a photo of Mikes dog, Bramley.",
+            modifier: "chris-working"
+          })
+
+        .company__story
           +block({
             heading: "How long have you been around?",
             text: "We started Leaf in June 2015, initially as a part-time venture, and it has been our full-time focus since December 2016."
