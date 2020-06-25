@@ -219,7 +219,7 @@ block pageComponents
             heading: "What sectors do you specialise in?",
             text: "There’s no single sector we consider ourselves experts in, although previous work on various booking flows, online applications, and tax claims have given us considerable experience in the financial, insurance, and travel industries. We do, however, consider ourselves experts in gathering high-quality information from your customers, whatever sector you’re in."
           })
-        figure.collage.collage--pets
+        figure.collage.collage--holiday
           +image({
             context: "collage",
             src: "/assets/images/company/holiday/jack-and-mike.jpg",
@@ -228,15 +228,15 @@ block pageComponents
           })
           +image({
             context: "collage",
-            src: "/assets/images/company/holiday/mike.jpg",
-            alt: "3 images showing some of the team with their pets, including OJ with his cat, Orion, Tina with her dog, Wilko, and a photo of Mikes dog, Bramley.",
-            modifier: "mike"
-          })
-          +image({
-            context: "collage",
             src: "/assets/images/company/holiday/ice-cream.jpg",
             alt: "3 images showing some of the team with their pets, including OJ with his cat, Orion, Tina with her dog, Wilko, and a photo of Mikes dog, Bramley.",
             modifier: "ice-cream"
+          })
+          +image({
+            context: "collage",
+            src: "/assets/images/company/holiday/mike.jpg",
+            alt: "3 images showing some of the team with their pets, including OJ with his cat, Orion, Tina with her dog, Wilko, and a photo of Mikes dog, Bramley.",
+            modifier: "mike"
           })
           figcaption.collage__caption.collage__caption--holiday We helped Holiday Extras make a travel-planning app, so naturally we tested it by planning (and taking) a trip to Rome.
 
@@ -391,17 +391,15 @@ block pageComponents
                 heading: "Matthew Spence",
                 text: "Software Engineer"
               })
-              //-+profile({
-                modifier: "row",
-                profileContentModifier: "left-aligned",
-                imageModifier: "small",
+              +profile({
+                modifier: "small",
                 image: {
-                  src: "/assets/images/company/liam-tucker.jpg",
+                  src: "/assets/images/company/team/bench/liam-tucker.jpg",
                   alt: "A photo of Liam Tucker."
                 },
                 heading: "Liam Tucker",
                 text: "eCommerce Specialist"
-              //-})
+              })
               +profile({
                 modifier: "small",
                 image: {
