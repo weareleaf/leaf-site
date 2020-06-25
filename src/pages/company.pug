@@ -108,22 +108,28 @@ block pageComponents
   section.section
     .container
       .company.grid.grid--company
-        figure.figure-wrapper
+        figure.collage
           +image({
-            context: "company-image",
-            src: "/assets/images/company/pets.png",
+            context: "collage",
+            src: "/assets/images/company/pets/tina-and-wilco.jpg",
             alt: "3 images showing some of the team with their pets, including OJ with his cat, Orion, Tina with her dog, Wilko, and a photo of Mikes dog, Bramley.",
-            modifier: "pets"
+            modifier: "tina-and-wilco"
+          })
+          +image({
+            context: "collage",
+            src: "/assets/images/company/pets/oj-and-orion.jpg",
+            alt: "3 images showing some of the team with their pets, including OJ with his cat, Orion, Tina with her dog, Wilko, and a photo of Mikes dog, Bramley.",
+            modifier: "oj-and-orion"
+          })
+          +image({
+            context: "collage",
+            src: "/assets/images/company/pets/naughty-bramley.jpg",
+            alt: "3 images showing some of the team with their pets, including OJ with his cat, Orion, Tina with her dog, Wilko, and a photo of Mikes dog, Bramley.",
+            modifier: "naughty-bramley"
           })
           figcaption.company__caption.company__caption--pets When work isn’t crazy, there’s more time in the day to enjoy the things that really matter.
 
         .company__ethos
-          +image({
-            context: "company-mobile",
-            src: "/assets/images/company/pets-mobile.png",
-            alt: "3 images showing some of the team with their pets, including OJ with his cat, Orion, Tina with her dog, Wilko, and a photo of Mikes dog, Bramley.",
-            modifier: "pets"
-          })
           +block({
             textModifier: "margin-bottom",
             heading: "What is important to you?",

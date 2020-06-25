@@ -160,26 +160,28 @@ main {
   }
 
   &__caption {
-    bottom: 0;
+    //bottom: 0;
     color: $color-ice;
-    display: none;
     font-size: .65rem;
     line-height: 1.4;
-    margin-bottom: 0;
-    position: absolute;
+    //margin-bottom: 0;
+    //position: absolute;
 
-    @media screen and (min-width: map-get($breakpoints, 'breakpoint-6')) {
-      display: block;
+    @media screen and (min-width: map-get($breakpoints, 'breakpoint-4')) {
+
     }
 
     &--pets {
-      left: 0;
-      bottom: -.9rem;
-      max-width: 8.5rem;
-      text-align: right;
+      //left: 0;
+      //bottom: -.9rem;
+      //max-width: 8.5rem;
+      //text-align: right;
     }
 
     &--holiday {
+      bottom: 0;
+      margin-bottom: 0;
+      position: absolute;
       max-width: $size-9;
       padding-left: $spacing-3;
       right: 0;
