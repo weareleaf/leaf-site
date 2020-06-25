@@ -34,7 +34,7 @@
     }
   }
 
-  &--team {
+  &--culture {
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(2, 1fr);
 
@@ -67,7 +67,7 @@
       max-width: 600px;
     }
 
-    &--team {
+    &--culture {
       grid-template-columns: repeat(5, 1fr);
       grid-template-rows: repeat(6, 1fr);
       max-width: 500px;
