@@ -11,6 +11,23 @@
       grid-row: 1 / span 1;
 
       @media screen and (min-width: map-get($breakpoints, 'breakpoint-4')) {
+        grid-column: 1 / span 5;
+        grid-row: 2 / span 4;
+        transform: translate(50px, 0px);
+        z-index: -1;
+      }
+    }
+  }
+
+  &--holiday {
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+
+    &::after {
+      grid-column: 1 / -1;
+      grid-row: 1 / span 1;
+
+      @media screen and (min-width: map-get($breakpoints, 'breakpoint-4')) {
         grid-column: 2 / span 2;
         grid-row: 2 / span 2;
       }
@@ -39,6 +56,12 @@
     grid-gap: unset;
 
     &--pets {
+      grid-template-columns: repeat(6, 1fr);
+      grid-template-rows: repeat(7, 1fr);
+      max-width: 600px;
+    }
+
+    &--holiday {
       grid-template-columns: repeat(6, 1fr);
       grid-template-rows: repeat(7, 1fr);
       max-width: 600px;
@@ -106,6 +129,33 @@
       }
     }
 
+    &--jack-and-mike {
+      grid-column: 3 / span 1;
+
+      @media screen and (min-width: map-get($breakpoints, 'breakpoint-4')) {
+        grid-column: 2 / span 4;
+        grid-row: 1 / span 3;
+      }
+    }
+
+    &--mike {
+      grid-column: 1 / span 1;
+
+      @media screen and (min-width: map-get($breakpoints, 'breakpoint-4')) {
+        grid-column: 1 / span 3;
+        grid-row: 4 / span 4;
+      }
+    }
+
+    &--ice-cream {
+      grid-column: 2 / span 1;
+
+      @media screen and (min-width: map-get($breakpoints, 'breakpoint-4')) {
+        grid-column: 4 / span 3;
+        grid-row: 3 / span 4;
+      }
+    }
+
     &--chris-working {
       grid-column: 1 / span 1;
 
@@ -125,16 +175,32 @@
     }
   }
 
-  figcaption {
+  &__caption {
+    color: $color-ice;
+    font-size: .65rem;
     grid-column: 1 / span 3;
+    line-height: 1.4;
     margin-top: 15px;
     position: relative;
 
-    @media screen and (min-width: map-get($breakpoints, 'breakpoint-4')) {
-      grid-column: 1 / span 2;
-      grid-row: 7 / span 1;
-      margin: 20px 20px 0 0;
-      text-align: right;
+    &--pets {
+
+      @media screen and (min-width: map-get($breakpoints, 'breakpoint-4')) {
+        grid-column: 1 / span 2;
+        grid-row: 7 / span 1;
+        margin: 20px 20px 0 0;
+        text-align: right;
+      }
+    }
+
+    &--holiday {
+
+      @media screen and (min-width: map-get($breakpoints, 'breakpoint-4')) {
+        grid-column: 4 / span 3;
+        grid-row: 7 / span 1;
+        margin: 20px 0 0 20px;
+        text-align: left;
+      }
     }
   }
 

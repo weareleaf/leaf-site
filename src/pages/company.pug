@@ -127,7 +127,7 @@ block pageComponents
             alt: "3 images showing some of the team with their pets, including OJ with his cat, Orion, Tina with her dog, Wilko, and a photo of Mikes dog, Bramley.",
             modifier: "naughty-bramley"
           })
-          figcaption.company__caption.company__caption--pets When work isn’t crazy, there’s more time in the day to enjoy the things that really matter.
+          figcaption.collage__caption.collage__caption--pets When work isn’t crazy, there’s more time in the day to enjoy the things that really matter.
 
         .company__ethos
           +block({
@@ -197,12 +197,6 @@ block pageComponents
     .container
       .company.grid.grid--company
         .company__clients
-          +image({
-            context: "company-mobile",
-            src: "/assets/images/company/holiday-mobile.png",
-            alt: "Some pictures from our time in Rome testing the new travel planning app, HEHA!. There's a photo of Mike looking happy in a restaurant, and a close up photo of an ice cream.",
-            modifier: "holiday"
-          })
           +block({
             heading: "Who have you worked for?",
             text: "We've delivered various projects for the likes of RIFT and Holiday Extras, and have long-term relationships with well established digital companies like Laced and Isode. Along the way, we've worked with a variety of clients on smaller projects, such as Majestic Casual, Snowplow, and Zendesk."
@@ -225,14 +219,26 @@ block pageComponents
             heading: "What sectors do you specialise in?",
             text: "There’s no single sector we consider ourselves experts in, although previous work on various booking flows, online applications, and tax claims have given us considerable experience in the financial, insurance, and travel industries. We do, however, consider ourselves experts in gathering high-quality information from your customers, whatever sector you’re in."
           })
-        figure.figure-wrapper
+        figure.collage.collage--pets
           +image({
-            context: "company-image",
-            src: "/assets/images/company/holiday-snaps.png",
-            alt: "Some pictures from our time in Rome testing the new travel planning app, HEHA!. There's a photo of Mike and a member of the Holiday Extras team, a photo of Mike looking happy in a restaurant, and a close up photo of an ice cream.",
-            modifier: "holiday"
+            context: "collage",
+            src: "/assets/images/company/holiday/jack-and-mike.jpg",
+            alt: "3 images showing some of the team with their pets, including OJ with his cat, Orion, Tina with her dog, Wilko, and a photo of Mikes dog, Bramley.",
+            modifier: "jack-and-mike"
           })
-          figcaption.company__caption.company__caption--holiday We helped Holiday Extras make a travel-planning app, so naturally we tested it by planning (and taking) a trip to Rome.
+          +image({
+            context: "collage",
+            src: "/assets/images/company/holiday/mike.jpg",
+            alt: "3 images showing some of the team with their pets, including OJ with his cat, Orion, Tina with her dog, Wilko, and a photo of Mikes dog, Bramley.",
+            modifier: "mike"
+          })
+          +image({
+            context: "collage",
+            src: "/assets/images/company/holiday/ice-cream.jpg",
+            alt: "3 images showing some of the team with their pets, including OJ with his cat, Orion, Tina with her dog, Wilko, and a photo of Mikes dog, Bramley.",
+            modifier: "ice-cream"
+          })
+          figcaption.collage__caption.collage__caption--holiday We helped Holiday Extras make a travel-planning app, so naturally we tested it by planning (and taking) a trip to Rome.
 
   section.section
     .container
