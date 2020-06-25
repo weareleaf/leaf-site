@@ -302,21 +302,12 @@ main {
 }
 
 .team {
-  margin-top: -$spacing-8;
-
-  @media screen and (min-width: map-get($breakpoints, 'breakpoint-4')) {
-    margin-top: 0;
-  }
 
   &__bench-profiles {
     @media screen and (min-width: map-get($breakpoints, 'breakpoint-1')) {
       display: grid;
       grid-gap: $spacing-2;
       grid-template-columns: repeat(2, 1fr);
-    }
-    @media screen and (min-width: map-get($breakpoints, 'breakpoint-3')) {
-      //grid-gap: $spacing-2;
-      //grid-template-columns: repeat(3, 1fr);
     }
 
     @media screen and (min-width: map-get($breakpoints, 'breakpoint-4')) {
