@@ -4,10 +4,6 @@
     align-items: center;
     display: flex;
     margin-bottom: $spacing-5;
-
-    &:hover {
-      cursor: default;
-    }
   }
 
   &__media {
@@ -24,12 +20,7 @@
       box-shadow $duration-6 $timing-ease,
       transform $duration-2 $timing-ease;
 
-    @media screen and (min-width: map-get($breakpoints, 'breakpoint-4')) {
-      max-width: $size-9;
-    }
-
     &--small {
-      margin-bottom: 0;
       max-width: $size-5;
     }
   }
