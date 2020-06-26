@@ -1,8 +1,12 @@
 <svg width="40" height="37" xmlns="http://www.w3.org/2000/svg">
-  <g fill="none" fill-rule="evenodd">
-    <path fill-rule="nonzero" d="M0-1h40v40H0z"/>
-    <path d="M14.94 17.81a2.05 2.05 0 11-4.1 0 2.05 2.05 0 014.1 0M28.06 17.81a2.05 2.05 0 11-4.1 0 2.05 2.05 0 014.1 0" fill="#9999E6"/>
-    <path d="M27.668 35.44H11.232a5.313 5.313 0 01-5.312-5.313V12.872a5.312 5.312 0 015.312-5.312h16.436a5.312 5.312 0 015.312 5.312v17.255a5.313 5.313 0 01-5.312 5.313zM19.45 1v6.56" stroke="#9999E6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-    <path d="M5.92 17.4H3.81C2.257 17.4 1 18.592 1 20.062v5.335c0 1.47 1.258 2.663 2.81 2.663h2.11M33.8 17.4h2.11c1.553 0 2.81 1.192 2.81 2.662v5.335c0 1.47-1.257 2.663-2.81 2.663H33.8M18.22 28.47h4.1M11.66 28.47h4.1M24.78 28.47h4.1" stroke="#9999E6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+  <g transform="translate(0 -1)" fill="none" fill-rule="evenodd">
+    <rect width="40" height="40"/>
+    <path d="M14.94 18.81a2.05 2.05 0 11-4.1 0 2.05 2.05 0 014.1 0M28.06 18.81a2.05 2.05 0 11-4.1 0 2.05 2.05 0 014.1 0" fill="#9999E6"/>
+    <path d="M27.668 36.44H11.232a5.313 5.313 0 01-5.312-5.313V13.872a5.312 5.312 0 015.312-5.312h16.436a5.312 5.312 0 015.312 5.312v17.255a5.313 5.313 0 01-5.312 5.313z" stroke="#9999E6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+    <line x1="19.45" y1="2" x2="19.45" y2="8.56" stroke="#9999E6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M5.92 18.4H3.81C2.257 18.4 1 19.592 1 21.062v5.335c0 1.47 1.258 2.663 2.81 2.663h2.11M33.8 18.4h2.11c1.553 0 2.81 1.192 2.81 2.662v5.335c0 1.47-1.257 2.663-2.81 2.663H33.8" stroke="#9999E6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+    <line x1="18.22" y1="29.47" x2="22.32" y2="29.47" stroke="#9999E6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+    <line x1="11.66" y1="29.47" x2="15.76" y2="29.47" stroke="#9999E6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+    <line x1="24.78" y1="29.47" x2="28.88" y2="29.47" stroke="#9999E6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
   </g>
 </svg>
