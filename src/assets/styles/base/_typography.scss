@@ -78,11 +78,6 @@ a {
 
 figure {
   margin: 0;
-  //margin: $spacing-7 0;
-
-  @media screen and (min-width: map-get($breakpoints, 'breakpoint-3')) {
-    //margin: $spacing-8 0;
-  }
 }
 
 .permalink + figure {
@@ -120,7 +115,8 @@ img {
   width: $size-6;
 }
 
-.unstyled-list {
+.unstyled-list,
+%unstyled-list {
   list-style: none;
   margin: 0;
   padding: 0;
@@ -156,8 +152,12 @@ img {
       height: .3rem;
       left: 0;
       position: absolute;
-      top: .55rem;
+      top: .3rem;
       width: .3rem;
+
+      @media screen and (min-width: map-get($breakpoints, 'breakpoint-4')) {
+        top: .5rem;
+      }
 
       .blog-post & {
         height: .4rem;

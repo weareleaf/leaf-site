@@ -1,6 +1,6 @@
 .collage {
   display: grid;
-  grid-gap: 20px;
+  grid-column-gap: $spacing-5;
 
   &--pets {
     grid-template-columns: repeat(3, 1fr);
@@ -13,7 +13,7 @@
       @media screen and (min-width: map-get($breakpoints, 'breakpoint-4')) {
         grid-column: 1 / span 5;
         grid-row: 2 / span 4;
-        transform: translate(50px, 0px);
+        transform: translateX($spacing-8);
         z-index: z('below');
       }
     }
@@ -46,7 +46,7 @@
         grid-column: 2 / span 4;
         grid-row: 2 / span 4;
         margin: 0;
-        transform: translateX(-40px);
+        transform: translateX(-$spacing-7);
         z-index: z('below');
       }
     }
@@ -58,20 +58,20 @@
     &--pets {
       grid-template-columns: repeat(6, 1fr);
       grid-template-rows: repeat(7, 1fr);
-      max-width: 600px;
+      max-width: 30rem;
       order: -1;
     }
 
     &--holiday {
       grid-template-columns: repeat(6, 1fr);
       grid-template-rows: repeat(7, 1fr);
-      max-width: 570px;
+      max-width: 28.5rem;
     }
 
     &--culture {
       grid-template-columns: repeat(5, 1fr);
       grid-template-rows: repeat(6, 1fr);
-      max-width: 500px;
+      max-width: 25rem;
       order: -1;
     }
   }
@@ -86,9 +86,9 @@
       $color-majorelle 60%,
       $color-majorelle 100%
     );
-    background-size: 10px 10px;
+    background-size: .5rem .5rem;
     content: '';
-    margin: 0 20px;
+    margin: 0 $spacing-5;
 
     @media screen and (min-width: map-get($breakpoints, 'breakpoint-4')) {
       margin: 0;
@@ -97,7 +97,7 @@
 
   &__media {
     grid-row: 1 / span 3;
-    margin-top: 20px;
+    margin-top: $spacing-5;
 
     @media screen and (min-width: map-get($breakpoints, 'breakpoint-4')) {
       margin-top: 0;
@@ -109,7 +109,7 @@
       @media screen and (min-width: map-get($breakpoints, 'breakpoint-4')) {
         grid-column: 4 / span 3;
         grid-row: 1 / span 4;
-        transform: translateX(-20px);
+        transform: translateX(-$spacing-5);
       }
     }
 
@@ -146,7 +146,7 @@
       @media screen and (min-width: map-get($breakpoints, 'breakpoint-4')) {
         grid-column: 1 / span 3;
         grid-row: 4 / span 4;
-        transform: translateX(20px);
+        transform: translateX($spacing-5);
       }
     }
 
@@ -180,18 +180,22 @@
 
   &__caption {
     color: $color-ice;
-    font-size: .65rem;
+    font-size: .75rem;
     grid-column: 1 / span 3;
     line-height: 1.4;
-    margin-top: 15px;
+    margin-top: $spacing-5;
     position: relative;
+
+    @media screen and (min-width: map-get($breakpoints, 'breakpoint-4')) {
+      font-size: .65rem;
+    }
 
     &--pets {
 
       @media screen and (min-width: map-get($breakpoints, 'breakpoint-4')) {
         grid-column: 1 / span 2;
         grid-row: 7 / span 1;
-        margin: 20px 20px 0 0;
+        margin: $spacing-5 $spacing-5 0 0;
         text-align: right;
       }
     }
@@ -201,7 +205,7 @@
       @media screen and (min-width: map-get($breakpoints, 'breakpoint-4')) {
         grid-column: 4 / span 3;
         grid-row: 7 / span 1;
-        margin: 20px 0 0 40px;
+        margin: $spacing-5 0 0 $spacing-7;
         text-align: left;
       }
     }
@@ -212,11 +216,11 @@
     max-width: 100%;
     min-height: 100%;
     object-fit: cover;
-    outline: solid 5px $color-majorelle;
+    outline: solid .25rem $color-majorelle;
     position: relative;
 
     @media screen and (min-width: map-get($breakpoints, 'breakpoint-4')) {
-      outline: solid 10px $color-majorelle;
+      outline: solid .5rem $color-majorelle;
     }
   }
 }

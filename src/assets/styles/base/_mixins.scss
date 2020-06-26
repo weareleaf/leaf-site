@@ -106,6 +106,12 @@
   }
 }
 
+@mixin flex-center {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+}
+
 @mixin focus-bg {
   &:focus {
     background-color: $focus-bg;

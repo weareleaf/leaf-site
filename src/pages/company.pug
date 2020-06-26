@@ -60,6 +60,14 @@ block pageComponents
               text: "We look after our team so that they can better look after you. We strive to work smarter, not harder, and believe a good work/life balance and a calm working environment are key to producing happier, more effective teams. An engaged and highly-skilled individual is infinitely better prepared to do great work than someone working all hours to meet an unrealistic deadline."
             })
         .grid__item
+          .company__explanation
+            +explanation({
+              example: true,
+              heading: "Did you know",
+              text: "Our team are based in various parts of England and Ireland. We have an entirely remote workforce, and all work from the comfort of our own home offices.",
+              modifier: "single"
+            })
+
           .company__map
             +image({
               context: "company-map",
@@ -91,13 +99,6 @@ block pageComponents
               modifier: "oj",
               name: "Oliver Standeven"
             })
-          .company__explanation
-            +explanation({
-              example: true,
-              heading: "Did you know",
-              text: "Our team are based in various parts of England and Ireland. We have an entirely remote workforce, and all work from the comfort of our own home offices.",
-              modifier: "single"
-            })
 
   section.section
     .container
@@ -113,7 +114,6 @@ block pageComponents
             .grid__item
               +bullet({
                 heading: "Things we do",
-                modifier: "inside",
                 items: [
                   {
                     item: "Clear and measurable KPIs."
@@ -141,7 +141,6 @@ block pageComponents
             .grid__item
               +bullet({
                 heading: "Things we don't do",
-                modifier: "inside",
                 items: [
                   {
                     item: "Big reveals."
@@ -197,19 +196,19 @@ block pageComponents
             heading: "Who have you worked for?",
             text: "We've delivered various projects for the likes of RIFT and Holiday Extras, and have long-term relationships with well established digital companies like Laced and Isode. Along the way, we've worked with a variety of clients on smaller projects, such as Majestic Casual, Snowplow, and Zendesk."
           })
-          .company__logos
-            .company__logo
-              img(src="/assets/images/company/clients/rift.svg", alt="RIFT")
-            .company__logo
-              img(src="/assets/images/company/clients/laced.svg", alt="Laced")
-            .company__logo
-              img(src="/assets/images/company/clients/majestic.svg", alt="Majestic Casual")
-            .company__logo.company__logo--border
-              img(src="/assets/images/company/clients/zendesk.svg", alt="Zendesk")
-            .company__logo.company__logo--border
-              img(src="/assets/images/company/clients/holiday-extras.svg", alt="Holiday Extras")
-            .company__logo.company__logo--border
-              img(src="/assets/images/company/clients/snowplow.svg", alt="Snowplow")
+          ul.logo-grid
+            li.logo-grid__item
+              img.logo-grid__image(src="/assets/images/company/clients/rift.svg", alt="RIFT")
+            li.logo-grid__item
+              img.logo-grid__image(src="/assets/images/company/clients/laced.svg", alt="Laced")
+            li.logo-grid__item
+              img.logo-grid__image(src="/assets/images/company/clients/majestic.svg", alt="Majestic Casual")
+            li.logo-grid__item
+              img.logo-grid__image(src="/assets/images/company/clients/zendesk.svg", alt="Zendesk")
+            li.logo-grid__item
+              img.logo-grid__image(src="/assets/images/company/clients/holiday-extras.svg", alt="Holiday Extras")
+            li.logo-grid__item
+              img.logo-grid__image(src="/assets/images/company/clients/snowplow.svg", alt="Snowplow")
           +block({
             modifier: "holiday-section",
             heading: "What sectors do you specialise in?",
