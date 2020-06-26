@@ -20,6 +20,10 @@ main {
 
   @media screen and (min-width: map-get($breakpoints, 'breakpoint-3')) {
     margin-bottom: $spacing-10;
+
+    .page--company &:not(:last-child) {
+      margin-bottom: $spacing-13;
+    }
   }
 
   &--sm-spacing {
@@ -76,10 +80,6 @@ main {
   &__explanation {
     position: relative;
 
-    @media screen and (min-width: map-get($breakpoints, 'breakpoint-4')) {
-      top: 30%;
-    }
-
     @media screen and (min-width: map-get($breakpoints, 'breakpoint-10')) {
       left: 2rem;
     }
@@ -87,6 +87,7 @@ main {
     .explanation {
 
       @media screen and (min-width: map-get($breakpoints, 'breakpoint-4')) {
+        margin-top: 30%;
         position: absolute;
       }
     }
