@@ -73,7 +73,8 @@ block pageComponents
             +image({
               context: "company-map",
               src: "/assets/images/company/british-isles.svg",
-              alt: "A map of Great Britain and Ireland with little location markers showing where each team member lives."
+              alt: "",
+              presentation: true
             })
             +pin({
               location: "Limerick",
@@ -171,19 +172,19 @@ block pageComponents
           +image({
             context: "collage",
             src: "/assets/images/company/pets/tina-and-wilco.jpg",
-            alt: "3 images showing some of the team with their pets, including OJ with his cat, Orion, Tina with her dog, Wilko, and a photo of Mikes dog, Bramley.",
+            alt: "A photo of Tina in the car, with her pet dog Wilko looking happy in the back seat.",
             modifier: "tina-and-wilco"
           })
           +image({
             context: "collage",
             src: "/assets/images/company/pets/oj-and-orion.jpg",
-            alt: "3 images showing some of the team with their pets, including OJ with his cat, Orion, Tina with her dog, Wilko, and a photo of Mikes dog, Bramley.",
+            alt: "A photo of OJ with his pet cat Orion.",
             modifier: "oj-and-orion"
           })
           +image({
             context: "collage",
             src: "/assets/images/company/pets/naughty-bramley.jpg",
-            alt: "3 images showing some of the team with their pets, including OJ with his cat, Orion, Tina with her dog, Wilko, and a photo of Mikes dog, Bramley.",
+            alt: "A photo of Mike's dog Bramley, who's just pulled the stuffing out of one of his toys. He looks guilty.",
             modifier: "naughty-bramley"
           })
           figcaption.collage__caption.collage__caption--pets When work isn’t crazy, there’s more time in the day to enjoy the things that really matter.
@@ -219,19 +220,19 @@ block pageComponents
           +image({
             context: "collage",
             src: "/assets/images/company/holiday/jack-and-mike.jpg",
-            alt: "3 images showing some of the team with their pets, including OJ with his cat, Orion, Tina with her dog, Wilko, and a photo of Mikes dog, Bramley.",
+            alt: "A photo of Mike and Jack taking in the Roman sunshine.",
             modifier: "jack-and-mike"
           })
           +image({
             context: "collage",
             src: "/assets/images/company/holiday/ice-cream.jpg",
-            alt: "3 images showing some of the team with their pets, including OJ with his cat, Orion, Tina with her dog, Wilko, and a photo of Mikes dog, Bramley.",
+            alt: "A photo of someones ice cream from the trip.",
             modifier: "ice-cream"
           })
           +image({
             context: "collage",
             src: "/assets/images/company/holiday/mike.jpg",
-            alt: "3 images showing some of the team with their pets, including OJ with his cat, Orion, Tina with her dog, Wilko, and a photo of Mikes dog, Bramley.",
+            alt: "A photo of Mike outside the Pantheon; an ancient Roman landmark.",
             modifier: "mike"
           })
           figcaption.collage__caption.collage__caption--holiday We helped Holiday Extras make a travel-planning app, so naturally we tested it by planning (and taking) a trip to Rome.
@@ -260,13 +261,13 @@ block pageComponents
           +image({
             context: "collage",
             src: "/assets/images/company/culture/leaf-tshirt.jpg",
-            alt: "3 images showing some of the team with their pets, including OJ with his cat, Orion, Tina with her dog, Wilko, and a photo of Mikes dog, Bramley.",
+            alt: "A photo of Tina showing off her Leaf t-shirt.",
             modifier: "leaf-tshirt"
           })
           +image({
             context: "collage",
             src: "/assets/images/company/culture/chris-working.jpg",
-            alt: "3 images showing some of the team with their pets, including OJ with his cat, Orion, Tina with her dog, Wilko, and a photo of Mikes dog, Bramley.",
+            alt: "A photo of Chris sketching an idea while sitting next to his Macbook Pro.",
             modifier: "chris-working"
           })
 
@@ -288,7 +289,7 @@ block pageComponents
                   image: {
                     context: "profile",
                     src: "/assets/images/company/team/first-team/chris.jpg",
-                    alt: "Chris Annetts looking happy while standing in a doorway."
+                    alt: "A photo of Chris before he grew his beard and hair longer."
                   },
                   heading: "Chris Annetts",
                   text: "Design Director"
@@ -298,7 +299,7 @@ block pageComponents
                   image: {
                     context: "profile",
                     src: "/assets/images/company/team/first-team/mike.jpg",
-                    alt: "Mike Carter looking happy in front of a bunch of trees."
+                    alt: "A photo of Mike looking content in the great outdoors."
                   },
                   heading: "Mike Carter",
                   text: "Engineering Director"
@@ -307,7 +308,7 @@ block pageComponents
                 +profile({
                   image: {
                     src: "/assets/images/company/team/first-team/curt.jpg",
-                    alt: "Curtis Lee looking very happy in front of a tree."
+                    alt: "A photo of Curt looking very happy with himself while standing in front of a tree."
                   },
                   heading: "Curtis Lee",
                   text: "Product Designer"
@@ -317,7 +318,7 @@ block pageComponents
                   image: {
                     context: "profile",
                     src: "/assets/images/company/team/first-team/tina.jpg",
-                    alt: "Tina van Schelt looking happy while facing slightly away from the camera."
+                    alt: "A photo of Tina looking captived mid-conversation."
                   },
                   heading: "Tina van Schelt",
                   text: "Software Engineer"
@@ -327,7 +328,7 @@ block pageComponents
                   image: {
                     context: "profile",
                     src: "/assets/images/company/team/first-team/oj.jpg",
-                    alt: "OJ looking very happy on a beach with a cliff behind."
+                    alt: "A photo of OJ taking a walk on the beach."
                   },
                   heading: "Oliver Standeven (OJ)",
                   text: "Software Engineer"
@@ -335,12 +336,9 @@ block pageComponents
               .grid__item
                 +profile({
                   url: "careers/front-end-developer",
-                  image: {
-                    src: "/assets/images/team/placeholder.jpg",
-                    alt: "We're hiring a Software Engineer."
-                  },
                   heading: "We’re hiring",
                   text: "Software Engineer",
+                  modifier: "position",
                   target: "_blank"
                 })
           .team__our-bench
@@ -368,17 +366,6 @@ block pageComponents
                 heading: "Jack Clark",
                 text: "Software Engineer"
               })
-              //-+profile({
-                modifier: "row",
-                profileContentModifier: "left-aligned",
-                imageModifier: "small",
-                image: {
-                  src: "/assets/images/company/elliot-stokes.jpg",
-                  alt: "A photo of Elliot Stokes."
-                },
-                heading: "Elliot Stokes",
-                text: "Software Engineer"
-              //-})
               +profile({
                 modifier: "small",
                 image: {
