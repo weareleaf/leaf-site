@@ -2,44 +2,42 @@ mixin footer(c)
   footer.footer(role="contentinfo")
     .container
       .footer__cta
-        h4.footer__heading Start the conversation#[span.footer__heading__period .]
+        h2.footer__heading Start the conversation#[span.footer__heading__period .]
         p.footer__text If you think we might be able to help, you’ve got a question, or you just want to say hi, don’t be a stranger.
       .footer__grid
         .footer__item.footer__item--enquiries
-          h5.footer__subheading New work
+          h3.footer__subheading New work
           a.footer__link(href="mailto:enquiries@weareleaf.com") enquiries@weareleaf.com
 
         .footer__item.footer__item--hello
-          h5.footer__subheading Ask us anything
+          h3.footer__subheading Ask us anything
           a.footer__link(href="mailto:hello@weareleaf.com") hello@weareleaf.com
 
         .footer__item.footer__item--icons
-          h5.footer__subheading Get social
+          h3.footer__subheading Get social
           .footer__social
-            +social({
-              socialModifier: "inline"
-            })
+            +social({})
       .footer__info
-        if c.footerNav
+        if c.nav
           .footer__nav
             +nav({
               navList: [
                 {
-                  navItemUrl: "https://github.com/weareleaf/handbook",
-                  navItemText: "Handbook",
+                  url: "https://github.com/weareleaf/handbook",
+                  text: "Handbook",
                   newTab: true
                 },
                 {
-                  navItemUrl: "/careers",
-                  navItemText: "Careers"
+                  url: "/careers",
+                  text: "Careers"
                 },
                 {
-                  navItemUrl: "/ebooks",
-                  navItemText: "eBooks"
+                  url: "/ebooks",
+                  text: "eBooks"
                 },
                 {
-                  navItemUrl: "/terms",
-                  navItemText: "Terms"
+                  url: "/terms",
+                  text: "Terms"
                 }
               ]
             })

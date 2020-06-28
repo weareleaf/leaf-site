@@ -42,8 +42,8 @@ $image-size: $size-1;
   &__icon {
     background-color: var(--color-container);
     border-radius: $border-radius-full;
-    min-height: 2.7rem;
-    min-width: 2.7rem;
+    min-height: $icon-size;
+    min-width: $icon-size;
     position: relative;
     text-align: center;
     transition: transform $duration-2 $timing-ease;
@@ -54,7 +54,7 @@ $image-size: $size-1;
   }
 
   &__image {
-    @include size($image-size);
+    height: $image-size;
     left: 50%;
     position: absolute;
     top: 50%;

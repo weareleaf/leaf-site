@@ -1,0 +1,5 @@
+mixin pin(c)
+  .pin(class= c.modifier ? "pin--" + c.modifier : "")
+    .pin__content(class= c.modifier ? "pin__content--" + c.modifier : "")
+      p.pin__name.h4= c.name
+      p.pin__location= c.location

@@ -2,11 +2,11 @@ mixin statement(c)
   .statement
     .statement__icon
       .statement__img
-        img(src= c.statementIcon alt=c.statementIconAlt)
+        img(src= c.icon alt=c.iconAlt)
     .statement__content
-      h3.statement__heading= c.statementHeading
-      p.statement__text= c.statementText
-      if c.statementLink
+      h3.statement__heading= c.heading
+      p.statement__text= c.text
+      if c.link
         a.statement__link(
-          data-micromodal-trigger=(c.statementLink.triggerModal ? "modal-contact" : undefined)
-          href= c.statementLink.href)= c.statementLink.text
+          data-micromodal-trigger=(c.link.triggerModal ? "modal-contact" : undefined)
+          href= c.link.href)= c.link.text

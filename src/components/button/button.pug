@@ -1,11 +1,11 @@
 mixin button(c)
-  if c.buttonUrl
+  if c.url
     a.button(
-      class=(c.buttonModifier ? "button--" + c.buttonModifier : "")
+      class=(c.modifier ? "button--" + c.modifier : "")
       data-micromodal-trigger=(c.triggerModal ? "modal-contact" : undefined)
-      href= c.buttonUrl)= c.buttonText
+      href= c.url)= c.text
   else
     button.button(
-      class=(c.buttonModifier ? "button--" + c.buttonModifier : "")
+      class=(c.modifier ? "button--" + c.modifier : "")
       data-micromodal-trigger=(c.triggerModal ? "modal-contact" : undefined)
-      type= c.buttonType ? c.buttonType : "button")= c.buttonText
+      type= c.type ? c.type : "button")= c.text

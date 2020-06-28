@@ -13,15 +13,15 @@ block prepend vars
 block pageComponents
 
   +hero({
-    heroHeading: heroHeading,
-    heroSubheading: heroSubheading,
-    heroSubheadingModifier: "narrow",
-    heroIntroImage: true,
-    heroImage: {
+    heading: heroHeading,
+    subheading: heroSubheading,
+    subheadingModifier: "narrow",
+    introImage: true,
+    image: {
       src: "/assets/images/case-studies/hx/image-1.png",
       alt: "6 wireframed screens showing our process of mapping the users journey."
     },
-    heroImageModifier: "hx"
+    imageModifier: "hx"
   })
 
   section.section
@@ -29,59 +29,59 @@ block pageComponents
       .hx-challenge
         .hx-challenge__items
           +content-block({
-            contentBlockItems: [
+            items: [
               {
                 contentHeading2: true,
-                contentHeading: "The challenge",
-                contentIntro: "Having worked together previously, Holiday Extras asked us to help them improve their travel insurance booking flow.",
-                contentParagraphs: [
+                heading: "The challenge",
+                intro: "Having worked together previously, Holiday Extras asked us to help them improve their travel insurance booking flow.",
+                paragraphs: [
                   {
-                    contentText: "We were tasked with creating an experience comparable to their award-winning call centre. Their staff are friendly, helpful, and able to shield the customer from the inherent complexity of insurance, and they wanted an online booking flow that was equally unintimidating."
+                    text: "We were tasked with creating an experience comparable to their award-winning call centre. Their staff are friendly, helpful, and able to shield the customer from the inherent complexity of insurance, and they wanted an online booking flow that was equally unintimidating."
                   }
                 ]
               }
             ],
-            contentBlockImage: {
+            image: {
               src: "/assets/images/case-studies/hx/image-2.jpg",
               alt: "A customer service rep smiling while wearing a headset."
             },
-            contentBlockModifier: "reverse",
-            contentBlockImageModifier: "hx-image-2"
+            modifier: "reverse",
+            imageModifier: "hx-image-2"
           })
 
           .hx-details
             .hx-details__tags
               +detail-tags({
-                detailTagHeading: "What we did",
-                detailTagModifier: "hx",
-                detailTags: [
+                heading: "What we did",
+                modifier: "hx",
+                tags: [
                   {
-                    detailTagIcon: "assets/images/case-studies/icons/pen.svg",
-                    detailTagText: "Content writing"
+                    icon: "assets/images/case-studies/icons/pen.svg",
+                    text: "Content writing"
                   },
                   {
-                    detailTagIcon: "assets/images/case-studies/icons/data.svg",
-                    detailTagText: "Data analysis"
+                    icon: "assets/images/case-studies/icons/data.svg",
+                    text: "Data analysis"
                   },
                   {
-                    detailTagIcon: "assets/images/case-studies/icons/switch.svg",
-                    detailTagText: "Form design"
+                    icon: "assets/images/case-studies/icons/switch.svg",
+                    text: "Form design"
                   },
                   {
-                    detailTagIcon: "assets/images/case-studies/icons/journey.svg",
-                    detailTagText: "Journey mapping"
+                    icon: "assets/images/case-studies/icons/journey.svg",
+                    text: "Journey mapping"
                   },
                   {
-                    detailTagIcon: "assets/images/case-studies/icons/prototype.svg",
-                    detailTagText: "Prototypes"
+                    icon: "assets/images/case-studies/icons/prototype.svg",
+                    text: "Prototypes"
                   },
                   {
-                    detailTagIcon: "assets/images/case-studies/icons/ear.svg",
-                    detailTagText: "Stakeholder interviews"
+                    icon: "assets/images/case-studies/icons/ear.svg",
+                    text: "Stakeholder interviews"
                   },
                   {
-                    detailTagIcon: "assets/images/case-studies/icons/wireframe.svg",
-                    detailTagText: "Wireframes"
+                    icon: "assets/images/case-studies/icons/wireframe.svg",
+                    text: "Wireframes"
                   }
                 ]
               })
@@ -92,32 +92,32 @@ block pageComponents
     .container
       +content-block({
         introHeading: true,
-        contentBlockHeading: "Our approach",
-        contentBlockItems: [
+        heading: "Our approach",
+        items: [
           {
-            contentHeading: "Improve iteratively",
-            contentIntro: 'Although this was a "reimagination", changes would be made iteratively by building on the existing online booking process.',
-            contentParagraphs: [
+            heading: "Improve iteratively",
+            intro: 'Although this was a "reimagination", changes would be made iteratively by building on the existing online booking process.',
+            paragraphs: [
               {
-                contentText: "Any recommendations we made would need to work both in isolation and as part of the current system. Where possible, we reused existing elements, minimising the friction as sections of our work were introduced."
+                text: "Any recommendations we made would need to work both in isolation and as part of the current system. Where possible, we reused existing elements, minimising the friction as sections of our work were introduced."
               }
             ]
           },
           {
-            contentHeading: "Be guided by the numbers",
-            contentIntro: "While reviewing the previous 12 months of policies, we found that most people were going to the same handful of places.",
-            contentParagraphs: [
+            heading: "Be guided by the numbers",
+            intro: "While reviewing the previous 12 months of policies, we found that most people were going to the same handful of places.",
+            paragraphs: [
               {
-                contentText: "By suggesting these popular destinations, 4 out of 5 travellers would be able to select a location in a single interaction, with the remaining destinations available through an autocompleting search field."
+                text: "By suggesting these popular destinations, 4 out of 5 travellers would be able to select a location in a single interaction, with the remaining destinations available through an autocompleting search field."
               }
             ]
           }
         ],
-        contentBlockImage: {
+        image: {
           src: "/assets/images/case-studies/hx/image-4.png",
           alt: "Suggested destinations based on the most popular choices of 4/5 customers. There is also an autocomplete search field to help customers find their destination."
         },
-        contentBlockImageModifier: "hx-image-4"
+        imageModifier: "hx-image-4"
       })
       +image({
         context: "content-block",
@@ -129,23 +129,23 @@ block pageComponents
   section.section
     .container
       +content-block({
-        contentBlockItems: [
+        items: [
           {
-            contentHeading: "Be clear about effort and progress",
-            contentIntro: "People are more likely to give up on a task when they’re unsure how far away they are from completing it.",
-            contentParagraphs: [
+            heading: "Be clear about effort and progress",
+            intro: "People are more likely to give up on a task when they’re unsure how far away they are from completing it.",
+            paragraphs: [
               {
-                contentText: "We intoduced a progress tracker to help set expections, showing users how much effort is needed as they move through the process. The tracker also makes it simple to navigate between sections, removing an existing pain-point for those who need to go back to a previous step."
+                text: "We intoduced a progress tracker to help set expections, showing users how much effort is needed as they move through the process. The tracker also makes it simple to navigate between sections, removing an existing pain-point for those who need to go back to a previous step."
               }
             ]
           }
         ],
-        contentBlockImage: {
+        image: {
           src: "/assets/images/case-studies/hx/image-5.png",
           alt: "The six types of trip a customer can choose, including Business trip, cruise, golf trip, hazardous activities, winter sports, and your wedding."
         },
-        contentBlockModifier: "reverse",
-        contentBlockImageModifier: "hx-image-5"
+        modifier: "reverse",
+        imageModifier: "hx-image-5"
       })
       +image({
         context: "content-block",
@@ -157,22 +157,22 @@ block pageComponents
   section.section
     .container
       +content-block({
-        contentBlockItems: [
+        items: [
           {
-            contentHeading: "Help people progress quickly",
-            contentIntro: "Truly great online experiences accommodate inherent human behaviours, rather than forcing new ones.",
-            contentParagraphs: [
+            heading: "Help people progress quickly",
+            intro: "Truly great online experiences accommodate inherent human behaviours, rather than forcing new ones.",
+            paragraphs: [
               {
-                contentText: "We used iconography throughout the process to help users to more easily distinguish between various choices. People tend to scan Web pages rather than read them word-for-word, and can interpret images much faster than words, making icons the ideal visual parter to a text description."
+                text: "We used iconography throughout the process to help users to more easily distinguish between various choices. People tend to scan Web pages rather than read them word-for-word, and can interpret images much faster than words, making icons the ideal visual parter to a text description."
               }
             ]
           }
         ],
-        contentBlockImage: {
+        image: {
           src: "/assets/images/case-studies/hx/image-6.png",
           alt: "The five steps a customer goes through in the quote process: 1. Trip, 2. People, 3. Cover, 4. Details, and 5. Payment."
         },
-        contentBlockImageModifier: "hx-image-6"
+        imageModifier: "hx-image-6"
       })
       +image({
         context: "content-block",
@@ -184,23 +184,23 @@ block pageComponents
   section.section
     .container
       +content-block({
-        contentBlockItems: [
+        items: [
           {
-            contentHeading: "Show a price as early as possible ",
-            contentIntro: "With so many insurance providers to choose from, you’d better make sure you give your users a reason to hang about.",
-            contentParagraphs: [
+            heading: "Show a price as early as possible ",
+            intro: "With so many insurance providers to choose from, you’d better make sure you give your users a reason to hang about.",
+            paragraphs: [
               {
-                contentText: "In the very first step, a range of personal information was previously being asked for each traveller, even though date-of-births were the only details needed to calculate a price. Other than first-names, which made it easier to gather the remaining details later, we deferred the remaining questions until later on, radically reducing the time required to see a price."
+                text: "In the very first step, a range of personal information was previously being asked for each traveller, even though date-of-births were the only details needed to calculate a price. Other than first-names, which made it easier to gather the remaining details later, we deferred the remaining questions until later on, radically reducing the time required to see a price."
               }
             ]
           }
         ],
-        contentBlockImage: {
+        image: {
           src: "/assets/images/case-studies/hx/image-7.png",
           alt: "A form that requires customers to enter only their first name and date of birth to get a price."
         },
-        contentBlockImageModifier: "hx-image-7",
-        contentBlockModifier: "reverse"
+        imageModifier: "hx-image-7",
+        modifier: "reverse"
       })
 
     .centered-content.centered-content--hx
@@ -213,14 +213,14 @@ block pageComponents
         .grid.grid--center-text
           .grid__item
             +content({
-              contentHeading: "Personalise the experience",
-              contentIntro: "It’s no longer enough to create one-size fits all products, and the entire experience should be tailored for each individual.",
-              contentParagraphs: [
+              heading: "Personalise the experience",
+              intro: "It’s no longer enough to create one-size fits all products, and the entire experience should be tailored for each individual.",
+              paragraphs: [
                 {
-                  contentText: "We were able to offer users highly relevant upgrades by allowing them to tell us more about their trip. By making this step optional, the majority can continue without interacting at all, and those that do have additional requirements will only see upgrades that meet their needs."
+                  text: "We were able to offer users highly relevant upgrades by allowing them to tell us more about their trip. By making this step optional, the majority can continue without interacting at all, and those that do have additional requirements will only see upgrades that meet their needs."
                 },
                 {
-                  contentText: "When a couple are travelling, and both have Mr and Mrs selected as their titles, the second traveller will be asked whether they share a surname (we apply the same logic to families too). By asking the user if this is the case, rather than assuming it to be so, the action feels useful and thoughtful rather than rude and presumptuous."
+                  text: "When a couple are travelling, and both have Mr and Mrs selected as their titles, the second traveller will be asked whether they share a surname (we apply the same logic to families too). By asking the user if this is the case, rather than assuming it to be so, the action feels useful and thoughtful rather than rude and presumptuous."
                 }
               ]
             })
@@ -230,32 +230,32 @@ block pageComponents
   section.section
     .container
       +content-block({
-        contentBlockItems: [
+        items: [
           {
-            contentHeading: "Not everybody needs to see everything",
-            contentIntro: "Your booking flow shouldn't feel intimidating to all of your customers to meet the needs of a small minority.",
-            contentParagraphs: [
+            heading: "Not everybody needs to see everything",
+            intro: "Your booking flow shouldn't feel intimidating to all of your customers to meet the needs of a small minority.",
+            paragraphs: [
               {
-                contentText: "Previously, every customer was offered every upgrade, although our research showed that just four of the options were commonly asked about through the Call Centre. We radically simplified the comparison of available tiers by including only these four benefits, but made the full breakdown available for those who wanted to see more."
+                text: "Previously, every customer was offered every upgrade, although our research showed that just four of the options were commonly asked about through the Call Centre. We radically simplified the comparison of available tiers by including only these four benefits, but made the full breakdown available for those who wanted to see more."
               }
             ]
           },
           {
-            contentHeading: "Write inclusively by cutting the jargon",
-            contentIntro: "It shouldn’t take a law degree for your potential customers to understand whether or not the policy is a good fit for them.",
-            contentParagraphs: [
+            heading: "Write inclusively by cutting the jargon",
+            intro: "It shouldn’t take a law degree for your potential customers to understand whether or not the policy is a good fit for them.",
+            paragraphs: [
               {
-                contentText: "We worked closely with the Holiday Extras compliance team to simplify their explanation of a pre-existing medical condition, while still meeting their legal requirements. A full description remained available, but the majority benefitted from a jargon-free list of illnesses and ailments."
+                text: "We worked closely with the Holiday Extras compliance team to simplify their explanation of a pre-existing medical condition, while still meeting their legal requirements. A full description remained available, but the majority benefitted from a jargon-free list of illnesses and ailments."
               }
             ]
           }
         ],
-        contentBlockImage: {
+        image: {
           src: "/assets/images/case-studies/hx/image-9.png",
           alt: "A full description of jargon-free illnesses that a customer can choose from in order to declare any pre-existing medical conditions."
         },
-        contentBlockModifier: "reverse",
-        contentBlockImageModifier: "hx-image-9"
+        modifier: "reverse",
+        imageModifier: "hx-image-9"
       })
       +image({
         context: "content-block",
@@ -270,45 +270,44 @@ block pageComponents
         .hx-outcome__content
           h2.content-block__heading The outcome
           +content({
-              contentHeading: "Radically faster quotes",
-              contentIntro: "The changes made meant we were able to provide an insurance quote in a fraction of time it had taken previously.",
-              contentParagraphs: [
+              heading: "Radically faster quotes",
+              intro: "The changes made meant we were able to provide an insurance quote in a fraction of time it had taken previously.",
+              paragraphs: [
                 {
-                  contentText: "Changes to how a pre-existing medical condition was described meant test users were able to understand and answer whether or not they had one more than a minute quicker than had been the case before."
+                  text: "Changes to how a pre-existing medical condition was described meant test users were able to understand and answer whether or not they had one more than a minute quicker than had been the case before."
                 }
               ]
             })
           +metrics({
-            heading: true,
-            metricsHeading: "user testing",
-            metricItems: [
+            heading: "user testing",
+            items: [
               {
-                metricsUnit: "233%",
-                metricsSubText: "quicker to see a price",
-                metricsText: "It took users an average of 1 min and 24 secs to see their price, compared to 3 mins and 16 secs in the previous version."
+                unit: "233%",
+                subtext: "quicker to see a price",
+                text: "It took users an average of 1 min and 24 secs to see their price, compared to 3 mins and 16 secs in the previous version."
               },
               {
-                metricsUnit: "74",
-                metricsSubText: "fewer interactions to see a price",
-                metricsText: "Users tapped their screen an average of 68 times before they saw their price, compared to 142 times in the previous version."
+                unit: "74",
+                subtext: "fewer interactions to see a price",
+                text: "Users tapped their screen an average of 68 times before they saw their price, compared to 142 times in the previous version."
               },
             ]
           })
           +content({
-            contentHeading: "Small and continuous improvements",
-            contentIntro: "As was the intention, the new content and structure of the process will gradually be integrated into the booking flow.",
-            contentParagraphs: [
+            heading: "Small and continuous improvements",
+            intro: "As was the intention, the new content and structure of the process will gradually be integrated into the booking flow.",
+            paragraphs: [
               {
-                contentText: "The engineering team at Holiday Extras have started introducing a number of elements of our prototype into the live booking flow, and we look forward to seeing further progress over the coming months."
+                text: "The engineering team at Holiday Extras have started introducing a number of elements of our prototype into the live booking flow, and we look forward to seeing further progress over the coming months."
               }
             ]
           })
           +testimonial({
-            testimonialBlockQuote: "Leaf were a pleasure to work with – always available and willing to offer advice or to put forward constructive suggestions. The decision to work with them is one we haven’t regretted, and I’d gladly recommend them to anyone looking to improve their own booking flow.",
+            quote: "Leaf were a pleasure to work with – always available and willing to offer advice or to put forward constructive suggestions. The decision to work with them is one we haven’t regretted, and I’d gladly recommend them to anyone looking to improve their own booking flow.",
             author: {
-              authorName: "Carl Burdett",
-              authorDetails: "Digital Marketing Manager — Holiday Extras",
-              authorThumbnail: {
+              name: "Carl Burdett",
+              details: "Digital Marketing Manager — Holiday Extras",
+              thumbnail: {
                 src: "assets/images/case-studies/hx/carl.png",
                 alt: "A picture of Carl Burdett with a purple background behind him."
               }

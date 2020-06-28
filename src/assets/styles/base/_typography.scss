@@ -1,16 +1,16 @@
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
+h1, .h1,
+h2, .h2,
+h3, .h3,
+h4, .h4,
+h5, .h5,
+h6, .h6 {
   color: var(--color-heading);
   font-weight: $font-weight-heading;
   line-height: $heading-line-height;
   margin-top: 0;
 }
 
-h1 {
+h1, .h1 {
   font-size: $font-size-h1;
   margin-bottom: $spacing-4;
 
@@ -20,7 +20,7 @@ h1 {
   }
 }
 
-h2 {
+h2, .h2 {
   font-size: $font-size-h2;
   margin-bottom: $spacing-4;
 
@@ -33,12 +33,12 @@ h2 {
   }
 }
 
-h3 {
+h3, .h3 {
   font-size: $font-size-h3;
   margin-bottom: $spacing-2;
 }
 
-h4 {
+h4, .h4 {
   font-size: $font-size-h4;
   margin-bottom: $spacing-3;
 
@@ -47,7 +47,7 @@ h4 {
   }
 }
 
-h5 {
+h5, .h5 {
   font-size: $font-size-h5;
   margin-bottom: $spacing-3;
 
@@ -56,20 +56,8 @@ h5 {
   }
 }
 
-h6 {
+h6, .h6 {
   margin-bottom: 0;
-}
-
-h4 {
-  font-size: $font-size-h4;
-}
-
-h5 {
-  font-size: $font-size-h5;
-}
-
-h6 {
-  font-size: $font-size-h6;
 }
 
 p {
@@ -89,11 +77,7 @@ a {
 
 
 figure {
-  margin: $spacing-7 0;
-
-  @media screen and (min-width: map-get($breakpoints, 'breakpoint-3')) {
-    margin: $spacing-8 0;
-  }
+  margin: 0;
 }
 
 .permalink + figure {
@@ -131,7 +115,8 @@ img {
   width: $size-6;
 }
 
-.unstyled-list {
+.unstyled-list,
+%unstyled-list {
   list-style: none;
   margin: 0;
   padding: 0;
@@ -148,7 +133,7 @@ img {
 
   &__item {
     font-size: $font-size-sm;
-    margin-left: $spacing-7;
+    padding-left: #{$spacing-4 + .3rem};
     position: relative;
 
     &:not(:last-child) {
@@ -157,55 +142,28 @@ img {
 
     .blog-post & {
       font-size: 1.05rem; //- More debt here! A quick matching of larger, customer font-size on blog posts.
+      padding-left: #{$spacing-7 + .4rem};
     }
-
-    // The company bullet is smaller on the design (which looks better too)
-
-    &--small {
-
-      @media screen and (min-width: map-get($breakpoints, 'breakpoint-6')) {
-        font-size: $font-size-sm;
-        margin-left: $spacing-5 !important;
-
-        &::before {
-          background-color: var(--color-accent);
-          content: '';
-          display: block;
-          height: .3rem !important; // Override the default pseudo after a certain size
-          left: -1rem !important;
-          position: absolute;
-          top: .5rem !important;
-          width: .3rem !important;
-        }
-      }
-    }
-
-    // .styled-list--inside-lg & {
-    //   margin-left: $spacing-7;
-    // }
-
-    // .styled-list--inside & {
-    //   margin-left: $spacing-6;
-    // }
-
-    // .styled-list--inside-sm & {
-    //   margin-left: $spacing-6;
-    // &--gap-lg {
-
-    //   &:not(:last-child) {
-    //     margin-bottom: $spacing-6;
-    //   }
-    // }
 
     &::before {
       background-color: var(--color-accent);
       content: '';
       display: block;
-      height: .4rem;
-      left: -1.3rem;
+      height: .3rem;
+      left: 0;
       position: absolute;
-      top: .55rem;
-      width: .4rem;
+      top: .3rem;
+      width: .3rem;
+
+      @media screen and (min-width: map-get($breakpoints, 'breakpoint-4')) {
+        top: .5rem;
+      }
+
+      .blog-post & {
+        height: .4rem;
+        left: $spacing-5;
+        width: .4rem;
+      }
     }
   }
 }
@@ -301,8 +259,8 @@ blockquote.blog-blockquote {
 }
 
 .large {
-  margin-bottom: $spacing-6;
   font-size: $font-size-xl;
+  margin-bottom: $spacing-6;
 
   @media screen and (min-width: map-get($breakpoints, 'breakpoint-4')) {
     margin-bottom: $spacing-8;
@@ -318,6 +276,7 @@ blockquote.blog-blockquote {
 }
 
 .biography {
+
   &__meta {
     color: hsl(231, 84%, 83%);
     font-family: $font-family-sans-serif-extrabold;

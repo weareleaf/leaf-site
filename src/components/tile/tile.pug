@@ -1,15 +1,15 @@
 mixin tile(c)
   a.tile(
-    href= c.tileUrl
+    href= c.url
     rel=(c.newTab ? "noopener" : undefined)
     target=(c.newTab ? "_blank" : undefined)
   )
-    if c.tileImage
+    if c.image
       +image({
         context: "tile",
-        src: c.tileImage.src,
-        alt: c.tileImage.alt
+        src: c.image.src,
+        alt: c.image.alt
       })
     .tile__content
-      h3.tile__heading= c.tileHeading
-      p.tile__text= c.tileText
+      h3.tile__heading= c.heading
+      p.tile__text= c.text

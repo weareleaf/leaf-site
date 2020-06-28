@@ -13,14 +13,14 @@ block prepend vars
 block pageComponents
 
   +hero({
-    heroHeading: heroHeading,
-    heroSubheading: heroSubheading,
-    heroIntroImage: true,
-    heroImage: {
+    heading: heroHeading,
+    subheading: heroSubheading,
+    introImage: true,
+    image: {
       src: "/assets/images/case-studies/rift/image-1.png",
       alt: "A collection of form elements used in MyRIFT to collect information from their customers, such as their address, bank, and vehicle registration."
     },
-    heroImageModifier: "rift"
+    imageModifier: "rift"
   })
 
   section.section
@@ -34,65 +34,65 @@ block pageComponents
         .rift-challenge__content
           +content({
             contentHeading2: true,
-            contentHeading: "The challenge",
-            contentIntro: "RIFT’s customer-facing claim tool, MyRIFT, wasn’t effectively converting their online leads into successful claims.",
-            contentParagraphs: [
+            heading: "The challenge",
+            intro: "RIFT’s customer-facing claim tool, MyRIFT, wasn’t effectively converting their online leads into successful claims.",
+            paragraphs: [
               {
-                contentText: "We were tasked with more effectively qualifying leads before they signed-up to MyRIFT, and to help eligible claimants submit their claim information, all the while increasing the quality of any information being captured."
+                text: "We were tasked with more effectively qualifying leads before they signed-up to MyRIFT, and to help eligible claimants submit their claim information, all the while increasing the quality of any information being captured."
               }
             ]
           })
           +detail-tags({
-            detailTagHeading: "What we did",
-            detailTagModifier: "rift",
-            detailTags: [
+            heading: "What we did",
+            modifier: "rift",
+            tags: [
               {
-                detailTagIcon: "assets/images/case-studies/icons/api.svg",
-                detailTagText: "API data lookups"
+                icon: "assets/images/case-studies/icons/api.svg",
+                text: "API data lookups"
               },
               {
-                detailTagIcon: "assets/images/case-studies/icons/pen-2.svg",
-                detailTagText: "Content writing"
+                icon: "assets/images/case-studies/icons/pen-2.svg",
+                text: "Content writing"
               },
               {
-                detailTagIcon: "assets/images/case-studies/icons/data-2.svg",
-                detailTagText: "Data analysis"
+                icon: "assets/images/case-studies/icons/data-2.svg",
+                text: "Data analysis"
               },
               {
-                detailTagIcon: "assets/images/case-studies/icons/html-tags.svg",
-                detailTagText: "Development"
+                icon: "assets/images/case-studies/icons/html-tags.svg",
+                text: "Development"
               },
               {
-                detailTagIcon: "assets/images/case-studies/icons/switch-2.svg",
-                detailTagText: "Form design"
+                icon: "assets/images/case-studies/icons/switch-2.svg",
+                text: "Form design"
               },
               {
-                detailTagIcon: "assets/images/case-studies/icons/journey-2.svg",
-                detailTagText: "Journey mapping"
+                icon: "assets/images/case-studies/icons/journey-2.svg",
+                text: "Journey mapping"
               },
               {
-                detailTagIcon: "assets/images/case-studies/icons/brackets.svg",
-                detailTagText: "Pattern library"
+                icon: "assets/images/case-studies/icons/brackets.svg",
+                text: "Pattern library"
               },
               {
-                detailTagIcon: "assets/images/case-studies/icons/prototype-2.svg",
-                detailTagText: "Prototypes"
+                icon: "assets/images/case-studies/icons/prototype-2.svg",
+                text: "Prototypes"
               },
               {
-                detailTagIcon: "assets/images/case-studies/icons/ear-2.svg",
-                detailTagText: "Stakeholder interviews"
+                icon: "assets/images/case-studies/icons/ear-2.svg",
+                text: "Stakeholder interviews"
               },
               {
-                detailTagIcon: "assets/images/case-studies/icons/lightbulb.svg",
-                detailTagText: "Stakeholder workshops"
+                icon: "assets/images/case-studies/icons/lightbulb.svg",
+                text: "Stakeholder workshops"
               },
               {
-                detailTagIcon: "assets/images/case-studies/icons/flip-cards.svg",
-                detailTagText: "Visual design"
+                icon: "assets/images/case-studies/icons/flip-cards.svg",
+                text: "Visual design"
               },
               {
-                detailTagIcon: "assets/images/case-studies/icons/wireframe-2.svg",
-                detailTagText: "Wireframes"
+                icon: "assets/images/case-studies/icons/wireframe-2.svg",
+                text: "Wireframes"
               }
             ]
           })
@@ -101,32 +101,32 @@ block pageComponents
     .container
       +content-block({
         introHeading: true,
-        contentBlockHeading: "Our approach",
-        contentBlockItems: [
+        heading: "Our approach",
+        items: [
           {
-            contentHeading: "Uncover existing pain-points",
-            contentIntro: "Analytical software helps answer a range of questions, from how well an app is performing, to where users are struggling.",
-            contentParagraphs: [
+            heading: "Uncover existing pain-points",
+            intro: "Analytical software helps answer a range of questions, from how well an app is performing, to where users are struggling.",
+            paragraphs: [
               {
-                contentText: "We added Mixpanel to both the RIFT website and MyRIFT application, helping us to understand existing user behaviours, and to establish a baseline conversion rate for qualifying and converting new leads."
+                text: "We added Mixpanel to both the RIFT website and MyRIFT application, helping us to understand existing user behaviours, and to establish a baseline conversion rate for qualifying and converting new leads."
               }
             ]
           },
           {
-            contentHeading: "Understand the audience",
-            contentIntro: "Many of RIFT's customers were in the Armed Forces, where Internet speeds are often slow and mobile usage is common.",
-            contentParagraphs: [
+            heading: "Understand the audience",
+            intro: "Many of RIFT's customers were in the Armed Forces, where Internet speeds are often slow and mobile usage is common.",
+            paragraphs: [
               {
-                contentText: "For MyRIFT to be considered a viable alternative to claiming through the RIFT Call Centre, we'd need the application to be optimised for small screens, and be reliable on even the slowest of network connections."
+                text: "For MyRIFT to be considered a viable alternative to claiming through the RIFT Call Centre, we'd need the application to be optimised for small screens, and be reliable on even the slowest of network connections."
               }
             ]
           }
         ],
-        contentBlockImage: {
+        image: {
           src: "/assets/images/case-studies/rift/image-3.png",
           alt: "A download speed pie chart, as well as a preview of the analytics dashboard we used to measure the sites performance, and also find any existing pain-points for users."
         },
-        contentBlockImageModifier: "rift-3"
+        imageModifier: "rift-3"
       })
       +image({
         context: "content-block",
@@ -141,11 +141,11 @@ block pageComponents
         .grid.grid--center-text
           .grid__item
             +content({
-              contentHeading: "Move quickly and effectively",
-              contentIntro: "A combination of quick-fire sketches and wireframing help facilitate ideation and conversation in the most efficient way.",
-              contentParagraphs: [
+              heading: "Move quickly and effectively",
+              intro: "A combination of quick-fire sketches and wireframing help facilitate ideation and conversation in the most efficient way.",
+              paragraphs: [
                 {
-                  contentText: "We relied heavily on low-fidelity prototypes in the early stages of our design exploration, helping us to quickly validate or discredit concepts, gain stakeholder buy-in, and ensure a single, shared vision."
+                  text: "We relied heavily on low-fidelity prototypes in the early stages of our design exploration, helping us to quickly validate or discredit concepts, gain stakeholder buy-in, and ensure a single, shared vision."
                 }
               ]
             })
@@ -169,19 +169,19 @@ block pageComponents
               img(src="/assets/images/case-studies/rift/image-5.png" alt="A mobile screen showing one of the steps from the initial eligibility questionaire. Did you use your own vehicle or public transport to get to those workplaces?")
           .rift-metrics__content
             +content({
-              contentHeading: "Focus on the lowest hanging fruit",
-              contentIntro: "Historical data highlighted the registration processes as a key point of failure in converting prospective claimants.",
-              contentParagraphs: [
+              heading: "Focus on the lowest hanging fruit",
+              intro: "Historical data highlighted the registration processes as a key point of failure in converting prospective claimants.",
+              paragraphs: [
                 {
-                  contentText: "A simple questionnaire helped us to quality leads without any form of human intervention, which had been a feature of the previous eligibility process. We also replaced an existing enquiry system with a more conventional registration form, creating a more conventional sign-up process, and further removing manual involvement from the RIFT team."
+                  text: "A simple questionnaire helped us to quality leads without any form of human intervention, which had been a feature of the previous eligibility process. We also replaced an existing enquiry system with a more conventional registration form, creating a more conventional sign-up process, and further removing manual involvement from the RIFT team."
                 }
               ]
             })
             +metrics({
-              metricsIconModifier: "mobile",
-              metricsTextBold: "14,600",
-              metricsText: "people checked their eligibility in April 2020.",
-              metricsModifier: "margin"
+              iconModifier: "mobile",
+              textBold: "14,600",
+              text: "people checked their eligibility in April 2020.",
+              modifier: "margin"
             })
 
   section.section
@@ -189,19 +189,19 @@ block pageComponents
       .rift-documents-upload
         .rift-documents-upload__content
           +content({
-            contentHeading: "Painless document uploads",
-            contentIntro: "To prove their income and outgoings, users have to provide a range of documents as part of their claim.",
-            contentParagraphs: [
+            heading: "Painless document uploads",
+            intro: "To prove their income and outgoings, users have to provide a range of documents as part of their claim.",
+            paragraphs: [
               {
-                contentText: "Claimants previously sent their files to a dedicated email address, meaning documents turned up in all sizes and formats, and the RIFT staff had to routinely manage the Inbox. We created a document upload system, allowing claimants to upload any number of wage slips or bank statements in a single action, and without any involvement from the RIFT team."
+                text: "Claimants previously sent their files to a dedicated email address, meaning documents turned up in all sizes and formats, and the RIFT staff had to routinely manage the Inbox. We created a document upload system, allowing claimants to upload any number of wage slips or bank statements in a single action, and without any involvement from the RIFT team."
               }
             ]
           })
           +metrics({
-            metricsIconModifier: "mobile",
-            metricsTextBold: "1,000+",
-            metricsText: "files are now uploaded in MyRIFT each month.",
-            metricsModifier: "margin"
+            iconModifier: "mobile",
+            textBold: "1,000+",
+            text: "files are now uploaded in MyRIFT each month.",
+            modifier: "margin"
           })
         .rift-documents-upload__image
           figure.case-study-image.case-study-image--rift-6
@@ -222,28 +222,27 @@ block pageComponents
             img(src="/assets/images/case-studies/rift/image-7.png" alt="An efficient autocomplete search field for looking up a bank. In this example, simply typing two letters returns three different options for the user to choose from.")
         .rift-details-lookup__content
           +content({
-            contentHeading: "Make it easy to give high-quality data",
-            contentIntro: "Small improvements to a booking flow can have a big impact on the quality and quantity of data you’re able to capture.",
-            contentParagraphs: [
+            heading: "Make it easy to give high-quality data",
+            intro: "Small improvements to a booking flow can have a big impact on the quality and quantity of data you’re able to capture.",
+            paragraphs: [
               {
-                contentText: "Rather than asking the user to enter every detail themselves, we used unique details like postcodes and registration numbers to lookup entire home addresses, employers, and vehicle details. To help customers select the bank account their refund was paid into, we also created a lookup that offered real-time suggestions; for example, ‘The Co-operative Bank’ will be recommended even if a user types 'Co-op bank’, or even 'Britannia’, who they merged with in 2009."
+                text: "Rather than asking the user to enter every detail themselves, we used unique details like postcodes and registration numbers to lookup entire home addresses, employers, and vehicle details. To help customers select the bank account their refund was paid into, we also created a lookup that offered real-time suggestions; for example, ‘The Co-operative Bank’ will be recommended even if a user types 'Co-op bank’, or even 'Britannia’, who they merged with in 2009."
               }
             ]
           })
           +metrics({
-            heading: true,
-            metricsModifier: "margin",
-            metricsIconModifier: "rotate",
-            metricItems: [
+            modifier: "margin",
+            iconModifier: "rotate",
+            items: [
               {
-                metricsUnit: "99.8%",
-                metricsSubText: "address accuracy.",
-                metricsText: "The 20,000 addresses captured in April 2020 were precise enough to successfully plot coordinates on a map in all but 50 cases."
+                unit: "99.8%",
+                subtext: "address accuracy.",
+                text: "The 20,000 addresses captured in April 2020 were precise enough to successfully plot coordinates on a map in all but 50 cases."
               },
               {
-                metricsUnit: "99%",
-                metricsSubText: "vehicle accuracy",
-                metricsText: "The 5,000 vehicles captured in April 2020 had a valid registration number, make, and model, in all but 50 cases."
+                unit: "99%",
+                subtext: "vehicle accuracy",
+                text: "The 5,000 vehicles captured in April 2020 had a valid registration number, make, and model, in all but 50 cases."
               }
             ]
           })
@@ -261,34 +260,33 @@ block pageComponents
 
             h2.content-block__heading The outcome
             +content({
-              contentHeading: "Happy customers. Happy client",
-              contentIntro: "Such was the success of our initial work with RIFT, we're continuing to work together well into 2020.",
-              contentParagraphs: [
+              heading: "Happy customers. Happy client",
+              intro: "Such was the success of our initial work with RIFT, we're continuing to work together well into 2020.",
+              paragraphs: [
                 {
-                  contentText: "The pre-registation questionnaire and amended processes significantly improved conversion to registration, getting more and better qualified leads into the app, and increasing the number of claims submitted online."
+                  text: "The pre-registation questionnaire and amended processes significantly improved conversion to registration, getting more and better qualified leads into the app, and increasing the number of claims submitted online."
                 }
               ]
             })
             +metrics({
-              heading: true,
-              metricsModifier: "margin",
-              metricsIconModifier: "rotate",
-              metricItems: [
+              modifier: "margin",
+              iconModifier: "rotate",
+              items: [
                 {
-                  metricsUnit: "192%",
-                  metricsSubText: "increase in claim submissions.",
-                  metricsText: "Claim submissions have almost quadrupled in the past 2 years, with more than 5,000 claims submitted in April 2020 alone."
+                  unit: "192%",
+                  subtext: "increase in claim submissions.",
+                  text: "Claim submissions have almost quadrupled in the past 2 years, with more than 5,000 claims submitted in April 2020 alone."
                 },
                 {
-                  metricsUnit: "84%",
-                  metricsSubText: "increase in unqiue sign-ins.",
-                  metricsText: "The number of people using MyRIFT each month has increased significantly, with over 8,000 active users in March and April 2020."
+                  unit: "84%",
+                  subtext: "increase in unqiue sign-ins.",
+                  text: "The number of people using MyRIFT each month has increased significantly, with over 8,000 active users in March and April 2020."
                 }
               ]
             })
           //-.rift-outcome__testimonial
             +testimonial({
-              testimonialBlockQuote: "Leaf were a pleasure to work with – always available and willing to offer advice, or to put forward constructive suggestions. The decision to work with them is one we haven’t regretted, and I’d gladly recommend them to anyone looking to improve their own booking flow.",
+              quote: "Leaf were a pleasure to work with – always available and willing to offer advice, or to put forward constructive suggestions. The decision to work with them is one we haven’t regretted, and I’d gladly recommend them to anyone looking to improve their own booking flow.",
               author: {
                 authorName: "Bradley Post",
                 authorDetails: "Managing Director — RIFT Group",

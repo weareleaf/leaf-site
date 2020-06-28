@@ -16,13 +16,14 @@
 @import 'base/transitions';
 
 // Components
-@import '../../components/address/address';
 @import '../../components/author/author';
+//-@import '../../components/biography/biography';
 @import '../../components/blog-post/blog-post';
 @import '../../components/block/block';
 @import '../../components/button/button';
 @import '../../components/bullet/bullet';
 @import '../../components/close/close';
+@import '../../components/collage/collage';
 @import '../../components/company-logos/company-logos';
 @import '../../components/contact/contact';
 @import '../../components/contact-tile/contact-tile';
@@ -30,6 +31,7 @@
 @import '../../components/content-block/content-block';
 @import '../../components/details/details';
 @import '../../components/detail-tags/detail-tags';
+@import '../../components/event/event';
 @import '../../components/explanation/explanation';
 @import '../../components/explanation-list/explanation-list';
 @import '../../components/footer/footer';
@@ -37,12 +39,12 @@
 @import '../../components/header/header';
 @import '../../components/hero/hero';
 @import '../../components/intro/intro';
-@import '../../components/location-marker/location-marker';
+@import '../../components/pin/pin';
 @import '../../components/logo/logo';
+@import '../../components/logo-grid/logo-grid';
 @import '../../components/modal/modal';
 @import '../../components/metrics/metrics';
 @import '../../components/nav/nav';
-@import '../../components/page-header/page-header';
 @import '../../components/permalink/permalink';
 @import '../../components/post/post';
 @import '../../components/presentation/presentation';

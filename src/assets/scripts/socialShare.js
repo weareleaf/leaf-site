@@ -6,7 +6,6 @@ const openShareWindow = function(url) {
 
 const shareTwitter = function(url, title) {
   openShareWindow(`https://twitter.com/intent/tweet?url=${url}&text=${title}`)
-
 }
 
 const shareFacebook = function(url) {

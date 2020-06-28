@@ -8,11 +8,11 @@ block pageContent
     block pageComponents
 
     +close({
-      closeUrl: "/company"
+      url: "/company"
     })
 
-      +image({
-        context: "biography",
-        src: c.biographyImage.src,
-        alt: c.biographyImage.alt
-      })
+    +image({
+      context: "biography",
+      src: c.image.src,
+      alt: c.image.alt
+    })

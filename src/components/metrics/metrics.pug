@@ -1,19 +1,20 @@
 mixin metrics(c)
-  .metrics(class= c.metricsModifier ? "metrics--" + c.metricsModifier : "")
-    if c.heading === true
-      h4.metrics__heading= c.metricsHeading
+  .metrics(class= c.modifier ? "metrics--" + c.modifier : "")
+    if c.heading
+      h4.metrics__heading= c.heading
+    if c.items
       .metrics__grid
-        each item in c.metricItems
+        each item in c.items
           .metrics__item
-            .metrics__icon(class= c.metricsIconModifier ? "metrics__icon--" + c.metricsIconModifier : "")
+            .metrics__icon(class= c.iconModifier ? "metrics__icon--" + c.iconModifier : "")
               img(src="assets/images/icons/arrow.svg", alt="Arrow")
-            p.metrics__unit= item.metricsUnit
-            p.metrics__sub-text= item.metricsSubText
-            p.metrics__text= item.metricsText
+            p.metrics__unit= item.unit
+            p.metrics__sub-text= item.subtext
+            p.metrics__text= item.text
     else
       .metrics__container
-        .metrics__icon(class= c.metricsIconModifier ? "metrics__icon--" + c.metricsIconModifier : "")
+        .metrics__icon(class= c.iconModifier ? "metrics__icon--" + c.iconModifier : "")
           img(src="assets/images/icons/arrow.svg", alt="Arrow")
         .metrics__content
-          strong.metrics__text.metrics__text--bold= c.metricsTextBold
-          p.metrics__text.metrics__text--lg= c.metricsText
+          strong.metrics__text.metrics__text--bold= c.textBold
+          p.metrics__text.metrics__text--lg= c.text
