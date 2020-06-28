@@ -1,22 +1,12 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<svg width="40px" height="37px" viewBox="0 0 40 37" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-    <!-- Generator: Sketch 61 (89581) - https://sketch.com -->
-    <title>Icon</title>
-    <desc>Created with Sketch.</desc>
-    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-        <g id="Icon-/-Robot" transform="translate(0.000000, -1.000000)">
-            <g id="Icon">
-                <rect id="Background" fill-rule="nonzero" x="0" y="0" width="40" height="40"></rect>
-                <path d="M14.9399999,18.8099999 C14.9399999,19.9415998 14.0222832,20.8599998 12.8899999,20.8599998 C11.7583999,20.8599998 10.8399999,19.9415998 10.8399999,18.8099999 C10.8399999,17.6777165 11.7583999,16.7599999 12.8899999,16.7599999 C14.0222832,16.7599999 14.9399999,17.6777165 14.9399999,18.8099999" id="Fill-1" fill="#9999E6"></path>
-                <path d="M28.0599998,18.8099999 C28.0599998,19.9415998 27.1422831,20.8599998 26.0099998,20.8599998 C24.8783998,20.8599998 23.9599998,19.9415998 23.9599998,18.8099999 C23.9599998,17.6777165 24.8783998,16.7599999 26.0099998,16.7599999 C27.1422831,16.7599999 28.0599998,17.6777165 28.0599998,18.8099999" id="Fill-7" fill="#9999E6"></path>
-                <path d="M27.6675321,36.4399997 L11.2324675,36.4399997 C8.29842946,36.4399997 5.91999996,34.0609064 5.91999996,31.1268683 L5.91999996,13.8724675 C5.91999996,10.9384294 8.29842946,8.55999994 11.2324675,8.55999994 L27.6675321,8.55999994 C30.6015702,8.55999994 32.9799997,10.9384294 32.9799997,13.8724675 L32.9799997,31.1268683 C32.9799997,34.0609064 30.6015702,36.4399997 27.6675321,36.4399997 Z" id="Stroke-11" stroke="#9999E6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
-                <line x1="19.4499998" y1="2" x2="19.4499998" y2="8.55999994" id="Stroke-13" stroke="#9999E6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></line>
-                <path d="M5.91999996,18.3999999 L3.80931998,18.3999999 C2.25811427,18.3999999 1,19.5919211 1,21.0623348 L1,26.3969985 C1,27.8674123 2.25811427,29.0599998 3.80931998,29.0599998 L5.91999996,29.0599998" id="Stroke-15" stroke="#9999E6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
-                <path d="M33.7999997,18.3999999 L35.9106797,18.3999999 C37.4625883,18.3999999 38.7199997,19.5919211 38.7199997,21.0623348 L38.7199997,26.3969985 C38.7199997,27.8674123 37.4625883,29.0599998 35.9106797,29.0599998 L33.7999997,29.0599998" id="Stroke-17" stroke="#9999E6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
-                <line x1="18.2199998" y1="29.4699998" x2="22.3199998" y2="29.4699998" id="Stroke-19" stroke="#9999E6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></line>
-                <line x1="11.6599999" y1="29.4699998" x2="15.7599999" y2="29.4699998" id="Stroke-21" stroke="#9999E6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></line>
-                <line x1="24.7799998" y1="29.4699998" x2="28.8799998" y2="29.4699998" id="Stroke-23" stroke="#9999E6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></line>
-            </g>
-        </g>
-    </g>
+<svg width="40" height="37" xmlns="http://www.w3.org/2000/svg">
+  <g transform="translate(0 -1)" fill="none" fill-rule="evenodd">
+    <rect width="40" height="40"/>
+    <path d="M14.94 18.81a2.05 2.05 0 11-4.1 0 2.05 2.05 0 014.1 0M28.06 18.81a2.05 2.05 0 11-4.1 0 2.05 2.05 0 014.1 0" fill="#9999E6"/>
+    <path d="M27.668 36.44H11.232a5.313 5.313 0 01-5.312-5.313V13.872a5.312 5.312 0 015.312-5.312h16.436a5.312 5.312 0 015.312 5.312v17.255a5.313 5.313 0 01-5.312 5.313z" stroke="#9999E6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+    <line x1="19.45" y1="2" x2="19.45" y2="8.56" stroke="#9999E6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M5.92 18.4H3.81C2.257 18.4 1 19.592 1 21.062v5.335c0 1.47 1.258 2.663 2.81 2.663h2.11M33.8 18.4h2.11c1.553 0 2.81 1.192 2.81 2.662v5.335c0 1.47-1.257 2.663-2.81 2.663H33.8" stroke="#9999E6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+    <line x1="18.22" y1="29.47" x2="22.32" y2="29.47" stroke="#9999E6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+    <line x1="11.66" y1="29.47" x2="15.76" y2="29.47" stroke="#9999E6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+    <line x1="24.78" y1="29.47" x2="28.88" y2="29.47" stroke="#9999E6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
 </svg>
