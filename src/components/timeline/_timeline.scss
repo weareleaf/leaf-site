@@ -1,12 +1,10 @@
-$content-width: 27rem; //540px
+$timeline-item-offset: 1.9rem;
 
 .timeline {
-  //margin: -$spacing-5 auto $spacing-11 auto;
   margin: 0 auto;
   position: relative;
 
   @media screen and (min-width: map-get($breakpoints, 'breakpoint-4')) {
-    //margin: 0 auto $spacing-13 auto;
     max-width: 60rem;
   }
 
@@ -17,7 +15,7 @@ $content-width: 27rem; //540px
     position: relative;
 
     @media screen and (min-width: map-get($breakpoints, 'breakpoint-4')) {
-      margin-bottom: -1.9rem;
+      //margin-bottom: -$timeline-item-offset;
       padding: 0;
 
       &:nth-child(even) {
@@ -33,22 +31,13 @@ $content-width: 27rem; //540px
       content: '';
       height: 1.5rem;
       left: 0;
-      margin-top: 1.9rem;
+      margin-top: $timeline-item-offset;
       position: absolute;
       width: 1.5rem;
-
-      @media screen and (min-width: map-get($breakpoints, 'breakpoint-1')) {
-        //margin-left: -$spacing-2;
-      }
 
       @media screen and (min-width: map-get($breakpoints, 'breakpoint-4')) {
         left: 50%;
         transform: translateX(-50%);
-        //margin-left: -.95rem;
-      }
-
-      @media screen and (min-width: map-get($breakpoints, 'breakpoint-6')) {
-        //margin-left: -$spacing-4;
       }
     }
 
@@ -59,12 +48,12 @@ $content-width: 27rem; //540px
       height: 100%;
       left: .7rem;
       position: absolute;
-      top: 1.9rem;
+      top: $timeline-item-offset;
       width: $border-width-sm;
       z-index: z('below');
 
       @media screen and (min-width: map-get($breakpoints, 'breakpoint-4')) {
-        height: calc(100% - 1.9rem);
+        height: calc(100% - $timeline-item-offset);
         left: 50%;
         transform: translateX(-50%);
       }
@@ -74,31 +63,28 @@ $content-width: 27rem; //540px
   &__content {
 
     @media screen and (min-width: map-get($breakpoints, 'breakpoint-4')) {
-      max-width: $content-width;
+      max-width: 27rem;
     }
   }
 
   &__button {
     background-color: var(--color-background);
     border: $border-width-sm $border-style hsl(226, 64%, 94%);
-    bottom: -$spacing-8;
     color: hsl(249, 48%, 92%);
     cursor: pointer;
+    display: block;
     font-family: $font-family-sans-serif-medium;
     font-size: $font-size-xs;
     padding: $spacing-5;
-    position: absolute;
     width: 100%;
 
     @media screen and (min-width: map-get($breakpoints, 'breakpoint-2')) {
-      left: 5rem;
       padding: $spacing-4 $spacing-5;
-      transform: translate(-50%, 0);
       width: auto;
     }
 
     @media screen and (min-width: map-get($breakpoints, 'breakpoint-4')) {
-      left: 50%;
+      margin: $timeline-item-offset auto 0;
     }
   }
 }
