@@ -1,0 +1,112 @@
+extends ../../layouts/content.pug
+
+block prepend vars
+  -var pageTitle = "Leaf is five years old | Leaf"
+  -var metaUrl = "https://weareleaf.com/blog/leaf-is-five-years-old"
+  -var metaTitle = "Leaf is five years old"
+  -var metaDescription = "Leaf have managed to stay in business for five years, and we've learnt a few worthwhile lessons along the way."
+
+  -var heroHeading = "Leaf is five years old"
+
+block pageComponents
+
+  article
+
+    +hero({
+      heading: heroHeading,
+      author: "Chris Annetts",
+      date: "30 June 2020",
+      minutesToRead: 4
+    })
+
+    .section
+      .container
+
+        .grid.grid--post
+
+          +share-icons({})
+
+          .blog-post
+
+            p.blog-post__intro Three years ago today, I wrote a <a href="https://weareleaf.com/blog/leaf-is-two-years-old">very similar piece</a> celebrating our second birthday. Today, like a proud and slightly overbearing parent, I get to marvel at little studio turning five.
+
+            p.blog-post__text When I wrote that last post in June 2017, we were still a month away from making our first ever hire. Today, we're a team of five, and if all goes to plan, we'll shortly be adding another <a href="https://weareleaf.com/careers/front-end-developer">frontend developer</a> to our ranks.
+
+            p.blog-post__text As you might expect, the business is largely unrecognisable from the one we described all those years ago. What was previously a glorified designer/developer partnership is now a very much a studio; VAT payments, performance reviews, team meet-ups, and company handbooks are just a few indicators that things changed considerably along the way.
+
+            +permalink({
+              heading: "What we’ve learnt so far"
+            })
+
+            p.blog-post__text Growing as a business means pushing yourself outside of your comfort zone as you discover skills, roles, and problems that were never even on your radar.
+
+            blockquote.blog-blockquote
+              p.main-blockquote The more I learn, the more I realise how much I don't know.
+              footer
+                cite Albert Einstein
+
+            p.blog-post__text One thing that hasn't wavered, even from the very beginning, is the desire to work calmly, enjoying what we do, and making a measurable, valuable impact on the products we're involved with.
+
+            h3.blog-post__h3 Solve a specific problem, and solve it well
+
+            p.blog-post__text We knew very early on which services that we didn't want to offer (branding, brochure sites, print), but that still left a digital chasm of projects that we'd happily try our hand at.
+
+            p.blog-post__text A couple of years ago, we made our first attempt at differentiating the business offering, pitching the company as automation experts. When that didn't land as we'd hoped, we pivoted again, this time repositioning ourselves as data capture experts.
+
+            p.blog-post__text Dedicating your time to intimately understanding a single area of interest creates an intense relevance with a much smaller subset of potential clients, who themselves are in need of expert advice within that one specific subject matter.
+
+            p.blog-post__text What's more, Leaf will always be a small studio. We may get a little bigger or a little smaller over time, but we're not shooting for sharp or extreme growth. As such, we're only ever looking for a handful of perfectly suited clients; it's an anti-conveyor-belt, atypical agency model, and it works great for us.
+
+            h3.blog-post__h3 Make decisions, even if they're imperfect ones
+
+            p.blog-post__text It's only natural that you'd want all the facts before making any kind of significant commitment, but it's rarely an efficient way to run a business. To avoid bottlenecks, key decision makers have to be comfortable with committing to judgement calls based on what they <em>do</em> know.
+
+            p.blog-post__text It's unlikely that a decision made from your experience, your gut, and _some_ evidence will be woefully wrong. It may be less-than-perfect, but achieving 80% of the value without weeks, months, or even years of exploration, research, tests, and discussions is infinitely more desirable than being paralysed by planning.
+
+            h3.blog-post__h3 Work on the business, not in the business
+
+            p.blog-post__text Three years back, Mike and I spent pretty much every working minute solving client problems, rather than our own. This approach is exciting, and the coffers quickly swell, but your growth is capped, and the risk to your business should you lose a few clients is considerable.
+
+            p.blog-post__text We've still not won this battle, but don't need to be convinced of the benefit. More than half of our time is now spent working <em>on</em> Leaf, rather than <em>in</em> Leaf. Managing people, clients, sales funnels, and marketing strategies takes time, and isn't optional.
+
+            p.blog-post__text Build yourself a team capable of doing great work, and support them with the structure and an environment that lets them do just that.
+
+            h3.blog-post__h3 Delegate where possible
+
+            p.blog-post__text We're surrounded by talented, highly skilled individuals, who are able to take a portion of our workloads off our plate, but so often we don't feel comfortable delegating.
+
+            p.blog-post__text By taking ownership of every detail, you not only spread yourself too thinly, but you create unnecessary bottlenecks. Your skills may seen considerable, but like your time, they only go so far.
+
+            p.blog-post__text Learn to let go, and trust in others to not completely screw it up. They might even surprise you.
+
+            h3.blog-post__h3 Success isn't measured in pound signs
+
+            p.blog-post__text Money is of course important, but it is not, and will never be, how we measure success. When the number of £s in your company account is the main barometer for how well you're doing, you're setting yourself up to make rash, tired, and selfish decisions that negatively impact everyone around you.
+
+            p.blog-post__text Rather than fetishising making bank, passionately chase adding value; the more valuable you are, the more desirable your services, and the money you'll make regardless.
+
+            h3.blog-post__h3 Work smarter, not harder
+
+            p.blog-post__text The grind is not an obligation or a badge of honour, and if you're feeling the need to consistently work more than 40 hours a week, you're either not working effectively enough, or you're working for arseholes.
+
+            p.blog-post__text If you're lucky, your job will be something you're passionate about. It may well have been your hobby before you ever got paid to do it, or you may have stumbled into it somewhere along your journey. But either way, it's still a job.
+
+            p.blog-post__text When you work a long and gruelling schedule, you're not showing up for yourself, your family, or your friends. A single parent working 3 minimum-wage jobs to put dinner on the table for their kids is a selfless act; working into your evenings or weekends for a slave-driving client is not.
+
+            +permalink({
+              heading: "What's next"
+            })
+
+            p.blog-post__text As we mentioned earlier, we're hopeful that we'll be a team of six within the next couple of months with the addition of a new senior frontend developer.
+
+            p.blog-post__text Work-wise, we've just started two new projects that we're very excited about, and are looking to help one or two new clients over the coming months. If you need to capture information from your users for them to use your service, <a href="mailto:enquiries@weareleaf.com">we'd love to hear from you</a>.
+
+            p.blog-post__text As I said three years ago, who really knows what’s next? The World is largely unrecognisable from the one we knew 6 months ago, and like everyone else, we're still feeling our way into the new normal.
+
+            p.blog-post__text If we're still doing valuable work for good people in another five years time, that'll be good enough for us.
+
+  section.section.section--lg-spacing
+    .container
+      .blog-content
+        h3.blog-content__heading Keep reading
+        +blog-post-grid
