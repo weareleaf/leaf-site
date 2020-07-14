@@ -3,7 +3,7 @@ mixin header(c)
     .container
       .header__main
         .header__logo
-          a.logo(href="/")
+          a.logo(href='/', aria-label="Leaf logo")
             +logo
 
         unless c.contentPage

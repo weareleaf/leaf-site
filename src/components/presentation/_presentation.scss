@@ -77,7 +77,7 @@ $image-height: $size-11;
       */
 
       &--laced {
-        height: 120%;
+        height: 115%;
 
         @media screen and (min-width: map-get($breakpoints, 'breakpoint-1')) {
           top: $spacing-11;
