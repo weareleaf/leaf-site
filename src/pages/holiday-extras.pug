@@ -206,15 +206,16 @@ block pageComponents
     .centered-content.centered-content--hx
       .bg-shapes
         .bg-shape.bg-shape--1
-          img(src="/assets/images/case-studies/hx/shape.png")
+          img(src="/assets/images/case-studies/hx/shape.png", alt="Background shape")
         .bg-shape.bg-shape--2
-          img(src="/assets/images/case-studies/hx/shape.png")
+          img(src="/assets/images/case-studies/hx/shape.png", alt="Background shape")
       .container
         .grid.grid--center-text
           .grid__item
             +content({
               heading: "Personalise the experience",
               intro: "It’s no longer enough to create one-size fits all products, and the entire experience should be tailored for each individual.",
+              contentTextModifier: "contrast",
               paragraphs: [
                 {
                   text: "We were able to offer users highly relevant upgrades by allowing them to tell us more about their trip. By making this step optional, the majority can continue without interacting at all, and those that do have additional requirements will only see upgrades that meet their needs."
@@ -315,5 +316,5 @@ block pageComponents
           })
         .hx-outcome__prototype
           .hx-outcome__main-prototype
-            iframe(src="https://marvelapp.com/1cbg8j3g?emb=1&iosapp=false&frameless=false", width="500", height="1033", frameborder="0", allowtransparency="true")
+            iframe(src="https://marvelapp.com/1cbg8j3g?emb=1&iosapp=false&frameless=false", width="500", height="1033", frameborder="0", allowtransparency="true", title="Holiday Extras Prototype")
 

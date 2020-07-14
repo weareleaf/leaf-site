@@ -38,5 +38,9 @@
     @media screen and (min-width: map-get($breakpoints, 'breakpoint-11')) {
       margin-bottom: $spacing-6;
     }
+
+    &--contrast {
+      color: hsl(254, 100%, 95%);
+    }
   }
 }
