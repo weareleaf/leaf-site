@@ -399,6 +399,11 @@ block pageComponents
       .company.journey
         h2.large.large--center The Leaf timeline
         +timeline({
+          initialDisplayLimit: 4,
+          buttonText: {
+            contracted: "Explore the full story",
+            expanded: "Hide the full story"
+          },
           items: [
             {
               date: "2012-06",

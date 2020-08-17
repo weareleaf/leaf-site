@@ -1,8 +1,6 @@
 mixin timeline(c)
-  .timeline
-    each item in c.items
-      .timeline__item
+  .timeline(data-expanded-text= c.buttonText.expanded, data-contracted-text= c.buttonText.contracted)
+    each item, index in c.items
+      .timeline__item(class= (c.initialDisplayLimit && index > c.initialDisplayLimit - 1) ? "timeline__item--expandable" : "")
         .timeline__content
           +event(item)
-    if c.buttonText
-      button.timeline__button= c.buttonText
