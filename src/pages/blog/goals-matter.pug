@@ -7,87 +7,88 @@ block prepend vars
   -var metaDescription = "Learn how well defined goals, used appropriately, can transform the effectiveness of your web development teams."
 
   -var heroHeading = "Goals matter"
-  -var heroSubheading = "(by Mike Carter)"
 
 block pageComponents
 
-  +banner({
-  })
+  article
 
-  .banner-spacer
+    +hero({
+      heading: heroHeading,
+      author: "Mike Carter",
+      date: "18 June 2019",
+      minutesToRead: 5
+    })
 
-  +hero({
-    heroHeading: heroHeading,
-    heroSubheading: heroSubheading,
-  })
-
-  .section
-    .container
-
-      .grid.grid--center
-
-        +share-icons({
-          socialModifier: "inline"
-        })
-
-        .blog-post
-
-          p.blog-post__intro Without a clear definition of success, it's hard to know which direction to take, or whether you're making any progress. Goals provide direction and clarity for your teams.
-
-          p.blog-post__text A goal is something you collectively agree that you’d like to accomplish together. It’s simultaneously a result to work towards, and a compass to help guide your efforts in getting there.
-
-          p.blog-post__text Goals can scale from a single person to an entire organisation, but they work best when given to a team just large enough to effectively achieve them. At Leaf, we use goals often to help get traction in challenging development environments.
-
-          h3.blog-post__h3 Goals should be SMART
-
-          ul.styled-list.styled-list--inside
-            li.styled-list__item <strong>Specific</strong> - They state what will be done.
-            li.styled-list__item <strong>Measureable</strong> - They can be objectively verified as being achieved.
-            li.styled-list__item <strong>Achievable</strong> - They are reasonably achievable by their team.
-            li.styled-list__item <strong>Relevant</strong> - They are of some benefit to the organisation they’re contributing to.
-            li.styled-list__item <strong>Time-based</strong> - They have some sort of expiry date set against them.
-          br
-
-          p.blog-post__text Using the S.M.A.R.T criteria helps to ensure your development team agree to goals they all understand, that they can accomplish, that matter to the business, and that can be completed within an agreed timeframe. Consider the following example:
-
-          blockquote
-            q
-              | Improve our web application to reduce the percentage of customer data that needs correcting from 25% to 5% by Christmas 2019.
-            cite Joe Schmoe, Project Leader
-
-          p.blog-post__text This is a good goal. It's Specific, Measureable, and Time-based, and in Joe Schmoe's world it's Achieveable and Relevant. Keep in mind though, achievability and relevance are subjective to the situation and organisation at hand.
-
-          h3.blog-post__h3 Goals need focus
-          p.blog-post__text In most organisations, development teams work towards multiple goals at once. However, having many goals for a single team does not work well. When multiple goals are the priority, none of your goals are a priority.
-
-          p.blog-post__text Using small teams with separate goals is much better, allowing parallelism while preserving a focus for individual teams. With this approach, no one person has more than one goal or priority, but many things can still get done.
-
-          p.blog-post__text It's likely that you'll end up with a surplus of goals to choose from, but since you can only focus on one, make a good choice by asking yourself the following:
-
-          ul.styled-list.styled-list--inside
-            li.styled-list__item Which goal will your team make the most impact on?
-            li.styled-list__item How well are your team’s strengths and weaknesses are aligned to each goal?
-            li.styled-list__item How much enthusiasm does your team have for each goal?
-          br
-
-          p.blog-post__text You’ll know you’ve hit good matches when your team is able to make a big impact on a goal well suited to their strengths, that they’re enthusiastic about getting to work on. Focus on these.
-
-          h3.blog-post__h3 Goals promote success
-
-          p.blog-post__text <strong>Focus</strong> - Goals keep teams working on achieving a single outcome. This is invaluable for software development, in which complex changes can take a lot of time. Having a goal in place prevents time being wasted on busy work, helping your business to make progress quickly.
-
-          p.blog-post__text <strong>Ideation</strong> - People are idea machines. Undirected, they will think of ways to improve all aspects of an organisation. However, these ideas aren’t always of the highest priority to your business. Goals help to channel this ideation towards useful, high value problem solving.
-
-          p.blog-post__text <strong>Autonomy</strong> - When people are blocked from proceeding with their work, a goal helps them to make a smart decision about what to do next. No more “I’m blocked, what do I work on now?”.
-
-          p.blog-post__text <strong>Alignment</strong> - Without goals, it's common for teams to accidentally end up working on the same tasks, or on tasks that counteract each other. Clearly assigned goals can help prevent this wheel-spinning, and keep everyone on the same page.
-
-          hr.divider.divider--block-hr
-
-          p.blog-post__text As we work to add automation to our client's businesses <a href="/">at Leaf</a>, we define a clear goals before starting each piece of work. They make a tremendous difference in the productivity, effectiveness, and happiness of the teams we work with.
-
-    section.section.section--lg-spacing
+    .section
       .container
-        .blog-content
-          h3.blog-content__heading Keep reading
-          +blog-post-grid
+
+        .grid.grid--post
+
+          +share-icons({})
+
+          .blog-post
+
+            p.blog-post__intro Without a clear definition of success, it's hard to know which direction to take, or whether you're making any progress. Goals provide direction and clarity for your teams.
+
+            p.blog-post__text A goal is something you collectively agree that you’d like to accomplish together. It’s simultaneously a result to work towards, and a compass to help guide your efforts in getting there.
+
+            p.blog-post__text Goals can scale from a single person to an entire organisation, but they work best when given to a team just large enough to effectively achieve them. At Leaf, we use goals often to help get traction in challenging development environments.
+
+            +permalink({
+              heading: "Goals should be SMART"
+            })
+
+            ul.styled-list
+              li.styled-list__item <strong>Specific</strong> - They state what will be done.
+              li.styled-list__item <strong>Measureable</strong> - They can be objectively verified as being achieved.
+              li.styled-list__item <strong>Achievable</strong> - They are reasonably achievable by their team.
+              li.styled-list__item <strong>Relevant</strong> - They are of some benefit to the organisation they’re contributing to.
+              li.styled-list__item <strong>Time-based</strong> - They have some sort of expiry date set against them.
+
+            p.blog-post__text Using the S.M.A.R.T criteria helps to ensure your development team agree to goals they all understand, that they can accomplish, that matter to the business, and that can be completed within an agreed timeframe. Consider the following example:
+
+            blockquote.blog-blockquote
+              p.main-blockquote Improve our web application to reduce the percentage of customer data that needs correcting from 25% to 5% by Christmas 2019.
+              footer
+                cite Joe Schmoe, Project Leader
+
+            p.blog-post__text This is a good goal. It's Specific, Measureable, and Time-based, and in Joe Schmoe's world it's Achieveable and Relevant. Keep in mind though, achievability and relevance are subjective to the situation and organisation at hand.
+
+            +permalink({
+              heading: "Goals need focus"
+            })
+
+            p.blog-post__text In most organisations, development teams work towards multiple goals at once. However, having many goals for a single team does not work well. When multiple goals are the priority, none of your goals are a priority.
+
+            p.blog-post__text Using small teams with separate goals is much better, allowing parallelism while preserving a focus for individual teams. With this approach, no one person has more than one goal or priority, but many things can still get done.
+
+            p.blog-post__text It's likely that you'll end up with a surplus of goals to choose from, but since you can only focus on one, make a good choice by asking yourself the following:
+
+            ul.styled-list
+              li.styled-list__item Which goal will your team make the most impact on?
+              li.styled-list__item How well are your team’s strengths and weaknesses are aligned to each goal?
+              li.styled-list__item How much enthusiasm does your team have for each goal?
+
+            p.blog-post__text You’ll know you’ve hit good matches when your team is able to make a big impact on a goal well suited to their strengths, that they’re enthusiastic about getting to work on. Focus on these.
+
+            +permalink({
+              heading: "Goals promote success"
+            })
+
+            p.blog-post__text <strong>Focus</strong> - Goals keep teams working on achieving a single outcome. This is invaluable for software development, in which complex changes can take a lot of time. Having a goal in place prevents time being wasted on busy work, helping your business to make progress quickly.
+
+            p.blog-post__text <strong>Ideation</strong> - People are idea machines. Undirected, they will think of ways to improve all aspects of an organisation. However, these ideas aren’t always of the highest priority to your business. Goals help to channel this ideation towards useful, high value problem solving.
+
+            p.blog-post__text <strong>Autonomy</strong> - When people are blocked from proceeding with their work, a goal helps them to make a smart decision about what to do next. No more “I’m blocked, what do I work on now?”.
+
+            p.blog-post__text <strong>Alignment</strong> - Without goals, it's common for teams to accidentally end up working on the same tasks, or on tasks that counteract each other. Clearly assigned goals can help prevent this wheel-spinning, and keep everyone on the same page.
+
+            hr.divider
+
+            p.blog-post__text As we work to add automation to our client's businesses <a href="/">at Leaf</a>, we define a clear goals before starting each piece of work. They make a tremendous difference in the productivity, effectiveness, and happiness of the teams we work with.
+
+  section.section.section--lg-spacing
+    .container
+      .blog-content
+        h3.blog-content__heading Keep reading
+        +blog-post-grid

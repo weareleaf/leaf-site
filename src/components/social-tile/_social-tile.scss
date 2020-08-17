@@ -5,6 +5,7 @@ $image-size: $size-1;
   @include focus-ring;
   @include touch-boost;
   display: block;
+  margin-right: $spacing-5;
 
   @include hover {
     text-decoration: none;
@@ -15,17 +16,37 @@ $image-size: $size-1;
   }
 
   @media screen and (min-width: map-get($breakpoints, 'breakpoint-3')) {
+    align-items: center;
     display: flex;
+
+    &:not(:last-of-type) {
+      margin-right: $spacing-5;
+    }
+  }
+
+  &--bio {
+    margin: 0 $spacing-5 0 0;
+    padding-left: 0;
+
+    &:not(:last-of-type) {
+      @media screen and (min-width: map-get($breakpoints, 'breakpoint-3')) {
+        margin-right: $spacing-3;
+      }
+
+      @media screen and (min-width: map-get($breakpoints, 'breakpoint-11')) {
+        margin-right: $spacing-7;
+      }
+    }
   }
 
   &__icon {
-    background-color: $color-indigo;
+    background-color: var(--color-container);
     border-radius: $border-radius-full;
+    min-height: $icon-size;
+    min-width: $icon-size;
     position: relative;
     text-align: center;
-    height: $icon-size;
     transition: transform $duration-2 $timing-ease;
-    width: $icon-size;
 
     @media screen and (min-width: map-get($breakpoints, 'breakpoint-3')) {
       margin-right: $spacing-4;
@@ -38,7 +59,6 @@ $image-size: $size-1;
     position: absolute;
     top: 50%;
     transform: translate(-50%, -50%);
-    width: $image-size;
   }
 
   &__content {
@@ -58,14 +78,19 @@ $image-size: $size-1;
   &__heading {
     color: $color-white;
     font-size: .6rem;
-    font-weight: 700;
+    font-family: $font-family-sans-serif-extrabold;
     letter-spacing: .05rem;
-    margin-bottom: 0;
+    margin-bottom: -.25rem;
     text-transform: uppercase;
   }
 
   &__handle {
+    color: hsl(231, 84%, 83%);
     font-family: $font-family-sans-serif-medium;
-    font-size: $font-size-xs;
+    font-size: .6rem;
+
+    @media screen and (min-width: map-get($breakpoints, 'breakpoint-13')) {
+      font-size: .7rem;
+    }
   }
 }

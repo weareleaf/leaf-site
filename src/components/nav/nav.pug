@@ -1,27 +1,27 @@
 mixin nav(c)
-  nav.nav(class= c.navModifier ? "nav--" + c.navModifier : "")
+  nav.nav(class= c.modifier ? "nav--" + c.modifier : "")
     ul.nav__list
-      each navItem in c.navList
+      each item in c.navList
         li.nav__item
-          if activePage ===  navItem.navItemText
-            if navItem.navItemTextMobile
+          if activePage ===  item.text
+            if item.textMobile
               span.nav__link.nav__link--active
                 span.nav__text
-                  span.nav__text__mobile= navItem.navItemTextMobile
-                  span.nav__text__standard= navItem.navItemText
+                  span.nav__text__mobile= item.textMobile
+                  span.nav__text__standard= item.text
             else
-              span.nav__link.nav__link--active= navItem.navItemText
+              span.nav__link.nav__link--active= item.text
           else
             a.nav__link(
-              href= navItem.navItemUrl
-              data-micromodal-trigger=(navItem.triggerModal ? "modal-contact" : undefined)
-              data-mobile-only=(navItem.navItemMobileOnly ? "mobile-only" : undefined)
-              target=(navItem.newTab ? "_blank" : undefined)
-              rel=(navItem.newTab ? "noopener" : undefined)
+              href= item.url
+              data-micromodal-trigger=(item.triggerModal ? "modal-contact" : undefined)
+              data-mobile-only=(item.mobileOnly ? "mobile-only" : undefined)
+              target=(item.newTab ? "_blank" : undefined)
+              rel=(item.newTab ? "noopener" : undefined)
             )
-              if navItem.navItemTextMobile
+              if item.textMobile
                 span.nav__text
-                  span.nav__text__mobile= navItem.navItemTextMobile
-                  span.nav__text__standard= navItem.navItemText
+                  span.nav__text__mobile= item.textMobile
+                  span.nav__text__standard= item.text
               else
-                span.nav__text= navItem.navItemText
+                span.nav__text= item.text

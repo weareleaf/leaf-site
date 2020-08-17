@@ -1,10 +1,28 @@
 mixin profile(c)
-  .profile
-    +image({
-      context: "profile",
-      src: c.profileImage.src,
-      alt: c.profileImage.alt
-    })
-    .profile__content
-      h4.profile__heading= c.profileHeading
-      p.profile__text= c.profileText
+  if c.url
+    a.profile(
+      class= (c.modifier ? "profile--" + c.modifier : "")
+      href= c.url target= c.target)
+      if c.image
+        +image({
+          context: "profile",
+          modifier: c.modifier,
+          src: c.image.src,
+          alt: c.image.alt
+        })
+      else
+        .profile__block
+      .profile__content
+        h4.profile__heading(class= c.modifier ? "profile__heading--" + c.modifier : "")= c.heading
+        p.profile__text(class= c.modifier ? "profile__text--" + c.modifier : "")= c.text
+  else
+    .profile(class= (c.modifier ? "profile--" + c.modifier : ""))
+      +image({
+        context: "profile",
+        modifier: c.modifier,
+        src: c.image.src,
+        alt: c.image.alt
+      })
+      .profile__content
+        h4.profile__heading(class= c.modifier ? "profile__heading--" + c.modifier : "")= c.heading
+        p.profile__text(class= c.modifier ? "profile__text--" + c.modifier : "")= c.text

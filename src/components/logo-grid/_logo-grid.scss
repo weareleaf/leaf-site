@@ -1,0 +1,63 @@
+$logo-grid-border-width: $border-width-base;
+$logo-grid-radius: $border-radius-base;
+
+.logo-grid {
+  @extend %unstyled-list;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  overflow: hidden;
+
+  @media screen and (min-width: map-get($breakpoints, 'breakpoint-1')) {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  &__item {
+    @include flex-center;
+    background-color: $color-indigo;
+    margin: -$logo-grid-border-width;
+    outline: $border-style $logo-grid-border-width $color-iris;
+    padding: $spacing-5;
+
+    @media screen and (min-width: map-get($breakpoints, 'breakpoint-1')) {
+      padding: 1.3rem 0;
+    }
+
+    &:nth-child(1) {
+      border-top-left-radius: $logo-grid-radius;
+    }
+
+    &:nth-child(2) {
+      border-top-right-radius: $logo-grid-radius;
+
+      @media screen and (min-width: map-get($breakpoints, 'breakpoint-1')) {
+        border-top-right-radius: 0;
+      }
+    }
+
+    &:nth-child(3) {
+
+      @media screen and (min-width: map-get($breakpoints, 'breakpoint-1')) {
+        border-top-right-radius: $logo-grid-radius;
+      }
+    }
+
+    &:nth-child(4) {
+
+      @media screen and (min-width: map-get($breakpoints, 'breakpoint-1')) {
+        border-bottom-left-radius: $logo-grid-radius;
+      }
+    }
+
+    &:nth-child(5) {
+      border-bottom-left-radius: $logo-grid-radius;
+
+      @media screen and (min-width: map-get($breakpoints, 'breakpoint-1')) {
+        border-bottom-left-radius: 0;
+      }
+    }
+
+    &:nth-child(6) {
+      border-bottom-right-radius: $logo-grid-radius;
+    }
+  }
+}

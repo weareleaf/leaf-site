@@ -1,0 +1,10 @@
+mixin author(c)
+  .author(class= c.class)
+    +image({
+      context: "author",
+      src: c.thumbnail.src,
+      alt: c.thumbnail.alt
+    })
+    .author__content
+      h5.author__name= c.name
+      p.author__details= c.details

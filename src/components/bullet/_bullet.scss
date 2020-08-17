@@ -1,11 +1,42 @@
 .bullet {
-  &--margin {
-    margin: $spacing-7 0;
+
+  &__heading {
+    color: var(--color-heading);
+    font-family: $font-family-sans-serif-extrabold;
+    font-size: $font-size-xxs;
+    font-weight: 400;
+    letter-spacing: .05rem;
+    margin-bottom: $spacing-4;
+    text-transform: uppercase;
+
+    @media screen and (min-width: map-get($breakpoints, 'breakpoint-4')) {
+      margin-top: 0;
+    }
   }
 
-  &__text {
-    strong {
-      color: $color-slate;
+  &__list {
+
+    &--2-col {
+
+      @media screen and (min-width: map-get($breakpoints, 'breakpoint-1')) {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+    }
+  }
+
+  .styled-list {
+    //margin-top: -$spacing-3;
+
+    &__item {
+      line-height: 1.2;
+      margin-bottom: $spacing-3;
+
+      @media screen and (min-width: map-get($breakpoints, 'breakpoint-4')) {
+        line-height: 1.6;
+        margin-bottom: $spacing-2;
+      }
     }
   }
 }

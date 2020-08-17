@@ -1,4 +1,7 @@
 mixin block(c)
-  .block
-    h3.block__heading= c.blockHeading
-    p.block__text= c.blockText
+  .block(class= c.modifier ? "block--" + c.modifier : "")
+    unless c.heading3 === true
+      h2.block__heading= c.heading
+    else
+      h3.block__heading.h2= c.heading
+    p.block__text(class= c.textModifier ? "block__text--" + c.textModifier : "")= c.text

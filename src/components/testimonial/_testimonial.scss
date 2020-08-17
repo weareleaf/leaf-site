@@ -1,0 +1,47 @@
+.testimonial {
+  position: relative;
+
+  &__quote {
+    margin: $spacing-7 0 $spacing-5 0;
+
+    @media screen and (min-width: map-get($breakpoints, 'breakpoint-2')) {
+      margin: $spacing-8 0 $spacing-6 0;
+    }
+
+    &::before {
+      color: var(--color-testimonial-quotation);
+      content: '\201c';
+      font-family: $font-family-sans-serif-extrabold;
+      font-size: 12rem;
+      left: -$spacing-4;
+      position: absolute;
+      top: -4.5rem;
+      z-index: z('below');
+
+      @media screen and (min-width: map-get($breakpoints, 'breakpoint-2')) {
+        font-size: 14rem;
+        left: -$spacing-7;
+        top: -5rem;
+      }
+    }
+  }
+
+  &__quote-main {
+    color: var(--color-testimonial-blockquote);
+    display: block;
+    font-family: $font-family-sans-serif;
+    font-size: $root-font-size;
+    line-height: 1.4;
+    width: 100%;
+
+    @media screen and (min-width: map-get($breakpoints, 'breakpoint-2')) {
+      font-size: 1.2rem;
+      line-height: $quote-line-height;
+    }
+
+    &::before,
+    &::after {
+      content: none;
+    }
+  }
+}

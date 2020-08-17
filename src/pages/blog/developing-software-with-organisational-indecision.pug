@@ -7,103 +7,113 @@ block prepend vars
   -var metaDescription = "Working through organisational indecision is a trait of highly effective teams. Here are a few ways we get work done when the World is working against you."
 
   -var heroHeading = "Developing software with organisational indecision"
-  -var heroSubheading = "(by Mike Carter)"
 
 block pageComponents
 
-  +banner({
-  })
+  article
 
-  .banner-spacer
+    +hero({
+      heading: heroHeading,
+      author: "Mike Carter",
+      date: "2 February 2020",
+      minutesToRead: 5
+    })
 
-  +hero({
-    heroHeading: heroHeading,
-    heroSubheading: heroSubheading,
-  })
-
-  .section
-    .container
-
-      .grid.grid--center
-
-        +share-icons({
-          socialModifier: "inline"
-        })
-
-        .blog-post
-
-          p.blog-post__intro Developing software in complex organisations is tough, but working through organisational indecision is a trait of highly effective teams. Here are a few ways we get decisions made and work done when the World is working against us.
-
-          p.blog-post__text Have you ever found yourself wondering why decision making is taking a long time? Why stakeholders don’t seem to understand what you’re trying to achieve? Or why nobody can get behind a single course of action? In situations like these, developing software can feel a bit like running uphill.
-
-          p.blog-post__text It’s easy to “if only” the situation to justify your predicament, but the reality is that many organisations <em>are</em> slow moving, and <em>do</em> have complex dynamics that make it hard to get unilateral agreement. The key to succeeding is to understand how to make progress in spite of this.
-
-          h2.blog-post__h2 Clear the path
-
-          p.blog-post__text When you clear the path, you get to decide its direction. As the ones closest to the software, your development team are brilliantly positioned to act as path clearers for your business.
-
-          p.blog-post__text Use all the data, insight, and institutional knowledge you have to keep pushing for what is right in achieving your organisation's goals. Be proactive about overcoming blockers, and make it easy for others to say yes to what you want to change. Lead thinking around your software and its role within the business, and don't just act as implementers for the ideas of others.
-
-          p.blog-post__text While leading, respect your organisation's idiosyncracies. It’s very difficult to change the decision making culture of an entire business, even if it’s clearly broken. You’re much better off understanding the culture, and working with it to build influence by showing your team can be trusted to and deliver value.
-
-          h2.blog-post__h2 Identify the key decision maker
-
-          p.blog-post__text Where it’s difficult to get a decision made, there’ll usually only be one person blocking your path - the key decision maker. If you can identify this person, and get them invested in what your team is trying to achieve, you’ll find other stakeholders quickly follow suit.
-
-          p.blog-post__text The key decision maker won’t necessarily be the most senior stakeholder involved in the decision. Often they’re actually the person who’s been there the longest, or who wields the most influence over the thing you're trying to change.
-
-          p.blog-post__text Once you've found them, give them a deep dive into the changes your development team are trying to make, the reasons why, and the expected outcomes. Show them that you've considered all the angles, and give them room to question or disagree with your logic at each step.
-
-          p.blog-post__text Winning over the key decision maker isn’t about playing office politics. It’s about recognising that most stakeholders base a lot of their own opinion on the thoughts of the person they trust to know best. If that isn’t you, it’s going to be the key decision maker. So by changing their mind, you can often change everyone else’s too.
-
-          h2.blog-post__h2 Be sequential
-
-          p.blog-post__text If you’re trying to improve several aspects of a digital product at once, you’ll struggle to have an impact. Instead of trying to make 1% progress on everything, aim for 100% progress on your highest priority problem, and then move on to the next.
-
-          p.blog-post__text Naturally, you may have bugs that need fixing, or security patches that have to be dealt with out as you go. This isn't about avoiding maintenance, it's about improving your effectiveness by putting your team's full force behind specific, priotised impactful improvements to your software, rather than trying to do everything.
-
-          p.blog-post__text When you focus your team on a specific problem, you'll find you naturally work through the blockers and organisational resistance that would normally cause you to give up when there are a long list other “focusses” to pick from.
-
-          p.blog-post__text A good metaphor for this is sewing. A sharp needle moves effortlessly through fabric because the force behind it is focussed on a single narrow point. Trying to push a pen through the same fabric would require significantly more effort.
-
-          h2.blog-post__h2 Over-communicate
-
-          p.blog-post__text Don’t keep your ambitions a secret. Communicate clearly and often your vision for your digital products, and why what you want to do is valuable to the company. The higher stakeholders rise in an organisation, the more you’ll need to compete for their attention, so make sure your message is received loud and clear.
-
-          p.blog-post__text The other half of communication is listening. Make sure you understand every objection to your proposed course of action, and communicate each back so that people know you’ve understood. From here, either explain why the objection doesn’t apply, or come up with a better solution to the problem.
-
-          p.blog-post__text The idea here isn’t to bullzone people, but to be champion for your software. If you communicate clearly and consistently, and work through objections as they’re brought up, you’ll inevitably move towards getting agreement on a change. The alternative is you’ll learn your idea isn't as good as you thought.
-
-          p.blog-post__text Once your proposal is widely understood, and no major objections are being raised, it could be appropriate to ask for written sign-off. This is especially important if you know the working environment means people may forget what they’ve agreed to. In these instances, it will give you a paper trail to refer back to should you need it.
-
-          h2.blog-post__h2 Do the hard things
-
-          p.blog-post__text You’ll often find that getting agreement on even simple changes to digital products involves doing things that your team would rather not do. This may be a difficult discussion with a senior director, or having to put together and deliver a presentation in order to win stakeholders over.
-
-          p.blog-post__text When confronted with hurdles, it’s easy to blame the organisation for being difficult and give up. Instead, adjust your expectations, and do what needs to be done to make progress. Effective software development encompasses discussions, presentations, disagreement, compromise, rejection, and more. Don't run from it.
-
-          p.blog-post__text When stakeholders can see you being proactive in pursuing a cause, they’ll begin to treat you with more respect. People don’t fight for causes they don’t care about, so by performing hard tasks to make progress, you’re demonstrating ownership, conviction, and drive.
-
-          h2.blog-post__h2 Package solutions together
-
-          p.blog-post__text When trying to get a change approved, it often pays to align your own goals with another problem stakeholders care about. For example, if you know the CTO is concerned about page load times, but you’re certain you need to improve the sign-up process, you could package speed improvements in with your sign-up process changes in order to build good will behind in your work.
-
-          p.blog-post__text Like a skateboarder hitching a ride on a passing car, this works well because you get to borrow the momentum from something already in progress in order to get the thing you care about moving.
-
-          h2.blog-post__h2 Ask for forgiveness, not permission
-
-          p.blog-post__text If you’re convinced an update want to make to a digital product is valuable, necessary, and must be done without delay, it can sometimes pay to push changes live without seeking agreement from stakeholders. However, if you do this, you need to be prepared to own the consequences.
-
-          p.blog-post__text If everything goes well, your insight and initiative will build trust in your judgement. However, if your change backfires, you’ll damage trust, actually making it harder for you to get things done in future. Keep in mind that this approach gets riskier as your organisation gets bigger, because complexity scales with size, and the chances your team's change has some side-effect you aren't aware of increases.
-
-          p.blog-post__text Asking for forgiveness is a sharp knife. It can be highly effective, but also easy to cut yourself with, so be careful.
-
-          hr.divider.divider--block-hr
-
-          p.blog-post__text These techniques have made a huge difference to our ability to make progress through difficult periods of indecision with organisations we work with. They don’t all need to be employed for every occasion, but having them as part of your toolkit can work wonders for your development team's effectiveness without rubbing others the wrong way.
-
-    section.section.section--lg-spacing
+    .section
       .container
-        .blog-content
-          h3.blog-content__heading Keep reading
-          +blog-post-grid
+
+        .grid.grid--post
+
+          +share-icons({})
+
+          .blog-post
+
+            p.blog-post__intro Developing software in complex organisations is tough, but working through organisational indecision is a trait of highly effective teams. Here are a few ways we get decisions made and work done when the World is working against us.
+
+            p.blog-post__text Have you ever found yourself wondering why decision making is taking a long time? Why stakeholders don’t seem to understand what you’re trying to achieve? Or why nobody can get behind a single course of action? In situations like these, developing software can feel a bit like running uphill.
+
+            p.blog-post__text It’s easy to “if only” the situation to justify your predicament, but the reality is that many organisations <em>are</em> slow moving, and <em>do</em> have complex dynamics that make it hard to get unilateral agreement. The key to succeeding is to understand how to make progress in spite of this.
+
+            +permalink({
+              heading: "Clear the path"
+            })
+
+            p.blog-post__text When you clear the path, you get to decide its direction. As the ones closest to the software, your development team are brilliantly positioned to act as path clearers for your business.
+
+            p.blog-post__text Use all the data, insight, and institutional knowledge you have to keep pushing for what is right in achieving your organisation's goals. Be proactive about overcoming blockers, and make it easy for others to say yes to what you want to change. Lead thinking around your software and its role within the business, and don't just act as implementers for the ideas of others.
+
+            p.blog-post__text While leading, respect your organisation's idiosyncracies. It’s very difficult to change the decision making culture of an entire business, even if it’s clearly broken. You’re much better off understanding the culture, and working with it to build influence by showing your team can be trusted to and deliver value.
+
+            +permalink({
+              heading: "Identify the key decision maker"
+            })
+
+            p.blog-post__text Where it’s difficult to get a decision made, there’ll usually only be one person blocking your path - the key decision maker. If you can identify this person, and get them invested in what your team is trying to achieve, you’ll find other stakeholders quickly follow suit.
+
+            p.blog-post__text The key decision maker won’t necessarily be the most senior stakeholder involved in the decision. Often they’re actually the person who’s been there the longest, or who wields the most influence over the thing you're trying to change.
+
+            p.blog-post__text Once you've found them, give them a deep dive into the changes your development team are trying to make, the reasons why, and the expected outcomes. Show them that you've considered all the angles, and give them room to question or disagree with your logic at each step.
+
+            p.blog-post__text Winning over the key decision maker isn’t about playing office politics. It’s about recognising that most stakeholders base a lot of their own opinion on the thoughts of the person they trust to know best. If that isn’t you, it’s going to be the key decision maker. So by changing their mind, you can often change everyone else’s too.
+
+            +permalink({
+              heading: "Be sequential"
+            })
+
+            p.blog-post__text If you’re trying to improve several aspects of a digital product at once, you’ll struggle to have an impact. Instead of trying to make 1% progress on everything, aim for 100% progress on your highest priority problem, and then move on to the next.
+
+            p.blog-post__text Naturally, you may have bugs that need fixing, or security patches that have to be dealt with out as you go. This isn't about avoiding maintenance, it's about improving your effectiveness by putting your team's full force behind specific, priotised impactful improvements to your software, rather than trying to do everything.
+
+            p.blog-post__text When you focus your team on a specific problem, you'll find you naturally work through the blockers and organisational resistance that would normally cause you to give up when there are a long list other “focusses” to pick from.
+
+            p.blog-post__text A good metaphor for this is sewing. A sharp needle moves effortlessly through fabric because the force behind it is focussed on a single narrow point. Trying to push a pen through the same fabric would require significantly more effort.
+
+            +permalink({
+              heading: "Over-communicate"
+            })
+
+            p.blog-post__text Don’t keep your ambitions a secret. Communicate clearly and often your vision for your digital products, and why what you want to do is valuable to the company. The higher stakeholders rise in an organisation, the more you’ll need to compete for their attention, so make sure your message is received loud and clear.
+
+            p.blog-post__text The other half of communication is listening. Make sure you understand every objection to your proposed course of action, and communicate each back so that people know you’ve understood. From here, either explain why the objection doesn’t apply, or come up with a better solution to the problem.
+
+            p.blog-post__text The idea here isn’t to bullzone people, but to be champion for your software. If you communicate clearly and consistently, and work through objections as they’re brought up, you’ll inevitably move towards getting agreement on a change. The alternative is you’ll learn your idea isn't as good as you thought.
+
+            p.blog-post__text Once your proposal is widely understood, and no major objections are being raised, it could be appropriate to ask for written sign-off. This is especially important if you know the working environment means people may forget what they’ve agreed to. In these instances, it will give you a paper trail to refer back to should you need it.
+
+            +permalink({
+              heading: "Do the hard things"
+            })
+
+            p.blog-post__text You’ll often find that getting agreement on even simple changes to digital products involves doing things that your team would rather not do. This may be a difficult discussion with a senior director, or having to put together and deliver a presentation in order to win stakeholders over.
+
+            p.blog-post__text When confronted with hurdles, it’s easy to blame the organisation for being difficult and give up. Instead, adjust your expectations, and do what needs to be done to make progress. Effective software development encompasses discussions, presentations, disagreement, compromise, rejection, and more. Don't run from it.
+
+            p.blog-post__text When stakeholders can see you being proactive in pursuing a cause, they’ll begin to treat you with more respect. People don’t fight for causes they don’t care about, so by performing hard tasks to make progress, you’re demonstrating ownership, conviction, and drive.
+
+            +permalink({
+              heading: "Package solutions together"
+            })
+
+            p.blog-post__text When trying to get a change approved, it often pays to align your own goals with another problem stakeholders care about. For example, if you know the CTO is concerned about page load times, but you’re certain you need to improve the sign-up process, you could package speed improvements in with your sign-up process changes in order to build good will behind in your work.
+
+            p.blog-post__text Like a skateboarder hitching a ride on a passing car, this works well because you get to borrow the momentum from something already in progress in order to get the thing you care about moving.
+
+            +permalink({
+              heading: "Ask for forgiveness, not permission"
+            })
+
+            p.blog-post__text If you’re convinced an update want to make to a digital product is valuable, necessary, and must be done without delay, it can sometimes pay to push changes live without seeking agreement from stakeholders. However, if you do this, you need to be prepared to own the consequences.
+
+            p.blog-post__text If everything goes well, your insight and initiative will build trust in your judgement. However, if your change backfires, you’ll damage trust, actually making it harder for you to get things done in future. Keep in mind that this approach gets riskier as your organisation gets bigger, because complexity scales with size, and the chances your team's change has some side-effect you aren't aware of increases.
+
+            p.blog-post__text Asking for forgiveness is a sharp knife. It can be highly effective, but also easy to cut yourself with, so be careful.
+
+            hr.divider
+
+            p.blog-post__text These techniques have made a huge difference to our ability to make progress through difficult periods of indecision with organisations we work with. They don’t all need to be employed for every occasion, but having them as part of your toolkit can work wonders for your development team's effectiveness without rubbing others the wrong way.
+
+  section.section.section--lg-spacing
+    .container
+      .blog-content
+        h3.blog-content__heading Keep reading
+        +blog-post-grid

@@ -8,13 +8,9 @@ block prepend vars
 
 block pageComponents
 
-  +banner({})
-
-  .banner-spacer
-
   +hero({
-    heroHeading: metaTitle,
-    heroSubheading: metaDescription,
+    heading: metaTitle,
+    subheading: metaDescription
   })
 
   .section
@@ -25,8 +21,8 @@ block pageComponents
       .grid.grid--two-thirds-reverse
         .grid__item
           +summary({
-            summaryHeading: "Who are we?",
-            summaryText: "Leaf are a remote agency based in the UK. We specialise in complex information capture, helping organisations excel online by making it easy for their users to provide them with high quality information."
+            heading: "Who are we?",
+            text: "Leaf are a remote agency based in the UK. We specialise in complex information capture, helping organisations excel online by making it easy for their users to provide them with high quality information."
           })
 
         .grid__item
@@ -42,14 +38,14 @@ block pageComponents
       .grid.grid--two-thirds
         .grid__item
           h4 Primary responsibilities
-          ul.styled-list.styled-list--inside-lg
+          ul.styled-list
             li.styled-list__item Efficient delivery of high quality features and improvements to our clients web applications.
             li.styled-list__item Collaborating effectively with your coworkers to come to the best solution for given constraints.
             li.styled-list__item Communicating clear, concise updates to clients in a way that anticipates their needs.
             li.styled-list__item Driving the technical quality of our work, and knowledge around complex data capture forward.
 
           h4 You will need
-          ul.styled-list.styled-list--inside-lg
+          ul.styled-list
             li.styled-list__item Excellent written and verbal communication skills.
             li.styled-list__item An excellent understanding of modern HTML, CSS, and JavaScript.
             li.styled-list__item A good high level understanding how web browsers work (HTTP, the DOM, etc.).
@@ -58,7 +54,7 @@ block pageComponents
             li.styled-list__item A willingness to learn new technologies and programming languages.
 
           h4 Bonus points if…
-          ul.styled-list.styled-list--inside-lg
+          ul.styled-list
             li.styled-list__item You have some experience with <a href="https://reactjs.org">React</a>.
             li.styled-list__item You're happy enough figuring things out in your terminal.
             li.styled-list__item You're not afraid to voice your opinion.

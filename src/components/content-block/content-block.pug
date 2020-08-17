@@ -1,0 +1,21 @@
+mixin content-block(c)
+  .content-block(class= c.modifier ? "content-block--" + c.modifier : "")
+    if c.heading === true
+      .content-block__content
+        h2.content-block__heading= c.heading
+        ul.content-block__list-items.unstyled-list
+          each item in c.items
+            li.content-block__list-item
+              +content(item)
+    else
+      .content-block__content
+        ul.content-block__list-items.unstyled-list
+          each item in c.items
+            li.content-block__list-item
+              +content(item)
+    +image({
+      context: "content-block",
+      modifier: c.imageModifier,
+      src: c.image.src,
+      alt: c.image.alt
+    })

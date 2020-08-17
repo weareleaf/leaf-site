@@ -1,3 +1,11 @@
+@mixin absolute-fill {
+  bottom: 0;
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
 @mixin animated-link($size, $selector: '&') {
   $selector: unquote($selector);
 
@@ -53,6 +61,11 @@
   }
 }
 
+@mixin two-col-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+
 @mixin container {
   margin: 0 auto;
   max-width: 66.5rem;
@@ -91,6 +104,12 @@
     right: 0;
     top: 0;
   }
+}
+
+@mixin flex-center {
+  align-items: center;
+  display: flex;
+  justify-content: center;
 }
 
 @mixin focus-bg {

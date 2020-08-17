@@ -1,3 +1,64 @@
 .block {
+  //display: inline-block;
 
+  &:not(:first-child) {
+    margin-top: $spacing-8;
+  }
+
+  &--holiday-section {
+
+    @media screen and (min-width: map-get($breakpoints, 'breakpoint-4')) {
+      width: 29.15rem; // To achieve correct line break
+    }
+  }
+
+  &--first-team {
+
+    @media screen and (min-width: map-get($breakpoints, 'breakpoint-4')) {
+      max-width: 29rem;
+    }
+  }
+
+  &__heading {
+    margin-bottom: $spacing-3;
+  }
+
+  &__subheading {
+    display: inline-block;
+    font-family: $font-family-sans-serif-extrabold;
+    font-size: .7rem;
+    font-weight: 400;
+    letter-spacing: .05rem;
+    margin-bottom: $spacing-4;
+    text-transform: uppercase;
+
+    @media screen and (min-width: map-get($breakpoints, 'breakpoint-6')) {
+      font-size: .6rem;
+    }
+  }
+
+  &__text {
+    line-height: 1.5rem;
+    margin-bottom: $spacing-7;
+
+    @media screen and (min-width: map-get($breakpoints, 'breakpoint-4')) {
+      margin-bottom: $spacing-6;
+    }
+
+    &--margin-bottom {
+      margin-bottom: $spacing-7;
+
+      @media screen and (min-width: map-get($breakpoints, 'breakpoint-4')) {
+        margin-bottom: $spacing-8;
+      }
+    }
+  }
+
+  // Company timeline variations: (screens larger than bp-4)
+
+  &--right-align {
+    @media screen and (min-width: map-get($breakpoints, 'breakpoint-4')) {
+      text-align: right;
+    }
+  }
 }

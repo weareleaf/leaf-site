@@ -1,19 +1,7 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<svg width="40px" height="30px" viewBox="0 0 40 30" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-    <!-- Generator: Sketch 61 (89581) - https://sketch.com -->
-    <title>Icon</title>
-    <desc>Created with Sketch.</desc>
-    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-        <g id="Icon-/-Money" transform="translate(0.000000, -5.000000)">
-            <g id="Icon">
-                <rect id="Background" fill-rule="nonzero" x="0" y="0" width="40" height="40"></rect>
-                <path d="M38.5724007,31.3198679 C25.9629735,27.5380114 13.454603,36.0177135 1,31.7875795 L1,8.46677904 C13.454603,12.6969131 25.9629735,4.21721096 38.5724007,7.99906743 L38.5724007,31.3198679 Z" id="Stroke-33" stroke="#9999E6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
-                <path d="M6.83020011,32.9210351 C6.83020011,29.7008213 4.22021386,27.0603884 1,25.957185" id="Stroke-35" stroke="#9999E6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
-                <path d="M1,14.2967848 C4.22021386,15.3999882 6.83020011,12.8204486 6.83020011,9.60023472" id="Stroke-37" stroke="#9999E6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
-                <path d="M32.7422006,29.7106178 C32.7422006,26.4904039 34.7043868,24.3864643 37.9246007,25.4896678" id="Stroke-39" stroke="#9999E6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
-                <path d="M38.5724007,13.8292675 C35.3521868,12.7260641 32.7422006,10.5235441 32.7422006,7.30397802" id="Stroke-41" stroke="#9999E6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
-                <path d="M24.9686004,20.0010526 C24.9686004,23.5788521 22.6488286,26.4790527 19.7862003,26.4790527 C16.9242199,26.4790527 14.6038003,23.5788521 14.6038003,20.0010526 C14.6038003,16.4239009 16.9242199,13.5230525 19.7862003,13.5230525 C22.6488286,13.5230525 24.9686004,16.4239009 24.9686004,20.0010526 Z" id="Stroke-43" stroke="#9999E6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
-            </g>
-        </g>
-    </g>
+<svg width="40" height="30" xmlns="http://www.w3.org/2000/svg">
+  <g fill="none" fill-rule="evenodd">
+    <path fill-rule="nonzero" d="M0-5h40v40H0z"/>
+    <path d="M38.572 26.32C25.963 22.538 13.455 31.018 1 26.788V3.467c12.455 4.23 24.963-4.25 37.572-.468v23.32zM6.83 27.921c0-3.22-2.61-5.86-5.83-6.964M1 9.297C4.22 10.4 6.83 7.82 6.83 4.6M32.742 24.71c0-3.22 1.962-5.324 5.183-4.22M38.572 8.83c-3.22-1.104-5.83-3.306-5.83-6.526" stroke="#9999E6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M24.969 15.001c0 3.578-2.32 6.478-5.183 6.478-2.862 0-5.182-2.9-5.182-6.478 0-3.577 2.32-6.478 5.182-6.478 2.863 0 5.183 2.9 5.183 6.478z" stroke="#9999E6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
 </svg>

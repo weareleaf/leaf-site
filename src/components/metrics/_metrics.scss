@@ -1,0 +1,183 @@
+.metrics {
+  margin: $spacing-8 0;
+
+  &--margin {
+    margin-bottom: 0;
+    margin-top: $spacing-5;
+  }
+
+  &__container {
+    background-color: var(--color-metric-background);
+    border: $border-style $border-width-base var(--color-metric-border);
+    border-radius: $border-radius-lg;
+    padding: $spacing-5;
+    position: relative;
+  }
+
+  &__content {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    @media screen and (min-width: map-get($breakpoints, 'breakpoint-1')) {
+      flex-direction: row;
+      margin-top: $spacing-1;
+    }
+
+    @media screen and (min-width: map-get($breakpoints, 'breakpoint-7')) {
+      justify-content: start;
+      margin-left: 2.5rem;
+      margin-top: .5rem;
+    }
+  }
+
+  &__heading {
+    font-family: $font-family-sans-serif-extrabold;
+    font-size: $font-size-xxs;
+    letter-spacing: .05rem;
+    text-transform: uppercase;
+  }
+
+  &__item {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: $spacing-5;
+    position: relative;
+
+    &:first-child {
+      border-bottom: $border-style $border-width-base var(--color-metric-border);
+
+      @media screen and (min-width: map-get($breakpoints, 'breakpoint-2')) {
+        border-bottom: none;
+        border-right: $border-style $border-width-base var(--color-metric-border);
+      }
+    }
+  }
+
+  &__grid {
+    background-color: var(--color-metric-background);
+    border: $border-style $border-width-base var(--color-metric-border);
+    border-radius: $border-radius-lg;
+
+    @media screen and (min-width: map-get($breakpoints, 'breakpoint-2')) {
+      @include two-col-grid;
+    }
+  }
+
+  &__icon {
+    align-items: center;
+    background-color: var(--color-container);
+    border-radius: $border-radius-full;
+    display: flex;
+    height: $size-3;
+    justify-content: center;
+    left: $spacing-4;
+    position: absolute;
+    top: $spacing-4;
+    width: $size-3;
+
+    &--mobile {
+      left: 0;
+      margin: 0 auto $spacing-3 auto;
+      position: relative;
+      top: 0;
+      transform: rotate(180deg);
+
+      @media screen and (min-width: map-get($breakpoints, 'breakpoint-2')) {
+        left: $spacing-4;
+        margin: 0;
+        position: absolute;
+        top: $spacing-4;
+      }
+    }
+
+    &--rotate {
+      transform: rotate(180deg);
+    }
+  }
+
+  &__unit {
+    color: var(--color-metric-unit);
+    font-size: $font-size-xl;
+    letter-spacing: -.1rem;
+    margin-bottom: 0;
+    text-align: center;
+
+    @media screen and (min-width: map-get($breakpoints, 'breakpoint-5')) {
+      font-size: 2.8rem;
+    }
+  }
+
+  &__sub-text {
+    color: var(--color-metric-unit);
+    font-size: $font-size-xs;
+    font-weight: $font-weight-heading;
+    margin-bottom: 0;
+    margin-top: -$spacing-4;
+    text-align: center;
+
+    @media screen and (min-width: map-get($breakpoints, 'breakpoint-5')) {
+      margin-top: -$spacing-5;
+    }
+  }
+
+  &__text {
+    color: var(--color-text);
+    font-size: $font-size-xs;
+    line-height: 1.3;
+    margin-bottom: 0;
+    margin-top: $spacing-3;
+    max-width: 90%;
+    text-align: center;
+
+    @media screen and (min-width: map-get($breakpoints, 'breakpoint-3')) {
+      max-width: 100%;
+    }
+
+    @media screen and (min-width: map-get($breakpoints, 'breakpoint-6')) {
+      font-size: .6rem;
+    }
+
+    &--bold {
+      color: var(--color-metric-unit);
+      font-size: $root-font-size-xl;
+      margin-left: 0;
+      margin-top: 0;
+
+      @media screen and (min-width: map-get($breakpoints, 'breakpoint-1')) {
+        font-size: $font-size-sm;
+        margin-top: .1rem;
+        padding-bottom: .2rem;
+      }
+
+      @media screen and (min-width: map-get($breakpoints, 'breakpoint-7')) {
+        margin-top: -.2rem;
+        padding-bottom: 0;
+      }
+    }
+
+    &--lg {
+      color: var(--color-metric-unit);
+      font-family: $font-family-sans-serif;
+      font-size: $font-size-xs;
+      margin-top: 0;
+      text-align: center;
+
+      @media screen and (min-width: map-get($breakpoints, 'breakpoint-1')) {
+        font-size: $font-size-sm;
+        margin-left: $spacing-2;
+        margin-top: .1rem;
+        padding-bottom: .2rem;
+        text-align: left;
+      }
+
+      @media screen and (min-width: map-get($breakpoints, 'breakpoint-7')) {
+        margin-top: -.2rem;
+        padding-bottom: 0;
+      }
+    }
+  }
+}

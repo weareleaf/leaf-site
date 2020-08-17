@@ -1,15 +1,7 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<svg width="40px" height="40px" viewBox="0 0 40 40" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-    <!-- Generator: Sketch 61 (89581) - https://sketch.com -->
-    <title>Icon</title>
-    <desc>Created with Sketch.</desc>
-    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-        <g id="Icon-/-Clock">
-            <g id="Icon">
-                <rect id="Background" fill-rule="nonzero" x="0" y="0" width="40" height="40"></rect>
-                <path d="M38.6833317,19.8416659 C38.6833317,30.2476488 30.2476488,38.6833317 19.8416659,38.6833317 C9.43568298,38.6833317 1,30.2476488 1,19.8416659 C1,9.43501006 9.43568298,1 19.8416659,1 C30.2476488,1 38.6833317,9.43501006 38.6833317,19.8416659 Z" id="Stroke-9" stroke="#9999E6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
-                <polyline id="Stroke-25" stroke="#9999E6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" points="19.8416659 8.40208302 19.8416659 21.8604158 27.9166655 27.9166655"></polyline>
-            </g>
-        </g>
-    </g>
+<svg width="40" height="40" xmlns="http://www.w3.org/2000/svg">
+  <g fill="none" fill-rule="evenodd">
+    <path fill-rule="nonzero" d="M0 0h40v40H0z"/>
+    <path d="M38.683 19.842c0 10.406-8.435 18.841-18.841 18.841S1 30.248 1 19.842C1 9.435 9.436 1 19.842 1c10.406 0 18.841 8.435 18.841 18.842z" stroke="#9999E6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+    <path stroke="#9999E6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M19.842 8.402V21.86l8.075 6.057"/>
+  </g>
 </svg>

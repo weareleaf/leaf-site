@@ -1,21 +1,13 @@
 html {
-  box-sizing: border-box;
-  min-height: 100%;
   position: relative;
-}
-
-body {
-  height: 100%;
 }
 
 main {
   overflow: hidden;
-}
 
-*,
-*:before,
-*:after {
-  box-sizing: inherit;
+  .page--content & {
+    overflow: visible;
+  }
 }
 
 .container {
@@ -28,6 +20,10 @@ main {
 
   @media screen and (min-width: map-get($breakpoints, 'breakpoint-3')) {
     margin-bottom: $spacing-10;
+
+    .page--company &:not(:last-child) {
+      margin-bottom: $spacing-13;
+    }
   }
 
   &--sm-spacing {
@@ -39,38 +35,90 @@ main {
   }
 
   &--lg-spacing {
+
     @media screen and (min-width: map-get($breakpoints, 'breakpoint-4')) {
       margin-bottom: $spacing-11;
     }
   }
+}
 
-  &--spacing-top {
-    margin-top: $spacing-7;
+// Company page layouts
+
+.company {
+  margin: auto;
+  max-width: 40rem;
+
+  @media screen and (min-width: map-get($breakpoints, 'breakpoint-4')) {
+    max-width: unset;
+  }
+
+  &__overview {
+
+    &::before {
+      @include absolute-fill;
+      background: url('../../assets/images/company/british-isles.svg') no-repeat center center / contain;
+      content: '';
+      opacity: .5;
+      z-index: z('below');
+
+      @media screen and (min-width: map-get($breakpoints, 'breakpoint-4')) {
+        content: unset;
+      }
+    }
+  }
+
+  &__map {
+    display: none;
 
     @media screen and (min-width: map-get($breakpoints, 'breakpoint-4')) {
-      margin-top: $spacing-9;
+      display: block;
+      position: relative;
+      z-index: z('below');
     }
   }
 
-  .section--margin-b {
-    margin-bottom: 0;
+  &__explanation {
+    position: relative;
 
-    @media screen and (min-width: map-get($breakpoints, 'breakpoint-3')) {
-      margin-bottom: $spacing-10;
+    @media screen and (min-width: map-get($breakpoints, 'breakpoint-10')) {
+      left: 2rem;
     }
-  }
 
-  .blog-post {
-    &__image {
-      width: 100%;
+    .explanation {
+
+      @media screen and (min-width: map-get($breakpoints, 'breakpoint-4')) {
+        margin-top: 30%;
+        position: absolute;
+      }
     }
   }
 }
 
-.banner-spacer {
-  height: 4rem;
+// Company page images
 
-  @media screen and (min-width: map-get($breakpoints, 'breakpoint-2')) {
-    height: 5rem;
+.company-map {
+
+  &__media {
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  &__image {
+    margin-top: -$spacing-6;
+  }
+}
+
+.team {
+
+  &__bench-profiles {
+    @media screen and (min-width: map-get($breakpoints, 'breakpoint-1')) {
+      display: grid;
+      grid-gap: $spacing-2;
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    @media screen and (min-width: map-get($breakpoints, 'breakpoint-4')) {
+      display: block;
+    }
   }
 }

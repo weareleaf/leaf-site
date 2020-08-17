@@ -5,11 +5,11 @@ const openShareWindow = function(url) {
 }
 
 const shareTwitter = function(url, title) {
-  openShareWindow(`https://twitter.com/share?url=${url}&text=${title}`)
+  openShareWindow(`https://twitter.com/intent/tweet?url=${url}&text=${title}`)
 }
 
-const shareFacebook = function(url, title) {
-  openShareWindow(`https://www.facebook.com/sharer/sharer.php?href=${url}&title=${title}`)
+const shareFacebook = function(url) {
+  openShareWindow(`https://www.facebook.com/sharer/sharer.php?u=${url}`)
 }
 
 const shareLinkedIn = function(url) {
@@ -22,8 +22,8 @@ const addShareLinkListeners = function() {
       e.preventDefault()
 
       const { socialNetwork } = link.dataset
-      const currentUrl = escape(window.location.href)
-      const title = document.title
+      const currentUrl = encodeURI(window.location.href)
+      const title = encodeURI(document.title)
 
       if (socialNetwork === 'twitter') {
         shareTwitter(currentUrl, title)

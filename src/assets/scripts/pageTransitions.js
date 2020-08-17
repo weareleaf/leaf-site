@@ -1,44 +1,18 @@
 import Barba from 'barba.js'
-import banner from './banner.js'
+import banner from './close.js'
 import modal from './modal.js'
 
 const body = document.body
 const TRANSITION_TIME = 450
 
 const PageTransition = Barba.BaseTransition.extend({
-  // This is an awful hack. Howdy has no way to manually trigger a
-  // reload so we need to remove & re-add the script to the page
-  // when we transition to a new page.
-  reloadHowdy: function() {
-    if (!!document.querySelector('form')) {
-      const howdy = document.getElementById('howdy-script')
-      const head = howdy.parentNode
-      head.removeChild(howdy)
-
-      const newHowdy = document.createElement('script')
-      newHowdy.setAttribute('id', howdy.id)
-      newHowdy.setAttribute('src', howdy.src)
-      head.appendChild(newHowdy)
-    }
-  },
-
-  trackVirtualPageView: function() {
-    const path = window.location.pathname
-    if (window.gtag) {
-      gtag('config', 'UA-62036216-1', { page_path: path })
-      console.log('Tracked virtual page view "' + path + '"')
-    } else {
-      console.log('Could not track page view "' + path + '"')
-    }
-  },
-
-  initialiseBannerAndModal: function() {
+  initialiseBannerAndModal: function () {
     body.classList.remove('modal-open')
     banner()
     modal()
   },
 
-  addTransitionOutClass: function(callback) {
+  addTransitionOutClass: function (callback) {
     body.classList.remove('transition-in')
     body.classList.add('transition-out')
 
@@ -47,7 +21,7 @@ const PageTransition = Barba.BaseTransition.extend({
     }
   },
 
-  addTransitionInClass: function(callback) {
+  addTransitionInClass: function (callback) {
     body.classList.remove('transition-out')
     body.classList.add('transition-in')
 
@@ -56,8 +30,8 @@ const PageTransition = Barba.BaseTransition.extend({
     }
   },
 
-  start: function() {
-    console.log('Starting transition')
+  start: function () {
+    console.log('Page transition started')
 
     const promisedLoad = this.newContainerLoading
 
@@ -67,21 +41,19 @@ const PageTransition = Barba.BaseTransition.extend({
         this.done()
         this.initialiseBannerAndModal()
         this.addTransitionInClass()
-        this.trackVirtualPageView()
-        this.reloadHowdy()
-        console.log('Ended transition')
+        console.log('Page transition ended')
       })
     })
-  }
+  },
 })
 
-window.addEventListener('load', function() {
+window.addEventListener('load', function () {
   PageTransition.addTransitionInClass()
   PageTransition.initialiseBannerAndModal()
 })
 
 Barba.Pjax.originalPreventCheck = Barba.Pjax.preventCheck
-Barba.Pjax.preventCheck = function(evt, element) {
+Barba.Pjax.preventCheck = function (evt, element) {
   if (!Barba.Pjax.originalPreventCheck(evt, element)) {
     return false
   }
@@ -92,7 +64,7 @@ Barba.Pjax.preventCheck = function(evt, element) {
 
   return true
 }
-Barba.Pjax.getTransition = function() {
+Barba.Pjax.getTransition = function () {
   return PageTransition
 }
 Barba.Pjax.start()

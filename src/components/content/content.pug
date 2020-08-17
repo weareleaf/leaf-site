@@ -1,0 +1,13 @@
+mixin content(c)
+  .content
+    if c.heading2 === true
+      h2.content__heading-2= c.heading
+      p.content__intro= c.intro
+      each item in c.paragraphs
+        p.content__text(class= c.contentTextModifier ? "content__text--" + c.contentTextModifier : "")=item.text
+    else
+      h3.content__heading-3= c.heading
+      p.content__intro= c.intro
+      each item in c.paragraphs
+        p.content__text(class= c.contentTextModifier ? "content__text--" + c.contentTextModifier : "")=item.text
+

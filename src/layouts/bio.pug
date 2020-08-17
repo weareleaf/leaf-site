@@ -1,0 +1,18 @@
+extends ../base.pug
+
+block prepend vars
+  -var pageClass = "bio"
+
+block pageContent
+  main(role="main")
+    block pageComponents
+
+    +close({
+      url: "/company"
+    })
+
+    +image({
+      context: "biography",
+      src: c.image.src,
+      alt: c.image.alt
+    })

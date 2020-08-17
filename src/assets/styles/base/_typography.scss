@@ -1,16 +1,16 @@
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
+h1, .h1,
+h2, .h2,
+h3, .h3,
+h4, .h4,
+h5, .h5,
+h6, .h6 {
   color: var(--color-heading);
   font-weight: $font-weight-heading;
   line-height: $heading-line-height;
   margin-top: 0;
 }
 
-h1 {
+h1, .h1 {
   font-size: $font-size-h1;
   margin-bottom: $spacing-4;
 
@@ -20,7 +20,7 @@ h1 {
   }
 }
 
-h2 {
+h2, .h2 {
   font-size: $font-size-h2;
   margin-bottom: $spacing-4;
 
@@ -33,12 +33,12 @@ h2 {
   }
 }
 
-h3 {
+h3, .h3 {
   font-size: $font-size-h3;
   margin-bottom: $spacing-2;
 }
 
-h4 {
+h4, .h4 {
   font-size: $font-size-h4;
   margin-bottom: $spacing-3;
 
@@ -47,7 +47,7 @@ h4 {
   }
 }
 
-h5 {
+h5, .h5 {
   font-size: $font-size-h5;
   margin-bottom: $spacing-3;
 
@@ -56,20 +56,8 @@ h5 {
   }
 }
 
-h6 {
+h6, .h6 {
   margin-bottom: 0;
-}
-
-h4 {
-  font-size: $font-size-h4;
-}
-
-h5 {
-  font-size: $font-size-h5;
-}
-
-h6 {
-  font-size: $font-size-h6;
 }
 
 p {
@@ -87,28 +75,23 @@ a {
   }
 }
 
+
 figure {
-  margin: $spacing-7 0;
+  margin: 0;
+
+  .page--content & {
+    margin-bottom: $spacing-7;
+  }
+}
+
+.permalink + figure {
+  margin-top: $spacing-4;
+}
+
+.figure--wide {
 
   @media screen and (min-width: map-get($breakpoints, 'breakpoint-3')) {
-    margin: $spacing-7 0 $spacing-8;
-  }
-
-  @media screen and (min-width: map-get($breakpoints, 'breakpoint-4')) {
-    margin: $spacing-6 0 $spacing-9;
-  }
-
-  @media screen and (min-width: map-get($breakpoints, 'breakpoint-6')) {
-    margin: $spacing-7 0 $spacing-9;
-  }
-
-  &:first-child {
-    margin-top: 0;
-  }
-
-  img {
-    display: inline-block;
-    vertical-align: middle;
+    @include margin-horizontal (-$spacing-9);
   }
 }
 
@@ -118,44 +101,26 @@ ul {
 
 figcaption {
   color: var(--color-paragraph);
-  font-size: $font-size-sm;
-  padding: $spacing-3 0;
+  font-size: $font-size-xs;
+  margin-top: $spacing-3;
   text-align: center;
 }
 
 img {
+  display: block;
   height: auto;
   max-width: 100%;
 }
 
 .divider {
-  border: none;
-  border-top: $border-width-xl $border-style $color-powder;
-
-  &--margin {
-    margin: $spacing-10 0;
-  }
-
-  &--margin-bottom {
-    margin-bottom: $spacing-10;
-  }
-
-  &--margin-top {
-    margin-top: $spacing-10;
-  }
-
-  &--margin-blog {
-    margin-bottom: $spacing-8;
-  }
-
-  &--block-hr {
-    justify-content: center;
-    margin: $spacing-8 0 $spacing-8 0;
-    width: 3.75rem;
-  }
+  border: 0;
+  border-top: $border-style $border-width-xl var(--color-accent);
+  margin: $spacing-8 0;
+  width: $size-6;
 }
 
-.unstyled-list {
+.unstyled-list,
+%unstyled-list {
   list-style: none;
   margin: 0;
   padding: 0;
@@ -163,47 +128,46 @@ img {
 
 .styled-list {
   list-style: none;
-  margin: 0 0 $spacing-5;
+  margin: 0 0 $spacing-7;
   padding: 0;
 
+  .sidebar & {
+    margin-bottom: 0; //- Debt here! A quick way to get rid of an accidental margin.
+  }
+
   &__item {
+    font-size: $font-size-sm;
+    padding-left: #{$spacing-4 + .3rem};
     position: relative;
 
     &:not(:last-child) {
-      margin-bottom: $spacing-3;
+      margin-bottom: $spacing-2;
     }
 
-    &--gap-lg {
-      &:not(:last-child) {
-        margin-bottom: $spacing-6;
-      }
-    }
-
-    .styled-list--inside-lg & {
-      margin-left: $spacing-7;
-    }
-
-    .styled-list--inside & {
-      margin-left: $spacing-6;
-    }
-
-    .styled-list--inside-sm & {
-      margin-left: $spacing-6;
-
-      @media screen and (min-width: map-get($breakpoints, 'breakpoint-8')) {
-        margin-left: 0;
-      }
+    .blog-post & {
+      font-size: 1.05rem; //- More debt here! A quick matching of larger, customer font-size on blog posts.
+      padding-left: #{$spacing-7 + .4rem};
     }
 
     &::before {
       background-color: var(--color-accent);
       content: '';
       display: block;
-      height: .4rem;
-      left: -1.4rem;
+      height: .3rem;
+      left: 0;
       position: absolute;
-      top: .4rem;
-      width: .4rem;
+      top: .3rem;
+      width: .3rem;
+
+      @media screen and (min-width: map-get($breakpoints, 'breakpoint-4')) {
+        top: .5rem;
+      }
+
+      .blog-post & {
+        height: .4rem;
+        left: $spacing-5;
+        width: .4rem;
+      }
     }
   }
 }
@@ -225,7 +189,7 @@ img {
     margin-bottom: -1rem; // Custom margin, unrelated to global spacing system
     pointer-events: none;
     text-align: center;
-    z-index: -1;
+    z-index: z('below');
 
     @media screen and (min-width: map-get($breakpoints, 'breakpoint-1')) {
       font-size: 5rem; // Custom font-size, unrelated to global spacing system
@@ -239,7 +203,7 @@ img {
   }
 }
 
-blockquote {
+blockquote.blog-blockquote {
   margin: $spacing-7 auto;
   padding: $spacing-3 0 $spacing-3 $spacing-7;
   position: relative;
@@ -247,7 +211,7 @@ blockquote {
 
   @media screen and (min-width: map-get($breakpoints, 'breakpoint-2')) {
     margin: 0;
-    padding: $spacing-4 0 $spacing-5 $spacing-5;
+    padding: $spacing-4 0 $spacing-7 $spacing-5;
     width: 75%;
   }
 
@@ -255,25 +219,31 @@ blockquote {
     width: 100%;
   }
 
-  q {
+  p.main-blockquote {
     color: $color-eggplant;
+  }
+
+  p {
+    color: $color-amethyst;
     display: block;
-    font-family: $font-family-sans-serif-light;
+    font-family: $font-family-serif;
     font-size: $font-size-lg;
+    font-style: italic;
     line-height: $quote-line-height;
     margin-bottom: $spacing-3;
     width: 100%;
 
     &::before {
-      color: rgba($color-eggplant, .1);
+      color: rgba($color-amethyst, .1);
       content: open-quote;
+      font-family: $font-family-sans-serif;
       font-size: 10rem;
-      font-weight: bold;
+      font-weight: 700;
       line-height: .9;
-      left: 0;
+      left: -$spacing-4;
       position: absolute;
-      top: 0;
-      z-index: -1;
+      top: $spacing-4;
+      z-index: z('below');
     }
 
     &::after {
@@ -283,7 +253,40 @@ blockquote {
   }
 
   cite {
-    color: $color-cerulean;
-    font-size: $font-size-sm;
+    color: $color-amethyst;
+    font-size: $font-size-xs;
+
+    &::before {
+      content: '— ';
+    }
+  }
+}
+
+.large {
+  font-size: $font-size-xl;
+  margin-bottom: $spacing-6;
+
+  @media screen and (min-width: map-get($breakpoints, 'breakpoint-4')) {
+    margin-bottom: $spacing-8;
+  }
+
+  &--center {
+    margin-bottom: $spacing-8;
+
+    @media screen and (min-width: map-get($breakpoints, 'breakpoint-4')) {
+      text-align: center;
+    }
+  }
+}
+
+.biography {
+
+  &__meta {
+    color: hsl(231, 84%, 83%);
+    font-family: $font-family-sans-serif-extrabold;
+    font-size: .7rem;
+    letter-spacing: .1rem;
+    margin-bottom: $spacing-2;
+    text-transform: uppercase;
   }
 }

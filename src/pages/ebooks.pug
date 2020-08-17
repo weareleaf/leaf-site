@@ -12,8 +12,8 @@ block prepend vars
 block pageComponents
 
   +hero({
-    heroHeading: heroHeading,
-    heroSubheading: heroSubheading,
+    heading: heroHeading,
+    subheading: heroSubheading,
   })
 
   section.section
@@ -21,19 +21,19 @@ block pageComponents
       .grid.grid--tile
         .grid__item
           +resource({
-            resourceImage: {
+            image: {
               src: "/assets/images/ebooks/better-digital-teams.jpg",
               alt: "The 'Working environments' e-book cover."
             },
-            resourceUrl: "/resources/articles/Better%20Digital%20Teams%20-%20Working%20environment.pdf",
-            resourceSubheading: "Episode one",
-            resourceHeading: "Working environments",
-            resourceText: "Learn how to create a productive workspace, getting the most out of your team of developers, designers, or writers."
+            url: "/resources/articles/Better%20Digital%20Teams%20-%20Working%20environment.pdf",
+            subheading: "Episode one",
+            heading: "Working environments",
+            text: "Learn how to create a productive workspace, getting the most out of your team of developers, designers, or writers."
           })
 
         .grid__item
           +resource({
-            resourceSubheading: "Episode two",
-            resourceHeading: "Remote working",
-            resourceText: "Discover how to shrink your overheads whilst keeping the team feeling connected and the work qualify high."
+            subheading: "Episode two",
+            heading: "Remote working",
+            text: "Discover how to shrink your overheads whilst keeping the team feeling connected and the work qualify high."
           })

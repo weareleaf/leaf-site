@@ -1,3 +1,25 @@
+@mixin grid {
+  display: grid;
+  grid-gap: $spacing-7;
+  grid-template-columns: $grid-columns-default;
+
+  @media screen and (min-width: map-get($breakpoints, 'breakpoint-4')) {
+    grid-column-gap: $spacing-9;
+  }
+
+  @media screen and (min-width: map-get($breakpoints, 'breakpoint-6')) {
+    grid-column-gap: $spacing-10;
+  }
+}
+
+@mixin grid-center {
+  margin: 0 auto;
+  max-width: 34rem;
+}
+
+$grid-columns-default: 1fr;
+$grid-columns-post: 2.5rem 1fr 2.5rem;
+
 .grid {
   display: grid;
   grid-template-columns: 1fr;
@@ -12,8 +34,15 @@
     grid-column-gap: $spacing-10;
   }
 
+  &--post {
+
+    @media screen and (min-width: map-get($breakpoints, 'breakpoint-4')) {
+      grid-template-columns: 2.5rem 1fr 2.5rem;
+    }
+  }
+
   &--center {
-    max-width: 40rem;
+    max-width: 34rem;
     margin: 0 auto;
   }
 
@@ -38,18 +67,6 @@
     }
   }
 
-  &--symmetrical-card {
-
-    @media screen and (min-width: map-get($breakpoints, 'breakpoint-3')) {
-      grid-template-columns: 1fr 1fr;
-      grid-column-gap: $spacing-9;
-    }
-
-    @media screen and (min-width: map-get($breakpoints, 'breakpoint-4')) {
-      grid-column-gap: $spacing-10;
-    }
-  }
-
   &--statements {
 
     @media screen and (min-width: map-get($breakpoints, 'breakpoint-1')) {
@@ -62,19 +79,15 @@
   }
 
   &--profiles {
-    grid-column-gap: $spacing-6;
-    grid-row-gap: $spacing-7;
+    grid-gap: $spacing-7;
     grid-template-columns: repeat(2, 1fr);
+
     @media screen and (min-width: map-get($breakpoints, 'breakpoint-1')) {
       grid-template-columns: repeat(3, 1fr);
     }
 
-    @media screen and (min-width: map-get($breakpoints, 'breakpoint-3')) {
-      grid-template-columns: repeat(5, 1fr);
-    }
-
-    @media screen and (min-width: map-get($breakpoints, 'breakpoint-6')) {
-      grid-column-gap: $spacing-7;
+    @media screen and (min-width: map-get($breakpoints, 'breakpoint-4')) {
+      grid-template-columns: repeat(3, 1fr);
     }
   }
 
@@ -87,11 +100,22 @@
     }
   }
 
-  &__item {
-    @media screen and (min-width: map-get($breakpoints, 'breakpoint-2')) {
-      &--span-2 {
-        grid-column: 1 / span 2;
-      }
+  &--company {
+
+    @media screen and (min-width: map-get($breakpoints, 'breakpoint-4')) {
+      align-items: center;
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    @media screen and (min-width: map-get($breakpoints, 'breakpoint-6')) {
+      grid-gap: 5.5rem;
+    }
+  }
+
+  &--the-team {
+    @media screen and (min-width: map-get($breakpoints, 'breakpoint-4')) {
+      grid-gap: $spacing-10;
+      grid-template-columns: auto 15rem;
     }
   }
 
@@ -105,6 +129,23 @@
 
     @media screen and (min-width: map-get($breakpoints, 'breakpoint-4')) {
       grid-template-columns: 1fr 1fr 1fr;
+    }
+  }
+
+  &--center-text {
+
+    @media screen and (min-width: map-get($breakpoints, 'breakpoint-4')) {
+      margin: 0 auto;
+      max-width: 29rem;
+    }
+  }
+
+  &--bullet-points {
+    grid-gap: 0;
+
+    @media screen and (min-width: map-get($breakpoints, 'breakpoint-1')) {
+      grid-gap: $spacing-3;
+      grid-template-columns: repeat(2, 1fr);
     }
   }
 }
