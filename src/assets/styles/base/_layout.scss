@@ -52,26 +52,9 @@ main {
     max-width: unset;
   }
 
-  &__overview {
-
-    &::before {
-      @include absolute-fill;
-      background: url('../../assets/images/company/british-isles.svg') no-repeat center center / contain;
-      content: '';
-      opacity: .5;
-      z-index: z('below');
-
-      @media screen and (min-width: map-get($breakpoints, 'breakpoint-4')) {
-        content: unset;
-      }
-    }
-  }
-
   &__map {
-    display: none;
 
     @media screen and (min-width: map-get($breakpoints, 'breakpoint-4')) {
-      display: block;
       position: relative;
       z-index: z('below');
     }
@@ -81,7 +64,7 @@ main {
     position: relative;
 
     @media screen and (min-width: map-get($breakpoints, 'breakpoint-10')) {
-      left: 2rem;
+      left: $spacing-7;
     }
 
     .explanation {
@@ -99,12 +82,9 @@ main {
 .company-map {
 
   &__media {
-    display: flex;
-    justify-content: flex-end;
-  }
-
-  &__image {
-    margin-top: -$spacing-6;
+    position: absolute;
+    transform: translateY(-35%);
+    width: 118rem;
   }
 }
 
