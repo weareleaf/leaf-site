@@ -53,8 +53,11 @@ main {
   }
 
   &__map {
+    display: flex;
+    justify-content: center;
 
     @media screen and (min-width: map-get($breakpoints, 'breakpoint-4')) {
+      display: block;
       position: relative;
       z-index: z('below');
     }
@@ -82,21 +85,48 @@ main {
 .company-map {
 
   &__media {
-    display: none;
 
-    @media screen and (min-width: map-get($breakpoints, 'breakpoint-4')) {
+    &--mobile-map {
       display: block;
-      left: -$spacing-10;
-      margin-left: 0;
+      margin-top: -$spacing-8;
+
+      @media screen and (min-width: map-get($breakpoints, 'breakpoint-2')) {
+        display: none;
+      }
+    }
+
+    &--desktop-map {
+      display: none;
       margin-top: 0;
       position: absolute;
       transform: translateY(-50%);
-      width: 55rem;
+  
+      @media screen and (min-width: map-get($breakpoints, 'breakpoint-11')) {
+        display: block;
+        left: -$spacing-7;
+        width: 118rem;
+      }
     }
 
-    @media screen and (min-width: map-get($breakpoints, 'breakpoint-12')) {
-      left: -$spacing-7;
-      width: 118rem;
+    &--desktop-map-secondary {
+      display: none;
+
+      @media screen and (min-width: map-get($breakpoints, 'breakpoint-2')) {
+        margin-top: $spacing-9;
+        display: block;
+      }
+
+      @media screen and (min-width: map-get($breakpoints, 'breakpoint-4')) {
+        left: -$spacing-10;
+        margin-top: 0;
+        position: absolute;
+        transform: translateY(-50%);
+        width: 55rem;
+      }
+  
+      @media screen and (min-width: map-get($breakpoints, 'breakpoint-11')) {
+        display: none;
+      }
     }
   }
 }

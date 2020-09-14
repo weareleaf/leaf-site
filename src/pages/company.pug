@@ -72,8 +72,22 @@ block pageComponents
           .company__map
             +image({
               context: "company-map",
+              modifier: "mobile-map",
+              src: "/assets/images/company/mobile-map.svg",
+              alt: "An abstract map of Europe and Africa showing our locations. Curt is in Nottingham, England; Tina is in Amsterdam, Netherlands; Chris, Mike, and OJ are in Kent, England; Jeanika is in Centurion, South Africa.",
+            })
+            +image({
+              context: "company-map",
+              modifier: "desktop-map",
               src: "/assets/images/company/abstract-map.svg",
-              alt: "An abstract world map showing the location indicators of where we are all based.",
+              alt: "An abstract world map showing our locations. Curt is in Nottingham, England; Tina is in Amsterdam, Netherlands; Chris, Mike, and OJ are in Kent, England; Jeanika is in Centurion, South Africa.",
+              presentation: true
+            })
+            +image({
+              context: "company-map",
+              modifier: "desktop-map-secondary",
+              src: "/assets/images/company/abstract-map-secondary.svg",
+              alt: "An abstract world map showing our locations. Curt is in Nottingham, England; Tina is in Amsterdam, Netherlands; Chris, Mike, and OJ are in Kent, England; Jeanika is in Centurion, South Africa.",
               presentation: true
             })
             +pin({
