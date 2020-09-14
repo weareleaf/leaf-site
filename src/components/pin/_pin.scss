@@ -1,21 +1,33 @@
 .pin {
+  position: absolute;
 
   &--nottingham {
-    position: absolute;
-    right: -5.5rem;
-    top: .65rem;
+    right: -3.5rem;
+    top: -4.9rem;
+  }
+
+  &--amsterdam {
+    right: -6.25rem;
+    top: -2rem;
   }
 
   &--kent {
-    position: absolute;
-    right: 2rem;
-    top: 4rem;
+    right: 3rem;
+    text-align: right;
+    top: -1.25rem;
+  }
+
+  &--centurion {
+    right: .5rem;
+    text-align: right;
+    top: 13.5rem;
   }
 
   &__content {
+    visibility: hidden;
 
-    &--kent {
-      text-align: right;
+    @media screen and (min-width: map-get($breakpoints, 'breakpoint-11')) {
+      visibility: visible;
     }
   }
 

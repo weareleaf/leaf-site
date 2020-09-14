@@ -30,7 +30,6 @@
     margin-top: -$spacing-4;
 
     @media screen and (min-width: map-get($breakpoints, 'breakpoint-4')) {
-      margin-bottom: $spacing-8;
       margin-top: 0;
     }
   }

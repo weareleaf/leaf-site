@@ -70,7 +70,7 @@ main {
     .explanation {
 
       @media screen and (min-width: map-get($breakpoints, 'breakpoint-4')) {
-        margin-top: 30%;
+        margin-top: 10%;
         position: absolute;
       }
     }
@@ -82,9 +82,22 @@ main {
 .company-map {
 
   &__media {
-    position: absolute;
-    transform: translateY(-35%);
-    width: 118rem;
+    display: none;
+
+    @media screen and (min-width: map-get($breakpoints, 'breakpoint-4')) {
+      display: block;
+      left: -$spacing-10;
+      margin-left: 0;
+      margin-top: 0;
+      position: absolute;
+      transform: translateY(-50%);
+      width: 55rem;
+    }
+
+    @media screen and (min-width: map-get($breakpoints, 'breakpoint-12')) {
+      left: -$spacing-7;
+      width: 118rem;
+    }
   }
 }
 
