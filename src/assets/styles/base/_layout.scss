@@ -88,9 +88,14 @@ main {
 
     &--mobile-map {
       display: block;
-      margin-top: -$spacing-8;
+      margin-right: -$spacing-13;
+      margin-top: -$spacing-11;
 
-      @media screen and (min-width: map-get($breakpoints, 'breakpoint-2')) {
+      @media screen and (min-width: map-get($breakpoints, 'breakpoint-1')) {
+        margin-right: 0;
+      }
+
+      @media screen and (min-width: map-get($breakpoints, 'breakpoint-4')) {
         display: none;
       }
     }
@@ -111,12 +116,8 @@ main {
     &--desktop-map-secondary {
       display: none;
 
-      @media screen and (min-width: map-get($breakpoints, 'breakpoint-2')) {
-        margin-top: $spacing-9;
-        display: block;
-      }
-
       @media screen and (min-width: map-get($breakpoints, 'breakpoint-4')) {
+        display: block;
         left: -$spacing-10;
         margin-top: 0;
         position: absolute;
