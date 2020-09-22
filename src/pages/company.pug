@@ -65,41 +65,50 @@ block pageComponents
             +explanation({
               example: true,
               heading: "Did you know",
-              text: "Our team are based in various parts of England and Ireland. We have an entirely remote workforce, and all work from the comfort of our own home offices.",
+              text: "We have an entirely remote workforce. Rather than working from a physical office, our team are based in various parts of England, South Africa, and the Netherlands.",
               modifier: "single"
             })
 
           .company__map
             +image({
               context: "company-map",
-              src: "/assets/images/company/british-isles.svg",
-              alt: "",
+              modifier: "mobile-map",
+              src: "/assets/images/company/mobile-map.svg",
+              alt: "An abstract map of Europe and Africa showing our locations. Curt is in Nottingham, England; Tina is in Amsterdam, Netherlands; Chris, Mike, and OJ are in Kent, England; Jeanika is in Centurion, South Africa.",
+            })
+            +image({
+              context: "company-map",
+              modifier: "desktop-map",
+              src: "/assets/images/company/abstract-map.svg",
+              alt: "An abstract world map showing our locations. Curt is in Nottingham, England; Tina is in Amsterdam, Netherlands; Chris, Mike, and OJ are in Kent, England; Jeanika is in Centurion, South Africa.",
+              presentation: true
+            })
+            +image({
+              context: "company-map",
+              modifier: "desktop-map-secondary",
+              src: "/assets/images/company/abstract-map-secondary.svg",
+              alt: "An abstract world map showing our locations. Curt is in Nottingham, England; Tina is in Amsterdam, Netherlands; Chris, Mike, and OJ are in Kent, England; Jeanika is in Centurion, South Africa.",
               presentation: true
             })
             +pin({
-              location: "Limerick",
-              modifier: "tina",
-              name: "Tina van Schelt"
+              location: "Nottingham, England",
+              modifier: "nottingham",
+              name: "Curt"
             })
             +pin({
-              location: "Nottingham",
-              modifier: "curt",
-              name: "Curtis Lee"
+              location: "Amsterdam, Netherlands",
+              modifier: "amsterdam",
+              name: "Tina"
             })
             +pin({
-              location: "Canterbury",
-              modifier: "mike",
-              name: "Mike Carter"
+              location: "Kent, England",
+              modifier: "kent",
+              name: "Chris, Mike, and OJ"
             })
             +pin({
-              location: "Ashford",
-              modifier: "chris",
-              name: "Chris Annetts"
-            })
-            +pin({
-              location: "Ramsgate",
-              modifier: "oj",
-              name: "Oliver Standeven"
+              location: "Centurion, South Africa",
+              modifier: "centurion",
+              name: "Jeanika"
             })
 
   section.section

@@ -52,23 +52,9 @@ main {
     max-width: unset;
   }
 
-  &__overview {
-
-    &::before {
-      @include absolute-fill;
-      background: url('../../assets/images/company/british-isles.svg') no-repeat center center / contain;
-      content: '';
-      opacity: .5;
-      z-index: z('below');
-
-      @media screen and (min-width: map-get($breakpoints, 'breakpoint-4')) {
-        content: unset;
-      }
-    }
-  }
-
   &__map {
-    display: none;
+    display: flex;
+    justify-content: center;
 
     @media screen and (min-width: map-get($breakpoints, 'breakpoint-4')) {
       display: block;
@@ -81,13 +67,13 @@ main {
     position: relative;
 
     @media screen and (min-width: map-get($breakpoints, 'breakpoint-10')) {
-      left: 2rem;
+      left: $spacing-7;
     }
 
     .explanation {
 
       @media screen and (min-width: map-get($breakpoints, 'breakpoint-4')) {
-        margin-top: 30%;
+        margin-top: 10%;
         position: absolute;
       }
     }
@@ -99,12 +85,50 @@ main {
 .company-map {
 
   &__media {
-    display: flex;
-    justify-content: flex-end;
-  }
 
-  &__image {
-    margin-top: -$spacing-6;
+    &--mobile-map {
+      display: block;
+      margin-right: -$spacing-13;
+      margin-top: -$spacing-11;
+
+      @media screen and (min-width: map-get($breakpoints, 'breakpoint-1')) {
+        margin-right: 0;
+      }
+
+      @media screen and (min-width: map-get($breakpoints, 'breakpoint-4')) {
+        display: none;
+      }
+    }
+
+    &--desktop-map {
+      display: none;
+      margin-top: 0;
+      position: absolute;
+      transform: translateY(-50%);
+  
+      @media screen and (min-width: map-get($breakpoints, 'breakpoint-11')) {
+        display: block;
+        left: -$spacing-7;
+        width: 118rem;
+      }
+    }
+
+    &--desktop-map-secondary {
+      display: none;
+
+      @media screen and (min-width: map-get($breakpoints, 'breakpoint-4')) {
+        display: block;
+        left: -$spacing-10;
+        margin-top: 0;
+        position: absolute;
+        transform: translateY(-50%);
+        width: 55rem;
+      }
+  
+      @media screen and (min-width: map-get($breakpoints, 'breakpoint-11')) {
+        display: none;
+      }
+    }
   }
 }
 
