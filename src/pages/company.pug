@@ -337,6 +337,18 @@ block pageComponents
                   heading: "Oliver Standeven (OJ)",
                   text: "Software Engineer"
                 })
+              .grid__item
+                +profile({
+                  url: "mailto:hello@weareleaf.com",
+                  target: "_blank",
+                  image: {
+                    context: "profile",
+                    src: "/assets/images/company/team/first-team/placeholder.jpg",
+                    alt: "A photo of a question mark."
+                  },
+                  heading: "Interested in joining?",
+                  text: "Email us"
+                })
           .team__our-bench
             +block({
               heading: "Our bench",
@@ -483,6 +495,11 @@ block pageComponents
               heading: "The new normal",
               text: "Despite a global pandemic, we managed to grow in 2020 with Jeanika joining us from South Africa. Her wide range of front-end experience and cheery demeanour made for a perfect fit.",
               modifier: "mirrored"
+            },
+            {
+              date: "2020-10",
+              heading: "A new adventure",
+              text: "With Tina settling into her new life in the Netherlands, she decided it was time for a change. With that, she landed herself a Senior Engineer role at Clever Franke."
             }
           ]
         })
