@@ -65,7 +65,7 @@ block pageComponents
             +explanation({
               example: true,
               heading: "Did you know",
-              text: "We have an entirely remote workforce. Rather than working from a physical office, our team are based in various parts of England, South Africa, and the Netherlands.",
+              text: "We have an entirely remote workforce. Rather than working from a physical office, our team are based in various parts of England and South Africa.",
               modifier: "single"
             })
 
@@ -74,31 +74,26 @@ block pageComponents
               context: "company-map",
               modifier: "mobile-map",
               src: "/assets/images/company/mobile-map.svg",
-              alt: "An abstract map of Europe and Africa showing our locations. Curt is in Nottingham, England; Tina is in Amsterdam, Netherlands; Chris, Mike, and OJ are in Kent, England; Jeanika is in Centurion, South Africa.",
+              alt: "An abstract map of Europe and Africa showing our locations. Curt is in Nottingham, England; Chris, Mike, and OJ are in Kent, England; Jeanika is in Centurion, South Africa.",
             })
             +image({
               context: "company-map",
               modifier: "desktop-map",
               src: "/assets/images/company/abstract-map.svg",
-              alt: "An abstract world map showing our locations. Curt is in Nottingham, England; Tina is in Amsterdam, Netherlands; Chris, Mike, and OJ are in Kent, England; Jeanika is in Centurion, South Africa.",
+              alt: "An abstract world map showing our locations. Curt is in Nottingham, England; Chris, Mike, and OJ are in Kent, England; Jeanika is in Centurion, South Africa.",
               presentation: true
             })
             +image({
               context: "company-map",
               modifier: "desktop-map-secondary",
               src: "/assets/images/company/abstract-map-secondary.svg",
-              alt: "An abstract world map showing our locations. Curt is in Nottingham, England; Tina is in Amsterdam, Netherlands; Chris, Mike, and OJ are in Kent, England; Jeanika is in Centurion, South Africa.",
+              alt: "An abstract world map showing our locations. Curt is in Nottingham, England; Chris, Mike, and OJ are in Kent, England; Jeanika is in Centurion, South Africa.",
               presentation: true
             })
             +pin({
               location: "Nottingham, England",
               modifier: "nottingham",
               name: "Curt"
-            })
-            +pin({
-              location: "Amsterdam, Netherlands",
-              modifier: "amsterdam",
-              name: "Tina"
             })
             +pin({
               location: "Kent, England",
@@ -180,9 +175,9 @@ block pageComponents
         figure.collage.collage--pets
           +image({
             context: "collage",
-            src: "/assets/images/company/pets/tina-and-wilco.jpg",
-            alt: "A photo of Tina in the car, with her pet dog Wilko looking happy in the back seat.",
-            modifier: "tina-and-wilco"
+            src: "/assets/images/company/pets/happy-barney.jpg",
+            alt: "A photo of Curt's dog Barney, looking very happy with his front paws leaning against a stone wall.",
+            modifier: "happy-barney"
           })
           +image({
             context: "collage",
@@ -270,7 +265,7 @@ block pageComponents
           +image({
             context: "collage",
             src: "/assets/images/company/culture/leaf-tshirt.jpg",
-            alt: "A photo of Tina showing off her Leaf t-shirt.",
+            alt: "A photo of our Leaf branded t-shirt.",
             modifier: "leaf-tshirt"
           })
           +image({
@@ -336,21 +331,23 @@ block pageComponents
                 +profile({
                   image: {
                     context: "profile",
-                    src: "/assets/images/company/team/first-team/tina.jpg",
-                    alt: "A photo of Tina looking captived mid-conversation."
-                  },
-                  heading: "Tina van Schelt",
-                  text: "Software Engineer"
-                })
-              .grid__item
-                +profile({
-                  image: {
-                    context: "profile",
                     src: "/assets/images/company/team/first-team/oj.jpg",
                     alt: "A photo of OJ taking a walk on the beach."
                   },
                   heading: "Oliver Standeven (OJ)",
                   text: "Software Engineer"
+                })
+              .grid__item
+                +profile({
+                  url: "mailto:hello@weareleaf.com",
+                  target: "_blank",
+                  image: {
+                    context: "profile",
+                    src: "/assets/images/company/team/first-team/placeholder.jpg",
+                    alt: "A photo of a question mark."
+                  },
+                  heading: "Interested in joining?",
+                  text: "Email us"
                 })
           .team__our-bench
             +block({
@@ -498,6 +495,11 @@ block pageComponents
               heading: "The new normal",
               text: "Despite a global pandemic, we managed to grow in 2020 with Jeanika joining us from South Africa. Her wide range of front-end experience and cheery demeanour made for a perfect fit.",
               modifier: "mirrored"
+            },
+            {
+              date: "2020-10",
+              heading: "A new adventure",
+              text: "With Tina settling into her new life in the Netherlands, she decided it was time for a change. With that, she landed herself a Senior Engineer role at Clever Franke."
             }
           ]
         })
