@@ -12,12 +12,6 @@
     top: -1.25rem;
   }
 
-  &--centurion {
-    right: .5rem;
-    text-align: right;
-    top: 13.5rem;
-  }
-
   &__content {
     visibility: hidden;
 
@@ -28,12 +22,12 @@
 
   &__name {
     font-size: $font-size-xs;
-    margin-bottom: -.20rem;
+    margin-bottom: -0.2rem;
   }
 
   &__location {
     font-family: $font-family-sans-serif-medium;
-    font-size: .7rem;
+    font-size: 0.7rem;
     margin-bottom: 0;
   }
 }
