@@ -31,7 +31,7 @@
   }
 
   &--large {
-    background-color: $color-white;
+    background: $color-white;
     color: $color-bluegem;
     display: block;
     font-size: $root-font-size;
@@ -46,7 +46,17 @@
     }
 
     &:hover {
-      background-color: $color-silk;
+      background: $color-silk;
+    }
+  }
+
+  &--analysis {
+    background-color: $color-luckypoint;
+    display: block;
+    margin: $spacing-6 auto 0 auto;
+
+    &:hover {
+      background: darken($color-luckypoint, 3%);
     }
   }
 }

@@ -1,18 +1,18 @@
 mixin banner(c)
   section.section
-    .banner
-      if c.preview
-        .banner__main
+    if c.preview
+      .banner
+        .banner__opening
           .banner__shape.banner__shape--1
           h2.banner__heading Improve your product with our analysis report#[span.banner__heading__period .]
-          p.banner__text For just <strong>£749</strong>, we’ll create a bespoke report to help you identify where your product can be improved, highlight any issues, and increase your chances of success.
+          p.banner__intro For just <strong>£749</strong>, we’ll create a bespoke report to help you identify where your product can be improved, highlight any issues, and increase your chances of success.
           .banner__button
             +button({
               modifier: "large",
               url: "/analysis",
               text: "Find out more"
             })
-        .banner__secondary
+        .banner__key-points
           .banner__shape.banner__shape--2
           +checkmark-list({
             checkmarkList: [
@@ -30,3 +30,27 @@ mixin banner(c)
               }
             ]
           })
+    else
+      .banner.banner--checkout
+        .banner__call-to-action
+          .banner__shape.banner__shape--1
+          h2.banner__heading How do I get started?
+          p.banner__intro Use the link below to purchase the package, and we’ll contact you within 2 working days to arrange a call.
+          .banner__button
+            +button({
+              modifier: "large",
+              url: "",
+              text: "Buy your report for £749"
+            })
+          .banner__banks
+            img(src="/assets/images/analysis/visa.svg", alt="We accept Visa payments.")
+            img(src="/assets/images/analysis/mastercard.svg", alt="We accept Mastercard payments.")
+            img(src="/assets/images/analysis/amex.svg", alt="We accept American Express payments.")
+            img(src="/assets/images/analysis/discover.svg", alt="We accept Discover payments.")
+            img(src="/assets/images/analysis/jcb.svg", alt="We accept JCB payments.")
+            img(src="/assets/images/analysis/diners.svg", alt="We accept Diners Club International payments.")
+            img(src="/assets/images/analysis/union-pay.svg", alt="We accept Union Pay payments.")
+        .banner__refund-info
+          h2.banner__heading.banner__heading--secondary What if I’m not happy?
+          p.banner__intro We’ll offer you a full refund if you feel the report isn’t delivering on it’s promise.
+          p.banner__text We have no interest in getting paid for work that isn’t providing real value for your business. If you aren’t satisfied with the report we produce for you, just let us know during the final call and we’ll make sure to refund you.

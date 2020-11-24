@@ -250,9 +250,14 @@
       margin-bottom: $spacing-8;
     }
 
-    &--analysis {
+    &--analysis,
+    &--center {
       color: var(--color-heading);
       margin-bottom: $spacing-5;
+    }
+    
+    &--center {
+      text-align: center;
     }
   }
 }

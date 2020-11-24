@@ -29,9 +29,14 @@
       margin-bottom: $spacing-6;
     }
 
-    &--analysis {
+    &--analysis,
+    &--center {
       color: var(--color-heading);
       margin-bottom: $spacing-5;
+    }
+
+    &--center {
+      text-align: center;
     }
   }
 

@@ -151,4 +151,9 @@ main {
   &__media {
     transform: scale(1.17);
   }
+
+  &__how-it-works-opening {
+    margin: $spacing-13 auto 4.5rem auto;
+    max-width: 29rem;
+  }
 }

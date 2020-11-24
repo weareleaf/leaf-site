@@ -19,6 +19,11 @@
     max-width: 72.5rem;
   }
 
+  &--checkout {
+    grid-gap: 0;
+    padding: 0;
+  }
+
   &__shape {
     border: $size-2 solid darken($color-bluegem, 2%);
     border-radius: $border-radius-full;
@@ -42,12 +47,14 @@
     }
   }
 
-  &__main,
-  &__secondary {
+  &__opening,
+  &__key-points,
+  &__call-to-action,
+  &__refund-info {
     z-index: z('default');
   }
 
-  &__secondary {
+  &__key-points {
     background: darken($color-bluegem, 2%);
     border-radius: $border-radius-base;
     margin-bottom: $spacing-8;
@@ -70,9 +77,13 @@
     &__period {
       color: var(--color-accent);
     }
+
+    &--secondary {
+      font-size: $font-size-h2;
+    }
   }
 
-  &__text {
+  &__intro {
     color: var(--color-heading);
     font-size: $font-size-md;
   }
@@ -89,5 +100,19 @@
       padding: 0;
       position: relative;
     }
+  }
+
+  &__call-to-action {
+    padding: 4.5rem;
+  }
+
+  &__banks {
+    display: flex;
+    margin-top: $spacing-6;
+  }
+
+  &__refund-info {
+    background: darken($color-bluegem, 2%);
+    padding: 4.5rem;
   }
 }

@@ -17,8 +17,9 @@ block pageComponents
     subheadingModifier: "narrow",
     introButton: true,
     button: {
-      url: "mailto:hello@weareleaf.com",
-      text: "hello@weareleaf.com"
+      modifier: "analysis",
+      url: "",
+      text: "Buy your report for £749"
     }
   })
 
@@ -40,3 +41,38 @@ block pageComponents
             text: "Every suggestion will be communicated in a jargon-free way so that it’s easily understood by everyone at your company.",
             modifier: "single"
           })
+  section.section
+    .container
+      .analysis__how-it-works
+        .analysis__how-it-works-opening
+          h2.content-block__heading.content-block__heading--center How it works
+          p.content__intro.content__intro--center We’ll be careful to take into account your preferences for long or short term return on investment, or particular aspects of your digital product that need special attention.
+          +button({
+            modifier: "analysis",
+            url: "",
+            text: "Buy your report for £749"
+          })
+        +numbered-steps({
+          numberedSteps: [
+            {
+              number: "1",
+              heading: "Initial call",
+              text: "We’ll schedule an initial 1 hour call to get to know your business and the areas of your product you want to improve, as well as answer any questions you may have."
+            },
+            {
+              number: "2",
+              heading: "The analysis",
+              text: "We’ll analyse your digital product in detail to see what can be done to improve it, and make it easier for your customers to provide you with high quality information."
+            },
+            {
+              number: "3",
+              heading: "Your report",
+              text: "We’ll produce a detailed report explaining five changes you should make to your product, and how those changes will deliver value to your organisation."
+            },
+            {
+              number: "4",
+              heading: "Wrapping up",
+              text: "We’ll schedule a second 1 hour call to run through the report with you, and ensure you’re happy with the results and confident on your next steps."
+            }
+          ]
+        })
