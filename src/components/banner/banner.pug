@@ -17,16 +17,16 @@ mixin banner(c)
           +checkmark-list({
             checkmarkList: [
               {
-                text: "We’ll see where we can increase your products <strong class='checkmark-list__text__strong'>performance</strong>, and help users finish their tasks faster."
+                text: "We’ll see where we can increase your products <strong>performance</strong>, and help users finish their tasks faster."
               },
               {
-                text: "We’ll make your product accessible to all so that <strong class='checkmark-list__text__strong'>no customer</strong> is excluded because of a disability."
+                text: "We’ll make your product accessible to all so that <strong>no customer</strong> is excluded because of a disability."
               },
               {
-                text: "We’ll review your product’s content to make sure it’s clear, concise, and <strong class='checkmark-list__text__strong'>suitable</strong> for your target audience."
+                text: "We’ll review your product’s content to make sure it’s clear, concise, and <strong>suitable</strong> for your target audience."
               },
               {
-                text: "We’ll identify opportunities to <strong class='checkmark-list__text__strong'>reduce</strong> the effort needed when capturing customer information."
+                text: "We’ll identify opportunities to <strong>reduce</strong> the effort needed when capturing customer information."
               }
             ]
           })
@@ -43,14 +43,15 @@ mixin banner(c)
               text: "Buy your report for £749"
             })
           .banner__banks
-            img(src="/assets/images/analysis/visa.svg", alt="We accept Visa payments.")
-            img(src="/assets/images/analysis/mastercard.svg", alt="We accept Mastercard payments.")
-            img(src="/assets/images/analysis/amex.svg", alt="We accept American Express payments.")
-            img(src="/assets/images/analysis/discover.svg", alt="We accept Discover payments.")
-            img(src="/assets/images/analysis/jcb.svg", alt="We accept JCB payments.")
-            img(src="/assets/images/analysis/diners.svg", alt="We accept Diners Club International payments.")
-            img(src="/assets/images/analysis/union-pay.svg", alt="We accept Union Pay payments.")
+            img.banner__bank(src="/assets/images/analysis/visa.svg", alt="We accept Visa payments.")
+            img.banner__bank(src="/assets/images/analysis/mastercard.svg", alt="We accept Mastercard payments.")
+            img.banner__bank(src="/assets/images/analysis/amex.svg", alt="We accept American Express payments.")
+            img.banner__bank(src="/assets/images/analysis/discover.svg", alt="We accept Discover payments.")
+            img.banner__bank(src="/assets/images/analysis/jcb.svg", alt="We accept JCB payments.")
+            img.banner__bank(src="/assets/images/analysis/diners.svg", alt="We accept Diners Club International payments.")
+            img.banner__bank(src="/assets/images/analysis/union-pay.svg", alt="We accept Union Pay payments.")
         .banner__refund-info
+          .banner__shape.banner__shape--3
           h2.banner__heading.banner__heading--secondary What if I’m not happy?
           p.banner__intro We’ll offer you a full refund if you feel the report isn’t delivering on it’s promise.
-          p.banner__text We have no interest in getting paid for work that isn’t providing real value for your business. If you aren’t satisfied with the report we produce for you, just let us know during the final call and we’ll make sure to refund you.
+          p.banner__text We have <strong>no interest</strong> in getting paid for work that isn’t providing real value for your business. If you aren’t satisfied with the report we produce for you, just let us know during the final call and we’ll make sure to refund you.
