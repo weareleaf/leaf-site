@@ -1,0 +1,7 @@
+mixin checkmark-list(c)
+  ul.checkmark-list__items
+    each item in c.checkmarkList
+      li.checkmark-list__item
+        .checkmark-list__icon
+          img(src="/assets/images/icons/ui/checkmark.svg", alt="A white checkmark icon")
+        p.checkmark-list__text!= item.text

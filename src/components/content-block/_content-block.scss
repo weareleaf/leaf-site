@@ -249,5 +249,10 @@
     @media screen and (min-width: map-get($breakpoints, 'breakpoint-4')) {
       margin-bottom: $spacing-8;
     }
+
+    &--analysis {
+      color: var(--color-heading);
+      margin-bottom: $spacing-5;
+    }
   }
 }

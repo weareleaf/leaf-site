@@ -8,7 +8,7 @@
 // Base
 @import 'base/variables';
 @import 'base/base';
-@import 'base/case-study-layouts';
+@import 'base/case-studies';
 @import 'base/fonts';
 @import 'base/layout';
 @import 'base/typography';
@@ -17,11 +17,12 @@
 
 // Components
 @import '../../components/author/author';
-//-@import '../../components/biography/biography';
+@import '../../components/banner/banner';
 @import '../../components/blog-post/blog-post';
 @import '../../components/block/block';
 @import '../../components/button/button';
 @import '../../components/bullet/bullet';
+@import '../../components/checkmark-list/checkmark-list';
 @import '../../components/close/close';
 @import '../../components/collage/collage';
 @import '../../components/company-logos/company-logos';

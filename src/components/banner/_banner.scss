@@ -1,0 +1,93 @@
+.banner {
+  background: $color-bluegem;
+  margin: $spacing-10 auto 0 auto;
+  overflow: hidden;
+  padding: $spacing-9 $spacing-6;
+  position: relative;
+
+  @media screen and (min-width: map-get($breakpoints, 'breakpoint-3')) {
+    @include two-col-grid;
+    align-items: center;
+    grid-gap: $spacing-6;
+    padding: $spacing-8 $spacing-6;
+  }
+
+  @media screen and (min-width: map-get($breakpoints, 'breakpoint-10')) {
+    border-radius: $size-1;
+    grid-gap: $spacing-10;
+    padding: 4.5rem;
+    max-width: 72.5rem;
+  }
+
+  &__shape {
+    border: $size-2 solid darken($color-bluegem, 2%);
+    border-radius: $border-radius-full;
+    position: absolute;
+    z-index: z('below');
+
+    &--1 {
+      height: $size-11;
+      left: 0;
+      top: 0;
+      transform: translate(-50%, -50%);
+      width: $size-11;
+    }
+
+    &--2 {
+      bottom: -$spacing-6;
+      height: $size-10;
+      right: -$spacing-6;
+      transform: translate(50%, 50%);
+      width: $size-10;
+    }
+  }
+
+  &__main,
+  &__secondary {
+    z-index: z('default');
+  }
+
+  &__secondary {
+    background: darken($color-bluegem, 2%);
+    border-radius: $border-radius-base;
+    margin-bottom: $spacing-8;
+    padding: $spacing-6;
+
+    @media screen and (min-width: map-get($breakpoints, 'breakpoint-1')) {
+      padding: $spacing-7;
+    }
+
+    @media screen and (min-width: map-get($breakpoints, 'breakpoint-3')) {
+      background: none;
+      margin-bottom: 0;
+      padding: 0;
+    }
+  }
+
+  &__heading {
+    font-size: 2.4rem;
+
+    &__period {
+      color: var(--color-accent);
+    }
+  }
+
+  &__text {
+    color: var(--color-heading);
+    font-size: $font-size-md;
+  }
+
+  &__button {
+    bottom: $spacing-6;
+    padding: 0 $spacing-6;
+    position: absolute;
+    right: 0;
+    width: 100%;
+
+    @media screen and (min-width: map-get($breakpoints, 'breakpoint-3')) {
+      bottom: 0;
+      padding: 0;
+      position: relative;
+    }
+  }
+}

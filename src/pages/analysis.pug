@@ -1,0 +1,42 @@
+extends ../layouts/product.pug
+
+block prepend vars
+  -var pageClass = "analysis"
+  -var pageTitle = "Easy product strategy | Specialist Data Capture Experts | Leaf"
+  -var metaUrl = "https://weareleaf.com/analysis"
+  -var metaTitle = "Easy product strategy. Get a bespoke analysis report for your digital product or service."
+  -var metaDescription = "For just £749, we’ll produce a bespoke report detailing 5 ways you can get more value from your digital product, and improve how you capture data from your customers."
+
+  -var heroHeading = "Easy product strategy"
+  -var heroSubheading = "For just £749, we’ll produce a bespoke report detailing 5 ways you can get more value from your digital product, and improve how you capture data from your customers."
+
+block pageComponents
+  +hero({
+    heading: heroHeading,
+    subheading: heroSubheading,
+    subheadingModifier: "narrow",
+    introButton: true,
+    button: {
+      url: "mailto:hello@weareleaf.com",
+      text: "hello@weareleaf.com"
+    }
+  })
+
+  section.section
+    .container
+      .grid.grid--analysis
+        +image({
+          context: "analysis",
+          src: "/assets/images/analysis/ui-suggestions.png",
+          alt: "",
+        })
+        .analysis__content
+          h2.content-block__heading.content-block__heading--analysis What you&apos;ll get
+          p.content__intro.content__intro--analysis We’ll cover performance, accessibility, and content issues, as well as look for opportunities to improve how you capture data from your customers.
+          p.content__text The report will be 100% tailored around your business, and be detailed enough for our qualified team to begin making improvements right away. We aren’t diving into any code at this stage, but simply viewing your product through the eyes of the user to see what can be improved.
+          +explanation({
+            example: true,
+            heading: "We keep it simple",
+            text: "Every suggestion will be communicated in a jargon-free way so that it’s easily understood by everyone at your company.",
+            modifier: "single"
+          })

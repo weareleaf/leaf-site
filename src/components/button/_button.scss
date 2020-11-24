@@ -17,7 +17,7 @@
   &::before {
     content: '';
     display: block;
-    margin-top: .125rem;
+    margin-top: $spacing-1;
   }
 
   &:hover {
@@ -28,5 +28,25 @@
   &--small {
     font-size: $font-size-xs;
     padding: $spacing-3 $spacing-5;
+  }
+
+  &--large {
+    background-color: $color-white;
+    color: $color-bluegem;
+    display: block;
+    font-size: $root-font-size;
+    font-weight: bold;
+    letter-spacing: .01rem;
+    padding: $spacing-5 $spacing-6;
+    width: 100%;
+
+    @media screen and (min-width: map-get($breakpoints, 'breakpoint-3')) {
+      display: inline-block;
+      width: auto;
+    }
+
+    &:hover {
+      background-color: $color-silk;
+    }
   }
 }

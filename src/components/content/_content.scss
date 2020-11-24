@@ -28,6 +28,11 @@
     @media screen and (min-width: map-get($breakpoints, 'breakpoint-11')) {
       margin-bottom: $spacing-6;
     }
+
+    &--analysis {
+      color: var(--color-heading);
+      margin-bottom: $spacing-5;
+    }
   }
 
   &__text {

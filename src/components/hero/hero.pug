@@ -11,6 +11,11 @@ mixin hero(c)
             src: c.image.src,
             alt: c.image.alt
           })
+      else if c.introButton === true
+        .hero__content
+          h1.hero__heading !{c.heading}#[span.hero__heading__period .]
+          p.hero__subheading(class= c.subheadingModifier ? "hero__subheading--" + c.subheadingModifier : "") !{c.subheading}
+          +button(c.button)
       else
         .hero__content
           h1.hero__heading(class= c.headingModifier ? "hero__heading--" + c.headingModifier : "")  !{c.heading}#[span.hero__heading__period .]

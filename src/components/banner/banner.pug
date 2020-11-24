@@ -1,0 +1,32 @@
+mixin banner(c)
+  section.section
+    .banner
+      if c.preview
+        .banner__main
+          .banner__shape.banner__shape--1
+          h2.banner__heading Improve your product with our analysis report#[span.banner__heading__period .]
+          p.banner__text For just <strong>£749</strong>, we’ll create a bespoke report to help you identify where your product can be improved, highlight any issues, and increase your chances of success.
+          .banner__button
+            +button({
+              modifier: "large",
+              url: "/analysis",
+              text: "Find out more"
+            })
+        .banner__secondary
+          .banner__shape.banner__shape--2
+          +checkmark-list({
+            checkmarkList: [
+              {
+                text: "We’ll see where we can increase your products <strong class='checkmark-list__text__strong'>performance</strong>, and help users finish their tasks faster."
+              },
+              {
+                text: "We’ll make your product accessible to all so that <strong class='checkmark-list__text__strong'>no customer</strong> is excluded because of a disability."
+              },
+              {
+                text: "We’ll review your product’s content to make sure it’s clear, concise, and <strong class='checkmark-list__text__strong'>suitable</strong> for your target audience."
+              },
+              {
+                text: "We’ll identify opportunities to <strong class='checkmark-list__text__strong'>reduce</strong> the effort needed when capturing customer information."
+              }
+            ]
+          })
