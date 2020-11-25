@@ -6,12 +6,6 @@
 }
 
 .hero {
-  &__blob {
-    opacity: 0;
-    transform: translateX(0);
-    transition: opacity $duration-5 $timing-ease, transform $duration-4 $timing-ease;
-  }
-
   &__content {
     opacity: 0;
     transform: translateX(0);
@@ -33,11 +27,6 @@
   }
 
   .hero {
-    &__blob {
-      opacity: 0;
-      transform: translateX(-10%);
-    }
-
     &__content {
       opacity: 0;
       transform: translateX(-10%);
@@ -52,11 +41,6 @@
 
 .transition-in {
   .hero {
-    &__blob {
-      opacity: 1;
-      transform: translateX(0);
-    }
-
     &__content {
       opacity: 1;
       transform: translateX(0);

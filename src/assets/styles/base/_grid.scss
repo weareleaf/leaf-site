@@ -150,8 +150,14 @@ $grid-columns-post: 2.5rem 1fr 2.5rem;
   }
 
   &--analysis {
-    grid-template-columns: repeat(2, 1fr);
-    grid-gap: $spacing-10;
-    margin-top: $spacing-13;
+    margin: 0 auto;
+    max-width: 40rem;
+
+    @media screen and (min-width: map-get($breakpoints, 'breakpoint-4')) {
+      grid-template-columns: repeat(2, 1fr);
+      grid-gap: $spacing-10;
+      margin-top: $spacing-13;
+      max-width: unset;
+    }
   }
 }

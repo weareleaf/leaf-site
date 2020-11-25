@@ -1,27 +1,42 @@
 .numbered-steps {
-  @include two-col-grid;
   list-style: none;
-  margin: 0;
+  margin: 0 auto;
+  max-width: 40rem;
   padding: 0;
+
+  @media screen and (min-width: map-get($breakpoints, 'breakpoint-3')) {
+    @include two-col-grid;
+    max-width: unset;
+  }
 
   &__item {
     align-items: center;
     display: flex;
     flex-direction: column;
-    padding: $spacing-8;
+    padding: $spacing-4;
     text-align: center;
 
+    @media screen and (min-width: map-get($breakpoints, 'breakpoint-1')) {
+      padding: $spacing-8;
+    }
+
     &:nth-child(1) {
-      border-bottom: $border-width-sm $border-style hsl(253, 78%, 39%);
-      border-right: $border-width-sm $border-style hsl(253, 78%, 39%);
+      @media screen and (min-width: map-get($breakpoints, 'breakpoint-3')) {
+        border-bottom: $border-width-sm $border-style $color-iris;
+        border-right: $border-width-sm $border-style $color-iris;
+      }
     }
 
     &:nth-child(2) {
-      border-bottom: $border-width-sm $border-style hsl(253, 78%, 39%);
+      @media screen and (min-width: map-get($breakpoints, 'breakpoint-3')) {
+        border-bottom: $border-width-sm $border-style $color-iris;
+      }
     }
 
     &:nth-child(3) {
-      border-right: $border-width-sm $border-style hsl(253, 78%, 39%);
+      @media screen and (min-width: map-get($breakpoints, 'breakpoint-3')) {
+        border-right: $border-width-sm $border-style $color-iris;
+      }
     }
   }
 

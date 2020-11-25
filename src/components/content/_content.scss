@@ -52,5 +52,13 @@
     &--contrast {
       color: hsl(254, 100%, 95%);
     }
+
+    &--analysis {
+      margin-bottom: $spacing-7;
+
+      @media screen and (min-width: map-get($breakpoints, 'breakpoint-4')) {
+        margin-bottom: $spacing-5;
+      }
+    }
   }
 }

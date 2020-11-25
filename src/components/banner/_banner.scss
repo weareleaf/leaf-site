@@ -81,7 +81,11 @@
   }
 
   &__heading {
-    font-size: 2.4rem;
+    font-size: $font-size-h1;
+
+    @media screen and (min-width: map-get($breakpoints, 'breakpoint-4')) {
+      font-size: 2.4rem;
+    }
 
     &__period {
       color: var(--color-accent);
@@ -89,7 +93,11 @@
 
     &--secondary {
       font-size: $font-size-h2;
-      margin-bottom: $spacing-6;
+      margin-bottom: $spacing-5;
+
+      @media screen and (min-width: map-get($breakpoints, 'breakpoint-4')) {
+        margin-bottom: $spacing-6;
+      }
     }
   }
 
@@ -115,15 +123,32 @@
       padding: 0;
       position: relative;
     }
+
+    &--checkout {
+      padding: $spacing-5 0 0 0;
+      position: relative;
+    }
   }
 
   &__call-to-action {
-    padding: 4.5rem;
+    padding: $spacing-8 $spacing-6;
+
+    @media screen and (min-width: map-get($breakpoints, 'breakpoint-7')) {
+      padding: 3.5rem;
+    }
+
+    @media screen and (min-width: map-get($breakpoints, 'breakpoint-9')) {
+      padding: 4.5rem;
+    }
   }
 
   &__banks {
     display: flex;
-    margin-top: $spacing-6;
+    margin-top: 0;
+
+    @media screen and (min-width: map-get($breakpoints, 'breakpoint-3')) {
+      margin-top: $spacing-6;
+    }
   }
 
   &__bank {
@@ -135,6 +160,18 @@
   &__refund-info {
     background: darken($color-bluegem, 2%);
     height: 100%;
-    padding: 4.8rem 4.5rem 4.5rem 4.5rem; // Creates a visual alignment with the content on the left (desktop)
+    padding: $spacing-8 $spacing-6;
+
+    @media screen and (min-width: map-get($breakpoints, 'breakpoint-1')) {
+      padding: 3.5rem $spacing-6; // Creates a visual alignment with the content on the left (desktop)
+    }
+
+    @media screen and (min-width: map-get($breakpoints, 'breakpoint-7')) {
+      padding: $spacing-9 $spacing-6; // Creates a visual alignment with the content on the left (desktop)
+    }
+
+    @media screen and (min-width: map-get($breakpoints, 'breakpoint-9')) {
+      padding: 4.8rem 4.5rem 4.5rem 4.5rem; // Creates a visual alignment with the content on the left (desktop)
+    }
   }
 }

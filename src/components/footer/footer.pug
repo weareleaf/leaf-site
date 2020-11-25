@@ -45,6 +45,12 @@ mixin footer(c)
           p.footer__copyright &copy; Leaf Software Ltd
           p.footer__vat VAT no: GB 265125317
   else
-    footer.footer.footer--condensed
-      p.footer__copyright &copy; Leaf Software Ltd
-      p.footer__vat VAT no: GB 265125317
+    footer.footer.footer--analysis
+      .container
+        .footer__info.footer__info--analysis
+          p.footer__copyright &copy; Leaf Software Ltd
+          p.footer__vat VAT no: GB 265125317
+          a.footer__anchor(href="#header")
+            .footer__anchor__icon
+              img(src="/assets/images/icons/ui/arrow.svg", alt="Arrow to get back to the top of the page.")
+            .footer__anchor__text Back to top

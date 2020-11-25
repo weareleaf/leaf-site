@@ -148,6 +148,19 @@
         grid-template-columns: 1fr 1fr;
       }
     }
+
+    &--analysis {
+
+      border-top: none;
+      margin-bottom: -$spacing-6;
+      margin-top: 11rem;
+
+      @media screen and (min-width: map-get($breakpoints, 'breakpoint-2')) {
+        border-top: none;
+        margin-top: $spacing-12;
+        margin-bottom: -$spacing-4;
+      }
+    }
   }
 
   &__copyright,
@@ -190,8 +203,43 @@
     }
   }
 
-  &--condensed {
+  &--analysis {
+    margin-bottom: $spacing-6;
+    margin-top: -$spacing-13;
+  }
+
+  &__anchor {
+    align-items: center;
     display: flex;
-    justify-content: space-between;
+    left: 50%;
+    margin-top: -2.5rem;
+    position: absolute;
+    transform: translateX(-50%);
+
+    @media screen and (min-width: map-get($breakpoints, 'breakpoint-2')) {
+      margin-top: 0;
+      order: -1;
+      position: relative;
+    }
+
+    @include hover {
+      text-decoration: none;
+    }
+
+    &__icon {
+      align-items: center;
+      background: $color-indigo;
+      border-radius: $border-radius-xs;
+      display: flex;
+      height: 1.2rem;
+      justify-content: center;
+      width: 1.2rem;
+    }
+
+    &__text {
+      color: $color-ice;
+      margin-left: $spacing-3;
+      margin-top: .1rem;
+    }
   }
 }
