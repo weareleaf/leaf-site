@@ -1,5 +1,6 @@
 .banner {
-  background: $color-bluegem;
+  background: var(--color-banner-background);
+  display: grid;
   margin: $spacing-10 auto 0 auto;
   overflow: hidden;
   padding: $spacing-9 $spacing-6;
@@ -20,15 +21,22 @@
   }
 
   &--checkout {
+    background: $color-bluegem;
     grid-gap: 0;
     padding: 0;
   }
 
   &__shape {
-    border: $size-2 solid darken($color-bluegem, 2%);
+    border: $size-2 solid $color-white;
     border-radius: $border-radius-full;
+    display: none;
+    opacity: .05;
     position: absolute;
     z-index: z('below');
+
+    @media screen and (min-width: map-get($breakpoints, 'breakpoint-8')) {
+      display: block;
+    }
 
     &--1 {
       height: $size-11;
@@ -39,15 +47,14 @@
     }
 
     &--2 {
-      bottom: -$spacing-6;
+      bottom: -$spacing-7;
       height: $size-10;
-      right: -$spacing-6;
+      right: -$spacing-7;
       transform: translate(50%, 50%);
       width: $size-10;
     }
 
     &--3 {
-      border: $size-2 solid $color-bluegem;
       bottom: -$spacing-7;
       height: $size-10;
       right: -$spacing-7;
@@ -64,7 +71,7 @@
   }
 
   &__key-points {
-    background: darken($color-bluegem, 2%);
+    background: var(--color-checklist-background);
     border-radius: $border-radius-base;
     margin-bottom: $spacing-8;
     padding: $spacing-6;
@@ -113,10 +120,11 @@
 
   &__button {
     bottom: $spacing-6;
+    left: 0;
+    margin: 0 auto;
     padding: 0 $spacing-6;
     position: absolute;
     right: 0;
-    width: 100%;
 
     @media screen and (min-width: map-get($breakpoints, 'breakpoint-3')) {
       bottom: 0;
@@ -160,10 +168,15 @@
   &__refund-info {
     background: darken($color-bluegem, 2%);
     height: 100%;
+    order: -1;
     padding: $spacing-8 $spacing-6;
 
     @media screen and (min-width: map-get($breakpoints, 'breakpoint-1')) {
       padding: 3.5rem $spacing-6; // Creates a visual alignment with the content on the left (desktop)
+    }
+
+    @media screen and (min-width: map-get($breakpoints, 'breakpoint-3')) {
+      order: 1;
     }
 
     @media screen and (min-width: map-get($breakpoints, 'breakpoint-7')) {

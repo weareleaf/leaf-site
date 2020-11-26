@@ -6,6 +6,7 @@ $color-majorelle: hsl(253, 78%, 43%);
 $color-indigo: hsl(253, 72%, 47%);
 $color-violet:	hsl(253, 75%, 52%);
 $color-bluegem: hsl(254, 79%, 37%);
+$color-persian: hsl(254, 79%, 34%);
 $color-cerulean: hsl(240, 69%, 58%);
 $color-astronaut: hsl(240, 53%, 31%);
 $color-luckypoint: hsl(240, 65%, 25%);
@@ -40,6 +41,7 @@ $hx-studio: hsl(262, 47%, 49%);
 $hx-minsk: hsl(262, 48%, 43%);
 $hx-gigas: hsl(262, 49%, 38%);
 $hx-daisy: hsl(263, 53%, 38%);
+$hx-Meteorite: hsl(263, 53%, 34%);
 $hx-gold: hsl(46, 93%, 65%);
 
 $rift-whisper: hsl(225, 29%, 97%);
@@ -50,6 +52,7 @@ $rift-mako: hsl(240, 15%, 30%);
 $rift-gun: hsl(240, 15%, 25%);
 $rift-charada: hsl(240, 16%, 20%);
 $rift-baltic: hsl(244, 15%, 18%);
+$rift-shark: hsl(240, 15%, 16%);
 $rift-red: hsl(0, 96%, 69%);
 
 // Background
@@ -179,8 +182,7 @@ $size-8: 10rem;
 $size-9: 12rem;
 $size-10: 20rem;
 $size-11: 30rem;
-$size-12: 62rem; // Could add a 40rem unit before as that has heled with a responsive containers.
-
+$size-12: 62rem;
 // Timings
 $timing-ease: ease;
 $timing-ease-in-out: ease-in-out;
@@ -222,4 +224,8 @@ $z-index: (
   --color-post-heading: #{$color-ivory};
   --color-share-icons: #{$color-white};
   --color-social-icons: #{$color-white};
+  --color-banner-background: #{$color-bluegem};
+  --color-checkmark-background: #{$color-eggplant};
+  --color-button-large-text: #{$color-bluegem};
+  --color-checklist-background: #{$color-persian};
 }

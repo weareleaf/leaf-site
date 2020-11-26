@@ -74,11 +74,11 @@ html {
   --color-testimonial-blockquote: #{$color-smoke};
   --color-author-name: #{$color-smoke};
   --color-author-details: #{$hx-melrose};
-
-  @media screen and (min-width: map-get($breakpoints, 'breakpoint-11')) {
-    --color-close-bg: #{$hx-daisy};
-    --color-close: #{$color-smoke};
-  }
+  --color-banner-background: #{$hx-gigas};
+  --color-paragraph-bold: #{$color-smoke};
+  --color-checkmark-background: #{$hx-minsk};
+  --color-button-large-text: #{$hx-gigas};
+  --color-checklist-background: #{$hx-Meteorite};
 }
 
 .page--myrift {
@@ -110,11 +110,11 @@ html {
   --color-testimonial-blockquote: #{$color-smoke};
   --color-author-name: #{$color-smoke};
   --color-author-details: #{$rift-pearl};
-
-  @media screen and (min-width: map-get($breakpoints, 'breakpoint-11')) {
-    --color-close-bg: #{$rift-baltic};
-    --color-close: #{$color-smoke}
-  }
+  --color-banner-background: #{$rift-charada};
+  --color-paragraph-bold: #{$color-smoke};
+  --color-checkmark-background: #{$rift-shark};
+  --color-button-large-text: #{$rift-charada};
+  --color-checklist-background: #{$rift-baltic};
 }
 
 .page--bio {

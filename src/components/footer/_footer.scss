@@ -6,6 +6,19 @@
     padding-top: $spacing-9;
   }
 
+  &--analysis {
+    margin-bottom: $spacing-6;
+    margin-top: -$spacing-13;
+
+    @media screen and (min-width: map-get($breakpoints, 'breakpoint-2')) {
+      margin-top: -17rem;
+    }
+
+    @media screen and (min-width: map-get($breakpoints, 'breakpoint-13')) {
+      margin-top: -$spacing-13;
+    }
+  }
+
   &__cta {
     align-items: center;
     display: flex;
@@ -157,6 +170,12 @@
 
       @media screen and (min-width: map-get($breakpoints, 'breakpoint-2')) {
         border-top: none;
+        margin-top: 13rem;
+        margin-bottom: -$spacing-4;
+      }
+
+      @media screen and (min-width: map-get($breakpoints, 'breakpoint-3')) {
+        border-top: none;
         margin-top: $spacing-12;
         margin-bottom: -$spacing-4;
       }
@@ -201,11 +220,6 @@
     @media screen and (min-width: map-get($breakpoints, 'breakpoint-2')) {
       justify-self: end;
     }
-  }
-
-  &--analysis {
-    margin-bottom: $spacing-6;
-    margin-top: -$spacing-13;
   }
 
   &__anchor {

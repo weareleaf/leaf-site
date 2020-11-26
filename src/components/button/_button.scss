@@ -32,7 +32,7 @@
 
   &--large {
     background: $color-white;
-    color: $color-bluegem;
+    color: var(--color-button-large-text);
     display: block;
     font-size: $root-font-size;
     font-weight: bold;

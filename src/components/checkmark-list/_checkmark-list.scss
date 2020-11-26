@@ -15,7 +15,7 @@
 
   &__icon {
     align-items: center;
-    background-color: darken($color-bluegem, 3%);
+    background-color: var(--color-checkmark-background);
     border-radius: $border-radius-full;
     display: flex;
     height: $size-4;
@@ -25,13 +25,9 @@
   }
 
   &__text {
+    color: var(--color-text);
     margin: 0;
-    padding-left: 0;
-    padding-top: $spacing-8;
-
-    @media screen and (min-width: map-get($breakpoints, 'breakpoint-1')) {
-      padding-left: $spacing-8;
-      padding-top: 0;
-    }
+    padding-left: $spacing-8;
+    padding-top: 0;
   }
 }
