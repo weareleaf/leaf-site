@@ -1,0 +1,87 @@
+extends ../../layouts/content.pug
+
+block prepend vars
+  -var pageTitle = "Streamline your forms with BIGs | Leaf"
+  -var metaUrl = "https://weareleaf.com/blog/streamline-your-forms-with-bigs"
+  -var metaTitle = "Streamline your forms with BIGs"
+  -var metaDescription = "Real empathy is sometimes not insisting that it will be OK, but acknowledging that it is not"
+
+  -var heroHeading = "Streamline your forms with BIGs"
+
+block pageComponents
+
+  article
+
+    +hero({
+      heading: heroHeading,
+      author: "Chris Annetts",
+      date: "11 November 2020",
+      minutesToRead: 3
+    })
+
+    .section
+      .container
+
+        .grid.grid--post
+
+          +share-icons({})
+
+          .blog-post
+
+            p.blog-post__intro You'll often find that seemingly simple questions are anything but, and in many cases are actually a number of questions rolled together.
+
+            p.blog-post__text An airline booking platform asking how many people are travelling is <em>actually</em> asking how many adults, children, toddlers, and babies need tickets. If each question is necessary, there's no getting away from capturing every answer, but accommodating such complexity doesn't mean your form needs to feel any busier and less accomplishable.
+
+            p.blog-post__text In recent years, a number of online services have been making use of custom components that I've dubbed a BIG (Bespoke Input Group). BIGs are essentially a collection of closely related input fields, where the sum of their answers is presented as a concise human-readable phrase.
+
+            p.blog-post__text A good example of a BIG can be seen when choosing the number of rooms and guests in a <a href="https://www.kayak.co.uk/stays" target="_blank" rel="noopener">KAYAK Hotel search</a>. Even though they're asking three separate questions (how many adults, how many children, and how many rooms?), all of the complexity is hidden behind a neat and tidy '2 rooms, 5 guests' label. If fact, any children staying need to have their ages captured too, all without any further impact on the interface.
+
+            figure.figure--wide
+              img.blog-post__image(src="/assets/images/blog/kayak-big.jpg" alt="Two versions of KAYAK's BIG booking component, as found of their homepage: first, the form in its default state, and secondly, with the BIG menu visible.")
+              figcaption Hiding the 3 extra inputs within a BIG reduces the number of form elements by 50%.
+
+            p.blog-post__text It doesn't just have to be a standalone label that triggers the BIG either. <a href="https://www.thetrainline.com" target="_blank" rel="noopener">Trainline.com</a> present their own custom component from a classic input field. Instead of complicating their booking form with a bunch of painful (but necessary) traveller-related questions, they've hidden as many as seventeen possible fields within an input that's in keeping with the other elements around it.
+
+            figure.figure--wide
+              img.blog-post__image(src="/assets/images/blog/trainline-big.jpg" alt="Trainline.com's custom BIG. By adding child travellers and railcards, the form has grown from 2 fields to 9.")
+              figcaption The conditional input fields are hidden within the BIG.
+
+            +permalink({
+              heading: "What’s the benefit of using BIGs?"
+            })
+
+            p.blog-post__text The two primary advantages to creating your own BIG component are the perception of simplicity and the ability to accommodate multi-step and/or multi-option questions.
+
+            h3.blog-post__h3 Perceived simplicity
+
+            p.blog-post__text We've touched on this already, but it's worth reiterating. Simplicity in itself is not always possible, and some things are by their very nature complex. But not everything that has a degree of complexity has to <em>feel</em> complicated.
+
+            p.blog-post__text Perceived clutter in a product or interface can be an immediate turn-off for customers and stakeholders alike, and just the suggestion that something is difficult to use may be enough to stop them from even entertaining the idea of progressing beyond their first impression.
+
+            h3.blog-post__h3 Multiple steps and options
+
+            p.blog-post__text The basic toolkit of input types product designers have at their fingertips is incredibly powerful, and fit for purpose in many, many cases. But occasionally, we have to mix-and-match these components to come up with something uniquely capable of solving a specific problem.
+
+            p.blog-post__text An example of a BIG that we've created ourselves is the date-picker used by tax-refund specialists RIFT. The company help those working in temporary work locations claim back up to 4-years of tax refunds, and as such, the data they need to capture is often confined to dates that fall within a 4-year window.
+
+            figure.figure--wide
+              img.blog-post__image(src="/assets/images/blog/rift-big-date-picker.jpg" alt="Our custom BIG, displaying 'to' and 'from' date inputs, radio button options for 'month' and 'year' options, and a single catch-all option to allow users to select any date outside of our interest.")
+              figcaption Made-to-measure BIGs are often a better choice for solving specific problems.
+
+            p.blog-post__text Rather than present two separate date input fields (which themselves comes with a fair amount of UX baggage) to capture the 'to' and 'from' dates, the user is able to build a complex date-ranges using single-click actions (in this case, radio buttons). Because of our 4-year constraint, we were also able to sweep-up any earlier dates will a single action.
+
+            p.blog-post__text Another benefit of a BIG, which is an important element in the RIFT date-picker, is the ability to keep the user 'on the <s>keyboard</s> controls'. As the month and years are selected for the 'from' field, the focus immediately shifts to the second input. In fact, there isn't a single extra click in navigating between the four phases of data capture (month, year, month, and year).
+
+            +permalink({
+              heading: "When shouldn't I use a BIG?"
+            })
+
+            p.blog-post__text A BIG component is ideal for handling complicated and non-standard data capture, but isn't always the right solution. If the problem <em>can</em> be solved well using the 'basic' toolkit of inputs, it should be; BIGs are great when our foundational items alone don't cut it. Another consideration is the need for JavaScript; unless you can be absolutely certain your entire audience will have it enabled (e.g. internal platforms), there should be a plan in place to handle those without JavaScipt.
+
+            p.blog-post__text Finally, make sure your BIGs are navigatable using the keyboard! This isn't technically a reason <em>not</em> to utilise them, but if they're not accessible to all, they're better of left alone.
+
+  section.section.section--lg-spacing
+    .container
+      .blog-content
+        h3.blog-content__heading Keep reading
+        +blog-post-grid
