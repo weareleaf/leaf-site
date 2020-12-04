@@ -26,11 +26,8 @@ block pageComponents
   section.section
     .container
       .grid.grid--analysis
-        +image({
-          context: "analysis",
-          src: "/assets/images/analysis/ui-suggestions.png",
-          alt: "There are two examples of the types of things we look for in your product. The first example shows an example of an autocomplete adress finder, which is great for helping user find an address quickly. The second example shows how using a full label on your form inputs can remove any confusion about the information that is required.",
-        })
+        figure.analysis
+          img.analysis__image(src="/assets/images/analysis/ui-suggestions.png" alt="There are two examples of the types of things we look for in your product. The first example shows an example of an autocomplete address finder, which is great for helping user find an address quickly. The second example shows how using a full label on your form inputs can remove any confusion about the information required.")
         .analysis__content
           h2.content-block__heading.content-block__heading--analysis What you&apos;ll get
           p.content__intro.content__intro--analysis We’ll cover performance, accessibility, and content issues, as well as look for opportunities to improve how you capture data from your customers.

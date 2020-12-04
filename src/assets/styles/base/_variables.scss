@@ -1,10 +1,10 @@
 // Leaf colors
 $color-violet: hsl(240, 37%, 29%);
-$color-eggplant:	hsl(253, 86%, 29%);
+$color-eggplant: hsl(253, 86%, 29%);
 $color-iris: hsl(253, 79%, 37%);
 $color-majorelle: hsl(253, 78%, 43%);
 $color-indigo: hsl(253, 72%, 47%);
-$color-violet:	hsl(253, 75%, 52%);
+$color-violet: hsl(253, 75%, 52%);
 $color-bluegem: hsl(254, 79%, 37%);
 $color-persian: hsl(254, 79%, 34%);
 $color-cerulean: hsl(240, 69%, 58%);
@@ -14,8 +14,8 @@ $color-sapphire: hsl(240, 44%, 49%);
 $color-mauve: hsl(240, 20%, 40%);
 $color-amethyst: hsl(238, 28%, 51%);
 $color-lavender: hsl(236, 100%, 77%);
-$color-powder: 	hsl(225, 100%, 75%);
-$color-blush: 	hsl(225, 100%, 80%);
+$color-powder: hsl(225, 100%, 75%);
+$color-blush: hsl(225, 100%, 80%);
 $color-ice: hsl(225, 100%, 87%);
 
 $color-sky: hsl(205, 100%, 55%);
@@ -32,7 +32,7 @@ $color-snow: hsl(250, 64%, 94%);
 $color-cotton: hsl(225, 30%, 85%);
 $color-ivory: hsl(225, 29%, 97%);
 $color-smoke: hsl(0, 0%, 96%);
-$color-white:	hsl(0, 0%, 100%);
+$color-white: hsl(0, 0%, 100%);
 
 // Brand colors
 $hx-melrose: hsl(254, 100%, 88%);
@@ -41,7 +41,7 @@ $hx-studio: hsl(262, 47%, 49%);
 $hx-minsk: hsl(262, 48%, 43%);
 $hx-gigas: hsl(262, 49%, 38%);
 $hx-daisy: hsl(263, 53%, 38%);
-$hx-Meteorite: hsl(263, 53%, 34%);
+$hx-meteorite: hsl(263, 53%, 34%);
 $hx-gold: hsl(46, 93%, 65%);
 
 $rift-whisper: hsl(225, 29%, 97%);
@@ -59,10 +59,10 @@ $rift-red: hsl(0, 96%, 69%);
 $background-color: var(--color-background);
 
 // Border radius
-$border-radius-xs: .1rem !default; // 2px
-$border-radius-sm: .2rem !default; // 4px
-$border-radius-base: .25rem !default; // 5px
-$border-radius-lg: .4rem !default; // 8px
+$border-radius-xs: 0.1rem !default; // 2px
+$border-radius-sm: 0.2rem !default; // 4px
+$border-radius-base: 0.25rem !default; // 5px
+$border-radius-lg: 0.4rem !default; // 8px
 $border-radius-half: 50% !default;
 $border-radius-full: 100% !default;
 
@@ -94,7 +94,7 @@ $breakpoints: (
   breakpoint-10: 90em,
   breakpoint-11: 96em,
   breakpoint-12: 100em,
-  breakpoint-13: 120em
+  breakpoint-13: 120em,
 ) !default;
 
 // Durations
@@ -116,9 +116,9 @@ $font-family-serif: 'Playfair Display', serif !default;
 $font-size-h1: 2rem !default;
 $font-size-h2: 1.5rem !default;
 $font-size-h3: 1.1rem !default;
-$font-size-h4: .9rem !default;
-$font-size-h5: .8rem !default;
-$font-size-h6: .75rem !default;
+$font-size-h4: 0.9rem !default;
+$font-size-h5: 0.8rem !default;
+$font-size-h6: 0.75rem !default;
 
 // Focus states
 $focus-bg: var(--color-focus-bg);
@@ -129,9 +129,9 @@ $focus-width: var(--color-focus-width);
 // Font sizes
 $root-font-size: 1rem;
 $root-font-size-xl: 1.25rem;
-$font-size-xxs: .75rem;
-$font-size-xs: .8rem !default;
-$font-size-sm: .9rem !default;
+$font-size-xxs: 0.75rem;
+$font-size-xs: 0.8rem !default;
+$font-size-sm: 0.9rem !default;
 $font-size-md: 1.1rem !default;
 $font-size-lg: 1.875rem !default;
 $font-size-xl: 2.2rem !default;
@@ -151,13 +151,13 @@ $line-height: 1.6 !default;
 $quote-line-height: 1.5 !default;
 
 // Opacity
-$opacity-base: .75;
+$opacity-base: 0.75;
 
 // Spacing
-$spacing-1: .125rem;
-$spacing-2: .25rem;
-$spacing-3: .5rem;
-$spacing-4: .75rem;
+$spacing-1: 0.125rem;
+$spacing-2: 0.25rem;
+$spacing-3: 0.5rem;
+$spacing-4: 0.75rem;
 $spacing-5: 1rem;
 $spacing-6: 1.5rem;
 $spacing-7: 2rem;
@@ -182,17 +182,18 @@ $size-8: 10rem;
 $size-9: 12rem;
 $size-10: 20rem;
 $size-11: 30rem;
-$size-12: 62rem;
+$size-12: 40rem;
+$size-13: 62rem;
 // Timings
 $timing-ease: ease;
 $timing-ease-in-out: ease-in-out;
 $timing-ease-in: ease-in;
-$timing-elastic: cubic-bezier(.55, 0, .1, 1);
+$timing-elastic: cubic-bezier(0.55, 0, 0.1, 1);
 
 // Z-index map
 $z-index: (
   'default': 1,
-  'below': -1
+  'below': -1,
 );
 
 // Z-index function

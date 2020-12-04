@@ -16,7 +16,7 @@
 
     @media screen and (min-width: map-get($breakpoints, 'breakpoint-2')) {
       margin: 0 auto;
-      max-width: 40rem;
+      max-width: $size-12;
     }
 
     @media screen and (min-width: map-get($breakpoints, 'breakpoint-11')) {
@@ -27,19 +27,20 @@
 
   &__heading {
     font-size: $font-size-h1;
-    left: .4rem;
+    left: 0;
     margin-bottom: $spacing-6;
     text-align: center;
     position: relative;
 
     @media screen and (min-width: map-get($breakpoints, 'breakpoint-1')) {
       font-size: 3rem;
+      left: 0.4rem;
     }
 
     @media screen and (min-width: map-get($breakpoints, 'breakpoint-6')) {
       display: inline-block;
       font-size: 3.5rem;
-      max-width: $size-12;
+      max-width: $size-13;
     }
 
     &--bio {
@@ -94,7 +95,7 @@
   &__image {
     &--hx {
       margin-top: $spacing-8;
-      min-width: 40rem; // Min fixes Firefox width issue
+      min-width: $size-12; // Min fixes Firefox width issue
 
       @media screen and (min-width: map-get($breakpoints, 'breakpoint-3')) {
         min-width: 68rem;

@@ -35,7 +35,6 @@ $grid-columns-post: 2.5rem 1fr 2.5rem;
   }
 
   &--post {
-
     @media screen and (min-width: map-get($breakpoints, 'breakpoint-4')) {
       grid-template-columns: 2.5rem 1fr 2.5rem;
     }
@@ -47,28 +46,24 @@ $grid-columns-post: 2.5rem 1fr 2.5rem;
   }
 
   &--half {
-
     @media screen and (min-width: map-get($breakpoints, 'breakpoint-1')) {
       grid-template-columns: 1fr 1fr;
     }
   }
 
   &--two-thirds {
-
     @media screen and (min-width: map-get($breakpoints, 'breakpoint-4')) {
       grid-template-columns: 60% 1fr;
     }
   }
 
   &--two-thirds-reverse {
-
     @media screen and (min-width: map-get($breakpoints, 'breakpoint-4')) {
       grid-template-columns: 1fr 60%;
     }
   }
 
   &--statements {
-
     @media screen and (min-width: map-get($breakpoints, 'breakpoint-1')) {
       grid-gap: $spacing-8;
     }
@@ -101,7 +96,6 @@ $grid-columns-post: 2.5rem 1fr 2.5rem;
   }
 
   &--company {
-
     @media screen and (min-width: map-get($breakpoints, 'breakpoint-4')) {
       align-items: center;
       grid-template-columns: repeat(2, 1fr);
@@ -133,7 +127,6 @@ $grid-columns-post: 2.5rem 1fr 2.5rem;
   }
 
   &--center-text {
-
     @media screen and (min-width: map-get($breakpoints, 'breakpoint-4')) {
       margin: 0 auto;
       max-width: 29rem;
@@ -151,9 +144,10 @@ $grid-columns-post: 2.5rem 1fr 2.5rem;
 
   &--analysis {
     margin: 0 auto;
-    max-width: 40rem;
+    max-width: $size-12;
 
     @media screen and (min-width: map-get($breakpoints, 'breakpoint-4')) {
+      align-items: center;
       grid-template-columns: repeat(2, 1fr);
       grid-gap: $spacing-10;
       margin-top: $spacing-13;

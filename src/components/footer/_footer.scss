@@ -28,7 +28,7 @@
 
   &__heading {
     font-size: 2rem;
-    left: .2rem;
+    left: 0.2rem;
     line-height: $heading-line-height;
     margin: 0 0 $spacing-4;
     position: relative;
@@ -105,9 +105,9 @@
   &__subheading {
     color: var(--color-footer-text);
     font-family: $font-family-sans-serif-extrabold;
-    font-size: .6rem;
+    font-size: 0.6rem;
     font-weight: 400;
-    letter-spacing: .05rem;
+    letter-spacing: 0.05rem;
     margin: 0;
     text-transform: uppercase;
   }
@@ -124,14 +124,14 @@
   }
 
   &__social {
-    margin-top: .4rem;
+    margin-top: 0.4rem;
 
     @media screen and (min-width: map-get($breakpoints, 'breakpoint-2')) {
-      margin-top: .2rem;
+      margin-top: 0.2rem;
     }
 
     @media screen and (min-width: map-get($breakpoints, 'breakpoint-4')) {
-      margin-top: .4rem;
+      margin-top: 0.4rem;
     }
   }
 
@@ -163,21 +163,20 @@
     }
 
     &--analysis {
-
       border-top: none;
       margin-bottom: -$spacing-6;
       margin-top: 11rem;
 
       @media screen and (min-width: map-get($breakpoints, 'breakpoint-2')) {
         border-top: none;
-        margin-top: 13rem;
         margin-bottom: -$spacing-4;
+        margin-top: 13rem;
       }
 
       @media screen and (min-width: map-get($breakpoints, 'breakpoint-3')) {
         border-top: none;
-        margin-top: $spacing-12;
         margin-bottom: -$spacing-4;
+        margin-top: $spacing-12;
       }
     }
   }
@@ -241,19 +240,18 @@
     }
 
     &__icon {
+      @include size(1.2rem);
       align-items: center;
       background: $color-indigo;
       border-radius: $border-radius-xs;
       display: flex;
-      height: 1.2rem;
       justify-content: center;
-      width: 1.2rem;
     }
 
     &__text {
       color: $color-ice;
       margin-left: $spacing-3;
-      margin-top: .1rem;
+      margin-top: 0.1rem;
     }
   }
 }

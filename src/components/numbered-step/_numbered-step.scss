@@ -1,7 +1,7 @@
 .numbered-steps {
   list-style: none;
   margin: 0 auto;
-  max-width: 40rem;
+  max-width: $size-12;
   padding: 0;
 
   @media screen and (min-width: map-get($breakpoints, 'breakpoint-3')) {
@@ -26,20 +26,20 @@
 
     &:nth-child(1) {
       @media screen and (min-width: map-get($breakpoints, 'breakpoint-3')) {
-        border-bottom: $border-width-sm $border-style $color-iris;
-        border-right: $border-width-sm $border-style $color-iris;
+        border-bottom: $border-style $border-width-sm $color-iris;
+        border-right: $border-style $border-width-sm $color-iris;
       }
     }
 
     &:nth-child(2) {
       @media screen and (min-width: map-get($breakpoints, 'breakpoint-3')) {
-        border-bottom: $border-width-sm $border-style $color-iris;
+        border-bottom: $border-style $border-width-sm $color-iris;
       }
     }
 
     &:nth-child(3) {
       @media screen and (min-width: map-get($breakpoints, 'breakpoint-3')) {
-        border-right: $border-width-sm $border-style $color-iris;
+        border-right: $border-style $border-width-sm $color-iris;
       }
     }
   }
@@ -58,15 +58,15 @@
   &__number {
     color: $color-ivory;
     font-size: $font-size-xxs;
-    font-weight: bold;
-    margin: .15rem -.05rem 0 0;
+    font-weight: 700;
+    margin: 0.15rem -0.05rem 0 0;
 
     @media screen and (min-width: map-get($breakpoints, 'breakpoint-3')) {
-      margin: .20rem -.01rem 0 0;
+      margin: 0.2rem -0.01rem 0 0;
     }
-    
+
     @media screen and (min-width: map-get($breakpoints, 'breakpoint-13')) {
-      margin: .15rem .010rem 0 0;
+      margin: 0.15rem 0.01rem 0 0;
     }
   }
 
