@@ -21,9 +21,9 @@ main {
   @media screen and (min-width: map-get($breakpoints, 'breakpoint-3')) {
     margin-bottom: $spacing-10;
 
-    .page--company &:not(:last-child) {
+    /* .page--company &:not(:last-child) {
       margin-bottom: $spacing-13;
-    }
+    }*/
   }
 
   &--sm-spacing {
