@@ -8,9 +8,12 @@
 
   &__container {
     @include container;
+
   }
 
   &__content {
+    text-align: center;
+
     @media screen and (min-width: map-get($breakpoints, 'breakpoint-2')) {
       margin: 0 auto;
       max-width: 40rem;
@@ -34,12 +37,9 @@
     }
 
     @media screen and (min-width: map-get($breakpoints, 'breakpoint-6')) {
+      display: inline-block;
       font-size: 3.5rem;
       max-width: $size-12;
-    }
-
-    &__period {
-      color: var(--color-accent);
     }
 
     &--bio {
@@ -50,6 +50,17 @@
       @media screen and (min-width: map-get($breakpoints, 'breakpoint-3')) {
         margin-bottom: $spacing-6;
       }
+    }
+
+    &--small {
+
+      @media screen and (min-width: map-get($breakpoints, 'breakpoint-6')) {
+        max-width: 48rem;
+      }
+    }
+
+    &__period {
+      color: var(--color-accent);
     }
   }
 
