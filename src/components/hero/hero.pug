@@ -3,7 +3,7 @@ mixin hero(c)
     .hero__container
       if c.introImage === true
         .hero__content
-          h1.hero__heading !{c.heading}#[span.hero__heading__period .]
+          h1.hero__heading(class= c.headingModifier ? "hero__heading--" + c.headingModifier : "") !{c.heading}#[span.hero__heading__period .]
           p.hero__subheading(class= c.subheadingModifier ? "hero__subheading--" + c.subheadingModifier : "") !{c.subheading}
           +image({
             context: "hero",
@@ -13,7 +13,7 @@ mixin hero(c)
           })
       else
         .hero__content
-          h1.hero__heading !{c.heading}#[span.hero__heading__period .]
+          h1.hero__heading(class= c.headingModifier ? "hero__heading--" + c.headingModifier : "")  !{c.heading}#[span.hero__heading__period .]
           if c.subheading
             p.hero__subheading(class= c.subheadingModifier ? "hero__subheading--" + c.subheadingModifier : "") !{c.subheading}
           else

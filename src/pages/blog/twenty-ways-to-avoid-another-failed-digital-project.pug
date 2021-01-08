@@ -1,0 +1,222 @@
+extends ../../layouts/content.pug
+
+block prepend vars
+  -var pageTitle = "20 ways to avoid another failed digital project | Leaf"
+  -var metaUrl = "https://weareleaf.com/blog/twenty-ways-to-avoid-another-failed-digital-project"
+  -var metaTitle = "20 ways to avoid another failed digital project"
+  -var metaDescription = "With the stakes higher than ever, we've got 20 tips to help make your next digital project a success."
+
+  -var heroHeading = "20 ways to avoid another failed digital project"
+
+block pageComponents
+
+  article
+
+    +hero({
+      heading: heroHeading,
+      headingModifier: "small",
+      author: "Chris Annetts",
+      date: "8 January 2021",
+      minutesToRead: 15
+    })
+
+    .section
+      .container
+
+        .grid.grid--post
+
+          +share-icons({})
+
+          .blog-post
+
+            p.blog-post__intro With COVID-19 forcing <a href="https://www.business-money.com/announcements/record-numbers-go-online-for-essentials-and-experiences/">record numbers of us online</a>, more and more organisations are reacting by investing in digital. With the influx of new projects, more and more avoidable, costly, and often terminal mistakes are being made.
+
+            p.blog-post__text For those of you who are responsible for a new project in 2021, we've got your back. Here are our top 20 tips for successfully capturing digital data from your users.
+
+            +permalink({
+              heading: "1. Hide non-essential actions in your interface"
+            })
+
+            p.blog-post__text In other words, don't throw the kitchen sink at your users, and expect them to somehow know what's important and what isn't.
+
+            p.blog-post__text Just as appropriate storage, organisation, and balance are an essential part of interior design, your application should lead with only the most common of tasks to avoid overwhelming the user. Not everything needs to be visible and within arms reach at all times, but less frequently used features should be available as and when your users need them.
+
+            +permalink({
+              heading: "2. Accommodate your power-users"
+            })
+
+            p.blog-post__text Your interface should work for all of your users, but it should also allow the subset of 'power-users' to be as productive as possible. To be clear, a power-user is a repeat or regular user of your product, and one who knows their way around it intimately.
+
+            p.blog-post__text As well as making powerful but optional functionality available via secondary menus, spend extra care mapping behaviour to keyboard shortcuts; there's a good chance many of your users will never make use of these options, but you can be certain your expert users will rely on them.
+
+            +permalink({
+              heading: "3. Take the guesswork out of input format"
+            })
+
+            p.blog-post__text Any time you have to ask a user for their input, make absolutely certain that it's clear what format their answer should be in; failing to do so will result in frustrated users and low-quality, less useful data captured.
+
+            p.blog-post__text The most obvious way to manage input options is with appropriate input types; a collection of checkboxes, for example, will constrain the responses to only the options provided. For text-based inputs, make use of input masks to infer structure (e.g. a credit card number as 4 sets of 4), and present additional explanation where needed above the input (where it'll be read <em>before</em> the user arrives at the input field, and not after).
+
+            +permalink({
+              heading: "4. Reduce the noise"
+            })
+
+            p.blog-post__text Every single element or style you use is another thing your users have to consume, interpret, and decipher. You can greatly improve an interface by simply removing things that cannot justify the cost of their inclusion.
+
+            p.blog-post__text Excessive use of borders and presentational icons are a great place to start during your digital spring clean. Put minimalism at the heart of your design decisions, and prioritise your content over your interface.
+
+            +permalink({
+              heading: "5. Design for everyone in your market"
+            })
+
+            p.blog-post__text Creating an accessible Web application is no more difficult or time consuming than creating one that isn't fit for purpose.
+
+            p.blog-post__text With so many advocates shining a light on the issue, and a plethora of brilliant (and free) resources available, there's really no excuse not to be building things for everyone in 2021.
+
+            p.blog-post__text Making sure your colour palettes meet WCAG AA colour contrast guidelines, that you're using appropriate HTML and ARIA attributes, and that that your Web application can be navigated with a keyboard are great places to start.
+
+            p.blog-post__text If you don't feel obliged to design for all of your users, you probably shouldn't be designing for any of them.
+
+            +permalink({
+              heading: "6. Don't rely on colour alone"
+            })
+
+            p.blog-post__text While colour can be useful in many situations, helping us to create contrast, inject personality, and imply meaning, it's not quite the silver bullet many people treat it as.
+
+            p.blog-post__text As well as the cultural differences in what a colour may represent, as many as 1 in 12 men suffer from some sort of colour blindness, meaning a large percentage of users consume the Web through very different eyes. Rather than relying solely on colour to impart meaning, always look to pair colour with text labels, patterns, and iconography.
+
+            +permalink({
+              heading: "7. Test your concerns, don't just guess"
+            })
+
+            p.blog-post__text Rather than dismiss design options based on your gut, commit to testing them with real users. It's easy to be overly cautious, citing your deep understanding of 'your customers' as justification for making your application a little worse. The truth is, you don't know for certain until you test it.
+
+            p.blog-post__text 'Testing' can be as inexpensive and primitive as monitoring stats in Google Analytics, or as intensive as running full-blown user-testing sessions or complex split tests. The most important thing is that you listen to and learn from your users.
+
+            +permalink({
+              heading: "8. For large projects, use a design system"
+            })
+
+            p.blog-post__text When crafting anything, free rein is anything but ideal. In fact, without constraints, what is there to guide your decision making beyond personal preference?
+
+            p.blog-post__text In software development terms, all but the simplest of projects can benefit from standardisation. Design systems are essentially a collection of predefined building blocks, helping you to create unity, achieve consistency and maintainability, and most of all, make faster design decisions.
+
+            p.blog-post__text The truth is that, when you’re capturing large amounts of data, or pushing users through an established flow, it’s likely you’ll be constantly using the same small set of building blocks. Create a toolkit once, and reuse it over and over.
+
+            +permalink({
+              heading: "9. Get ruthless in the pursuit of speed"
+            })
+
+            p.blog-post__text Like anything built to a high standard, websites and applications need to be meticulously constructed. Badly built products will cause you issues both internally, scaling poorly and slowing development, as well as affecting your bottom line, where the speed of your product has a direct and negative impact.
+
+            p.blog-post__text Make sure you or your team build in such a way that things won't need to be completely scrapped when things change, and ask yourself whether you truly need that gargantuan library, or could you instead create something considerably smaller while still solving the problem at hand.
+
+            +permalink({
+              heading: "10. Help your users help themselves"
+            })
+
+            p.blog-post__text Rather than directing each and every customer query towards a human, consider first offering supporting online content so that they can instead help themselves.
+
+            p.blog-post__text If the problem the user is experiencing is one that they may be able to solve themselves, you can help guide them towards a quick and inexpensive resolution with explanatory copy, an FAQ section, a dedicated help centre, or even a chat-bot designed to handle common enquiries and issues.
+
+            +permalink({
+              heading: "11. Remember who you're designing for"
+            })
+
+            p.blog-post__text It's very easy to fall into the trap of designing through our own eyes, unknowingly making decisions based on our own experiences, knowledge, and abilities.
+
+            p.blog-post__text Unless you're making software for other people who also happen to make software, it's likely your audience will struggle with elements that you or your peers wouldn't. With every decision you make, be mindful of exactly who you're designing for, and that you're creating something for them rather than for you.
+
+            +permalink({
+              heading: "12. Make tappable areas friendly to all fingers"
+            })
+
+            p.blog-post__text There are few things as frustrating as trying to tap on a button or link that doesn't want to be tapped on. As a general rule of thumb, any elements you want the user to tap on their touchscreen should be at least a physical 1cm x 1cm.
+
+            p.blog-post__text You don't always have to make the actionable element visually bigger either. A handy CSS pro-tip™ is to add padding and a negative margin of the same value to artificially make a larger tappable area.
+
+            +permalink({
+              heading: "13. Allow your users to make mistakes"
+            })
+
+            p.blog-post__text Designing with too much caution, even with the best of intentions, can very easily put up barriers that hinder all users.
+
+            p.blog-post__text A good example of treading too carefully would be the misuse of 'are you sure?' overlays. The idea that everyone should have to pause, read, reflect, and click/tap an option to save a minority from progressing prematurely is fundamentally flawed.
+
+            p.blog-post__text Rather than stopping everybody progressing, allow those who make mistakes to go back and remedy their issue. If you're finding that considerable numbers are progressing with issues, the problem probably sits somewhere earlier in the user journey.
+
+            +permalink({
+              heading: "14. Pick sensible defaults for inputs"
+            })
+
+            p.blog-post__text One of the single biggest things you can do to help your customers hand over their information is by using data and industry insights to set appropriate input defaults.
+
+            p.blog-post__text In this context, a 'default' is essentially a pre-filled answer, automatically placed in an input field to try and best-guess what the user would answer given the chance. In the case of a hotel finder, that might be a stay that's 7 days away, or that 2 adults (and no children) are the group size.
+
+            p.blog-post__text The aim of setting sensible defaults is two-fold. First, you'll avoid a portion of your audience from having to interact with the form at all. Secondly, by pairing them with input controls, you'll allow those whose answer is close to the default to give their answer in one or two interactions (e.g. changing the number of children from 0 to 1 with a single tap).
+
+            +permalink({
+              heading: "15. Use empty states to encourage action"
+            })
+
+            p.blog-post__text In the offline World, someone in telesales would make sure the customer understands the task, explain why it benefits them and how they can do it, and finally start taking details.
+
+            p.blog-post__text Too often, this 'warming-up' is neglected online, and we rely on the user to come with both the knowledge and inclination to make progress through their own volition.
+
+            p.blog-post__text Empty states are a great way to both drive certain behaviours from our users, as well as educate them about why they should take action.
+
+            +permalink({
+              heading: "16. Don't get greedy"
+            })
+
+            p.blog-post__text Good advice in any context, but in this case, we mean that you should only ask for what you need. For every question you <em>could</em> ask, ask yourself whether your website, application, or service would fail without it. This is a good exercise to go through, not only for new questions requested by project stakeholders, but with existing questions.
+
+            p.blog-post__text There's a cost associated with each extra question, and every single drop of effort and investment we ask of our users should be both justifiable and necessary.
+
+            +permalink({
+              heading: "17. Set expectations and playback progress"
+            })
+
+            p.blog-post__text Our days are busy and our attention often divided, and if we're going to undertake a task, it's essential we understand how much effort is being asked of us, and how long it will take.
+
+            p.blog-post__text When asking your users to invest effort in multiple tasks across a number of steps, be clear in communicating the required effort, how much of the task they've completed, and how much further they have to go.
+
+            +permalink({
+              heading: "18. Don't make your users guess"
+            })
+
+            p.blog-post__text Probably the most obvious recommendation on our list, but certainly one of the most important (and overlooked).
+
+            p.blog-post__text What happens if I click/tap this? If it goes wrong, can I undo it? If your users are having to consciously ask themselves these questions, you're not holding their hand tightly enough.
+
+            p.blog-post__text Oftentimes, we use phrases that are either vague, require technical knowledge or understanding, or can be misinterpreted. If a question or choice needs further explanation, make sure they're provided; conciseness is good, but clarity is better.
+
+            +permalink({
+              heading: "19. Prioritise your copy"
+            })
+
+            p.blog-post__text If I could choose just one thing for you to take from this post, it would be that content is the single most important part of your product, and as such it should be at the very core of your design process.
+
+            p.blog-post__text So often, content is written to fit an interface, rather than an interface designed to best present the content. Instead of starting in Sketch, Figma, or even HTML, start in a text editor, and design with words. Only when you know what you need to say can you possibly decide how to display it.
+
+            +permalink({
+              heading: "20. Be clear about your goals"
+            })
+
+            p.blog-post__text All of the design advice in the World will likely be in vain if you’re not laser-focused on the objectives of your project.
+
+            p.blog-post__text With many of you looking to kick-off new projects in 2021, it's so important that you're clear on what you're looking to achieve. For any new project, especially one that's overdue, the temptation to go after years of aspirational features can be all too much. Even those of you aware of this trap may still fall foul of it, as if enchanted by digital Sirens, luring your project towards the inevitable shipwreck.
+
+            p.blog-post__text As good of an idea as it seems to extend the scope to 'this', or squeeze in 'that', it's important your goals (and thus constraints) of the project are not only well defined, but stuck to. Focusing solely on solving a clear and specific problem will give your project a fighting chance, helping your team move quickly and intentionally towards a shared vision.
+
+            +permalink({
+              heading: "Good luck!"
+            })
+
+            p.blog-post__text Making good software isn’t easy, but with well defined goals, a plan-of-attack, and a little know-how, it’s absolutely achievable. If you’re lucky enough to be starting a new project in 2021, we hope that at least one or two points on our list help save you from making any avoidable mistakes along the way.
+
+  section.section.section--lg-spacing
+    .container
+      .blog-content
+        h3.blog-content__heading Keep reading
+        +blog-post-grid
