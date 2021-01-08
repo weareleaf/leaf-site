@@ -85,6 +85,17 @@ a {
   @include hover {
     text-decoration: line-through;
   }
+
+  &.subtle {
+    color: inherit;
+    text-decoration: underline;
+    text-decoration-color: var(--color-accent);
+
+    @include hover {
+      color: var(--color-accent);
+      text-decoration-color: var(--color-paragraph);
+    }
+  }
 }
 
 figure {
@@ -154,8 +165,8 @@ img {
       margin-bottom: $spacing-2;
     }
 
-    .blog-post & {
-      font-size: 1.05rem; //- More debt here! A quick matching of larger, customer font-size on blog posts.
+    &--padded {
+      font-size: $font-size-sub;
       padding-left: #{$spacing-7 + 0.4rem};
     }
 

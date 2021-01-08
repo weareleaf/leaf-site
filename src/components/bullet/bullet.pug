@@ -4,4 +4,4 @@ mixin bullet(c)
       h3.bullet__heading= c.heading
     ul.bullet.styled-list(class= c.modifier ? "bullet__list--" + c.modifier : "")
       each item in c.items
-        li.bullet.styled-list__item!= item.item
+        li.bullet.styled-list__item(class= c.itemModifier ? "styled-list__item--" + c.itemModifier : "")!= item.item

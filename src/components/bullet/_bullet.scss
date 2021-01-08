@@ -36,6 +36,11 @@
         line-height: 1.6;
         margin-bottom: $spacing-2;
       }
+
+      &--padded {
+        font-size: $font-size-sub;
+        padding-left: #{$spacing-7 + 0.4rem};
+      }
     }
   }
 }

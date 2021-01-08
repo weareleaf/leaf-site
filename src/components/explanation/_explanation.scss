@@ -1,5 +1,5 @@
 .explanation {
-  background-color: #4721ce;
+  background-color: $color-indigo;
   padding: $spacing-3 $spacing-5 $spacing-4;
 
   &__icon {
@@ -20,7 +20,7 @@
   }
 
   &__text {
-    color: #BECEFD;
+    color: $color-ice;
     font-size: .75rem;
     margin-bottom: 0;
   }
@@ -31,6 +31,21 @@
 
     @media screen and (min-width: map-get($breakpoints, 'breakpoint-4')) {
       margin-top: 0;
+    }
+  }
+
+  &--inverted {
+    background-color: $color-alabaster;
+    border-radius: 6px;
+    margin: $spacing-7 0 0;
+    padding: $spacing-5;
+
+    & .explanation__heading {
+      color: $color-kimberly;
+    }
+
+    & .explanation__text {
+      color: $color-coal;
     }
   }
 }

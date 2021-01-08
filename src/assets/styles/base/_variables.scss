@@ -28,10 +28,12 @@ $color-stone: hsl(230, 3%, 45%);
 $color-dust: hsl(240, 30%, 90%);
 $color-ash: hsl(240, 30%, 94%);
 $color-silk: hsl(240, 40%, 98%);
+$color-kimberly: hsl(240, 18%, 50%);
 $color-snow: hsl(250, 64%, 94%);
 $color-cotton: hsl(225, 30%, 85%);
 $color-ivory: hsl(225, 29%, 97%);
 $color-smoke: hsl(0, 0%, 96%);
+$color-alabaster: hsl(0, 0%, 97%);
 $color-white: hsl(0, 0%, 100%);
 
 // Brand colors
@@ -132,6 +134,7 @@ $root-font-size-xl: 1.25rem;
 $font-size-xxs: 0.75rem;
 $font-size-xs: 0.8rem !default;
 $font-size-sm: 0.9rem !default;
+$font-size-sub: 1.05rem !default;
 $font-size-md: 1.1rem !default;
 $font-size-lg: 1.875rem !default;
 $font-size-xl: 2.2rem !default;

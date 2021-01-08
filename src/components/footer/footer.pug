@@ -1,5 +1,11 @@
 mixin footer(c)
-  if c.footer === true
+  if minimalFooter === true
+    footer.footer--minimal
+      .container
+        .footer__info.footer__info--analysis
+          p.footer__copyright &copy; Leaf Software Ltd
+          p.footer__vat VAT no: GB 265125317
+  else if c.footer === true
     footer.footer(role="contentinfo")
       .container
         .footer__cta

@@ -1,4 +1,14 @@
 .content {
+  .content-list &{
+    &:not(:last-child){
+      margin-bottom: $spacing-7;
+    }
+
+    & > :last-child{
+      margin-bottom: 0;
+    }
+  }
+
   &__heading-2 {
     color: var(--color-heading-2);
     font-size: $font-size-h2;
@@ -59,6 +69,11 @@
       @media screen and (min-width: map-get($breakpoints, 'breakpoint-4')) {
         margin-bottom: $spacing-5;
       }
+    }
+
+    &--larger {
+      font-size: $font-size-sub;
+      line-height: 1.57;
     }
   }
 }
