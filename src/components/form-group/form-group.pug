@@ -1,0 +1,4 @@
+mixin form-group(c)
+  .form-group(class= c.flex ? "flex-" + c.flex : "")
+    label(for=c.name)= c.label
+    input(type=c.type || "text", name=c.name)&attributes(c.attributes)
