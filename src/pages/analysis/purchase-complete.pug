@@ -9,7 +9,7 @@ block prepend vars
   -var heroHeading = "Thanks for buying your report"
   -var heroSubheading = "We’ve sent you a confirmation email, and will send you another email within two working days to confirm a date for our first call. In the meantime, please find out more about what you can expect moving forward."
 
-  -var minimalFooter = true
+  -var footerType = "minimal"
 
 block pageComponents
   +hero({
@@ -25,6 +25,7 @@ block pageComponents
             .content-list
               +content({
                 contentTextModifier: "larger",
+                heading2: true,
                 heading: "What should you prepare for the call?",
                 modifier: "",
                 items: [
@@ -55,6 +56,7 @@ block pageComponents
               })
               +content({
                 contentTextModifier: "larger",
+                heading2: true,
                 heading: "How will the call take place?",
                 modifier: "",
                 items: [
@@ -67,7 +69,7 @@ block pageComponents
                   {
                     type: "explanation",
                     locals: {
-                      example: true,
+                      iconName: "info",
                       heading: "No need for a webcam",
                       text: "If you’re unable to source a webcam for the call, then not to worry. As long as you have a microphone and an internet connection, you’ll be fine.",
                       iconModifier: "inverted",
@@ -78,6 +80,7 @@ block pageComponents
               })
               +content({
                 contentTextModifier: "larger",
+                heading2: true,
                 heading: "How long will the entire process take?",
                 modifier: "",
                 items: [
@@ -91,6 +94,7 @@ block pageComponents
               })
               +content({
                 contentTextModifier: "larger",
+                heading2: true,
                 heading: "What happens once the report is complete?",
                 modifier: "",
                 items: [
@@ -106,7 +110,7 @@ block pageComponents
                   {
                     type: "explanation",
                     locals: {
-                      example: true,
+                      iconName: "info",
                       heading: "We’ll be ready",
                       text: "Our team will also be ready to begin making the suggested improvements right away if you decide to continue working with us on a more long-term basis.",
                       iconModifier: "inverted",

@@ -56,23 +56,51 @@ block pageComponents
 
             p.blog-post__text From this rudimentary example, you can easily see:
 
-            ul.styled-list
-              li.styled-list__item.styled-list__item--padded The website gets 16,000 visitors a day from different sources.
-              li.styled-list__item.styled-list__item--padded Most of those visitors drop out after landing on the website.
-              li.styled-list__item.styled-list__item--padded Those which don't either phone, log in, or register.
-              li.styled-list__item.styled-list__item--padded More drop out after this, only 2,500 a day place an order.
-              li.styled-list__item.styled-list__item--padded Many orders suffer from payment failure, delivery failure, or a customer issue.
-              li.styled-list__item.styled-list__item--padded About 1,500 customers receive successful deliveries per day.
+            +bullet({
+              itemModifier: "padded",
+              items: [
+                {
+                  item: "The website gets 16,000 visitors a day from different sources."
+                },
+                {
+                  item: "Most of those visitors drop out after landing on the website."
+                },
+                {
+                  item: "Those which don't either phone, log in, or register."
+                },
+                {
+                  item: "More drop out after this, only 2,500 a day place an order."
+                },
+                {
+                  item: "Many orders suffer from payment failure, delivery failure, or a customer issue."
+                },
+                {
+                  item: "About 1,500 customers receive successful deliveries per day."
+                }
+              ]
+            })
 
             p.blog-post__text The beauty here is that the numbers don't need to be completely accurate in order for the map to be useful. We can work effectively with good guesses because we're analysing trends at a high level, not sweating the detail when we don't have it.
 
             p.blog-post__text However, should we get the detail, it could be added in the form of more nodes to get a more granular view of the business. For example, we may wish to dig into:
 
-            ul.styled-list
-              li.styled-list__item.styled-list__item--padded Where the leads who drop out from the website go.
-              li.styled-list__item.styled-list__item--padded What happens to those who ring the call centre but never make a payment.
-              li.styled-list__item.styled-list__item--padded What are the reasons for payments failing, and what those customers do next.
-              li.styled-list__item.styled-list__item--padded What human activities happen between payment being accepted and the shoes being sent for delivery.
+            +bullet({
+              itemModifier: "padded",
+              items: [
+                {
+                  item: "Where the leads who drop out from the website go."
+                },
+                {
+                  item: "What happens to those who ring the call centre but never make a payment."
+                },
+                {
+                  item: "What are the reasons for payments failing, and what those customers do next."
+                },
+                {
+                  item: "What human activities happen between payment being accepted and the shoes being sent for delivery."
+                }
+              ]
+            })
 
             p.blog-post__text These could be added by just building upon what's already included in the process map, without making the map any harder to understand for stakeholders who don't need such detailed information.
 
@@ -96,13 +124,29 @@ block pageComponents
 
             p.blog-post__text As we work to add automation to our client's businesses <a class="subtle" href="/" target="_blank" rel="noopener">at Leaf</a>, we use process maps to help both ourselves and stakeholders achieve a shared understanding of their businesses, identify where improvements can be made, and where money is best invested to make the biggest positive impact. We follow this workflow:
 
-            ol.styled-list
-              li.styled-list__item.styled-list__item--padded <strong>Build a process map</strong> - Sometimes this will be for the entire business, and sometimes a particular process within the business. As a general guideline, we aim for a map detailed enough that it accurately reflects 80% of the possible scenarios in the process we're trying to improve.
-              li.styled-list__item.styled-list__item--padded <strong>Identify areas for improvement</strong> - With a map in place, we can begin to identify the main areas for improvement. Typically these are things that are time consuming or expensive to complete, cause a significant dropoff, or otherwise introduce some sort of bottleneck to efficiency.
-              li.styled-list__item.styled-list__item--padded <strong>Create goals</strong> - Once we know where we want to improve, we can create S.M.A.R.T goals around these areas. Side note - we wrote <a class="subtle" href="https://weareleaf.com/blog/goals-matter" target="_blank" rel="noopener">a whole post on how to use goals effectively</a>.
-              li.styled-list__item.styled-list__item--padded <strong>Assign goals</strong> - At this point, we've got a list of goals we need to achieve in order to make the business process better. We assign each to a capable person or team to complete.
-              li.styled-list__item.styled-list__item--padded <strong>Build and work backlogs</strong> - Teams and individuals build backlogs of work focussed on achieving their goal, and work through them.
-              li.styled-list__item.styled-list__item--padded <strong>Repeat</strong> - Once the goals have been achieved (or failed to be achieved), we update our process map to reflect the impact of the changes and repeat the process.
+            +bullet({
+              itemModifier: "padded",
+              items: [
+                {
+                  item: "<strong>Build a process map</strong> - Sometimes this will be for the entire business, and sometimes a particular process within the business. As a general guideline, we aim for a map detailed enough that it accurately reflects 80% of the possible scenarios in the process we're trying to improve."
+                },
+                {
+                  item: "<strong>Identify areas for improvement</strong> - With a map in place, we can begin to identify the main areas for improvement. Typically these are things that are time consuming or expensive to complete, cause a significant dropoff, or otherwise introduce some sort of bottleneck to efficiency."
+                },
+                {
+                  item: "<strong>Create goals</strong> - Once we know where we want to improve, we can create S.M.A.R.T goals around these areas. Side note - we wrote <a class='subtle' href='https://weareleaf.com/blog/goals-matter' target='_blank' rel='noopener'>a whole post on how to use goals effectively</a>."
+                },
+                {
+                  item: "<strong>Assign goals</strong> - At this point, we've got a list of goals we need to achieve in order to make the business process better. We assign each to a capable person or team to complete."
+                },
+                {
+                  item: "<strong>Build and work backlogs</strong> - Teams and individuals build backlogs of work focussed on achieving their goal, and work through them."
+                },
+                {
+                  item: "<strong>Repeat</strong> - Once the goals have been achieved (or failed to be achieved), we update our process map to reflect the impact of the changes and repeat the process."
+                }
+              ]
+            })
 
             p.blog-post__text With this workflow, we're systematically rooting out inefficiencies, figuring out where we can have the biggest positive impact, using our knowledge of the numbers to set realistic goals, and building up focussed roadmaps around those goals to give stakeholders confidence in the value being delivered.
 

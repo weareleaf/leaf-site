@@ -1,9 +1,9 @@
 mixin content(c)
   .content
     if c.heading2 === true
-      h2.content__heading-2= c.heading
+      h2.content__heading.content__heading-2= c.heading
     else
-      h3.content__heading-3= c.heading
+      h3.content__heading.content__heading-3= c.heading
     if c.intro
       p.content__intro= c.intro
     each item in c.items

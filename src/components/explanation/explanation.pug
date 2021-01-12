@@ -1,6 +1,6 @@
 mixin explanation(c)
   .explanation(class= c.modifier ? "explanation--" + c.modifier : "")
-    -var iconName = c.example === true ? "info" : "question"
+    -var iconName = c.iconName || "question"
     if c.iconModifier
       -iconName = iconName + "--" + c.iconModifier
 

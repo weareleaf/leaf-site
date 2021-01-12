@@ -62,12 +62,26 @@ block pageComponents
 
             p.blog-post__text We aim to kill repetitive tasks during our normal work day, but it can be tempting just to put up with them on a side project because nobody’s watching. Don’t — they can be a death sentence for your project. Repetitive tasks include:
 
-            ul.styled-list
-              li.styled-list__item.styled-list__item--padded Juggling test/production API keys every time you want to test different environments.
-              li.styled-list__item.styled-list__item--padded Commenting out lines of code to prevent your app from doing something you only want to happen in production.
-              li.styled-list__item.styled-list__item--padded Feeling the need to manually verify things are working correctly after every commit.
-              li.styled-list__item.styled-list__item--padded Having an arcane concoction of commands and environment variables for project installation, running, testing and deploying.
-              li.styled-list__item.styled-list__item--padded Generally speaking, anything that feels like hassle that you find yourself doing a lot.
+            +bullet({
+              itemModifier: "padded",
+              items: [
+                {
+                  item: "Juggling test/production API keys every time you want to test different environments."
+                },
+                {
+                  item: "Commenting out lines of code to prevent your app from doing something you only want to happen in production."
+                },
+                {
+                  item: "Feeling the need to manually verify things are working correctly after every commit."
+                },
+                {
+                  item: "Having an arcane concoction of commands and environment variables for project installation, running, testing and deploying."
+                },
+                {
+                  item: "Generally speaking, anything that feels like hassle that you find yourself doing a lot."
+                }
+              ]
+            })
 
             p.blog-post__text Odd jobs like these will both slow you down, but also kill your passion for your work, especially when you’re tired, which you often will be.
 

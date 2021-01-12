@@ -151,7 +151,7 @@
     }
   }
 
-  &__banks {
+  .banks {
     display: flex;
     margin-top: 0;
 
@@ -160,7 +160,7 @@
     }
   }
 
-  &__bank {
+  .bank {
     &:not(:last-child) {
       margin-right: $spacing-2;
     }

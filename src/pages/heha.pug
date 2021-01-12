@@ -45,6 +45,7 @@ block pageComponents
         img(src="/assets/images/case-studies/heha/image-1.jpg" alt="The HEHA! iOS application on several mobile devices showing how trips, news feeds and travel maps are displayed.")
 
       .grid.grid--two-thirds-reverse
+      .grid.grid--two-thirds-reverse
         .grid__item
           +summary({
             heading: "What is it?",
@@ -64,12 +65,25 @@ block pageComponents
 
           p To cater for all types of travellers, we need a trip creation process that allowed the user to:
 
-          ul.styled-list
-            li.styled-list__item Add a single traveller, multiple travellers, or no traveller at all.
-            li.styled-list__item Add a single destination, multiple destinations, or no destination at all.
-            li.styled-list__item Add trip dates (optionally).
-            li.styled-list__item Add the purpose of the trip (optionally).
-            li.styled-list__item Add the type of activities they're interested in (optionally).
+          +bullet({
+            items: [
+              {
+                item: "Add a single traveller, multiple travellers, or no traveller at all."
+              },
+              {
+                item: "Add a single destination, multiple destinations, or no destination at all."
+              },
+              {
+                item: "Add trip dates (optionally)."
+              },
+              {
+                item: "Add the purpose of the trip (optionally)."
+              },
+              {
+                item: "Add the type of activities they're interested in (optionally)."
+              }
+            ]
+          })
 
           p Each piece of information we gathered would directly impact the suggestions we made to the user. A traveller using HEHA! to plan a hen do, for example, would see a radically different feed of information to someone planning a golf trip.
 

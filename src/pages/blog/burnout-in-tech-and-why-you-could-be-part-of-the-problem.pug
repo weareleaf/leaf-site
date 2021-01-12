@@ -38,15 +38,35 @@ block pageComponents
 
             p.blog-post__text Worryingly, there are a number of reasons why those in tech are at an increased risk:
 
-            ul.styled-list
-              li.styled-list__item.styled-list__item--padded Unless we setup our tools (email, Slack etc) appropriately, we’re on call 24/7
-              li.styled-list__item.styled-list__item--padded We change jobs more than most industries, which means another new boss/team to impress
-              li.styled-list__item.styled-list__item--padded Many of us are freelancers, and without a large dose of self-discipline, working hours become open-ended
-              li.styled-list__item.styled-list__item--padded Those of us in offices often take our work home
-              li.styled-list__item.styled-list__item--padded <i>“Our product is finally getting some traction”</i>
-              li.styled-list__item.styled-list__item--padded <i>“Our product isn’t getting traction”</i>
-              li.styled-list__item.styled-list__item--padded <i>“We’ve landed our first big account”</i>
-              li.styled-list__item.styled-list__item--padded <i>“We haven’t won any big accounts yet”</i>
+            +bullet({
+              itemModifier: "padded",
+              items: [
+                {
+                  item: "Unless we setup our tools (email, Slack etc) appropriately, we’re on call 24/7"
+                },
+                {
+                  item: "We change jobs more than most industries, which means another new boss/team to impress"
+                },
+                {
+                  item: "Many of us are freelancers, and without a large dose of self-discipline, working hours become open-ended"
+                },
+                {
+                  item: "Those of us in offices often take our work home"
+                },
+                {
+                  item: '<i>"Our product is finally getting some traction"</i>'
+                },
+                {
+                  item: '<i>"Our product isn’t getting traction"</i>'
+                },
+                {
+                  item: '<i>"We’ve landed our first big account"</i>'
+                },
+                {
+                  item: '<i>"We haven’t won any big accounts yet"</i>'
+                }
+              ]
+            })
 
             +permalink({
               heading: "You may be part of the problem"

@@ -11,7 +11,7 @@ h5,
 h6,
 .h6 {
   color: var(--color-heading);
-  font-weight: $font-weight-heading;
+  font-weight: $font-weight-bold;
   line-height: $heading-line-height;
   margin-top: 0;
 }
@@ -145,52 +145,6 @@ img {
   list-style: none;
   margin: 0;
   padding: 0;
-}
-
-.styled-list {
-  list-style: none;
-  margin: 0 0 $spacing-7;
-  padding: 0;
-
-  .sidebar & {
-    margin-bottom: 0; //- Debt here! A quick way to get rid of an accidental margin.
-  }
-
-  &__item {
-    font-size: $font-size-sm;
-    padding-left: #{$spacing-4 + 0.3rem};
-    position: relative;
-
-    &:not(:last-child) {
-      margin-bottom: $spacing-2;
-    }
-
-    &--padded {
-      font-size: $font-size-sub;
-      padding-left: #{$spacing-7 + 0.4rem};
-    }
-
-    &::before {
-      background-color: var(--color-accent);
-      content: '';
-      display: block;
-      height: 0.3rem;
-      left: 0;
-      position: absolute;
-      top: 0.3rem;
-      width: 0.3rem;
-
-      @media screen and (min-width: map-get($breakpoints, 'breakpoint-4')) {
-        top: 0.5rem;
-      }
-
-      .blog-post & {
-        height: 0.4rem;
-        left: $spacing-5;
-        width: 0.4rem;
-      }
-    }
-  }
 }
 
 ::selection {

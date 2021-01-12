@@ -23,7 +23,8 @@ $color-coral: hsl(7, 90%, 69%);
 
 $color-black: hsl(0, 0%, 0%);
 $color-coal: hsl(240, 19%, 30%);
-$color-slate: hsl(200, 16%, 20%);
+$color-coal-opaque: hsla(240, 19%, 30%, 0.6);
+$color-slate: hsl(240, 5%, 40%);
 $color-stone: hsl(230, 3%, 45%);
 $color-dust: hsl(240, 30%, 90%);
 $color-ash: hsl(240, 30%, 94%);
@@ -146,7 +147,7 @@ $paragraph-color: var(--color-paragraph);
 
 // Font weights
 $font-weight-base: 400;
-$font-weight-heading: 700;
+$font-weight-bold: 700;
 
 // Line heights
 $heading-line-height: 1.2 !default;

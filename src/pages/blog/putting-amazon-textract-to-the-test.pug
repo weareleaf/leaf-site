@@ -74,10 +74,20 @@ block pageComponents
 
             p.blog-post__text Despite the challenge, Textract again did a very good job of extracting information from the passport. Even where the text was small and unclear, it was able to successfully associate labels and values for the most part. It did, however, struggle to correctly parse some of the labels:
 
-            ul.styled-list
-              li.styled-list__item.styled-list__item--padded "Date of birth" was incorrectly extracted as "Date or hinthe".
-              li.styled-list__item.styled-list__item--padded "Sex" incorrectly was incorrectly extracted as "Sew".
-              li.styled-list__item.styled-list__item--padded "Nationality" was incorrectly extracted as "Natioality".
+            +bullet({
+              itemModifier: "padded",
+              items: [
+                {
+                  item: '"Date of birth" was incorrectly extracted as "Date or hinthe".'
+                },
+                {
+                  item: '"Sex" incorrectly was incorrectly extracted as "Sew".'
+                },
+                {
+                  item: '"Nationality" was incorrectly extracted as "Natioality".'
+                }
+              ]
+            })
 
             p.blog-post__text Textract also struggled to correctly associate some labels with values. For example, "Date of birth" was not correctly matched to “6 JAN/JAN 55”.
 
@@ -107,13 +117,29 @@ block pageComponents
 
             p.blog-post__text Textract can be integrated into a wide variety of application types — consumer facing websites, business applications, scripted tasks, mobile apps, and web services can all benefit. Typical use cases for Textract include:
 
-            ul.styled-list
-              li.styled-list__item.styled-list__item--padded Importing documents and forms into business applications.
-              li.styled-list__item.styled-list__item--padded Making documents searchable.
-              li.styled-list__item.styled-list__item--padded Building automated document processing workflows.
-              li.styled-list__item.styled-list__item--padded Maintaining compliance in document archives.
-              li.styled-list__item.styled-list__item--padded Extracting text for Natural Language Processing (NLP).
-              li.styled-list__item.styled-list__item--padded Automated document classification.
+            +bullet({
+              itemModifier: "padded",
+              items: [
+                {
+                  item: 'Importing documents and forms into business applications.'
+                },
+                {
+                  item: 'Making documents searchable.'
+                },
+                {
+                  item: 'Building automated document processing workflows.'
+                },
+                {
+                  item: 'Maintaining compliance in document archives.'
+                },
+                {
+                  item: 'Extracting text for Natural Language Processing (NLP).'
+                },
+                {
+                  item: 'Automated document classification.'
+                }
+              ]
+            })
 
             +permalink({
               heading: "Benefits to your business"

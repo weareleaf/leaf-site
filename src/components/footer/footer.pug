@@ -1,31 +1,41 @@
 mixin footer(c)
-  if minimalFooter === true
-    footer.footer--minimal
-      .container
-        .footer__info.footer__info--analysis
-          p.footer__copyright &copy; Leaf Software Ltd
-          p.footer__vat VAT no: GB 265125317
-  else if c.footer === true
-    footer.footer(role="contentinfo")
-      .container
-        .footer__cta
-          h2.footer__heading Start the conversation#[span.footer__heading__period .]
-          p.footer__text If you think we might be able to help, you’ve got a question, or you just want to say hi, don’t be a stranger.
-        .footer__grid
-          .footer__item.footer__item--enquiries
-            h3.footer__subheading New work
-            a.footer__link(href="mailto:enquiries@weareleaf.com") enquiries@weareleaf.com
+  case footerType
+    when "minimal"
+      footer.footer
+        .container
+          .footer__info.footer__info--no-border
+            p.footer__copyright &copy; Leaf Software Ltd
+            p.footer__vat VAT no: GB 265125317
+    when "analysis"
+      footer.footer
+        .container
+          .footer__info.footer__info--no-border
+            a.footer__anchor(href="#header")
+              .footer__anchor__icon
+                img(src="/assets/images/icons/ui/arrow.svg", alt="Arrow to get back to the top of the page.")
+              .footer__anchor__text Back to top
+            p.footer__copyright &copy; Leaf Software Ltd
+            p.footer__vat VAT no: GB 265125317
+    default
+      footer.footer(role="contentinfo")
+        .container
+          .footer__cta
+            h2.footer__heading Start the conversation#[span.footer__heading__period .]
+            p.footer__text If you think we might be able to help, you’ve got a question, or you just want to say hi, don’t be a stranger.
+          .footer__grid
+            .footer__item.footer__item--enquiries
+              h3.footer__subheading New work
+              a.footer__link(href="mailto:enquiries@weareleaf.com") enquiries@weareleaf.com
 
-          .footer__item.footer__item--hello
-            h3.footer__subheading Ask us anything
-            a.footer__link(href="mailto:hello@weareleaf.com") hello@weareleaf.com
+            .footer__item.footer__item--hello
+              h3.footer__subheading Ask us anything
+              a.footer__link(href="mailto:hello@weareleaf.com") hello@weareleaf.com
 
-          .footer__item.footer__item--icons
-            h3.footer__subheading Get social
-            .footer__social
-              +social({})
-        .footer__info
-          if c.nav
+            .footer__item.footer__item--icons
+              h3.footer__subheading Get social
+              .footer__social
+                +social({})
+          .footer__info
             .footer__nav
               +nav({
                 navList: [
@@ -48,15 +58,5 @@ mixin footer(c)
                   }
                 ]
               })
-          p.footer__copyright &copy; Leaf Software Ltd
-          p.footer__vat VAT no: GB 265125317
-  else
-    footer.footer.footer--analysis
-      .container
-        .footer__info.footer__info--analysis
-          p.footer__copyright &copy; Leaf Software Ltd
-          p.footer__vat VAT no: GB 265125317
-          a.footer__anchor(href="#header")
-            .footer__anchor__icon
-              img(src="/assets/images/icons/ui/arrow.svg", alt="Arrow to get back to the top of the page.")
-            .footer__anchor__text Back to top
+            p.footer__copyright &copy; Leaf Software Ltd
+            p.footer__vat VAT no: GB 265125317

@@ -31,19 +31,19 @@
   }
 
   &--large {
-    background: $color-white;
-    color: var(--color-button-large-text);
-    display: block;
-    font-size: $root-font-size;
-    font-weight: 700;
-    letter-spacing: 0.01rem;
-    padding: $spacing-5 $spacing-6;
-    width: 100%;
+    @extend %larger-button;
+  }
+
+  &--large-inverted {
+    @extend %larger-button;
 
     @media screen and (min-width: map-get($breakpoints, 'breakpoint-3')) {
       display: inline-block;
       width: auto;
     }
+
+    background: $color-white;
+    color: var(--color-button-large-text);
 
     &:hover {
       background: $color-silk;
@@ -54,9 +54,19 @@
     background-color: $color-luckypoint;
     display: block;
     margin: $spacing-6 auto 0;
+    width: fit-content;
 
     &:hover {
       background: darken($color-luckypoint, 3%);
     }
   }
+}
+
+%larger-button {
+  display: block;
+  font-size: $root-font-size;
+  font-weight: 700;
+  letter-spacing: 0.01rem;
+  padding: $spacing-5 $spacing-6;
+  width: 100%;
 }

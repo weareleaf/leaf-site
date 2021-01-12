@@ -36,11 +36,23 @@ block pageComponents
 
             p.blog-post__text None of us can afford to keep our head in the sand, so in this post, we'll answer the following questions:
 
-            ul.styled-list
-              li.styled-list__item.styled-list__item--padded What is automation?
-              li.styled-list__item.styled-list__item--padded Why is automation a big deal?
-              li.styled-list__item.styled-list__item--padded How will automation affect businesses?
-              li.styled-list__item.styled-list__item--padded How can I automate my business?
+            +bullet({
+              itemModifier: "padded",
+              items: [
+                {
+                  item: 'What is automation?'
+                },
+                {
+                  item: 'Why is automation a big deal?'
+                },
+                {
+                  item: 'How will automation affect businesses?'
+                },
+                {
+                  item: 'How can I automate my business?'
+                }
+              ]
+            })
 
             +permalink({
               heading: "What is automation?"
@@ -50,20 +62,46 @@ block pageComponents
 
             p.blog-post__text Some basic examples of automation include:
 
-            ul.styled-list
-              li.styled-list__item.styled-list__item--padded <strong>Allowing customers to interact with your business on a self-service basis:</strong> This is typically via a web portal or a smartphone app, but could be over a phone call, using a digital voice assistant ("Hey Google"), or even via a television-based app.
-              li.styled-list__item.styled-list__item--padded <strong>Supplementing or replacing customer service roles:</strong> Chatbots, support sites, ticketing systems, and community forums take the burdern of providing support away from staff.
-              li.styled-list__item.styled-list__item--padded <strong>Automating internal data processing:</strong> Where reports were manually collated, they can now be generated automatically. Where data was stored across multiple systems (or filing cabinets), it can now be digital, centralised, and searchable. Where data previously needed to be processed by a person, we can now make decisions and derive insight using software systems, and Artificial Intelligence (AI).
-              li.styled-list__item.styled-list__item--padded <strong>Integrations with other organisations and systems:</strong> Application Programming Interfaces (APIs) and Software Development Kits (SDKs) allow the systems in one business to interact with the systems in another, making vast amounts of data and cutting edge technology accessible to even the smallest organisations.
+            +bullet({
+              itemModifier: "padded",
+              items: [
+                {
+                  item: '<strong>Allowing customers to interact with your business on a self-service basis:</strong> This is typically via a web portal or a smartphone app, but could be over a phone call, using a digital voice assistant ("Hey Google"), or even via a television-based app.'
+                },
+                {
+                  item: '<strong>Supplementing or replacing customer service roles:</strong> Chatbots, support sites, ticketing systems, and community forums take the burdern of providing support away from staff.'
+                },
+                {
+                  item: '<strong>Automating internal data processing:</strong> Where reports were manually collated, they can now be generated automatically. Where data was stored across multiple systems (or filing cabinets), it can now be digital, centralised, and searchable. Where data previously needed to be processed by a person, we can now make decisions and derive insight using software systems, and Artificial Intelligence (AI).'
+                },
+                {
+                  item: '<strong>Integrations with other organisations and systems:</strong> Application Programming Interfaces (APIs) and Software Development Kits (SDKs) allow the systems in one business to interact with the systems in another, making vast amounts of data and cutting edge technology accessible to even the smallest organisations.'
+                }
+              ]
+            })
 
             p.blog-post__text Automation is largely driven by technological and cultural changes:
 
-            ul.styled-list
-              li.styled-list__item.styled-list__item--padded <strong>Improvements in infrastructure:</strong> Faster, more reliable networks mean businesses can count on technology working seamlessly for their customers.
-              li.styled-list__item.styled-list__item--padded <strong>Software proliferation:</strong> Where organisations used to have to build all of their own software, there are now many website, CRM, advertising, reporting and support products that can be integrated and managed  with little technical knowledge.
-              li.styled-list__item.styled-list__item--padded <strong>Globalisation:</strong> Instead of operating at a local or national level, it's common for many new businesses to operate globally right away, where high levels of automation are required from the beginning. For example, processing global payments and shipping would be foolish to attempt manually.
-              li.styled-list__item.styled-list__item--padded <strong>Changing expectations:</strong> As consumers benefit from the convenience automation can bring, their expectations rise, while their tolerance for hassle, delays, and expending effort lowers.
-              li.styled-list__item.styled-list__item--padded <strong>Other automation:</strong> Because automated activities can handle high volume, un-automated activities in processes quickly become bottlenecks. These then require automation in turn to keep throughput high throughout the entire process.
+            +bullet({
+              itemModifier: "padded",
+              items: [
+                {
+                  item: '<strong>Improvements in infrastructure:</strong> Faster, more reliable networks mean businesses can count on technology working seamlessly for their customers.'
+                },
+                {
+                  item: '<strong>Software proliferation:</strong> Where organisations used to have to build all of their own software, there are now many website, CRM, advertising, reporting and support products that can be integrated and managed  with little technical knowledge.'
+                },
+                {
+                  item: "<strong>Globalisation:</strong> Instead of operating at a local or national level, it's common for many new businesses to operate globally right away, where high levels of automation are required from the beginning. For example, processing global payments and shipping would be foolish to attempt manually."
+                },
+                {
+                  item: '<strong>Changing expectations:</strong> As consumers benefit from the convenience automation can bring, their expectations rise, while their tolerance for hassle, delays, and expending effort lowers.'
+                },
+                {
+                  item: '<strong>Other automation:</strong> Because automated activities can handle high volume, un-automated activities in processes quickly become bottlenecks. These then require automation in turn to keep throughput high throughout the entire process.'
+                }
+              ]
+            })
 
             +permalink({
               heading: "Why is automation a big deal?"
@@ -89,11 +127,23 @@ block pageComponents
 
             p.blog-post__text In all businesses, automation will continue to supplement and replace people in activities, completing them faster, to a higher quality, and more cost effectively than before. To understand how this trend will affect society as a whole, you need to understand how easy or hard things are to automate:
 
-            ul.styled-list
-              li.styled-list__item.styled-list__item--padded <strong>Easy:</strong> Repetitive simple tasks involving structured high-quality data. Examples include data collection, storage and retrieval, payment processing, data lookups, and basic reporting.
-              li.styled-list__item.styled-list__item--padded <strong>Medium:</strong> Repetitive complex tasks involving varying qualities of information. Examples include online experiences tailored to the customer, automatically cleaning up poorly structured or inaccurate data, generation of basic insight from raw data, detecting fraudulent patterns of behaviour, or assigning of workloads to staff.
-              li.styled-list__item.styled-list__item--padded <strong>Hard:</strong> Complex tasks involving understanding of language and context. Examples include effective chatbot or automated phone support, extraction of useful structured data from written text, images or video, analysis of text or speech for sentiment, predicting behaviour patterns, and deriving deep and complex insights from data.
-              li.styled-list__item.styled-list__item--padded <strong>Currently impossible:</strong> Tasks involving a deep understanding of complex language, context, emotion, or human activities. Examples include people management, having empathy with disgruntled customers, generating effective marketing material, content creation, product design, software development, and complex decision making with limited information.
+            +bullet({
+              itemModifier: "padded",
+              items: [
+                {
+                  item: '<strong>Easy:</strong> Repetitive simple tasks involving structured high-quality data. Examples include data collection, storage and retrieval, payment processing, data lookups, and basic reporting.'
+                },
+                {
+                  item: '<strong>Medium:</strong> Repetitive complex tasks involving varying qualities of information. Examples include online experiences tailored to the customer, automatically cleaning up poorly structured or inaccurate data, generation of basic insight from raw data, detecting fraudulent patterns of behaviour, or assigning of workloads to staff.'
+                },
+                {
+                  item: '<strong>Hard:</strong> Complex tasks involving understanding of language and context. Examples include effective chatbot or automated phone support, extraction of useful structured data from written text, images or video, analysis of text or speech for sentiment, predicting behaviour patterns, and deriving deep and complex insights from data.'
+                },
+                {
+                  item: '<strong>Currently impossible:</strong> Tasks involving a deep understanding of complex language, context, emotion, or human activities. Examples include people management, having empathy with disgruntled customers, generating effective marketing material, content creation, product design, software development, and complex decision making with limited information.'
+                }
+              ]
+            })
 
             h3.blog-post__h3 Now
             p.blog-post__text Activities from the "easy" and "medium" categories above are already highly automated in many businesses. Call centres are being replaced by online portals and apps, and information is already processed and reported on in an highly automated way. Software is well understood to be faster, better and cheaper than people for these tasks.
@@ -142,12 +192,26 @@ block pageComponents
             h3.blog-post__h3 Embrace new revenue streams
             p.blog-post__text As you automate, you'll free up time for your business to work on other things. You can compound the benefit you get from automation by reusing existing automated processes to cater for new markets, or building new products entirely. Common examples include:
 
-            ul.styled-list
-              li.styled-list__item.styled-list__item--padded Charging other organisations to integrate with yours on a self-service basis.
-              li.styled-list__item.styled-list__item--padded Becoming established in a niche at a global level, and <em>then</em> beginning to generalise.
-              li.styled-list__item.styled-list__item--padded Building entirely new products that complement your existing product offerings.
-              li.styled-list__item.styled-list__item--padded Teaching and consulting for other businesses.
-              li.styled-list__item.styled-list__item--padded Selling customer information in an ethical way.
+            +bullet({
+              itemModifier: "padded",
+              items: [
+                {
+                  item: 'Charging other organisations to integrate with yours on a self-service basis.'
+                },
+                {
+                  item: 'Becoming established in a niche at a global level, and <em>then</em> beginning to generalise.'
+                },
+                {
+                  item: 'Building entirely new products that complement your existing product offerings.'
+                },
+                {
+                  item: 'Teaching and consulting for other businesses.'
+                },
+                {
+                  item: 'Selling customer information in an ethical way.'
+                }
+              ]
+            })
 
             p.blog-post__text This not only allows you to grow your business, but helps to diversify your revenue to protect against uncertainty in the future.
 
