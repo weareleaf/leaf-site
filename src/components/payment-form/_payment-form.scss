@@ -3,7 +3,7 @@
   border-radius: $border-radius-lg;
   margin: 0 auto;
   padding: $spacing-6;
-  width: 28rem;
+  width: 100%;
 
   &:last-child {
     padding-bottom: 0;
@@ -19,7 +19,7 @@
     position: relative;
 
     &::after {
-      border-bottom: $border-width-base $border-style $color-smoke;
+      border-bottom: $border-width-base $border-style $color-whitesmoke;
       bottom: 0;
       content: '';
       display: block;
@@ -55,7 +55,7 @@
     padding: $spacing-6 0;
 
     &:not(:last-child) {
-      border-bottom: $border-width-base $border-style $color-smoke;
+      border-bottom: $border-width-base $border-style $color-whitesmoke;
     }
 
     & > *:not(:last-child) {
@@ -84,7 +84,7 @@
       color: $color-stone;
       font-size: 0.7rem;
       line-height: 0.7rem;
-      margin: 0 0 0 $spacing-3;
+      margin: $spacing-1 0 0 $spacing-3;
     }
   }
 

@@ -19,8 +19,12 @@ block pageComponents
     subheadingModifier: "narrow",
     introButton: true,
     button: {
+      attributes: {
+        product: "analysis",
+        success: "/analysis/purchase-complete",
+        cancel: "/analysis"
+      },
       modifier: "analysis",
-      url: "/analysis/purchase",
       text: "Buy your report for £749"
     }
   })
@@ -47,8 +51,12 @@ block pageComponents
           h2.content-block__heading.content-block__heading--center How it works
           p.content__intro.content__intro--center We aim to have the report completed within two weeks, and we’ll be sure to keep you updated so that you don’t have to worry about chasing for an update yourself.
           +button({
+            attributes: {
+              product: "analysis",
+              success: "/analysis/purchase-complete",
+              cancel: "/analysis"
+            },
             modifier: "analysis",
-            url: "/analysis/purchase",
             text: "Buy your report for £749"
           })
         +numbered-steps({

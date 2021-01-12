@@ -8,8 +8,12 @@ mixin banner(c)
           p.banner__intro Use the link below to purchase your report, and we’ll contact you within two working days to arrange a call.
           .banner__button.banner__button--checkout
             +button({
+              attributes: {
+                product: "analysis",
+                success: "/analysis/purchase-complete",
+                cancel: "/analysis"
+              },
               modifier: "large-inverted",
-              url: "/analysis/purchase",
               text: "Buy your report for £749"
             })
           +banks({})

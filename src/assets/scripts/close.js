@@ -8,6 +8,8 @@ export default function () {
       headerButton.href = '/careers'
     }  else if (pathname.match(/purchase-complete/)) {
       headerButton.href = pathname.split("/purchase-complete")[0]
+    }  else if (pathname.match(/purchase/)) {
+      headerButton.href = pathname.split("/purchase")[0]
     } else {
       headerButton.href = '/case-studies'
     }
