@@ -1,0 +1,106 @@
+.payment-form {
+  background-color: $color-white;
+  border-radius: $border-radius-lg;
+  margin: 0 auto;
+  padding: $spacing-6;
+  width: 100%;
+
+  &:last-child {
+    padding-bottom: 0;
+  }
+
+  @media screen and (min-width: map-get($breakpoints, 'breakpoint-2')) {
+    width: 32rem;
+  }
+
+  &__heading {
+    padding-bottom: $spacing-6;
+    margin-bottom: 0;
+    position: relative;
+
+    &::after {
+      border-bottom: $border-width-base $border-style $color-whitesmoke;
+      bottom: 0;
+      content: '';
+      display: block;
+      left: -$spacing-6;
+      position: absolute;
+      width: calc(100% + (#{$spacing-6} * 2));
+    }
+  }
+
+  &__input-group {
+    display: flex;
+    gap: $spacing-5;
+
+    .form-group {
+      flex: auto;
+      min-width: 4rem;
+
+      &.flex-5 {
+        flex: 5;
+      }
+
+      &.flex-2 {
+        flex: 2;
+      }
+
+      &.flex-1 {
+        flex: 1;
+      }
+    }
+  }
+
+  &__section {
+    padding: $spacing-6 0;
+
+    &:not(:last-child) {
+      border-bottom: $border-width-base $border-style $color-whitesmoke;
+    }
+
+    & > *:not(:last-child) {
+      margin: 0 0 $spacing-5 0;
+    }
+  }
+
+  &__subheading {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__tagline {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+
+    &__icon {
+      img {
+        height: 1.05rem;
+        width: 0.8rem;
+      }
+    }
+
+    &__text {
+      color: $color-stone;
+      font-size: 0.7rem;
+      line-height: 0.7rem;
+      margin: $spacing-1 0 0 $spacing-3;
+    }
+  }
+
+  .banks {
+    align-self: center;
+    display: inline-flex;
+    float: right;
+  }
+
+  .bank {
+    &:not(:last-child) {
+      margin-right: $spacing-2;
+    }
+  }
+
+  .explanation {
+    margin: $spacing-6 0;
+  }
+}

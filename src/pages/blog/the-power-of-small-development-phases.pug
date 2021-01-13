@@ -44,15 +44,35 @@ block pageComponents
 
             p.blog-post__text Using simple numbers, if there’s a 20% potential improvement from some new feature, there’s nothing wrong with implementing that in eight 2.5% phases; each one agreed, worked on, and deployed separately. In fact, this approach has many benefits:
 
-            ul.styled-list
-              li.styled-list__item <strong>Small phases deliver results quickly.</strong> Instead of waiting 8 weeks for a 20% benefit, you accumulate a 2.5% benefit each week for 8 weeks, starting from the end of the first week.
-              li.styled-list__item <strong>Small phases are resilient against competing priorities.</strong> If you have to abandon things half-way through, you’ll still have developed, tested, and deployed a 10% improvement.
-              li.styled-list__item <strong>Small phases avoid sunk cost.</strong> If your planned improvement doesn’t work, you can change course without throwing away months of effort.
-              li.styled-list__item <strong>Small phases build trust.</strong> Specifically, this occurs between developers and stakeholders. No more wondering whether anything will ever be finished.
-              li.styled-list__item <strong>Small phases are easy to get agreement on.</strong> Fewer people need to meet and discuss fewer changes, and contentious points need only hold up one phase, not the whole project.
-              li.styled-list__item <strong>Small phases are easy to renegotiate.</strong> If alterations need to be made, small changes can be renegotiated without needing to re-check agreement on everything else.
-              li.styled-list__item <strong>Small phases are simple to estimate.</strong> Smaller changes to a system are easier to estimate accurately, so everyone gets a better   idea of when things will be done.
-              li.styled-list__item <strong>Small phases are less risky.</strong> Bugs may occur, but by keeping each deployed change small you risk deploying fewer bugs at a time, and make any that do creep in easier to identify and squash.
+            +bullet({
+              itemModifier: "padded",
+              items: [
+                {
+                  item: '<strong>Small phases deliver results quickly.</strong> Instead of waiting 8 weeks for a 20% benefit, you accumulate a 2.5% benefit each week for 8 weeks, starting from the end of the first week.'
+                },
+                {
+                  item: '<strong>Small phases are resilient against competing priorities.</strong> If you have to abandon things half-way through, you’ll still have developed, tested, and deployed a 10% improvement.'
+                },
+                {
+                  item: '<strong>Small phases avoid sunk cost.</strong> If your planned improvement doesn’t work, you can change course without throwing away months of effort.'
+                },
+                {
+                  item: '<strong>Small phases build trust.</strong> Specifically, this occurs between developers and stakeholders. No more wondering whether anything will ever be finished.'
+                },
+                {
+                  item: '<strong>Small phases are easy to get agreement on.</strong> Fewer people need to meet and discuss fewer changes, and contentious points need only hold up one phase, not the whole project.'
+                },
+                {
+                  item: '<strong>Small phases are easy to renegotiate.</strong> If alterations need to be made, small changes can be renegotiated without needing to re-check agreement on everything else.'
+                },
+                {
+                  item: '<strong>Small phases are simple to estimate.</strong> Smaller changes to a system are easier to estimate accurately, so everyone gets a better   idea of when things will be done.'
+                },
+                {
+                  item: '<strong>Small phases are less risky.</strong> Bugs may occur, but by keeping each deployed change small you risk deploying fewer bugs at a time, and make any that do creep in easier to identify and squash.'
+                }
+              ]
+            })
 
             p.blog-post__text So, next time you‘re struggling to get things done, try breaking your project up into small phases, and see how much easier it is to release features, keep stakeholders happy, and build trust.
 

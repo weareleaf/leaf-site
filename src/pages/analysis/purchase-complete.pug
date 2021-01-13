@@ -1,0 +1,127 @@
+extends ../../layouts/content.pug
+
+block prepend vars
+  -var pageTitle = "Thanks for buying your report | Specialist Data Capture Experts | Leaf"
+  -var metaUrl = "https://weareleaf.com/analysis/purchase-complete"
+  -var metaTitle = "Thanks for buying your bespoke analysis report for your digital product or service."
+  -var metaDescription = "We’ve sent you a confirmation email, and will send you another email within two working days to confirm a date for our first call. In the meantime, please find out more about what you can expect moving forward."
+
+  -var heroHeading = "Thanks for buying your report"
+  -var heroSubheading = "We’ve sent you a confirmation email, and will send you another email within two working days to confirm a date for our first call. In the meantime, please find out more about what you can expect moving forward."
+
+  -var footerType = "minimal"
+
+block pageComponents
+  +hero({
+    heading: heroHeading,
+    subheading: heroSubheading
+  })
+
+  section.section
+    .container
+      .centered-content.centered-content--no-pad
+        .grid.grid--center
+          .grid__item
+            .content-list
+              +content({
+                contentTextModifier: "larger",
+                heading2: true,
+                heading: "What should you prepare for the call?",
+                modifier: "",
+                items: [
+                  {
+                    text: "We ask that you forward on a few initial details to help us prepare for the call. For now, we just need to know the following:"
+                  },
+                  {
+                    type: "bullet",
+                    locals: {
+                      itemModifier: "padded",
+                      items: [
+                        {
+                          item: "How many people from your company will be attending the call, and the names and email addresses of those people."
+                        },
+                        {
+                          item: "The goals you’re trying to achieve with your product or service, and how they will benefit your business."
+                        },
+                        {
+                          item: "A brief overview of any problems you’ve noticed with your product or service, and how those issues are affecting your business."
+                        }
+                      ]
+                    }
+                  },
+                  {
+                    text: "Please include this information <strong>as a reply to the introductory email</strong> you’ll be receiving in the coming days. In that email, there will also be a time and date request to see when you will be available for a call."
+                  }
+                ]
+              })
+              +content({
+                contentTextModifier: "larger",
+                heading2: true,
+                heading: "How will the call take place?",
+                modifier: "",
+                items: [
+                  {
+                    text: "The call will take place through <strong>Google Hangouts</strong>, and we’ll email an invite link to every person who will be attending."
+                  },
+                  {
+                    text: "The call will be led by either one of the directors at Leaf, or both together. This will be a great chance for us to get to know each other, understand the goals for your business, and plan the next steps for improving your product."
+                  },
+                  {
+                    type: "explanation",
+                    locals: {
+                      iconName: "info",
+                      heading: "No need for a webcam",
+                      text: "If you’re unable to source a webcam for the call, then not to worry. As long as you have a microphone and an internet connection, you’ll be fine.",
+                      iconModifier: "inverted",
+                      modifier: "inverted"
+                    }
+                  }
+                ]
+              })
+              +content({
+                contentTextModifier: "larger",
+                heading2: true,
+                heading: "How long will the entire process take?",
+                modifier: "",
+                items: [
+                  {
+                    text: "We aim to have the report completed <strong>within two weeks</strong> after the initial call. This gives us enough time to thoroughly review your product and piece together our findings."
+                  },
+                  {
+                    text: "We’ll also make sure to keep you updated on the progress of your report through regular emails, so that you can focus on the other aspects of your business without the added stress of chasing for an update yourself."
+                  }
+                ]
+              })
+              +content({
+                contentTextModifier: "larger",
+                heading2: true,
+                heading: "What happens once the report is complete?",
+                modifier: "",
+                items: [
+                  {
+                    text: "Once we’ve finished with the report, we’ll send it over as a <strong>PDF (Portable Document Format)</strong> for you to easily open, share with your team, and get a feel for what we uncovered during our analysis. We’ll also ask for a time and date in this email to arrange a final call."
+                  },
+                  {
+                    text: "The final call will last for 1 hour, and will be a chance for us to go through the report together in detail, explaining what we uncovered during the analysis, as well as answer any questions you may have."
+                  },
+                  {
+                    text: "Our aim is to make sure you are completely satisfied with the suggestions, and confident in the steps you can take towards improving your product."
+                  },
+                  {
+                    type: "explanation",
+                    locals: {
+                      iconName: "info",
+                      heading: "We’ll be ready",
+                      text: "Our team will also be ready to begin making the suggested improvements right away if you decide to continue working with us on a more long-term basis.",
+                      iconModifier: "inverted",
+                      modifier: "inverted"
+                    }
+                  },
+                  {
+                    type: "divider"
+                  },
+                  {
+                    text: "If you do have any questions between now and the next email, then please feel free to <a class='subtle' href='mailto:report-enquiries@weareleaf.com'>contact us</a> and we’ll be happy to help. Otherwise, we look forward to meeting you!"
+                  }
+                ]
+              })

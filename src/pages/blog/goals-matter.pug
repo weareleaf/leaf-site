@@ -38,12 +38,26 @@ block pageComponents
               heading: "Goals should be SMART"
             })
 
-            ul.styled-list
-              li.styled-list__item <strong>Specific</strong> - They state what will be done.
-              li.styled-list__item <strong>Measureable</strong> - They can be objectively verified as being achieved.
-              li.styled-list__item <strong>Achievable</strong> - They are reasonably achievable by their team.
-              li.styled-list__item <strong>Relevant</strong> - They are of some benefit to the organisation they’re contributing to.
-              li.styled-list__item <strong>Time-based</strong> - They have some sort of expiry date set against them.
+            +bullet({
+              itemModifier: "padded",
+              items: [
+                {
+                  item: "<strong>Specific</strong> - They state what will be done."
+                },
+                {
+                  item: "<strong>Measureable</strong> - They can be objectively verified as being achieved."
+                },
+                {
+                  item: "<strong>Achievable</strong> - They are reasonably achievable by their team."
+                },
+                {
+                  item: "<strong>Relevant</strong> - They are of some benefit to the organisation they’re contributing to."
+                },
+                {
+                  item: "<strong>Time-based</strong> - They have some sort of expiry date set against them."
+                }
+              ]
+            })
 
             p.blog-post__text Using the S.M.A.R.T criteria helps to ensure your development team agree to goals they all understand, that they can accomplish, that matter to the business, and that can be completed within an agreed timeframe. Consider the following example:
 
@@ -64,10 +78,20 @@ block pageComponents
 
             p.blog-post__text It's likely that you'll end up with a surplus of goals to choose from, but since you can only focus on one, make a good choice by asking yourself the following:
 
-            ul.styled-list
-              li.styled-list__item Which goal will your team make the most impact on?
-              li.styled-list__item How well are your team’s strengths and weaknesses are aligned to each goal?
-              li.styled-list__item How much enthusiasm does your team have for each goal?
+            +bullet({
+              itemModifier: "padded",
+              items: [
+                {
+                  item: "Which goal will your team make the most impact on?"
+                },
+                {
+                  item: "How well are your team’s strengths and weaknesses are aligned to each goal?"
+                },
+                {
+                  item: "How much enthusiasm does your team have for each goal?"
+                }
+              ]
+            })
 
             p.blog-post__text You’ll know you’ve hit good matches when your team is able to make a big impact on a goal well suited to their strengths, that they’re enthusiastic about getting to work on. Focus on these.
 
@@ -85,7 +109,7 @@ block pageComponents
 
             hr.divider
 
-            p.blog-post__text As we work to add automation to our client's businesses <a href="/">at Leaf</a>, we define a clear goals before starting each piece of work. They make a tremendous difference in the productivity, effectiveness, and happiness of the teams we work with.
+            p.blog-post__text As we work to add automation to our client's businesses <a class="subtle" href="/">at Leaf</a>, we define a clear goals before starting each piece of work. They make a tremendous difference in the productivity, effectiveness, and happiness of the teams we work with.
 
   section.section.section--lg-spacing
     .container

@@ -1,0 +1,8 @@
+mixin numbered-steps(c)
+  ul.numbered-steps
+    each item in c.numberedSteps
+      li.numbered-steps__item
+        .numbered-steps__step
+          p.numbered-steps__number= item.number
+        h2.numbered-steps__heading= item.heading
+        p.numbered-steps__text= item.text

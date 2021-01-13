@@ -8,7 +8,7 @@
 // Base
 @import 'base/variables';
 @import 'base/base';
-@import 'base/case-study-layouts';
+@import 'base/case-studies';
 @import 'base/fonts';
 @import 'base/layout';
 @import 'base/typography';
@@ -17,11 +17,12 @@
 
 // Components
 @import '../../components/author/author';
-//-@import '../../components/biography/biography';
+@import '../../components/banner/banner';
 @import '../../components/blog-post/blog-post';
 @import '../../components/block/block';
 @import '../../components/button/button';
 @import '../../components/bullet/bullet';
+@import '../../components/checkmark-list/checkmark-list';
 @import '../../components/close/close';
 @import '../../components/collage/collage';
 @import '../../components/company-logos/company-logos';
@@ -35,6 +36,7 @@
 @import '../../components/explanation/explanation';
 @import '../../components/explanation-list/explanation-list';
 @import '../../components/footer/footer';
+@import '../../components/form-group/form-group';
 @import '../../components/header/header';
 @import '../../components/hero/hero';
 @import '../../components/intro/intro';
@@ -44,6 +46,8 @@
 @import '../../components/modal/modal';
 @import '../../components/metrics/metrics';
 @import '../../components/nav/nav';
+@import '../../components/numbered-steps/numbered-steps';
+@import '../../components/payment-form/payment-form';
 @import '../../components/permalink/permalink';
 @import '../../components/post/post';
 @import '../../components/presentation/presentation';
@@ -51,7 +55,6 @@
 @import '../../components/project/project';
 @import '../../components/resource/resource';
 @import '../../components/share-icons/share-icons';
-@import '../../components/sidebar/sidebar';
 @import '../../components/social/social';
 @import '../../components/social-tile/social-tile';
 @import '../../components/specialism/specialism';

@@ -36,11 +36,23 @@ block pageComponents
 
             p.blog-post__text None of us can afford to keep our head in the sand, so in this post, we'll answer the following questions:
 
-            ul.styled-list
-              li.styled-list__item What is automation?
-              li.styled-list__item Why is automation a big deal?
-              li.styled-list__item How will automation affect businesses?
-              li.styled-list__item How can I automate my business?
+            +bullet({
+              itemModifier: "padded",
+              items: [
+                {
+                  item: 'What is automation?'
+                },
+                {
+                  item: 'Why is automation a big deal?'
+                },
+                {
+                  item: 'How will automation affect businesses?'
+                },
+                {
+                  item: 'How can I automate my business?'
+                }
+              ]
+            })
 
             +permalink({
               heading: "What is automation?"
@@ -50,20 +62,46 @@ block pageComponents
 
             p.blog-post__text Some basic examples of automation include:
 
-            ul.styled-list
-              li.styled-list__item <strong>Allowing customers to interact with your business on a self-service basis:</strong> This is typically via a web portal or a smartphone app, but could be over a phone call, using a digital voice assistant ("Hey Google"), or even via a television-based app.
-              li.styled-list__item <strong>Supplementing or replacing customer service roles:</strong> Chatbots, support sites, ticketing systems, and community forums take the burdern of providing support away from staff.
-              li.styled-list__item <strong>Automating internal data processing:</strong> Where reports were manually collated, they can now be generated automatically. Where data was stored across multiple systems (or filing cabinets), it can now be digital, centralised, and searchable. Where data previously needed to be processed by a person, we can now make decisions and derive insight using software systems, and Artificial Intelligence (AI).
-              li.styled-list__item <strong>Integrations with other organisations and systems:</strong> Application Programming Interfaces (APIs) and Software Development Kits (SDKs) allow the systems in one business to interact with the systems in another, making vast amounts of data and cutting edge technology accessible to even the smallest organisations.
+            +bullet({
+              itemModifier: "padded",
+              items: [
+                {
+                  item: '<strong>Allowing customers to interact with your business on a self-service basis:</strong> This is typically via a web portal or a smartphone app, but could be over a phone call, using a digital voice assistant ("Hey Google"), or even via a television-based app.'
+                },
+                {
+                  item: '<strong>Supplementing or replacing customer service roles:</strong> Chatbots, support sites, ticketing systems, and community forums take the burdern of providing support away from staff.'
+                },
+                {
+                  item: '<strong>Automating internal data processing:</strong> Where reports were manually collated, they can now be generated automatically. Where data was stored across multiple systems (or filing cabinets), it can now be digital, centralised, and searchable. Where data previously needed to be processed by a person, we can now make decisions and derive insight using software systems, and Artificial Intelligence (AI).'
+                },
+                {
+                  item: '<strong>Integrations with other organisations and systems:</strong> Application Programming Interfaces (APIs) and Software Development Kits (SDKs) allow the systems in one business to interact with the systems in another, making vast amounts of data and cutting edge technology accessible to even the smallest organisations.'
+                }
+              ]
+            })
 
             p.blog-post__text Automation is largely driven by technological and cultural changes:
 
-            ul.styled-list
-              li.styled-list__item <strong>Improvements in infrastructure:</strong> Faster, more reliable networks mean businesses can count on technology working seamlessly for their customers.
-              li.styled-list__item <strong>Software proliferation:</strong> Where organisations used to have to build all of their own software, there are now many website, CRM, advertising, reporting and support products that can be integrated and managed  with little technical knowledge.
-              li.styled-list__item <strong>Globalisation:</strong> Instead of operating at a local or national level, it's common for many new businesses to operate globally right away, where high levels of automation are required from the beginning. For example, processing global payments and shipping would be foolish to attempt manually.
-              li.styled-list__item <strong>Changing expectations:</strong> As consumers benefit from the convenience automation can bring, their expectations rise, while their tolerance for hassle, delays, and expending effort lowers.
-              li.styled-list__item <strong>Other automation:</strong> Because automated activities can handle high volume, un-automated activities in processes quickly become bottlenecks. These then require automation in turn to keep throughput high throughout the entire process.
+            +bullet({
+              itemModifier: "padded",
+              items: [
+                {
+                  item: '<strong>Improvements in infrastructure:</strong> Faster, more reliable networks mean businesses can count on technology working seamlessly for their customers.'
+                },
+                {
+                  item: '<strong>Software proliferation:</strong> Where organisations used to have to build all of their own software, there are now many website, CRM, advertising, reporting and support products that can be integrated and managed  with little technical knowledge.'
+                },
+                {
+                  item: "<strong>Globalisation:</strong> Instead of operating at a local or national level, it's common for many new businesses to operate globally right away, where high levels of automation are required from the beginning. For example, processing global payments and shipping would be foolish to attempt manually."
+                },
+                {
+                  item: '<strong>Changing expectations:</strong> As consumers benefit from the convenience automation can bring, their expectations rise, while their tolerance for hassle, delays, and expending effort lowers.'
+                },
+                {
+                  item: '<strong>Other automation:</strong> Because automated activities can handle high volume, un-automated activities in processes quickly become bottlenecks. These then require automation in turn to keep throughput high throughout the entire process.'
+                }
+              ]
+            })
 
             +permalink({
               heading: "Why is automation a big deal?"
@@ -89,11 +127,23 @@ block pageComponents
 
             p.blog-post__text In all businesses, automation will continue to supplement and replace people in activities, completing them faster, to a higher quality, and more cost effectively than before. To understand how this trend will affect society as a whole, you need to understand how easy or hard things are to automate:
 
-            ul.styled-list
-              li.styled-list__item <strong>Easy:</strong> Repetitive simple tasks involving structured high-quality data. Examples include data collection, storage and retrieval, payment processing, data lookups, and basic reporting.
-              li.styled-list__item <strong>Medium:</strong> Repetitive complex tasks involving varying qualities of information. Examples include online experiences tailored to the customer, automatically cleaning up poorly structured or inaccurate data, generation of basic insight from raw data, detecting fraudulent patterns of behaviour, or assigning of workloads to staff.
-              li.styled-list__item <strong>Hard:</strong> Complex tasks involving understanding of language and context. Examples include effective chatbot or automated phone support, extraction of useful structured data from written text, images or video, analysis of text or speech for sentiment, predicting behaviour patterns, and deriving deep and complex insights from data.
-              li.styled-list__item <strong>Currently impossible:</strong> Tasks involving a deep understanding of complex language, context, emotion, or human activities. Examples include people management, having empathy with disgruntled customers, generating effective marketing material, content creation, product design, software development, and complex decision making with limited information.
+            +bullet({
+              itemModifier: "padded",
+              items: [
+                {
+                  item: '<strong>Easy:</strong> Repetitive simple tasks involving structured high-quality data. Examples include data collection, storage and retrieval, payment processing, data lookups, and basic reporting.'
+                },
+                {
+                  item: '<strong>Medium:</strong> Repetitive complex tasks involving varying qualities of information. Examples include online experiences tailored to the customer, automatically cleaning up poorly structured or inaccurate data, generation of basic insight from raw data, detecting fraudulent patterns of behaviour, or assigning of workloads to staff.'
+                },
+                {
+                  item: '<strong>Hard:</strong> Complex tasks involving understanding of language and context. Examples include effective chatbot or automated phone support, extraction of useful structured data from written text, images or video, analysis of text or speech for sentiment, predicting behaviour patterns, and deriving deep and complex insights from data.'
+                },
+                {
+                  item: '<strong>Currently impossible:</strong> Tasks involving a deep understanding of complex language, context, emotion, or human activities. Examples include people management, having empathy with disgruntled customers, generating effective marketing material, content creation, product design, software development, and complex decision making with limited information.'
+                }
+              ]
+            })
 
             h3.blog-post__h3 Now
             p.blog-post__text Activities from the "easy" and "medium" categories above are already highly automated in many businesses. Call centres are being replaced by online portals and apps, and information is already processed and reported on in an highly automated way. Software is well understood to be faster, better and cheaper than people for these tasks.
@@ -122,7 +172,7 @@ block pageComponents
             h3.blog-post__h3 Take a smart approach
             p.blog-post__text Many businesses automate individual activities by taking random stabs at obvious opportunities. This is prone to creating bottlenecks at other stages of the businesses operations, where the level of automation is lower.
 
-            p.blog-post__text To truly get the most from automation, you need to look at entire processes, and intelligently apply automation where it can have the greatest effect. From here, you repeatedly working on automating other parts of the process to eliminate bottlenecks and make the entire operation efficient. We wrote <a href="https://weareleaf.com/blog/automate-where-it-matters-with-process-maps" rel="noopener" target="_blank">a blog post on using process maps to achieve this</a>.
+            p.blog-post__text To truly get the most from automation, you need to look at entire processes, and intelligently apply automation where it can have the greatest effect. From here, you repeatedly working on automating other parts of the process to eliminate bottlenecks and make the entire operation efficient. We wrote <a class="subtle" href="https://weareleaf.com/blog/automate-where-it-matters-with-process-maps" rel="noopener" target="_blank">a blog post on using process maps to achieve this</a>.
 
             h3.blog-post__h3 Invest in your own software
 
@@ -142,18 +192,32 @@ block pageComponents
             h3.blog-post__h3 Embrace new revenue streams
             p.blog-post__text As you automate, you'll free up time for your business to work on other things. You can compound the benefit you get from automation by reusing existing automated processes to cater for new markets, or building new products entirely. Common examples include:
 
-            ul.styled-list
-              li.styled-list__item Charging other organisations to integrate with yours on a self-service basis.
-              li.styled-list__item Becoming established in a niche at a global level, and <em>then</em> beginning to generalise.
-              li.styled-list__item Building entirely new products that complement your existing product offerings.
-              li.styled-list__item Teaching and consulting for other businesses.
-              li.styled-list__item Selling customer information in an ethical way.
+            +bullet({
+              itemModifier: "padded",
+              items: [
+                {
+                  item: 'Charging other organisations to integrate with yours on a self-service basis.'
+                },
+                {
+                  item: 'Becoming established in a niche at a global level, and <em>then</em> beginning to generalise.'
+                },
+                {
+                  item: 'Building entirely new products that complement your existing product offerings.'
+                },
+                {
+                  item: 'Teaching and consulting for other businesses.'
+                },
+                {
+                  item: 'Selling customer information in an ethical way.'
+                }
+              ]
+            })
 
             p.blog-post__text This not only allows you to grow your business, but helps to diversify your revenue to protect against uncertainty in the future.
 
             h3.blog-post__h3 Focus on the 80%
 
-            p.blog-post__text The <a href="https://en.wikipedia.org/wiki/Pareto_principle" rel="noopener" target="_blank">Pareto Principle</a> states that roughly 80% of effects come from 20% of causes. While it's not a hard rule, it applies in an uncanny way to all kinds of situations. For example, in automated businesses, it's normal for 80% of the manual work to come from 20% (or fewer) of the customers.
+            p.blog-post__text The <a class="subtle" href="https://en.wikipedia.org/wiki/Pareto_principle" rel="noopener" target="_blank">Pareto Principle</a> states that roughly 80% of effects come from 20% of causes. While it's not a hard rule, it applies in an uncanny way to all kinds of situations. For example, in automated businesses, it's normal for 80% of the manual work to come from 20% (or fewer) of the customers.
 
             p.blog-post__text With this in mind, it often makes sense to focus your automation efforts on catering for the 80% of customers that fit neatly into a similar mold, rather than wasting a lot of time and effort going after the unpredictable 20% that need human intervention to process. You may even want to hone your marketing efforts at attracting these customers, and letting those which prevent you from automating go elsewhere.
 
@@ -161,9 +225,9 @@ block pageComponents
               heading: "Getting started"
             })
 
-            p.blog-post__text To get you started, we've shared <a href="https://weareleaf.com/blog/automate-where-it-matters-with-process-maps">the workflow we use for business automation</a>. It uses process maps to identify the highest value automation opportunities in your business, and guides you through the most efficient route to increasing the speed, accuracy, scaleability, competitiveness, and global reach of your business through automation.
+            p.blog-post__text To get you started, we've shared <a class="subtle" href="https://weareleaf.com/blog/automate-where-it-matters-with-process-maps">the workflow we use for business automation</a>. It uses process maps to identify the highest value automation opportunities in your business, and guides you through the most efficient route to increasing the speed, accuracy, scaleability, competitiveness, and global reach of your business through automation.
 
-            p.blog-post__text We're also specialists in building digital products & services that automate business, so if you want a helping hand, don't hesitate to <a href="mailto:enquiries@weareleaf.com" refl="noopener" target="_blank">get in touch</a>.
+            p.blog-post__text We're also specialists in building digital products & services that automate business, so if you want a helping hand, don't hesitate to <a class="subtle" href="mailto:enquiries@weareleaf.com" refl="noopener" target="_blank">get in touch</a>.
 
   section.section.section--lg-spacing
     .container

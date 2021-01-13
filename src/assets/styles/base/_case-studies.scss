@@ -25,17 +25,17 @@
 
     @media screen and (min-width: map-get($breakpoints, 'breakpoint-4')) {
       display: block;
+      left: 25%;
       margin-bottom: 0;
       max-width: 34%;
       position: absolute;
       top: 52%;
-      left: 25%;
       transform: translate(-50%, -50%);
     }
-    
+
     @media screen and (min-width: map-get($breakpoints, 'breakpoint-5')) {
-      top: 54%;
       left: 22%;
+      top: 54%;
     }
   }
 
@@ -44,10 +44,10 @@
 
     @media screen and (min-width: map-get($breakpoints, 'breakpoint-4')) {
       display: block;
+      max-width: 74rem;
       padding-top: $spacing-8;
       position: absolute;
       right: -$spacing-13;
-      max-width: 74rem;
     }
   }
 
@@ -64,14 +64,14 @@
 
     @media screen and (min-width: map-get($breakpoints, 'breakpoint-4')) {
       left: $spacing-7;
-      padding-top: 0;
       max-width: 40%;
+      padding-top: 0;
       position: absolute;
     }
   }
 
   &--rift-9 {
-    margin: 0 0 -.5rem 0;
+    margin: 0 0 -0.5rem 0;
 
     @media screen and (min-width: map-get($breakpoints, 'breakpoint-2')) {
       margin: $spacing-5 0 0 0;
@@ -121,108 +121,12 @@
       min-width: 50rem;
 
       @media screen and (min-width: map-get($breakpoints, 'breakpoint-3')) {
-        min-width: 40rem;
+        min-width: $size-12;
       }
-  
+
       @media screen and (min-width: map-get($breakpoints, 'breakpoint-4')) {
         display: none;
       }
-    }
-  }
-}
-
-// Centred sections
-
-.centered-content {
-  padding: $spacing-10 0;
-  position: relative;
-
-  @media screen and (min-width: map-get($breakpoints, 'breakpoint-1')) {
-    padding: $spacing-11 $spacing-9;
-  }
-  
-
-  @media screen and (min-width: map-get($breakpoints, 'breakpoint-3')) {
-    padding: $spacing-11;
-  }
-
-  @media screen and (min-width: map-get($breakpoints, 'breakpoint-4')) {
-    padding: $spacing-13;
-  }
-
-  &--hx {
-    background-color: $hx-studio;
-    margin-bottom: 5rem;
-    margin-top: -7rem;
-    z-index: z('below');
-
-    @media screen and (min-width: map-get($breakpoints, 'breakpoint-1')) {
-      margin-bottom: 5rem;
-      margin-top: -9rem;
-    }
-
-    @media screen and (min-width: map-get($breakpoints, 'breakpoint-3')) {
-      margin-bottom: 7rem;
-    }
-
-    @media screen and (min-width: map-get($breakpoints, 'breakpoint-4')) {
-      margin-bottom: $spacing-14;
-      margin-top: -9rem;
-    }
-
-    @media screen and (min-width: map-get($breakpoints, 'breakpoint-11')) {
-      margin-bottom: $spacing-15;
-      margin-top: -$spacing-13;
-    }
-  }
-  .bg-shapes {
-    display: none;
-
-    @media screen and (min-width: map-get($breakpoints, 'breakpoint-4')) {
-      display: block;
-      height: 100%;
-      left: 0;
-      position: absolute;
-      overflow: hidden;
-      top: 0;
-      width: 100%;
-    }
-
-    .bg-shape {
-      max-width: 47%;
-      position: absolute;
-  
-      &--1 {
-        right: -5rem;
-        top: -15rem;
-      }
-
-      &--2 {
-        bottom: -15rem;
-        left: -5rem;
-        transform: rotate(180deg);
-      }
-    }
-  }
-
-  &--rift {
-    margin-bottom: $spacing-3;
-    margin-top: $spacing-9;
-    padding: 0;
-
-    @media screen and (min-width: map-get($breakpoints, 'breakpoint-1')) {
-      margin-top: $spacing-10;
-      padding: 0 $spacing-9;
-    }
-
-    @media screen and (min-width: map-get($breakpoints, 'breakpoint-3')) {
-      padding: 0 $spacing-11;
-    }
-
-    @media screen and (min-width: map-get($breakpoints, 'breakpoint-4')) {
-      margin-bottom: 0;
-      margin-top: 0;
-      padding: 0;
     }
   }
 }
@@ -253,7 +157,7 @@
     @media screen and (min-width: map-get($breakpoints, 'breakpoint-4')) {
       margin-bottom: $spacing-13;
       margin-left: -7.35rem;
-      max-width: $size-12;
+      max-width: $size-13;
     }
   }
 }
@@ -289,7 +193,7 @@
     @media screen and (min-width: map-get($breakpoints, 'breakpoint-3')) {
       padding: 0 $spacing-7;
     }
-    
+
     @media screen and (min-width: map-get($breakpoints, 'breakpoint-4')) {
       padding: 0;
     }
@@ -303,7 +207,7 @@
 .hx-image-8 {
   bottom: -6.5rem;
   left: 0;
-  margin: $spacing-13 $spacing-6 -.25rem $spacing-6;
+  margin: $spacing-13 $spacing-6 -0.25rem $spacing-6;
   position: absolute;
   right: 0;
 
@@ -351,10 +255,10 @@
   }
 
   &__main-prototype {
-    right: 0;
     position: absolute;
+    right: 0;
     top: -5rem;
-    transform: scale(.8);
+    transform: scale(0.8);
 
     @media screen and (min-width: map-get($breakpoints, 'breakpoint-6')) {
       top: $spacing-8;

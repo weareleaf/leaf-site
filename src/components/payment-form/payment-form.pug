@@ -1,0 +1,95 @@
+mixin payment-form(c)
+
+  .payment-form
+    h2.payment-form__heading= "Payment"
+    .payment-form__section
+      h3.payment-form__subheading= "Contact details"
+      +form-group({
+        name: "email",
+        type: "email",
+        label: "Email address",
+        attributes: {
+          'data-stripe': 'email'
+        }
+      })
+    .payment-form__section
+      h3.payment-form__subheading= "Billing address"
+      +form-group({
+        name: "country",
+        type: "select",
+        label: "Country",
+        attributes: {
+          'data-stripe': 'country'
+        }
+      })
+      +form-group({
+        name: "address",
+        label: "Address",
+        attributes: {
+          'data-stripe': 'address'
+        }
+      })
+      .payment-form__input-group
+        +form-group({
+          name: "town",
+          flex: "5",
+          label: "Town or City",
+          attributes: {
+            'data-stripe': 'town'
+          }
+        })
+        +form-group({
+          name: "postcode",
+          flex: "2",
+          label: "Postcode",
+          attributes: {
+            'data-stripe': 'address_zip'
+          }
+        })
+    .payment-form__section
+      h3.payment-form__subheading= "Card information"
+        +banks({})
+      +form-group({
+        name: "name",
+        label: "Name on Card",
+        attributes: {
+          'data-stripe': 'name'
+        }
+      })
+      .payment-form__input-group
+        +form-group({
+          name: "number",
+          flex: "5",
+          label: "Card number",
+          attributes: {
+            'data-stripe': 'number'
+          }
+        })
+        +form-group({
+          name: "expiry",
+          flex: "2",
+          label: "Expiry (MM / YY)",
+          attributes: {
+            'data-stripe': 'exp'
+          }
+        })
+        +form-group({
+          name: "cvc",
+          flex: "1",
+          label: "CVC",
+          attributes: {
+            'data-stripe': 'cvc'
+          }
+        })
+      if c.explanation
+        +explanation(c.explanation)
+      +button({
+        modifier: "large",
+        url: "#",
+        text: c.buttonText
+      })
+      .payment-form__tagline
+        .payment-form__tagline__icon
+          img(src="/assets/images/icons/lock.svg" alt="secure")
+        p.payment-form__tagline__text= "Payments are secure, and we'll never save your card details."
+
