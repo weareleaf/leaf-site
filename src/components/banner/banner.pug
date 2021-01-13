@@ -9,9 +9,7 @@ mixin banner(c)
           .banner__button.banner__button--checkout
             +button({
               attributes: {
-                product: "analysis",
-                success: "/analysis/purchase-complete",
-                cancel: "/analysis"
+                'purchase-product': "analysis"
               },
               modifier: "large-inverted",
               text: "Buy your report for £749"

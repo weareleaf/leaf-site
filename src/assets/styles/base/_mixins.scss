@@ -199,6 +199,12 @@
   width: $size;
 }
 
+@mixin absolute-center($size) {
+  left: calc(50% - (#{$size} / 2));
+  position: absolute;
+  top: calc(50% - (#{$size} / 2));
+}
+
 @mixin touch-boost {
   margin: -$spacing-3;
   padding: $spacing-3;

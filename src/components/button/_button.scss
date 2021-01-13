@@ -13,11 +13,35 @@
   text-decoration: none;
   transition: background-color $duration-2 $timing-ease;
 
-  // Gnarly hack to force visual text alignment within a button.
-  &::before {
-    content: '';
-    display: block;
-    margin-top: $spacing-1;
+  &__content {
+    position: relative;
+
+    .loading & {
+      // This ensures that the button stays the same size but the text can't be seen
+      color: transparent;
+      -webkit-user-select: none; /* Chrome/Safari */        
+      -moz-user-select: none; /* Firefox */
+      -ms-user-select: none; /* IE10+ */
+      user-select: none; /* IE10+ */
+
+      &::after {
+        animation: spin 1s linear infinite;
+        border: $border-width-sm $border-style $color-white;
+        border-top-color: transparent !important;
+        border-radius: 50%;
+        content: '';
+        display: block;
+        @include size(20px);
+        @include absolute-center(20px);
+      }
+    }
+
+    // Gnarly hack to force visual text alignment within a button.
+    &::before {
+      content: '';
+      display: block;
+      margin-top: $spacing-1;
+    }
   }
 
   &:hover {
@@ -30,13 +54,26 @@
     padding: $spacing-3 $spacing-5;
   }
 
-  &--large {
-    @extend %larger-button;
+  &--large,
+  &--large-inverted {
+    display: block;
+    font-size: $root-font-size;
+    font-weight: 700;
+    letter-spacing: 0.01rem;
+    padding: $spacing-5 $spacing-6;
+    width: 100%;
+
+    &.loading {
+      .button__content {
+        &::after {
+          @include size(30px);
+          @include absolute-center(30px);
+        }
+      }
+    }
   }
 
   &--large-inverted {
-    @extend %larger-button;
-
     @media screen and (min-width: map-get($breakpoints, 'breakpoint-3')) {
       display: inline-block;
       width: auto;
@@ -44,6 +81,14 @@
 
     background: $color-white;
     color: var(--color-button-large-text);
+
+    &.loading {
+      .button__content {
+        &::after {
+          border: $border-width-xl $border-style var(--color-button-large-text);
+        }
+      }
+    }
 
     &:hover {
       background: $color-silk;
@@ -62,11 +107,11 @@
   }
 }
 
-%larger-button {
-  display: block;
-  font-size: $root-font-size;
-  font-weight: 700;
-  letter-spacing: 0.01rem;
-  padding: $spacing-5 $spacing-6;
-  width: 100%;
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
 }
