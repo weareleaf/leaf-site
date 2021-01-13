@@ -66,6 +66,7 @@
     &.loading {
       .button__content {
         &::after {
+          border-width: $border-width-xl;
           @include size(30px);
           @include absolute-center(30px);
         }
@@ -85,7 +86,7 @@
     &.loading {
       .button__content {
         &::after {
-          border: $border-width-xl $border-style var(--color-button-large-text);
+          border-color: var(--color-button-large-text);
         }
       }
     }
