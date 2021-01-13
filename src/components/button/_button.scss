@@ -63,7 +63,7 @@
     padding: $spacing-5 $spacing-6;
     width: 100%;
 
-    &.loading {
+    .loading & {
       .button__content {
         &::after {
           border-width: $border-width-xl;
@@ -83,7 +83,7 @@
     background: $color-white;
     color: var(--color-button-large-text);
 
-    &.loading {
+    .loading & {
       .button__content {
         &::after {
           border-color: var(--color-button-large-text);
