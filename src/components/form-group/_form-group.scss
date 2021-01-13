@@ -1,4 +1,8 @@
 .form-group {
+  .loading & {
+    opacity: 0.6;
+  }
+
   label {
     color: $color-slate;
     display: block;
