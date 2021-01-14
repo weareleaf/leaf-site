@@ -1,27 +1,25 @@
-const addPaymentButtonListeners = function() {
-  const liveSite = location.host === 'weareleaf.com'
-  const stripeKey = liveSite ? 'pk_live_COqrme9FBvt1ssbwvxEomd2I' : 'pk_test_6MCiAEXja5maiISN7W3cXjhP'
-  const stripe = Stripe(stripeKey)
-  const productPrices = {
-    'analysis': liveSite ? 'price_1I8p39C2yPQt7QIdJCmWYM6j' : 'price_1I8pChC2yPQt7QIdSvx88QFs'
-  }
+import { stripe, productPrices} from './config.js'
+
+export default function () {
   const paymentButtons = document.querySelectorAll('button[purchase-product]')
   for (let i = 0; i < paymentButtons.length; i++) {
     let button = paymentButtons[i]
+    const product = button.getAttribute("purchase-product")
+    const productPrice = productPrices()[product]
+    if (!productPrice) continue
     button.addEventListener('click', function () {
       this.classList.add("loading")
-      const product = this.getAttribute("purchase-product")
       const productUrl = window.location.origin + "/" + product
       const successUrl = productUrl + "/purchase-complete"
       const errorUrl = productUrl + "/purchase-failed"
       stripe.redirectToCheckout({
         lineItems: [{
-          price: productPrices[product],
+          price: productPrice,
           quantity: 1
         }],
         mode: 'payment',
         successUrl: successUrl,
-        cancelUrl: productUrl,
+        cancelUrl: window.location.href,
       })
       .then(function (result) {
         if (result.error) {
@@ -34,5 +32,3 @@ const addPaymentButtonListeners = function() {
     })
   }
 }
-
-window.addEventListener('load', addPaymentButtonListeners)

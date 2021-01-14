@@ -1,15 +1,17 @@
 import Barba from 'barba.js'
-import banner from './close.js'
-import modal from './modal.js'
+import initialiseClose from './close.js'
+import initialiseModal from './modal.js'
+import initialisePurchaseButtons from './purchaseButtons.js'
 
 const body = document.body
 const TRANSITION_TIME = 450
 
 const PageTransition = Barba.BaseTransition.extend({
-  initialiseBannerAndModal: function () {
+  initialisePage: function () {
     body.classList.remove('modal-open')
-    banner()
-    modal()
+    initialiseClose()
+    initialiseModal()
+    initialisePurchaseButtons()
   },
 
   addTransitionOutClass: function (callback) {
@@ -39,7 +41,7 @@ const PageTransition = Barba.BaseTransition.extend({
       window.scrollTo(0, 0)
       promisedLoad.then(() => {
         this.done()
-        this.initialiseBannerAndModal()
+        this.initialisePage()
         this.addTransitionInClass()
         console.log('Page transition ended')
       })
@@ -49,7 +51,7 @@ const PageTransition = Barba.BaseTransition.extend({
 
 window.addEventListener('load', function () {
   PageTransition.addTransitionInClass()
-  PageTransition.initialiseBannerAndModal()
+  PageTransition.initialisePage()
 })
 
 Barba.Pjax.originalPreventCheck = Barba.Pjax.preventCheck
