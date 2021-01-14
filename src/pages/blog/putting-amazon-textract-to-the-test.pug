@@ -28,11 +28,11 @@ block pageComponents
 
           .blog-post
 
-            p.blog-post__intro <a href="https://aws.amazon.com/textract/" rel="noopener" target="_blank">Amazon Textract</a> extracts text and structured data from scanned or photographed documents, but how reliably can it be used for business process automation? We put it to the test.
+            p.blog-post__intro <a class="subtle" href="https://aws.amazon.com/textract/" rel="noopener" target="_blank">Amazon Textract</a> extracts text and structured data from scanned or photographed documents, but how reliably can it be used for business process automation? We put it to the test.
 
             p.blog-post__text We chose a small range of different document types for our tests; a payslip, an invoice, and a passport.
 
-            p.blog-post__text Each document represents a different mix of data structures, ensuring we're not just checking <a href="https://en.wikipedia.org/wiki/Optical_character_recognition" rel="noopener" target="_blank">Optical Character Recognition (OCR)</a>, but seeing how well Textract can extract labelled values, and full tables of structured information.
+            p.blog-post__text Each document represents a different mix of data structures, ensuring we're not just checking <a class="subtle" href="https://en.wikipedia.org/wiki/Optical_character_recognition" rel="noopener" target="_blank">Optical Character Recognition (OCR)</a>, but seeing how well Textract can extract labelled values, and full tables of structured information.
 
             p.blog-post__text In the case of the passport, we've also used a photo instead of a scan to see how well Textract handles lower quality documents.
 
@@ -74,10 +74,20 @@ block pageComponents
 
             p.blog-post__text Despite the challenge, Textract again did a very good job of extracting information from the passport. Even where the text was small and unclear, it was able to successfully associate labels and values for the most part. It did, however, struggle to correctly parse some of the labels:
 
-            ul.styled-list
-              li.styled-list__item "Date of birth" was incorrectly extracted as "Date or hinthe".
-              li.styled-list__item "Sex" incorrectly was incorrectly extracted as "Sew".
-              li.styled-list__item "Nationality" was incorrectly extracted as "Natioality".
+            +bullet({
+              itemModifier: "padded",
+              items: [
+                {
+                  item: '"Date of birth" was incorrectly extracted as "Date or hinthe".'
+                },
+                {
+                  item: '"Sex" incorrectly was incorrectly extracted as "Sew".'
+                },
+                {
+                  item: '"Nationality" was incorrectly extracted as "Natioality".'
+                }
+              ]
+            })
 
             p.blog-post__text Textract also struggled to correctly associate some labels with values. For example, "Date of birth" was not correctly matched to “6 JAN/JAN 55”.
 
@@ -107,13 +117,29 @@ block pageComponents
 
             p.blog-post__text Textract can be integrated into a wide variety of application types — consumer facing websites, business applications, scripted tasks, mobile apps, and web services can all benefit. Typical use cases for Textract include:
 
-            ul.styled-list
-              li.styled-list__item Importing documents and forms into business applications.
-              li.styled-list__item Making documents searchable.
-              li.styled-list__item Building automated document processing workflows.
-              li.styled-list__item Maintaining compliance in document archives.
-              li.styled-list__item Extracting text for Natural Language Processing (NLP).
-              li.styled-list__item Automated document classification.
+            +bullet({
+              itemModifier: "padded",
+              items: [
+                {
+                  item: 'Importing documents and forms into business applications.'
+                },
+                {
+                  item: 'Making documents searchable.'
+                },
+                {
+                  item: 'Building automated document processing workflows.'
+                },
+                {
+                  item: 'Maintaining compliance in document archives.'
+                },
+                {
+                  item: 'Extracting text for Natural Language Processing (NLP).'
+                },
+                {
+                  item: 'Automated document classification.'
+                }
+              ]
+            })
 
             +permalink({
               heading: "Benefits to your business"
@@ -121,7 +147,7 @@ block pageComponents
 
             p.blog-post__text If your staff spend a lot of time on manual document processing work, Textract can be used to deliver huge savings, free up your staff to do more valuable work, ensure you're able to process workloads 24/7, and improve the overall efficiency of your business processes.
 
-            p.blog-post__text At Leaf, we specialise in using services like Textract to build digital products & services that automate business. If you want to understand more about how Textract could help you to increase efficiency, productivity, and reliability, don't hesitate to <a href="mailto:enquiries@weareleaf.com" refl="noopener" target="_blank">get in touch</a>.
+            p.blog-post__text At Leaf, we specialise in using services like Textract to build digital products & services that automate business. If you want to understand more about how Textract could help you to increase efficiency, productivity, and reliability, don't hesitate to <a class="subtle" href="mailto:enquiries@weareleaf.com" refl="noopener" target="_blank">get in touch</a>.
 
   section.section.section--lg-spacing
     .container

@@ -1,0 +1,27 @@
+extends ../../layouts/content.pug
+
+block prepend vars
+  -var pageTitle = "Connection Failed | Specialist Data Capture Experts | Leaf"
+  -var metaUrl = "https://weareleaf.com/analysis/purchase-failed"
+  -var metaTitle = "Connection Failed"
+  -var metaDescription = "There’s been an issue connecting you to our checkout services. Please try again using the link below, and if the issue persists, then feel free to get in touch with us to complete your order through email instead."
+
+  -var heroHeading = "Oh no! We couldn't connect you"
+  -var heroSubheading = "There’s been an issue connecting you to our checkout services. Please try again using the link below, and if the issue persists, then feel free to <a class='subtle' href='mailto:enquiries+analysis-report@weareleaf.com?subject=Purchase Failed' refl='noopener' target='_blank'>get in touch with us</a> to complete your order through email instead."
+
+  -var footerType = "minimal"
+  -var stripeRequired = true
+
+block pageComponents
+  +hero({
+    heading: heroHeading,
+    subheading: heroSubheading,
+    introButton: true,
+    button: {
+      attributes: {
+        'purchase-product': "analysis"
+      },
+      modifier: "analysis",
+      text: "Try again"
+    }
+  })

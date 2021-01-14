@@ -1,0 +1,52 @@
+mixin banner(c)
+  section.section
+    if checkoutBanner === true
+      .banner.banner--checkout
+        .banner__call-to-action
+          .banner__shape.banner__shape--1
+          h2.banner__heading How do I get started?
+          p.banner__intro Use the link below to purchase your report, and we’ll contact you within two working days to arrange a call.
+          .banner__button.banner__button--checkout
+            +button({
+              attributes: {
+                'purchase-product': "analysis"
+              },
+              modifier: "large-inverted",
+              text: "Buy your report for £749"
+            })
+          +banks({})
+        .banner__refund-info
+          .banner__shape.banner__shape--3
+          h2.banner__heading.banner__heading--secondary What if I’m not happy?
+          p.banner__intro We’ll offer you a full refund if you feel the report isn’t delivering on it’s promise.
+          p.banner__text We want to make sure we're providing <strong class='checkmark-list-emphasised'>real value</strong> to your business, and improving your chances of success. If you're not satisfied with the report we produce for you, just let us know during the final call and and we'll make sure you receive a full refund.
+    else
+      .banner
+        .banner__opening
+          .banner__shape.banner__shape--1
+          h2.banner__heading Improve your product with our analysis report#[span.banner__heading__period .]
+          p.banner__intro For just <strong>£749</strong>, we'll help you identify opportunities to improve how you capture information from your customers, and increase your chances of success.
+          .banner__button
+            +button({
+              modifier: "large-inverted",
+              url: "/analysis",
+              text: "Find out more"
+            })
+        .banner__key-points
+          .banner__shape.banner__shape--2
+          +checkmark-list({
+            checkmarkList: [
+              {
+                text: "Find where your website's <strong class='checkmark-list-emphasised'>loading times</strong> can be improved, and help reduce the risk of user abandonment."
+              },
+              {
+                text: "Identify <strong class='checkmark-list-emphasised'>accessibility issues</strong> in your website, helping you cater for the largest pool of potential customers."
+              },
+              {
+                text: "Ensure <strong class='checkmark-list-emphasised'>your content</strong> is appropriate for your audience, and is effectively guiding users through their tasks."
+              },
+              {
+                text: "Make it easier for your customers to <strong class='checkmark-list-emphasised'>serve themselves</strong>, and provide you with high quality information."
+              }
+            ]
+          })

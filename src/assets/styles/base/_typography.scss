@@ -1,16 +1,23 @@
-h1, .h1,
-h2, .h2,
-h3, .h3,
-h4, .h4,
-h5, .h5,
-h6, .h6 {
+h1,
+.h1,
+h2,
+.h2,
+h3,
+.h3,
+h4,
+.h4,
+h5,
+.h5,
+h6,
+.h6 {
   color: var(--color-heading);
-  font-weight: $font-weight-heading;
+  font-weight: $font-weight-bold;
   line-height: $heading-line-height;
   margin-top: 0;
 }
 
-h1, .h1 {
+h1,
+.h1 {
   font-size: $font-size-h1;
   margin-bottom: $spacing-4;
 
@@ -20,7 +27,8 @@ h1, .h1 {
   }
 }
 
-h2, .h2 {
+h2,
+.h2 {
   font-size: $font-size-h2;
   margin-bottom: $spacing-4;
 
@@ -33,12 +41,14 @@ h2, .h2 {
   }
 }
 
-h3, .h3 {
+h3,
+.h3 {
   font-size: $font-size-h3;
   margin-bottom: $spacing-2;
 }
 
-h4, .h4 {
+h4,
+.h4 {
   font-size: $font-size-h4;
   margin-bottom: $spacing-3;
 
@@ -47,7 +57,8 @@ h4, .h4 {
   }
 }
 
-h5, .h5 {
+h5,
+.h5 {
   font-size: $font-size-h5;
   margin-bottom: $spacing-3;
 
@@ -56,7 +67,8 @@ h5, .h5 {
   }
 }
 
-h6, .h6 {
+h6,
+.h6 {
   margin-bottom: 0;
 }
 
@@ -73,8 +85,18 @@ a {
   @include hover {
     text-decoration: line-through;
   }
-}
 
+  &.subtle {
+    color: inherit;
+    text-decoration: underline;
+    text-decoration-color: var(--color-accent);
+
+    @include hover {
+      color: var(--color-accent);
+      text-decoration-color: var(--color-paragraph);
+    }
+  }
+}
 
 figure {
   margin: 0;
@@ -89,9 +111,8 @@ figure {
 }
 
 .figure--wide {
-
   @media screen and (min-width: map-get($breakpoints, 'breakpoint-3')) {
-    @include margin-horizontal (-$spacing-9);
+    @include margin-horizontal(-$spacing-9);
   }
 }
 
@@ -124,52 +145,6 @@ img {
   list-style: none;
   margin: 0;
   padding: 0;
-}
-
-.styled-list {
-  list-style: none;
-  margin: 0 0 $spacing-7;
-  padding: 0;
-
-  .sidebar & {
-    margin-bottom: 0; //- Debt here! A quick way to get rid of an accidental margin.
-  }
-
-  &__item {
-    font-size: $font-size-sm;
-    padding-left: #{$spacing-4 + .3rem};
-    position: relative;
-
-    &:not(:last-child) {
-      margin-bottom: $spacing-2;
-    }
-
-    .blog-post & {
-      font-size: 1.05rem; //- More debt here! A quick matching of larger, customer font-size on blog posts.
-      padding-left: #{$spacing-7 + .4rem};
-    }
-
-    &::before {
-      background-color: var(--color-accent);
-      content: '';
-      display: block;
-      height: .3rem;
-      left: 0;
-      position: absolute;
-      top: .3rem;
-      width: .3rem;
-
-      @media screen and (min-width: map-get($breakpoints, 'breakpoint-4')) {
-        top: .5rem;
-      }
-
-      .blog-post & {
-        height: .4rem;
-        left: $spacing-5;
-        width: .4rem;
-      }
-    }
-  }
 }
 
 ::selection {
@@ -234,12 +209,12 @@ blockquote.blog-blockquote {
     width: 100%;
 
     &::before {
-      color: rgba($color-amethyst, .1);
+      color: rgba($color-amethyst, 0.1);
       content: open-quote;
       font-family: $font-family-sans-serif;
       font-size: 10rem;
       font-weight: 700;
-      line-height: .9;
+      line-height: 0.9;
       left: -$spacing-4;
       position: absolute;
       top: $spacing-4;
@@ -280,13 +255,16 @@ blockquote.blog-blockquote {
 }
 
 .biography {
-
   &__meta {
     color: hsl(231, 84%, 83%);
     font-family: $font-family-sans-serif-extrabold;
-    font-size: .7rem;
-    letter-spacing: .1rem;
+    font-size: 0.7rem;
+    letter-spacing: 0.1rem;
     margin-bottom: $spacing-2;
     text-transform: uppercase;
   }
+}
+
+.checkmark-list-emphasised {
+  color: var(--color-paragraph-bold);
 }

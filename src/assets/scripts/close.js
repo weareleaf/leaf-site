@@ -6,6 +6,8 @@ export default function () {
       headerButton.href = '/blog'
     } else if (pathname.match(/careers/)) {
       headerButton.href = '/careers'
+    }  else if (pathname.match(/purchase/)) {
+      headerButton.href = pathname.split("/purchase")[0]
     } else {
       headerButton.href = '/case-studies'
     }

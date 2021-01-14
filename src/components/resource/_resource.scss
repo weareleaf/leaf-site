@@ -58,7 +58,7 @@
   }
 
   &__badge {
-    background-color: #5F42F0;
+    background-color: lighten($color-indigo, 10%);
     border-radius: $border-radius-xs;
     margin-left: $spacing-3;
     padding: .2rem .2rem .05rem;

@@ -11,6 +11,8 @@ html.no-js(lang="en-GB")
       j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
       'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
       })(window,document,'script','dataLayer','GTM-TG99MGS');
+    if stripeRequired || checkoutBanner
+      script(src="https://js.stripe.com/v3")
 
 
     meta(charset="utf-8")

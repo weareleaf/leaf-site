@@ -1,9 +1,9 @@
 mixin explanation(c)
   .explanation(class= c.modifier ? "explanation--" + c.modifier : "")
-    if c.example === true
-      img.explanation__icon(src="/assets/images/icons/ui/info.svg", alt="", role="presentation")
-      h3.explanation__heading !{c.heading}
-    else
-      img.explanation__icon(src="/assets/images/icons/ui/question.svg", alt="", role="presentation")
-      h3.explanation__heading !{c.heading}
+    -var iconName = c.iconName || "question"
+    if c.iconModifier
+      -iconName = iconName + "--" + c.iconModifier
+
+    img.explanation__icon(src="/assets/images/icons/ui/" + iconName + ".svg", alt="", role="presentation")
+    h3.explanation__heading !{c.heading}
     p.explanation__text !{c.text}

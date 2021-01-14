@@ -1,0 +1,33 @@
+.checkmark-list {
+  &__items {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  &__item {
+    position: relative;
+
+    &:not(:last-child) {
+      margin-bottom: $spacing-7;
+    }
+  }
+
+  &__icon {
+    align-items: center;
+    background-color: var(--color-checkmark-background);
+    border-radius: $border-radius-full;
+    display: flex;
+    height: $size-4;
+    justify-content: center;
+    position: absolute;
+    width: $size-4;
+  }
+
+  &__text {
+    color: var(--color-text);
+    margin: 0;
+    padding-left: $spacing-8;
+    padding-top: 0;
+  }
+}

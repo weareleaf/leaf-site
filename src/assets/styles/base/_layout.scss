@@ -35,9 +35,104 @@ main {
   }
 
   &--lg-spacing {
-
     @media screen and (min-width: map-get($breakpoints, 'breakpoint-4')) {
       margin-bottom: $spacing-11;
+    }
+  }
+}
+
+// Centred sections
+
+.centered-content {
+  padding: $spacing-10 0;
+  position: relative;
+
+  @media screen and (min-width: map-get($breakpoints, 'breakpoint-1')) {
+    padding: $spacing-11 $spacing-9;
+  }
+
+  @media screen and (min-width: map-get($breakpoints, 'breakpoint-3')) {
+    padding: $spacing-11;
+  }
+
+  @media screen and (min-width: map-get($breakpoints, 'breakpoint-4')) {
+    padding: $spacing-13;
+  }
+
+  .bg-shapes {
+    display: none;
+
+    @media screen and (min-width: map-get($breakpoints, 'breakpoint-4')) {
+      display: block;
+      height: 100%;
+      left: 0;
+      position: absolute;
+      overflow: hidden;
+      top: 0;
+      width: 100%;
+    }
+
+    .bg-shape {
+      max-width: 47%;
+      position: absolute;
+
+      &--1 {
+        right: -5rem;
+        top: -15rem;
+      }
+
+      &--2 {
+        bottom: -15rem;
+        left: -5rem;
+        transform: rotate(180deg);
+      }
+    }
+  }
+
+  &--hx {
+    background-color: $hx-studio;
+    margin-bottom: 5rem;
+    margin-top: -7rem;
+    z-index: z('below');
+
+    @media screen and (min-width: map-get($breakpoints, 'breakpoint-1')) {
+      margin-bottom: 5rem;
+      margin-top: -9rem;
+    }
+
+    @media screen and (min-width: map-get($breakpoints, 'breakpoint-3')) {
+      margin-bottom: 7rem;
+    }
+
+    @media screen and (min-width: map-get($breakpoints, 'breakpoint-4')) {
+      margin-bottom: $spacing-14;
+      margin-top: -9rem;
+    }
+
+    @media screen and (min-width: map-get($breakpoints, 'breakpoint-11')) {
+      margin-bottom: $spacing-15;
+      margin-top: -$spacing-13;
+    }
+  }
+
+  &--no-pad {
+    margin-bottom: $spacing-3;
+    margin-top: $spacing-9;
+    padding: 0;
+
+    @media screen and (min-width: map-get($breakpoints, 'breakpoint-1')) {
+      margin-top: $spacing-10;
+      padding: 0 $spacing-9;
+    }
+
+    @media screen and (min-width: map-get($breakpoints, 'breakpoint-3')) {
+      padding: 0 $spacing-11;
+    }
+
+    @media screen and (min-width: map-get($breakpoints, 'breakpoint-4')) {
+      margin-bottom: 0;
+      margin-top: 0;
+      padding: 0;
     }
   }
 }
@@ -46,7 +141,7 @@ main {
 
 .company {
   margin: auto;
-  max-width: 40rem;
+  max-width: $size-12;
 
   @media screen and (min-width: map-get($breakpoints, 'breakpoint-4')) {
     max-width: unset;
@@ -71,7 +166,6 @@ main {
     }
 
     .explanation {
-
       @media screen and (min-width: map-get($breakpoints, 'breakpoint-4')) {
         margin-top: 10%;
         position: absolute;
@@ -83,9 +177,7 @@ main {
 // Company page images
 
 .company-map {
-
   &__media {
-
     &--mobile-map {
       display: block;
       margin-right: -$spacing-13;
@@ -105,7 +197,7 @@ main {
       margin-top: 0;
       position: absolute;
       transform: translateY(-50%);
-  
+
       @media screen and (min-width: map-get($breakpoints, 'breakpoint-11')) {
         display: block;
         left: -$spacing-7;
@@ -124,7 +216,7 @@ main {
         transform: translateY(-50%);
         width: 55rem;
       }
-  
+
       @media screen and (min-width: map-get($breakpoints, 'breakpoint-11')) {
         display: none;
       }
@@ -133,7 +225,6 @@ main {
 }
 
 .team {
-
   &__bench-profiles {
     @media screen and (min-width: map-get($breakpoints, 'breakpoint-1')) {
       display: grid;
@@ -143,6 +234,81 @@ main {
 
     @media screen and (min-width: map-get($breakpoints, 'breakpoint-4')) {
       display: block;
+    }
+  }
+}
+
+.analysis {
+  &__image {
+    margin: $spacing-6 0;
+
+    @media screen and (min-width: map-get($breakpoints, 'breakpoint-4')) {
+      max-width: 120%;
+      transform: translateX(-11.5%); // Aligns to container
+    }
+  }
+
+  &__how-it-works {
+    margin-bottom: -$spacing-9;
+
+    @media screen and (min-width: map-get($breakpoints, 'breakpoint-3')) {
+      margin-bottom: 0;
+      margin-top: 10rem;
+    }
+
+    @media screen and (min-width: map-get($breakpoints, 'breakpoint-4')) {
+      margin-top: 0;
+    }
+
+    &::before {
+      border: $border-style $size-2 $color-indigo;
+      border-radius: $border-radius-full;
+      bottom: -$spacing-8;
+      content: '';
+      display: none;
+      height: $size-9;
+      left: 0;
+      position: absolute;
+      width: $size-9;
+
+      @media screen and (min-width: map-get($breakpoints, 'breakpoint-10')) {
+        display: block;
+        left: -22%;
+      }
+
+      @media screen and (min-width: map-get($breakpoints, 'breakpoint-13')) {
+        left: -32%;
+      }
+    }
+
+    &::after {
+      border: $border-style $size-2 $color-indigo;
+      border-radius: $border-radius-full;
+      content: '';
+      display: none;
+      height: $size-10;
+      position: absolute;
+      top: $spacing-9;
+      width: $size-10;
+
+      @media screen and (min-width: map-get($breakpoints, 'breakpoint-10')) {
+        display: block;
+        right: -34%;
+      }
+
+      @media screen and (min-width: map-get($breakpoints, 'breakpoint-13')) {
+        right: -40%;
+      }
+    }
+  }
+
+  &__how-it-works-opening {
+    margin: $spacing-10 auto $spacing-7;
+    max-width: $size-12;
+
+    @media screen and (min-width: map-get($breakpoints, 'breakpoint-4')) {
+      margin: $spacing-13 auto 4.5rem;
+      max-width: 29rem;
     }
   }
 }

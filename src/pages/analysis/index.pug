@@ -1,0 +1,81 @@
+extends ../../layouts/page.pug
+
+block prepend vars
+  -var pageTitle = "Easy product strategy | Specialist Data Capture Experts | Leaf"
+  -var metaUrl = "https://weareleaf.com/analysis"
+  -var metaTitle = "Easy product strategy. Get a bespoke analysis report for your digital product or service."
+  -var metaDescription = "For just £749, we'll produce a tailored report containing five recommendations to help improve the way you capture information from your customers."
+
+  -var heroHeading = "Easy product strategy"
+  -var heroSubheading = "For just £749, we'll produce a tailored report containing five recommendations to help improve the way you capture information from your customers."
+
+  -var checkoutBanner = true
+  -var footerType = "analysis"
+
+block pageComponents
+  +hero({
+    heading: heroHeading,
+    subheading: heroSubheading,
+    subheadingModifier: "narrow",
+    introButton: true,
+    button: {
+      attributes: {
+        'purchase-product': "analysis"
+      },
+      modifier: "analysis",
+      text: "Buy your report for £749"
+    }
+  })
+
+  section.section
+    .container
+      .grid.grid--analysis
+        figure.analysis
+          img.analysis__image(src="/assets/images/analysis/ui-suggestions.png" alt="There are two examples of the types of things we look for in your product. The first example shows an example of an autocomplete address finder, which is great for helping user find an address quickly. The second example shows how using a full label on your form inputs can remove any confusion about the information required.")
+        .analysis__content
+          h2.content-block__heading.content-block__heading--analysis What you&apos;ll get
+          p.content__intro.content__intro--analysis A detailed report showing how you can get the most value from your product through improved performance, accessibility, and content.
+          p.content__text.content__text--analysis The report will focus on the most valuable areas of your product, and each recommendation will be tailored to suit your resource and product goals. We aren’t diving into any code at this stage, but simply viewing your product through the eyes of the user to see what can be improved.
+          +explanation({
+            iconName: "info",
+            heading: "We keep it simple",
+            text: "Each suggestion will be communicated in a jargon-free way so that it can be easily understood by everyone at your company.",
+            modifier: "single"
+          })
+  section.section
+    .container
+      .analysis__how-it-works
+        .analysis__how-it-works-opening
+          h2.content-block__heading.content-block__heading--center How it works
+          p.content__intro.content__intro--center We aim to have the report completed within two weeks, and we’ll be sure to keep you updated so that you don’t have to worry about chasing for an update yourself.
+          +button({
+            attributes: {
+              'purchase-product': "analysis"
+            },
+            modifier: "analysis",
+            text: "Buy your report for £749"
+          })
+        +numbered-steps({
+          numberedSteps: [
+            {
+              number: "1",
+              heading: "Initial call",
+              text: "We’ll schedule an initial 1 hour call, where we'll answer any questions you have as well as get to know your product and the areas you want to improve."
+            },
+            {
+              number: "2",
+              heading: "The analysis",
+              text: "We’ll analyse your product or service in detail, and look for opprtunities to improve conversions and the way you capture information from your customers."
+            },
+            {
+              number: "3",
+              heading: "Your report",
+              text: "We’ll produce a detailed report explaining five changes you should make to your product, and how those changes will deliver value to your organisation."
+            },
+            {
+              number: "4",
+              heading: "Wrapping up",
+              text: "We’ll schedule a second 1 hour call to run through the report with you, and ensure you’re happy with the results and confident on your next steps."
+            }
+          ]
+        })

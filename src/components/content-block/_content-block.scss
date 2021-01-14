@@ -61,7 +61,7 @@
       display: none;
 
       @media screen and (min-width: map-get($breakpoints, 'breakpoint-4')) {
-        box-shadow: 0 0 0 .6rem var(--color-background);
+        box-shadow: 0 0 0 0.6rem var(--color-background);
         display: block;
         right: 1.25rem;
         top: $spacing-13;
@@ -111,24 +111,24 @@
       @media screen and (min-width: map-get($breakpoints, 'breakpoint-4')) {
         max-width: 80%;
         right: $spacing-7;
-      } 
+      }
 
       @media screen and (min-width: map-get($breakpoints, 'breakpoint-11')) {
         max-width: 100%;
         right: $spacing-5;
         top: -5.5rem;
-      }  
+      }
     }
 
     &--hx-image-9 {
-      display: none; 
-      
+      display: none;
+
       @media screen and (min-width: map-get($breakpoints, 'breakpoint-4')) {
         display: block;
         max-width: 96%;
         right: 0;
         top: -5rem;
-      } 
+      }
     }
 
     &--hx-image-10 {
@@ -168,7 +168,7 @@
 
     &--hx-image-12 {
       display: block;
-      margin: -$spacing-8 auto -.5rem auto;
+      margin: -$spacing-8 auto -0.5rem auto;
 
       @media screen and (min-width: map-get($breakpoints, 'breakpoint-1')) {
         max-width: 60%;
@@ -193,7 +193,7 @@
       }
 
       @media screen and (min-width: map-get($breakpoints, 'breakpoint-3')) {
-        margin: -$spacing-6 auto -.5rem auto;
+        margin: -$spacing-6 auto -0.5rem auto;
       }
 
       @media screen and (min-width: map-get($breakpoints, 'breakpoint-4')) {
@@ -239,15 +239,22 @@
 
   &__heading {
     color: var(--color-heading-2);
-    font-size: $font-size-h2;
+    font-size: $font-size-lg;
     margin-bottom: $spacing-6;
 
-    @media screen and (min-width: map-get($breakpoints, 'breakpoint-3')) {
+    @media screen and (min-width: map-get($breakpoints, 'breakpoint-4')) {
       font-size: $font-size-xl;
+      margin-bottom: $spacing-8;
     }
 
-    @media screen and (min-width: map-get($breakpoints, 'breakpoint-4')) {
-      margin-bottom: $spacing-8;
+    &--analysis,
+    &--center {
+      color: var(--color-heading);
+      margin-bottom: $spacing-5;
+    }
+
+    &--center {
+      text-align: center;
     }
   }
 }

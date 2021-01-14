@@ -46,15 +46,6 @@
   &__contact {
     display: none;
 
-    .page--landing & {
-      display: block;
-
-      .nav__link {
-        display: table;
-        margin-left: auto;
-      }
-    }
-
     @media screen and (min-width: map-get($breakpoints, 'breakpoint-1')) {
       display: block;
       margin-right: -$spacing-5; // Offet position by .nav__list padding
