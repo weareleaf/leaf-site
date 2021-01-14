@@ -26,7 +26,7 @@ export default function () {
           window.location = errorUrl
         }
       })
-      .catch(function () {
+      .catch(function (error) {
         window.location = errorUrl
       })
     })
