@@ -23,10 +23,12 @@ export default function () {
       })
       .then(function (result) {
         if (result.error) {
+          console.error(result.error)
           window.location = errorUrl
         }
       })
       .catch(function (error) {
+        console.error(error)
         window.location = errorUrl
       })
     })
