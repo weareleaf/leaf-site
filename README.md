@@ -1,38 +1,46 @@
+<img align="right" src="docs/images/leaf.png" height=100 alt="Leaf" />
+
 # Leaf Website
 
-This is Leaf's static site build. It uses [Pug](https://pugjs.org/api/getting-started.html) for the templating, [npm](https://www.npmjs.com/) for client side dependencies, [Sass](https://sass-lang.com/) for styling and [Webpack](https://webpack.js.org) for the build.
+This is the repository for the [Leaf website](https://weareleaf.com). Built using [Pug](https://pugjs.org/api/getting-started.html) and [Sass](https://sass-lang.com), in a custom [Webpack](https://webpack.js.org) setup containerised in [Docker](https://www.docker.com) for ease of development.
 
-## Initial Setup
+<img src="docs/images/clear.png" width="100%" height="1" />
+<img align="left" src="docs/images/pug.svg" height=100 alt="Pug" />
+<img align="left" src="docs/images/sass.png" height=100 alt="Sass" />
+<img align="left" src="docs/images/node.png" height=100 alt="Node.js" />
+<img align="left" src="docs/images/webpack.png" height=100 alt="Webpack" />
+<img align="left" src="docs/images/docker.png" height=100 alt="Docker" />
+<img src="docs/images/clear.png" width="100%" height="1" />
 
-First, install [Homebrew](https://brew.sh) and use it to set up [NVM](https://github.com/creationix/nvm) (Node Version Manager):
+## Working with the repository
 
-```
-brew install nvm
-```
+### Initial setup
 
-Then, install the required version of node and install the dependencies for the project:
+1. Install [Docker Desktop](https://www.docker.com/products/docker-desktop).
+2. Open your terminal, navigate to your project directory in your command line, and run `docker-compose up --build`.
 
-```
-nvm install 10.20.1
-nvm use
-npm install
-```
+This will build the development environment inside a Docker container, and start a development server viewable at `http://localhost:3000`. Once this is built and running, the server should appear inside the docker application GUI.
 
-## Usage
+While your development server is running, you can change files in `./src` and view the changes in your browser in realtime. However, changing files outside of `./src` or adding new files to `./src` will require you to rebuild your development server. You can do this by stopping your development server, and then running `docker-compose up --build` to start it again, rebuilding it from scratch in the process.
 
-- Run `npm run start` run the development server
-- Run `npm run build:jpgs` to create jpg copies of all png images on the site with a `#3d18c3` background colour.
-- Run `npm run deploy` to build a production ready version of the site and deploy it to https://weareleaf.com
+### Available commands
 
-## Development Notes
+These commands are available from your terminal:
+
+- `docker-compose up`: Start the development server (you can omit the `--build` flag used on initial setup on subsequent runs).
+- `docker-compose exec web npm run build:jpgs`: Create jpg copies of all png images on the site with a `#3d18c3` background colour.
+- `docker-compose exec web npm run deploy`: Build a production ready version of the site and deploy it to https://weareleaf.com
+
+## Development
+
+### Useful info
 
 - Once started, the development server should be viewable at http://localhost:3000.
-- Changes to Pug and JavaScript files should automatically reload the page.
-- Changes to SCSS will not automatically reload the page.
+- Changes to Pug, JavaScript and SCSS files should automatically reload the page.
 - When you add new files, you'll need to restart the development server for them to be picked up.
 - If you want to change the background colour of generated jpg images, update the value in `scripts/png-convert.js`.
 
-## Adding blog posts
+### Adding blog posts
 
 1.  Copy the existing blog post `src/pages/blog/goals-matter` to a new file. Choose a sensible name with dash-separated words, as this will form the URL of your post.
 2.  Start or restart the development server so that it picks up the new file.
