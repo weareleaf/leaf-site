@@ -90,7 +90,7 @@ $grid-columns-post: 2.5rem 1fr 2.5rem;
   }
 
   &--profiles {
-    grid-gap: $spacing-7;
+    grid-gap: $spacing-6;
     grid-template-columns: repeat(2, 1fr);
 
     @media screen and (min-width: map-get($breakpoints, 'breakpoint-1')) {
