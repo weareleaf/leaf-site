@@ -6,7 +6,7 @@
   padding: $spacing-9 $spacing-6;
   position: relative;
 
-  @media screen and (min-width: map-get($breakpoints, 'breakpoint-3')) {
+  @media screen and (min-width: map-get($breakpoints, 'breakpoint-4')) {
     @include two-col-grid;
     align-items: center;
     grid-gap: $spacing-6;
@@ -76,14 +76,17 @@
     margin-bottom: $spacing-8;
     padding: $spacing-6;
 
-    @media screen and (min-width: map-get($breakpoints, 'breakpoint-1')) {
-      padding: $spacing-7;
-    }
-
     @media screen and (min-width: map-get($breakpoints, 'breakpoint-3')) {
       background: none;
+      grid-area: 2 / span 2;
       margin-bottom: 0;
+      margin-top: $spacing-6;
       padding: 0;
+    }
+
+    @media screen and (min-width: map-get($breakpoints, 'breakpoint-4')) {
+      grid-area: auto;
+      margin-top: 0;
     }
   }
 
@@ -129,8 +132,16 @@
 
     @media screen and (min-width: map-get($breakpoints, 'breakpoint-3')) {
       bottom: 0;
+      left: auto;
       padding: 0;
+      right: $spacing-6;
+      top: $spacing-9;
+    }
+
+    @media screen and (min-width: map-get($breakpoints, 'breakpoint-4')) {
       position: relative;
+      right: auto;
+      top: auto;
     }
 
     &--checkout {

@@ -141,7 +141,7 @@ main {
 
 .company {
   margin: auto;
-  max-width: $size-12;
+  max-width: $size-11;
 
   @media screen and (min-width: map-get($breakpoints, 'breakpoint-4')) {
     max-width: unset;

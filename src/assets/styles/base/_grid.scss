@@ -34,6 +34,22 @@ $grid-columns-post: 2.5rem 1fr 2.5rem;
     grid-column-gap: $spacing-10;
   }
 
+  &__item {
+    &--blog-preview {
+      &:last-child:nth-child(4) {
+        display: none;
+
+        @media screen and (min-width: map-get($breakpoints, 'breakpoint-2')) {
+          display: block;
+        }
+
+        @media screen and (min-width: map-get($breakpoints, 'breakpoint-4')) {
+          display: none;
+        }
+      }
+    }
+  }
+
   &--post {
     @media screen and (min-width: map-get($breakpoints, 'breakpoint-4')) {
       grid-template-columns: 2.5rem 1fr 2.5rem;

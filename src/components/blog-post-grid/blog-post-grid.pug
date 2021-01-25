@@ -152,7 +152,7 @@
 mixin blog-post-grid(preview=true)
  .grid.grid--blog()
     if preview
-      each index in [0,1,2]
+      each index in [0,1,2,3]
         +blog-post-grid-item(blogPosts[index])
     else
       each post in blogPosts
