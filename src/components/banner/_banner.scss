@@ -1,7 +1,7 @@
 .banner {
   background: var(--color-banner-background);
   display: grid;
-  margin: $spacing-10 auto 0;
+  margin: $spacing-6 auto 0;
   overflow: hidden;
   padding: $spacing-9 $spacing-6;
   position: relative;
@@ -10,6 +10,7 @@
     @include two-col-grid;
     align-items: center;
     grid-gap: $spacing-6;
+    margin: $spacing-10 auto 0;
     padding: $spacing-8 $spacing-6;
   }
 

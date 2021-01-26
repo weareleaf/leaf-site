@@ -22,6 +22,12 @@ main {
     margin-bottom: $spacing-10;
 
     .page--company &:not(:last-child) {
+      margin-bottom: $spacing-10;
+    }
+  }
+
+  @media screen and (min-width: map-get($breakpoints, 'breakpoint-4')) {
+    .page--company &:not(:last-child) {
       margin-bottom: $spacing-13;
     }
   }
@@ -180,12 +186,9 @@ main {
   &__media {
     &--mobile-map {
       display: block;
-      margin-right: -$spacing-13;
+      margin-bottom: -$spacing-13;
+      margin-right: -30rem;
       margin-top: -$spacing-11;
-
-      @media screen and (min-width: map-get($breakpoints, 'breakpoint-1')) {
-        margin-right: 0;
-      }
 
       @media screen and (min-width: map-get($breakpoints, 'breakpoint-4')) {
         display: none;
