@@ -3,20 +3,11 @@
   margin-bottom: $spacing-9;
   width: 100%;
 
-  @media screen and (min-width: map-get($breakpoints, 'breakpoint-1')) {
-    padding: 0 $spacing-9;
-  }
-
-  @media screen and (min-width: map-get($breakpoints, 'breakpoint-3')) {
-    padding: 0 $spacing-11;
-  }
-
   @media screen and (min-width: map-get($breakpoints, 'breakpoint-4')) {
     @include two-col-grid;
     grid-gap: 5rem;
     margin-bottom: $spacing-10;
     min-height: $size-11;
-    padding: 0;
   }
 
   @media screen and (min-width: map-get($breakpoints, 'breakpoint-11')) {
@@ -57,6 +48,7 @@
     }
 
     // Holiday Extras Images
+
     &--hx-image-2 {
       display: none;
 
@@ -101,11 +93,11 @@
     }
 
     &--hx-image-7 {
-      margin: 0 auto 0 -1.25rem;
+      margin-left: -$spacing-5;
 
       @media screen and (min-width: map-get($breakpoints, 'breakpoint-1')) {
         margin: 0;
-        right: 1.75rem;
+        max-width: 90%;
       }
 
       @media screen and (min-width: map-get($breakpoints, 'breakpoint-4')) {
@@ -133,14 +125,10 @@
 
     &--hx-image-10 {
       display: block;
-      margin: -$spacing-8 auto -1.5rem auto;
-
-      @media screen and (min-width: map-get($breakpoints, 'breakpoint-1')) {
-        max-width: 60%;
-      }
+      margin: 0 auto;
 
       @media screen and (min-width: map-get($breakpoints, 'breakpoint-3')) {
-        margin: -$spacing-8 auto -3rem auto;
+        max-width: 80%;
       }
 
       @media screen and (min-width: map-get($breakpoints, 'breakpoint-4')) {
@@ -150,15 +138,10 @@
 
     &--hx-image-11 {
       display: block;
-      margin: -$spacing-8 auto -1rem auto;
-
-      @media screen and (min-width: map-get($breakpoints, 'breakpoint-1')) {
-        margin: -$spacing-7 auto -1rem auto;
-        max-width: 60%;
-      }
+      margin: 0 auto;
 
       @media screen and (min-width: map-get($breakpoints, 'breakpoint-3')) {
-        margin: -$spacing-7 auto -2rem auto;
+        max-width: 75%;
       }
 
       @media screen and (min-width: map-get($breakpoints, 'breakpoint-4')) {
@@ -168,14 +151,14 @@
 
     &--hx-image-12 {
       display: block;
-      margin: -$spacing-8 auto -0.5rem auto;
+      margin: 0 auto;
 
       @media screen and (min-width: map-get($breakpoints, 'breakpoint-1')) {
-        max-width: 60%;
+        max-width: 80%;
       }
 
       @media screen and (min-width: map-get($breakpoints, 'breakpoint-3')) {
-        margin: -$spacing-8 auto -1rem auto;
+        margin: -$spacing-8 auto -$spacing-5 auto;
       }
 
       @media screen and (min-width: map-get($breakpoints, 'breakpoint-4')) {
@@ -185,15 +168,11 @@
 
     &--hx-image-13 {
       display: block;
-      margin: -$spacing-8 auto -1rem auto;
+      margin: -$spacing-8 auto -$spacing-5 auto;
       max-width: 80%;
 
-      @media screen and (min-width: map-get($breakpoints, 'breakpoint-1')) {
-        max-width: 60%;
-      }
-
       @media screen and (min-width: map-get($breakpoints, 'breakpoint-3')) {
-        margin: -$spacing-6 auto -0.5rem auto;
+        margin: -$spacing-6 auto -$spacing-3 auto;
       }
 
       @media screen and (min-width: map-get($breakpoints, 'breakpoint-4')) {
@@ -217,11 +196,6 @@
     &--rift-11 {
       display: block;
       margin-top: -$spacing-7;
-
-      @media screen and (min-width: map-get($breakpoints, 'breakpoint-1')) {
-        margin: -$spacing-5 auto 0 auto;
-        max-width: 60%;
-      }
 
       @media screen and (min-width: map-get($breakpoints, 'breakpoint-4')) {
         display: none;
