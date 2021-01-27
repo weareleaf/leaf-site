@@ -94,7 +94,7 @@
       min-width: $size-12; // Min fixes Firefox width issue
 
       @media screen and (min-width: map-get($breakpoints, 'breakpoint-3')) {
-        min-width: 68rem;
+        min-width: $size-13;
       }
 
       @media screen and (min-width: map-get($breakpoints, 'breakpoint-11')) {

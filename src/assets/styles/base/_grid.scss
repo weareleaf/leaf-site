@@ -160,7 +160,7 @@ $grid-columns-post: 2.5rem 1fr 2.5rem;
 
   &--analysis {
     margin: 0 auto;
-    max-width: $size-12;
+    max-width: $size-11;
 
     @media screen and (min-width: map-get($breakpoints, 'breakpoint-4')) {
       align-items: center;

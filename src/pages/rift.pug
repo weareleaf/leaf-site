@@ -134,12 +134,13 @@ block pageComponents
           },
           imageModifier: "rift-3"
         })
-        +image({
-          context: "content-block",
-          src: "/assets/images/case-studies/rift/image-11.png",
-          alt: "A preview of the analytics dashboard we used to measure the sites performance.",
-          modifier: "rift-11"
-        })
+        .full-width
+          +image({
+            context: "full-width",
+            src: "/assets/images/case-studies/rift/image-11.png",
+            alt: "A preview of the analytics dashboard we used to measure the sites performance.",
+            modifier: "rift-11"
+          })
 
   section.section
     .container
@@ -153,13 +154,13 @@ block pageComponents
             }
           ]
         })
-      .full-width
-        +image({
-          context: "full-width",
-          src: "/assets/images/case-studies/rift/image-4.png",
-          alt: "A collection of wireframed form elements from the prototyping process. These elements consist of user information such as workplace locations, accomodation details and vehicle lookups.",
-          modifier: "rift-4"
-        })
+        .full-width
+          +image({
+            context: "full-width",
+            src: "/assets/images/case-studies/rift/image-4.png",
+            alt: "A collection of wireframed form elements from the prototyping process. These elements consist of user information such as workplace locations, accomodation details and vehicle lookups.",
+            modifier: "rift-4"
+          })
 
   section.section
     .rift-metrics
@@ -171,7 +172,7 @@ block pageComponents
           .rift-metrics__image
             figure.case-study-image.case-study-image--rift-5
               img(src="/assets/images/case-studies/rift/image-5.png" alt="A mobile screen showing one of the steps from the initial eligibility questionaire. Did you use your own vehicle or public transport to get to those workplaces?")
-          .rift.rift-metrics__content
+          .case-study.rift-metrics__content
             +content({
               heading: "Focus on the lowest hanging fruit",
               intro: "Historical data highlighted the registration processes as a key point of failure in converting prospective claimants.",

@@ -72,6 +72,11 @@
   padding: 0 $spacing-6;
 }
 
+@mixin content {
+  margin: 0 auto;
+  max-width: $size-11;
+}
+
 @mixin fix($side) {
   position: fixed;
 
@@ -123,7 +128,7 @@
 
 @mixin focus-ring($color: $focus-bg) {
   &:focus {
-    box-shadow: 0 0 0 .2rem $color;
+    box-shadow: 0 0 0 0.2rem $color;
     outline: none;
   }
 }
@@ -168,27 +173,26 @@
 }
 
 @mixin sr-only {
-	border: 0 !important;
-	clip: rect(1px, 1px, 1px, 1px) !important;
-	clip-path: inset(50%) !important;
-	height: 1px !important;
-	margin: -1px !important;
-	overflow: hidden !important;
-	padding: 0 !important;
-	position: absolute !important;
-	width: 1px !important;
-	white-space: nowrap !important;
+  border: 0 !important;
+  clip: rect(1px, 1px, 1px, 1px) !important;
+  clip-path: inset(50%) !important;
+  height: 1px !important;
+  margin: -1px !important;
+  overflow: hidden !important;
+  padding: 0 !important;
+  position: absolute !important;
+  width: 1px !important;
+  white-space: nowrap !important;
 }
 
 @mixin shadow-effect {
-  box-shadow: 0 .125rem .25rem 0 rgba($color-black, .025);
+  box-shadow: 0 0.125rem 0.25rem 0 rgba($color-black, 0.025);
   display: block;
-  transition:
-    box-shadow $duration-6 $timing-ease,
+  transition: box-shadow $duration-6 $timing-ease,
     transform $duration-2 $timing-ease;
 
   @include hover {
-    box-shadow: 0 .5rem 1rem 0 rgba($color-black, .075);
+    box-shadow: 0 0.5rem 1rem 0 rgba($color-black, 0.075);
     text-decoration: none;
     transform: scale(1.04);
   }

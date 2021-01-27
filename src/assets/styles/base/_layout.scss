@@ -146,8 +146,7 @@ main {
 // Company page layouts
 
 .company {
-  margin: auto;
-  max-width: $size-11;
+  @include content;
 
   @media screen and (min-width: map-get($breakpoints, 'breakpoint-4')) {
     max-width: unset;
@@ -307,7 +306,7 @@ main {
 
   &__how-it-works-opening {
     margin: $spacing-10 auto $spacing-7;
-    max-width: $size-12;
+    max-width: $size-11;
 
     @media screen and (min-width: map-get($breakpoints, 'breakpoint-4')) {
       margin: $spacing-13 auto 4.5rem;

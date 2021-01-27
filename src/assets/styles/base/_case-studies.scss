@@ -130,14 +130,22 @@
         display: none;
       }
     }
+
+    &--rift-11 {
+      margin-top: -$spacing-7;
+      min-width: 25rem;
+
+      @media screen and (min-width: map-get($breakpoints, 'breakpoint-4')) {
+        display: none;
+      }
+    }
   }
 }
 
 // Main layout
 
 .case-study {
-  margin: auto;
-  max-width: $size-11;
+  @include content;
 
   @media screen and (min-width: map-get($breakpoints, 'breakpoint-4')) {
     max-width: unset;
