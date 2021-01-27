@@ -3,9 +3,9 @@
   margin-top: $spacing-10;
 
   @media screen and (min-width: map-get($breakpoints, 'breakpoint-3')) {
+    align-items: center;
     display: flex;
-    justify-content: space-between;
-    margin-top: $spacing-13;
+    flex-direction: column;
   }
 
   &__image {
@@ -24,6 +24,7 @@
 
   &__text {
     font-size: $root-font-size-xl;
+    text-align: center;
 
     @media screen and (min-width: map-get($breakpoints, 'breakpoint-3')) {
       max-width: 60%;

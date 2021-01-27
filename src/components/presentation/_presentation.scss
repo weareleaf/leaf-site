@@ -6,17 +6,18 @@ $image-height: $size-11;
   grid-template-columns: 1fr;
   grid-row-gap: $spacing-7;
   margin-bottom: $spacing-9;
+  min-height: 20rem;
 
-  @media screen and (min-width: map-get($breakpoints, 'breakpoint-1')) {
-    grid-template-columns: 1fr 1fr;
+  @media screen and (min-width: map-get($breakpoints, 'breakpoint-3')) {
+    grid-template-columns: repeat(2, 1fr);
     grid-column-gap: $spacing-7;
     grid-row-gap: 0;
-    min-height: $image-height;
   }
 
-  @media screen and (min-width: map-get($breakpoints, 'breakpoint-6')) {
+  @media screen and (min-width: map-get($breakpoints, 'breakpoint-4')) {
     grid-column-gap: $spacing-10;
     margin-bottom: $spacing-10;
+    min-height: $image-height;
   }
 
   &:last-child {
@@ -24,20 +25,10 @@ $image-height: $size-11;
   }
 
   &__content {
-    @media screen and (min-width: map-get($breakpoints, 'breakpoint-1')) {
-      width: 60vw;
-    }
-
-    @media screen and (min-width: map-get($breakpoints, 'breakpoint-1')) {
-      align-self: center;
-    }
-
-    @media screen and (min-width: map-get($breakpoints, 'breakpoint-3')) {
-      width: auto;
-    }
+    align-self: center;
 
     .presentation--reverse & {
-      @media screen and (min-width: map-get($breakpoints, 'breakpoint-1')) {
+      @media screen and (min-width: map-get($breakpoints, 'breakpoint-3')) {
         order: 1;
       }
     }
@@ -49,7 +40,7 @@ $image-height: $size-11;
     width: 75%;
     z-index: z('below');
 
-    @media screen and (min-width: map-get($breakpoints, 'breakpoint-1')) {
+    @media screen and (min-width: map-get($breakpoints, 'breakpoint-3')) {
       margin: unset;
       width: auto;
     }
@@ -57,18 +48,22 @@ $image-height: $size-11;
 
   &__image {
     .presentation--reverse & {
-      @media screen and (min-width: map-get($breakpoints, 'breakpoint-1')) {
+      @media screen and (min-width: map-get($breakpoints, 'breakpoint-3')) {
         right: 0;
       }
     }
 
-    @media screen and (min-width: map-get($breakpoints, 'breakpoint-1')) {
+    @media screen and (min-width: map-get($breakpoints, 'breakpoint-3')) {
       bottom: 0;
-      height: $image-height;
+      height: 20rem;
       margin: auto;
       max-width: none;
       position: absolute;
       top: 0;
+
+      @media screen and (min-width: map-get($breakpoints, 'breakpoint-4')) {
+        height: $image-height;
+      }
 
       /*
       The Laced image was too close to the hero. It's also quite awkward and big, and deviates from
@@ -78,12 +73,12 @@ $image-height: $size-11;
       &--laced {
         height: 115%;
 
-        @media screen and (min-width: map-get($breakpoints, 'breakpoint-1')) {
+        @media screen and (min-width: map-get($breakpoints, 'breakpoint-3')) {
           top: $spacing-11;
         }
 
         .presentation--reverse & {
-          @media screen and (min-width: map-get($breakpoints, 'breakpoint-1')) {
+          @media screen and (min-width: map-get($breakpoints, 'breakpoint-3')) {
             right: -6rem;
           }
         }

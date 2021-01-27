@@ -1,7 +1,6 @@
 .numbered-steps {
+  @include content;
   list-style: none;
-  margin: 0 auto;
-  max-width: $size-12;
   padding: 0;
 
   @media screen and (min-width: map-get($breakpoints, 'breakpoint-3')) {

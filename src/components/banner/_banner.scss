@@ -23,11 +23,13 @@
 
   &--checkout {
     background: $color-bluegem;
+    margin-top: $spacing-9;
     grid-gap: 0;
     padding: 0;
 
     @media screen and (min-width: map-get($breakpoints, 'breakpoint-3')) {
       @include two-col-grid;
+      margin-top: 0;
     }
   }
 
@@ -118,7 +120,7 @@
 
   &__intro {
     color: var(--color-heading);
-    font-size: $font-size-md;
+    font-size: $root-font-size;
     margin-bottom: $spacing-6;
   }
 
@@ -198,7 +200,7 @@
     padding: $spacing-8 $spacing-6;
 
     @media screen and (min-width: map-get($breakpoints, 'breakpoint-1')) {
-      padding: 3.5rem $spacing-6; // Creates a visual alignment with the content on the left (desktop)
+      padding: 3.4rem $spacing-6; // Creates a visual alignment with the content on the left (desktop)
     }
 
     @media screen and (min-width: map-get($breakpoints, 'breakpoint-3')) {
@@ -206,7 +208,7 @@
     }
 
     @media screen and (min-width: map-get($breakpoints, 'breakpoint-7')) {
-      padding: $spacing-9 $spacing-6; // Creates a visual alignment with the content on the left (desktop)
+      padding: 3.8rem $spacing-6; // Creates a visual alignment with the content on the left (desktop)
     }
 
     @media screen and (min-width: map-get($breakpoints, 'breakpoint-9')) {
