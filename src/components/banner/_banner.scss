@@ -164,7 +164,7 @@
     padding: $spacing-8 $spacing-6;
 
     @media screen and (min-width: map-get($breakpoints, 'breakpoint-2')) {
-      @include content;
+      @include grid-center;
       padding: $spacing-8 0;
     }
 
@@ -218,7 +218,7 @@
 
   &__refund-content {
     @media screen and (min-width: map-get($breakpoints, 'breakpoint-2')) {
-      @include content;
+      @include grid-center;
     }
 
     @media screen and (min-width: map-get($breakpoints, 'breakpoint-3')) {

@@ -146,7 +146,7 @@ main {
 // Company page layouts
 
 .company {
-  @include content;
+  @include grid-center;
 
   @media screen and (min-width: map-get($breakpoints, 'breakpoint-4')) {
     max-width: unset;

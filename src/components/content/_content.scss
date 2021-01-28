@@ -1,10 +1,10 @@
 .content {
-  .content-list &{
-    &:not(:last-child){
+  .content-list & {
+    &:not(:last-child) {
       margin-bottom: $spacing-7;
     }
 
-    & >:last-child {
+    & > :last-child {
       margin-bottom: 0;
     }
 
@@ -50,6 +50,7 @@
     &--analysis,
     &--center {
       color: var(--color-heading);
+      font-size: $root-font-size;
       margin-bottom: $spacing-5;
     }
 

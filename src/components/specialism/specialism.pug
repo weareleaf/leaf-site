@@ -2,7 +2,7 @@ mixin specialism(c)
   .specialism(class= c.modifier ? "specialism--" + c.modifier : "")
     .specialism__content
       .specialism__introduction
-        h6.specialism__subheading= c.subheading
+        p.specialism__subheading= c.subheading
         h2.specialism__heading= c.heading
         p.specialism__text !{c.text}
       +explanation-list(c.explanationList)

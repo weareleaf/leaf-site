@@ -1,7 +1,7 @@
 mixin metrics(c)
   .metrics(class= c.modifier ? "metrics--" + c.modifier : "")
     if c.heading
-      h4.metrics__heading= c.heading
+      h2.metrics__heading= c.heading
     if c.items
       .metrics__grid
         each item in c.items

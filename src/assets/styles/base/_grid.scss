@@ -12,11 +12,6 @@
   }
 }
 
-@mixin grid-center {
-  margin: 0 auto;
-  max-width: 34rem;
-}
-
 $grid-columns-default: 1fr;
 $grid-columns-post: 2.5rem 1fr 2.5rem;
 
@@ -57,8 +52,7 @@ $grid-columns-post: 2.5rem 1fr 2.5rem;
   }
 
   &--center {
-    max-width: 34rem;
-    margin: 0 auto;
+    @include grid-center;
   }
 
   &--half {
@@ -68,20 +62,16 @@ $grid-columns-post: 2.5rem 1fr 2.5rem;
   }
 
   &--two-thirds {
-    @include content;
+    max-width: unset;
 
-    @media screen and (min-width: map-get($breakpoints, 'breakpoint-4')) {
-      grid-template-columns: 60% 1fr;
-      max-width: unset;
+    @media screen and (min-width: map-get($breakpoints, 'breakpoint-3')) {
+      @include grid-center;
     }
   }
 
   &--two-thirds-reverse {
-    @include content;
-
-    @media screen and (min-width: map-get($breakpoints, 'breakpoint-4')) {
-      grid-template-columns: 1fr 60%;
-      max-width: unset;
+    @media screen and (min-width: map-get($breakpoints, 'breakpoint-3')) {
+      grid-template-columns: 1fr 2fr;
     }
   }
 
@@ -165,7 +155,7 @@ $grid-columns-post: 2.5rem 1fr 2.5rem;
   }
 
   &--analysis {
-    @include content;
+    @include grid-center;
 
     @media screen and (min-width: map-get($breakpoints, 'breakpoint-4')) {
       align-items: center;

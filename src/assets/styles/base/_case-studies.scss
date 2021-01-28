@@ -145,7 +145,7 @@
 // Main layout
 
 .case-study {
-  @include content;
+  @include grid-center;
 
   @media screen and (min-width: map-get($breakpoints, 'breakpoint-4')) {
     max-width: unset;

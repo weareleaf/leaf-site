@@ -19,27 +19,6 @@ block pageComponents
         text: "Laced are determined to bring the European sneaker trading experience into the 21st century, and we're helping them to achieve their vision."
       })
 
-      +details({
-        details: [
-          {
-            heading: "Themes",
-            text: "Consultancy, design, development"
-          },
-          {
-            heading: "Deliverables",
-            text: "Custom e-commerce platform"
-          },
-          {
-            heading: "Technology",
-            text: "React, Ruby on Rails, API integrations"
-          },
-          {
-            heading: "Platform",
-            text: "Web"
-          }
-        ]
-      })
-
   .section
     .container
       figure
@@ -47,12 +26,31 @@ block pageComponents
 
       .grid.grid--two-thirds-reverse
         .grid__item
+          +details({
+            details: [
+              {
+                heading: "Themes",
+                text: "Consultancy, design, development"
+              },
+              {
+                heading: "Deliverables",
+                text: "Custom e-commerce platform"
+              },
+              {
+                heading: "Technology",
+                text: "React, Ruby on Rails, API integrations"
+              },
+              {
+                heading: "Platform",
+                text: "Web"
+              }
+            ]
+          })
+        .grid__item
           +summary({
             heading: "What is it?",
             text: "Laced allows sneaker enthusiasts to buy and sell collectible sneakers online, track market values, and reserve items at certain prices."
           })
-
-        .grid__item
           h2 The challenge
           p Against a backdrop of highly established sneaker trading platforms in the United States, the European market was considerably less developed, with enthusiasts forced onto generalist platforms like eBay and Facebook to trade footwear.
           p Laced Spotted an opportunity to own the European market, and asked us to help build a minimum viable product (MVP) to compete with their American counterparts.

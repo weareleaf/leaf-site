@@ -18,41 +18,40 @@ block pageComponents
         text: "Not content with being the UK's market leader for travel extras, Holiday Extras decided try their hand at helping travellers plan and organise their trips together."
       })
 
-      +details({
-        details: [
-          {
-            heading: "Themes",
-            text: "Consultancy, product design"
-          },
-          {
-            heading: "Deliverables",
-            text: "Wireframes, prototypes"
-          },
-          {
-            heading: "Technology",
-            text: "React Native, Node, GraphQL"
-          },
-          {
-            heading: "Platform",
-            text: "iOS, Android"
-          }
-        ]
-      })
-
   .section
     .container
       figure
         img(src="/assets/images/case-studies/heha/image-1.jpg" alt="The HEHA! iOS application on several mobile devices showing how trips, news feeds and travel maps are displayed.")
 
       .grid.grid--two-thirds-reverse
-      .grid.grid--two-thirds-reverse
+        .grid__item
+          +details({
+            details: [
+              {
+                heading: "Themes",
+                text: "Consultancy, product design"
+              },
+              {
+                heading: "Deliverables",
+                text: "Wireframes, prototypes"
+              },
+              {
+                heading: "Technology",
+                text: "React Native, Node, GraphQL"
+              },
+              {
+                heading: "Platform",
+                text: "iOS, Android"
+              }
+            ]
+          })
         .grid__item
           +summary({
             heading: "What is it?",
             text: "HEHA! is a trip-planning app, allowing travellers to manage everything from booking confirmations, to creating shared, collaborative itineraries."
           })
 
-        .grid__item
+        
           h2 The challenge
           p As an incubated startup, the HEHA! team had a small window of opportunity to get a minimum viable product (MVP) of their travel-planning application to market. We were brought in to help their users create and manage their get-away, capturing everything from destinations and dates to travellers and trip themes.
 
