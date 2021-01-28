@@ -172,8 +172,8 @@
       margin: -$spacing-6 auto;
 
       @media screen and (min-width: map-get($breakpoints, 'breakpoint-1')) {
-        margin: -$spacing-7 auto;
-        max-width: 60%;
+        margin: -$spacing-4 auto;
+        max-width: 90%;
       }
 
       @media screen and (min-width: map-get($breakpoints, 'breakpoint-4')) {

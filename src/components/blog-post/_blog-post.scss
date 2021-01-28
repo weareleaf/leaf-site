@@ -1,6 +1,5 @@
 .blog-post {
-  margin: 0 auto;
-  max-width: 34rem;
+  @include grid-center;
 
   &__intro {
     font-size: 1.6rem;
@@ -21,4 +20,3 @@
     font-size: $font-size-sub;
   }
 }
-
