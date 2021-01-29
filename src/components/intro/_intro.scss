@@ -1,11 +1,11 @@
 .intro {
+  align-items: center;
   margin-bottom: $spacing-9;
   margin-top: $spacing-10;
 
   @media screen and (min-width: map-get($breakpoints, 'breakpoint-3')) {
     display: flex;
-    justify-content: space-between;
-    margin-top: $spacing-13;
+    flex-direction: column;
   }
 
   &__image {
@@ -18,12 +18,14 @@
     img {
       display: block;
       height: $size-7;
+      margin: 0 auto;
       max-width: $size-9;
     }
   }
 
   &__text {
     font-size: $root-font-size-xl;
+    text-align: center;
 
     @media screen and (min-width: map-get($breakpoints, 'breakpoint-3')) {
       max-width: 60%;

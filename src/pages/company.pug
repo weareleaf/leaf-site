@@ -74,7 +74,7 @@ block pageComponents
               context: "company-map",
               modifier: "mobile-map",
               src: "/assets/images/company/mobile-map.svg",
-              alt: "An abstract map of Europe and Africa showing our locations. Curt is in Nottingham, England; and Chris, Mike, and OJ are in Kent, England.",
+              alt: "An abstract map of the UK and Europe showing our locations. Curt is in Nottingham, England; and Chris, Mike, and OJ are in Kent, England.",
             })
             +image({
               context: "company-map",
@@ -307,10 +307,20 @@ block pageComponents
                 +profile({
                   image: {
                     src: "/assets/images/company/team/first-team/curt.jpg",
-                    alt: "A photo of Curt looking very happy with himself while standing in front of a tree."
+                    alt: "A photo of Curt looking very happy with himself while sitting on a bench in front of a tree."
                   },
                   heading: "Curtis Lee",
                   text: "Product Designer"
+                })
+              .grid__item
+                +profile({
+                  image: {
+                    context: "profile",
+                    src: "/assets/images/company/team/first-team/ryan.jpg",
+                    alt: "A photo of Ryan looking very happy in his wedding suit."
+                  },
+                  heading: "Ryan Smith",
+                  text: "Project Delivery Manager"
                 })
               .grid__item
                 +profile({

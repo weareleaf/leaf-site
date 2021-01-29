@@ -25,12 +25,17 @@ block pageComponents
 
   section.section
     .container
-      .rift-challenge
+      .case-study.rift-challenge
         .rift-challenge__image
           figure.case-study-image.case-study-image--rift-2
             img(src="/assets/images/case-studies/rift/image-2.png" alt="3 happy RIFT customers posing outside with their large TAX return cheques.")
-          figure.case-study-image.case-study-image--rift-9
-            img(src="/assets/images/case-studies/rift/image-9.png" alt="3 happy RIFT customers posing outside with their large TAX return cheques.")
+          .full-width
+            +image({
+              context: "full-width",
+              src: "/assets/images/case-studies/rift/image-9.png",
+              alt: "3 happy RIFT customers posing outside with their large TAX return cheques.",
+              modifier: "rift-9"
+            })
         .rift-challenge__content
           +content({
             contentHeading2: true,
@@ -99,63 +104,63 @@ block pageComponents
 
   section.section
     .container
-      +content-block({
-        introHeading: true,
-        heading: "Our approach",
-        items: [
-          {
-            heading: "Uncover existing pain-points",
-            intro: "Analytical software helps answer a range of questions, from how well an app is performing, to where users are struggling.",
-            items: [
-              {
-                text: "We added Mixpanel to both the RIFT website and MyRIFT application, helping us to understand existing user behaviours, and to establish a baseline conversion rate for qualifying and converting new leads."
-              }
-            ]
+      .case-study.rift-our-approach
+        +content-block({
+          introHeading: true,
+          heading: "Our approach",
+          items: [
+            {
+              heading: "Uncover existing pain-points",
+              intro: "Analytical software helps answer a range of questions, from how well an app is performing, to where users are struggling.",
+              items: [
+                {
+                  text: "We added Mixpanel to both the RIFT website and MyRIFT application, helping us to understand existing user behaviours, and to establish a baseline conversion rate for qualifying and converting new leads."
+                }
+              ]
+            },
+            {
+              heading: "Understand the audience",
+              intro: "Many of RIFT's customers were in the Armed Forces, where Internet speeds are often slow and mobile usage is common.",
+              items: [
+                {
+                  text: "For MyRIFT to be considered a viable alternative to claiming through the RIFT Call Centre, we'd need the application to be optimised for small screens, and be reliable on even the slowest of network connections."
+                }
+              ]
+            }
+          ],
+          image: {
+            src: "/assets/images/case-studies/rift/image-3.png",
+            alt: "A download speed pie chart, as well as a preview of the analytics dashboard we used to measure the sites performance, and also find any existing pain-points for users."
           },
-          {
-            heading: "Understand the audience",
-            intro: "Many of RIFT's customers were in the Armed Forces, where Internet speeds are often slow and mobile usage is common.",
-            items: [
-              {
-                text: "For MyRIFT to be considered a viable alternative to claiming through the RIFT Call Centre, we'd need the application to be optimised for small screens, and be reliable on even the slowest of network connections."
-              }
-            ]
-          }
-        ],
-        image: {
-          src: "/assets/images/case-studies/rift/image-3.png",
-          alt: "A download speed pie chart, as well as a preview of the analytics dashboard we used to measure the sites performance, and also find any existing pain-points for users."
-        },
-        imageModifier: "rift-3"
-      })
-      +image({
-        context: "content-block",
-        src: "/assets/images/case-studies/rift/image-11.png",
-        alt: "A preview of the analytics dashboard we used to measure the sites performance.",
-        modifier: "rift-11"
-      })
+          imageModifier: "rift-3"
+        })
+        .full-width
+          +image({
+            context: "full-width",
+            src: "/assets/images/case-studies/rift/image-11.png",
+            alt: "A preview of the analytics dashboard we used to measure the sites performance.",
+            modifier: "rift-11"
+          })
 
   section.section
     .container
-      .centered-content.centered-content--no-pad
-        .grid.grid--center-text
-          .grid__item
-            +content({
-              heading: "Move quickly and effectively",
-              intro: "A combination of quick-fire sketches and wireframing help facilitate ideation and conversation in the most efficient way.",
-              items: [
-                {
-                  text: "We relied heavily on low-fidelity prototypes in the early stages of our design exploration, helping us to quickly validate or discredit concepts, gain stakeholder buy-in, and ensure a single, shared vision."
-                }
-              ]
-            })
-      .full-width
-        +image({
-          context: "full-width",
-          src: "/assets/images/case-studies/rift/image-4.png",
-          alt: "A collection of wireframed form elements from the prototyping process. These elements consist of user information such as workplace locations, accomodation details and vehicle lookups.",
-          modifier: "rift-4"
+      .case-study.case-study--centered-content
+        +content({
+          heading: "Move quickly and effectively",
+          intro: "A combination of quick-fire sketches and wireframing help facilitate ideation and conversation in the most efficient way.",
+          items: [
+            {
+              text: "We relied heavily on low-fidelity prototypes in the early stages of our design exploration, helping us to quickly validate or discredit concepts, gain stakeholder buy-in, and ensure a single, shared vision."
+            }
+          ]
         })
+        .full-width
+          +image({
+            context: "full-width",
+            src: "/assets/images/case-studies/rift/image-4.png",
+            alt: "A collection of wireframed form elements from the prototyping process. These elements consist of user information such as workplace locations, accomodation details and vehicle lookups.",
+            modifier: "rift-4"
+          })
 
   section.section
     .rift-metrics
@@ -167,7 +172,7 @@ block pageComponents
           .rift-metrics__image
             figure.case-study-image.case-study-image--rift-5
               img(src="/assets/images/case-studies/rift/image-5.png" alt="A mobile screen showing one of the steps from the initial eligibility questionaire. Did you use your own vehicle or public transport to get to those workplaces?")
-          .rift-metrics__content
+          .case-study.rift-metrics__content
             +content({
               heading: "Focus on the lowest hanging fruit",
               intro: "Historical data highlighted the registration processes as a key point of failure in converting prospective claimants.",
@@ -186,7 +191,7 @@ block pageComponents
 
   section.section
     .container
-      .rift-documents-upload
+      .case-study.rift-documents-upload
         .rift-documents-upload__content
           +content({
             heading: "Painless document uploads",
@@ -216,7 +221,7 @@ block pageComponents
 
   section.section
     .container
-      .rift-details-lookup
+      .case-study.rift-details-lookup
         .rift-details-lookup__image
           figure.case-study-image.case-study-image--rift-7
             img(src="/assets/images/case-studies/rift/image-7.png" alt="An efficient autocomplete search field for looking up a bank. In this example, simply typing two letters returns three different options for the user to choose from.")
@@ -247,55 +252,35 @@ block pageComponents
             ]
           })
 
-  //-section.section
-    .container
-      .rift-outcome
-        .rift-outcome__content
-
   section.section
     .container
-      .centered-content.centered-content--no-pad
-        .grid.grid--center-text
-          .grid__item
-
-            h2.content-block__heading The outcome
-            +content({
-              heading: "Happy customers. Happy client",
-              intro: "Such was the success of our initial work with RIFT, we're continuing to work together well into 2020.",
-              items: [
-                {
-                  text: "The pre-registation questionnaire and amended processes significantly improved conversion to registration, getting more and better qualified leads into the app, and increasing the number of claims submitted online."
-                }
-              ]
-            })
-            +metrics({
-              modifier: "margin",
-              iconModifier: "rotate",
-              items: [
-                {
-                  unit: "192%",
-                  subtext: "increase in claim submissions.",
-                  text: "Claim submissions have almost quadrupled in the past 2 years, with more than 5,000 claims submitted in April 2020 alone."
-                },
-                {
-                  unit: "84%",
-                  subtext: "increase in unqiue sign-ins.",
-                  text: "The number of people using MyRIFT each month has increased significantly, with over 8,000 active users in March and April 2020."
-                }
-              ]
-            })
-          //-.rift-outcome__testimonial
-            +testimonial({
-              quote: "Leaf were a pleasure to work with – always available and willing to offer advice, or to put forward constructive suggestions. The decision to work with them is one we haven’t regretted, and I’d gladly recommend them to anyone looking to improve their own booking flow.",
-              author: {
-                authorName: "Bradley Post",
-                authorDetails: "Managing Director — RIFT Group",
-                authorThumbnail: {
-                  src: "assets/images/case-studies/rift/bradley.png",
-                  alt: "A picture of Bradley Post with a grey background behind him."
-                }
-              }
-            })
+      .case-study.case-study--centered-content
+        h2.content-block__heading The outcome
+        +content({
+          heading: "Happy customers. Happy client",
+          intro: "Such was the success of our initial work with RIFT, we're continuing to work together well into 2020.",
+          items: [
+            {
+              text: "The pre-registation questionnaire and amended processes significantly improved conversion to registration, getting more and better qualified leads into the app, and increasing the number of claims submitted online."
+            }
+          ]
+        })
+        +metrics({
+          modifier: "margin",
+          iconModifier: "rotate",
+          items: [
+            {
+              unit: "192%",
+              subtext: "increase in claim submissions.",
+              text: "Claim submissions have almost quadrupled in the past 2 years, with more than 5,000 claims submitted in April 2020 alone."
+            },
+            {
+              unit: "84%",
+              subtext: "increase in unqiue sign-ins.",
+              text: "The number of people using MyRIFT each month has increased significantly, with over 8,000 active users in March and April 2020."
+            }
+          ]
+        })
       .full-width
         +image({
           context: "full-width",

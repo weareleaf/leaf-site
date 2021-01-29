@@ -1,15 +1,16 @@
 .banner {
   background: var(--color-banner-background);
   display: grid;
-  margin: $spacing-10 auto 0;
+  margin: $spacing-6 auto 0;
   overflow: hidden;
   padding: $spacing-9 $spacing-6;
   position: relative;
 
-  @media screen and (min-width: map-get($breakpoints, 'breakpoint-3')) {
+  @media screen and (min-width: map-get($breakpoints, 'breakpoint-4')) {
     @include two-col-grid;
     align-items: center;
     grid-gap: $spacing-6;
+    margin: $spacing-10 auto 0;
     padding: $spacing-8 $spacing-6;
   }
 
@@ -22,8 +23,14 @@
 
   &--checkout {
     background: $color-bluegem;
+    margin-top: $spacing-9;
     grid-gap: 0;
     padding: 0;
+
+    @media screen and (min-width: map-get($breakpoints, 'breakpoint-3')) {
+      @include two-col-grid;
+      margin-top: 0;
+    }
   }
 
   &__shape {
@@ -76,14 +83,17 @@
     margin-bottom: $spacing-8;
     padding: $spacing-6;
 
-    @media screen and (min-width: map-get($breakpoints, 'breakpoint-1')) {
-      padding: $spacing-7;
-    }
-
     @media screen and (min-width: map-get($breakpoints, 'breakpoint-3')) {
       background: none;
+      grid-area: 2 / span 2;
       margin-bottom: 0;
+      margin-top: $spacing-6;
       padding: 0;
+    }
+
+    @media screen and (min-width: map-get($breakpoints, 'breakpoint-4')) {
+      grid-area: auto;
+      margin-top: 0;
     }
   }
 
@@ -110,7 +120,7 @@
 
   &__intro {
     color: var(--color-heading);
-    font-size: $font-size-md;
+    font-size: $root-font-size;
     margin-bottom: $spacing-6;
   }
 
@@ -129,18 +139,39 @@
 
     @media screen and (min-width: map-get($breakpoints, 'breakpoint-3')) {
       bottom: 0;
+      left: auto;
       padding: 0;
+      right: $spacing-6;
+      top: $spacing-9;
+    }
+
+    @media screen and (min-width: map-get($breakpoints, 'breakpoint-4')) {
       position: relative;
+      right: auto;
+      top: auto;
     }
 
     &--checkout {
-      padding: $spacing-5 0 0 0;
+      bottom: 0;
+      left: 0;
+      padding: 0;
       position: relative;
+      top: 0;
     }
   }
 
   &__call-to-action {
     padding: $spacing-8 $spacing-6;
+
+    @media screen and (min-width: map-get($breakpoints, 'breakpoint-2')) {
+      @include grid-center;
+      padding: $spacing-8 0;
+    }
+
+    @media screen and (min-width: map-get($breakpoints, 'breakpoint-3')) {
+      max-width: unset;
+      padding: $spacing-8 $spacing-6;
+    }
 
     @media screen and (min-width: map-get($breakpoints, 'breakpoint-7')) {
       padding: 3.5rem;
@@ -153,11 +184,7 @@
 
   .banks {
     display: flex;
-    margin-top: 0;
-
-    @media screen and (min-width: map-get($breakpoints, 'breakpoint-3')) {
-      margin-top: $spacing-6;
-    }
+    margin-top: $spacing-6;
   }
 
   .bank {
@@ -173,7 +200,7 @@
     padding: $spacing-8 $spacing-6;
 
     @media screen and (min-width: map-get($breakpoints, 'breakpoint-1')) {
-      padding: 3.5rem $spacing-6; // Creates a visual alignment with the content on the left (desktop)
+      padding: 3.4rem $spacing-6; // Creates a visual alignment with the content on the left (desktop)
     }
 
     @media screen and (min-width: map-get($breakpoints, 'breakpoint-3')) {
@@ -181,11 +208,21 @@
     }
 
     @media screen and (min-width: map-get($breakpoints, 'breakpoint-7')) {
-      padding: $spacing-9 $spacing-6; // Creates a visual alignment with the content on the left (desktop)
+      padding: 3.8rem $spacing-6; // Creates a visual alignment with the content on the left (desktop)
     }
 
     @media screen and (min-width: map-get($breakpoints, 'breakpoint-9')) {
       padding: 4.8rem 4.5rem 4.5rem 4.5rem; // Creates a visual alignment with the content on the left (desktop)
+    }
+  }
+
+  &__refund-content {
+    @media screen and (min-width: map-get($breakpoints, 'breakpoint-2')) {
+      @include grid-center;
+    }
+
+    @media screen and (min-width: map-get($breakpoints, 'breakpoint-3')) {
+      max-width: unset;
     }
   }
 }

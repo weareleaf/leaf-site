@@ -1,7 +1,6 @@
 .numbered-steps {
+  @include grid-center;
   list-style: none;
-  margin: 0 auto;
-  max-width: $size-12;
   padding: 0;
 
   @media screen and (min-width: map-get($breakpoints, 'breakpoint-3')) {
@@ -59,7 +58,7 @@
     color: $color-ivory;
     font-size: $font-size-xxs;
     font-weight: 700;
-    margin: 0.15rem -0.05rem 0 0;
+    margin: 0.2rem -0.05rem 0 0;
 
     @media screen and (min-width: map-get($breakpoints, 'breakpoint-3')) {
       margin: 0.2rem -0.01rem 0 0;

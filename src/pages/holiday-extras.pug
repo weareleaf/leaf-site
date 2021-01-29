@@ -26,7 +26,7 @@ block pageComponents
 
   section.section
     .container
-      .hx-challenge
+      .case-study.hx-challenge
         .hx-challenge__items
           +content-block({
             items: [
@@ -90,118 +90,122 @@ block pageComponents
 
   section.section
     .container
-      +content-block({
-        introHeading: true,
-        heading: "Our approach",
-        items: [
-          {
-            heading: "Improve iteratively",
-            intro: 'Although this was a "reimagination", changes would be made iteratively by building on the existing online booking process.',
-            items: [
-              {
-                text: "Any recommendations we made would need to work both in isolation and as part of the current system. Where possible, we reused existing elements, minimising the friction as sections of our work were introduced."
-              }
-            ]
+      .case-study.hx-approach
+        +content-block({
+          introHeading: true,
+          heading: "Our approach",
+          items: [
+            {
+              heading: "Improve iteratively",
+              intro: 'Although this was a "reimagination", changes would be made iteratively by building on the existing online booking process.',
+              items: [
+                {
+                  text: "Any recommendations we made would need to work both in isolation and as part of the current system. Where possible, we reused existing elements, minimising the friction as sections of our work were introduced."
+                }
+              ]
+            },
+            {
+              heading: "Be guided by the numbers",
+              intro: "While reviewing the previous 12 months of policies, we found that most people were going to the same handful of places.",
+              items: [
+                {
+                  text: "By suggesting these popular destinations, 4 out of 5 travellers would be able to select a location in a single interaction, with the remaining destinations available through an autocompleting search field."
+                }
+              ]
+            }
+          ],
+          image: {
+            src: "/assets/images/case-studies/hx/image-4.png",
+            alt: "Suggested destinations based on the most popular choices of 4/5 customers. There is also an autocomplete search field to help customers find their destination."
           },
-          {
-            heading: "Be guided by the numbers",
-            intro: "While reviewing the previous 12 months of policies, we found that most people were going to the same handful of places.",
-            items: [
-              {
-                text: "By suggesting these popular destinations, 4 out of 5 travellers would be able to select a location in a single interaction, with the remaining destinations available through an autocompleting search field."
-              }
-            ]
-          }
-        ],
-        image: {
-          src: "/assets/images/case-studies/hx/image-4.png",
-          alt: "Suggested destinations based on the most popular choices of 4/5 customers. There is also an autocomplete search field to help customers find their destination."
-        },
-        imageModifier: "hx-image-4"
-      })
-      +image({
-        context: "content-block",
-        src: "/assets/images/case-studies/hx/image-10.png",
-        alt: "An autocomplete search field to help customers find their destination faster, and with less typing.",
-        modifier: "hx-image-10"
-      })
+          imageModifier: "hx-image-4"
+        })
+        +image({
+          context: "content-block",
+          src: "/assets/images/case-studies/hx/image-10.png",
+          alt: "An autocomplete search field to help customers find their destination faster, and with less typing.",
+          modifier: "hx-image-10"
+        })
 
   section.section
     .container
-      +content-block({
-        items: [
-          {
-            heading: "Be clear about effort and progress",
-            intro: "People are more likely to give up on a task when they’re unsure how far away they are from completing it.",
-            items: [
-              {
-                text: "We intoduced a progress tracker to help set expections, showing users how much effort is needed as they move through the process. The tracker also makes it simple to navigate between sections, removing an existing pain-point for those who need to go back to a previous step."
-              }
-            ]
-          }
-        ],
-        image: {
-          src: "/assets/images/case-studies/hx/image-5.png",
-          alt: "The six types of trip a customer can choose, including Business trip, cruise, golf trip, hazardous activities, winter sports, and your wedding."
-        },
-        modifier: "reverse",
-        imageModifier: "hx-image-5"
-      })
-      +image({
-        context: "content-block",
-        src: "/assets/images/case-studies/hx/image-11.png",
-        alt: "The six types of trip a customer can choose, including Business trip, cruise, golf trip, hazardous activities, winter sports, and your wedding.",
-        modifier: "hx-image-11"
-      })
+      .case-study.hx-progress
+        +content-block({
+          items: [
+            {
+              heading: "Be clear about effort and progress",
+              intro: "People are more likely to give up on a task when they’re unsure how far away they are from completing it.",
+              items: [
+                {
+                  text: "We intoduced a progress tracker to help set expections, showing users how much effort is needed as they move through the process. The tracker also makes it simple to navigate between sections, removing an existing pain-point for those who need to go back to a previous step."
+                }
+              ]
+            }
+          ],
+          image: {
+            src: "/assets/images/case-studies/hx/image-5.png",
+            alt: "The six types of trip a customer can choose, including Business trip, cruise, golf trip, hazardous activities, winter sports, and your wedding."
+          },
+          modifier: "reverse",
+          imageModifier: "hx-image-5"
+        })
+        +image({
+          context: "content-block",
+          src: "/assets/images/case-studies/hx/image-11.png",
+          alt: "The six types of trip a customer can choose, including Business trip, cruise, golf trip, hazardous activities, winter sports, and your wedding.",
+          modifier: "hx-image-11"
+        })
 
   section.section
     .container
-      +content-block({
-        items: [
-          {
-            heading: "Help people progress quickly",
-            intro: "Truly great online experiences accommodate inherent human behaviours, rather than forcing new ones.",
-            items: [
-              {
-                text: "We used iconography throughout the process to help users to more easily distinguish between various choices. People tend to scan Web pages rather than read them word-for-word, and can interpret images much faster than words, making icons the ideal visual parter to a text description."
-              }
-            ]
-          }
-        ],
-        image: {
-          src: "/assets/images/case-studies/hx/image-6.png",
-          alt: "The five steps a customer goes through in the quote process: 1. Trip, 2. People, 3. Cover, 4. Details, and 5. Payment."
-        },
-        imageModifier: "hx-image-6"
-      })
-      +image({
-        context: "content-block",
-        src: "/assets/images/case-studies/hx/image-12.png",
-        alt: "The five steps a customer goes through in the quote process: 1. Trip, 2. People, 3. Cover, 4. Details, and 5. Payment.",
-        modifier: "hx-image-12"
-      })
+      .case-study.hx-iconography
+        +content-block({
+          items: [
+            {
+              heading: "Help people progress quickly",
+              intro: "Truly great online experiences accommodate inherent human behaviours, rather than forcing new ones.",
+              items: [
+                {
+                  text: "We used iconography throughout the process to help users to more easily distinguish between various choices. People tend to scan Web pages rather than read them word-for-word, and can interpret images much faster than words, making icons the ideal visual parter to a text description."
+                }
+              ]
+            }
+          ],
+          image: {
+            src: "/assets/images/case-studies/hx/image-6.png",
+            alt: "The five steps a customer goes through in the quote process: 1. Trip, 2. People, 3. Cover, 4. Details, and 5. Payment."
+          },
+          imageModifier: "hx-image-6"
+        })
+        +image({
+          context: "content-block",
+          src: "/assets/images/case-studies/hx/image-12.png",
+          alt: "The five steps a customer goes through in the quote process: 1. Trip, 2. People, 3. Cover, 4. Details, and 5. Payment.",
+          modifier: "hx-image-12"
+        })
 
   section.section
     .container
-      +content-block({
-        items: [
-          {
-            heading: "Show a price as early as possible ",
-            intro: "With so many insurance providers to choose from, you’d better make sure you give your users a reason to hang about.",
-            items: [
-              {
-                text: "In the very first step, a range of personal information was previously being asked for each traveller, even though date-of-births were the only details needed to calculate a price. Other than first-names, which made it easier to gather the remaining details later, we deferred the remaining questions until later on, radically reducing the time required to see a price."
-              }
-            ]
-          }
-        ],
-        image: {
-          src: "/assets/images/case-studies/hx/image-7.png",
-          alt: "A form that requires customers to enter only their first name and date of birth to get a price."
-        },
-        imageModifier: "hx-image-7",
-        modifier: "reverse"
-      })
+      .case-study.hx-user-info
+        +content-block({
+          items: [
+            {
+              heading: "Show a price as early as possible ",
+              intro: "With so many insurance providers to choose from, you’d better make sure you give your users a reason to hang about.",
+              items: [
+                {
+                  text: "In the very first step, a range of personal information was previously being asked for each traveller, even though date-of-births were the only details needed to calculate a price. Other than first-names, which made it easier to gather the remaining details later, we deferred the remaining questions until later on, radically reducing the time required to see a price."
+                }
+              ]
+            }
+          ],
+          image: {
+            src: "/assets/images/case-studies/hx/image-7.png",
+            alt: "A form that requires customers to enter only their first name and date of birth to get a price."
+          },
+          imageModifier: "hx-image-7",
+          modifier: "reverse"
+        })
 
     .centered-content.centered-content--hx
       .bg-shapes
@@ -210,7 +214,7 @@ block pageComponents
         .bg-shape.bg-shape--2
           img(src="/assets/images/case-studies/hx/shape.png", alt="Background shape")
       .container
-        .grid.grid--center-text
+        .case-study.case-study--centered-content
           .grid__item
             +content({
               heading: "Personalise the experience",
@@ -230,44 +234,45 @@ block pageComponents
 
   section.section
     .container
-      +content-block({
-        items: [
-          {
-            heading: "Not everybody needs to see everything",
-            intro: "Your booking flow shouldn't feel intimidating to all of your customers to meet the needs of a small minority.",
-            items: [
-              {
-                text: "Previously, every customer was offered every upgrade, although our research showed that just four of the options were commonly asked about through the Call Centre. We radically simplified the comparison of available tiers by including only these four benefits, but made the full breakdown available for those who wanted to see more."
-              }
-            ]
+      .case-study.hx-ease-of-use
+        +content-block({
+          items: [
+            {
+              heading: "Not everybody needs to see everything",
+              intro: "Your booking flow shouldn't feel intimidating to all of your customers to meet the needs of a small minority.",
+              items: [
+                {
+                  text: "Previously, every customer was offered every upgrade, although our research showed that just four of the options were commonly asked about through the Call Centre. We radically simplified the comparison of available tiers by including only these four benefits, but made the full breakdown available for those who wanted to see more."
+                }
+              ]
+            },
+            {
+              heading: "Write inclusively by cutting the jargon",
+              intro: "It shouldn’t take a law degree for your potential customers to understand whether or not the policy is a good fit for them.",
+              items: [
+                {
+                  text: "We worked closely with the Holiday Extras compliance team to simplify their explanation of a pre-existing medical condition, while still meeting their legal requirements. A full description remained available, but the majority benefitted from a jargon-free list of illnesses and ailments."
+                }
+              ]
+            }
+          ],
+          image: {
+            src: "/assets/images/case-studies/hx/image-9.png",
+            alt: "A full description of jargon-free illnesses that a customer can choose from in order to declare any pre-existing medical conditions."
           },
-          {
-            heading: "Write inclusively by cutting the jargon",
-            intro: "It shouldn’t take a law degree for your potential customers to understand whether or not the policy is a good fit for them.",
-            items: [
-              {
-                text: "We worked closely with the Holiday Extras compliance team to simplify their explanation of a pre-existing medical condition, while still meeting their legal requirements. A full description remained available, but the majority benefitted from a jargon-free list of illnesses and ailments."
-              }
-            ]
-          }
-        ],
-        image: {
-          src: "/assets/images/case-studies/hx/image-9.png",
-          alt: "A full description of jargon-free illnesses that a customer can choose from in order to declare any pre-existing medical conditions."
-        },
-        modifier: "reverse",
-        imageModifier: "hx-image-9"
-      })
-      +image({
-        context: "content-block",
-        src: "/assets/images/case-studies/hx/image-13.png",
-        alt: "A full description of jargon-free illnesses that a customer can choose from in order to declare any pre-exisiting medical conditions.",
-        modifier: "hx-image-13"
-      })
+          modifier: "reverse",
+          imageModifier: "hx-image-9"
+        })
+        +image({
+          context: "content-block",
+          src: "/assets/images/case-studies/hx/image-13.png",
+          alt: "A full description of jargon-free illnesses for the customer to read through and understand what medical conditions they will be covered for.",
+          modifier: "hx-image-13"
+        })
 
   section.section
     .container
-      .hx-outcome
+      .case-study.hx-outcome
         .hx-outcome__content
           h2.content-block__heading The outcome
           +content({

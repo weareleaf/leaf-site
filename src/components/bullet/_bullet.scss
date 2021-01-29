@@ -1,11 +1,10 @@
 .bullet {
-
   &__heading {
     color: var(--color-heading);
     font-family: $font-family-sans-serif-extrabold;
     font-size: $font-size-xxs;
     font-weight: 400;
-    letter-spacing: .05rem;
+    letter-spacing: 0.05rem;
     margin-bottom: $spacing-4;
     text-transform: uppercase;
 
@@ -63,12 +62,17 @@
     }
 
     &--2-col {
-
       @media screen and (min-width: map-get($breakpoints, 'breakpoint-1')) {
         display: grid;
+        grid-column-gap: $spacing-9;
         grid-template-columns: repeat(2, 1fr);
+        max-width: max-content;
       }
 
+      @media screen and (min-width: map-get($breakpoints, 'breakpoint-4')) {
+        grid-gap: 0;
+        max-width: unset;
+      }
     }
   }
 }

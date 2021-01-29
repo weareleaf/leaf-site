@@ -1,4 +1,7 @@
 .summary {
+  @media screen and (min-width: map-get($breakpoints, 'breakpoint-3')) {
+    padding-top: $spacing-6;
+  }
 
   &__heading {
     font-size: $font-size-xs;
@@ -6,6 +9,6 @@
 
   &__text {
     font-size: $root-font-size-xl;
-    margin: 0;
+    margin: 0 0 $spacing-7;
   }
 }
