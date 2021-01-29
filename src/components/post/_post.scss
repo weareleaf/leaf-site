@@ -2,13 +2,17 @@
   @include focus-ring;
   @include shadow-effect;
   background-color: var(--color-container);
-  border-radius: 8px;
+  border-radius: $border-radius-lg;
   color: var(--color-paragraph);
   height: 100%;
   padding: $spacing-6;
 
   @media screen and (min-width: map-get($breakpoints, 'breakpoint-3')) {
     padding: $spacing-7;
+  }
+
+  &--latest {
+    background-color: red;
   }
 
   &__meta {
@@ -29,6 +33,17 @@
     color: var(--color-post-heading);
     font-size: $font-size-h3;
     margin: 0 0 $spacing-4;
+
+    &--large {
+      @media screen and (min-width: map-get($breakpoints, 'breakpoint-4')) {
+        font-size: 1.5rem;
+        margin: $spacing-2 0 $spacing-6; // Improves optical alignment against content in the smaller card
+
+        @media screen and (min-width: map-get($breakpoints, 'breakpoint-6')) {
+          margin: $spacing-2 0 1.4rem; // Improves optical alignment against content in the smaller card
+        }
+      }
+    }
   }
 
   &__text {
@@ -39,5 +54,12 @@
     -webkit-line-clamp: 3;
     margin: 0;
     overflow: hidden;
+
+    &--large {
+      @media screen and (min-width: map-get($breakpoints, 'breakpoint-4')) {
+        font-size: $font-size-sub;
+        margin-bottom: -$spacing-4; // Prevents the padding-bottom from becoming too large on the smaller card to the right
+      }
+    }
   }
 }

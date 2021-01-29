@@ -6,5 +6,5 @@ mixin blog-post-grid-item(c)
           span.post__category= c.category
           span.post__middle-dot &middot;
           span.post__mins #{c.duration} min read
-        h2.post__heading= c.heading
-        p.post__text= c.text
+        h2.post__heading(class= c.modifier ? "post__heading--" + c.modifier : "")= c.heading
+        p.post__text(class= c.modifier ? "post__text--" + c.modifier : "")= c.text
