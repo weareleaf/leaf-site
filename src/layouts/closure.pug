@@ -1,0 +1,134 @@
+extends ../base.pug
+
+block pageContent
+
+  article.end-game
+    .container
+      .end-game__logo
+        +logo
+      .end-game__inner
+        article.end-game__content
+          p.end-game__intro All good things have to come to an end, and from April 2021, we're closing our digital doors for the last time. 
+          p.end-game__text Leaf grew from humble part-time beginnings to become a massive part of our lives for six brilliantly fun years. Watching our team grow both as people and professionally has been a hugely fulfilling experience, and we have no doubt that each and every one of them will go on to great things.
+          p.end-game__text We were lucky enough to work with some truly special clients, and we'll be forever grateful to every one of them for taking a chance on our little company. Thank-you to every single person who supported, helped, or simply believed in us. We love you all, and hope you won't be strangers.
+          //-p.end-game__text Sincerely,
+          img.end-game__signing(src="/assets/images/signing.svg")
+          p.end-game__text 
+            span.end-game__names Chris Annetts &amp; Mike Carter
+            span.end-game__roles Founders of Leaf
+        aside.end-game__sidebar
+          +profile({
+            modifier: "small",
+            image: {
+              src: "/assets/images/company/team/closure/chris.jpg",
+              alt: "A photo of Chris Annetts."
+            },
+            heading: "Chris Annetts",
+            text: "Now freelancing full-time",
+            url: "https://chrisannetts.com"
+          })
+          +profile({
+            modifier: "small",
+            image: {
+              src: "/assets/images/company/team/closure/curt.jpg",
+              alt: "A photo of Curtis Lee."
+            },
+            heading: "Curtis Lee",
+            text: "Now at nuom",
+            url: "https://dribbble.com/Curtis_A_Lee"
+          })
+          +profile({
+            modifier: "small",
+            image: {
+              src: "/assets/images/company/team/closure/jeanika.jpg",
+              alt: "A photo of Jeanika Jacobs."
+            },
+            heading: "Jeanika Jacobs",
+            text: "Now freelancing full-time",
+            url: "https://jeanika.com"
+          })
+          +profile({
+            modifier: "small",
+            image: {
+              src: "/assets/images/company/team/closure/mike.jpg",
+              alt: "A photo of Mike Carter."
+            },
+            heading: "Mike Carter",
+            text: "Now freelancing full-time",
+            url: "https://mcarter.me"
+          })
+          +profile({
+            modifier: "small",
+            image: {
+              src: "/assets/images/company/team/closure/oj.jpg",
+              alt: "A photo of Oliver Standeven."
+            },
+            heading: "Oliver 'OJ' Standeven",
+            text: "Now at Laced",
+            url: "https://github.com/ojsdude"
+          })
+          +profile({
+            modifier: "small",
+            image: {
+              src: "/assets/images/company/team/closure/ryan.jpg",
+              alt: "A photo of Ryan Smith."
+            },
+            heading: "Ryan Smith",
+            text: "Now at Motability",
+            url: "https://uk.linkedin.com/in/ryan-smith-79b7b543"
+          })
+          +profile({
+            modifier: "small",
+            image: {
+              src: "/assets/images/company/team/closure/tina.jpg",
+              alt: "A photo of Tina van Schelt."
+            },
+            heading: "Tina van Schelt",
+            text: "Now at CLEVER°FRANKE",
+            url: "https://www.tinavanschelt.com"
+          })
+
+        //-aside.end-game__sidebar
+          h2.end-game__h2 Thank-you
+          .end-game__sidebar__main
+            .end-game__sidebar__group
+              h3.end-game__h3 The wonderful Leaf team
+              ul.end-game__list.unstyled-list
+                li.end-game__list__item Curt Lee
+                li.end-game__list__item Jeanika Jacobs
+                li.end-game__list__item Oliver 'OJ' Standeven
+                li.end-game__list__item Ryan Smith
+                li.end-game__list__item Tina van Schelt
+            .end-game__sidebar__group
+              h3.end-game__h3 People who made it possible
+              ul.end-game__list.end-game__list--split.unstyled-list
+                li.end-game__list__item Anna Divers
+                li.end-game__list__item Bradley Post
+                li.end-game__list__item Charles Holdsworth
+                li.end-game__list__item Chris Arnold
+                li.end-game__list__item Chris Gibbons
+                li.end-game__list__item Colin Young
+                li.end-game__list__item David Leydon
+                li.end-game__list__item HP Nick
+                li.end-game__list__item Jack Clark
+                li.end-game__list__item Jo Streeter
+                li.end-game__list__item Liam Kingsnorth
+                li.end-game__list__item Liam Tucker
+                li.end-game__list__item Matthew Pack
+                li.end-game__list__item Matthew Spence
+                li.end-game__list__item Nick Hudson
+                li.end-game__list__item Roger Castells
+                li.end-game__list__item Simon Aglony
+                li.end-game__list__item Steve Kille
+
+  .end-game__original
+    +header({})
+
+    main.site-content(role="main")
+      block pageComponents
+
+    +banner({})
+
+    +footer({})
+
+    +modal

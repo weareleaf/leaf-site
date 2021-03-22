@@ -1,3 +1,9 @@
+.page--home .header,
+.end-game {
+  opacity: 0;
+  transition: opacity $duration-5 $timing-ease;
+}
+
 .section,
 .footer {
   opacity: 0;
@@ -20,6 +26,12 @@
 }
 
 .transition-out {
+
+  .page--home .header,
+  .end-game {
+    opacity: 0;
+  }
+  
   .section,
   .footer {
     opacity: 0;
@@ -40,6 +52,7 @@
 }
 
 .transition-in {
+
   .hero {
     &__content {
       opacity: 1;
@@ -50,6 +63,11 @@
       opacity: 1;
       transform: translateX(0);
     }
+  }
+
+  .page--home .header,
+  .end-game {
+    opacity: 1;
   }
 
   .section,
