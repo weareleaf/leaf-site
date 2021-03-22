@@ -68,23 +68,19 @@
 }
 
 a.profile {
+  @include focus-ring;
+  border-radius: $border-radius-base;
+  margin: #{-$spacing-3} #{-$spacing-3} #{($spacing-5 - $spacing-3)};
+  padding: $spacing-3;
+  transition: background-color $duration-2 $timing-ease;
+
+  .profile__content {
+    padding-right: $spacing-3;
+  }
 
   &:hover {
+    background-color: $color-indigo;
     cursor: pointer;
     text-decoration: none;
-
-    .profile__block,
-    .profile__image {
-      box-shadow: 0 .5rem 1rem 0 rgba($color-black, .015);
-      transform: scale(1.02);
-
-      &--small {
-
-        &:hover {
-          box-shadow: none !important; // Prevent higher specificity `__image` from working
-          transform: scale(1) !important;
-        }
-      }
-    }
   }
 }

@@ -1,0 +1,150 @@
+.end-game {
+  align-items: center;
+  background: var(--color-banner-background);
+  display: flex;
+  min-height: 100vh;
+  padding: $spacing-7 0;
+  width: 100%;
+
+  @media screen and (min-width: map-get($breakpoints, 'breakpoint-2')) {
+    padding: $spacing-8 0;
+  }
+
+  @media screen and (min-width: map-get($breakpoints, 'breakpoint-3')) {
+    padding: $spacing-9 $spacing-8;
+  }
+
+  @media screen and (min-width: map-get($breakpoints, 'breakpoint-10')) {
+    padding: $spacing-10 $spacing-8;
+  }
+
+  &__inner {
+    display: grid;
+
+    @media screen and (min-width: map-get($breakpoints, 'breakpoint-3')) {
+      grid-template-columns: 1fr auto;
+      grid-gap: $spacing-9;
+    }
+
+    @media screen and (min-width: map-get($breakpoints, 'breakpoint-10')) {
+      grid-template-columns: 1fr auto;
+      grid-gap: $spacing-12;
+    }
+  }
+
+  &__content {
+    margin-bottom: $spacing-8;
+    max-width: 32rem;
+
+    @media screen and (min-width: map-get($breakpoints, 'breakpoint-3')) {
+      margin-bottom: 0
+    }
+  }
+
+  &__sidebar {
+
+    @media screen and (min-width: map-get($breakpoints, 'breakpoint-1')) {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+    }
+
+    @media screen and (min-width: map-get($breakpoints, 'breakpoint-3')) {
+      display: unset;
+    }
+  }
+
+  &__intro {
+    color: var(--color-heading);
+    font-size: 1.1rem;
+    margin-bottom: 0;
+  }
+
+  &__list {
+
+    &__item {
+      font-size: .7rem;
+
+      @media screen and (min-width: map-get($breakpoints, 'breakpoint-10')) {
+        font-size: .8rem;
+      }
+      
+      &:not(:last-child) {
+        margin-bottom: $spacing-1;
+        
+        @media screen and (min-width: map-get($breakpoints, 'breakpoint-10')) {
+          margin-bottom: $spacing-2;
+        }
+      }
+    }
+
+    &--split {
+      column-count: 2;
+      column-gap: $spacing-7;
+    }
+  }
+
+  &__h2 {
+    font-size: 1rem;
+    margin-bottom: 0;
+
+    @media screen and (min-width: map-get($breakpoints, 'breakpoint-10')) {
+      font-size: 1.2rem;
+    }
+  }
+
+  &__h3 {
+    font-size: .75rem;
+    margin: $spacing-6 0 $spacing-3;
+
+    @media screen and (min-width: map-get($breakpoints, 'breakpoint-10')) {
+      font-size: .9rem;
+    }
+  }
+
+  &__text {
+    font-size: .8rem;
+    margin: $spacing-6 0 0;
+
+    @media screen and (min-width: map-get($breakpoints, 'breakpoint-10')) {
+      font-size: 1rem;
+      margin-top: $spacing-7;
+    }
+  }
+
+  &__names {
+    color: var(--color-heading);
+
+    @media screen and (min-width: map-get($breakpoints, 'breakpoint-10')) {
+      font-size: .9rem;
+    }
+  }
+
+  &__roles {
+    display: block;
+    font-size: .7rem;
+
+    @media screen and (min-width: map-get($breakpoints, 'breakpoint-10')) {
+      font-size: .8rem;
+      margin-top: $spacing-1;
+    }
+  }
+
+  &__logo {
+    max-width: 2.5rem;
+    margin-bottom: $spacing-5;
+
+    @media screen and (min-width: map-get($breakpoints, 'breakpoint-10')) {
+      margin-bottom: $spacing-6;
+    }
+  }
+
+  &__signing {
+    margin: $spacing-6 0 #{-$spacing-4};
+    max-width: 9rem;
+
+    @media screen and (min-width: map-get($breakpoints, 'breakpoint-10')) {
+      margin-top: $spacing-7;
+    }
+  }
+}
+
