@@ -1,6 +1,4 @@
 .tile {
-  @include focus-ring;
-  @include shadow-effect;
   align-items: center;
   background-color: $color-indigo;
   border-radius: $border-radius-lg;

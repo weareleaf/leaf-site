@@ -96,14 +96,22 @@
   }
 
   &__link {
-    @include animated-link($border-width-sm);
-    @include focus-bg;
     color: var(--color-footer-contact);
     font-size: 1.3rem;
+    position: relative;
 
     @media screen and (min-width: map-get($breakpoints, 'breakpoint-4')) {
       font-size: 1.5rem;
     }
+  }
+
+  span.footer__link {
+    @include wavy-line;
+  }
+
+  a.footer__link {
+    @include animated-link($border-width-sm);
+    @include focus-bg;
   }
 
   &__social {
