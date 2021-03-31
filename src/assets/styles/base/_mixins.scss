@@ -229,4 +229,5 @@
   text-decoration: line-through var(--color-accent);
   text-decoration: line-through wavy var(--color-accent);
   text-decoration-thickness: $border-width-sm;
+  -webkit-text-decoration-line: line-through;
 }
