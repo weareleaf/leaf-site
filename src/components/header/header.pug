@@ -28,10 +28,9 @@ mixin header(c)
                   text: "Blog"
                 },
                 {
-                  url: "javascript:void(0)",
                   text: "Contact",
                   mobileOnly: true,
-                  triggerModal: true
+                  scrub: true
                 }
               ],
             })
@@ -45,5 +44,5 @@ mixin header(c)
 
         else
           .header__contact
-            a.nav__link(href="javascript:void(0)", data-micromodal-trigger="modal-contact")
+            span.nav__link
               span.nav__text Contact

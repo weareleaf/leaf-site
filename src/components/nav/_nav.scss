@@ -28,18 +28,12 @@
   }
 
   &__link {
-    @include animated-link($border-width-base, '.nav__text');
-    @include focus-bg;
     color: var(--color-nav);
     display: inline-block;
     font-size: .75rem;
     outline: none;
     padding: $spacing-5 $spacing-4;
     position: relative;
-
-    @include hover {
-      text-decoration: none;
-    }
 
     @media screen and (min-width: map-get($breakpoints, 'breakpoint-1')) {
       font-size: $font-size-xs;
@@ -72,6 +66,15 @@
     }
   }
 
+  a.nav__link {
+    @include animated-link($border-width-base, '.nav__text');
+    @include focus-bg;
+
+    @include hover {
+      text-decoration: none;
+    }
+  }
+
   &__text {
     display: block;
     position: relative;
@@ -91,4 +94,9 @@
       }
     }
   }
+}
+
+span.nav__link .nav__text,
+span.nav__link--wavvy .nav__text {
+  @include wavy-line;
 }

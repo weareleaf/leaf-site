@@ -92,21 +92,28 @@
         }
       }
     }
-
-    &:hover {
-      background: $color-silk;
-    }
   }
 
   &--analysis {
-    background-color: $color-luckypoint;
     display: block;
     margin: $spacing-6 auto 0;
     width: fit-content;
+  }
 
-    &:hover {
-      background: darken($color-luckypoint, 3%);
+  &--analysis,
+  .banner__call-to-action & {
+    pointer-events: none;
+
+    .button__content {
+      @include wavy-line;
     }
+  }
+}
+
+.button--large-inverted {
+
+  @include hover {
+    background: rgba($color-white, .9);
   }
 }
 

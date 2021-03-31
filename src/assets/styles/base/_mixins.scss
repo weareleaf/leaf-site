@@ -147,6 +147,21 @@
   }
 }
 
+@mixin line-through($size) {
+  &::after {
+    background-color: var(--color-accent);
+    content: '';
+    display: block;
+    height: $size;
+    left: -.5rem;
+    margin-top: -#{$size / 2};
+    position: absolute;
+    top: 50%;
+    transform: rotate(-45deg);
+    width: calc(100% + 1rem);
+  }
+}
+
 @mixin margin-horizontal($margin) {
   margin-left: $margin;
   margin-right: $margin;
@@ -208,4 +223,10 @@
 @mixin touch-boost {
   margin: -$spacing-3;
   padding: $spacing-3;
+}
+
+@mixin wavy-line {
+  text-decoration: line-through var(--color-accent);
+  text-decoration: line-through wavy var(--color-accent);
+  text-decoration-thickness: $border-width-sm;
 }

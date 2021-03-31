@@ -12,16 +12,26 @@ mixin nav(c)
             else
               span.nav__link.nav__link--active= item.text
           else
-            a.nav__link(
-              href= item.url
-              data-micromodal-trigger=(item.triggerModal ? "modal-contact" : undefined)
-              data-mobile-only=(item.mobileOnly ? "mobile-only" : undefined)
-              target=(item.newTab ? "_blank" : undefined)
-              rel=(item.newTab ? "noopener" : undefined)
-            )
-              if item.textMobile
-                span.nav__text
-                  span.nav__text__mobile= item.textMobile
-                  span.nav__text__standard= item.text
-              else
-                span.nav__text= item.text
+            if item.scrub
+              span.nav__link(
+                data-mobile-only=(item.mobileOnly ? "mobile-only" : undefined)
+              )
+                if item.textMobile
+                  span.nav__text
+                    span.nav__text__mobile= item.textMobile
+                    span.nav__text__standard= item.text
+                else
+                  span.nav__text= item.text
+            else
+              a.nav__link(
+                href= item.url
+                data-mobile-only=(item.mobileOnly ? "mobile-only" : undefined)
+                target=(item.newTab ? "_blank" : undefined)
+                rel=(item.newTab ? "noopener" : undefined)
+              )
+                if item.textMobile
+                  span.nav__text
+                    span.nav__text__mobile= item.textMobile
+                    span.nav__text__standard= item.text
+                else
+                  span.nav__text= item.text

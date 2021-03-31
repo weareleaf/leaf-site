@@ -20,14 +20,10 @@
   }
 
   &__link {
-    @include focus-bg;
-    @include touch-boost;
+    @include line-through($border-width-sm);
+    color: var(--color-social-icons);
     display: block;
-    transition: transform $duration-2 $timing-ease;
-
-    @include hover {
-      transform: scale(1.1);
-    }
+    position: relative;
   }
 
   svg {
